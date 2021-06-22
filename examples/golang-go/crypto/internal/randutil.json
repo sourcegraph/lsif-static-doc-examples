@@ -1,0 +1,123 @@
+{
+  "pathID": "/crypto/internal/randutil",
+  "documentation": {
+    "identifier": "randutil",
+    "newPage": true,
+    "searchKey": "crypto/internal/randutil",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package randutil"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package randutil contains internal randomness utilities for various crypto packages. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/internal/randutil#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/internal/randutil#closedChanOnce",
+              "documentation": {
+                "identifier": "closedChanOnce",
+                "newPage": false,
+                "searchKey": "randutil.closedChanOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var closedChanOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar closedChanOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/internal/randutil#closedChan",
+              "documentation": {
+                "identifier": "closedChan",
+                "newPage": false,
+                "searchKey": "randutil.closedChan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var closedChan"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar closedChan chan struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/internal/randutil#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/internal/randutil#MaybeReadByte",
+              "documentation": {
+                "identifier": "MaybeReadByte",
+                "newPage": false,
+                "searchKey": "randutil.MaybeReadByte",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MaybeReadByte(r io.Reader)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MaybeReadByte(r io.Reader)\n```\n\nMaybeReadByte reads a single byte from r with ~50% probability. This is used to ensure that callers do not depend on non-guaranteed behaviour, e.g. assuming that rsa.GenerateKey is deterministic w.r.t. a given random stream. \n\nThis does not affect tests that pass a stream of fixed bytes as the random source (e.g. a zeroReader). \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

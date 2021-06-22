@@ -1,0 +1,1548 @@
+{
+  "pathID": "/expvar",
+  "documentation": {
+    "identifier": "expvar",
+    "newPage": true,
+    "searchKey": "expvar",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package expvar"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package expvar provides a standardized interface to public variables, such as operation counters in servers. It exposes these variables via HTTP at /debug/vars in JSON format. \n\nOperations to set or modify these public variables are atomic. \n\nIn addition to adding the HTTP handler, this package registers the following variables: \n\n```\ncmdline   os.Args\nmemstats  runtime.Memstats\n\n```\nThe package is sometimes only imported for the side effect of registering its HTTP handler and the above variables. To use it this way, link this package into your program: \n\n```\nimport _ \"expvar\"\n\n```\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/expvar#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/expvar#vars",
+              "documentation": {
+                "identifier": "vars",
+                "newPage": false,
+                "searchKey": "expvar.vars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var vars"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar vars sync.Map // map[string]Var\n\n```\n\nAll published variables. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#varKeysMu",
+              "documentation": {
+                "identifier": "varKeysMu",
+                "newPage": false,
+                "searchKey": "expvar.varKeysMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var varKeysMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar varKeysMu sync.RWMutex\n```\n\nAll published variables. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#varKeys",
+              "documentation": {
+                "identifier": "varKeys",
+                "newPage": false,
+                "searchKey": "expvar.varKeys",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var varKeys"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar varKeys []string // sorted\n\n```\n\nAll published variables. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/expvar#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/expvar#Var",
+              "documentation": {
+                "identifier": "Var",
+                "newPage": false,
+                "searchKey": "expvar.Var",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Var interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Var interface {\n\t// String returns a valid JSON value for the variable.\n\t// Types with String methods that do not return valid JSON\n\t// (such as time.Time) must not be used as a Var.\n\tString() string\n}\n```\n\nVar is an abstract type for all exported variables. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#Get",
+                    "documentation": {
+                      "identifier": "Get",
+                      "newPage": false,
+                      "searchKey": "expvar.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Get(name string) Var"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Get(name string) Var\n```\n\nGet retrieves a named exported variable. It returns nil if the name has not been registered. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Int",
+              "documentation": {
+                "identifier": "Int",
+                "newPage": false,
+                "searchKey": "expvar.Int",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Int struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Int struct {\n\ti int64\n}\n```\n\nInt is a 64-bit integer variable that satisfies the Var interface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#NewInt",
+                    "documentation": {
+                      "identifier": "NewInt",
+                      "newPage": false,
+                      "searchKey": "expvar.NewInt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewInt(name string) *Int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewInt(name string) *Int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Int.Value",
+                    "documentation": {
+                      "identifier": "Int.Value",
+                      "newPage": false,
+                      "searchKey": "expvar.Int.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Int) Value() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Int) Value() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Int.String",
+                    "documentation": {
+                      "identifier": "Int.String",
+                      "newPage": false,
+                      "searchKey": "expvar.Int.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Int) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Int) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Int.Add",
+                    "documentation": {
+                      "identifier": "Int.Add",
+                      "newPage": false,
+                      "searchKey": "expvar.Int.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Int) Add(delta int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Int) Add(delta int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Int.Set",
+                    "documentation": {
+                      "identifier": "Int.Set",
+                      "newPage": false,
+                      "searchKey": "expvar.Int.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Int) Set(value int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Int) Set(value int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Float",
+              "documentation": {
+                "identifier": "Float",
+                "newPage": false,
+                "searchKey": "expvar.Float",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Float struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Float struct {\n\tf uint64\n}\n```\n\nFloat is a 64-bit float variable that satisfies the Var interface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#NewFloat",
+                    "documentation": {
+                      "identifier": "NewFloat",
+                      "newPage": false,
+                      "searchKey": "expvar.NewFloat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFloat(name string) *Float"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFloat(name string) *Float\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Float.Value",
+                    "documentation": {
+                      "identifier": "Float.Value",
+                      "newPage": false,
+                      "searchKey": "expvar.Float.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Float) Value() float64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Float) Value() float64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Float.String",
+                    "documentation": {
+                      "identifier": "Float.String",
+                      "newPage": false,
+                      "searchKey": "expvar.Float.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Float) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Float) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Float.Add",
+                    "documentation": {
+                      "identifier": "Float.Add",
+                      "newPage": false,
+                      "searchKey": "expvar.Float.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Float) Add(delta float64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Float) Add(delta float64)\n```\n\nAdd adds delta to v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Float.Set",
+                    "documentation": {
+                      "identifier": "Float.Set",
+                      "newPage": false,
+                      "searchKey": "expvar.Float.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Float) Set(value float64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Float) Set(value float64)\n```\n\nSet sets v to value. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Map",
+              "documentation": {
+                "identifier": "Map",
+                "newPage": false,
+                "searchKey": "expvar.Map",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Map struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Map struct {\n\tm      sync.Map // map[string]Var\n\tkeysMu sync.RWMutex\n\tkeys   []string // sorted\n}\n```\n\nMap is a string-to-Var map variable that satisfies the Var interface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#NewMap",
+                    "documentation": {
+                      "identifier": "NewMap",
+                      "newPage": false,
+                      "searchKey": "expvar.NewMap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewMap(name string) *Map"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewMap(name string) *Map\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.String",
+                    "documentation": {
+                      "identifier": "Map.String",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Init",
+                    "documentation": {
+                      "identifier": "Map.Init",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Init() *Map"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Init() *Map\n```\n\nInit removes all keys from the map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.addKey",
+                    "documentation": {
+                      "identifier": "Map.addKey",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.addKey",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) addKey(key string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) addKey(key string)\n```\n\naddKey updates the sorted list of keys in v.keys. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Get",
+                    "documentation": {
+                      "identifier": "Map.Get",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Get(key string) Var"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Get(key string) Var\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Set",
+                    "documentation": {
+                      "identifier": "Map.Set",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Set(key string, av Var)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Set(key string, av Var)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Add",
+                    "documentation": {
+                      "identifier": "Map.Add",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Add(key string, delta int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Add(key string, delta int64)\n```\n\nAdd adds delta to the *Int value stored under the given map key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.AddFloat",
+                    "documentation": {
+                      "identifier": "Map.AddFloat",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.AddFloat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) AddFloat(key string, delta float64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) AddFloat(key string, delta float64)\n```\n\nAddFloat adds delta to the *Float value stored under the given map key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Delete",
+                    "documentation": {
+                      "identifier": "Map.Delete",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Delete",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Delete(key string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Delete(key string)\n```\n\nDelete deletes the given key from the map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Map.Do",
+                    "documentation": {
+                      "identifier": "Map.Do",
+                      "newPage": false,
+                      "searchKey": "expvar.Map.Do",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Map) Do(f func(KeyValue))"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Map) Do(f func(KeyValue))\n```\n\nDo calls f for each entry in the map. The map is locked during the iteration, but existing entries may be concurrently updated. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#KeyValue",
+              "documentation": {
+                "identifier": "KeyValue",
+                "newPage": false,
+                "searchKey": "expvar.KeyValue",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type KeyValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype KeyValue struct {\n\tKey   string\n\tValue Var\n}\n```\n\nKeyValue represents a single entry in a Map. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "expvar.String",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type String struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype String struct {\n\ts atomic.Value // string\n}\n```\n\nString is a string variable, and satisfies the Var interface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#NewString",
+                    "documentation": {
+                      "identifier": "NewString",
+                      "newPage": false,
+                      "searchKey": "expvar.NewString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewString(name string) *String"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewString(name string) *String\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#String.Value",
+                    "documentation": {
+                      "identifier": "String.Value",
+                      "newPage": false,
+                      "searchKey": "expvar.String.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *String) Value() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *String) Value() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#String.String",
+                    "documentation": {
+                      "identifier": "String.String",
+                      "newPage": false,
+                      "searchKey": "expvar.String.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *String) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *String) String() string\n```\n\nString implements the Var interface. To get the unquoted string use Value. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#String.Set",
+                    "documentation": {
+                      "identifier": "String.Set",
+                      "newPage": false,
+                      "searchKey": "expvar.String.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *String) Set(value string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *String) Set(value string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Func",
+              "documentation": {
+                "identifier": "Func",
+                "newPage": false,
+                "searchKey": "expvar.Func",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Func func() interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Func func() interface{}\n```\n\nFunc implements Var by calling the function and formatting the returned value using JSON. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/expvar#Func.Value",
+                    "documentation": {
+                      "identifier": "Func.Value",
+                      "newPage": false,
+                      "searchKey": "expvar.Func.Value",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f Func) Value() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f Func) Value() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/expvar#Func.String",
+                    "documentation": {
+                      "identifier": "Func.String",
+                      "newPage": false,
+                      "searchKey": "expvar.Func.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f Func) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f Func) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/expvar#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/expvar#Publish",
+              "documentation": {
+                "identifier": "Publish",
+                "newPage": false,
+                "searchKey": "expvar.Publish",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Publish(name string, v Var)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Publish(name string, v Var)\n```\n\nPublish declares a named exported variable. This should be called from a package's init function when it creates its Vars. If the name is already registered then this will log.Panic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Do",
+              "documentation": {
+                "identifier": "Do",
+                "newPage": false,
+                "searchKey": "expvar.Do",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Do(f func(KeyValue))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Do(f func(KeyValue))\n```\n\nDo calls f for each exported variable. The global variable map is locked during the iteration, but existing entries may be concurrently updated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#expvarHandler",
+              "documentation": {
+                "identifier": "expvarHandler",
+                "newPage": false,
+                "searchKey": "expvar.expvarHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expvarHandler(w http.ResponseWriter, r *http.Request)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expvarHandler(w http.ResponseWriter, r *http.Request)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#Handler",
+              "documentation": {
+                "identifier": "Handler",
+                "newPage": false,
+                "searchKey": "expvar.Handler",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Handler() http.Handler"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Handler() http.Handler\n```\n\nHandler returns the expvar HTTP Handler. \n\nThis is only needed to install the handler in a non-standard location. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#cmdline",
+              "documentation": {
+                "identifier": "cmdline",
+                "newPage": false,
+                "searchKey": "expvar.cmdline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cmdline() interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cmdline() interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#memstats",
+              "documentation": {
+                "identifier": "memstats",
+                "newPage": false,
+                "searchKey": "expvar.memstats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func memstats() interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc memstats() interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "expvar.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#RemoveAll",
+              "documentation": {
+                "identifier": "RemoveAll",
+                "newPage": false,
+                "searchKey": "expvar.RemoveAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RemoveAll()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RemoveAll()\n```\n\nRemoveAll removes all exported variables. This is for tests only. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestNil",
+              "documentation": {
+                "identifier": "TestNil",
+                "newPage": false,
+                "searchKey": "expvar.TestNil",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNil(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNil(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestInt",
+              "documentation": {
+                "identifier": "TestInt",
+                "newPage": false,
+                "searchKey": "expvar.TestInt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkIntAdd",
+              "documentation": {
+                "identifier": "BenchmarkIntAdd",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkIntAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIntAdd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIntAdd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkIntSet",
+              "documentation": {
+                "identifier": "BenchmarkIntSet",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkIntSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIntSet(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIntSet(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestFloat",
+              "documentation": {
+                "identifier": "TestFloat",
+                "newPage": false,
+                "searchKey": "expvar.TestFloat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFloat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFloat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkFloatAdd",
+              "documentation": {
+                "identifier": "BenchmarkFloatAdd",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkFloatAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloatAdd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloatAdd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkFloatSet",
+              "documentation": {
+                "identifier": "BenchmarkFloatSet",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkFloatSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFloatSet(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFloatSet(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestString",
+              "documentation": {
+                "identifier": "TestString",
+                "newPage": false,
+                "searchKey": "expvar.TestString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkStringSet",
+              "documentation": {
+                "identifier": "BenchmarkStringSet",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkStringSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStringSet(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStringSet(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestMapInit",
+              "documentation": {
+                "identifier": "TestMapInit",
+                "newPage": false,
+                "searchKey": "expvar.TestMapInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMapInit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMapInit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestMapDelete",
+              "documentation": {
+                "identifier": "TestMapDelete",
+                "newPage": false,
+                "searchKey": "expvar.TestMapDelete",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMapDelete(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMapDelete(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestMapCounter",
+              "documentation": {
+                "identifier": "TestMapCounter",
+                "newPage": false,
+                "searchKey": "expvar.TestMapCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMapCounter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMapCounter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapSet",
+              "documentation": {
+                "identifier": "BenchmarkMapSet",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapSet(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapSet(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapSetDifferent",
+              "documentation": {
+                "identifier": "BenchmarkMapSetDifferent",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapSetDifferent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapSetDifferent(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapSetDifferent(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapSetDifferentRandom",
+              "documentation": {
+                "identifier": "BenchmarkMapSetDifferentRandom",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapSetDifferentRandom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapSetDifferentRandom(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapSetDifferentRandom(b *testing.B)\n```\n\nBenchmarkMapSetDifferentRandom simulates such a case where the concerned keys of Map.Set are generated dynamically and as a result insertion is out of order and the number of the keys may be large. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapSetString",
+              "documentation": {
+                "identifier": "BenchmarkMapSetString",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapSetString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapSetString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapSetString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapAddSame",
+              "documentation": {
+                "identifier": "BenchmarkMapAddSame",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapAddSame",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapAddSame(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapAddSame(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapAddDifferent",
+              "documentation": {
+                "identifier": "BenchmarkMapAddDifferent",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapAddDifferent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapAddDifferent(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapAddDifferent(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapAddDifferentRandom",
+              "documentation": {
+                "identifier": "BenchmarkMapAddDifferentRandom",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapAddDifferentRandom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapAddDifferentRandom(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapAddDifferentRandom(b *testing.B)\n```\n\nBenchmarkMapAddDifferentRandom simulates such a case where that the concerned keys of Map.Add are generated dynamically and as a result insertion is out of order and the number of the keys may be large. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapAddSameSteadyState",
+              "documentation": {
+                "identifier": "BenchmarkMapAddSameSteadyState",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapAddSameSteadyState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapAddSameSteadyState(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapAddSameSteadyState(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkMapAddDifferentSteadyState",
+              "documentation": {
+                "identifier": "BenchmarkMapAddDifferentSteadyState",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkMapAddDifferentSteadyState",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapAddDifferentSteadyState(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapAddDifferentSteadyState(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestFunc",
+              "documentation": {
+                "identifier": "TestFunc",
+                "newPage": false,
+                "searchKey": "expvar.TestFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFunc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#TestHandler",
+              "documentation": {
+                "identifier": "TestHandler",
+                "newPage": false,
+                "searchKey": "expvar.TestHandler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHandler(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHandler(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/expvar#BenchmarkRealworldExpvarUsage",
+              "documentation": {
+                "identifier": "BenchmarkRealworldExpvarUsage",
+                "newPage": false,
+                "searchKey": "expvar.BenchmarkRealworldExpvarUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRealworldExpvarUsage(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRealworldExpvarUsage(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

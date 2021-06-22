@@ -1,0 +1,582 @@
+{
+  "pathID": "/crypto/subtle",
+  "documentation": {
+    "identifier": "subtle",
+    "newPage": true,
+    "searchKey": "crypto/subtle",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package subtle"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package subtle implements functions that are often useful in cryptographic code but require careful thought to use correctly. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/subtle#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/subtle#testConstantTimeCompareData",
+              "documentation": {
+                "identifier": "testConstantTimeCompareData",
+                "newPage": false,
+                "searchKey": "subtle.testConstantTimeCompareData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testConstantTimeCompareData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testConstantTimeCompareData = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#testConstandTimeByteEqData",
+              "documentation": {
+                "identifier": "testConstandTimeByteEqData",
+                "newPage": false,
+                "searchKey": "subtle.testConstandTimeByteEqData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testConstandTimeByteEqData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testConstandTimeByteEqData = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#lessOrEqTests",
+              "documentation": {
+                "identifier": "lessOrEqTests",
+                "newPage": false,
+                "searchKey": "subtle.lessOrEqTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lessOrEqTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lessOrEqTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#benchmarkGlobal",
+              "documentation": {
+                "identifier": "benchmarkGlobal",
+                "newPage": false,
+                "searchKey": "subtle.benchmarkGlobal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchmarkGlobal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchmarkGlobal uint8\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/subtle#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeCompareStruct",
+              "documentation": {
+                "identifier": "TestConstantTimeCompareStruct",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeCompareStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestConstantTimeCompareStruct struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestConstantTimeCompareStruct struct {\n\ta, b []byte\n\tout  int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeByteEqStruct",
+              "documentation": {
+                "identifier": "TestConstantTimeByteEqStruct",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeByteEqStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TestConstantTimeByteEqStruct struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TestConstantTimeByteEqStruct struct {\n\ta, b uint8\n\tout  int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/subtle#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeCompare",
+              "documentation": {
+                "identifier": "ConstantTimeCompare",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeCompare",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeCompare(x, y []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeCompare(x, y []byte) int\n```\n\nConstantTimeCompare returns 1 if the two slices, x and y, have equal contents and 0 otherwise. The time taken is a function of the length of the slices and is independent of the contents. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeSelect",
+              "documentation": {
+                "identifier": "ConstantTimeSelect",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeSelect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeSelect(v, x, y int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeSelect(v, x, y int) int\n```\n\nConstantTimeSelect returns x if v == 1 and y if v == 0. Its behavior is undefined if v takes any other value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeByteEq",
+              "documentation": {
+                "identifier": "ConstantTimeByteEq",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeByteEq",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeByteEq(x, y uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeByteEq(x, y uint8) int\n```\n\nConstantTimeByteEq returns 1 if x == y and 0 otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeEq",
+              "documentation": {
+                "identifier": "ConstantTimeEq",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeEq",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeEq(x, y int32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeEq(x, y int32) int\n```\n\nConstantTimeEq returns 1 if x == y and 0 otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeCopy",
+              "documentation": {
+                "identifier": "ConstantTimeCopy",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeCopy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeCopy(v int, x, y []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeCopy(v int, x, y []byte)\n```\n\nConstantTimeCopy copies the contents of y into x (a slice of equal length) if v == 1. If v == 0, x is left unchanged. Its behavior is undefined if v takes any other value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#ConstantTimeLessOrEq",
+              "documentation": {
+                "identifier": "ConstantTimeLessOrEq",
+                "newPage": false,
+                "searchKey": "subtle.ConstantTimeLessOrEq",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ConstantTimeLessOrEq(x, y int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ConstantTimeLessOrEq(x, y int) int\n```\n\nConstantTimeLessOrEq returns 1 if x <= y and 0 otherwise. Its behavior is undefined if x or y are negative or > 2**31 - 1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeCompare",
+              "documentation": {
+                "identifier": "TestConstantTimeCompare",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstantTimeCompare(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstantTimeCompare(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#byteEq",
+              "documentation": {
+                "identifier": "byteEq",
+                "newPage": false,
+                "searchKey": "subtle.byteEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func byteEq(a, b uint8) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc byteEq(a, b uint8) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeByteEq",
+              "documentation": {
+                "identifier": "TestConstantTimeByteEq",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeByteEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstantTimeByteEq(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstantTimeByteEq(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#eq",
+              "documentation": {
+                "identifier": "eq",
+                "newPage": false,
+                "searchKey": "subtle.eq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eq(a, b int32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eq(a, b int32) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeEq",
+              "documentation": {
+                "identifier": "TestConstantTimeEq",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstantTimeEq(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstantTimeEq(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#makeCopy",
+              "documentation": {
+                "identifier": "makeCopy",
+                "newPage": false,
+                "searchKey": "subtle.makeCopy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeCopy(v int, x, y []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeCopy(v int, x, y []byte) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#constantTimeCopyWrapper",
+              "documentation": {
+                "identifier": "constantTimeCopyWrapper",
+                "newPage": false,
+                "searchKey": "subtle.constantTimeCopyWrapper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func constantTimeCopyWrapper(v int, x, y []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc constantTimeCopyWrapper(v int, x, y []byte) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeCopy",
+              "documentation": {
+                "identifier": "TestConstantTimeCopy",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeCopy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstantTimeCopy(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstantTimeCopy(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#TestConstantTimeLessOrEq",
+              "documentation": {
+                "identifier": "TestConstantTimeLessOrEq",
+                "newPage": false,
+                "searchKey": "subtle.TestConstantTimeLessOrEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstantTimeLessOrEq(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstantTimeLessOrEq(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#BenchmarkConstantTimeByteEq",
+              "documentation": {
+                "identifier": "BenchmarkConstantTimeByteEq",
+                "newPage": false,
+                "searchKey": "subtle.BenchmarkConstantTimeByteEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkConstantTimeByteEq(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkConstantTimeByteEq(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#BenchmarkConstantTimeEq",
+              "documentation": {
+                "identifier": "BenchmarkConstantTimeEq",
+                "newPage": false,
+                "searchKey": "subtle.BenchmarkConstantTimeEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkConstantTimeEq(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkConstantTimeEq(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/subtle#BenchmarkConstantTimeLessOrEq",
+              "documentation": {
+                "identifier": "BenchmarkConstantTimeLessOrEq",
+                "newPage": false,
+                "searchKey": "subtle.BenchmarkConstantTimeLessOrEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkConstantTimeLessOrEq(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkConstantTimeLessOrEq(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,632 @@
+{
+  "pathID": "/go/internal/srcimporter",
+  "documentation": {
+    "identifier": "srcimporter",
+    "newPage": true,
+    "searchKey": "go/internal/srcimporter",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package srcimporter"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package srcimporter implements importing directly from source files rather than installed packages. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/go/internal/srcimporter#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#maxTime",
+              "documentation": {
+                "identifier": "maxTime",
+                "newPage": false,
+                "searchKey": "srcimporter.maxTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxTime = 2 * time.Second\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/internal/srcimporter#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#importing",
+              "documentation": {
+                "identifier": "importing",
+                "newPage": false,
+                "searchKey": "srcimporter.importing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var importing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar importing types.Package\n```\n\nImporting is a sentinel taking the place in Importer.packages for a package that is in the process of being imported. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#importer",
+              "documentation": {
+                "identifier": "importer",
+                "newPage": false,
+                "searchKey": "srcimporter.importer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var importer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar importer = New(&build.Default, token.NewFileSet(), make(map[string]*types.Package))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#importedObjectTests",
+              "documentation": {
+                "identifier": "importedObjectTests",
+                "newPage": false,
+                "searchKey": "srcimporter.importedObjectTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var importedObjectTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar importedObjectTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/internal/srcimporter#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#Importer",
+              "documentation": {
+                "identifier": "Importer",
+                "newPage": false,
+                "searchKey": "srcimporter.Importer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Importer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Importer struct {\n\tctxt     *build.Context\n\tfset     *token.FileSet\n\tsizes    types.Sizes\n\tpackages map[string]*types.Package\n}\n```\n\nAn Importer provides the context for importing packages from source code. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "srcimporter.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(ctxt *build.Context, fset *token.FileSet, packages map[string]*types.Package) *Importer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(ctxt *build.Context, fset *token.FileSet, packages map[string]*types.Package) *Importer\n```\n\nNew returns a new Importer for the given context, file set, and map of packages. The context is used to resolve import paths to package paths, and identifying the files belonging to the package. If the context provides non-nil file system functions, they are used instead of the regular package os functions. The file set is used to track position information of package files; and imported packages are added to the packages map. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.Import",
+                    "documentation": {
+                      "identifier": "Importer.Import",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.Import",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) Import(path string) (*types.Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) Import(path string) (*types.Package, error)\n```\n\nImport(path) is a shortcut for ImportFrom(path, \".\", 0). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.ImportFrom",
+                    "documentation": {
+                      "identifier": "Importer.ImportFrom",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.ImportFrom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) ImportFrom(path, srcDir string, mode types.ImportMode) (*types.Package, error)\n```\n\nImportFrom imports the package with the given import path resolved from the given srcDir, adds the new package to the set of packages maintained by the importer, and returns the package. Package path resolution and file system operations are controlled by the context maintained with the importer. The import mode must be zero but is otherwise ignored. Packages that are not comprised entirely of pure Go files may fail to import because the type checker may not be able to determine all exported entities (e.g. due to cgo dependencies). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.parseFiles",
+                    "documentation": {
+                      "identifier": "Importer.parseFiles",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.parseFiles",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) parseFiles(dir string, filenames []string) ([]*ast.File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) parseFiles(dir string, filenames []string) ([]*ast.File, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.cgo",
+                    "documentation": {
+                      "identifier": "Importer.cgo",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.cgo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) cgo(bp *build.Package) (*ast.File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) cgo(bp *build.Package) (*ast.File, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.absPath",
+                    "documentation": {
+                      "identifier": "Importer.absPath",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.absPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) absPath(path string) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) absPath(path string) (string, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.isAbsPath",
+                    "documentation": {
+                      "identifier": "Importer.isAbsPath",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.isAbsPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) isAbsPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) isAbsPath(path string) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/internal/srcimporter#Importer.joinPath",
+                    "documentation": {
+                      "identifier": "Importer.joinPath",
+                      "newPage": false,
+                      "searchKey": "srcimporter.Importer.joinPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Importer) joinPath(elem ...string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Importer) joinPath(elem ...string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/internal/srcimporter#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#setUsesCgo",
+              "documentation": {
+                "identifier": "setUsesCgo",
+                "newPage": false,
+                "searchKey": "srcimporter.setUsesCgo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setUsesCgo(conf *types.Config)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setUsesCgo(conf *types.Config)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "srcimporter.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#doImport",
+              "documentation": {
+                "identifier": "doImport",
+                "newPage": false,
+                "searchKey": "srcimporter.doImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doImport(t *testing.T, path, srcDir string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doImport(t *testing.T, path, srcDir string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#walkDir",
+              "documentation": {
+                "identifier": "walkDir",
+                "newPage": false,
+                "searchKey": "srcimporter.walkDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func walkDir(t *testing.T, path string, endTime time.Time) (int, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc walkDir(t *testing.T, path string, endTime time.Time) (int, bool)\n```\n\nwalkDir imports the all the packages with the given path prefix recursively. It returns the number of packages imported and whether importing was aborted because time has passed endTime. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestImportStdLib",
+              "documentation": {
+                "identifier": "TestImportStdLib",
+                "newPage": false,
+                "searchKey": "srcimporter.TestImportStdLib",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportStdLib(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportStdLib(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestImportedTypes",
+              "documentation": {
+                "identifier": "TestImportedTypes",
+                "newPage": false,
+                "searchKey": "srcimporter.TestImportedTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportedTypes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportedTypes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#verifyInterfaceMethodRecvs",
+              "documentation": {
+                "identifier": "verifyInterfaceMethodRecvs",
+                "newPage": false,
+                "searchKey": "srcimporter.verifyInterfaceMethodRecvs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc verifyInterfaceMethodRecvs(t *testing.T, named *types.Named, level int)\n```\n\nverifyInterfaceMethodRecvs verifies that method receiver types are named if the methods belong to a named interface type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestReimport",
+              "documentation": {
+                "identifier": "TestReimport",
+                "newPage": false,
+                "searchKey": "srcimporter.TestReimport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReimport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReimport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestIssue20855",
+              "documentation": {
+                "identifier": "TestIssue20855",
+                "newPage": false,
+                "searchKey": "srcimporter.TestIssue20855",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue20855(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue20855(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#testImportPath",
+              "documentation": {
+                "identifier": "testImportPath",
+                "newPage": false,
+                "searchKey": "srcimporter.testImportPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testImportPath(t *testing.T, pkgPath string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testImportPath(t *testing.T, pkgPath string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestIssue23092",
+              "documentation": {
+                "identifier": "TestIssue23092",
+                "newPage": false,
+                "searchKey": "srcimporter.TestIssue23092",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue23092(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue23092(t *testing.T)\n```\n\nTestIssue23092 tests relative imports. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestIssue24392",
+              "documentation": {
+                "identifier": "TestIssue24392",
+                "newPage": false,
+                "searchKey": "srcimporter.TestIssue24392",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue24392(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue24392(t *testing.T)\n```\n\nTestIssue24392 tests imports against a path containing 'testdata'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/internal/srcimporter#TestCgo",
+              "documentation": {
+                "identifier": "TestCgo",
+                "newPage": false,
+                "searchKey": "srcimporter.TestCgo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCgo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCgo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

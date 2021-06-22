@@ -1,0 +1,2124 @@
+{
+  "pathID": "/io",
+  "documentation": {
+    "identifier": "io",
+    "newPage": true,
+    "searchKey": "io",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package io"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package io provides basic interfaces to I/O primitives. Its primary job is to wrap existing implementations of such primitives, such as those in package os, into shared public interfaces that abstract the functionality, plus some other related primitives. \n\nBecause these interfaces and primitives wrap lower-level operations with various implementations, unless otherwise informed clients should not assume they are safe for parallel execution. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/io#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/io#SeekStart",
+              "documentation": {
+                "identifier": "SeekStart",
+                "newPage": false,
+                "searchKey": "io.SeekStart",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SeekStart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SeekStart = 0 // seek relative to the origin of the file\n\n```\n\nSeek whence values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#SeekCurrent",
+              "documentation": {
+                "identifier": "SeekCurrent",
+                "newPage": false,
+                "searchKey": "io.SeekCurrent",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SeekCurrent"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SeekCurrent = 1 // seek relative to the current offset\n\n```\n\nSeek whence values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#SeekEnd",
+              "documentation": {
+                "identifier": "SeekEnd",
+                "newPage": false,
+                "searchKey": "io.SeekEnd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SeekEnd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SeekEnd = 2 // seek relative to the end\n\n```\n\nSeek whence values. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/io#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/io#ErrShortWrite",
+              "documentation": {
+                "identifier": "ErrShortWrite",
+                "newPage": false,
+                "searchKey": "io.ErrShortWrite",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrShortWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrShortWrite = errors.New(\"short write\")\n```\n\nErrShortWrite means that a write accepted fewer bytes than requested but failed to return an explicit error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#errInvalidWrite",
+              "documentation": {
+                "identifier": "errInvalidWrite",
+                "newPage": false,
+                "searchKey": "io.errInvalidWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errInvalidWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errInvalidWrite = errors.New(\"invalid write result\")\n```\n\nerrInvalidWrite means that a write returned an impossible count. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ErrShortBuffer",
+              "documentation": {
+                "identifier": "ErrShortBuffer",
+                "newPage": false,
+                "searchKey": "io.ErrShortBuffer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrShortBuffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrShortBuffer = errors.New(\"short buffer\")\n```\n\nErrShortBuffer means that a read required a longer buffer than was provided. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#EOF",
+              "documentation": {
+                "identifier": "EOF",
+                "newPage": false,
+                "searchKey": "io.EOF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var EOF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar EOF = errors.New(\"EOF\")\n```\n\nEOF is the error returned by Read when no more input is available. (Read must return EOF itself, not an error wrapping EOF, because callers will test for EOF using ==.) Functions should return EOF only to signal a graceful end of input. If the EOF occurs unexpectedly in a structured data stream, the appropriate error is either ErrUnexpectedEOF or some other error giving more detail. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ErrUnexpectedEOF",
+              "documentation": {
+                "identifier": "ErrUnexpectedEOF",
+                "newPage": false,
+                "searchKey": "io.ErrUnexpectedEOF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrUnexpectedEOF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrUnexpectedEOF = errors.New(\"unexpected EOF\")\n```\n\nErrUnexpectedEOF means that EOF was encountered in the middle of reading a fixed-size block or data structure. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ErrNoProgress",
+              "documentation": {
+                "identifier": "ErrNoProgress",
+                "newPage": false,
+                "searchKey": "io.ErrNoProgress",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNoProgress"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNoProgress = errors.New(\"multiple Read calls return no data or error\")\n```\n\nErrNoProgress is returned by some clients of an Reader when many calls to Read have failed to return any data or error, usually the sign of a broken Reader implementation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#errWhence",
+              "documentation": {
+                "identifier": "errWhence",
+                "newPage": false,
+                "searchKey": "io.errWhence",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errWhence"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errWhence = errors.New(\"Seek: invalid whence\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#errOffset",
+              "documentation": {
+                "identifier": "errOffset",
+                "newPage": false,
+                "searchKey": "io.errOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errOffset"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errOffset = errors.New(\"Seek: invalid offset\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#Discard",
+              "documentation": {
+                "identifier": "Discard",
+                "newPage": false,
+                "searchKey": "io.Discard",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Discard"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Discard Writer = discard{}\n```\n\nDiscard is a Writer on which all Write calls succeed without doing anything. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#blackHolePool",
+              "documentation": {
+                "identifier": "blackHolePool",
+                "newPage": false,
+                "searchKey": "io.blackHolePool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var blackHolePool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar blackHolePool = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ErrClosedPipe",
+              "documentation": {
+                "identifier": "ErrClosedPipe",
+                "newPage": false,
+                "searchKey": "io.ErrClosedPipe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrClosedPipe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrClosedPipe = errors.New(\"io: read/write on closed pipe\")\n```\n\nErrClosedPipe is the error used for read or write operations on a closed pipe. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ErrInvalidWrite",
+              "documentation": {
+                "identifier": "ErrInvalidWrite",
+                "newPage": false,
+                "searchKey": "io.ErrInvalidWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrInvalidWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrInvalidWrite = errInvalidWrite\n```\n\nexported for test \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/io#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/io#Reader",
+              "documentation": {
+                "identifier": "Reader",
+                "newPage": false,
+                "searchKey": "io.Reader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reader interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reader interface {\n\tRead(p []byte) (n int, err error)\n}\n```\n\nReader is the interface that wraps the basic Read method. \n\nRead reads up to len(p) bytes into p. It returns the number of bytes read (0 <= n <= len(p)) and any error encountered. Even if Read returns n < len(p), it may use all of p as scratch space during the call. If some data is available but not len(p) bytes, Read conventionally returns what is available instead of waiting for more. \n\nWhen Read encounters an error or end-of-file condition after successfully reading n > 0 bytes, it returns the number of bytes read. It may return the (non-nil) error from the same call or return the error (and n == 0) from a subsequent call. An instance of this general case is that a Reader returning a non-zero number of bytes at the end of the input stream may return either err == EOF or err == nil. The next Read should return 0, EOF. \n\nCallers should always process the n > 0 bytes returned before considering the error err. Doing so correctly handles I/O errors that happen after reading some bytes and also both of the allowed EOF behaviors. \n\nImplementations of Read are discouraged from returning a zero byte count with a nil error, except when len(p) == 0. Callers should treat a return of 0 and nil as indicating that nothing happened; in particular it does not indicate EOF. \n\nImplementations must not retain p. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#LimitReader",
+                    "documentation": {
+                      "identifier": "LimitReader",
+                      "newPage": false,
+                      "searchKey": "io.LimitReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func LimitReader(r Reader, n int64) Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc LimitReader(r Reader, n int64) Reader\n```\n\nLimitReader returns a Reader that reads from r but stops with EOF after n bytes. The underlying implementation is a *LimitedReader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#TeeReader",
+                    "documentation": {
+                      "identifier": "TeeReader",
+                      "newPage": false,
+                      "searchKey": "io.TeeReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func TeeReader(r Reader, w Writer) Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc TeeReader(r Reader, w Writer) Reader\n```\n\nTeeReader returns a Reader that writes to w what it reads from r. All reads from r performed through it are matched with corresponding writes to w. There is no internal buffering - the write must complete before the read completes. Any error encountered while writing is reported as a read error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#MultiReader",
+                    "documentation": {
+                      "identifier": "MultiReader",
+                      "newPage": false,
+                      "searchKey": "io.MultiReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MultiReader(readers ...Reader) Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MultiReader(readers ...Reader) Reader\n```\n\nMultiReader returns a Reader that's the logical concatenation of the provided input readers. They're read sequentially. Once all inputs have returned EOF, Read will return EOF.  If any of the readers return a non-nil, non-EOF error, Read will return that error. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#Writer",
+              "documentation": {
+                "identifier": "Writer",
+                "newPage": false,
+                "searchKey": "io.Writer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Writer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Writer interface {\n\tWrite(p []byte) (n int, err error)\n}\n```\n\nWriter is the interface that wraps the basic Write method. \n\nWrite writes len(p) bytes from p to the underlying data stream. It returns the number of bytes written from p (0 <= n <= len(p)) and any error encountered that caused the write to stop early. Write must return a non-nil error if it returns n < len(p). Write must not modify the slice data, even temporarily. \n\nImplementations must not retain p. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#MultiWriter",
+                    "documentation": {
+                      "identifier": "MultiWriter",
+                      "newPage": false,
+                      "searchKey": "io.MultiWriter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MultiWriter(writers ...Writer) Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MultiWriter(writers ...Writer) Writer\n```\n\nMultiWriter creates a writer that duplicates its writes to all the provided writers, similar to the Unix tee(1) command. \n\nEach write is written to each listed writer, one at a time. If a listed writer returns an error, that overall write operation stops and returns the error; it does not continue down the list. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#Closer",
+              "documentation": {
+                "identifier": "Closer",
+                "newPage": false,
+                "searchKey": "io.Closer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Closer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Closer interface {\n\tClose() error\n}\n```\n\nCloser is the interface that wraps the basic Close method. \n\nThe behavior of Close after the first call is undefined. Specific implementations may document their own behavior. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#Seeker",
+              "documentation": {
+                "identifier": "Seeker",
+                "newPage": false,
+                "searchKey": "io.Seeker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Seeker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Seeker interface {\n\tSeek(offset int64, whence int) (int64, error)\n}\n```\n\nSeeker is the interface that wraps the basic Seek method. \n\nSeek sets the offset for the next Read or Write to offset, interpreted according to whence: SeekStart means relative to the start of the file, SeekCurrent means relative to the current offset, and SeekEnd means relative to the end. Seek returns the new offset relative to the start of the file and an error, if any. \n\nSeeking to an offset before the start of the file is an error. Seeking to any positive offset is legal, but the behavior of subsequent I/O operations on the underlying object is implementation-dependent. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadWriter",
+              "documentation": {
+                "identifier": "ReadWriter",
+                "newPage": false,
+                "searchKey": "io.ReadWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadWriter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadWriter interface {\n\tReader\n\tWriter\n}\n```\n\nReadWriter is the interface that groups the basic Read and Write methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadCloser",
+              "documentation": {
+                "identifier": "ReadCloser",
+                "newPage": false,
+                "searchKey": "io.ReadCloser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadCloser interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadCloser interface {\n\tReader\n\tCloser\n}\n```\n\nReadCloser is the interface that groups the basic Read and Close methods. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#NopCloser",
+                    "documentation": {
+                      "identifier": "NopCloser",
+                      "newPage": false,
+                      "searchKey": "io.NopCloser",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NopCloser(r Reader) ReadCloser"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NopCloser(r Reader) ReadCloser\n```\n\nNopCloser returns a ReadCloser with a no-op Close method wrapping the provided Reader r. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#WriteCloser",
+              "documentation": {
+                "identifier": "WriteCloser",
+                "newPage": false,
+                "searchKey": "io.WriteCloser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriteCloser interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriteCloser interface {\n\tWriter\n\tCloser\n}\n```\n\nWriteCloser is the interface that groups the basic Write and Close methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadWriteCloser",
+              "documentation": {
+                "identifier": "ReadWriteCloser",
+                "newPage": false,
+                "searchKey": "io.ReadWriteCloser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadWriteCloser interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadWriteCloser interface {\n\tReader\n\tWriter\n\tCloser\n}\n```\n\nReadWriteCloser is the interface that groups the basic Read, Write and Close methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadSeeker",
+              "documentation": {
+                "identifier": "ReadSeeker",
+                "newPage": false,
+                "searchKey": "io.ReadSeeker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadSeeker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadSeeker interface {\n\tReader\n\tSeeker\n}\n```\n\nReadSeeker is the interface that groups the basic Read and Seek methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadSeekCloser",
+              "documentation": {
+                "identifier": "ReadSeekCloser",
+                "newPage": false,
+                "searchKey": "io.ReadSeekCloser",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadSeekCloser interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadSeekCloser interface {\n\tReader\n\tSeeker\n\tCloser\n}\n```\n\nReadSeekCloser is the interface that groups the basic Read, Seek and Close methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#WriteSeeker",
+              "documentation": {
+                "identifier": "WriteSeeker",
+                "newPage": false,
+                "searchKey": "io.WriteSeeker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriteSeeker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriteSeeker interface {\n\tWriter\n\tSeeker\n}\n```\n\nWriteSeeker is the interface that groups the basic Write and Seek methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadWriteSeeker",
+              "documentation": {
+                "identifier": "ReadWriteSeeker",
+                "newPage": false,
+                "searchKey": "io.ReadWriteSeeker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReadWriteSeeker interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReadWriteSeeker interface {\n\tReader\n\tWriter\n\tSeeker\n}\n```\n\nReadWriteSeeker is the interface that groups the basic Read, Write and Seek methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReaderFrom",
+              "documentation": {
+                "identifier": "ReaderFrom",
+                "newPage": false,
+                "searchKey": "io.ReaderFrom",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReaderFrom interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReaderFrom interface {\n\tReadFrom(r Reader) (n int64, err error)\n}\n```\n\nReaderFrom is the interface that wraps the ReadFrom method. \n\nReadFrom reads data from r until EOF or error. The return value n is the number of bytes read. Any error except EOF encountered during the read is also returned. \n\nThe Copy function uses ReaderFrom if available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#WriterTo",
+              "documentation": {
+                "identifier": "WriterTo",
+                "newPage": false,
+                "searchKey": "io.WriterTo",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriterTo interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriterTo interface {\n\tWriteTo(w Writer) (n int64, err error)\n}\n```\n\nWriterTo is the interface that wraps the WriteTo method. \n\nWriteTo writes data to w until there's no more data to write or when an error occurs. The return value n is the number of bytes written. Any error encountered during the write is also returned. \n\nThe Copy function uses WriterTo if available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReaderAt",
+              "documentation": {
+                "identifier": "ReaderAt",
+                "newPage": false,
+                "searchKey": "io.ReaderAt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReaderAt interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReaderAt interface {\n\tReadAt(p []byte, off int64) (n int, err error)\n}\n```\n\nReaderAt is the interface that wraps the basic ReadAt method. \n\nReadAt reads len(p) bytes into p starting at offset off in the underlying input source. It returns the number of bytes read (0 <= n <= len(p)) and any error encountered. \n\nWhen ReadAt returns n < len(p), it returns a non-nil error explaining why more bytes were not returned. In this respect, ReadAt is stricter than Read. \n\nEven if ReadAt returns n < len(p), it may use all of p as scratch space during the call. If some data is available but not len(p) bytes, ReadAt blocks until either all the data is available or an error occurs. In this respect ReadAt is different from Read. \n\nIf the n = len(p) bytes returned by ReadAt are at the end of the input source, ReadAt may return either err == EOF or err == nil. \n\nIf ReadAt is reading from an input source with a seek offset, ReadAt should not affect nor be affected by the underlying seek offset. \n\nClients of ReadAt can execute parallel ReadAt calls on the same input source. \n\nImplementations must not retain p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#WriterAt",
+              "documentation": {
+                "identifier": "WriterAt",
+                "newPage": false,
+                "searchKey": "io.WriterAt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriterAt interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriterAt interface {\n\tWriteAt(p []byte, off int64) (n int, err error)\n}\n```\n\nWriterAt is the interface that wraps the basic WriteAt method. \n\nWriteAt writes len(p) bytes from p to the underlying data stream at offset off. It returns the number of bytes written from p (0 <= n <= len(p)) and any error encountered that caused the write to stop early. WriteAt must return a non-nil error if it returns n < len(p). \n\nIf WriteAt is writing to a destination with a seek offset, WriteAt should not affect nor be affected by the underlying seek offset. \n\nClients of WriteAt can execute parallel WriteAt calls on the same destination if the ranges do not overlap. \n\nImplementations must not retain p. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ByteReader",
+              "documentation": {
+                "identifier": "ByteReader",
+                "newPage": false,
+                "searchKey": "io.ByteReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByteReader interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByteReader interface {\n\tReadByte() (byte, error)\n}\n```\n\nByteReader is the interface that wraps the ReadByte method. \n\nReadByte reads and returns the next byte from the input or any error encountered. If ReadByte returns an error, no input byte was consumed, and the returned byte value is undefined. \n\nReadByte provides an efficient interface for byte-at-time processing. A Reader that does not implement  ByteReader can be wrapped using bufio.NewReader to add this method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ByteScanner",
+              "documentation": {
+                "identifier": "ByteScanner",
+                "newPage": false,
+                "searchKey": "io.ByteScanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByteScanner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByteScanner interface {\n\tByteReader\n\tUnreadByte() error\n}\n```\n\nByteScanner is the interface that adds the UnreadByte method to the basic ReadByte method. \n\nUnreadByte causes the next call to ReadByte to return the same byte as the previous call to ReadByte. It may be an error to call UnreadByte twice without an intervening call to ReadByte. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ByteWriter",
+              "documentation": {
+                "identifier": "ByteWriter",
+                "newPage": false,
+                "searchKey": "io.ByteWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByteWriter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByteWriter interface {\n\tWriteByte(c byte) error\n}\n```\n\nByteWriter is the interface that wraps the WriteByte method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#RuneReader",
+              "documentation": {
+                "identifier": "RuneReader",
+                "newPage": false,
+                "searchKey": "io.RuneReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RuneReader interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RuneReader interface {\n\tReadRune() (r rune, size int, err error)\n}\n```\n\nRuneReader is the interface that wraps the ReadRune method. \n\nReadRune reads a single UTF-8 encoded Unicode character and returns the rune and its size in bytes. If no character is available, err will be set. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#RuneScanner",
+              "documentation": {
+                "identifier": "RuneScanner",
+                "newPage": false,
+                "searchKey": "io.RuneScanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RuneScanner interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RuneScanner interface {\n\tRuneReader\n\tUnreadRune() error\n}\n```\n\nRuneScanner is the interface that adds the UnreadRune method to the basic ReadRune method. \n\nUnreadRune causes the next call to ReadRune to return the same rune as the previous call to ReadRune. It may be an error to call UnreadRune twice without an intervening call to ReadRune. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#StringWriter",
+              "documentation": {
+                "identifier": "StringWriter",
+                "newPage": false,
+                "searchKey": "io.StringWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringWriter interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringWriter interface {\n\tWriteString(s string) (n int, err error)\n}\n```\n\nStringWriter is the interface that wraps the WriteString method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#LimitedReader",
+              "documentation": {
+                "identifier": "LimitedReader",
+                "newPage": false,
+                "searchKey": "io.LimitedReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LimitedReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LimitedReader struct {\n\tR Reader // underlying reader\n\tN int64  // max bytes remaining\n}\n```\n\nA LimitedReader reads from R but limits the amount of data returned to just N bytes. Each call to Read updates N to reflect the new amount remaining. Read returns EOF when N <= 0 or when the underlying R returns EOF. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#LimitedReader.Read",
+                    "documentation": {
+                      "identifier": "LimitedReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.LimitedReader.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (l *LimitedReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (l *LimitedReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#SectionReader",
+              "documentation": {
+                "identifier": "SectionReader",
+                "newPage": false,
+                "searchKey": "io.SectionReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionReader struct {\n\tr     ReaderAt\n\tbase  int64\n\toff   int64\n\tlimit int64\n}\n```\n\nSectionReader implements Read, Seek, and ReadAt on a section of an underlying ReaderAt. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#NewSectionReader",
+                    "documentation": {
+                      "identifier": "NewSectionReader",
+                      "newPage": false,
+                      "searchKey": "io.NewSectionReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewSectionReader(r ReaderAt, off int64, n int64) *SectionReader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewSectionReader(r ReaderAt, off int64, n int64) *SectionReader\n```\n\nNewSectionReader returns a SectionReader that reads from r starting at offset off and stops with EOF after n bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#SectionReader.Read",
+                    "documentation": {
+                      "identifier": "SectionReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.SectionReader.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SectionReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SectionReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#SectionReader.Seek",
+                    "documentation": {
+                      "identifier": "SectionReader.Seek",
+                      "newPage": false,
+                      "searchKey": "io.SectionReader.Seek",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SectionReader) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SectionReader) Seek(offset int64, whence int) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#SectionReader.ReadAt",
+                    "documentation": {
+                      "identifier": "SectionReader.ReadAt",
+                      "newPage": false,
+                      "searchKey": "io.SectionReader.ReadAt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SectionReader) ReadAt(p []byte, off int64) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SectionReader) ReadAt(p []byte, off int64) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#SectionReader.Size",
+                    "documentation": {
+                      "identifier": "SectionReader.Size",
+                      "newPage": false,
+                      "searchKey": "io.SectionReader.Size",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *SectionReader) Size() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *SectionReader) Size() int64\n```\n\nSize returns the size of the section in bytes. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#teeReader",
+              "documentation": {
+                "identifier": "teeReader",
+                "newPage": false,
+                "searchKey": "io.teeReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type teeReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype teeReader struct {\n\tr Reader\n\tw Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#teeReader.Read",
+                    "documentation": {
+                      "identifier": "teeReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.teeReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *teeReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *teeReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#discard",
+              "documentation": {
+                "identifier": "discard",
+                "newPage": false,
+                "searchKey": "io.discard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type discard struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype discard struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#discard.Write",
+                    "documentation": {
+                      "identifier": "discard.Write",
+                      "newPage": false,
+                      "searchKey": "io.discard.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (discard) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (discard) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#discard.WriteString",
+                    "documentation": {
+                      "identifier": "discard.WriteString",
+                      "newPage": false,
+                      "searchKey": "io.discard.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (discard) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (discard) WriteString(s string) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#discard.ReadFrom",
+                    "documentation": {
+                      "identifier": "discard.ReadFrom",
+                      "newPage": false,
+                      "searchKey": "io.discard.ReadFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (discard) ReadFrom(r Reader) (n int64, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (discard) ReadFrom(r Reader) (n int64, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#nopCloser",
+              "documentation": {
+                "identifier": "nopCloser",
+                "newPage": false,
+                "searchKey": "io.nopCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nopCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nopCloser struct {\n\tReader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#nopCloser.Close",
+                    "documentation": {
+                      "identifier": "nopCloser.Close",
+                      "newPage": false,
+                      "searchKey": "io.nopCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nopCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nopCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#eofReader",
+              "documentation": {
+                "identifier": "eofReader",
+                "newPage": false,
+                "searchKey": "io.eofReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eofReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eofReader struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#eofReader.Read",
+                    "documentation": {
+                      "identifier": "eofReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.eofReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (eofReader) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (eofReader) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#multiReader",
+              "documentation": {
+                "identifier": "multiReader",
+                "newPage": false,
+                "searchKey": "io.multiReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type multiReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype multiReader struct {\n\treaders []Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#multiReader.Read",
+                    "documentation": {
+                      "identifier": "multiReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.multiReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mr *multiReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mr *multiReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#multiWriter",
+              "documentation": {
+                "identifier": "multiWriter",
+                "newPage": false,
+                "searchKey": "io.multiWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type multiWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype multiWriter struct {\n\twriters []Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#multiWriter.Write",
+                    "documentation": {
+                      "identifier": "multiWriter.Write",
+                      "newPage": false,
+                      "searchKey": "io.multiWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *multiWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *multiWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#multiWriter.WriteString",
+                    "documentation": {
+                      "identifier": "multiWriter.WriteString",
+                      "newPage": false,
+                      "searchKey": "io.multiWriter.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *multiWriter) WriteString(s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *multiWriter) WriteString(s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#onceError",
+              "documentation": {
+                "identifier": "onceError",
+                "newPage": false,
+                "searchKey": "io.onceError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type onceError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype onceError struct {\n\tsync.Mutex // guards following\n\terr        error\n}\n```\n\nonceError is an object that will only store an error once. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#onceError.Store",
+                    "documentation": {
+                      "identifier": "onceError.Store",
+                      "newPage": false,
+                      "searchKey": "io.onceError.Store",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *onceError) Store(err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *onceError) Store(err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#onceError.Load",
+                    "documentation": {
+                      "identifier": "onceError.Load",
+                      "newPage": false,
+                      "searchKey": "io.onceError.Load",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *onceError) Load() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *onceError) Load() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#pipe",
+              "documentation": {
+                "identifier": "pipe",
+                "newPage": false,
+                "searchKey": "io.pipe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pipe struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pipe struct {\n\twrMu sync.Mutex // Serializes Write operations\n\twrCh chan []byte\n\trdCh chan int\n\n\tonce sync.Once // Protects closing done\n\tdone chan struct{}\n\trerr onceError\n\twerr onceError\n}\n```\n\nA pipe is the shared pipe structure underlying PipeReader and PipeWriter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#pipe.Read",
+                    "documentation": {
+                      "identifier": "pipe.Read",
+                      "newPage": false,
+                      "searchKey": "io.pipe.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) Read(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#pipe.readCloseError",
+                    "documentation": {
+                      "identifier": "pipe.readCloseError",
+                      "newPage": false,
+                      "searchKey": "io.pipe.readCloseError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) readCloseError() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) readCloseError() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#pipe.CloseRead",
+                    "documentation": {
+                      "identifier": "pipe.CloseRead",
+                      "newPage": false,
+                      "searchKey": "io.pipe.CloseRead",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) CloseRead(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) CloseRead(err error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#pipe.Write",
+                    "documentation": {
+                      "identifier": "pipe.Write",
+                      "newPage": false,
+                      "searchKey": "io.pipe.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) Write(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) Write(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#pipe.writeCloseError",
+                    "documentation": {
+                      "identifier": "pipe.writeCloseError",
+                      "newPage": false,
+                      "searchKey": "io.pipe.writeCloseError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) writeCloseError() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) writeCloseError() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#pipe.CloseWrite",
+                    "documentation": {
+                      "identifier": "pipe.CloseWrite",
+                      "newPage": false,
+                      "searchKey": "io.pipe.CloseWrite",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *pipe) CloseWrite(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *pipe) CloseWrite(err error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#PipeReader",
+              "documentation": {
+                "identifier": "PipeReader",
+                "newPage": false,
+                "searchKey": "io.PipeReader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PipeReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PipeReader struct {\n\tp *pipe\n}\n```\n\nA PipeReader is the read half of a pipe. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#Pipe",
+                    "documentation": {
+                      "identifier": "Pipe",
+                      "newPage": false,
+                      "searchKey": "io.Pipe",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Pipe() (*PipeReader, *PipeWriter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Pipe() (*PipeReader, *PipeWriter)\n```\n\nPipe creates a synchronous in-memory pipe. It can be used to connect code expecting an io.Reader with code expecting an io.Writer. \n\nReads and Writes on the pipe are matched one to one except when multiple Reads are needed to consume a single Write. That is, each Write to the PipeWriter blocks until it has satisfied one or more Reads from the PipeReader that fully consume the written data. The data is copied directly from the Write to the corresponding Read (or Reads); there is no internal buffering. \n\nIt is safe to call Read and Write in parallel with each other or with Close. Parallel calls to Read and parallel calls to Write are also safe: the individual calls will be gated sequentially. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeReader.Read",
+                    "documentation": {
+                      "identifier": "PipeReader.Read",
+                      "newPage": false,
+                      "searchKey": "io.PipeReader.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PipeReader) Read(data []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PipeReader) Read(data []byte) (n int, err error)\n```\n\nRead implements the standard Read interface: it reads data from the pipe, blocking until a writer arrives or the write end is closed. If the write end is closed with an error, that error is returned as err; otherwise err is EOF. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeReader.Close",
+                    "documentation": {
+                      "identifier": "PipeReader.Close",
+                      "newPage": false,
+                      "searchKey": "io.PipeReader.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PipeReader) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PipeReader) Close() error\n```\n\nClose closes the reader; subsequent writes to the write half of the pipe will return the error ErrClosedPipe. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeReader.CloseWithError",
+                    "documentation": {
+                      "identifier": "PipeReader.CloseWithError",
+                      "newPage": false,
+                      "searchKey": "io.PipeReader.CloseWithError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *PipeReader) CloseWithError(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *PipeReader) CloseWithError(err error) error\n```\n\nCloseWithError closes the reader; subsequent writes to the write half of the pipe will return the error err. \n\nCloseWithError never overwrites the previous error if it exists and always returns nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#PipeWriter",
+              "documentation": {
+                "identifier": "PipeWriter",
+                "newPage": false,
+                "searchKey": "io.PipeWriter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PipeWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PipeWriter struct {\n\tp *pipe\n}\n```\n\nA PipeWriter is the write half of a pipe. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/io#Pipe",
+                    "documentation": {
+                      "identifier": "Pipe",
+                      "newPage": false,
+                      "searchKey": "io.Pipe",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Pipe() (*PipeReader, *PipeWriter)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Pipe() (*PipeReader, *PipeWriter)\n```\n\nPipe creates a synchronous in-memory pipe. It can be used to connect code expecting an io.Reader with code expecting an io.Writer. \n\nReads and Writes on the pipe are matched one to one except when multiple Reads are needed to consume a single Write. That is, each Write to the PipeWriter blocks until it has satisfied one or more Reads from the PipeReader that fully consume the written data. The data is copied directly from the Write to the corresponding Read (or Reads); there is no internal buffering. \n\nIt is safe to call Read and Write in parallel with each other or with Close. Parallel calls to Read and parallel calls to Write are also safe: the individual calls will be gated sequentially. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeWriter.Write",
+                    "documentation": {
+                      "identifier": "PipeWriter.Write",
+                      "newPage": false,
+                      "searchKey": "io.PipeWriter.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *PipeWriter) Write(data []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *PipeWriter) Write(data []byte) (n int, err error)\n```\n\nWrite implements the standard Write interface: it writes data to the pipe, blocking until one or more readers have consumed all the data or the read end is closed. If the read end is closed with an error, that err is returned as err; otherwise err is ErrClosedPipe. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeWriter.Close",
+                    "documentation": {
+                      "identifier": "PipeWriter.Close",
+                      "newPage": false,
+                      "searchKey": "io.PipeWriter.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *PipeWriter) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *PipeWriter) Close() error\n```\n\nClose closes the writer; subsequent reads from the read half of the pipe will return no bytes and EOF. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/io#PipeWriter.CloseWithError",
+                    "documentation": {
+                      "identifier": "PipeWriter.CloseWithError",
+                      "newPage": false,
+                      "searchKey": "io.PipeWriter.CloseWithError",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *PipeWriter) CloseWithError(err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *PipeWriter) CloseWithError(err error) error\n```\n\nCloseWithError closes the writer; subsequent reads from the read half of the pipe will return no bytes and the error err, or EOF if err is nil. \n\nCloseWithError never overwrites the previous error if it exists and always returns nil. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/io#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/io#WriteString",
+              "documentation": {
+                "identifier": "WriteString",
+                "newPage": false,
+                "searchKey": "io.WriteString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func WriteString(w Writer, s string) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc WriteString(w Writer, s string) (n int, err error)\n```\n\nWriteString writes the contents of the string s to w, which accepts a slice of bytes. If w implements StringWriter, its WriteString method is invoked directly. Otherwise, w.Write is called exactly once. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadAtLeast",
+              "documentation": {
+                "identifier": "ReadAtLeast",
+                "newPage": false,
+                "searchKey": "io.ReadAtLeast",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadAtLeast(r Reader, buf []byte, min int) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadAtLeast(r Reader, buf []byte, min int) (n int, err error)\n```\n\nReadAtLeast reads from r into buf until it has read at least min bytes. It returns the number of bytes copied and an error if fewer bytes were read. The error is EOF only if no bytes were read. If an EOF happens after reading fewer than min bytes, ReadAtLeast returns ErrUnexpectedEOF. If min is greater than the length of buf, ReadAtLeast returns ErrShortBuffer. On return, n >= min if and only if err == nil. If r returns an error having read at least min bytes, the error is dropped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadFull",
+              "documentation": {
+                "identifier": "ReadFull",
+                "newPage": false,
+                "searchKey": "io.ReadFull",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadFull(r Reader, buf []byte) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadFull(r Reader, buf []byte) (n int, err error)\n```\n\nReadFull reads exactly len(buf) bytes from r into buf. It returns the number of bytes copied and an error if fewer bytes were read. The error is EOF only if no bytes were read. If an EOF happens after reading some but not all the bytes, ReadFull returns ErrUnexpectedEOF. On return, n == len(buf) if and only if err == nil. If r returns an error having read at least len(buf) bytes, the error is dropped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#CopyN",
+              "documentation": {
+                "identifier": "CopyN",
+                "newPage": false,
+                "searchKey": "io.CopyN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CopyN(dst Writer, src Reader, n int64) (written int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CopyN(dst Writer, src Reader, n int64) (written int64, err error)\n```\n\nCopyN copies n bytes (or until an error) from src to dst. It returns the number of bytes copied and the earliest error encountered while copying. On return, written == n if and only if err == nil. \n\nIf dst implements the ReaderFrom interface, the copy is implemented using it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#Copy",
+              "documentation": {
+                "identifier": "Copy",
+                "newPage": false,
+                "searchKey": "io.Copy",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Copy(dst Writer, src Reader) (written int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Copy(dst Writer, src Reader) (written int64, err error)\n```\n\nCopy copies from src to dst until either EOF is reached on src or an error occurs. It returns the number of bytes copied and the first error encountered while copying, if any. \n\nA successful Copy returns err == nil, not err == EOF. Because Copy is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. \n\nIf src implements the WriterTo interface, the copy is implemented by calling src.WriteTo(dst). Otherwise, if dst implements the ReaderFrom interface, the copy is implemented by calling dst.ReadFrom(src). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#CopyBuffer",
+              "documentation": {
+                "identifier": "CopyBuffer",
+                "newPage": false,
+                "searchKey": "io.CopyBuffer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CopyBuffer(dst Writer, src Reader, buf []byte) (written int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CopyBuffer(dst Writer, src Reader, buf []byte) (written int64, err error)\n```\n\nCopyBuffer is identical to Copy except that it stages through the provided buffer (if one is required) rather than allocating a temporary one. If buf is nil, one is allocated; otherwise if it has zero length, CopyBuffer panics. \n\nIf either src implements WriterTo or dst implements ReaderFrom, buf will not be used to perform the copy. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#copyBuffer",
+              "documentation": {
+                "identifier": "copyBuffer",
+                "newPage": false,
+                "searchKey": "io.copyBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func copyBuffer(dst Writer, src Reader, buf []byte) (written int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc copyBuffer(dst Writer, src Reader, buf []byte) (written int64, err error)\n```\n\ncopyBuffer is the actual implementation of Copy and CopyBuffer. if buf is nil, one is allocated. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/io#ReadAll",
+              "documentation": {
+                "identifier": "ReadAll",
+                "newPage": false,
+                "searchKey": "io.ReadAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadAll(r Reader) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadAll(r Reader) ([]byte, error)\n```\n\nReadAll reads from r until an error or EOF and returns the data it read. A successful call returns err == nil, not err == EOF. Because ReadAll is defined to read from src until EOF, it does not treat an EOF from Read as an error to be reported. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/io/fs"
+    },
+    {
+      "pathID": "/io/fs_test"
+    },
+    {
+      "pathID": "/io/ioutil"
+    },
+    {
+      "pathID": "/io/ioutil_test"
+    }
+  ]
+}

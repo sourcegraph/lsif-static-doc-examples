@@ -1,0 +1,222 @@
+{
+  "pathID": "/crypto/tls_test",
+  "documentation": {
+    "identifier": "tls_test",
+    "newPage": true,
+    "searchKey": "crypto/tls_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package tls_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/tls_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#zeroSource",
+              "documentation": {
+                "identifier": "zeroSource",
+                "newPage": false,
+                "searchKey": "tls_test.zeroSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zeroSource struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zeroSource struct{}\n```\n\nzeroSource is an io.Reader that returns an unlimited number of zero bytes. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/tls_test#zeroSource.Read",
+                    "documentation": {
+                      "identifier": "zeroSource.Read",
+                      "newPage": false,
+                      "searchKey": "tls_test.zeroSource.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (zeroSource) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (zeroSource) Read(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/tls_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleDial",
+              "documentation": {
+                "identifier": "ExampleDial",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleDial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDial()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDial()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleConfig_keyLogWriter",
+              "documentation": {
+                "identifier": "ExampleConfig_keyLogWriter",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleConfig_keyLogWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleConfig_keyLogWriter()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleConfig_keyLogWriter()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleLoadX509KeyPair",
+              "documentation": {
+                "identifier": "ExampleLoadX509KeyPair",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleLoadX509KeyPair",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLoadX509KeyPair()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLoadX509KeyPair()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleX509KeyPair",
+              "documentation": {
+                "identifier": "ExampleX509KeyPair",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleX509KeyPair",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleX509KeyPair()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleX509KeyPair()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleX509KeyPair_httpServer",
+              "documentation": {
+                "identifier": "ExampleX509KeyPair_httpServer",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleX509KeyPair_httpServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleX509KeyPair_httpServer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleX509KeyPair_httpServer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/tls_test#ExampleConfig_verifyConnection",
+              "documentation": {
+                "identifier": "ExampleConfig_verifyConnection",
+                "newPage": false,
+                "searchKey": "tls_test.ExampleConfig_verifyConnection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleConfig_verifyConnection()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleConfig_verifyConnection()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

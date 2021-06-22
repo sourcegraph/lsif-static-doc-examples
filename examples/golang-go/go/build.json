@@ -1,0 +1,3508 @@
+{
+  "pathID": "/go/build",
+  "documentation": {
+    "identifier": "build",
+    "newPage": true,
+    "searchKey": "go/build",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package build"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package build gathers information about Go packages. \n\n### hdr-Go_PathGo Path\nThe Go path is a list of directory trees containing Go source code. It is consulted to resolve imports that cannot be found in the standard Go tree. The default path is the value of the GOPATH environment variable, interpreted as a path list appropriate to the operating system (on Unix, the variable is a colon-separated string; on Windows, a semicolon-separated string; on Plan 9, a list). \n\nEach directory listed in the Go path must have a prescribed structure: \n\nThe src/ directory holds source code. The path below 'src' determines the import path or executable name. \n\nThe pkg/ directory holds installed package objects. As in the Go tree, each target operating system and architecture pair has its own subdirectory of pkg (pkg/GOOS_GOARCH). \n\nIf DIR is a directory listed in the Go path, a package with source in DIR/src/foo/bar can be imported as \"foo/bar\" and has its compiled form installed to \"DIR/pkg/GOOS_GOARCH/foo/bar.a\" (or, for gccgo, \"DIR/pkg/gccgo/foo/libbar.a\"). \n\nThe bin/ directory holds compiled commands. Each command is named for its source directory, but only using the final element, not the entire path. That is, the command with source in DIR/src/foo/quux is installed into DIR/bin/quux, not DIR/bin/foo/quux. The foo/ is stripped so that you can add DIR/bin to your PATH to get at the installed commands. \n\nHere's an example directory layout: \n\n```\nGOPATH=/home/user/gocode\n\n/home/user/gocode/\n    src/\n        foo/\n            bar/               (go code in package bar)\n                x.go\n            quux/              (go code in package main)\n                y.go\n    bin/\n        quux                   (installed command)\n    pkg/\n        linux_amd64/\n            foo/\n                bar.a          (installed package object)\n\n```\n### hdr-Build_ConstraintsBuild Constraints\nA build constraint, also known as a build tag, is a line comment that begins \n\n```\n//go:build\n\n```\nthat lists the conditions under which a file should be included in the package. Build constraints may also be part of a file's name (for example, source_windows.go will only be included if the target operating system is windows). \n\nSee 'go help buildconstraint' ([https://golang.org/cmd/go/#hdr-Build_constraints](https://golang.org/cmd/go/#hdr-Build_constraints)) for details. \n\n### hdr-Binary_Only_PackagesBinary-Only Packages\nIn Go 1.12 and earlier, it was possible to distribute packages in binary form without including the source code used for compiling the package. The package was distributed with a source file not excluded by build constraints and containing a \"//go:binary-only-package\" comment. Like a build constraint, this comment appeared at the top of a file, preceded only by blank lines and other line comments and with a blank line following the comment, to separate it from the package documentation. Unlike build constraints, this comment is only recognized in non-test Go source files. \n\nThe minimal source code for a binary-only package was therefore: \n\n```\n//go:binary-only-package\n\npackage mypkg\n\n```\nThe source code could include additional Go code. That code was never compiled but would be processed by tools like godoc and might be useful as end-user documentation. \n\n\"go build\" and other commands no longer support binary-only-packages. Import and ImportDir will still set the BinaryOnly flag in packages containing these comments for use in tools and error messages. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/go/build#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/build#FindOnly",
+              "documentation": {
+                "identifier": "FindOnly",
+                "newPage": false,
+                "searchKey": "build.FindOnly",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FindOnly"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FindOnly ImportMode = 1 << iota\n```\n\nIf FindOnly is set, Import stops after locating the directory that should contain the sources for a package. It does not read any files in the directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#AllowBinary",
+              "documentation": {
+                "identifier": "AllowBinary",
+                "newPage": false,
+                "searchKey": "build.AllowBinary",
+                "tags": [
+                  "exported",
+                  "deprecated"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const AllowBinary"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst AllowBinary\n```\n\nIf AllowBinary is set, Import can be satisfied by a compiled package object without corresponding sources. \n\nDeprecated: The supported way to create a compiled-only package is to write source code containing a //go:binary-only-package comment at the top of the file. Such a package will be recognized regardless of this flag setting (because it has source code) and will have BinaryOnly set to true in the returned Package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ImportComment",
+              "documentation": {
+                "identifier": "ImportComment",
+                "newPage": false,
+                "searchKey": "build.ImportComment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ImportComment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ImportComment\n```\n\nIf ImportComment is set, parse import comments on package statements. Import returns an error if it finds a comment it cannot understand or finds conflicting comments in multiple source files. See golang.org/s/go14customimport for more information. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#IgnoreVendor",
+              "documentation": {
+                "identifier": "IgnoreVendor",
+                "newPage": false,
+                "searchKey": "build.IgnoreVendor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IgnoreVendor"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IgnoreVendor\n```\n\nBy default, Import searches vendor directories that apply in the given source directory before searching the GOROOT and GOPATH roots. If an Import finds and returns a package using a vendor directory, the resulting ImportPath is the complete path to the package, including the path elements leading up to and including \"vendor\". For example, if Import(\"y\", \"x/subdir\", 0) finds \"x/vendor/y\", the returned package's ImportPath is \"x/vendor/y\", not plain \"y\". See golang.org/s/go15vendor for more information. \n\nSetting IgnoreVendor ignores vendor directories. \n\nIn contrast to the package's ImportPath, the returned package's Imports, TestImports, and XTestImports are always the exact import paths from the source files: Import makes no attempt to resolve or check those paths. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#safeString",
+              "documentation": {
+                "identifier": "safeString",
+                "newPage": false,
+                "searchKey": "build.safeString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const safeString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst safeString = \"+-.,/0123456789=ABCDEFGHIJKLMNOPQRSTUVWXYZ_abcdefghijklmnopqrstuvwxyz:$@%! ~^\"\n```\n\nNOTE: $ is not safe for the shell, but it is allowed here because of linker options like -Wl,$ORIGIN. We never pass these arguments to a shell (just to programs we construct argv for), so this should be okay. See golang.org/issue/6038. The @ is for OS X. See golang.org/issue/13720. The % is for Jenkins. See golang.org/issue/16959. The ! is because module paths may use them. See golang.org/issue/26716. The ~ and ^ are for sr.ht. See golang.org/issue/32260. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#goosList",
+              "documentation": {
+                "identifier": "goosList",
+                "newPage": false,
+                "searchKey": "build.goosList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const goosList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst goosList = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#goarchList",
+              "documentation": {
+                "identifier": "goarchList",
+                "newPage": false,
+                "searchKey": "build.goarchList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const goarchList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst goarchList = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#quote",
+              "documentation": {
+                "identifier": "quote",
+                "newPage": false,
+                "searchKey": "build.quote",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const quote"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst quote = \"`\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/build#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/build#Default",
+              "documentation": {
+                "identifier": "Default",
+                "newPage": false,
+                "searchKey": "build.Default",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Default"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Default Context = defaultContext()\n```\n\nDefault is the default Context for builds. It uses the GOARCH, GOOS, GOROOT, and GOPATH environment variables if set, or else the compiled code's GOARCH, GOOS, and GOROOT. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#defaultToolTags",
+              "documentation": {
+                "identifier": "defaultToolTags",
+                "newPage": false,
+                "searchKey": "build.defaultToolTags",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultToolTags"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultToolTags, defaultReleaseTags []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#defaultReleaseTags",
+              "documentation": {
+                "identifier": "defaultReleaseTags",
+                "newPage": false,
+                "searchKey": "build.defaultReleaseTags",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultReleaseTags"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultToolTags, defaultReleaseTags []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#errNoModules",
+              "documentation": {
+                "identifier": "errNoModules",
+                "newPage": false,
+                "searchKey": "build.errNoModules",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNoModules"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNoModules = errors.New(\"not using modules\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#slashSlash",
+              "documentation": {
+                "identifier": "slashSlash",
+                "newPage": false,
+                "searchKey": "build.slashSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slashSlash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slashSlash = []byte(\"//\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#slashStar",
+              "documentation": {
+                "identifier": "slashStar",
+                "newPage": false,
+                "searchKey": "build.slashStar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slashStar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slashStar = []byte(\"/*\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#starSlash",
+              "documentation": {
+                "identifier": "starSlash",
+                "newPage": false,
+                "searchKey": "build.starSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var starSlash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar starSlash = []byte(\"*/\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#newline",
+              "documentation": {
+                "identifier": "newline",
+                "newPage": false,
+                "searchKey": "build.newline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newline = []byte(\"\\n\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#dummyPkg",
+              "documentation": {
+                "identifier": "dummyPkg",
+                "newPage": false,
+                "searchKey": "build.dummyPkg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dummyPkg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dummyPkg Package\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#bSlashSlash",
+              "documentation": {
+                "identifier": "bSlashSlash",
+                "newPage": false,
+                "searchKey": "build.bSlashSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bSlashSlash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bSlashSlash = []byte(slashSlash)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#bStarSlash",
+              "documentation": {
+                "identifier": "bStarSlash",
+                "newPage": false,
+                "searchKey": "build.bStarSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bStarSlash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bStarSlash = []byte(starSlash)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#bSlashStar",
+              "documentation": {
+                "identifier": "bSlashStar",
+                "newPage": false,
+                "searchKey": "build.bSlashStar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bSlashStar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bSlashStar = []byte(slashStar)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#bPlusBuild",
+              "documentation": {
+                "identifier": "bPlusBuild",
+                "newPage": false,
+                "searchKey": "build.bPlusBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bPlusBuild"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bPlusBuild = []byte(\"+build\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#goBuildComment",
+              "documentation": {
+                "identifier": "goBuildComment",
+                "newPage": false,
+                "searchKey": "build.goBuildComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goBuildComment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goBuildComment = []byte(\"//go:build\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#errGoBuildWithoutBuild",
+              "documentation": {
+                "identifier": "errGoBuildWithoutBuild",
+                "newPage": false,
+                "searchKey": "build.errGoBuildWithoutBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errGoBuildWithoutBuild"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errGoBuildWithoutBuild = errors.New(\"//go:build comment without // +build comment\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#errMultipleGoBuild",
+              "documentation": {
+                "identifier": "errMultipleGoBuild",
+                "newPage": false,
+                "searchKey": "build.errMultipleGoBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errMultipleGoBuild"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errMultipleGoBuild = errors.New(\"multiple //go:build comments\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#binaryOnlyComment",
+              "documentation": {
+                "identifier": "binaryOnlyComment",
+                "newPage": false,
+                "searchKey": "build.binaryOnlyComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var binaryOnlyComment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar binaryOnlyComment = []byte(\"//go:binary-only-package\")\n```\n\nSpecial comment denoting a binary-only package. See [https://golang.org/design/2775-binary-only-packages](https://golang.org/design/2775-binary-only-packages) for more about the design of binary-only packages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#knownOS",
+              "documentation": {
+                "identifier": "knownOS",
+                "newPage": false,
+                "searchKey": "build.knownOS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var knownOS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar knownOS = make(map[string]bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#knownArch",
+              "documentation": {
+                "identifier": "knownArch",
+                "newPage": false,
+                "searchKey": "build.knownArch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var knownArch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar knownArch = make(map[string]bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ToolDir",
+              "documentation": {
+                "identifier": "ToolDir",
+                "newPage": false,
+                "searchKey": "build.ToolDir",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ToolDir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ToolDir = getToolDir()\n```\n\nToolDir is the directory containing build tools. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#bom",
+              "documentation": {
+                "identifier": "bom",
+                "newPage": false,
+                "searchKey": "build.bom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bom"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bom = []byte{0xef, 0xbb, 0xbf}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#errSyntax",
+              "documentation": {
+                "identifier": "errSyntax",
+                "newPage": false,
+                "searchKey": "build.errSyntax",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errSyntax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errSyntax = errors.New(\"syntax error\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#errNUL",
+              "documentation": {
+                "identifier": "errNUL",
+                "newPage": false,
+                "searchKey": "build.errNUL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errNUL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errNUL = errors.New(\"unexpected NUL in input\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#goEmbed",
+              "documentation": {
+                "identifier": "goEmbed",
+                "newPage": false,
+                "searchKey": "build.goEmbed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goEmbed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goEmbed = []byte(\"go:embed\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#shouldBuildTests",
+              "documentation": {
+                "identifier": "shouldBuildTests",
+                "newPage": false,
+                "searchKey": "build.shouldBuildTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var shouldBuildTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar shouldBuildTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ctxtP9",
+              "documentation": {
+                "identifier": "ctxtP9",
+                "newPage": false,
+                "searchKey": "build.ctxtP9",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ctxtP9"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ctxtP9 = Context{GOARCH: \"arm\", GOOS: \"plan9\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ctxtAndroid",
+              "documentation": {
+                "identifier": "ctxtAndroid",
+                "newPage": false,
+                "searchKey": "build.ctxtAndroid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ctxtAndroid"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ctxtAndroid = Context{GOARCH: \"arm\", GOOS: \"android\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#matchFileTests",
+              "documentation": {
+                "identifier": "matchFileTests",
+                "newPage": false,
+                "searchKey": "build.matchFileTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var matchFileTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar matchFileTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#expandSrcDirPath",
+              "documentation": {
+                "identifier": "expandSrcDirPath",
+                "newPage": false,
+                "searchKey": "build.expandSrcDirPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expandSrcDirPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expandSrcDirPath = filepath.Join(string(filepath.Separator)+\"projects\", \"src\", \"add\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#expandSrcDirTests",
+              "documentation": {
+                "identifier": "expandSrcDirTests",
+                "newPage": false,
+                "searchKey": "build.expandSrcDirTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expandSrcDirTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expandSrcDirTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#depsRules",
+              "documentation": {
+                "identifier": "depsRules",
+                "newPage": false,
+                "searchKey": "build.depsRules",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var depsRules"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar depsRules = ...\n```\n\ndepsRules defines the expected dependencies between packages in the Go source tree. It is a statement of policy. \n\nDO NOT CHANGE THIS DATA TO FIX BUILDS. Existing packages should not have their constraints relaxed without prior discussion. Negative assertions should almost never be removed. \n\nThe general syntax of a rule is: \n\n```\na, b < c, d;\n\n```\nwhich means c and d come after a and b in the partial order (that is, c and d can import a and b), but doesn't provide a relative order between a vs b or c vs d. \n\nThe rules can chain together, as in: \n\n```\ne < f, g < h;\n\n```\nwhich is equivalent to \n\n```\ne < f, g;\nf, g < h;\n\n```\nExcept for the special bottom element \"NONE\", each name must appear exactly once on the right-hand side of a rule. That rule serves as the definition of the allowed dependencies for that name. The definition must appear before any uses of the name on the left-hand side of a rule. (That is, the rules themselves must be ordered according to the partial order, for easier reading by people.) \n\nNegative assertions double-check the partial order: \n\n```\ni !< j\n\n```\nmeans that it must NOT be the case that i < j. Negative assertions may appear anywhere in the rules, even before i and j have been defined. \n\nComments begin with #. \n\nAll-caps names are pseudo-names for specific points in the dependency lattice. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#buildIgnore",
+              "documentation": {
+                "identifier": "buildIgnore",
+                "newPage": false,
+                "searchKey": "build.buildIgnore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var buildIgnore"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar buildIgnore = []byte(\"\\n// +build ignore\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readGoInfoTests",
+              "documentation": {
+                "identifier": "readGoInfoTests",
+                "newPage": false,
+                "searchKey": "build.readGoInfoTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readGoInfoTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readGoInfoTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readCommentsTests",
+              "documentation": {
+                "identifier": "readCommentsTests",
+                "newPage": false,
+                "searchKey": "build.readCommentsTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readCommentsTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readCommentsTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readFailuresTests",
+              "documentation": {
+                "identifier": "readFailuresTests",
+                "newPage": false,
+                "searchKey": "build.readFailuresTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readFailuresTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readFailuresTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readEmbedTests",
+              "documentation": {
+                "identifier": "readEmbedTests",
+                "newPage": false,
+                "searchKey": "build.readEmbedTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readEmbedTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readEmbedTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#thisOS",
+              "documentation": {
+                "identifier": "thisOS",
+                "newPage": false,
+                "searchKey": "build.thisOS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var thisOS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar thisOS = runtime.GOOS\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#thisArch",
+              "documentation": {
+                "identifier": "thisArch",
+                "newPage": false,
+                "searchKey": "build.thisArch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var thisArch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar thisArch = runtime.GOARCH\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#otherOS",
+              "documentation": {
+                "identifier": "otherOS",
+                "newPage": false,
+                "searchKey": "build.otherOS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var otherOS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar otherOS = anotherOS()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#otherArch",
+              "documentation": {
+                "identifier": "otherArch",
+                "newPage": false,
+                "searchKey": "build.otherArch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var otherArch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar otherArch = anotherArch()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "build.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/build#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/build#Context",
+              "documentation": {
+                "identifier": "Context",
+                "newPage": false,
+                "searchKey": "build.Context",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Context struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Context struct {\n\tGOARCH string // target architecture\n\tGOOS   string // target operating system\n\tGOROOT string // Go root\n\tGOPATH string // Go path\n\n\t// Dir is the caller's working directory, or the empty string to use\n\t// the current directory of the running process. In module mode, this is used\n\t// to locate the main module.\n\t//\n\t// If Dir is non-empty, directories passed to Import and ImportDir must\n\t// be absolute.\n\tDir string\n\n\tCgoEnabled  bool   // whether cgo files are included\n\tUseAllFiles bool   // use files regardless of +build lines, file names\n\tCompiler    string // compiler to assume when computing target paths\n\n\t// The build, tool, and release tags specify build constraints\n\t// that should be considered satisfied when processing +build lines.\n\t// Clients creating a new context may customize BuildTags, which\n\t// defaults to empty, but it is usually an error to customize ToolTags or ReleaseTags.\n\t// ToolTags defaults to build tags appropriate to the current Go toolchain configuration.\n\t// ReleaseTags defaults to the list of Go releases the current release is compatible with.\n\t// BuildTags is not set for the Default build Context.\n\t// In addition to the BuildTags, ToolTags, and ReleaseTags, build constraints\n\t// consider the values of GOARCH and GOOS as satisfied tags.\n\t// The last element in ReleaseTags is assumed to be the current release.\n\tBuildTags   []string\n\tToolTags    []string\n\tReleaseTags []string\n\n\t// The install suffix specifies a suffix to use in the name of the installation\n\t// directory. By default it is empty, but custom builds that need to keep\n\t// their outputs separate can set InstallSuffix to do so. For example, when\n\t// using the race detector, the go command uses InstallSuffix = \"race\", so\n\t// that on a Linux/386 system, packages are written to a directory named\n\t// \"linux_386_race\" instead of the usual \"linux_386\".\n\tInstallSuffix string\n\n\t// JoinPath joins the sequence of path fragments into a single path.\n\t// If JoinPath is nil, Import uses filepath.Join.\n\tJoinPath func(elem ...string) string\n\n\t// SplitPathList splits the path list into a slice of individual paths.\n\t// If SplitPathList is nil, Import uses filepath.SplitList.\n\tSplitPathList func(list string) []string\n\n\t// IsAbsPath reports whether path is an absolute path.\n\t// If IsAbsPath is nil, Import uses filepath.IsAbs.\n\tIsAbsPath func(path string) bool\n\n\t// IsDir reports whether the path names a directory.\n\t// If IsDir is nil, Import calls os.Stat and uses the result's IsDir method.\n\tIsDir func(path string) bool\n\n\t// HasSubdir reports whether dir is lexically a subdirectory of\n\t// root, perhaps multiple levels below. It does not try to check\n\t// whether dir exists.\n\t// If so, HasSubdir sets rel to a slash-separated path that\n\t// can be joined to root to produce a path equivalent to dir.\n\t// If HasSubdir is nil, Import uses an implementation built on\n\t// filepath.EvalSymlinks.\n\tHasSubdir func(root, dir string) (rel string, ok bool)\n\n\t// ReadDir returns a slice of fs.FileInfo, sorted by Name,\n\t// describing the content of the named directory.\n\t// If ReadDir is nil, Import uses ioutil.ReadDir.\n\tReadDir func(dir string) ([]fs.FileInfo, error)\n\n\t// OpenFile opens a file (not a directory) for reading.\n\t// If OpenFile is nil, Import uses os.Open.\n\tOpenFile func(path string) (io.ReadCloser, error)\n}\n```\n\nA Context specifies the supporting context for a build. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#defaultContext",
+                    "documentation": {
+                      "identifier": "defaultContext",
+                      "newPage": false,
+                      "searchKey": "build.defaultContext",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func defaultContext() Context"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc defaultContext() Context\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.joinPath",
+                    "documentation": {
+                      "identifier": "Context.joinPath",
+                      "newPage": false,
+                      "searchKey": "build.Context.joinPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) joinPath(elem ...string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) joinPath(elem ...string) string\n```\n\njoinPath calls ctxt.JoinPath (if not nil) or else filepath.Join. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.splitPathList",
+                    "documentation": {
+                      "identifier": "Context.splitPathList",
+                      "newPage": false,
+                      "searchKey": "build.Context.splitPathList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) splitPathList(s string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) splitPathList(s string) []string\n```\n\nsplitPathList calls ctxt.SplitPathList (if not nil) or else filepath.SplitList. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.isAbsPath",
+                    "documentation": {
+                      "identifier": "Context.isAbsPath",
+                      "newPage": false,
+                      "searchKey": "build.Context.isAbsPath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) isAbsPath(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) isAbsPath(path string) bool\n```\n\nisAbsPath calls ctxt.IsAbsPath (if not nil) or else filepath.IsAbs. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.isDir",
+                    "documentation": {
+                      "identifier": "Context.isDir",
+                      "newPage": false,
+                      "searchKey": "build.Context.isDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) isDir(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) isDir(path string) bool\n```\n\nisDir calls ctxt.IsDir (if not nil) or else uses os.Stat. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.hasSubdir",
+                    "documentation": {
+                      "identifier": "Context.hasSubdir",
+                      "newPage": false,
+                      "searchKey": "build.Context.hasSubdir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) hasSubdir(root, dir string) (rel string, ok bool)\n```\n\nhasSubdir calls ctxt.HasSubdir (if not nil) or else uses the local file system to answer the question. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.readDir",
+                    "documentation": {
+                      "identifier": "Context.readDir",
+                      "newPage": false,
+                      "searchKey": "build.Context.readDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) readDir(path string) ([]fs.FileInfo, error)\n```\n\nreadDir calls ctxt.ReadDir (if not nil) or else ioutil.ReadDir. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.openFile",
+                    "documentation": {
+                      "identifier": "Context.openFile",
+                      "newPage": false,
+                      "searchKey": "build.Context.openFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) openFile(path string) (io.ReadCloser, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) openFile(path string) (io.ReadCloser, error)\n```\n\nopenFile calls ctxt.OpenFile (if not nil) or else os.Open. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.isFile",
+                    "documentation": {
+                      "identifier": "Context.isFile",
+                      "newPage": false,
+                      "searchKey": "build.Context.isFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) isFile(path string) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) isFile(path string) bool\n```\n\nisFile determines whether path is a file by trying to open it. It reuses openFile instead of adding another function to the list in Context. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.gopath",
+                    "documentation": {
+                      "identifier": "Context.gopath",
+                      "newPage": false,
+                      "searchKey": "build.Context.gopath",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) gopath() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) gopath() []string\n```\n\ngopath returns the list of Go path directories. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.SrcDirs",
+                    "documentation": {
+                      "identifier": "Context.SrcDirs",
+                      "newPage": false,
+                      "searchKey": "build.Context.SrcDirs",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) SrcDirs() []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) SrcDirs() []string\n```\n\nSrcDirs returns a list of package source root directories. It draws from the current Go root and Go path but omits directories that do not exist. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.ImportDir",
+                    "documentation": {
+                      "identifier": "Context.ImportDir",
+                      "newPage": false,
+                      "searchKey": "build.Context.ImportDir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) ImportDir(dir string, mode ImportMode) (*Package, error)\n```\n\nImportDir is like Import but processes the Go package found in the named directory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.Import",
+                    "documentation": {
+                      "identifier": "Context.Import",
+                      "newPage": false,
+                      "searchKey": "build.Context.Import",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) Import(path string, srcDir string, mode ImportMode) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) Import(path string, srcDir string, mode ImportMode) (*Package, error)\n```\n\nImport returns details about the Go package named by the import path, interpreting local import paths relative to the srcDir directory. If the path is a local import path naming a package that can be imported using a standard import path, the returned package will set p.ImportPath to that path. \n\nIn the directory containing the package, .go, .c, .h, and .s files are considered part of the package except for: \n\n```\n- .go files in package documentation\n- files starting with _ or . (likely editor temporary files)\n- files with build constraints not satisfied by the context\n\n```\nIf an error occurs, Import returns a non-nil error and a non-nil *Package containing partial information. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.importGo",
+                    "documentation": {
+                      "identifier": "Context.importGo",
+                      "newPage": false,
+                      "searchKey": "build.Context.importGo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) importGo(p *Package, path, srcDir string, mode ImportMode) error\n```\n\nimportGo checks whether it can use the go command to find the directory for path. If using the go command is not appropriate, importGo returns errNoModules. Otherwise, importGo tries using the go command and reports whether that succeeded. Using the go command lets build.Import and build.Context.Import find code in Go modules. In the long term we want tools to use go/packages (currently golang.org/x/tools/go/packages), which will also use the go command. Invoking the go command here is not very efficient in that it computes information about the requested package and all dependencies and then only reports about the requested package. Then we reinvoke it for every dependency. But this is still better than not working at all. See golang.org/issue/26504. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.MatchFile",
+                    "documentation": {
+                      "identifier": "Context.MatchFile",
+                      "newPage": false,
+                      "searchKey": "build.Context.MatchFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) MatchFile(dir, name string) (match bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) MatchFile(dir, name string) (match bool, err error)\n```\n\nMatchFile reports whether the file with the given name in the given directory matches the context and would be included in a Package created by ImportDir of that directory. \n\nMatchFile considers the name of the file and may use ctxt.OpenFile to read some or all of the file's content. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.matchFile",
+                    "documentation": {
+                      "identifier": "Context.matchFile",
+                      "newPage": false,
+                      "searchKey": "build.Context.matchFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) matchFile(dir, name string, allTags map[string]bool, binaryOnly *bool, fset *token.FileSet) (*fileInfo, error)\n```\n\nmatchFile determines whether the file with the given name in the given directory should be included in the package being constructed. If the file should be included, matchFile returns a non-nil *fileInfo (and a nil error). Non-nil errors are reserved for unexpected problems. \n\nIf name denotes a Go program, matchFile reads until the end of the imports and returns that section of the file in the fileInfo's header field, even though it only considers text until the first non-comment for +build lines. \n\nIf allTags is non-nil, matchFile records any encountered build tag by setting allTags[tag] = true. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.shouldBuild",
+                    "documentation": {
+                      "identifier": "Context.shouldBuild",
+                      "newPage": false,
+                      "searchKey": "build.Context.shouldBuild",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) shouldBuild(content []byte, allTags map[string]bool) (shouldBuild, binaryOnly bool, err error)\n```\n\nshouldBuild reports whether it is okay to use this file, The rule is that in the file's leading run of // comments and blank lines, which must be followed by a blank line (to avoid including a Go package clause doc comment), lines beginning with '// +build' are taken as build directives. \n\nThe file is accepted only if each such line lists something matching the file. For example: \n\n```\n// +build windows linux\n\n```\nmarks the file as applicable only on Windows and Linux. \n\nFor each build tag it consults, shouldBuild sets allTags[tag] = true. \n\nshouldBuild reports whether the file should be built and whether a //go:binary-only-package comment was found. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.saveCgo",
+                    "documentation": {
+                      "identifier": "Context.saveCgo",
+                      "newPage": false,
+                      "searchKey": "build.Context.saveCgo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) saveCgo(filename string, di *Package, cg *ast.CommentGroup) error\n```\n\nsaveCgo saves the information from the #cgo lines in the import \"C\" comment. These lines set CFLAGS, CPPFLAGS, CXXFLAGS and LDFLAGS and pkg-config directives that affect the way cgo's C code is built. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.makePathsAbsolute",
+                    "documentation": {
+                      "identifier": "Context.makePathsAbsolute",
+                      "newPage": false,
+                      "searchKey": "build.Context.makePathsAbsolute",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) makePathsAbsolute(args []string, srcDir string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) makePathsAbsolute(args []string, srcDir string)\n```\n\nmakePathsAbsolute looks for compiler options that take paths and makes them absolute. We do this because through the 1.8 release we ran the compiler in the package directory, so any relative -I or -L options would be relative to that directory. In 1.9 we changed to running the compiler in the build directory, to get consistent build results (issue #19964). To keep builds working, we change any relative -I or -L options to be absolute. \n\nUsing filepath.IsAbs and filepath.Join here means the results will be different on different systems, but that's OK: -I and -L options are inherently system-dependent. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.matchAuto",
+                    "documentation": {
+                      "identifier": "Context.matchAuto",
+                      "newPage": false,
+                      "searchKey": "build.Context.matchAuto",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) matchAuto(text string, allTags map[string]bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) matchAuto(text string, allTags map[string]bool) bool\n```\n\nmatchAuto interprets text as either a +build or //go:build expression (whichever works), reporting whether the expression matches the build context. \n\nmatchAuto is only used for testing of tag evaluation and in #cgo lines, which accept either syntax. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.eval",
+                    "documentation": {
+                      "identifier": "Context.eval",
+                      "newPage": false,
+                      "searchKey": "build.Context.eval",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) eval(x constraint.Expr, allTags map[string]bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.matchTag",
+                    "documentation": {
+                      "identifier": "Context.matchTag",
+                      "newPage": false,
+                      "searchKey": "build.Context.matchTag",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) matchTag(name string, allTags map[string]bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) matchTag(name string, allTags map[string]bool) bool\n```\n\nmatchTag reports whether the name is one of: \n\n```\ncgo (if cgo is enabled)\n$GOOS\n$GOARCH\nctxt.Compiler\nlinux (if GOOS = android)\nsolaris (if GOOS = illumos)\ntag (if tag is listed in ctxt.BuildTags or ctxt.ReleaseTags)\n\n```\nIt records all consulted tags in allTags. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Context.goodOSArchFile",
+                    "documentation": {
+                      "identifier": "Context.goodOSArchFile",
+                      "newPage": false,
+                      "searchKey": "build.Context.goodOSArchFile",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ctxt *Context) goodOSArchFile(name string, allTags map[string]bool) bool\n```\n\ngoodOSArchFile returns false if the name contains a $GOOS or $GOARCH suffix which does not match the current system. The recognized name formats are: \n\n```\nname_$(GOOS).*\nname_$(GOARCH).*\nname_$(GOOS)_$(GOARCH).*\nname_$(GOOS)_test.*\nname_$(GOARCH)_test.*\nname_$(GOOS)_$(GOARCH)_test.*\n\n```\nExceptions: if GOOS=android, then files with GOOS=linux are also matched. if GOOS=illumos, then files with GOOS=solaris are also matched. if GOOS=ios, then files with GOOS=darwin are also matched. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ImportMode",
+              "documentation": {
+                "identifier": "ImportMode",
+                "newPage": false,
+                "searchKey": "build.ImportMode",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ImportMode uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ImportMode uint\n```\n\nAn ImportMode controls the behavior of the Import method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#Package",
+              "documentation": {
+                "identifier": "Package",
+                "newPage": false,
+                "searchKey": "build.Package",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Package struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Package struct {\n\tDir           string   // directory containing package sources\n\tName          string   // package name\n\tImportComment string   // path in import comment on package statement\n\tDoc           string   // documentation synopsis\n\tImportPath    string   // import path of package (\"\" if unknown)\n\tRoot          string   // root of Go tree where this package lives\n\tSrcRoot       string   // package source root directory (\"\" if unknown)\n\tPkgRoot       string   // package install root directory (\"\" if unknown)\n\tPkgTargetRoot string   // architecture dependent install root directory (\"\" if unknown)\n\tBinDir        string   // command install directory (\"\" if unknown)\n\tGoroot        bool     // package found in Go root\n\tPkgObj        string   // installed .a file\n\tAllTags       []string // tags that can influence file selection in this directory\n\tConflictDir   string   // this directory shadows Dir in $GOPATH\n\tBinaryOnly    bool     // cannot be rebuilt from source (has //go:binary-only-package comment)\n\n\t// Source files\n\tGoFiles           []string // .go source files (excluding CgoFiles, TestGoFiles, XTestGoFiles)\n\tCgoFiles          []string // .go source files that import \"C\"\n\tIgnoredGoFiles    []string // .go source files ignored for this build (including ignored _test.go files)\n\tInvalidGoFiles    []string // .go source files with detected problems (parse error, wrong package name, and so on)\n\tIgnoredOtherFiles []string // non-.go source files ignored for this build\n\tCFiles            []string // .c source files\n\tCXXFiles          []string // .cc, .cpp and .cxx source files\n\tMFiles            []string // .m (Objective-C) source files\n\tHFiles            []string // .h, .hh, .hpp and .hxx source files\n\tFFiles            []string // .f, .F, .for and .f90 Fortran source files\n\tSFiles            []string // .s source files\n\tSwigFiles         []string // .swig files\n\tSwigCXXFiles      []string // .swigcxx files\n\tSysoFiles         []string // .syso system object files to add to archive\n\n\t// Cgo directives\n\tCgoCFLAGS    []string // Cgo CFLAGS directives\n\tCgoCPPFLAGS  []string // Cgo CPPFLAGS directives\n\tCgoCXXFLAGS  []string // Cgo CXXFLAGS directives\n\tCgoFFLAGS    []string // Cgo FFLAGS directives\n\tCgoLDFLAGS   []string // Cgo LDFLAGS directives\n\tCgoPkgConfig []string // Cgo pkg-config directives\n\n\t// Test information\n\tTestGoFiles  []string // _test.go files in package\n\tXTestGoFiles []string // _test.go files outside package\n\n\t// Dependency information\n\tImports        []string                    // import paths from GoFiles, CgoFiles\n\tImportPos      map[string][]token.Position // line information for Imports\n\tTestImports    []string                    // import paths from TestGoFiles\n\tTestImportPos  map[string][]token.Position // line information for TestImports\n\tXTestImports   []string                    // import paths from XTestGoFiles\n\tXTestImportPos map[string][]token.Position // line information for XTestImports\n\n\t// //go:embed patterns found in Go source files\n\t// For example, if a source file says\n\t//\t//go:embed a* b.c\n\t// then the list will contain those two strings as separate entries.\n\t// (See package embed for more details about //go:embed.)\n\tEmbedPatterns        []string                    // patterns from GoFiles, CgoFiles\n\tEmbedPatternPos      map[string][]token.Position // line information for EmbedPatterns\n\tTestEmbedPatterns    []string                    // patterns from TestGoFiles\n\tTestEmbedPatternPos  map[string][]token.Position // line information for TestEmbedPatterns\n\tXTestEmbedPatterns   []string                    // patterns from XTestGoFiles\n\tXTestEmbedPatternPos map[string][]token.Position // line information for XTestEmbedPatternPos\n}\n```\n\nA Package describes the Go package found in a directory. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#Import",
+                    "documentation": {
+                      "identifier": "Import",
+                      "newPage": false,
+                      "searchKey": "build.Import",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Import(path, srcDir string, mode ImportMode) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Import(path, srcDir string, mode ImportMode) (*Package, error)\n```\n\nImport is shorthand for Default.Import. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#ImportDir",
+                    "documentation": {
+                      "identifier": "ImportDir",
+                      "newPage": false,
+                      "searchKey": "build.ImportDir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ImportDir(dir string, mode ImportMode) (*Package, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ImportDir(dir string, mode ImportMode) (*Package, error)\n```\n\nImportDir is shorthand for Default.ImportDir. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#Package.IsCommand",
+                    "documentation": {
+                      "identifier": "Package.IsCommand",
+                      "newPage": false,
+                      "searchKey": "build.Package.IsCommand",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Package) IsCommand() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Package) IsCommand() bool\n```\n\nIsCommand reports whether the package is considered a command to be installed (not just a library). Packages named \"main\" are treated as commands. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#NoGoError",
+              "documentation": {
+                "identifier": "NoGoError",
+                "newPage": false,
+                "searchKey": "build.NoGoError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NoGoError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NoGoError struct {\n\tDir string\n}\n```\n\nNoGoError is the error used by Import to describe a directory containing no buildable Go source files. (It may still contain test files, files hidden by build tags, and so on.) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#NoGoError.Error",
+                    "documentation": {
+                      "identifier": "NoGoError.Error",
+                      "newPage": false,
+                      "searchKey": "build.NoGoError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *NoGoError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *NoGoError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#MultiplePackageError",
+              "documentation": {
+                "identifier": "MultiplePackageError",
+                "newPage": false,
+                "searchKey": "build.MultiplePackageError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MultiplePackageError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MultiplePackageError struct {\n\tDir      string   // directory containing files\n\tPackages []string // package names found\n\tFiles    []string // corresponding files: Files[i] declares package Packages[i]\n}\n```\n\nMultiplePackageError describes a directory containing multiple buildable Go source files for multiple packages. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#MultiplePackageError.Error",
+                    "documentation": {
+                      "identifier": "MultiplePackageError.Error",
+                      "newPage": false,
+                      "searchKey": "build.MultiplePackageError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *MultiplePackageError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *MultiplePackageError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#fileInfo",
+              "documentation": {
+                "identifier": "fileInfo",
+                "newPage": false,
+                "searchKey": "build.fileInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileInfo struct {\n\tname     string // full name including dir\n\theader   []byte\n\tfset     *token.FileSet\n\tparsed   *ast.File\n\tparseErr error\n\timports  []fileImport\n\tembeds   []fileEmbed\n\tembedErr error\n}\n```\n\nfileInfo records information learned about a file included in a build. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#fileImport",
+              "documentation": {
+                "identifier": "fileImport",
+                "newPage": false,
+                "searchKey": "build.fileImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileImport struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileImport struct {\n\tpath string\n\tpos  token.Pos\n\tdoc  *ast.CommentGroup\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#fileEmbed",
+              "documentation": {
+                "identifier": "fileEmbed",
+                "newPage": false,
+                "searchKey": "build.fileEmbed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileEmbed struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileEmbed struct {\n\tpattern string\n\tpos     token.Position\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#importReader",
+              "documentation": {
+                "identifier": "importReader",
+                "newPage": false,
+                "searchKey": "build.importReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type importReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype importReader struct {\n\tb    *bufio.Reader\n\tbuf  []byte\n\tpeek byte\n\terr  error\n\teof  bool\n\tnerr int\n\tpos  token.Position\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#newImportReader",
+                    "documentation": {
+                      "identifier": "newImportReader",
+                      "newPage": false,
+                      "searchKey": "build.newImportReader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newImportReader(name string, r io.Reader) *importReader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newImportReader(name string, r io.Reader) *importReader\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.syntaxError",
+                    "documentation": {
+                      "identifier": "importReader.syntaxError",
+                      "newPage": false,
+                      "searchKey": "build.importReader.syntaxError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) syntaxError()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) syntaxError()\n```\n\nsyntaxError records a syntax error, but only if an I/O error has not already been recorded. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readByte",
+                    "documentation": {
+                      "identifier": "importReader.readByte",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readByte() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readByte() byte\n```\n\nreadByte reads the next byte from the input, saves it in buf, and returns it. If an error occurs, readByte records the error in r.err and returns 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readByteNoBuf",
+                    "documentation": {
+                      "identifier": "importReader.readByteNoBuf",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readByteNoBuf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readByteNoBuf() byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readByteNoBuf() byte\n```\n\nreadByteNoBuf is like readByte but doesn't buffer the byte. It exhausts r.buf before reading from r.b. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.peekByte",
+                    "documentation": {
+                      "identifier": "importReader.peekByte",
+                      "newPage": false,
+                      "searchKey": "build.importReader.peekByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) peekByte(skipSpace bool) byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) peekByte(skipSpace bool) byte\n```\n\npeekByte returns the next byte from the input reader but does not advance beyond it. If skipSpace is set, peekByte skips leading spaces and comments. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.nextByte",
+                    "documentation": {
+                      "identifier": "importReader.nextByte",
+                      "newPage": false,
+                      "searchKey": "build.importReader.nextByte",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) nextByte(skipSpace bool) byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) nextByte(skipSpace bool) byte\n```\n\nnextByte is like peekByte but advances beyond the returned byte. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.findEmbed",
+                    "documentation": {
+                      "identifier": "importReader.findEmbed",
+                      "newPage": false,
+                      "searchKey": "build.importReader.findEmbed",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) findEmbed(first bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) findEmbed(first bool) bool\n```\n\nfindEmbed advances the input reader to the next //go:embed comment. It reports whether it found a comment. (Otherwise it found an error or EOF.) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readKeyword",
+                    "documentation": {
+                      "identifier": "importReader.readKeyword",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readKeyword",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readKeyword(kw string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readKeyword(kw string)\n```\n\nreadKeyword reads the given keyword from the input. If the keyword is not present, readKeyword records a syntax error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readIdent",
+                    "documentation": {
+                      "identifier": "importReader.readIdent",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readIdent",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readIdent()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readIdent()\n```\n\nreadIdent reads an identifier from the input. If an identifier is not present, readIdent records a syntax error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readString",
+                    "documentation": {
+                      "identifier": "importReader.readString",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readString()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readString()\n```\n\nreadString reads a quoted string literal from the input. If an identifier is not present, readString records a syntax error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#importReader.readImport",
+                    "documentation": {
+                      "identifier": "importReader.readImport",
+                      "newPage": false,
+                      "searchKey": "build.importReader.readImport",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *importReader) readImport()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *importReader) readImport()\n```\n\nreadImport reads an import clause - optional identifier followed by quoted string - from the input. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readNopCloser",
+              "documentation": {
+                "identifier": "readNopCloser",
+                "newPage": false,
+                "searchKey": "build.readNopCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readNopCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readNopCloser struct {\n\tio.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#readNopCloser.Close",
+                    "documentation": {
+                      "identifier": "readNopCloser.Close",
+                      "newPage": false,
+                      "searchKey": "build.readNopCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r readNopCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r readNopCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#depsParser",
+              "documentation": {
+                "identifier": "depsParser",
+                "newPage": false,
+                "searchKey": "build.depsParser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type depsParser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype depsParser struct {\n\tt        *testing.T\n\tlineno   int\n\tlastWord string\n\ttext     string\n}\n```\n\nA depsParser parses the depsRules syntax described above. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/go/build#depsParser.syntaxError",
+                    "documentation": {
+                      "identifier": "depsParser.syntaxError",
+                      "newPage": false,
+                      "searchKey": "build.depsParser.syntaxError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *depsParser) syntaxError(msg string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *depsParser) syntaxError(msg string)\n```\n\nsyntaxError reports a parsing error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#depsParser.nextList",
+                    "documentation": {
+                      "identifier": "depsParser.nextList",
+                      "newPage": false,
+                      "searchKey": "build.depsParser.nextList",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *depsParser) nextList() (list []string, token string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *depsParser) nextList() (list []string, token string)\n```\n\nnextList parses and returns a comma-separated list of names. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/go/build#depsParser.nextToken",
+                    "documentation": {
+                      "identifier": "depsParser.nextToken",
+                      "newPage": false,
+                      "searchKey": "build.depsParser.nextToken",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *depsParser) nextToken() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *depsParser) nextToken() string\n```\n\nnextToken returns the next token in the deps rules, one of \";\" \",\" \"<\" \"!<\" or a name. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readTest",
+              "documentation": {
+                "identifier": "readTest",
+                "newPage": false,
+                "searchKey": "build.readTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readTest struct {\n\t// Test input contains ℙ where readGoInfo should stop.\n\tin  string\n\terr string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#GoodFileTest",
+              "documentation": {
+                "identifier": "GoodFileTest",
+                "newPage": false,
+                "searchKey": "build.GoodFileTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type GoodFileTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype GoodFileTest struct {\n\tname   string\n\tresult bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/build#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/build#hasSubdir",
+              "documentation": {
+                "identifier": "hasSubdir",
+                "newPage": false,
+                "searchKey": "build.hasSubdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasSubdir(root, dir string) (rel string, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasSubdir(root, dir string) (rel string, ok bool)\n```\n\nhasSubdir reports if dir is within root by performing lexical analysis only. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#defaultGOPATH",
+              "documentation": {
+                "identifier": "defaultGOPATH",
+                "newPage": false,
+                "searchKey": "build.defaultGOPATH",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func defaultGOPATH() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc defaultGOPATH() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#envOr",
+              "documentation": {
+                "identifier": "envOr",
+                "newPage": false,
+                "searchKey": "build.envOr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func envOr(name, def string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc envOr(name, def string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#nameExt",
+              "documentation": {
+                "identifier": "nameExt",
+                "newPage": false,
+                "searchKey": "build.nameExt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nameExt(name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nameExt(name string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#fileListForExt",
+              "documentation": {
+                "identifier": "fileListForExt",
+                "newPage": false,
+                "searchKey": "build.fileListForExt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fileListForExt(p *Package, ext string) *[]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fileListForExt(p *Package, ext string) *[]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#uniq",
+              "documentation": {
+                "identifier": "uniq",
+                "newPage": false,
+                "searchKey": "build.uniq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func uniq(list []string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc uniq(list []string) []string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "build.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(x, y []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(x, y []string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#hasGoFiles",
+              "documentation": {
+                "identifier": "hasGoFiles",
+                "newPage": false,
+                "searchKey": "build.hasGoFiles",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func hasGoFiles(ctxt *Context, dir string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc hasGoFiles(ctxt *Context, dir string) bool\n```\n\nhasGoFiles reports whether dir contains any files with names ending in .go. For a vendor check we must exclude directories that contain no .go files. Otherwise it is not possible to vendor just a/b/c and still import the non-vendored a/b. See golang.org/issue/13832. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#findImportComment",
+              "documentation": {
+                "identifier": "findImportComment",
+                "newPage": false,
+                "searchKey": "build.findImportComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findImportComment(data []byte) (s string, line int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findImportComment(data []byte) (s string, line int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#skipSpaceOrComment",
+              "documentation": {
+                "identifier": "skipSpaceOrComment",
+                "newPage": false,
+                "searchKey": "build.skipSpaceOrComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func skipSpaceOrComment(data []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc skipSpaceOrComment(data []byte) []byte\n```\n\nskipSpaceOrComment returns data with any leading spaces or comments removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#parseWord",
+              "documentation": {
+                "identifier": "parseWord",
+                "newPage": false,
+                "searchKey": "build.parseWord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseWord(data []byte) (word, rest []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseWord(data []byte) (word, rest []byte)\n```\n\nparseWord skips any leading spaces or comments in data and then parses the beginning of data as an identifier or keyword, returning that word and what remains after the word. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#cleanDecls",
+              "documentation": {
+                "identifier": "cleanDecls",
+                "newPage": false,
+                "searchKey": "build.cleanDecls",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cleanDecls(m map[string][]token.Position) ([]string, map[string][]token.Position)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#isGoBuildComment",
+              "documentation": {
+                "identifier": "isGoBuildComment",
+                "newPage": false,
+                "searchKey": "build.isGoBuildComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isGoBuildComment(line []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isGoBuildComment(line []byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#parseFileHeader",
+              "documentation": {
+                "identifier": "parseFileHeader",
+                "newPage": false,
+                "searchKey": "build.parseFileHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseFileHeader(content []byte) (trimmed, goBuild []byte, sawBinaryOnly bool, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#expandSrcDir",
+              "documentation": {
+                "identifier": "expandSrcDir",
+                "newPage": false,
+                "searchKey": "build.expandSrcDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expandSrcDir(str string, srcdir string) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expandSrcDir(str string, srcdir string) (string, bool)\n```\n\nexpandSrcDir expands any occurrence of ${SRCDIR}, making sure the result is safe for the shell. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#safeCgoName",
+              "documentation": {
+                "identifier": "safeCgoName",
+                "newPage": false,
+                "searchKey": "build.safeCgoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func safeCgoName(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc safeCgoName(s string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#splitQuoted",
+              "documentation": {
+                "identifier": "splitQuoted",
+                "newPage": false,
+                "searchKey": "build.splitQuoted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func splitQuoted(s string) (r []string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc splitQuoted(s string) (r []string, err error)\n```\n\nsplitQuoted splits the string s around each instance of one or more consecutive white space characters while taking into account quotes and escaping, and returns an array of substrings of s or an empty list if s contains only white space. Single quotes and double quotes are recognized to prevent splitting within the quoted region, and are removed from the resulting substrings. If a quote in s isn't closed err will be set and r will have the unclosed argument as the last element. The backslash is used for escaping. \n\nFor example, the following string: \n\n```\na b:\"c d\" 'e''f'  \"g\\\"\"\n\n```\nWould be parsed as: \n\n```\n[]string{\"a\", \"b:c d\", \"ef\", `g\"`}\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "build.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#IsLocalImport",
+              "documentation": {
+                "identifier": "IsLocalImport",
+                "newPage": false,
+                "searchKey": "build.IsLocalImport",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsLocalImport(path string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsLocalImport(path string) bool\n```\n\nIsLocalImport reports whether the import path is a local import path, like \".\", \"..\", \"./foo\", or \"../foo\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#ArchChar",
+              "documentation": {
+                "identifier": "ArchChar",
+                "newPage": false,
+                "searchKey": "build.ArchChar",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ArchChar(goarch string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ArchChar(goarch string) (string, error)\n```\n\nArchChar returns \"?\" and an error. In earlier versions of Go, the returned string was used to derive the compiler and linker tool names, the default object file suffix, and the default linker output name. As of Go 1.5, those strings no longer vary by architecture; they are compile, link, .o, and a.out, respectively. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#getToolDir",
+              "documentation": {
+                "identifier": "getToolDir",
+                "newPage": false,
+                "searchKey": "build.getToolDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getToolDir() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getToolDir() string\n```\n\ngetToolDir returns the default value of ToolDir. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#isIdent",
+              "documentation": {
+                "identifier": "isIdent",
+                "newPage": false,
+                "searchKey": "build.isIdent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isIdent(c byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isIdent(c byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readComments",
+              "documentation": {
+                "identifier": "readComments",
+                "newPage": false,
+                "searchKey": "build.readComments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readComments(f io.Reader) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readComments(f io.Reader) ([]byte, error)\n```\n\nreadComments is like io.ReadAll, except that it only reads the leading block of comments in the file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#readGoInfo",
+              "documentation": {
+                "identifier": "readGoInfo",
+                "newPage": false,
+                "searchKey": "build.readGoInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readGoInfo(f io.Reader, info *fileInfo) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readGoInfo(f io.Reader, info *fileInfo) error\n```\n\nreadGoInfo expects a Go file as input and reads the file up to and including the import section. It records what it learned in *info. If info.fset is non-nil, readGoInfo parses the file and sets info.parsed, info.parseErr, info.imports, info.embeds, and info.embedErr. \n\nIt only returns an error if there are problems reading the file, not for syntax errors in the file itself. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#parseGoEmbed",
+              "documentation": {
+                "identifier": "parseGoEmbed",
+                "newPage": false,
+                "searchKey": "build.parseGoEmbed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseGoEmbed(args string, pos token.Position) ([]fileEmbed, error)\n```\n\nparseGoEmbed parses the text following \"//go:embed\" to extract the glob patterns. It accepts unquoted space-separated patterns as well as double-quoted and back-quoted Go strings. This is based on a similar function in cmd/compile/internal/gc/noder.go; this version calculates position information as well. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestMain",
+              "documentation": {
+                "identifier": "TestMain",
+                "newPage": false,
+                "searchKey": "build.TestMain",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMain(m *testing.M)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMain(m *testing.M)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestMatch",
+              "documentation": {
+                "identifier": "TestMatch",
+                "newPage": false,
+                "searchKey": "build.TestMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestDotSlashImport",
+              "documentation": {
+                "identifier": "TestDotSlashImport",
+                "newPage": false,
+                "searchKey": "build.TestDotSlashImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDotSlashImport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDotSlashImport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestEmptyImport",
+              "documentation": {
+                "identifier": "TestEmptyImport",
+                "newPage": false,
+                "searchKey": "build.TestEmptyImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyImport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyImport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestEmptyFolderImport",
+              "documentation": {
+                "identifier": "TestEmptyFolderImport",
+                "newPage": false,
+                "searchKey": "build.TestEmptyFolderImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyFolderImport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyFolderImport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestMultiplePackageImport",
+              "documentation": {
+                "identifier": "TestMultiplePackageImport",
+                "newPage": false,
+                "searchKey": "build.TestMultiplePackageImport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiplePackageImport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiplePackageImport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestLocalDirectory",
+              "documentation": {
+                "identifier": "TestLocalDirectory",
+                "newPage": false,
+                "searchKey": "build.TestLocalDirectory",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLocalDirectory(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLocalDirectory(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestShouldBuild",
+              "documentation": {
+                "identifier": "TestShouldBuild",
+                "newPage": false,
+                "searchKey": "build.TestShouldBuild",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShouldBuild(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShouldBuild(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestGoodOSArchFile",
+              "documentation": {
+                "identifier": "TestGoodOSArchFile",
+                "newPage": false,
+                "searchKey": "build.TestGoodOSArchFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoodOSArchFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoodOSArchFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestMatchFile",
+              "documentation": {
+                "identifier": "TestMatchFile",
+                "newPage": false,
+                "searchKey": "build.TestMatchFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMatchFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMatchFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportCmd",
+              "documentation": {
+                "identifier": "TestImportCmd",
+                "newPage": false,
+                "searchKey": "build.TestImportCmd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportCmd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportCmd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestExpandSrcDir",
+              "documentation": {
+                "identifier": "TestExpandSrcDir",
+                "newPage": false,
+                "searchKey": "build.TestExpandSrcDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpandSrcDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpandSrcDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestShellSafety",
+              "documentation": {
+                "identifier": "TestShellSafety",
+                "newPage": false,
+                "searchKey": "build.TestShellSafety",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShellSafety(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShellSafety(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportDirNotExist",
+              "documentation": {
+                "identifier": "TestImportDirNotExist",
+                "newPage": false,
+                "searchKey": "build.TestImportDirNotExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportDirNotExist(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportDirNotExist(t *testing.T)\n```\n\nWant to get a \"cannot find package\" error when directory for package does not exist. There should be valid partial information in the returned non-nil *Package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportVendor",
+              "documentation": {
+                "identifier": "TestImportVendor",
+                "newPage": false,
+                "searchKey": "build.TestImportVendor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportVendor(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportVendor(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportVendorFailure",
+              "documentation": {
+                "identifier": "TestImportVendorFailure",
+                "newPage": false,
+                "searchKey": "build.TestImportVendorFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportVendorFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportVendorFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportVendorParentFailure",
+              "documentation": {
+                "identifier": "TestImportVendorParentFailure",
+                "newPage": false,
+                "searchKey": "build.TestImportVendorParentFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportVendorParentFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportVendorParentFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportPackageOutsideModule",
+              "documentation": {
+                "identifier": "TestImportPackageOutsideModule",
+                "newPage": false,
+                "searchKey": "build.TestImportPackageOutsideModule",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportPackageOutsideModule(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportPackageOutsideModule(t *testing.T)\n```\n\nCheck that a package is loaded in module mode if GO111MODULE=on, even when no go.mod file is present. It should fail to resolve packages outside std. Verifies golang.org/issue/34669. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestImportDirTarget",
+              "documentation": {
+                "identifier": "TestImportDirTarget",
+                "newPage": false,
+                "searchKey": "build.TestImportDirTarget",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportDirTarget(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportDirTarget(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestIssue23594",
+              "documentation": {
+                "identifier": "TestIssue23594",
+                "newPage": false,
+                "searchKey": "build.TestIssue23594",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue23594(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue23594(t *testing.T)\n```\n\nTestIssue23594 prevents go/build from regressing and populating Package.Doc from comments in test files. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestMissingImportErrorRepetition",
+              "documentation": {
+                "identifier": "TestMissingImportErrorRepetition",
+                "newPage": false,
+                "searchKey": "build.TestMissingImportErrorRepetition",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMissingImportErrorRepetition(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMissingImportErrorRepetition(t *testing.T)\n```\n\nTestMissingImportErrorRepetition checks that when an unknown package is imported, the package path is only shown once in the error. Verifies golang.org/issue/34752. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestCgoImportsIgnored",
+              "documentation": {
+                "identifier": "TestCgoImportsIgnored",
+                "newPage": false,
+                "searchKey": "build.TestCgoImportsIgnored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCgoImportsIgnored(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCgoImportsIgnored(t *testing.T)\n```\n\nTestCgoImportsIgnored checks that imports in cgo files are not included in the imports list when cgo is disabled. Verifies golang.org/issue/35946. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#listStdPkgs",
+              "documentation": {
+                "identifier": "listStdPkgs",
+                "newPage": false,
+                "searchKey": "build.listStdPkgs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listStdPkgs(goroot string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listStdPkgs(goroot string) ([]string, error)\n```\n\nlistStdPkgs returns the same list of packages as \"go list std\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestDependencies",
+              "documentation": {
+                "identifier": "TestDependencies",
+                "newPage": false,
+                "searchKey": "build.TestDependencies",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDependencies(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDependencies(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#findImports",
+              "documentation": {
+                "identifier": "findImports",
+                "newPage": false,
+                "searchKey": "build.findImports",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func findImports(pkg string) ([]string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc findImports(pkg string) ([]string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#depsPolicy",
+              "documentation": {
+                "identifier": "depsPolicy",
+                "newPage": false,
+                "searchKey": "build.depsPolicy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func depsPolicy(t *testing.T) map[string]map[string]bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc depsPolicy(t *testing.T) map[string]map[string]bool\n```\n\ndepsPolicy returns a map m such that m[p][d] == true when p can import d. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#parseDepsRules",
+              "documentation": {
+                "identifier": "parseDepsRules",
+                "newPage": false,
+                "searchKey": "build.parseDepsRules",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseDepsRules(t *testing.T, save func(deps []string, op string, users []string))\n```\n\nparseDepsRules parses depsRules, calling save(deps, op, users) for each deps < users or deps !< users rule (op is \"<\" or \"!<\"). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestStdlibLowercase",
+              "documentation": {
+                "identifier": "TestStdlibLowercase",
+                "newPage": false,
+                "searchKey": "build.TestStdlibLowercase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStdlibLowercase(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStdlibLowercase(t *testing.T)\n```\n\nTestStdlibLowercase tests that all standard library package names are lowercase. See Issue 40065. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestFindImports",
+              "documentation": {
+                "identifier": "TestFindImports",
+                "newPage": false,
+                "searchKey": "build.TestFindImports",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFindImports(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFindImports(t *testing.T)\n```\n\nTestFindImports tests that findImports works.  See #43249. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#testRead",
+              "documentation": {
+                "identifier": "testRead",
+                "newPage": false,
+                "searchKey": "build.testRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testRead(t *testing.T, tests []readTest, read func(io.Reader) ([]byte, error))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestReadGoInfo",
+              "documentation": {
+                "identifier": "TestReadGoInfo",
+                "newPage": false,
+                "searchKey": "build.TestReadGoInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadGoInfo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadGoInfo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestReadComments",
+              "documentation": {
+                "identifier": "TestReadComments",
+                "newPage": false,
+                "searchKey": "build.TestReadComments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadComments(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadComments(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestReadFailuresIgnored",
+              "documentation": {
+                "identifier": "TestReadFailuresIgnored",
+                "newPage": false,
+                "searchKey": "build.TestReadFailuresIgnored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadFailuresIgnored(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadFailuresIgnored(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestReadEmbed",
+              "documentation": {
+                "identifier": "TestReadEmbed",
+                "newPage": false,
+                "searchKey": "build.TestReadEmbed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadEmbed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadEmbed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#anotherOS",
+              "documentation": {
+                "identifier": "anotherOS",
+                "newPage": false,
+                "searchKey": "build.anotherOS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func anotherOS() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc anotherOS() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#anotherArch",
+              "documentation": {
+                "identifier": "anotherArch",
+                "newPage": false,
+                "searchKey": "build.anotherArch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func anotherArch() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc anotherArch() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/build#TestGoodOSArch",
+              "documentation": {
+                "identifier": "TestGoodOSArch",
+                "newPage": false,
+                "searchKey": "build.TestGoodOSArch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoodOSArch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoodOSArch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/go/build/constraint"
+    }
+  ]
+}

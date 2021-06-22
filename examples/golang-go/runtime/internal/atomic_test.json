@@ -1,0 +1,681 @@
+{
+  "pathID": "/runtime/internal/atomic_test",
+  "documentation": {
+    "identifier": "atomic_test",
+    "newPage": true,
+    "searchKey": "runtime/internal/atomic_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package atomic_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/runtime/internal/atomic_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#sink",
+              "documentation": {
+                "identifier": "sink",
+                "newPage": false,
+                "searchKey": "atomic_test.sink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sink interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/runtime/internal/atomic_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#runParallel",
+              "documentation": {
+                "identifier": "runParallel",
+                "newPage": false,
+                "searchKey": "atomic_test.runParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runParallel(N, iter int, f func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runParallel(N, iter int, f func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestXadduintptr",
+              "documentation": {
+                "identifier": "TestXadduintptr",
+                "newPage": false,
+                "searchKey": "atomic_test.TestXadduintptr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestXadduintptr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestXadduintptr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestXadduintptrOnUint64",
+              "documentation": {
+                "identifier": "TestXadduintptrOnUint64",
+                "newPage": false,
+                "searchKey": "atomic_test.TestXadduintptrOnUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestXadduintptrOnUint64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestXadduintptrOnUint64(t *testing.T)\n```\n\nTests that xadduintptr correctly updates 64-bit values. The place where we actually do so is mstats.go, functions mSysStat{Inc,Dec}. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#shouldPanic",
+              "documentation": {
+                "identifier": "shouldPanic",
+                "newPage": false,
+                "searchKey": "atomic_test.shouldPanic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shouldPanic(t *testing.T, name string, f func())"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shouldPanic(t *testing.T, name string, f func())\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestUnaligned64",
+              "documentation": {
+                "identifier": "TestUnaligned64",
+                "newPage": false,
+                "searchKey": "atomic_test.TestUnaligned64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnaligned64(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnaligned64(t *testing.T)\n```\n\nVariant of sync/atomic's TestUnaligned64: \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestAnd8",
+              "documentation": {
+                "identifier": "TestAnd8",
+                "newPage": false,
+                "searchKey": "atomic_test.TestAnd8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAnd8(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAnd8(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestAnd",
+              "documentation": {
+                "identifier": "TestAnd",
+                "newPage": false,
+                "searchKey": "atomic_test.TestAnd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAnd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAnd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestOr8",
+              "documentation": {
+                "identifier": "TestOr8",
+                "newPage": false,
+                "searchKey": "atomic_test.TestOr8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOr8(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOr8(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestOr",
+              "documentation": {
+                "identifier": "TestOr",
+                "newPage": false,
+                "searchKey": "atomic_test.TestOr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOr(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOr(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestBitwiseContended8",
+              "documentation": {
+                "identifier": "TestBitwiseContended8",
+                "newPage": false,
+                "searchKey": "atomic_test.TestBitwiseContended8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitwiseContended8(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitwiseContended8(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestBitwiseContended",
+              "documentation": {
+                "identifier": "TestBitwiseContended",
+                "newPage": false,
+                "searchKey": "atomic_test.TestBitwiseContended",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBitwiseContended(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBitwiseContended(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#TestStorepNoWB",
+              "documentation": {
+                "identifier": "TestStorepNoWB",
+                "newPage": false,
+                "searchKey": "atomic_test.TestStorepNoWB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStorepNoWB(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStorepNoWB(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAtomicLoad64",
+              "documentation": {
+                "identifier": "BenchmarkAtomicLoad64",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAtomicLoad64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtomicLoad64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtomicLoad64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAtomicStore64",
+              "documentation": {
+                "identifier": "BenchmarkAtomicStore64",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAtomicStore64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtomicStore64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtomicStore64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAtomicLoad",
+              "documentation": {
+                "identifier": "BenchmarkAtomicLoad",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAtomicLoad",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtomicLoad(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtomicLoad(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAtomicStore",
+              "documentation": {
+                "identifier": "BenchmarkAtomicStore",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAtomicStore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAtomicStore(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAtomicStore(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAnd8",
+              "documentation": {
+                "identifier": "BenchmarkAnd8",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAnd8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAnd8(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAnd8(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAnd",
+              "documentation": {
+                "identifier": "BenchmarkAnd",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAnd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAnd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAnd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAnd8Parallel",
+              "documentation": {
+                "identifier": "BenchmarkAnd8Parallel",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAnd8Parallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAnd8Parallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAnd8Parallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkAndParallel",
+              "documentation": {
+                "identifier": "BenchmarkAndParallel",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkAndParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAndParallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAndParallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkOr8",
+              "documentation": {
+                "identifier": "BenchmarkOr8",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkOr8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkOr8(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkOr8(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkOr",
+              "documentation": {
+                "identifier": "BenchmarkOr",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkOr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkOr(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkOr(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkOr8Parallel",
+              "documentation": {
+                "identifier": "BenchmarkOr8Parallel",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkOr8Parallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkOr8Parallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkOr8Parallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkOrParallel",
+              "documentation": {
+                "identifier": "BenchmarkOrParallel",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkOrParallel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkOrParallel(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkOrParallel(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkXadd",
+              "documentation": {
+                "identifier": "BenchmarkXadd",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkXadd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkXadd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkXadd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkXadd64",
+              "documentation": {
+                "identifier": "BenchmarkXadd64",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkXadd64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkXadd64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkXadd64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkCas",
+              "documentation": {
+                "identifier": "BenchmarkCas",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkCas",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCas(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCas(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkCas64",
+              "documentation": {
+                "identifier": "BenchmarkCas64",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkCas64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCas64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCas64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkXchg",
+              "documentation": {
+                "identifier": "BenchmarkXchg",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkXchg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkXchg(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkXchg(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic_test#BenchmarkXchg64",
+              "documentation": {
+                "identifier": "BenchmarkXchg64",
+                "newPage": false,
+                "searchKey": "atomic_test.BenchmarkXchg64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkXchg64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkXchg64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

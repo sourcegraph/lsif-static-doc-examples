@@ -1,0 +1,141 @@
+{
+  "pathID": "/hash_test",
+  "documentation": {
+    "identifier": "hash_test",
+    "newPage": true,
+    "searchKey": "hash_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package hash_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/hash_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash_test#marshalTests",
+              "documentation": {
+                "identifier": "marshalTests",
+                "newPage": false,
+                "searchKey": "hash_test.marshalTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var marshalTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar marshalTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/hash_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash_test#Example_binaryMarshaler",
+              "documentation": {
+                "identifier": "Example_binaryMarshaler",
+                "newPage": false,
+                "searchKey": "hash_test.Example_binaryMarshaler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_binaryMarshaler()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_binaryMarshaler()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash_test#fromHex",
+              "documentation": {
+                "identifier": "fromHex",
+                "newPage": false,
+                "searchKey": "hash_test.fromHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHex(s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHex(s string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash_test#TestMarshalHash",
+              "documentation": {
+                "identifier": "TestMarshalHash",
+                "newPage": false,
+                "searchKey": "hash_test.TestMarshalHash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalHash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalHash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

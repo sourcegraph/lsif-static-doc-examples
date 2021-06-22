@@ -1,0 +1,2283 @@
+{
+  "pathID": "/net/textproto",
+  "documentation": {
+    "identifier": "textproto",
+    "newPage": true,
+    "searchKey": "net/textproto",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package textproto"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package textproto implements generic support for text-based request/response protocols in the style of HTTP, NNTP, and SMTP. \n\nThe package provides: \n\nError, which represents a numeric error response from a server. \n\nPipeline, to manage pipelined requests and responses in a client. \n\nReader, to read numeric response code lines, key: value headers, lines wrapped with leading spaces on continuation lines, and whole text blocks ending with a dot on a line by itself. \n\nWriter, to write dot-encoded text blocks. \n\nConn, a convenient packaging of Reader, Writer, and Pipeline for use with a single network connection. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/textproto#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/textproto#toLower",
+              "documentation": {
+                "identifier": "toLower",
+                "newPage": false,
+                "searchKey": "textproto.toLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const toLower"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst toLower = 'a' - 'A'\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#wstateBegin",
+              "documentation": {
+                "identifier": "wstateBegin",
+                "newPage": false,
+                "searchKey": "textproto.wstateBegin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wstateBegin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wstateBegin = iota // initial state; must be zero\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#wstateBeginLine",
+              "documentation": {
+                "identifier": "wstateBeginLine",
+                "newPage": false,
+                "searchKey": "textproto.wstateBeginLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wstateBeginLine"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wstateBeginLine // beginning of line\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#wstateCR",
+              "documentation": {
+                "identifier": "wstateCR",
+                "newPage": false,
+                "searchKey": "textproto.wstateCR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wstateCR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wstateCR // wrote \\r (possibly at end of line)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#wstateData",
+              "documentation": {
+                "identifier": "wstateData",
+                "newPage": false,
+                "searchKey": "textproto.wstateData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const wstateData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst wstateData // writing data in middle of line\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/textproto#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/textproto#commonHeader",
+              "documentation": {
+                "identifier": "commonHeader",
+                "newPage": false,
+                "searchKey": "textproto.commonHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonHeader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonHeader map[string]string\n```\n\ncommonHeader interns common header strings. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#commonHeaderOnce",
+              "documentation": {
+                "identifier": "commonHeaderOnce",
+                "newPage": false,
+                "searchKey": "textproto.commonHeaderOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commonHeaderOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commonHeaderOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#isTokenTable",
+              "documentation": {
+                "identifier": "isTokenTable",
+                "newPage": false,
+                "searchKey": "textproto.isTokenTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isTokenTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isTokenTable = ...\n```\n\nisTokenTable is a copy of net/http/lex.go's isTokenTable. See [https://httpwg.github.io/specs/rfc7230.html#rule.token.separators](https://httpwg.github.io/specs/rfc7230.html#rule.token.separators) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#crnl",
+              "documentation": {
+                "identifier": "crnl",
+                "newPage": false,
+                "searchKey": "textproto.crnl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var crnl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar crnl = []byte{'\\r', '\\n'}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#dotcrnl",
+              "documentation": {
+                "identifier": "dotcrnl",
+                "newPage": false,
+                "searchKey": "textproto.dotcrnl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dotcrnl"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dotcrnl = []byte{'.', '\\r', '\\n'}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#canonicalHeaderKeyTests",
+              "documentation": {
+                "identifier": "canonicalHeaderKeyTests",
+                "newPage": false,
+                "searchKey": "textproto.canonicalHeaderKeyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var canonicalHeaderKeyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar canonicalHeaderKeyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#readResponseTests",
+              "documentation": {
+                "identifier": "readResponseTests",
+                "newPage": false,
+                "searchKey": "textproto.readResponseTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readResponseTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readResponseTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#clientHeaders",
+              "documentation": {
+                "identifier": "clientHeaders",
+                "newPage": false,
+                "searchKey": "textproto.clientHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var clientHeaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar clientHeaders = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#serverHeaders",
+              "documentation": {
+                "identifier": "serverHeaders",
+                "newPage": false,
+                "searchKey": "textproto.serverHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serverHeaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serverHeaders = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/textproto#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/textproto#MIMEHeader",
+              "documentation": {
+                "identifier": "MIMEHeader",
+                "newPage": false,
+                "searchKey": "textproto.MIMEHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MIMEHeader map[string][]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MIMEHeader map[string][]string\n```\n\nA MIMEHeader represents a MIME-style header mapping keys to sets of values. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#MIMEHeader.Add",
+                    "documentation": {
+                      "identifier": "MIMEHeader.Add",
+                      "newPage": false,
+                      "searchKey": "textproto.MIMEHeader.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h MIMEHeader) Add(key, value string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h MIMEHeader) Add(key, value string)\n```\n\nAdd adds the key, value pair to the header. It appends to any existing values associated with key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#MIMEHeader.Set",
+                    "documentation": {
+                      "identifier": "MIMEHeader.Set",
+                      "newPage": false,
+                      "searchKey": "textproto.MIMEHeader.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h MIMEHeader) Set(key, value string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h MIMEHeader) Set(key, value string)\n```\n\nSet sets the header entries associated with key to the single element value. It replaces any existing values associated with key. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#MIMEHeader.Get",
+                    "documentation": {
+                      "identifier": "MIMEHeader.Get",
+                      "newPage": false,
+                      "searchKey": "textproto.MIMEHeader.Get",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h MIMEHeader) Get(key string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h MIMEHeader) Get(key string) string\n```\n\nGet gets the first value associated with the given key. It is case insensitive; CanonicalMIMEHeaderKey is used to canonicalize the provided key. If there are no values associated with the key, Get returns \"\". To use non-canonical keys, access the map directly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#MIMEHeader.Values",
+                    "documentation": {
+                      "identifier": "MIMEHeader.Values",
+                      "newPage": false,
+                      "searchKey": "textproto.MIMEHeader.Values",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h MIMEHeader) Values(key string) []string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h MIMEHeader) Values(key string) []string\n```\n\nValues returns all values associated with the given key. It is case insensitive; CanonicalMIMEHeaderKey is used to canonicalize the provided key. To use non-canonical keys, access the map directly. The returned slice is not a copy. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#MIMEHeader.Del",
+                    "documentation": {
+                      "identifier": "MIMEHeader.Del",
+                      "newPage": false,
+                      "searchKey": "textproto.MIMEHeader.Del",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h MIMEHeader) Del(key string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h MIMEHeader) Del(key string)\n```\n\nDel deletes the values associated with key. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#Pipeline",
+              "documentation": {
+                "identifier": "Pipeline",
+                "newPage": false,
+                "searchKey": "textproto.Pipeline",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Pipeline struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Pipeline struct {\n\tmu       sync.Mutex\n\tid       uint\n\trequest  sequencer\n\tresponse sequencer\n}\n```\n\nA Pipeline manages a pipelined in-order request/response sequence. \n\nTo use a Pipeline p to manage multiple clients on a connection, each client should run: \n\n```\nid := p.Next()\t// take a number\n\np.StartRequest(id)\t// wait for turn to send request\n«send request»\np.EndRequest(id)\t// notify Pipeline that request is sent\n\np.StartResponse(id)\t// wait for turn to read response\n«read response»\np.EndResponse(id)\t// notify Pipeline that response is read\n\n```\nA pipelined server can use the same calls to ensure that responses computed in parallel are written in the correct order. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Pipeline.Next",
+                    "documentation": {
+                      "identifier": "Pipeline.Next",
+                      "newPage": false,
+                      "searchKey": "textproto.Pipeline.Next",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) Next() uint"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) Next() uint\n```\n\nNext returns the next id for a request/response pair. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Pipeline.StartRequest",
+                    "documentation": {
+                      "identifier": "Pipeline.StartRequest",
+                      "newPage": false,
+                      "searchKey": "textproto.Pipeline.StartRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) StartRequest(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) StartRequest(id uint)\n```\n\nStartRequest blocks until it is time to send (or, if this is a server, receive) the request with the given id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Pipeline.EndRequest",
+                    "documentation": {
+                      "identifier": "Pipeline.EndRequest",
+                      "newPage": false,
+                      "searchKey": "textproto.Pipeline.EndRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) EndRequest(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) EndRequest(id uint)\n```\n\nEndRequest notifies p that the request with the given id has been sent (or, if this is a server, received). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Pipeline.StartResponse",
+                    "documentation": {
+                      "identifier": "Pipeline.StartResponse",
+                      "newPage": false,
+                      "searchKey": "textproto.Pipeline.StartResponse",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) StartResponse(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) StartResponse(id uint)\n```\n\nStartResponse blocks until it is time to receive (or, if this is a server, send) the request with the given id. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Pipeline.EndResponse",
+                    "documentation": {
+                      "identifier": "Pipeline.EndResponse",
+                      "newPage": false,
+                      "searchKey": "textproto.Pipeline.EndResponse",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Pipeline) EndResponse(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Pipeline) EndResponse(id uint)\n```\n\nEndResponse notifies p that the response with the given id has been received (or, if this is a server, sent). \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#sequencer",
+              "documentation": {
+                "identifier": "sequencer",
+                "newPage": false,
+                "searchKey": "textproto.sequencer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sequencer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sequencer struct {\n\tmu   sync.Mutex\n\tid   uint\n\twait map[uint]chan struct{}\n}\n```\n\nA sequencer schedules a sequence of numbered events that must happen in order, one after the other. The event numbering must start at 0 and increment without skipping. The event number wraps around safely as long as there are not 2^32 simultaneous events pending. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#sequencer.Start",
+                    "documentation": {
+                      "identifier": "sequencer.Start",
+                      "newPage": false,
+                      "searchKey": "textproto.sequencer.Start",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sequencer) Start(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sequencer) Start(id uint)\n```\n\nStart waits until it is time for the event numbered id to begin. That is, except for the first event, it waits until End(id-1) has been called. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#sequencer.End",
+                    "documentation": {
+                      "identifier": "sequencer.End",
+                      "newPage": false,
+                      "searchKey": "textproto.sequencer.End",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *sequencer) End(id uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *sequencer) End(id uint)\n```\n\nEnd notifies the sequencer that the event numbered id has completed, allowing it to schedule the event numbered id+1.  It is a run-time error to call End with an id that is not the number of the active event. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#Reader",
+              "documentation": {
+                "identifier": "Reader",
+                "newPage": false,
+                "searchKey": "textproto.Reader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reader struct {\n\tR   *bufio.Reader\n\tdot *dotReader\n\tbuf []byte // a re-usable buffer for readContinuedLineSlice\n}\n```\n\nA Reader implements convenience methods for reading requests or responses from a text protocol network connection. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#NewReader",
+                    "documentation": {
+                      "identifier": "NewReader",
+                      "newPage": false,
+                      "searchKey": "textproto.NewReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewReader(r *bufio.Reader) *Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewReader(r *bufio.Reader) *Reader\n```\n\nNewReader returns a new Reader reading from r. \n\nTo avoid denial of service attacks, the provided bufio.Reader should be reading from an io.LimitReader or similar Reader to bound the size of responses. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#reader",
+                    "documentation": {
+                      "identifier": "reader",
+                      "newPage": false,
+                      "searchKey": "textproto.reader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func reader(s string) *Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc reader(s string) *Reader\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadLine",
+                    "documentation": {
+                      "identifier": "Reader.ReadLine",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadLine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadLine() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadLine() (string, error)\n```\n\nReadLine reads a single line from r, eliding the final \\n or \\r\\n from the returned string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadLineBytes",
+                    "documentation": {
+                      "identifier": "Reader.ReadLineBytes",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadLineBytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadLineBytes() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadLineBytes() ([]byte, error)\n```\n\nReadLineBytes is like ReadLine but returns a []byte instead of a string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.readLineSlice",
+                    "documentation": {
+                      "identifier": "Reader.readLineSlice",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.readLineSlice",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readLineSlice() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readLineSlice() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadContinuedLine",
+                    "documentation": {
+                      "identifier": "Reader.ReadContinuedLine",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadContinuedLine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadContinuedLine() (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadContinuedLine() (string, error)\n```\n\nReadContinuedLine reads a possibly continued line from r, eliding the final trailing ASCII white space. Lines after the first are considered continuations if they begin with a space or tab character. In the returned data, continuation lines are separated from the previous line only by a single space: the newline and leading white space are removed. \n\nFor example, consider this input: \n\n```\nLine 1\n  continued...\nLine 2\n\n```\nThe first call to ReadContinuedLine will return \"Line 1 continued...\" and the second will return \"Line 2\". \n\nEmpty lines are never continued. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadContinuedLineBytes",
+                    "documentation": {
+                      "identifier": "Reader.ReadContinuedLineBytes",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadContinuedLineBytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadContinuedLineBytes() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadContinuedLineBytes() ([]byte, error)\n```\n\nReadContinuedLineBytes is like ReadContinuedLine but returns a []byte instead of a string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.readContinuedLineSlice",
+                    "documentation": {
+                      "identifier": "Reader.readContinuedLineSlice",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.readContinuedLineSlice",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readContinuedLineSlice(validateFirstLine func([]byte) error) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readContinuedLineSlice(validateFirstLine func([]byte) error) ([]byte, error)\n```\n\nreadContinuedLineSlice reads continued lines from the reader buffer, returning a byte slice with all lines. The validateFirstLine function is run on the first read line, and if it returns an error then this error is returned from readContinuedLineSlice. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.skipSpace",
+                    "documentation": {
+                      "identifier": "Reader.skipSpace",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.skipSpace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) skipSpace() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) skipSpace() int\n```\n\nskipSpace skips R over all spaces and returns the number of bytes skipped. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.readCodeLine",
+                    "documentation": {
+                      "identifier": "Reader.readCodeLine",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.readCodeLine",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) readCodeLine(expectCode int) (code int, continued bool, message string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) readCodeLine(expectCode int) (code int, continued bool, message string, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadCodeLine",
+                    "documentation": {
+                      "identifier": "Reader.ReadCodeLine",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadCodeLine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadCodeLine(expectCode int) (code int, message string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadCodeLine(expectCode int) (code int, message string, err error)\n```\n\nReadCodeLine reads a response code line of the form \n\n```\ncode message\n\n```\nwhere code is a three-digit status code and the message extends to the rest of the line. An example of such a line is: \n\n```\n220 plan9.bell-labs.com ESMTP\n\n```\nIf the prefix of the status does not match the digits in expectCode, ReadCodeLine returns with err set to &Error{code, message}. For example, if expectCode is 31, an error will be returned if the status is not in the range [310,319]. \n\nIf the response is multi-line, ReadCodeLine returns an error. \n\nAn expectCode <= 0 disables the check of the status code. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadResponse",
+                    "documentation": {
+                      "identifier": "Reader.ReadResponse",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadResponse",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadResponse(expectCode int) (code int, message string, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadResponse(expectCode int) (code int, message string, err error)\n```\n\nReadResponse reads a multi-line response of the form: \n\n```\ncode-message line 1\ncode-message line 2\n...\ncode message line n\n\n```\nwhere code is a three-digit status code. The first line starts with the code and a hyphen. The response is terminated by a line that starts with the same code followed by a space. Each line in message is separated by a newline (\\n). \n\nSee page 36 of RFC 959 ([https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt)) for details of another form of response accepted: \n\n```\ncode-message line 1\nmessage line 2\n...\ncode message line n\n\n```\nIf the prefix of the status does not match the digits in expectCode, ReadResponse returns with err set to &Error{code, message}. For example, if expectCode is 31, an error will be returned if the status is not in the range [310,319]. \n\nAn expectCode <= 0 disables the check of the status code. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.DotReader",
+                    "documentation": {
+                      "identifier": "Reader.DotReader",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.DotReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) DotReader() io.Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) DotReader() io.Reader\n```\n\nDotReader returns a new Reader that satisfies Reads using the decoded text of a dot-encoded block read from r. The returned Reader is only valid until the next call to a method on r. \n\nDot encoding is a common framing used for data blocks in text protocols such as SMTP.  The data consists of a sequence of lines, each of which ends in \"\\r\\n\".  The sequence itself ends at a line containing just a dot: \".\\r\\n\".  Lines beginning with a dot are escaped with an additional dot to avoid looking like the end of the sequence. \n\nThe decoded form returned by the Reader's Read method rewrites the \"\\r\\n\" line endings into the simpler \"\\n\", removes leading dot escapes if present, and stops with error io.EOF after consuming (and discarding) the end-of-sequence line. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.closeDot",
+                    "documentation": {
+                      "identifier": "Reader.closeDot",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.closeDot",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) closeDot()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) closeDot()\n```\n\ncloseDot drains the current DotReader if any, making sure that it reads until the ending dot line. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadDotBytes",
+                    "documentation": {
+                      "identifier": "Reader.ReadDotBytes",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadDotBytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadDotBytes() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadDotBytes() ([]byte, error)\n```\n\nReadDotBytes reads a dot-encoding and returns the decoded data. \n\nSee the documentation for the DotReader method for details about dot-encoding. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadDotLines",
+                    "documentation": {
+                      "identifier": "Reader.ReadDotLines",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadDotLines",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadDotLines() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadDotLines() ([]string, error)\n```\n\nReadDotLines reads a dot-encoding and returns a slice containing the decoded lines, with the final \\r\\n or \\n elided from each. \n\nSee the documentation for the DotReader method for details about dot-encoding. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.ReadMIMEHeader",
+                    "documentation": {
+                      "identifier": "Reader.ReadMIMEHeader",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.ReadMIMEHeader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadMIMEHeader() (MIMEHeader, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadMIMEHeader() (MIMEHeader, error)\n```\n\nReadMIMEHeader reads a MIME-style header from r. The header is a sequence of possibly continued Key: Value lines ending in a blank line. The returned map m maps CanonicalMIMEHeaderKey(key) to a sequence of values in the same order encountered in the input. \n\nFor example, consider this input: \n\n```\nMy-Key: Value 1\nLong-Key: Even\n       Longer Value\nMy-Key: Value 2\n\n```\nGiven that input, ReadMIMEHeader returns the map: \n\n```\nmap[string][]string{\n\t\"My-Key\": {\"Value 1\", \"Value 2\"},\n\t\"Long-Key\": {\"Even Longer Value\"},\n}\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Reader.upcomingHeaderNewlines",
+                    "documentation": {
+                      "identifier": "Reader.upcomingHeaderNewlines",
+                      "newPage": false,
+                      "searchKey": "textproto.Reader.upcomingHeaderNewlines",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) upcomingHeaderNewlines() (n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) upcomingHeaderNewlines() (n int)\n```\n\nupcomingHeaderNewlines returns an approximation of the number of newlines that will be in this header. If it gets confused, it returns 0. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#dotReader",
+              "documentation": {
+                "identifier": "dotReader",
+                "newPage": false,
+                "searchKey": "textproto.dotReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dotReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dotReader struct {\n\tr     *Reader\n\tstate int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#dotReader.Read",
+                    "documentation": {
+                      "identifier": "dotReader.Read",
+                      "newPage": false,
+                      "searchKey": "textproto.dotReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *dotReader) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *dotReader) Read(b []byte) (n int, err error)\n```\n\nRead satisfies reads by decoding dot-encoded data read from d.r. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#Error",
+              "documentation": {
+                "identifier": "Error",
+                "newPage": false,
+                "searchKey": "textproto.Error",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Error struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Error struct {\n\tCode int\n\tMsg  string\n}\n```\n\nAn Error represents a numeric error response from a server. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Error.Error",
+                    "documentation": {
+                      "identifier": "Error.Error",
+                      "newPage": false,
+                      "searchKey": "textproto.Error.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *Error) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *Error) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#ProtocolError",
+              "documentation": {
+                "identifier": "ProtocolError",
+                "newPage": false,
+                "searchKey": "textproto.ProtocolError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ProtocolError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ProtocolError string\n```\n\nA ProtocolError describes a protocol violation such as an invalid response or a hung-up connection. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#ProtocolError.Error",
+                    "documentation": {
+                      "identifier": "ProtocolError.Error",
+                      "newPage": false,
+                      "searchKey": "textproto.ProtocolError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p ProtocolError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p ProtocolError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#Conn",
+              "documentation": {
+                "identifier": "Conn",
+                "newPage": false,
+                "searchKey": "textproto.Conn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Conn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Conn struct {\n\tReader\n\tWriter\n\tPipeline\n\tconn io.ReadWriteCloser\n}\n```\n\nA Conn represents a textual network protocol connection. It consists of a Reader and Writer to manage I/O and a Pipeline to sequence concurrent requests on the connection. These embedded types carry methods with them; see the documentation of those types for details. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#NewConn",
+                    "documentation": {
+                      "identifier": "NewConn",
+                      "newPage": false,
+                      "searchKey": "textproto.NewConn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewConn(conn io.ReadWriteCloser) *Conn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewConn(conn io.ReadWriteCloser) *Conn\n```\n\nNewConn returns a new Conn using conn for I/O. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Dial",
+                    "documentation": {
+                      "identifier": "Dial",
+                      "newPage": false,
+                      "searchKey": "textproto.Dial",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Dial(network, addr string) (*Conn, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Dial(network, addr string) (*Conn, error)\n```\n\nDial connects to the given address on the given network using net.Dial and then returns a new Conn for the connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Conn.Close",
+                    "documentation": {
+                      "identifier": "Conn.Close",
+                      "newPage": false,
+                      "searchKey": "textproto.Conn.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Conn) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Conn) Close() error\n```\n\nClose closes the connection. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Conn.Cmd",
+                    "documentation": {
+                      "identifier": "Conn.Cmd",
+                      "newPage": false,
+                      "searchKey": "textproto.Conn.Cmd",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *Conn) Cmd(format string, args ...interface{}) (id uint, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *Conn) Cmd(format string, args ...interface{}) (id uint, err error)\n```\n\nCmd is a convenience method that sends a command after waiting its turn in the pipeline. The command text is the result of formatting format with args and appending \\r\\n. Cmd returns the id of the command, for use with StartResponse and EndResponse. \n\nFor example, a client might run a HELP command that returns a dot-body by using: \n\n```\nid, err := c.Cmd(\"HELP\")\nif err != nil {\n\treturn nil, err\n}\n\nc.StartResponse(id)\ndefer c.EndResponse(id)\n\nif _, _, err = c.ReadCodeLine(110); err != nil {\n\treturn nil, err\n}\ntext, err := c.ReadDotBytes()\nif err != nil {\n\treturn nil, err\n}\nreturn c.ReadCodeLine(250)\n\n```\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#Writer",
+              "documentation": {
+                "identifier": "Writer",
+                "newPage": false,
+                "searchKey": "textproto.Writer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Writer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Writer struct {\n\tW   *bufio.Writer\n\tdot *dotWriter\n}\n```\n\nA Writer implements convenience methods for writing requests or responses to a text protocol network connection. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#NewWriter",
+                    "documentation": {
+                      "identifier": "NewWriter",
+                      "newPage": false,
+                      "searchKey": "textproto.NewWriter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewWriter(w *bufio.Writer) *Writer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewWriter(w *bufio.Writer) *Writer\n```\n\nNewWriter returns a new Writer writing to w. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Writer.PrintfLine",
+                    "documentation": {
+                      "identifier": "Writer.PrintfLine",
+                      "newPage": false,
+                      "searchKey": "textproto.Writer.PrintfLine",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) PrintfLine(format string, args ...interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) PrintfLine(format string, args ...interface{}) error\n```\n\nPrintfLine writes the formatted output followed by \\r\\n. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Writer.DotWriter",
+                    "documentation": {
+                      "identifier": "Writer.DotWriter",
+                      "newPage": false,
+                      "searchKey": "textproto.Writer.DotWriter",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) DotWriter() io.WriteCloser"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) DotWriter() io.WriteCloser\n```\n\nDotWriter returns a writer that can be used to write a dot-encoding to w. It takes care of inserting leading dots when necessary, translating line-ending \\n into \\r\\n, and adding the final .\\r\\n line when the DotWriter is closed. The caller should close the DotWriter before the next call to a method on w. \n\nSee the documentation for Reader's DotReader method for details about dot-encoding. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#Writer.closeDot",
+                    "documentation": {
+                      "identifier": "Writer.closeDot",
+                      "newPage": false,
+                      "searchKey": "textproto.Writer.closeDot",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *Writer) closeDot()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *Writer) closeDot()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#dotWriter",
+              "documentation": {
+                "identifier": "dotWriter",
+                "newPage": false,
+                "searchKey": "textproto.dotWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dotWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dotWriter struct {\n\tw     *Writer\n\tstate int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/textproto#dotWriter.Write",
+                    "documentation": {
+                      "identifier": "dotWriter.Write",
+                      "newPage": false,
+                      "searchKey": "textproto.dotWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *dotWriter) Write(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *dotWriter) Write(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/textproto#dotWriter.Close",
+                    "documentation": {
+                      "identifier": "dotWriter.Close",
+                      "newPage": false,
+                      "searchKey": "textproto.dotWriter.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *dotWriter) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *dotWriter) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#canonicalHeaderKeyTest",
+              "documentation": {
+                "identifier": "canonicalHeaderKeyTest",
+                "newPage": false,
+                "searchKey": "textproto.canonicalHeaderKeyTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type canonicalHeaderKeyTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype canonicalHeaderKeyTest struct {\n\tin, out string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#readResponseTest",
+              "documentation": {
+                "identifier": "readResponseTest",
+                "newPage": false,
+                "searchKey": "textproto.readResponseTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readResponseTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readResponseTest struct {\n\tin       string\n\tinCode   int\n\twantCode int\n\twantMsg  string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/textproto#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/textproto#trim",
+              "documentation": {
+                "identifier": "trim",
+                "newPage": false,
+                "searchKey": "textproto.trim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trim(s []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trim(s []byte) []byte\n```\n\ntrim returns s with leading and trailing spaces and tabs removed. It does not assume Unicode or UTF-8. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#parseCodeLine",
+              "documentation": {
+                "identifier": "parseCodeLine",
+                "newPage": false,
+                "searchKey": "textproto.parseCodeLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseCodeLine(line string, expectCode int) (code int, continued bool, message string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseCodeLine(line string, expectCode int) (code int, continued bool, message string, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#noValidation",
+              "documentation": {
+                "identifier": "noValidation",
+                "newPage": false,
+                "searchKey": "textproto.noValidation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func noValidation(_ []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc noValidation(_ []byte) error\n```\n\nnoValidation is a no-op validation func for readContinuedLineSlice that permits any lines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#mustHaveFieldNameColon",
+              "documentation": {
+                "identifier": "mustHaveFieldNameColon",
+                "newPage": false,
+                "searchKey": "textproto.mustHaveFieldNameColon",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mustHaveFieldNameColon(line []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mustHaveFieldNameColon(line []byte) error\n```\n\nmustHaveFieldNameColon ensures that, per RFC 7230, the field-name is on a single line, so the first line must contain a colon. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#CanonicalMIMEHeaderKey",
+              "documentation": {
+                "identifier": "CanonicalMIMEHeaderKey",
+                "newPage": false,
+                "searchKey": "textproto.CanonicalMIMEHeaderKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CanonicalMIMEHeaderKey(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CanonicalMIMEHeaderKey(s string) string\n```\n\nCanonicalMIMEHeaderKey returns the canonical format of the MIME header key s. The canonicalization converts the first letter and any letter following a hyphen to upper case; the rest are converted to lowercase. For example, the canonical key for \"accept-encoding\" is \"Accept-Encoding\". MIME header keys are assumed to be ASCII only. If s contains a space or invalid header field bytes, it is returned without modifications. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#validHeaderFieldByte",
+              "documentation": {
+                "identifier": "validHeaderFieldByte",
+                "newPage": false,
+                "searchKey": "textproto.validHeaderFieldByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func validHeaderFieldByte(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc validHeaderFieldByte(b byte) bool\n```\n\nvalidHeaderFieldByte reports whether b is a valid byte in a header field name. RFC 7230 says: \n\n```\nheader-field   = field-name \":\" OWS field-value OWS\nfield-name     = token\ntchar = \"!\" / \"#\" / \"$\" / \"%\" / \"&\" / \"'\" / \"*\" / \"+\" / \"-\" / \".\" /\n        \"^\" / \"_\" / \"`\" / \"|\" / \"~\" / DIGIT / ALPHA\ntoken = 1*tchar\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#canonicalMIMEHeaderKey",
+              "documentation": {
+                "identifier": "canonicalMIMEHeaderKey",
+                "newPage": false,
+                "searchKey": "textproto.canonicalMIMEHeaderKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func canonicalMIMEHeaderKey(a []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc canonicalMIMEHeaderKey(a []byte) string\n```\n\ncanonicalMIMEHeaderKey is like CanonicalMIMEHeaderKey but is allowed to mutate the provided byte slice before returning the string. \n\nFor invalid inputs (if a contains spaces or non-token bytes), a is unchanged and a string copy is returned. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#initCommonHeader",
+              "documentation": {
+                "identifier": "initCommonHeader",
+                "newPage": false,
+                "searchKey": "textproto.initCommonHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func initCommonHeader()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc initCommonHeader()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TrimString",
+              "documentation": {
+                "identifier": "TrimString",
+                "newPage": false,
+                "searchKey": "textproto.TrimString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimString(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimString(s string) string\n```\n\nTrimString returns s without leading and trailing ASCII space. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TrimBytes",
+              "documentation": {
+                "identifier": "TrimBytes",
+                "newPage": false,
+                "searchKey": "textproto.TrimBytes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimBytes(b []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimBytes(b []byte) []byte\n```\n\nTrimBytes returns b without leading and trailing ASCII space. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#isASCIISpace",
+              "documentation": {
+                "identifier": "isASCIISpace",
+                "newPage": false,
+                "searchKey": "textproto.isASCIISpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isASCIISpace(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isASCIISpace(b byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#isASCIILetter",
+              "documentation": {
+                "identifier": "isASCIILetter",
+                "newPage": false,
+                "searchKey": "textproto.isASCIILetter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isASCIILetter(b byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isASCIILetter(b byte) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestCanonicalMIMEHeaderKey",
+              "documentation": {
+                "identifier": "TestCanonicalMIMEHeaderKey",
+                "newPage": false,
+                "searchKey": "textproto.TestCanonicalMIMEHeaderKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCanonicalMIMEHeaderKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCanonicalMIMEHeaderKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestMIMEHeaderMultipleValues",
+              "documentation": {
+                "identifier": "TestMIMEHeaderMultipleValues",
+                "newPage": false,
+                "searchKey": "textproto.TestMIMEHeaderMultipleValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMIMEHeaderMultipleValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMIMEHeaderMultipleValues(t *testing.T)\n```\n\nIssue #34799 add a Header method to get multiple values []string, with canonicalized key \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadLine",
+              "documentation": {
+                "identifier": "TestReadLine",
+                "newPage": false,
+                "searchKey": "textproto.TestReadLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadContinuedLine",
+              "documentation": {
+                "identifier": "TestReadContinuedLine",
+                "newPage": false,
+                "searchKey": "textproto.TestReadContinuedLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadContinuedLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadContinuedLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadCodeLine",
+              "documentation": {
+                "identifier": "TestReadCodeLine",
+                "newPage": false,
+                "searchKey": "textproto.TestReadCodeLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadCodeLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadCodeLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadDotLines",
+              "documentation": {
+                "identifier": "TestReadDotLines",
+                "newPage": false,
+                "searchKey": "textproto.TestReadDotLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadDotLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadDotLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadDotBytes",
+              "documentation": {
+                "identifier": "TestReadDotBytes",
+                "newPage": false,
+                "searchKey": "textproto.TestReadDotBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadDotBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadDotBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeader",
+              "documentation": {
+                "identifier": "TestReadMIMEHeader",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeaderSingle",
+              "documentation": {
+                "identifier": "TestReadMIMEHeaderSingle",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeaderSingle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeaderSingle(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeaderSingle(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeaderNoKey",
+              "documentation": {
+                "identifier": "TestReadMIMEHeaderNoKey",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeaderNoKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeaderNoKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeaderNoKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestLargeReadMIMEHeader",
+              "documentation": {
+                "identifier": "TestLargeReadMIMEHeader",
+                "newPage": false,
+                "searchKey": "textproto.TestLargeReadMIMEHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeReadMIMEHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeReadMIMEHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeaderNonCompliant",
+              "documentation": {
+                "identifier": "TestReadMIMEHeaderNonCompliant",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeaderNonCompliant",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeaderNonCompliant(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeaderNonCompliant(t *testing.T)\n```\n\nTestReadMIMEHeaderNonCompliant checks that we don't normalize headers with spaces before colons, and accept spaces in keys. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeaderMalformed",
+              "documentation": {
+                "identifier": "TestReadMIMEHeaderMalformed",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeaderMalformed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeaderMalformed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeaderMalformed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMIMEHeaderTrimContinued",
+              "documentation": {
+                "identifier": "TestReadMIMEHeaderTrimContinued",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMIMEHeaderTrimContinued",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMIMEHeaderTrimContinued(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMIMEHeaderTrimContinued(t *testing.T)\n```\n\nTest that continued lines are properly trimmed. Issue 11204. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestRFC959Lines",
+              "documentation": {
+                "identifier": "TestRFC959Lines",
+                "newPage": false,
+                "searchKey": "textproto.TestRFC959Lines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRFC959Lines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRFC959Lines(t *testing.T)\n```\n\nSee [https://www.ietf.org/rfc/rfc959.txt](https://www.ietf.org/rfc/rfc959.txt) page 36. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestReadMultiLineError",
+              "documentation": {
+                "identifier": "TestReadMultiLineError",
+                "newPage": false,
+                "searchKey": "textproto.TestReadMultiLineError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadMultiLineError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadMultiLineError(t *testing.T)\n```\n\nTest that multi-line errors are appropriately and fully read. Issue 10230. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestCommonHeaders",
+              "documentation": {
+                "identifier": "TestCommonHeaders",
+                "newPage": false,
+                "searchKey": "textproto.TestCommonHeaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCommonHeaders(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCommonHeaders(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#BenchmarkReadMIMEHeader",
+              "documentation": {
+                "identifier": "BenchmarkReadMIMEHeader",
+                "newPage": false,
+                "searchKey": "textproto.BenchmarkReadMIMEHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadMIMEHeader(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadMIMEHeader(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#BenchmarkUncommon",
+              "documentation": {
+                "identifier": "BenchmarkUncommon",
+                "newPage": false,
+                "searchKey": "textproto.BenchmarkUncommon",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkUncommon(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkUncommon(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestPrintfLine",
+              "documentation": {
+                "identifier": "TestPrintfLine",
+                "newPage": false,
+                "searchKey": "textproto.TestPrintfLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPrintfLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPrintfLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestDotWriter",
+              "documentation": {
+                "identifier": "TestDotWriter",
+                "newPage": false,
+                "searchKey": "textproto.TestDotWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDotWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDotWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestDotWriterCloseEmptyWrite",
+              "documentation": {
+                "identifier": "TestDotWriterCloseEmptyWrite",
+                "newPage": false,
+                "searchKey": "textproto.TestDotWriterCloseEmptyWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDotWriterCloseEmptyWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDotWriterCloseEmptyWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/textproto#TestDotWriterCloseNoWrite",
+              "documentation": {
+                "identifier": "TestDotWriterCloseNoWrite",
+                "newPage": false,
+                "searchKey": "textproto.TestDotWriterCloseNoWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDotWriterCloseNoWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDotWriterCloseNoWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

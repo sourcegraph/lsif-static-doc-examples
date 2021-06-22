@@ -1,0 +1,170 @@
+{
+  "pathID": "/os/signal/internal/pty",
+  "documentation": {
+    "identifier": "pty",
+    "newPage": true,
+    "searchKey": "os/signal/internal/pty",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package pty"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package pty is a simple pseudo-terminal package for Unix systems, implemented by calling C functions via cgo. This is only used for testing the os/signal package. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/os/signal/internal/pty#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal/internal/pty#PtyError",
+              "documentation": {
+                "identifier": "PtyError",
+                "newPage": false,
+                "searchKey": "pty.PtyError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PtyError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PtyError struct {\n\tFuncName    string\n\tErrorString string\n\tErrno       syscall.Errno\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/signal/internal/pty#ptyError",
+                    "documentation": {
+                      "identifier": "ptyError",
+                      "newPage": false,
+                      "searchKey": "pty.ptyError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func ptyError(name string, err error) *PtyError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc ptyError(name string, err error) *PtyError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/signal/internal/pty#PtyError.Error",
+                    "documentation": {
+                      "identifier": "PtyError.Error",
+                      "newPage": false,
+                      "searchKey": "pty.PtyError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *PtyError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *PtyError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/signal/internal/pty#PtyError.Unwrap",
+                    "documentation": {
+                      "identifier": "PtyError.Unwrap",
+                      "newPage": false,
+                      "searchKey": "pty.PtyError.Unwrap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *PtyError) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *PtyError) Unwrap() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os/signal/internal/pty#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal/internal/pty#Open",
+              "documentation": {
+                "identifier": "Open",
+                "newPage": false,
+                "searchKey": "pty.Open",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Open() (pty *os.File, processTTY string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Open() (pty *os.File, processTTY string, err error)\n```\n\nOpen returns a control pty and the name of the linked process tty. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

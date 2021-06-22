@@ -1,0 +1,871 @@
+{
+  "pathID": "/hash/crc64",
+  "documentation": {
+    "identifier": "crc64",
+    "newPage": true,
+    "searchKey": "hash/crc64",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package crc64"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package crc64 implements the 64-bit cyclic redundancy check, or CRC-64, checksum. See [https://en.wikipedia.org/wiki/Cyclic_redundancy_check](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) for information. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/hash/crc64#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash/crc64#Size",
+              "documentation": {
+                "identifier": "Size",
+                "newPage": false,
+                "searchKey": "crc64.Size",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Size"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Size = 8\n```\n\nThe size of a CRC-64 checksum in bytes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#ISO",
+              "documentation": {
+                "identifier": "ISO",
+                "newPage": false,
+                "searchKey": "crc64.ISO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ISO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ISO = 0xD800000000000000\n```\n\nPredefined polynomials. \n\nThe ISO polynomial, defined in ISO 3309 and used in HDLC. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#ECMA",
+              "documentation": {
+                "identifier": "ECMA",
+                "newPage": false,
+                "searchKey": "crc64.ECMA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ECMA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ECMA = 0xC96C5795D7870F42\n```\n\nPredefined polynomials. \n\nThe ECMA polynomial, defined in ECMA 182. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#magic",
+              "documentation": {
+                "identifier": "magic",
+                "newPage": false,
+                "searchKey": "crc64.magic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const magic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst magic = \"crc\\x02\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#marshaledSize",
+              "documentation": {
+                "identifier": "marshaledSize",
+                "newPage": false,
+                "searchKey": "crc64.marshaledSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const marshaledSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst marshaledSize = len(magic) + 8 + 8\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/hash/crc64#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash/crc64#slicing8TablesBuildOnce",
+              "documentation": {
+                "identifier": "slicing8TablesBuildOnce",
+                "newPage": false,
+                "searchKey": "crc64.slicing8TablesBuildOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slicing8TablesBuildOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slicing8TablesBuildOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#slicing8TableISO",
+              "documentation": {
+                "identifier": "slicing8TableISO",
+                "newPage": false,
+                "searchKey": "crc64.slicing8TableISO",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slicing8TableISO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slicing8TableISO *[8]Table\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#slicing8TableECMA",
+              "documentation": {
+                "identifier": "slicing8TableECMA",
+                "newPage": false,
+                "searchKey": "crc64.slicing8TableECMA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slicing8TableECMA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slicing8TableECMA *[8]Table\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#golden",
+              "documentation": {
+                "identifier": "golden",
+                "newPage": false,
+                "searchKey": "crc64.golden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var golden"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar golden = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/hash/crc64#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash/crc64#Table",
+              "documentation": {
+                "identifier": "Table",
+                "newPage": false,
+                "searchKey": "crc64.Table",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Table [256]uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Table [256]uint64\n```\n\nTable is a 256-word table representing the polynomial for efficient processing. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#MakeTable",
+                    "documentation": {
+                      "identifier": "MakeTable",
+                      "newPage": false,
+                      "searchKey": "crc64.MakeTable",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func MakeTable(poly uint64) *Table"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc MakeTable(poly uint64) *Table\n```\n\nMakeTable returns a Table constructed from the specified polynomial. The contents of this Table must not be modified. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#makeTable",
+                    "documentation": {
+                      "identifier": "makeTable",
+                      "newPage": false,
+                      "searchKey": "crc64.makeTable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeTable(poly uint64) *Table"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeTable(poly uint64) *Table\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#digest",
+              "documentation": {
+                "identifier": "digest",
+                "newPage": false,
+                "searchKey": "crc64.digest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type digest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype digest struct {\n\tcrc uint64\n\ttab *Table\n}\n```\n\ndigest represents the partial evaluation of a checksum. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.Size",
+                    "documentation": {
+                      "identifier": "digest.Size",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.Size",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Size() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.BlockSize",
+                    "documentation": {
+                      "identifier": "digest.BlockSize",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.BlockSize",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) BlockSize() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) BlockSize() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.Reset",
+                    "documentation": {
+                      "identifier": "digest.Reset",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.Reset",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Reset()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.MarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.MarshalBinary",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.MarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) MarshalBinary() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) MarshalBinary() ([]byte, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.UnmarshalBinary",
+                    "documentation": {
+                      "identifier": "digest.UnmarshalBinary",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.UnmarshalBinary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) UnmarshalBinary(b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) UnmarshalBinary(b []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.Write",
+                    "documentation": {
+                      "identifier": "digest.Write",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.Sum64",
+                    "documentation": {
+                      "identifier": "digest.Sum64",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.Sum64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum64() uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/hash/crc64#digest.Sum",
+                    "documentation": {
+                      "identifier": "digest.Sum",
+                      "newPage": false,
+                      "searchKey": "crc64.digest.Sum",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *digest) Sum(in []byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *digest) Sum(in []byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#test",
+              "documentation": {
+                "identifier": "test",
+                "newPage": false,
+                "searchKey": "crc64.test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype test struct {\n\toutISO        uint64\n\toutECMA       uint64\n\tin            string\n\thalfStateISO  string // ISO marshaled hash state after first half of in written, used by TestGoldenMarshal\n\thalfStateECMA string // ECMA marshaled hash state after first half of in written, used by TestGoldenMarshal\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/hash/crc64#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/hash/crc64#buildSlicing8TablesOnce",
+              "documentation": {
+                "identifier": "buildSlicing8TablesOnce",
+                "newPage": false,
+                "searchKey": "crc64.buildSlicing8TablesOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildSlicing8TablesOnce()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildSlicing8TablesOnce()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#buildSlicing8Tables",
+              "documentation": {
+                "identifier": "buildSlicing8Tables",
+                "newPage": false,
+                "searchKey": "crc64.buildSlicing8Tables",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func buildSlicing8Tables()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc buildSlicing8Tables()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#makeSlicingBy8Table",
+              "documentation": {
+                "identifier": "makeSlicingBy8Table",
+                "newPage": false,
+                "searchKey": "crc64.makeSlicingBy8Table",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeSlicingBy8Table(t *Table) *[8]Table"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeSlicingBy8Table(t *Table) *[8]Table\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#New",
+              "documentation": {
+                "identifier": "New",
+                "newPage": false,
+                "searchKey": "crc64.New",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func New(tab *Table) hash.Hash64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc New(tab *Table) hash.Hash64\n```\n\nNew creates a new hash.Hash64 computing the CRC-64 checksum using the polynomial represented by the Table. Its Sum method will lay the value out in big-endian byte order. The returned Hash64 also implements encoding.BinaryMarshaler and encoding.BinaryUnmarshaler to marshal and unmarshal the internal state of the hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#appendUint64",
+              "documentation": {
+                "identifier": "appendUint64",
+                "newPage": false,
+                "searchKey": "crc64.appendUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendUint64(b []byte, x uint64) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendUint64(b []byte, x uint64) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#readUint64",
+              "documentation": {
+                "identifier": "readUint64",
+                "newPage": false,
+                "searchKey": "crc64.readUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readUint64(b []byte) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readUint64(b []byte) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#update",
+              "documentation": {
+                "identifier": "update",
+                "newPage": false,
+                "searchKey": "crc64.update",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func update(crc uint64, tab *Table, p []byte) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc update(crc uint64, tab *Table, p []byte) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#Update",
+              "documentation": {
+                "identifier": "Update",
+                "newPage": false,
+                "searchKey": "crc64.Update",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Update(crc uint64, tab *Table, p []byte) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Update(crc uint64, tab *Table, p []byte) uint64\n```\n\nUpdate returns the result of adding the bytes in p to the crc. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#Checksum",
+              "documentation": {
+                "identifier": "Checksum",
+                "newPage": false,
+                "searchKey": "crc64.Checksum",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Checksum(data []byte, tab *Table) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Checksum(data []byte, tab *Table) uint64\n```\n\nChecksum returns the CRC-64 checksum of data using the polynomial represented by the Table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#tableSum",
+              "documentation": {
+                "identifier": "tableSum",
+                "newPage": false,
+                "searchKey": "crc64.tableSum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tableSum(t *Table) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tableSum(t *Table) uint64\n```\n\ntableSum returns the ISO checksum of table t. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#TestGolden",
+              "documentation": {
+                "identifier": "TestGolden",
+                "newPage": false,
+                "searchKey": "crc64.TestGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGolden(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#TestGoldenMarshal",
+              "documentation": {
+                "identifier": "TestGoldenMarshal",
+                "newPage": false,
+                "searchKey": "crc64.TestGoldenMarshal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoldenMarshal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoldenMarshal(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#TestMarshalTableMismatch",
+              "documentation": {
+                "identifier": "TestMarshalTableMismatch",
+                "newPage": false,
+                "searchKey": "crc64.TestMarshalTableMismatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalTableMismatch(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalTableMismatch(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#bench",
+              "documentation": {
+                "identifier": "bench",
+                "newPage": false,
+                "searchKey": "crc64.bench",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bench(b *testing.B, poly uint64, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bench(b *testing.B, poly uint64, size int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/hash/crc64#BenchmarkCrc64",
+              "documentation": {
+                "identifier": "BenchmarkCrc64",
+                "newPage": false,
+                "searchKey": "crc64.BenchmarkCrc64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCrc64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCrc64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2200 @@
+{
+  "pathID": "/crypto/rsa",
+  "documentation": {
+    "identifier": "rsa",
+    "newPage": true,
+    "searchKey": "crypto/rsa",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package rsa"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package rsa implements RSA encryption as specified in PKCS #1 and RFC 8017. \n\nRSA is a single, fundamental operation that is used in this package to implement either public-key encryption or public-key signatures. \n\nThe original specification for encryption and signatures with RSA is PKCS #1 and the terms \"RSA encryption\" and \"RSA signatures\" by default refer to PKCS #1 version 1.5. However, that specification has flaws and new designs should use version 2, usually called by just OAEP and PSS, where possible. \n\nTwo sets of interfaces are included in this package. When a more abstract interface isn't necessary, there are functions for encrypting/decrypting with v1.5/OAEP and signing/verifying with v1.5/PSS. If one needs to abstract over the public key primitive, the PrivateKey type implements the Decrypter and Signer interfaces from the crypto package. \n\nThe RSA operations in this package are not implemented using constant-time algorithms. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/rsa#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PSSSaltLengthAuto",
+              "documentation": {
+                "identifier": "PSSSaltLengthAuto",
+                "newPage": false,
+                "searchKey": "rsa.PSSSaltLengthAuto",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PSSSaltLengthAuto"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PSSSaltLengthAuto = 0\n```\n\nPSSSaltLengthAuto causes the salt in a PSS signature to be as large as possible when signing, and to be auto-detected when verifying. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PSSSaltLengthEqualsHash",
+              "documentation": {
+                "identifier": "PSSSaltLengthEqualsHash",
+                "newPage": false,
+                "searchKey": "rsa.PSSSaltLengthEqualsHash",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PSSSaltLengthEqualsHash"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PSSSaltLengthEqualsHash = -1\n```\n\nPSSSaltLengthEqualsHash causes the salt length to equal the length of the hash used in the signature. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/rsa#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/rsa#hashPrefixes",
+              "documentation": {
+                "identifier": "hashPrefixes",
+                "newPage": false,
+                "searchKey": "rsa.hashPrefixes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hashPrefixes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hashPrefixes = ...\n```\n\nThese are ASN1 DER structures: \n\n```\nDigestInfo ::= SEQUENCE {\n  digestAlgorithm AlgorithmIdentifier,\n  digest OCTET STRING\n}\n\n```\nFor performance, we don't use the generic ASN1 encoder. Rather, we precompute a prefix of the digest value that makes a valid ASN1 DER string with the correct contents. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#bigZero",
+              "documentation": {
+                "identifier": "bigZero",
+                "newPage": false,
+                "searchKey": "rsa.bigZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bigZero"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bigZero = big.NewInt(0)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#bigOne",
+              "documentation": {
+                "identifier": "bigOne",
+                "newPage": false,
+                "searchKey": "rsa.bigOne",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bigOne"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bigOne = big.NewInt(1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#errPublicModulus",
+              "documentation": {
+                "identifier": "errPublicModulus",
+                "newPage": false,
+                "searchKey": "rsa.errPublicModulus",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errPublicModulus"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errPublicModulus = errors.New(\"crypto/rsa: missing public modulus\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#errPublicExponentSmall",
+              "documentation": {
+                "identifier": "errPublicExponentSmall",
+                "newPage": false,
+                "searchKey": "rsa.errPublicExponentSmall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errPublicExponentSmall"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errPublicExponentSmall = errors.New(\"crypto/rsa: public exponent too small\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#errPublicExponentLarge",
+              "documentation": {
+                "identifier": "errPublicExponentLarge",
+                "newPage": false,
+                "searchKey": "rsa.errPublicExponentLarge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errPublicExponentLarge"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errPublicExponentLarge = errors.New(\"crypto/rsa: public exponent too large\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ErrMessageTooLong",
+              "documentation": {
+                "identifier": "ErrMessageTooLong",
+                "newPage": false,
+                "searchKey": "rsa.ErrMessageTooLong",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrMessageTooLong"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrMessageTooLong = errors.New(\"crypto/rsa: message too long for RSA public key size\")\n```\n\nErrMessageTooLong is returned when attempting to encrypt a message which is too large for the size of the public key. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ErrDecryption",
+              "documentation": {
+                "identifier": "ErrDecryption",
+                "newPage": false,
+                "searchKey": "rsa.ErrDecryption",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrDecryption"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrDecryption = errors.New(\"crypto/rsa: decryption error\")\n```\n\nErrDecryption represents a failure to decrypt a message. It is deliberately vague to avoid adaptive attacks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ErrVerification",
+              "documentation": {
+                "identifier": "ErrVerification",
+                "newPage": false,
+                "searchKey": "rsa.ErrVerification",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrVerification"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrVerification = errors.New(\"crypto/rsa: verification error\")\n```\n\nErrVerification represents a failure to verify a signature. It is deliberately vague to avoid adaptive attacks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decryptPKCS1v15Tests",
+              "documentation": {
+                "identifier": "decryptPKCS1v15Tests",
+                "newPage": false,
+                "searchKey": "rsa.decryptPKCS1v15Tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decryptPKCS1v15Tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decryptPKCS1v15Tests = ...\n```\n\nThese test vectors were generated with `openssl rsautl -pkcs -encrypt` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decryptPKCS1v15SessionKeyTests",
+              "documentation": {
+                "identifier": "decryptPKCS1v15SessionKeyTests",
+                "newPage": false,
+                "searchKey": "rsa.decryptPKCS1v15SessionKeyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var decryptPKCS1v15SessionKeyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar decryptPKCS1v15SessionKeyTests = ...\n```\n\nThese test vectors were generated with `openssl rsautl -pkcs -encrypt` \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#signPKCS1v15Tests",
+              "documentation": {
+                "identifier": "signPKCS1v15Tests",
+                "newPage": false,
+                "searchKey": "rsa.signPKCS1v15Tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var signPKCS1v15Tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar signPKCS1v15Tests = ...\n```\n\nThese vectors have been tested with \n\n```\n`openssl rsautl -verify -inkey pk -in signature | hexdump -C`\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#rsaPrivateKey",
+              "documentation": {
+                "identifier": "rsaPrivateKey",
+                "newPage": false,
+                "searchKey": "rsa.rsaPrivateKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rsaPrivateKey"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rsaPrivateKey = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#test2048Key",
+              "documentation": {
+                "identifier": "test2048Key",
+                "newPage": false,
+                "searchKey": "rsa.test2048Key",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var test2048Key"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar test2048Key *PrivateKey\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#testEncryptOAEPData",
+              "documentation": {
+                "identifier": "testEncryptOAEPData",
+                "newPage": false,
+                "searchKey": "rsa.testEncryptOAEPData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testEncryptOAEPData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testEncryptOAEPData = ...\n```\n\ntestEncryptOAEPData contains a subset of the vectors from RSA's \"Test vectors for RSA-OAEP\". \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/rsa#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PKCS1v15DecryptOptions",
+              "documentation": {
+                "identifier": "PKCS1v15DecryptOptions",
+                "newPage": false,
+                "searchKey": "rsa.PKCS1v15DecryptOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PKCS1v15DecryptOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PKCS1v15DecryptOptions struct {\n\t// SessionKeyLen is the length of the session key that is being\n\t// decrypted. If not zero, then a padding error during decryption will\n\t// cause a random plaintext of this length to be returned rather than\n\t// an error. These alternatives happen in constant time.\n\tSessionKeyLen int\n}\n```\n\nPKCS1v15DecrypterOpts is for passing options to PKCS #1 v1.5 decryption using the crypto.Decrypter interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PSSOptions",
+              "documentation": {
+                "identifier": "PSSOptions",
+                "newPage": false,
+                "searchKey": "rsa.PSSOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PSSOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PSSOptions struct {\n\t// SaltLength controls the length of the salt used in the PSS\n\t// signature. It can either be a number of bytes, or one of the special\n\t// PSSSaltLength constants.\n\tSaltLength int\n\n\t// Hash is the hash function used to generate the message digest. If not\n\t// zero, it overrides the hash function passed to SignPSS. It's required\n\t// when using PrivateKey.Sign.\n\tHash crypto.Hash\n}\n```\n\nPSSOptions contains options for creating and verifying PSS signatures. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PSSOptions.HashFunc",
+                    "documentation": {
+                      "identifier": "PSSOptions.HashFunc",
+                      "newPage": false,
+                      "searchKey": "rsa.PSSOptions.HashFunc",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (opts *PSSOptions) HashFunc() crypto.Hash"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (opts *PSSOptions) HashFunc() crypto.Hash\n```\n\nHashFunc returns opts.Hash so that PSSOptions implements crypto.SignerOpts. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PSSOptions.saltLength",
+                    "documentation": {
+                      "identifier": "PSSOptions.saltLength",
+                      "newPage": false,
+                      "searchKey": "rsa.PSSOptions.saltLength",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (opts *PSSOptions) saltLength() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (opts *PSSOptions) saltLength() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PublicKey",
+              "documentation": {
+                "identifier": "PublicKey",
+                "newPage": false,
+                "searchKey": "rsa.PublicKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PublicKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PublicKey struct {\n\tN *big.Int // modulus\n\tE int      // public exponent\n}\n```\n\nA PublicKey represents the public part of an RSA key. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PublicKey.Size",
+                    "documentation": {
+                      "identifier": "PublicKey.Size",
+                      "newPage": false,
+                      "searchKey": "rsa.PublicKey.Size",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pub *PublicKey) Size() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pub *PublicKey) Size() int\n```\n\nSize returns the modulus size in bytes. Raw signatures and ciphertexts for or by this public key will have the same size. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PublicKey.Equal",
+                    "documentation": {
+                      "identifier": "PublicKey.Equal",
+                      "newPage": false,
+                      "searchKey": "rsa.PublicKey.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pub *PublicKey) Equal(x crypto.PublicKey) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pub *PublicKey) Equal(x crypto.PublicKey) bool\n```\n\nEqual reports whether pub and x have the same value. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#OAEPOptions",
+              "documentation": {
+                "identifier": "OAEPOptions",
+                "newPage": false,
+                "searchKey": "rsa.OAEPOptions",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OAEPOptions struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OAEPOptions struct {\n\t// Hash is the hash function that will be used when generating the mask.\n\tHash crypto.Hash\n\t// Label is an arbitrary byte string that must be equal to the value\n\t// used when encrypting.\n\tLabel []byte\n}\n```\n\nOAEPOptions is an interface for passing options to OAEP decryption using the crypto.Decrypter interface. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PrivateKey",
+              "documentation": {
+                "identifier": "PrivateKey",
+                "newPage": false,
+                "searchKey": "rsa.PrivateKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PrivateKey struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PrivateKey struct {\n\tPublicKey            // public part.\n\tD         *big.Int   // private exponent\n\tPrimes    []*big.Int // prime factors of N, has >= 2 elements.\n\n\t// Precomputed contains precomputed values that speed up private\n\t// operations, if available.\n\tPrecomputed PrecomputedValues\n}\n```\n\nA PrivateKey represents an RSA key \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#GenerateKey",
+                    "documentation": {
+                      "identifier": "GenerateKey",
+                      "newPage": false,
+                      "searchKey": "rsa.GenerateKey",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GenerateKey(random io.Reader, bits int) (*PrivateKey, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GenerateKey(random io.Reader, bits int) (*PrivateKey, error)\n```\n\nGenerateKey generates an RSA keypair of the given bit size using the random source random (for example, crypto/rand.Reader). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#GenerateMultiPrimeKey",
+                    "documentation": {
+                      "identifier": "GenerateMultiPrimeKey",
+                      "newPage": false,
+                      "searchKey": "rsa.GenerateMultiPrimeKey",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func GenerateMultiPrimeKey(random io.Reader, nprimes int, bits int) (*PrivateKey, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc GenerateMultiPrimeKey(random io.Reader, nprimes int, bits int) (*PrivateKey, error)\n```\n\nGenerateMultiPrimeKey generates a multi-prime RSA keypair of the given bit size and the given random source, as suggested in [1]. Although the public keys are compatible (actually, indistinguishable) from the 2-prime case, the private keys are not. Thus it may not be possible to export multi-prime private keys in certain formats or to subsequently import them into other code. \n\nTable 1 in [2] suggests maximum numbers of primes for a given size. \n\n[1] US patent 4405829 (1972, expired) [2] [http://www.cacr.math.uwaterloo.ca/techreports/2006/cacr2006-16.pdf](http://www.cacr.math.uwaterloo.ca/techreports/2006/cacr2006-16.pdf) \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Public",
+                    "documentation": {
+                      "identifier": "PrivateKey.Public",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Public",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Public() crypto.PublicKey"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Public() crypto.PublicKey\n```\n\nPublic returns the public key corresponding to priv. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Equal",
+                    "documentation": {
+                      "identifier": "PrivateKey.Equal",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Equal(x crypto.PrivateKey) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Equal(x crypto.PrivateKey) bool\n```\n\nEqual reports whether priv and x have equivalent values. It ignores Precomputed values. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Sign",
+                    "documentation": {
+                      "identifier": "PrivateKey.Sign",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Sign",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Sign(rand io.Reader, digest []byte, opts crypto.SignerOpts) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Sign(rand io.Reader, digest []byte, opts crypto.SignerOpts) ([]byte, error)\n```\n\nSign signs digest with priv, reading randomness from rand. If opts is a *PSSOptions then the PSS algorithm will be used, otherwise PKCS #1 v1.5 will be used. digest must be the result of hashing the input message using opts.HashFunc(). \n\nThis method implements crypto.Signer, which is an interface to support keys where the private part is kept in, for example, a hardware module. Common uses should use the Sign* functions in this package directly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Decrypt",
+                    "documentation": {
+                      "identifier": "PrivateKey.Decrypt",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Decrypt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Decrypt(rand io.Reader, ciphertext []byte, opts crypto.DecrypterOpts) (plaintext []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Decrypt(rand io.Reader, ciphertext []byte, opts crypto.DecrypterOpts) (plaintext []byte, err error)\n```\n\nDecrypt decrypts ciphertext with priv. If opts is nil or of type *PKCS1v15DecryptOptions then PKCS #1 v1.5 decryption is performed. Otherwise opts must have type *OAEPOptions and OAEP decryption is done. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Validate",
+                    "documentation": {
+                      "identifier": "PrivateKey.Validate",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Validate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Validate() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Validate() error\n```\n\nValidate performs basic sanity checks on the key. It returns nil if the key is valid, or else an error describing a problem. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/rsa#PrivateKey.Precompute",
+                    "documentation": {
+                      "identifier": "PrivateKey.Precompute",
+                      "newPage": false,
+                      "searchKey": "rsa.PrivateKey.Precompute",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (priv *PrivateKey) Precompute()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (priv *PrivateKey) Precompute()\n```\n\nPrecompute performs some calculations that speed up private key operations in the future. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#PrecomputedValues",
+              "documentation": {
+                "identifier": "PrecomputedValues",
+                "newPage": false,
+                "searchKey": "rsa.PrecomputedValues",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type PrecomputedValues struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype PrecomputedValues struct {\n\tDp, Dq *big.Int // D mod (P-1) (or mod Q-1)\n\tQinv   *big.Int // Q^-1 mod P\n\n\t// CRTValues is used for the 3rd and subsequent primes. Due to a\n\t// historical accident, the CRT for the first two primes is handled\n\t// differently in PKCS #1 and interoperability is sufficiently\n\t// important that we mirror this.\n\tCRTValues []CRTValue\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#CRTValue",
+              "documentation": {
+                "identifier": "CRTValue",
+                "newPage": false,
+                "searchKey": "rsa.CRTValue",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CRTValue struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CRTValue struct {\n\tExp   *big.Int // D mod (prime-1).\n\tCoeff *big.Int // R·Coeff ≡ 1 mod Prime.\n\tR     *big.Int // product of primes prior to this (inc p and q).\n}\n```\n\nCRTValue contains the precomputed Chinese remainder theorem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#DecryptPKCS1v15Test",
+              "documentation": {
+                "identifier": "DecryptPKCS1v15Test",
+                "newPage": false,
+                "searchKey": "rsa.DecryptPKCS1v15Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DecryptPKCS1v15Test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DecryptPKCS1v15Test struct {\n\tin, out string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#signPKCS1v15Test",
+              "documentation": {
+                "identifier": "signPKCS1v15Test",
+                "newPage": false,
+                "searchKey": "rsa.signPKCS1v15Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type signPKCS1v15Test struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype signPKCS1v15Test struct {\n\tin, out string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#testEncryptOAEPMessage",
+              "documentation": {
+                "identifier": "testEncryptOAEPMessage",
+                "newPage": false,
+                "searchKey": "rsa.testEncryptOAEPMessage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testEncryptOAEPMessage struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testEncryptOAEPMessage struct {\n\tin   []byte\n\tseed []byte\n\tout  []byte\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#testEncryptOAEPStruct",
+              "documentation": {
+                "identifier": "testEncryptOAEPStruct",
+                "newPage": false,
+                "searchKey": "rsa.testEncryptOAEPStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testEncryptOAEPStruct struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testEncryptOAEPStruct struct {\n\tmodulus string\n\te       int\n\td       string\n\tmsgs    []testEncryptOAEPMessage\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/rsa#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/rsa#EncryptPKCS1v15",
+              "documentation": {
+                "identifier": "EncryptPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.EncryptPKCS1v15",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncryptPKCS1v15(rand io.Reader, pub *PublicKey, msg []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncryptPKCS1v15(rand io.Reader, pub *PublicKey, msg []byte) ([]byte, error)\n```\n\nEncryptPKCS1v15 encrypts the given message with RSA and the padding scheme from PKCS #1 v1.5.  The message must be no longer than the length of the public modulus minus 11 bytes. \n\nThe rand parameter is used as a source of entropy to ensure that encrypting the same message twice doesn't result in the same ciphertext. \n\nWARNING: use of this function to encrypt plaintexts other than session keys is dangerous. Use RSA OAEP in new protocols. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#DecryptPKCS1v15",
+              "documentation": {
+                "identifier": "DecryptPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.DecryptPKCS1v15",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecryptPKCS1v15(rand io.Reader, priv *PrivateKey, ciphertext []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecryptPKCS1v15(rand io.Reader, priv *PrivateKey, ciphertext []byte) ([]byte, error)\n```\n\nDecryptPKCS1v15 decrypts a plaintext using RSA and the padding scheme from PKCS #1 v1.5. If rand != nil, it uses RSA blinding to avoid timing side-channel attacks. \n\nNote that whether this function returns an error or not discloses secret information. If an attacker can cause this function to run repeatedly and learn whether each instance returned an error then they can decrypt and forge signatures as if they had the private key. See DecryptPKCS1v15SessionKey for a way of solving this problem. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#DecryptPKCS1v15SessionKey",
+              "documentation": {
+                "identifier": "DecryptPKCS1v15SessionKey",
+                "newPage": false,
+                "searchKey": "rsa.DecryptPKCS1v15SessionKey",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecryptPKCS1v15SessionKey(rand io.Reader, priv *PrivateKey, ciphertext []byte, key []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecryptPKCS1v15SessionKey(rand io.Reader, priv *PrivateKey, ciphertext []byte, key []byte) error\n```\n\nDecryptPKCS1v15SessionKey decrypts a session key using RSA and the padding scheme from PKCS #1 v1.5. If rand != nil, it uses RSA blinding to avoid timing side-channel attacks. It returns an error if the ciphertext is the wrong length or if the ciphertext is greater than the public modulus. Otherwise, no error is returned. If the padding is valid, the resulting plaintext message is copied into key. Otherwise, key is unchanged. These alternatives occur in constant time. It is intended that the user of this function generate a random session key beforehand and continue the protocol with the resulting value. This will remove any possibility that an attacker can learn any information about the plaintext. See `Chosen Ciphertext Attacks Against Protocols Based on the RSA Encryption Standard PKCS #1', Daniel Bleichenbacher, Advances in Cryptology (Crypto '98). \n\nNote that if the session key is too small then it may be possible for an attacker to brute-force it. If they can do that then they can learn whether a random value was used (because it'll be different for the same ciphertext) and thus whether the padding was correct. This defeats the point of this function. Using at least a 16-byte key will protect against this attack. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decryptPKCS1v15",
+              "documentation": {
+                "identifier": "decryptPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.decryptPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decryptPKCS1v15(rand io.Reader, priv *PrivateKey, ciphertext []byte) (valid int, em []byte, index int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decryptPKCS1v15(rand io.Reader, priv *PrivateKey, ciphertext []byte) (valid int, em []byte, index int, err error)\n```\n\ndecryptPKCS1v15 decrypts ciphertext using priv and blinds the operation if rand is not nil. It returns one or zero in valid that indicates whether the plaintext was correctly structured. In either case, the plaintext is returned in em so that it may be read independently of whether it was valid in order to maintain constant memory access patterns. If the plaintext was valid then index contains the index of the original message in em. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#nonZeroRandomBytes",
+              "documentation": {
+                "identifier": "nonZeroRandomBytes",
+                "newPage": false,
+                "searchKey": "rsa.nonZeroRandomBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nonZeroRandomBytes(s []byte, rand io.Reader) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nonZeroRandomBytes(s []byte, rand io.Reader) (err error)\n```\n\nnonZeroRandomBytes fills the given slice with non-zero random octets. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#SignPKCS1v15",
+              "documentation": {
+                "identifier": "SignPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.SignPKCS1v15",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SignPKCS1v15(rand io.Reader, priv *PrivateKey, hash crypto.Hash, hashed []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SignPKCS1v15(rand io.Reader, priv *PrivateKey, hash crypto.Hash, hashed []byte) ([]byte, error)\n```\n\nSignPKCS1v15 calculates the signature of hashed using RSASSA-PKCS1-V1_5-SIGN from RSA PKCS #1 v1.5.  Note that hashed must be the result of hashing the input message using the given hash function. If hash is zero, hashed is signed directly. This isn't advisable except for interoperability. \n\nIf rand is not nil then RSA blinding will be used to avoid timing side-channel attacks. \n\nThis function is deterministic. Thus, if the set of possible messages is small, an attacker may be able to build a map from messages to signatures and identify the signed messages. As ever, signatures provide authenticity, not confidentiality. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#VerifyPKCS1v15",
+              "documentation": {
+                "identifier": "VerifyPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.VerifyPKCS1v15",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func VerifyPKCS1v15(pub *PublicKey, hash crypto.Hash, hashed []byte, sig []byte) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc VerifyPKCS1v15(pub *PublicKey, hash crypto.Hash, hashed []byte, sig []byte) error\n```\n\nVerifyPKCS1v15 verifies an RSA PKCS #1 v1.5 signature. hashed is the result of hashing the input message using the given hash function and sig is the signature. A valid signature is indicated by returning a nil error. If hash is zero then hashed is used directly. This isn't advisable except for interoperability. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#pkcs1v15HashInfo",
+              "documentation": {
+                "identifier": "pkcs1v15HashInfo",
+                "newPage": false,
+                "searchKey": "rsa.pkcs1v15HashInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func pkcs1v15HashInfo(hash crypto.Hash, inLen int) (hashLen int, prefix []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc pkcs1v15HashInfo(hash crypto.Hash, inLen int) (hashLen int, prefix []byte, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#emsaPSSEncode",
+              "documentation": {
+                "identifier": "emsaPSSEncode",
+                "newPage": false,
+                "searchKey": "rsa.emsaPSSEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emsaPSSEncode(mHash []byte, emBits int, salt []byte, hash hash.Hash) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emsaPSSEncode(mHash []byte, emBits int, salt []byte, hash hash.Hash) ([]byte, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#emsaPSSVerify",
+              "documentation": {
+                "identifier": "emsaPSSVerify",
+                "newPage": false,
+                "searchKey": "rsa.emsaPSSVerify",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func emsaPSSVerify(mHash, em []byte, emBits, sLen int, hash hash.Hash) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc emsaPSSVerify(mHash, em []byte, emBits, sLen int, hash hash.Hash) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#signPSSWithSalt",
+              "documentation": {
+                "identifier": "signPSSWithSalt",
+                "newPage": false,
+                "searchKey": "rsa.signPSSWithSalt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signPSSWithSalt(rand io.Reader, priv *PrivateKey, hash crypto.Hash, hashed, salt []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signPSSWithSalt(rand io.Reader, priv *PrivateKey, hash crypto.Hash, hashed, salt []byte) ([]byte, error)\n```\n\nsignPSSWithSalt calculates the signature of hashed using PSS with specified salt. Note that hashed must be the result of hashing the input message using the given hash function. salt is a random sequence of bytes whose length will be later used to verify the signature. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#SignPSS",
+              "documentation": {
+                "identifier": "SignPSS",
+                "newPage": false,
+                "searchKey": "rsa.SignPSS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SignPSS(rand io.Reader, priv *PrivateKey, hash crypto.Hash, digest []byte, opts *PSSOptions) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SignPSS(rand io.Reader, priv *PrivateKey, hash crypto.Hash, digest []byte, opts *PSSOptions) ([]byte, error)\n```\n\nSignPSS calculates the signature of digest using PSS. \n\ndigest must be the result of hashing the input message using the given hash function. The opts argument may be nil, in which case sensible defaults are used. If opts.Hash is set, it overrides hash. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#VerifyPSS",
+              "documentation": {
+                "identifier": "VerifyPSS",
+                "newPage": false,
+                "searchKey": "rsa.VerifyPSS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func VerifyPSS(pub *PublicKey, hash crypto.Hash, digest []byte, sig []byte, opts *PSSOptions) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc VerifyPSS(pub *PublicKey, hash crypto.Hash, digest []byte, sig []byte, opts *PSSOptions) error\n```\n\nVerifyPSS verifies a PSS signature. \n\nA valid signature is indicated by returning a nil error. digest must be the result of hashing the input message using the given hash function. The opts argument may be nil, in which case sensible defaults are used. opts.Hash is ignored. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#checkPub",
+              "documentation": {
+                "identifier": "checkPub",
+                "newPage": false,
+                "searchKey": "rsa.checkPub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkPub(pub *PublicKey) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkPub(pub *PublicKey) error\n```\n\ncheckPub sanity checks the public key before we use it. We require pub.E to fit into a 32-bit integer so that we do not have different behavior depending on whether int is 32 or 64 bits. See also [https://www.imperialviolet.org/2012/03/16/rsae.html](https://www.imperialviolet.org/2012/03/16/rsae.html). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#incCounter",
+              "documentation": {
+                "identifier": "incCounter",
+                "newPage": false,
+                "searchKey": "rsa.incCounter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func incCounter(c *[4]byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc incCounter(c *[4]byte)\n```\n\nincCounter increments a four byte, big-endian counter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#mgf1XOR",
+              "documentation": {
+                "identifier": "mgf1XOR",
+                "newPage": false,
+                "searchKey": "rsa.mgf1XOR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mgf1XOR(out []byte, hash hash.Hash, seed []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mgf1XOR(out []byte, hash hash.Hash, seed []byte)\n```\n\nmgf1XOR XORs the bytes in out with a mask generated using the MGF1 function specified in PKCS #1 v2.1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#encrypt",
+              "documentation": {
+                "identifier": "encrypt",
+                "newPage": false,
+                "searchKey": "rsa.encrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encrypt(c *big.Int, pub *PublicKey, m *big.Int) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encrypt(c *big.Int, pub *PublicKey, m *big.Int) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#EncryptOAEP",
+              "documentation": {
+                "identifier": "EncryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.EncryptOAEP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EncryptOAEP(hash hash.Hash, random io.Reader, pub *PublicKey, msg []byte, label []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EncryptOAEP(hash hash.Hash, random io.Reader, pub *PublicKey, msg []byte, label []byte) ([]byte, error)\n```\n\nEncryptOAEP encrypts the given message with RSA-OAEP. \n\nOAEP is parameterised by a hash function that is used as a random oracle. Encryption and decryption of a given message must use the same hash function and sha256.New() is a reasonable choice. \n\nThe random parameter is used as a source of entropy to ensure that encrypting the same message twice doesn't result in the same ciphertext. \n\nThe label parameter may contain arbitrary data that will not be encrypted, but which gives important context to the message. For example, if a given public key is used to encrypt two types of messages then distinct label values could be used to ensure that a ciphertext for one purpose cannot be used for another by an attacker. If not required it can be empty. \n\nThe message must be no longer than the length of the public modulus minus twice the hash length, minus a further 2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decrypt",
+              "documentation": {
+                "identifier": "decrypt",
+                "newPage": false,
+                "searchKey": "rsa.decrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decrypt(random io.Reader, priv *PrivateKey, c *big.Int) (m *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decrypt(random io.Reader, priv *PrivateKey, c *big.Int) (m *big.Int, err error)\n```\n\ndecrypt performs an RSA decryption, resulting in a plaintext integer. If a random source is given, RSA blinding is used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decryptAndCheck",
+              "documentation": {
+                "identifier": "decryptAndCheck",
+                "newPage": false,
+                "searchKey": "rsa.decryptAndCheck",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decryptAndCheck(random io.Reader, priv *PrivateKey, c *big.Int) (m *big.Int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decryptAndCheck(random io.Reader, priv *PrivateKey, c *big.Int) (m *big.Int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#DecryptOAEP",
+              "documentation": {
+                "identifier": "DecryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.DecryptOAEP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DecryptOAEP(hash hash.Hash, random io.Reader, priv *PrivateKey, ciphertext []byte, label []byte) ([]byte, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DecryptOAEP(hash hash.Hash, random io.Reader, priv *PrivateKey, ciphertext []byte, label []byte) ([]byte, error)\n```\n\nDecryptOAEP decrypts ciphertext using RSA-OAEP. \n\nOAEP is parameterised by a hash function that is used as a random oracle. Encryption and decryption of a given message must use the same hash function and sha256.New() is a reasonable choice. \n\nThe random parameter, if not nil, is used to blind the private-key operation and avoid timing side-channel attacks. Blinding is purely internal to this function – the random data need not match that used when encrypting. \n\nThe label parameter must match the value given when encrypting. See EncryptOAEP for details. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ExampleDecryptPKCS1v15SessionKey",
+              "documentation": {
+                "identifier": "ExampleDecryptPKCS1v15SessionKey",
+                "newPage": false,
+                "searchKey": "rsa.ExampleDecryptPKCS1v15SessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDecryptPKCS1v15SessionKey()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDecryptPKCS1v15SessionKey()\n```\n\nRSA is able to encrypt only a very limited amount of data. In order to encrypt reasonable amounts of data a hybrid scheme is commonly used: RSA is used to encrypt a key for a symmetric primitive like AES-GCM. \n\nBefore encrypting, data is “padded” by embedding it in a known structure. This is done for a number of reasons, but the most obvious is to ensure that the value is large enough that the exponentiation is larger than the modulus. (Otherwise it could be decrypted with a square-root.) \n\nIn these designs, when using PKCS #1 v1.5, it's vitally important to avoid disclosing whether the received RSA message was well-formed (that is, whether the result of decrypting is a correctly padded message) because this leaks secret information. DecryptPKCS1v15SessionKey is designed for this situation and copies the decrypted, symmetric key (if well-formed) in constant-time over a buffer that contains a random key. Thus, if the RSA result isn't well-formed, the implementation uses a random key in constant time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ExampleSignPKCS1v15",
+              "documentation": {
+                "identifier": "ExampleSignPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.ExampleSignPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSignPKCS1v15()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSignPKCS1v15()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ExampleVerifyPKCS1v15",
+              "documentation": {
+                "identifier": "ExampleVerifyPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.ExampleVerifyPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleVerifyPKCS1v15()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleVerifyPKCS1v15()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ExampleEncryptOAEP",
+              "documentation": {
+                "identifier": "ExampleEncryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.ExampleEncryptOAEP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEncryptOAEP()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEncryptOAEP()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#ExampleDecryptOAEP",
+              "documentation": {
+                "identifier": "ExampleDecryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.ExampleDecryptOAEP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDecryptOAEP()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDecryptOAEP()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#decodeBase64",
+              "documentation": {
+                "identifier": "decodeBase64",
+                "newPage": false,
+                "searchKey": "rsa.decodeBase64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decodeBase64(in string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decodeBase64(in string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestDecryptPKCS1v15",
+              "documentation": {
+                "identifier": "TestDecryptPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.TestDecryptPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecryptPKCS1v15(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecryptPKCS1v15(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestEncryptPKCS1v15",
+              "documentation": {
+                "identifier": "TestEncryptPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.TestEncryptPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncryptPKCS1v15(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncryptPKCS1v15(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestEncryptPKCS1v15SessionKey",
+              "documentation": {
+                "identifier": "TestEncryptPKCS1v15SessionKey",
+                "newPage": false,
+                "searchKey": "rsa.TestEncryptPKCS1v15SessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncryptPKCS1v15SessionKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncryptPKCS1v15SessionKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestEncryptPKCS1v15DecrypterSessionKey",
+              "documentation": {
+                "identifier": "TestEncryptPKCS1v15DecrypterSessionKey",
+                "newPage": false,
+                "searchKey": "rsa.TestEncryptPKCS1v15DecrypterSessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncryptPKCS1v15DecrypterSessionKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncryptPKCS1v15DecrypterSessionKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestNonZeroRandomBytes",
+              "documentation": {
+                "identifier": "TestNonZeroRandomBytes",
+                "newPage": false,
+                "searchKey": "rsa.TestNonZeroRandomBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonZeroRandomBytes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonZeroRandomBytes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestSignPKCS1v15",
+              "documentation": {
+                "identifier": "TestSignPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.TestSignPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignPKCS1v15(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignPKCS1v15(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestVerifyPKCS1v15",
+              "documentation": {
+                "identifier": "TestVerifyPKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.TestVerifyPKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVerifyPKCS1v15(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVerifyPKCS1v15(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestOverlongMessagePKCS1v15",
+              "documentation": {
+                "identifier": "TestOverlongMessagePKCS1v15",
+                "newPage": false,
+                "searchKey": "rsa.TestOverlongMessagePKCS1v15",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOverlongMessagePKCS1v15(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOverlongMessagePKCS1v15(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestUnpaddedSignature",
+              "documentation": {
+                "identifier": "TestUnpaddedSignature",
+                "newPage": false,
+                "searchKey": "rsa.TestUnpaddedSignature",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnpaddedSignature(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnpaddedSignature(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestShortSessionKey",
+              "documentation": {
+                "identifier": "TestShortSessionKey",
+                "newPage": false,
+                "searchKey": "rsa.TestShortSessionKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShortSessionKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShortSessionKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestShortPKCS1v15Signature",
+              "documentation": {
+                "identifier": "TestShortPKCS1v15Signature",
+                "newPage": false,
+                "searchKey": "rsa.TestShortPKCS1v15Signature",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShortPKCS1v15Signature(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShortPKCS1v15Signature(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestEMSAPSS",
+              "documentation": {
+                "identifier": "TestEMSAPSS",
+                "newPage": false,
+                "searchKey": "rsa.TestEMSAPSS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEMSAPSS(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEMSAPSS(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestPSSGolden",
+              "documentation": {
+                "identifier": "TestPSSGolden",
+                "newPage": false,
+                "searchKey": "rsa.TestPSSGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPSSGolden(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPSSGolden(t *testing.T)\n```\n\nTestPSSGolden tests all the test vectors in pss-vect.txt from [ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-1/pkcs-1v2-1-vec.zip](ftp://ftp.rsasecurity.com/pub/pkcs/pkcs-1/pkcs-1v2-1-vec.zip) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestPSSOpenSSL",
+              "documentation": {
+                "identifier": "TestPSSOpenSSL",
+                "newPage": false,
+                "searchKey": "rsa.TestPSSOpenSSL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPSSOpenSSL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPSSOpenSSL(t *testing.T)\n```\n\nTestPSSOpenSSL ensures that we can verify a PSS signature from OpenSSL with the default options. OpenSSL sets the salt length to be maximal. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestPSSNilOpts",
+              "documentation": {
+                "identifier": "TestPSSNilOpts",
+                "newPage": false,
+                "searchKey": "rsa.TestPSSNilOpts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPSSNilOpts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPSSNilOpts(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestPSSSigning",
+              "documentation": {
+                "identifier": "TestPSSSigning",
+                "newPage": false,
+                "searchKey": "rsa.TestPSSSigning",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPSSSigning(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPSSSigning(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestSignWithPSSSaltLengthAuto",
+              "documentation": {
+                "identifier": "TestSignWithPSSSaltLengthAuto",
+                "newPage": false,
+                "searchKey": "rsa.TestSignWithPSSSaltLengthAuto",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignWithPSSSaltLengthAuto(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignWithPSSSaltLengthAuto(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#bigFromHex",
+              "documentation": {
+                "identifier": "bigFromHex",
+                "newPage": false,
+                "searchKey": "rsa.bigFromHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bigFromHex(hex string) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bigFromHex(hex string) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#intFromHex",
+              "documentation": {
+                "identifier": "intFromHex",
+                "newPage": false,
+                "searchKey": "rsa.intFromHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intFromHex(hex string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intFromHex(hex string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#fromHex",
+              "documentation": {
+                "identifier": "fromHex",
+                "newPage": false,
+                "searchKey": "rsa.fromHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromHex(hexStr string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromHex(hexStr string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestKeyGeneration",
+              "documentation": {
+                "identifier": "TestKeyGeneration",
+                "newPage": false,
+                "searchKey": "rsa.TestKeyGeneration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#Test3PrimeKeyGeneration",
+              "documentation": {
+                "identifier": "Test3PrimeKeyGeneration",
+                "newPage": false,
+                "searchKey": "rsa.Test3PrimeKeyGeneration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test3PrimeKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test3PrimeKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#Test4PrimeKeyGeneration",
+              "documentation": {
+                "identifier": "Test4PrimeKeyGeneration",
+                "newPage": false,
+                "searchKey": "rsa.Test4PrimeKeyGeneration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test4PrimeKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test4PrimeKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestNPrimeKeyGeneration",
+              "documentation": {
+                "identifier": "TestNPrimeKeyGeneration",
+                "newPage": false,
+                "searchKey": "rsa.TestNPrimeKeyGeneration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNPrimeKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNPrimeKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestImpossibleKeyGeneration",
+              "documentation": {
+                "identifier": "TestImpossibleKeyGeneration",
+                "newPage": false,
+                "searchKey": "rsa.TestImpossibleKeyGeneration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImpossibleKeyGeneration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImpossibleKeyGeneration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestGnuTLSKey",
+              "documentation": {
+                "identifier": "TestGnuTLSKey",
+                "newPage": false,
+                "searchKey": "rsa.TestGnuTLSKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGnuTLSKey(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGnuTLSKey(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#testKeyBasics",
+              "documentation": {
+                "identifier": "testKeyBasics",
+                "newPage": false,
+                "searchKey": "rsa.testKeyBasics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testKeyBasics(t *testing.T, priv *PrivateKey)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testKeyBasics(t *testing.T, priv *PrivateKey)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#fromBase10",
+              "documentation": {
+                "identifier": "fromBase10",
+                "newPage": false,
+                "searchKey": "rsa.fromBase10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fromBase10(base10 string) *big.Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fromBase10(base10 string) *big.Int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "rsa.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#BenchmarkRSA2048Decrypt",
+              "documentation": {
+                "identifier": "BenchmarkRSA2048Decrypt",
+                "newPage": false,
+                "searchKey": "rsa.BenchmarkRSA2048Decrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRSA2048Decrypt(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRSA2048Decrypt(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#BenchmarkRSA2048Sign",
+              "documentation": {
+                "identifier": "BenchmarkRSA2048Sign",
+                "newPage": false,
+                "searchKey": "rsa.BenchmarkRSA2048Sign",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRSA2048Sign(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRSA2048Sign(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#Benchmark3PrimeRSA2048Decrypt",
+              "documentation": {
+                "identifier": "Benchmark3PrimeRSA2048Decrypt",
+                "newPage": false,
+                "searchKey": "rsa.Benchmark3PrimeRSA2048Decrypt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Benchmark3PrimeRSA2048Decrypt(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Benchmark3PrimeRSA2048Decrypt(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestEncryptOAEP",
+              "documentation": {
+                "identifier": "TestEncryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.TestEncryptOAEP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncryptOAEP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncryptOAEP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/rsa#TestDecryptOAEP",
+              "documentation": {
+                "identifier": "TestDecryptOAEP",
+                "newPage": false,
+                "searchKey": "rsa.TestDecryptOAEP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecryptOAEP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecryptOAEP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

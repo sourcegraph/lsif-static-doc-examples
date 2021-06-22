@@ -1,0 +1,5005 @@
+{
+  "pathID": "/strings_test",
+  "documentation": {
+    "identifier": "strings_test",
+    "newPage": true,
+    "searchKey": "strings_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package strings_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/strings_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkString",
+              "documentation": {
+                "identifier": "benchmarkString",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const benchmarkString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst benchmarkString = \"some_text=some☺value\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#space",
+              "documentation": {
+                "identifier": "space",
+                "newPage": false,
+                "searchKey": "strings_test.space",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const space"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst space = \"\\t\\v\\r\\f\\n\\u0085\\u00a0\\u2000\\u3000\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings_test#someBytes",
+              "documentation": {
+                "identifier": "someBytes",
+                "newPage": false,
+                "searchKey": "strings_test.someBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var someBytes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar someBytes = []byte(\"some bytes sdljlk jsklj3lkjlk djlkjw\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#sinkS",
+              "documentation": {
+                "identifier": "sinkS",
+                "newPage": false,
+                "searchKey": "strings_test.sinkS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sinkS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sinkS string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#compareTests",
+              "documentation": {
+                "identifier": "compareTests",
+                "newPage": false,
+                "searchKey": "strings_test.compareTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var compareTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar compareTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#htmlEscaper",
+              "documentation": {
+                "identifier": "htmlEscaper",
+                "newPage": false,
+                "searchKey": "strings_test.htmlEscaper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var htmlEscaper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar htmlEscaper = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#htmlUnescaper",
+              "documentation": {
+                "identifier": "htmlUnescaper",
+                "newPage": false,
+                "searchKey": "strings_test.htmlUnescaper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var htmlUnescaper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar htmlUnescaper = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#capitalLetters",
+              "documentation": {
+                "identifier": "capitalLetters",
+                "newPage": false,
+                "searchKey": "strings_test.capitalLetters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var capitalLetters"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar capitalLetters = NewReplacer(\"a\", \"A\", \"b\", \"B\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#algorithmTestCases",
+              "documentation": {
+                "identifier": "algorithmTestCases",
+                "newPage": false,
+                "searchKey": "strings_test.algorithmTestCases",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var algorithmTestCases"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar algorithmTestCases = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#mapdata",
+              "documentation": {
+                "identifier": "mapdata",
+                "newPage": false,
+                "searchKey": "strings_test.mapdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mapdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mapdata = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#abcd",
+              "documentation": {
+                "identifier": "abcd",
+                "newPage": false,
+                "searchKey": "strings_test.abcd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var abcd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar abcd = \"abcd\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#faces",
+              "documentation": {
+                "identifier": "faces",
+                "newPage": false,
+                "searchKey": "strings_test.faces",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var faces"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar faces = \"☺☻☹\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#commas",
+              "documentation": {
+                "identifier": "commas",
+                "newPage": false,
+                "searchKey": "strings_test.commas",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var commas"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar commas = \"1,2,3,4\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#dots",
+              "documentation": {
+                "identifier": "dots",
+                "newPage": false,
+                "searchKey": "strings_test.dots",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dots"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dots = \"1....2....3....4\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#indexTests",
+              "documentation": {
+                "identifier": "indexTests",
+                "newPage": false,
+                "searchKey": "strings_test.indexTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#lastIndexTests",
+              "documentation": {
+                "identifier": "lastIndexTests",
+                "newPage": false,
+                "searchKey": "strings_test.lastIndexTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastIndexTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastIndexTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#indexAnyTests",
+              "documentation": {
+                "identifier": "indexAnyTests",
+                "newPage": false,
+                "searchKey": "strings_test.indexAnyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexAnyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexAnyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#lastIndexAnyTests",
+              "documentation": {
+                "identifier": "lastIndexAnyTests",
+                "newPage": false,
+                "searchKey": "strings_test.lastIndexAnyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lastIndexAnyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lastIndexAnyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkLongString",
+              "documentation": {
+                "identifier": "benchmarkLongString",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkLongString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchmarkLongString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchmarkLongString = Repeat(\" \", 100) + benchmarkString\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#splittests",
+              "documentation": {
+                "identifier": "splittests",
+                "newPage": false,
+                "searchKey": "strings_test.splittests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var splittests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar splittests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#splitaftertests",
+              "documentation": {
+                "identifier": "splitaftertests",
+                "newPage": false,
+                "searchKey": "strings_test.splitaftertests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var splitaftertests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar splitaftertests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#fieldstests",
+              "documentation": {
+                "identifier": "fieldstests",
+                "newPage": false,
+                "searchKey": "strings_test.fieldstests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fieldstests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fieldstests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#FieldsFuncTests",
+              "documentation": {
+                "identifier": "FieldsFuncTests",
+                "newPage": false,
+                "searchKey": "strings_test.FieldsFuncTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FieldsFuncTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FieldsFuncTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#upperTests",
+              "documentation": {
+                "identifier": "upperTests",
+                "newPage": false,
+                "searchKey": "strings_test.upperTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var upperTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar upperTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#lowerTests",
+              "documentation": {
+                "identifier": "lowerTests",
+                "newPage": false,
+                "searchKey": "strings_test.lowerTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var lowerTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar lowerTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#trimSpaceTests",
+              "documentation": {
+                "identifier": "trimSpaceTests",
+                "newPage": false,
+                "searchKey": "strings_test.trimSpaceTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trimSpaceTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trimSpaceTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#toValidUTF8Tests",
+              "documentation": {
+                "identifier": "toValidUTF8Tests",
+                "newPage": false,
+                "searchKey": "strings_test.toValidUTF8Tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var toValidUTF8Tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar toValidUTF8Tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#trimTests",
+              "documentation": {
+                "identifier": "trimTests",
+                "newPage": false,
+                "searchKey": "strings_test.trimTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trimTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trimTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#isSpace",
+              "documentation": {
+                "identifier": "isSpace",
+                "newPage": false,
+                "searchKey": "strings_test.isSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isSpace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isSpace = predicate{unicode.IsSpace, \"IsSpace\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#isDigit",
+              "documentation": {
+                "identifier": "isDigit",
+                "newPage": false,
+                "searchKey": "strings_test.isDigit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isDigit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isDigit = predicate{unicode.IsDigit, \"IsDigit\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#isUpper",
+              "documentation": {
+                "identifier": "isUpper",
+                "newPage": false,
+                "searchKey": "strings_test.isUpper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isUpper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isUpper = predicate{unicode.IsUpper, \"IsUpper\"}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#isValidRune",
+              "documentation": {
+                "identifier": "isValidRune",
+                "newPage": false,
+                "searchKey": "strings_test.isValidRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isValidRune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isValidRune = predicate{\n\tfunc(r rune) bool {\n\t\treturn r != utf8.RuneError\n\t},\n\t\"IsValidRune\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#trimFuncTests",
+              "documentation": {
+                "identifier": "trimFuncTests",
+                "newPage": false,
+                "searchKey": "strings_test.trimFuncTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var trimFuncTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar trimFuncTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#indexFuncTests",
+              "documentation": {
+                "identifier": "indexFuncTests",
+                "newPage": false,
+                "searchKey": "strings_test.indexFuncTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var indexFuncTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar indexFuncTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#RepeatTests",
+              "documentation": {
+                "identifier": "RepeatTests",
+                "newPage": false,
+                "searchKey": "strings_test.RepeatTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RepeatTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RepeatTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#RunesTests",
+              "documentation": {
+                "identifier": "RunesTests",
+                "newPage": false,
+                "searchKey": "strings_test.RunesTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var RunesTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar RunesTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#UnreadRuneErrorTests",
+              "documentation": {
+                "identifier": "UnreadRuneErrorTests",
+                "newPage": false,
+                "searchKey": "strings_test.UnreadRuneErrorTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var UnreadRuneErrorTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar UnreadRuneErrorTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ReplaceTests",
+              "documentation": {
+                "identifier": "ReplaceTests",
+                "newPage": false,
+                "searchKey": "strings_test.ReplaceTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ReplaceTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ReplaceTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TitleTests",
+              "documentation": {
+                "identifier": "TitleTests",
+                "newPage": false,
+                "searchKey": "strings_test.TitleTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TitleTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TitleTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ContainsTests",
+              "documentation": {
+                "identifier": "ContainsTests",
+                "newPage": false,
+                "searchKey": "strings_test.ContainsTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainsTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainsTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ContainsAnyTests",
+              "documentation": {
+                "identifier": "ContainsAnyTests",
+                "newPage": false,
+                "searchKey": "strings_test.ContainsAnyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainsAnyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainsAnyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ContainsRuneTests",
+              "documentation": {
+                "identifier": "ContainsRuneTests",
+                "newPage": false,
+                "searchKey": "strings_test.ContainsRuneTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ContainsRuneTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ContainsRuneTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#EqualFoldTests",
+              "documentation": {
+                "identifier": "EqualFoldTests",
+                "newPage": false,
+                "searchKey": "strings_test.EqualFoldTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var EqualFoldTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar EqualFoldTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#CountTests",
+              "documentation": {
+                "identifier": "CountTests",
+                "newPage": false,
+                "searchKey": "strings_test.CountTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CountTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CountTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchInputHard",
+              "documentation": {
+                "identifier": "benchInputHard",
+                "newPage": false,
+                "searchKey": "strings_test.benchInputHard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchInputHard"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchInputHard = makeBenchInputHard()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchInputTorture",
+              "documentation": {
+                "identifier": "benchInputTorture",
+                "newPage": false,
+                "searchKey": "strings_test.benchInputTorture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchInputTorture"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchInputTorture = Repeat(\"ABC\", 1<<10) + \"123\" + Repeat(\"ABC\", 1<<10)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchNeedleTorture",
+              "documentation": {
+                "identifier": "benchNeedleTorture",
+                "newPage": false,
+                "searchKey": "strings_test.benchNeedleTorture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchNeedleTorture"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchNeedleTorture = Repeat(\"ABC\", 1<<10+1)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#makeFieldsInput",
+              "documentation": {
+                "identifier": "makeFieldsInput",
+                "newPage": false,
+                "searchKey": "strings_test.makeFieldsInput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var makeFieldsInput"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar makeFieldsInput = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#makeFieldsInputASCII",
+              "documentation": {
+                "identifier": "makeFieldsInputASCII",
+                "newPage": false,
+                "searchKey": "strings_test.makeFieldsInputASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var makeFieldsInputASCII"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar makeFieldsInputASCII = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#stringdata",
+              "documentation": {
+                "identifier": "stringdata",
+                "newPage": false,
+                "searchKey": "strings_test.stringdata",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stringdata"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stringdata = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#stringSink",
+              "documentation": {
+                "identifier": "stringSink",
+                "newPage": false,
+                "searchKey": "strings_test.stringSink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var stringSink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar stringSink string\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings_test#errWriter",
+              "documentation": {
+                "identifier": "errWriter",
+                "newPage": false,
+                "searchKey": "strings_test.errWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errWriter struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errWriter struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings_test#errWriter.Write",
+                    "documentation": {
+                      "identifier": "errWriter.Write",
+                      "newPage": false,
+                      "searchKey": "strings_test.errWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (errWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (errWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#IndexTest",
+              "documentation": {
+                "identifier": "IndexTest",
+                "newPage": false,
+                "searchKey": "strings_test.IndexTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type IndexTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype IndexTest struct {\n\ts   string\n\tsep string\n\tout int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#SplitTest",
+              "documentation": {
+                "identifier": "SplitTest",
+                "newPage": false,
+                "searchKey": "strings_test.SplitTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SplitTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SplitTest struct {\n\ts   string\n\tsep string\n\tn   int\n\ta   []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#FieldsTest",
+              "documentation": {
+                "identifier": "FieldsTest",
+                "newPage": false,
+                "searchKey": "strings_test.FieldsTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FieldsTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FieldsTest struct {\n\ts string\n\ta []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#StringTest",
+              "documentation": {
+                "identifier": "StringTest",
+                "newPage": false,
+                "searchKey": "strings_test.StringTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringTest struct {\n\tin, out string\n}\n```\n\nTest case for any function which accepts and returns a single string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#predicate",
+              "documentation": {
+                "identifier": "predicate",
+                "newPage": false,
+                "searchKey": "strings_test.predicate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type predicate struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype predicate struct {\n\tf    func(rune) bool\n\tname string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings_test#not",
+                    "documentation": {
+                      "identifier": "not",
+                      "newPage": false,
+                      "searchKey": "strings_test.not",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func not(p predicate) predicate"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc not(p predicate) predicate\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings_test#check",
+              "documentation": {
+                "identifier": "check",
+                "newPage": false,
+                "searchKey": "strings_test.check",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func check(t *testing.T, b *Builder, want string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc check(t *testing.T, b *Builder, want string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilder",
+              "documentation": {
+                "identifier": "TestBuilder",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderString",
+              "documentation": {
+                "identifier": "TestBuilderString",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderReset",
+              "documentation": {
+                "identifier": "TestBuilderReset",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderGrow",
+              "documentation": {
+                "identifier": "TestBuilderGrow",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderGrow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderGrow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderGrow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderWrite2",
+              "documentation": {
+                "identifier": "TestBuilderWrite2",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderWrite2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderWrite2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderWrite2(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderWriteByte",
+              "documentation": {
+                "identifier": "TestBuilderWriteByte",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderWriteByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderWriteByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderWriteByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderAllocs",
+              "documentation": {
+                "identifier": "TestBuilderAllocs",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderAllocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderAllocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderAllocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderCopyPanic",
+              "documentation": {
+                "identifier": "TestBuilderCopyPanic",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderCopyPanic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderCopyPanic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderCopyPanic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestBuilderWriteInvalidRune",
+              "documentation": {
+                "identifier": "TestBuilderWriteInvalidRune",
+                "newPage": false,
+                "searchKey": "strings_test.TestBuilderWriteInvalidRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuilderWriteInvalidRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuilderWriteInvalidRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkBuilder",
+              "documentation": {
+                "identifier": "benchmarkBuilder",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkBuilder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkBuilder(b *testing.B, f func(b *testing.B, numWrite int, grow bool))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkBuilder(b *testing.B, f func(b *testing.B, numWrite int, grow bool))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkBuildString_Builder",
+              "documentation": {
+                "identifier": "BenchmarkBuildString_Builder",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkBuildString_Builder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBuildString_Builder(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBuildString_Builder(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkBuildString_ByteBuffer",
+              "documentation": {
+                "identifier": "BenchmarkBuildString_ByteBuffer",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkBuildString_ByteBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkBuildString_ByteBuffer(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkBuildString_ByteBuffer(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestCompare",
+              "documentation": {
+                "identifier": "TestCompare",
+                "newPage": false,
+                "searchKey": "strings_test.TestCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompare(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompare(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestCompareIdenticalString",
+              "documentation": {
+                "identifier": "TestCompareIdenticalString",
+                "newPage": false,
+                "searchKey": "strings_test.TestCompareIdenticalString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompareIdenticalString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompareIdenticalString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestCompareStrings",
+              "documentation": {
+                "identifier": "TestCompareStrings",
+                "newPage": false,
+                "searchKey": "strings_test.TestCompareStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCompareStrings(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCompareStrings(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleFields",
+              "documentation": {
+                "identifier": "ExampleFields",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFields()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFields()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleFieldsFunc",
+              "documentation": {
+                "identifier": "ExampleFieldsFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleFieldsFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFieldsFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFieldsFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleCompare",
+              "documentation": {
+                "identifier": "ExampleCompare",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleCompare()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleCompare()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleContains",
+              "documentation": {
+                "identifier": "ExampleContains",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleContains",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleContains()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleContains()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleContainsAny",
+              "documentation": {
+                "identifier": "ExampleContainsAny",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleContainsAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleContainsAny()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleContainsAny()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleContainsRune",
+              "documentation": {
+                "identifier": "ExampleContainsRune",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleContainsRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleContainsRune()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleContainsRune()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleCount",
+              "documentation": {
+                "identifier": "ExampleCount",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleCount()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleCount()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleEqualFold",
+              "documentation": {
+                "identifier": "ExampleEqualFold",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleEqualFold",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleEqualFold()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleEqualFold()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleHasPrefix",
+              "documentation": {
+                "identifier": "ExampleHasPrefix",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleHasPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleHasPrefix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleHasPrefix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleHasSuffix",
+              "documentation": {
+                "identifier": "ExampleHasSuffix",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleHasSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleHasSuffix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleHasSuffix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleIndex",
+              "documentation": {
+                "identifier": "ExampleIndex",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleIndexFunc",
+              "documentation": {
+                "identifier": "ExampleIndexFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleIndexFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndexFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndexFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleIndexAny",
+              "documentation": {
+                "identifier": "ExampleIndexAny",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleIndexAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndexAny()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndexAny()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleIndexByte",
+              "documentation": {
+                "identifier": "ExampleIndexByte",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleIndexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndexByte()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndexByte()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleIndexRune",
+              "documentation": {
+                "identifier": "ExampleIndexRune",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleIndexRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIndexRune()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIndexRune()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleLastIndex",
+              "documentation": {
+                "identifier": "ExampleLastIndex",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleLastIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLastIndex()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLastIndex()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleLastIndexAny",
+              "documentation": {
+                "identifier": "ExampleLastIndexAny",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleLastIndexAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLastIndexAny()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLastIndexAny()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleLastIndexByte",
+              "documentation": {
+                "identifier": "ExampleLastIndexByte",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleLastIndexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLastIndexByte()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLastIndexByte()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleLastIndexFunc",
+              "documentation": {
+                "identifier": "ExampleLastIndexFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleLastIndexFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLastIndexFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLastIndexFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleJoin",
+              "documentation": {
+                "identifier": "ExampleJoin",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleJoin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleJoin()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleJoin()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleRepeat",
+              "documentation": {
+                "identifier": "ExampleRepeat",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleRepeat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRepeat()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRepeat()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleReplace",
+              "documentation": {
+                "identifier": "ExampleReplace",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleReplace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReplace()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReplace()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleReplaceAll",
+              "documentation": {
+                "identifier": "ExampleReplaceAll",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleReplaceAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReplaceAll()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReplaceAll()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleSplit",
+              "documentation": {
+                "identifier": "ExampleSplit",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplit()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleSplitN",
+              "documentation": {
+                "identifier": "ExampleSplitN",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleSplitN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplitN()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplitN()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleSplitAfter",
+              "documentation": {
+                "identifier": "ExampleSplitAfter",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleSplitAfter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplitAfter()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplitAfter()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleSplitAfterN",
+              "documentation": {
+                "identifier": "ExampleSplitAfterN",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleSplitAfterN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSplitAfterN()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSplitAfterN()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTitle",
+              "documentation": {
+                "identifier": "ExampleTitle",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTitle()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTitle()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToTitle",
+              "documentation": {
+                "identifier": "ExampleToTitle",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToTitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToTitle()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToTitle()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToTitleSpecial",
+              "documentation": {
+                "identifier": "ExampleToTitleSpecial",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToTitleSpecial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToTitleSpecial()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToTitleSpecial()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleMap",
+              "documentation": {
+                "identifier": "ExampleMap",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMap()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMap()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleNewReplacer",
+              "documentation": {
+                "identifier": "ExampleNewReplacer",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleNewReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNewReplacer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNewReplacer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToUpper",
+              "documentation": {
+                "identifier": "ExampleToUpper",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToUpper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToUpper()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToUpper()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToUpperSpecial",
+              "documentation": {
+                "identifier": "ExampleToUpperSpecial",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToUpperSpecial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToUpperSpecial()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToUpperSpecial()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToLower",
+              "documentation": {
+                "identifier": "ExampleToLower",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToLower()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToLower()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleToLowerSpecial",
+              "documentation": {
+                "identifier": "ExampleToLowerSpecial",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleToLowerSpecial",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleToLowerSpecial()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleToLowerSpecial()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrim",
+              "documentation": {
+                "identifier": "ExampleTrim",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrim()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrim()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimSpace",
+              "documentation": {
+                "identifier": "ExampleTrimSpace",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimSpace()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimSpace()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimPrefix",
+              "documentation": {
+                "identifier": "ExampleTrimPrefix",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimPrefix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimPrefix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimSuffix",
+              "documentation": {
+                "identifier": "ExampleTrimSuffix",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimSuffix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimSuffix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimFunc",
+              "documentation": {
+                "identifier": "ExampleTrimFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimLeft",
+              "documentation": {
+                "identifier": "ExampleTrimLeft",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimLeft",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimLeft()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimLeft()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimLeftFunc",
+              "documentation": {
+                "identifier": "ExampleTrimLeftFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimLeftFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimLeftFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimLeftFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimRight",
+              "documentation": {
+                "identifier": "ExampleTrimRight",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimRight",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimRight()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimRight()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleTrimRightFunc",
+              "documentation": {
+                "identifier": "ExampleTrimRightFunc",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleTrimRightFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTrimRightFunc()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTrimRightFunc()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#ExampleBuilder",
+              "documentation": {
+                "identifier": "ExampleBuilder",
+                "newPage": false,
+                "searchKey": "strings_test.ExampleBuilder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleBuilder()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleBuilder()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "strings_test.TestReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReadAfterBigSeek",
+              "documentation": {
+                "identifier": "TestReadAfterBigSeek",
+                "newPage": false,
+                "searchKey": "strings_test.TestReadAfterBigSeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAfterBigSeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAfterBigSeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReaderAt",
+              "documentation": {
+                "identifier": "TestReaderAt",
+                "newPage": false,
+                "searchKey": "strings_test.TestReaderAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderAt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderAt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReaderAtConcurrent",
+              "documentation": {
+                "identifier": "TestReaderAtConcurrent",
+                "newPage": false,
+                "searchKey": "strings_test.TestReaderAtConcurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderAtConcurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderAtConcurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestEmptyReaderConcurrent",
+              "documentation": {
+                "identifier": "TestEmptyReaderConcurrent",
+                "newPage": false,
+                "searchKey": "strings_test.TestEmptyReaderConcurrent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyReaderConcurrent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyReaderConcurrent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestWriteTo",
+              "documentation": {
+                "identifier": "TestWriteTo",
+                "newPage": false,
+                "searchKey": "strings_test.TestWriteTo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteTo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteTo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReaderLenSize",
+              "documentation": {
+                "identifier": "TestReaderLenSize",
+                "newPage": false,
+                "searchKey": "strings_test.TestReaderLenSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderLenSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderLenSize(t *testing.T)\n```\n\ntests that Len is affected by reads, but Size is not. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReaderReset",
+              "documentation": {
+                "identifier": "TestReaderReset",
+                "newPage": false,
+                "searchKey": "strings_test.TestReaderReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReaderZero",
+              "documentation": {
+                "identifier": "TestReaderZero",
+                "newPage": false,
+                "searchKey": "strings_test.TestReaderZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#oldHTMLEscape",
+              "documentation": {
+                "identifier": "oldHTMLEscape",
+                "newPage": false,
+                "searchKey": "strings_test.oldHTMLEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func oldHTMLEscape(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc oldHTMLEscape(s string) string\n```\n\nThe http package's old HTML escaping function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReplacer",
+              "documentation": {
+                "identifier": "TestReplacer",
+                "newPage": false,
+                "searchKey": "strings_test.TestReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReplacer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReplacer(t *testing.T)\n```\n\nTestReplacer tests the replacer implementations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestPickAlgorithm",
+              "documentation": {
+                "identifier": "TestPickAlgorithm",
+                "newPage": false,
+                "searchKey": "strings_test.TestPickAlgorithm",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPickAlgorithm(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPickAlgorithm(t *testing.T)\n```\n\nTestPickAlgorithm tests that NewReplacer picks the correct algorithm. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestWriteStringError",
+              "documentation": {
+                "identifier": "TestWriteStringError",
+                "newPage": false,
+                "searchKey": "strings_test.TestWriteStringError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteStringError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteStringError(t *testing.T)\n```\n\nTestWriteStringError tests that WriteString returns an error received from the underlying io.Writer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestGenericTrieBuilding",
+              "documentation": {
+                "identifier": "TestGenericTrieBuilding",
+                "newPage": false,
+                "searchKey": "strings_test.TestGenericTrieBuilding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGenericTrieBuilding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGenericTrieBuilding(t *testing.T)\n```\n\nTestGenericTrieBuilding verifies the structure of the generated trie. There is one node per line, and the key ending with the current line is in the trie if it ends with a \"+\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkGenericNoMatch",
+              "documentation": {
+                "identifier": "BenchmarkGenericNoMatch",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkGenericNoMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericNoMatch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericNoMatch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkGenericMatch1",
+              "documentation": {
+                "identifier": "BenchmarkGenericMatch1",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkGenericMatch1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericMatch1(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericMatch1(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkGenericMatch2",
+              "documentation": {
+                "identifier": "BenchmarkGenericMatch2",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkGenericMatch2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericMatch2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericMatch2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkSingleString",
+              "documentation": {
+                "identifier": "benchmarkSingleString",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkSingleString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkSingleString(b *testing.B, pattern, text string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkSingleString(b *testing.B, pattern, text string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSingleMaxSkipping",
+              "documentation": {
+                "identifier": "BenchmarkSingleMaxSkipping",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSingleMaxSkipping",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSingleMaxSkipping(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSingleMaxSkipping(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSingleLongSuffixFail",
+              "documentation": {
+                "identifier": "BenchmarkSingleLongSuffixFail",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSingleLongSuffixFail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSingleLongSuffixFail(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSingleLongSuffixFail(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSingleMatch",
+              "documentation": {
+                "identifier": "BenchmarkSingleMatch",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSingleMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSingleMatch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSingleMatch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteByteNoMatch",
+              "documentation": {
+                "identifier": "BenchmarkByteByteNoMatch",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteByteNoMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteByteNoMatch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteByteNoMatch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteByteMatch",
+              "documentation": {
+                "identifier": "BenchmarkByteByteMatch",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteByteMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteByteMatch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteByteMatch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteStringMatch",
+              "documentation": {
+                "identifier": "BenchmarkByteStringMatch",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteStringMatch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteStringMatch(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteStringMatch(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkHTMLEscapeNew",
+              "documentation": {
+                "identifier": "BenchmarkHTMLEscapeNew",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkHTMLEscapeNew",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHTMLEscapeNew(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHTMLEscapeNew(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkHTMLEscapeOld",
+              "documentation": {
+                "identifier": "BenchmarkHTMLEscapeOld",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkHTMLEscapeOld",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHTMLEscapeOld(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHTMLEscapeOld(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteStringReplacerWriteString",
+              "documentation": {
+                "identifier": "BenchmarkByteStringReplacerWriteString",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteStringReplacerWriteString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteStringReplacerWriteString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteStringReplacerWriteString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteReplacerWriteString",
+              "documentation": {
+                "identifier": "BenchmarkByteReplacerWriteString",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteReplacerWriteString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteReplacerWriteString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteReplacerWriteString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteByteReplaces",
+              "documentation": {
+                "identifier": "BenchmarkByteByteReplaces",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteByteReplaces",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteByteReplaces(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteByteReplaces(b *testing.B)\n```\n\nBenchmarkByteByteReplaces compares byteByteImpl against multiple Replaces. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkByteByteMap",
+              "documentation": {
+                "identifier": "BenchmarkByteByteMap",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkByteByteMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkByteByteMap(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkByteByteMap(b *testing.B)\n```\n\nBenchmarkByteByteMap compares byteByteImpl against Map. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkMap",
+              "documentation": {
+                "identifier": "BenchmarkMap",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMap(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMap(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestFinderNext",
+              "documentation": {
+                "identifier": "TestFinderNext",
+                "newPage": false,
+                "searchKey": "strings_test.TestFinderNext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFinderNext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFinderNext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestFinderCreation",
+              "documentation": {
+                "identifier": "TestFinderCreation",
+                "newPage": false,
+                "searchKey": "strings_test.TestFinderCreation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFinderCreation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFinderCreation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#eq",
+              "documentation": {
+                "identifier": "eq",
+                "newPage": false,
+                "searchKey": "strings_test.eq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eq(a, b []string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eq(a, b []string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#runIndexTests",
+              "documentation": {
+                "identifier": "runIndexTests",
+                "newPage": false,
+                "searchKey": "strings_test.runIndexTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runIndexTests(t *testing.T, f func(s, sep string) int, funcName string, testCases []IndexTest)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runIndexTests(t *testing.T, f func(s, sep string) int, funcName string, testCases []IndexTest)\n```\n\nExecute f on each test case.  funcName should be the name of f; it's used in failure reports. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndex",
+              "documentation": {
+                "identifier": "TestIndex",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestLastIndex",
+              "documentation": {
+                "identifier": "TestLastIndex",
+                "newPage": false,
+                "searchKey": "strings_test.TestLastIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLastIndex(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLastIndex(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndexAny",
+              "documentation": {
+                "identifier": "TestIndexAny",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndexAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexAny(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexAny(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestLastIndexAny",
+              "documentation": {
+                "identifier": "TestLastIndexAny",
+                "newPage": false,
+                "searchKey": "strings_test.TestLastIndexAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLastIndexAny(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLastIndexAny(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndexByte",
+              "documentation": {
+                "identifier": "TestIndexByte",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestLastIndexByte",
+              "documentation": {
+                "identifier": "TestLastIndexByte",
+                "newPage": false,
+                "searchKey": "strings_test.TestLastIndexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLastIndexByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLastIndexByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#simpleIndex",
+              "documentation": {
+                "identifier": "simpleIndex",
+                "newPage": false,
+                "searchKey": "strings_test.simpleIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func simpleIndex(s, sep string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc simpleIndex(s, sep string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndexRandom",
+              "documentation": {
+                "identifier": "TestIndexRandom",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndexRandom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexRandom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexRandom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndexRune",
+              "documentation": {
+                "identifier": "TestIndexRune",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndexRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexRune",
+              "documentation": {
+                "identifier": "BenchmarkIndexRune",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexRune(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexRune(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexRuneLongString",
+              "documentation": {
+                "identifier": "BenchmarkIndexRuneLongString",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexRuneLongString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexRuneLongString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexRuneLongString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexRuneFastPath",
+              "documentation": {
+                "identifier": "BenchmarkIndexRuneFastPath",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexRuneFastPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexRuneFastPath(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexRuneFastPath(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndex",
+              "documentation": {
+                "identifier": "BenchmarkIndex",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndex(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndex(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndex",
+              "documentation": {
+                "identifier": "BenchmarkLastIndex",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndex(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndex(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexByte",
+              "documentation": {
+                "identifier": "BenchmarkIndexByte",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexByte(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexByte(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestSplit",
+              "documentation": {
+                "identifier": "TestSplit",
+                "newPage": false,
+                "searchKey": "strings_test.TestSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestSplitAfter",
+              "documentation": {
+                "identifier": "TestSplitAfter",
+                "newPage": false,
+                "searchKey": "strings_test.TestSplitAfter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitAfter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitAfter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestFields",
+              "documentation": {
+                "identifier": "TestFields",
+                "newPage": false,
+                "searchKey": "strings_test.TestFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFields(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFields(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestFieldsFunc",
+              "documentation": {
+                "identifier": "TestFieldsFunc",
+                "newPage": false,
+                "searchKey": "strings_test.TestFieldsFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFieldsFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFieldsFunc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#runStringTests",
+              "documentation": {
+                "identifier": "runStringTests",
+                "newPage": false,
+                "searchKey": "strings_test.runStringTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runStringTests(t *testing.T, f func(string) string, funcName string, testCases []StringTest)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runStringTests(t *testing.T, f func(string) string, funcName string, testCases []StringTest)\n```\n\nExecute f on each test case.  funcName should be the name of f; it's used in failure reports. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#tenRunes",
+              "documentation": {
+                "identifier": "tenRunes",
+                "newPage": false,
+                "searchKey": "strings_test.tenRunes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func tenRunes(ch rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc tenRunes(ch rune) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#rot13",
+              "documentation": {
+                "identifier": "rot13",
+                "newPage": false,
+                "searchKey": "strings_test.rot13",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rot13(r rune) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rot13(r rune) rune\n```\n\nUser-defined self-inverse mapping function \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestMap",
+              "documentation": {
+                "identifier": "TestMap",
+                "newPage": false,
+                "searchKey": "strings_test.TestMap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestToUpper",
+              "documentation": {
+                "identifier": "TestToUpper",
+                "newPage": false,
+                "searchKey": "strings_test.TestToUpper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestToUpper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestToUpper(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestToLower",
+              "documentation": {
+                "identifier": "TestToLower",
+                "newPage": false,
+                "searchKey": "strings_test.TestToLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestToLower(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestToLower(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestToValidUTF8",
+              "documentation": {
+                "identifier": "TestToValidUTF8",
+                "newPage": false,
+                "searchKey": "strings_test.TestToValidUTF8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestToValidUTF8(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestToValidUTF8(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkToUpper",
+              "documentation": {
+                "identifier": "BenchmarkToUpper",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkToUpper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkToUpper(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkToUpper(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkToLower",
+              "documentation": {
+                "identifier": "BenchmarkToLower",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkToLower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkToLower(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkToLower(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkMapNoChanges",
+              "documentation": {
+                "identifier": "BenchmarkMapNoChanges",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkMapNoChanges",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMapNoChanges(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMapNoChanges(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestSpecialCase",
+              "documentation": {
+                "identifier": "TestSpecialCase",
+                "newPage": false,
+                "searchKey": "strings_test.TestSpecialCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSpecialCase(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSpecialCase(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestTrimSpace",
+              "documentation": {
+                "identifier": "TestTrimSpace",
+                "newPage": false,
+                "searchKey": "strings_test.TestTrimSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTrimSpace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTrimSpace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestTrim",
+              "documentation": {
+                "identifier": "TestTrim",
+                "newPage": false,
+                "searchKey": "strings_test.TestTrim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTrim(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTrim(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkTrim",
+              "documentation": {
+                "identifier": "BenchmarkTrim",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkTrim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTrim(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTrim(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkToValidUTF8",
+              "documentation": {
+                "identifier": "BenchmarkToValidUTF8",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkToValidUTF8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkToValidUTF8(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkToValidUTF8(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestTrimFunc",
+              "documentation": {
+                "identifier": "TestTrimFunc",
+                "newPage": false,
+                "searchKey": "strings_test.TestTrimFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTrimFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTrimFunc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestIndexFunc",
+              "documentation": {
+                "identifier": "TestIndexFunc",
+                "newPage": false,
+                "searchKey": "strings_test.TestIndexFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIndexFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIndexFunc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "strings_test.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(m string, s1, s2 string, t *testing.T) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(m string, s1, s2 string, t *testing.T) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestCaseConsistency",
+              "documentation": {
+                "identifier": "TestCaseConsistency",
+                "newPage": false,
+                "searchKey": "strings_test.TestCaseConsistency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCaseConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCaseConsistency(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestRepeat",
+              "documentation": {
+                "identifier": "TestRepeat",
+                "newPage": false,
+                "searchKey": "strings_test.TestRepeat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepeat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepeat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#repeat",
+              "documentation": {
+                "identifier": "repeat",
+                "newPage": false,
+                "searchKey": "strings_test.repeat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func repeat(s string, count int) (err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc repeat(s string, count int) (err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestRepeatCatchesOverflow",
+              "documentation": {
+                "identifier": "TestRepeatCatchesOverflow",
+                "newPage": false,
+                "searchKey": "strings_test.TestRepeatCatchesOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRepeatCatchesOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRepeatCatchesOverflow(t *testing.T)\n```\n\nSee Issue golang.org/issue/16237 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#runesEqual",
+              "documentation": {
+                "identifier": "runesEqual",
+                "newPage": false,
+                "searchKey": "strings_test.runesEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runesEqual(a, b []rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runesEqual(a, b []rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestRunes",
+              "documentation": {
+                "identifier": "TestRunes",
+                "newPage": false,
+                "searchKey": "strings_test.TestRunes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRunes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRunes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReadByte",
+              "documentation": {
+                "identifier": "TestReadByte",
+                "newPage": false,
+                "searchKey": "strings_test.TestReadByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReadRune",
+              "documentation": {
+                "identifier": "TestReadRune",
+                "newPage": false,
+                "searchKey": "strings_test.TestReadRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestUnreadRuneError",
+              "documentation": {
+                "identifier": "TestUnreadRuneError",
+                "newPage": false,
+                "searchKey": "strings_test.TestUnreadRuneError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadRuneError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadRuneError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestReplace",
+              "documentation": {
+                "identifier": "TestReplace",
+                "newPage": false,
+                "searchKey": "strings_test.TestReplace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReplace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReplace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestTitle",
+              "documentation": {
+                "identifier": "TestTitle",
+                "newPage": false,
+                "searchKey": "strings_test.TestTitle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTitle(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTitle(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestContains",
+              "documentation": {
+                "identifier": "TestContains",
+                "newPage": false,
+                "searchKey": "strings_test.TestContains",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContains(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContains(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestContainsAny",
+              "documentation": {
+                "identifier": "TestContainsAny",
+                "newPage": false,
+                "searchKey": "strings_test.TestContainsAny",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContainsAny(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContainsAny(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestContainsRune",
+              "documentation": {
+                "identifier": "TestContainsRune",
+                "newPage": false,
+                "searchKey": "strings_test.TestContainsRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestContainsRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestContainsRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestEqualFold",
+              "documentation": {
+                "identifier": "TestEqualFold",
+                "newPage": false,
+                "searchKey": "strings_test.TestEqualFold",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEqualFold(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEqualFold(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkEqualFold",
+              "documentation": {
+                "identifier": "BenchmarkEqualFold",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkEqualFold",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEqualFold(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEqualFold(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#TestCount",
+              "documentation": {
+                "identifier": "TestCount",
+                "newPage": false,
+                "searchKey": "strings_test.TestCount",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCount(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCount(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#makeBenchInputHard",
+              "documentation": {
+                "identifier": "makeBenchInputHard",
+                "newPage": false,
+                "searchKey": "strings_test.makeBenchInputHard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeBenchInputHard() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeBenchInputHard() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkIndexHard",
+              "documentation": {
+                "identifier": "benchmarkIndexHard",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkIndexHard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkIndexHard(b *testing.B, sep string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkIndexHard(b *testing.B, sep string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkLastIndexHard",
+              "documentation": {
+                "identifier": "benchmarkLastIndexHard",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkLastIndexHard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkLastIndexHard(b *testing.B, sep string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkLastIndexHard(b *testing.B, sep string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#benchmarkCountHard",
+              "documentation": {
+                "identifier": "benchmarkCountHard",
+                "newPage": false,
+                "searchKey": "strings_test.benchmarkCountHard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkCountHard(b *testing.B, sep string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkCountHard(b *testing.B, sep string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexHard1",
+              "documentation": {
+                "identifier": "BenchmarkIndexHard1",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexHard1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexHard1(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexHard1(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexHard2",
+              "documentation": {
+                "identifier": "BenchmarkIndexHard2",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexHard2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexHard2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexHard2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexHard3",
+              "documentation": {
+                "identifier": "BenchmarkIndexHard3",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexHard3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexHard3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexHard3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexHard4",
+              "documentation": {
+                "identifier": "BenchmarkIndexHard4",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexHard4",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexHard4(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexHard4(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndexHard1",
+              "documentation": {
+                "identifier": "BenchmarkLastIndexHard1",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndexHard1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndexHard1(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndexHard1(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndexHard2",
+              "documentation": {
+                "identifier": "BenchmarkLastIndexHard2",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndexHard2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndexHard2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndexHard2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndexHard3",
+              "documentation": {
+                "identifier": "BenchmarkLastIndexHard3",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndexHard3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndexHard3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndexHard3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountHard1",
+              "documentation": {
+                "identifier": "BenchmarkCountHard1",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountHard1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountHard1(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountHard1(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountHard2",
+              "documentation": {
+                "identifier": "BenchmarkCountHard2",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountHard2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountHard2(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountHard2(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountHard3",
+              "documentation": {
+                "identifier": "BenchmarkCountHard3",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountHard3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountHard3(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountHard3(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexTorture",
+              "documentation": {
+                "identifier": "BenchmarkIndexTorture",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexTorture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexTorture(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexTorture(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountTorture",
+              "documentation": {
+                "identifier": "BenchmarkCountTorture",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountTorture",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountTorture(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountTorture(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountTortureOverlapping",
+              "documentation": {
+                "identifier": "BenchmarkCountTortureOverlapping",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountTortureOverlapping",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountTortureOverlapping(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountTortureOverlapping(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkCountByte",
+              "documentation": {
+                "identifier": "BenchmarkCountByte",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkCountByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCountByte(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCountByte(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkFields",
+              "documentation": {
+                "identifier": "BenchmarkFields",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFields(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFields(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkFieldsFunc",
+              "documentation": {
+                "identifier": "BenchmarkFieldsFunc",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkFieldsFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFieldsFunc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFieldsFunc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSplitEmptySeparator",
+              "documentation": {
+                "identifier": "BenchmarkSplitEmptySeparator",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSplitEmptySeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplitEmptySeparator(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplitEmptySeparator(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSplitSingleByteSeparator",
+              "documentation": {
+                "identifier": "BenchmarkSplitSingleByteSeparator",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSplitSingleByteSeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplitSingleByteSeparator(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplitSingleByteSeparator(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSplitMultiByteSeparator",
+              "documentation": {
+                "identifier": "BenchmarkSplitMultiByteSeparator",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSplitMultiByteSeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplitMultiByteSeparator(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplitMultiByteSeparator(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSplitNSingleByteSeparator",
+              "documentation": {
+                "identifier": "BenchmarkSplitNSingleByteSeparator",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSplitNSingleByteSeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplitNSingleByteSeparator(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplitNSingleByteSeparator(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkSplitNMultiByteSeparator",
+              "documentation": {
+                "identifier": "BenchmarkSplitNMultiByteSeparator",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkSplitNMultiByteSeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSplitNMultiByteSeparator(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSplitNMultiByteSeparator(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkRepeat",
+              "documentation": {
+                "identifier": "BenchmarkRepeat",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkRepeat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRepeat(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRepeat(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexAnyASCII",
+              "documentation": {
+                "identifier": "BenchmarkIndexAnyASCII",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexAnyASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexAnyASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexAnyASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexAnyUTF8",
+              "documentation": {
+                "identifier": "BenchmarkIndexAnyUTF8",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexAnyUTF8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexAnyUTF8(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexAnyUTF8(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndexAnyASCII",
+              "documentation": {
+                "identifier": "BenchmarkLastIndexAnyASCII",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndexAnyASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndexAnyASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndexAnyASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkLastIndexAnyUTF8",
+              "documentation": {
+                "identifier": "BenchmarkLastIndexAnyUTF8",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkLastIndexAnyUTF8",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLastIndexAnyUTF8(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLastIndexAnyUTF8(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkTrimASCII",
+              "documentation": {
+                "identifier": "BenchmarkTrimASCII",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkTrimASCII",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTrimASCII(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTrimASCII(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkIndexPeriodic",
+              "documentation": {
+                "identifier": "BenchmarkIndexPeriodic",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkIndexPeriodic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkIndexPeriodic(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkIndexPeriodic(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkJoin",
+              "documentation": {
+                "identifier": "BenchmarkJoin",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkJoin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkJoin(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkJoin(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkTrimSpace",
+              "documentation": {
+                "identifier": "BenchmarkTrimSpace",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkTrimSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTrimSpace(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTrimSpace(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings_test#BenchmarkReplaceAll",
+              "documentation": {
+                "identifier": "BenchmarkReplaceAll",
+                "newPage": false,
+                "searchKey": "strings_test.BenchmarkReplaceAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReplaceAll(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReplaceAll(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

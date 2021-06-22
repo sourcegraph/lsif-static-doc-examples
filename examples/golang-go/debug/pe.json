@@ -1,0 +1,3128 @@
+{
+  "pathID": "/debug/pe",
+  "documentation": {
+    "identifier": "pe",
+    "newPage": true,
+    "searchKey": "debug/pe",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package pe"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package pe implements access to PE (Microsoft Windows Portable Executable) files. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/debug/pe#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/pe#seekStart",
+              "documentation": {
+                "identifier": "seekStart",
+                "newPage": false,
+                "searchKey": "pe.seekStart",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const seekStart"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst seekStart = 0\n```\n\nAvoid use of post-Go 1.4 io features, to make safe for toolchain bootstrap. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_UNKNOWN",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_UNKNOWN",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_UNKNOWN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_UNKNOWN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_UNKNOWN = 0x0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_AM33",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_AM33",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_AM33",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_AM33"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_AM33 = 0x1d3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_AMD64",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_AMD64",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_AMD64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_AMD64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_AMD64 = 0x8664\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_ARM",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_ARM",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_ARM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_ARM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_ARM = 0x1c0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_ARMNT",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_ARMNT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_ARMNT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_ARMNT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_ARMNT = 0x1c4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_ARM64",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_ARM64",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_ARM64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_ARM64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_ARM64 = 0xaa64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_EBC",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_EBC",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_EBC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_EBC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_EBC = 0xebc\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_I386",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_I386",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_I386",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_I386"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_I386 = 0x14c\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_IA64",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_IA64",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_IA64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_IA64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_IA64 = 0x200\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_M32R",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_M32R",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_M32R",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_M32R"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_M32R = 0x9041\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_MIPS16",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_MIPS16",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_MIPS16",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_MIPS16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_MIPS16 = 0x266\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_MIPSFPU",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_MIPSFPU",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_MIPSFPU",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_MIPSFPU"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_MIPSFPU = 0x366\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_MIPSFPU16",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_MIPSFPU16",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_MIPSFPU16",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_MIPSFPU16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_MIPSFPU16 = 0x466\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_POWERPC",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_POWERPC",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_POWERPC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_POWERPC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_POWERPC = 0x1f0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_POWERPCFP",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_POWERPCFP",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_POWERPCFP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_POWERPCFP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_POWERPCFP = 0x1f1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_R4000",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_R4000",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_R4000",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_R4000"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_R4000 = 0x166\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_SH3",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_SH3",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_SH3",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_SH3"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_SH3 = 0x1a2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_SH3DSP",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_SH3DSP",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_SH3DSP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_SH3DSP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_SH3DSP = 0x1a3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_SH4",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_SH4",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_SH4",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_SH4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_SH4 = 0x1a6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_SH5",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_SH5",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_SH5",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_SH5"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_SH5 = 0x1a8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_THUMB",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_THUMB",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_THUMB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_THUMB"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_THUMB = 0x1c2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_MACHINE_WCEMIPSV2",
+              "documentation": {
+                "identifier": "IMAGE_FILE_MACHINE_WCEMIPSV2",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_MACHINE_WCEMIPSV2",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_MACHINE_WCEMIPSV2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_MACHINE_WCEMIPSV2 = 0x169\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_EXPORT",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_EXPORT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_EXPORT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_EXPORT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_EXPORT = 0\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_IMPORT",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_IMPORT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_IMPORT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_IMPORT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_IMPORT = 1\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_RESOURCE",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_RESOURCE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_RESOURCE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_RESOURCE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_RESOURCE = 2\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_EXCEPTION",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_EXCEPTION",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_EXCEPTION",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_EXCEPTION"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_EXCEPTION = 3\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_SECURITY",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_SECURITY",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_SECURITY",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_SECURITY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_SECURITY = 4\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_BASERELOC",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_BASERELOC",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_BASERELOC",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_BASERELOC"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_BASERELOC = 5\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_DEBUG",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_DEBUG",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_DEBUG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_DEBUG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_DEBUG = 6\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_ARCHITECTURE",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_ARCHITECTURE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_ARCHITECTURE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_ARCHITECTURE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_ARCHITECTURE = 7\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_GLOBALPTR",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_GLOBALPTR",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_GLOBALPTR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_GLOBALPTR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_GLOBALPTR = 8\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_TLS",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_TLS",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_TLS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_TLS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_TLS = 9\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG = 10\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT = 11\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_IAT",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_IAT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_IAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_IAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_IAT = 12\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT = 13\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR",
+              "documentation": {
+                "identifier": "IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR = 14\n```\n\nIMAGE_DIRECTORY_ENTRY constants \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_RELOCS_STRIPPED",
+              "documentation": {
+                "identifier": "IMAGE_FILE_RELOCS_STRIPPED",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_RELOCS_STRIPPED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_RELOCS_STRIPPED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_RELOCS_STRIPPED = 0x0001\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_EXECUTABLE_IMAGE",
+              "documentation": {
+                "identifier": "IMAGE_FILE_EXECUTABLE_IMAGE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_EXECUTABLE_IMAGE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_EXECUTABLE_IMAGE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_EXECUTABLE_IMAGE = 0x0002\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_LINE_NUMS_STRIPPED",
+              "documentation": {
+                "identifier": "IMAGE_FILE_LINE_NUMS_STRIPPED",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_LINE_NUMS_STRIPPED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_LINE_NUMS_STRIPPED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_LINE_NUMS_STRIPPED = 0x0004\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_LOCAL_SYMS_STRIPPED",
+              "documentation": {
+                "identifier": "IMAGE_FILE_LOCAL_SYMS_STRIPPED",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_LOCAL_SYMS_STRIPPED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_LOCAL_SYMS_STRIPPED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_LOCAL_SYMS_STRIPPED = 0x0008\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_AGGRESIVE_WS_TRIM",
+              "documentation": {
+                "identifier": "IMAGE_FILE_AGGRESIVE_WS_TRIM",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_AGGRESIVE_WS_TRIM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_AGGRESIVE_WS_TRIM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_AGGRESIVE_WS_TRIM = 0x0010\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_LARGE_ADDRESS_AWARE",
+              "documentation": {
+                "identifier": "IMAGE_FILE_LARGE_ADDRESS_AWARE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_LARGE_ADDRESS_AWARE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_LARGE_ADDRESS_AWARE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_LARGE_ADDRESS_AWARE = 0x0020\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_BYTES_REVERSED_LO",
+              "documentation": {
+                "identifier": "IMAGE_FILE_BYTES_REVERSED_LO",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_BYTES_REVERSED_LO",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_BYTES_REVERSED_LO"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_BYTES_REVERSED_LO = 0x0080\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_32BIT_MACHINE",
+              "documentation": {
+                "identifier": "IMAGE_FILE_32BIT_MACHINE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_32BIT_MACHINE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_32BIT_MACHINE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_32BIT_MACHINE = 0x0100\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_DEBUG_STRIPPED",
+              "documentation": {
+                "identifier": "IMAGE_FILE_DEBUG_STRIPPED",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_DEBUG_STRIPPED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_DEBUG_STRIPPED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_DEBUG_STRIPPED = 0x0200\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP",
+              "documentation": {
+                "identifier": "IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_REMOVABLE_RUN_FROM_SWAP = 0x0400\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_NET_RUN_FROM_SWAP",
+              "documentation": {
+                "identifier": "IMAGE_FILE_NET_RUN_FROM_SWAP",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_NET_RUN_FROM_SWAP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_NET_RUN_FROM_SWAP"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_NET_RUN_FROM_SWAP = 0x0800\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_SYSTEM",
+              "documentation": {
+                "identifier": "IMAGE_FILE_SYSTEM",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_SYSTEM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_SYSTEM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_SYSTEM = 0x1000\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_DLL",
+              "documentation": {
+                "identifier": "IMAGE_FILE_DLL",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_DLL",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_DLL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_DLL = 0x2000\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_UP_SYSTEM_ONLY",
+              "documentation": {
+                "identifier": "IMAGE_FILE_UP_SYSTEM_ONLY",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_UP_SYSTEM_ONLY",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_UP_SYSTEM_ONLY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_UP_SYSTEM_ONLY = 0x4000\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_FILE_BYTES_REVERSED_HI",
+              "documentation": {
+                "identifier": "IMAGE_FILE_BYTES_REVERSED_HI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_FILE_BYTES_REVERSED_HI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_FILE_BYTES_REVERSED_HI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_FILE_BYTES_REVERSED_HI = 0x8000\n```\n\nValues of IMAGE_FILE_HEADER.Characteristics. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_UNKNOWN",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_UNKNOWN",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_UNKNOWN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_UNKNOWN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_UNKNOWN = 0\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_NATIVE",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_NATIVE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_NATIVE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_NATIVE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_NATIVE = 1\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_WINDOWS_GUI",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_WINDOWS_GUI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_WINDOWS_GUI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_WINDOWS_GUI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_WINDOWS_GUI = 2\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_WINDOWS_CUI",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_WINDOWS_CUI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_WINDOWS_CUI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_WINDOWS_CUI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_WINDOWS_CUI = 3\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_OS2_CUI",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_OS2_CUI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_OS2_CUI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_OS2_CUI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_OS2_CUI = 5\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_POSIX_CUI",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_POSIX_CUI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_POSIX_CUI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_POSIX_CUI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_POSIX_CUI = 7\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_NATIVE_WINDOWS",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_NATIVE_WINDOWS",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_NATIVE_WINDOWS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_NATIVE_WINDOWS"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_NATIVE_WINDOWS = 8\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_WINDOWS_CE_GUI",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_WINDOWS_CE_GUI",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_WINDOWS_CE_GUI",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_WINDOWS_CE_GUI"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_WINDOWS_CE_GUI = 9\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_EFI_APPLICATION",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_EFI_APPLICATION",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_EFI_APPLICATION",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_EFI_APPLICATION"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_EFI_APPLICATION = 10\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_EFI_BOOT_SERVICE_DRIVER = 11\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_EFI_RUNTIME_DRIVER = 12\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_EFI_ROM",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_EFI_ROM",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_EFI_ROM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_EFI_ROM"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_EFI_ROM = 13\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_XBOX",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_XBOX",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_XBOX",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_XBOX"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_XBOX = 14\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION",
+              "documentation": {
+                "identifier": "IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_SUBSYSTEM_WINDOWS_BOOT_APPLICATION = 16\n```\n\nOptionalHeader64.Subsystem and OptionalHeader32.Subsystem values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_HIGH_ENTROPY_VA = 0x0020\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE = 0x0040\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_FORCE_INTEGRITY = 0x0080\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_NX_COMPAT",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_NX_COMPAT",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_NX_COMPAT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_NX_COMPAT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_NX_COMPAT = 0x0100\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_NO_ISOLATION",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_NO_ISOLATION",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_NO_ISOLATION",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_NO_ISOLATION"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_NO_ISOLATION = 0x0200\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_NO_SEH",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_NO_SEH",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_NO_SEH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_NO_SEH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_NO_SEH = 0x0400\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_NO_BIND",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_NO_BIND",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_NO_BIND",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_NO_BIND"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_NO_BIND = 0x0800\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_APPCONTAINER",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_APPCONTAINER",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_APPCONTAINER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_APPCONTAINER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_APPCONTAINER = 0x1000\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_WDM_DRIVER",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_WDM_DRIVER",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_WDM_DRIVER",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_WDM_DRIVER"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_WDM_DRIVER = 0x2000\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_GUARD_CF",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_GUARD_CF",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_GUARD_CF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_GUARD_CF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_GUARD_CF = 0x4000\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE",
+              "documentation": {
+                "identifier": "IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE",
+                "newPage": false,
+                "searchKey": "pe.IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IMAGE_DLLCHARACTERISTICS_TERMINAL_SERVER_AWARE = 0x8000\n```\n\nOptionalHeader64.DllCharacteristics and OptionalHeader32.DllCharacteristics values. These can be combined together. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#COFFSymbolSize",
+              "documentation": {
+                "identifier": "COFFSymbolSize",
+                "newPage": false,
+                "searchKey": "pe.COFFSymbolSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const COFFSymbolSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst COFFSymbolSize = 18\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#linkNoCgo",
+              "documentation": {
+                "identifier": "linkNoCgo",
+                "newPage": false,
+                "searchKey": "pe.linkNoCgo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const linkNoCgo"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst linkNoCgo = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#linkCgoDefault",
+              "documentation": {
+                "identifier": "linkCgoDefault",
+                "newPage": false,
+                "searchKey": "pe.linkCgoDefault",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const linkCgoDefault"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst linkCgoDefault\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#linkCgoInternal",
+              "documentation": {
+                "identifier": "linkCgoInternal",
+                "newPage": false,
+                "searchKey": "pe.linkCgoInternal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const linkCgoInternal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst linkCgoInternal\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#linkCgoExternal",
+              "documentation": {
+                "identifier": "linkCgoExternal",
+                "newPage": false,
+                "searchKey": "pe.linkCgoExternal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const linkCgoExternal"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst linkCgoExternal\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#testprog",
+              "documentation": {
+                "identifier": "testprog",
+                "newPage": false,
+                "searchKey": "pe.testprog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testprog"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testprog = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/pe#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/pe#fileTests",
+              "documentation": {
+                "identifier": "fileTests",
+                "newPage": false,
+                "searchKey": "pe.fileTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fileTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fileTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/pe#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/pe#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "pe.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\tFileHeader\n\tOptionalHeader interface{} // of type *OptionalHeader32 or *OptionalHeader64\n\tSections       []*Section\n\tSymbols        []*Symbol    // COFF symbols with auxiliary symbol records removed\n\tCOFFSymbols    []COFFSymbol // all COFF symbols (including auxiliary symbol records)\n\tStringTable    StringTable\n\n\tcloser io.Closer\n}\n```\n\nA File represents an open PE file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#Open",
+                    "documentation": {
+                      "identifier": "Open",
+                      "newPage": false,
+                      "searchKey": "pe.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Open(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Open(name string) (*File, error)\n```\n\nOpen opens the named file using os.Open and prepares it for use as a PE binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#NewFile",
+                    "documentation": {
+                      "identifier": "NewFile",
+                      "newPage": false,
+                      "searchKey": "pe.NewFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFile(r io.ReaderAt) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFile(r io.ReaderAt) (*File, error)\n```\n\nNewFile creates a new File for accessing a PE binary in an underlying reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#File.Close",
+                    "documentation": {
+                      "identifier": "File.Close",
+                      "newPage": false,
+                      "searchKey": "pe.File.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Close() error\n```\n\nClose closes the File. If the File was created using NewFile directly instead of Open, Close has no effect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#File.Section",
+                    "documentation": {
+                      "identifier": "File.Section",
+                      "newPage": false,
+                      "searchKey": "pe.File.Section",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Section(name string) *Section"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Section(name string) *Section\n```\n\nSection returns the first section with the given name, or nil if no such section exists. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#File.DWARF",
+                    "documentation": {
+                      "identifier": "File.DWARF",
+                      "newPage": false,
+                      "searchKey": "pe.File.DWARF",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) DWARF() (*dwarf.Data, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) DWARF() (*dwarf.Data, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#File.ImportedSymbols",
+                    "documentation": {
+                      "identifier": "File.ImportedSymbols",
+                      "newPage": false,
+                      "searchKey": "pe.File.ImportedSymbols",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedSymbols() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedSymbols() ([]string, error)\n```\n\nImportedSymbols returns the names of all symbols referred to by the binary f that are expected to be satisfied by other libraries at dynamic load time. It does not return weak symbols. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#File.ImportedLibraries",
+                    "documentation": {
+                      "identifier": "File.ImportedLibraries",
+                      "newPage": false,
+                      "searchKey": "pe.File.ImportedLibraries",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedLibraries() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedLibraries() ([]string, error)\n```\n\nImportedLibraries returns the names of all libraries referred to by the binary f that are expected to be linked with the binary at dynamic link time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#zeroReaderAt",
+              "documentation": {
+                "identifier": "zeroReaderAt",
+                "newPage": false,
+                "searchKey": "pe.zeroReaderAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zeroReaderAt struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zeroReaderAt struct{}\n```\n\nzeroReaderAt is ReaderAt that reads 0s. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#zeroReaderAt.ReadAt",
+                    "documentation": {
+                      "identifier": "zeroReaderAt.ReadAt",
+                      "newPage": false,
+                      "searchKey": "pe.zeroReaderAt.ReadAt",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w zeroReaderAt) ReadAt(p []byte, off int64) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w zeroReaderAt) ReadAt(p []byte, off int64) (n int, err error)\n```\n\nReadAt writes len(p) 0s into p. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#ImportDirectory",
+              "documentation": {
+                "identifier": "ImportDirectory",
+                "newPage": false,
+                "searchKey": "pe.ImportDirectory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ImportDirectory struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ImportDirectory struct {\n\tOriginalFirstThunk uint32\n\tTimeDateStamp      uint32\n\tForwarderChain     uint32\n\tName               uint32\n\tFirstThunk         uint32\n\n\tdll string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#FormatError",
+              "documentation": {
+                "identifier": "FormatError",
+                "newPage": false,
+                "searchKey": "pe.FormatError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FormatError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FormatError struct {\n}\n```\n\nFormatError is unused. The type is retained for compatibility. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#FormatError.Error",
+                    "documentation": {
+                      "identifier": "FormatError.Error",
+                      "newPage": false,
+                      "searchKey": "pe.FormatError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *FormatError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *FormatError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#FileHeader",
+              "documentation": {
+                "identifier": "FileHeader",
+                "newPage": false,
+                "searchKey": "pe.FileHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileHeader struct {\n\tMachine              uint16\n\tNumberOfSections     uint16\n\tTimeDateStamp        uint32\n\tPointerToSymbolTable uint32\n\tNumberOfSymbols      uint32\n\tSizeOfOptionalHeader uint16\n\tCharacteristics      uint16\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#DataDirectory",
+              "documentation": {
+                "identifier": "DataDirectory",
+                "newPage": false,
+                "searchKey": "pe.DataDirectory",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DataDirectory struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DataDirectory struct {\n\tVirtualAddress uint32\n\tSize           uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#OptionalHeader32",
+              "documentation": {
+                "identifier": "OptionalHeader32",
+                "newPage": false,
+                "searchKey": "pe.OptionalHeader32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OptionalHeader32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OptionalHeader32 struct {\n\tMagic                       uint16\n\tMajorLinkerVersion          uint8\n\tMinorLinkerVersion          uint8\n\tSizeOfCode                  uint32\n\tSizeOfInitializedData       uint32\n\tSizeOfUninitializedData     uint32\n\tAddressOfEntryPoint         uint32\n\tBaseOfCode                  uint32\n\tBaseOfData                  uint32\n\tImageBase                   uint32\n\tSectionAlignment            uint32\n\tFileAlignment               uint32\n\tMajorOperatingSystemVersion uint16\n\tMinorOperatingSystemVersion uint16\n\tMajorImageVersion           uint16\n\tMinorImageVersion           uint16\n\tMajorSubsystemVersion       uint16\n\tMinorSubsystemVersion       uint16\n\tWin32VersionValue           uint32\n\tSizeOfImage                 uint32\n\tSizeOfHeaders               uint32\n\tCheckSum                    uint32\n\tSubsystem                   uint16\n\tDllCharacteristics          uint16\n\tSizeOfStackReserve          uint32\n\tSizeOfStackCommit           uint32\n\tSizeOfHeapReserve           uint32\n\tSizeOfHeapCommit            uint32\n\tLoaderFlags                 uint32\n\tNumberOfRvaAndSizes         uint32\n\tDataDirectory               [16]DataDirectory\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#OptionalHeader64",
+              "documentation": {
+                "identifier": "OptionalHeader64",
+                "newPage": false,
+                "searchKey": "pe.OptionalHeader64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type OptionalHeader64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype OptionalHeader64 struct {\n\tMagic                       uint16\n\tMajorLinkerVersion          uint8\n\tMinorLinkerVersion          uint8\n\tSizeOfCode                  uint32\n\tSizeOfInitializedData       uint32\n\tSizeOfUninitializedData     uint32\n\tAddressOfEntryPoint         uint32\n\tBaseOfCode                  uint32\n\tImageBase                   uint64\n\tSectionAlignment            uint32\n\tFileAlignment               uint32\n\tMajorOperatingSystemVersion uint16\n\tMinorOperatingSystemVersion uint16\n\tMajorImageVersion           uint16\n\tMinorImageVersion           uint16\n\tMajorSubsystemVersion       uint16\n\tMinorSubsystemVersion       uint16\n\tWin32VersionValue           uint32\n\tSizeOfImage                 uint32\n\tSizeOfHeaders               uint32\n\tCheckSum                    uint32\n\tSubsystem                   uint16\n\tDllCharacteristics          uint16\n\tSizeOfStackReserve          uint64\n\tSizeOfStackCommit           uint64\n\tSizeOfHeapReserve           uint64\n\tSizeOfHeapCommit            uint64\n\tLoaderFlags                 uint32\n\tNumberOfRvaAndSizes         uint32\n\tDataDirectory               [16]DataDirectory\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#SectionHeader32",
+              "documentation": {
+                "identifier": "SectionHeader32",
+                "newPage": false,
+                "searchKey": "pe.SectionHeader32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader32 struct {\n\tName                 [8]uint8\n\tVirtualSize          uint32\n\tVirtualAddress       uint32\n\tSizeOfRawData        uint32\n\tPointerToRawData     uint32\n\tPointerToRelocations uint32\n\tPointerToLineNumbers uint32\n\tNumberOfRelocations  uint16\n\tNumberOfLineNumbers  uint16\n\tCharacteristics      uint32\n}\n```\n\nSectionHeader32 represents real PE COFF section header. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#SectionHeader32.fullName",
+                    "documentation": {
+                      "identifier": "SectionHeader32.fullName",
+                      "newPage": false,
+                      "searchKey": "pe.SectionHeader32.fullName",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sh *SectionHeader32) fullName(st StringTable) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sh *SectionHeader32) fullName(st StringTable) (string, error)\n```\n\nfullName finds real name of section sh. Normally name is stored in sh.Name, but if it is longer then 8 characters, it is stored in COFF string table st instead. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#Reloc",
+              "documentation": {
+                "identifier": "Reloc",
+                "newPage": false,
+                "searchKey": "pe.Reloc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reloc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reloc struct {\n\tVirtualAddress   uint32\n\tSymbolTableIndex uint32\n\tType             uint16\n}\n```\n\nReloc represents a PE COFF relocation. Each section contains its own relocation list. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#SectionHeader",
+              "documentation": {
+                "identifier": "SectionHeader",
+                "newPage": false,
+                "searchKey": "pe.SectionHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader struct {\n\tName                 string\n\tVirtualSize          uint32\n\tVirtualAddress       uint32\n\tSize                 uint32\n\tOffset               uint32\n\tPointerToRelocations uint32\n\tPointerToLineNumbers uint32\n\tNumberOfRelocations  uint16\n\tNumberOfLineNumbers  uint16\n\tCharacteristics      uint32\n}\n```\n\nSectionHeader is similar to SectionHeader32 with Name field replaced by Go string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#Section",
+              "documentation": {
+                "identifier": "Section",
+                "newPage": false,
+                "searchKey": "pe.Section",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Section struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Section struct {\n\tSectionHeader\n\tRelocs []Reloc\n\n\t// Embed ReaderAt for ReadAt method.\n\t// Do not embed SectionReader directly\n\t// to avoid having Read and Seek.\n\t// If a client wants Read and Seek it must use\n\t// Open() to avoid fighting over the seek offset\n\t// with other clients.\n\tio.ReaderAt\n\tsr *io.SectionReader\n}\n```\n\nSection provides access to PE COFF section. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#Section.Data",
+                    "documentation": {
+                      "identifier": "Section.Data",
+                      "newPage": false,
+                      "searchKey": "pe.Section.Data",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Section) Data() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Section) Data() ([]byte, error)\n```\n\nData reads and returns the contents of the PE section s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#Section.Open",
+                    "documentation": {
+                      "identifier": "Section.Open",
+                      "newPage": false,
+                      "searchKey": "pe.Section.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Section) Open() io.ReadSeeker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Section) Open() io.ReadSeeker\n```\n\nOpen returns a new ReadSeeker reading the PE section s. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#StringTable",
+              "documentation": {
+                "identifier": "StringTable",
+                "newPage": false,
+                "searchKey": "pe.StringTable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringTable []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringTable []byte\n```\n\nStringTable is a COFF string table. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#readStringTable",
+                    "documentation": {
+                      "identifier": "readStringTable",
+                      "newPage": false,
+                      "searchKey": "pe.readStringTable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func readStringTable(fh *FileHeader, r io.ReadSeeker) (StringTable, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc readStringTable(fh *FileHeader, r io.ReadSeeker) (StringTable, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/pe#StringTable.String",
+                    "documentation": {
+                      "identifier": "StringTable.String",
+                      "newPage": false,
+                      "searchKey": "pe.StringTable.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (st StringTable) String(start uint32) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (st StringTable) String(start uint32) (string, error)\n```\n\nString extracts string from COFF string table st at offset start. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#COFFSymbol",
+              "documentation": {
+                "identifier": "COFFSymbol",
+                "newPage": false,
+                "searchKey": "pe.COFFSymbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type COFFSymbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype COFFSymbol struct {\n\tName               [8]uint8\n\tValue              uint32\n\tSectionNumber      int16\n\tType               uint16\n\tStorageClass       uint8\n\tNumberOfAuxSymbols uint8\n}\n```\n\nCOFFSymbol represents single COFF symbol table record. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/pe#COFFSymbol.FullName",
+                    "documentation": {
+                      "identifier": "COFFSymbol.FullName",
+                      "newPage": false,
+                      "searchKey": "pe.COFFSymbol.FullName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sym *COFFSymbol) FullName(st StringTable) (string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sym *COFFSymbol) FullName(st StringTable) (string, error)\n```\n\nFullName finds real name of symbol sym. Normally name is stored in sym.Name, but if it is longer then 8 characters, it is stored in COFF string table st instead. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "pe.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol struct {\n\tName          string\n\tValue         uint32\n\tSectionNumber int16\n\tType          uint16\n\tStorageClass  uint8\n}\n```\n\nSymbol is similar to COFFSymbol with Name field replaced by Go string. Symbol also does not have NumberOfAuxSymbols. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#fileTest",
+              "documentation": {
+                "identifier": "fileTest",
+                "newPage": false,
+                "searchKey": "pe.fileTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileTest struct {\n\tfile           string\n\thdr            FileHeader\n\topthdr         interface{}\n\tsections       []*SectionHeader\n\tsymbols        []*Symbol\n\thasNoDwarfInfo bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/pe#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/pe#getString",
+              "documentation": {
+                "identifier": "getString",
+                "newPage": false,
+                "searchKey": "pe.getString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getString(section []byte, start int) (string, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getString(section []byte, start int) (string, bool)\n```\n\ngetString extracts a string from symbol string table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#readOptionalHeader",
+              "documentation": {
+                "identifier": "readOptionalHeader",
+                "newPage": false,
+                "searchKey": "pe.readOptionalHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readOptionalHeader(r io.ReadSeeker, sz uint16) (interface{}, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readOptionalHeader(r io.ReadSeeker, sz uint16) (interface{}, error)\n```\n\nreadOptionalHeader accepts a io.ReadSeeker pointing to optional header in the PE file and its size as seen in the file header. It parses the given size of bytes and returns optional header. It infers whether the bytes being parsed refer to 32 bit or 64 bit version of optional header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#readDataDirectories",
+              "documentation": {
+                "identifier": "readDataDirectories",
+                "newPage": false,
+                "searchKey": "pe.readDataDirectories",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readDataDirectories(r io.ReadSeeker, sz uint16, n uint32) ([]DataDirectory, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readDataDirectories(r io.ReadSeeker, sz uint16, n uint32) ([]DataDirectory, error)\n```\n\nreadDataDirectories accepts a io.ReadSeeker pointing to data directories in the PE file, its size and number of data directories as seen in optional header. It parses the given size of bytes and returns given number of data directories. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#readRelocs",
+              "documentation": {
+                "identifier": "readRelocs",
+                "newPage": false,
+                "searchKey": "pe.readRelocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readRelocs(sh *SectionHeader, r io.ReadSeeker) ([]Reloc, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readRelocs(sh *SectionHeader, r io.ReadSeeker) ([]Reloc, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#cstring",
+              "documentation": {
+                "identifier": "cstring",
+                "newPage": false,
+                "searchKey": "pe.cstring",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cstring(b []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cstring(b []byte) string\n```\n\ncstring converts ASCII byte sequence b to string. It stops once it finds 0 or reaches end of b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#readCOFFSymbols",
+              "documentation": {
+                "identifier": "readCOFFSymbols",
+                "newPage": false,
+                "searchKey": "pe.readCOFFSymbols",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readCOFFSymbols(fh *FileHeader, r io.ReadSeeker) ([]COFFSymbol, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readCOFFSymbols(fh *FileHeader, r io.ReadSeeker) ([]COFFSymbol, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#isSymNameOffset",
+              "documentation": {
+                "identifier": "isSymNameOffset",
+                "newPage": false,
+                "searchKey": "pe.isSymNameOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSymNameOffset(name [8]byte) (bool, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSymNameOffset(name [8]byte) (bool, uint32)\n```\n\nisSymNameOffset checks symbol name if it is encoded as offset into string table. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#removeAuxSymbols",
+              "documentation": {
+                "identifier": "removeAuxSymbols",
+                "newPage": false,
+                "searchKey": "pe.removeAuxSymbols",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func removeAuxSymbols(allsyms []COFFSymbol, st StringTable) ([]*Symbol, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc removeAuxSymbols(allsyms []COFFSymbol, st StringTable) ([]*Symbol, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#testCgoDWARF",
+              "documentation": {
+                "identifier": "testCgoDWARF",
+                "newPage": false,
+                "searchKey": "pe.testCgoDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testCgoDWARF(t *testing.T, linktype int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testCgoDWARF(t *testing.T, linktype int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestDefaultLinkerDWARF",
+              "documentation": {
+                "identifier": "TestDefaultLinkerDWARF",
+                "newPage": false,
+                "searchKey": "pe.TestDefaultLinkerDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefaultLinkerDWARF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefaultLinkerDWARF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestInternalLinkerDWARF",
+              "documentation": {
+                "identifier": "TestInternalLinkerDWARF",
+                "newPage": false,
+                "searchKey": "pe.TestInternalLinkerDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInternalLinkerDWARF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInternalLinkerDWARF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestExternalLinkerDWARF",
+              "documentation": {
+                "identifier": "TestExternalLinkerDWARF",
+                "newPage": false,
+                "searchKey": "pe.TestExternalLinkerDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExternalLinkerDWARF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExternalLinkerDWARF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#isOptHdrEq",
+              "documentation": {
+                "identifier": "isOptHdrEq",
+                "newPage": false,
+                "searchKey": "pe.isOptHdrEq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isOptHdrEq(a, b interface{}) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isOptHdrEq(a, b interface{}) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestOpen",
+              "documentation": {
+                "identifier": "TestOpen",
+                "newPage": false,
+                "searchKey": "pe.TestOpen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestOpenFailure",
+              "documentation": {
+                "identifier": "TestOpenFailure",
+                "newPage": false,
+                "searchKey": "pe.TestOpenFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#getImageBase",
+              "documentation": {
+                "identifier": "getImageBase",
+                "newPage": false,
+                "searchKey": "pe.getImageBase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getImageBase(f *File) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getImageBase(f *File) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#testDWARF",
+              "documentation": {
+                "identifier": "testDWARF",
+                "newPage": false,
+                "searchKey": "pe.testDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDWARF(t *testing.T, linktype int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDWARF(t *testing.T, linktype int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestBSSHasZeros",
+              "documentation": {
+                "identifier": "TestBSSHasZeros",
+                "newPage": false,
+                "searchKey": "pe.TestBSSHasZeros",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBSSHasZeros(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBSSHasZeros(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestDWARF",
+              "documentation": {
+                "identifier": "TestDWARF",
+                "newPage": false,
+                "searchKey": "pe.TestDWARF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDWARF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDWARF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestBuildingWindowsGUI",
+              "documentation": {
+                "identifier": "TestBuildingWindowsGUI",
+                "newPage": false,
+                "searchKey": "pe.TestBuildingWindowsGUI",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuildingWindowsGUI(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuildingWindowsGUI(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestImportTableInUnknownSection",
+              "documentation": {
+                "identifier": "TestImportTableInUnknownSection",
+                "newPage": false,
+                "searchKey": "pe.TestImportTableInUnknownSection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportTableInUnknownSection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportTableInUnknownSection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestInvalidOptionalHeaderMagic",
+              "documentation": {
+                "identifier": "TestInvalidOptionalHeaderMagic",
+                "newPage": false,
+                "searchKey": "pe.TestInvalidOptionalHeaderMagic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidOptionalHeaderMagic(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidOptionalHeaderMagic(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestImportedSymbolsNoPanicMissingOptionalHeader",
+              "documentation": {
+                "identifier": "TestImportedSymbolsNoPanicMissingOptionalHeader",
+                "newPage": false,
+                "searchKey": "pe.TestImportedSymbolsNoPanicMissingOptionalHeader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportedSymbolsNoPanicMissingOptionalHeader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportedSymbolsNoPanicMissingOptionalHeader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/pe#TestImportedSymbolsNoPanicWithSliceOutOfBound",
+              "documentation": {
+                "identifier": "TestImportedSymbolsNoPanicWithSliceOutOfBound",
+                "newPage": false,
+                "searchKey": "pe.TestImportedSymbolsNoPanicWithSliceOutOfBound",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestImportedSymbolsNoPanicWithSliceOutOfBound(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestImportedSymbolsNoPanicWithSliceOutOfBound(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

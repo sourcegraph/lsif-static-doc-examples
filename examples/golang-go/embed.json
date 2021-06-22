@@ -1,0 +1,685 @@
+{
+  "pathID": "/embed",
+  "documentation": {
+    "identifier": "embed",
+    "newPage": true,
+    "searchKey": "embed",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package embed"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package embed provides access to files embedded in the running Go program. \n\nGo source files that import \"embed\" can use the //go:embed directive to initialize a variable of type string, []byte, or FS with the contents of files read from the package directory or subdirectories at compile time. \n\nFor example, here are three ways to embed a file named hello.txt and then print its contents at run time. \n\nEmbedding one file into a string: \n\n```\nimport _ \"embed\"\n\n//go:embed hello.txt\nvar s string\nprint(s)\n\n```\nEmbedding one file into a slice of bytes: \n\n```\nimport _ \"embed\"\n\n//go:embed hello.txt\nvar b []byte\nprint(string(b))\n\n```\nEmbedded one or more files into a file system: \n\n```\nimport \"embed\"\n\n//go:embed hello.txt\nvar f embed.FS\ndata, _ := f.ReadFile(\"hello.txt\")\nprint(string(data))\n\n```\n### hdr-DirectivesDirectives\nA //go:embed directive above a variable declaration specifies which files to embed, using one or more path.Match patterns. \n\nThe directive must immediately precede a line containing the declaration of a single variable. Only blank lines and ‘//’ line comments are permitted between the directive and the declaration. \n\nThe type of the variable must be a string type, or a slice of a byte type, or FS (or an alias of FS). \n\nFor example: \n\n```\npackage server\n\nimport \"embed\"\n\n// content holds our static web server content.\n//go:embed image/* template/*\n//go:embed html/index.html\nvar content embed.FS\n\n```\nThe Go build system will recognize the directives and arrange for the declared variable (in the example above, content) to be populated with the matching files from the file system. \n\nThe //go:embed directive accepts multiple space-separated patterns for brevity, but it can also be repeated, to avoid very long lines when there are many patterns. The patterns are interpreted relative to the package directory containing the source file. The path separator is a forward slash, even on Windows systems. Patterns may not contain ‘.’ or ‘..’ or empty path elements, nor may they begin or end with a slash. To match everything in the current directory, use ‘*’ instead of ‘.’. To allow for naming files with spaces in their names, patterns can be written as Go double-quoted or back-quoted string literals. \n\nIf a pattern names a directory, all files in the subtree rooted at that directory are embedded (recursively), except that files with names beginning with ‘.’ or ‘_’ are excluded. So the variable in the above example is almost equivalent to: \n\n```\n// content is our static web server content.\n//go:embed image template html/index.html\nvar content embed.FS\n\n```\nThe difference is that ‘image/*’ embeds ‘image/.tempfile’ while ‘image’ does not. \n\nThe //go:embed directive can be used with both exported and unexported variables, depending on whether the package wants to make the data available to other packages. It can only be used with global variables at package scope, not with local variables. \n\nPatterns must not match files outside the package's module, such as ‘.git/*’ or symbolic links. Matches for empty directories are ignored. After that, each pattern in a //go:embed line must match at least one file or non-empty directory. \n\nIf any patterns are invalid or have invalid matches, the build will fail. \n\n### hdr-Strings_and_BytesStrings and Bytes\nThe //go:embed line for a variable of type string or []byte can have only a single pattern, and that pattern can match only a single file. The string or []byte is initialized with the contents of that file. \n\nThe //go:embed directive requires importing \"embed\", even when using a string or []byte. In source files that don't refer to embed.FS, use a blank import (import _ \"embed\"). \n\n### hdr-File_SystemsFile Systems\nFor embedding a single file, a variable of type string or []byte is often best. The FS type enables embedding a tree of files, such as a directory of static web server content, as in the example above. \n\nFS implements the io/fs package's FS interface, so it can be used with any package that understands file systems, including net/http, text/template, and html/template. \n\nFor example, given the content variable in the example above, we can write: \n\n```\nhttp.Handle(\"/static/\", http.StripPrefix(\"/static/\", http.FileServer(http.FS(content))))\n\ntemplate.ParseFS(content, \"*.tmpl\")\n\n```\n### hdr-ToolsTools\nTo support tools that analyze Go packages, the patterns found in //go:embed lines are available in “go list” output. See the EmbedPatterns, TestEmbedPatterns, and XTestEmbedPatterns fields in the “go help list” output. \n\n"
+  },
+  "children": [
+    {
+      "pathID": "/embed/internal"
+    },
+    {
+      "node": {
+        "pathID": "/embed#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/embed#dotFile",
+              "documentation": {
+                "identifier": "dotFile",
+                "newPage": false,
+                "searchKey": "embed.dotFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dotFile"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dotFile = &file{name: \"./\"}\n```\n\ndotFile is a file for the root directory, which is omitted from the files list in a FS. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/embed#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/embed#FS",
+              "documentation": {
+                "identifier": "FS",
+                "newPage": false,
+                "searchKey": "embed.FS",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FS struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FS struct {\n\t// The compiler knows the layout of this struct.\n\t// See cmd/compile/internal/staticdata's WriteEmbed.\n\t//\n\t// The files list is sorted by name but not by simple string comparison.\n\t// Instead, each file's name takes the form \"dir/elem\" or \"dir/elem/\".\n\t// The optional trailing slash indicates that the file is itself a directory.\n\t// The files list is sorted first by dir (if dir is missing, it is taken to be \".\")\n\t// and then by base, so this list of files:\n\t//\n\t//\tp\n\t//\tq/\n\t//\tq/r\n\t//\tq/s/\n\t//\tq/s/t\n\t//\tq/s/u\n\t//\tq/v\n\t//\tw\n\t//\n\t// is actually sorted as:\n\t//\n\t//\tp       # dir=.    elem=p\n\t//\tq/      # dir=.    elem=q\n\t//\tw/      # dir=.    elem=w\n\t//\tq/r     # dir=q    elem=r\n\t//\tq/s/    # dir=q    elem=s\n\t//\tq/v     # dir=q    elem=v\n\t//\tq/s/t   # dir=q/s  elem=t\n\t//\tq/s/u   # dir=q/s  elem=u\n\t//\n\t// This order brings directory contents together in contiguous sections\n\t// of the list, allowing a directory read to use binary search to find\n\t// the relevant sequence of entries.\n\tfiles *[]file\n}\n```\n\nAn FS is a read-only collection of files, usually initialized with a //go:embed directive. When declared without a //go:embed directive, an FS is an empty file system. \n\nAn FS is a read-only value, so it is safe to use from multiple goroutines simultaneously and also safe to assign values of type FS to each other. \n\nFS implements fs.FS, so it can be used with any package that understands file system interfaces, including net/http, text/template, and html/template. \n\nSee the package documentation for more details about initializing an FS. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/embed#FS.lookup",
+                    "documentation": {
+                      "identifier": "FS.lookup",
+                      "newPage": false,
+                      "searchKey": "embed.FS.lookup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) lookup(name string) *file"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) lookup(name string) *file\n```\n\nlookup returns the named file, or nil if it is not present. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.readDir",
+                    "documentation": {
+                      "identifier": "FS.readDir",
+                      "newPage": false,
+                      "searchKey": "embed.FS.readDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) readDir(dir string) []file"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) readDir(dir string) []file\n```\n\nreadDir returns the list of files corresponding to the directory dir. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.Open",
+                    "documentation": {
+                      "identifier": "FS.Open",
+                      "newPage": false,
+                      "searchKey": "embed.FS.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) Open(name string) (fs.File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) Open(name string) (fs.File, error)\n```\n\nOpen opens the named file for reading and returns it as an fs.File. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.ReadDir",
+                    "documentation": {
+                      "identifier": "FS.ReadDir",
+                      "newPage": false,
+                      "searchKey": "embed.FS.ReadDir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) ReadDir(name string) ([]fs.DirEntry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) ReadDir(name string) ([]fs.DirEntry, error)\n```\n\nReadDir reads and returns the entire named directory. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#FS.ReadFile",
+                    "documentation": {
+                      "identifier": "FS.ReadFile",
+                      "newPage": false,
+                      "searchKey": "embed.FS.ReadFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f FS) ReadFile(name string) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f FS) ReadFile(name string) ([]byte, error)\n```\n\nReadFile reads and returns the content of the named file. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#file",
+              "documentation": {
+                "identifier": "file",
+                "newPage": false,
+                "searchKey": "embed.file",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type file struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype file struct {\n\t// The compiler knows the layout of this struct.\n\t// See cmd/compile/internal/staticdata's WriteEmbed.\n\tname string\n\tdata string\n\thash [16]byte // truncated SHA256 hash\n}\n```\n\nA file is a single file in the FS. It implements fs.FileInfo and fs.DirEntry. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/embed#file.Name",
+                    "documentation": {
+                      "identifier": "file.Name",
+                      "newPage": false,
+                      "searchKey": "embed.file.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Size",
+                    "documentation": {
+                      "identifier": "file.Size",
+                      "newPage": false,
+                      "searchKey": "embed.file.Size",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Size() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Size() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.ModTime",
+                    "documentation": {
+                      "identifier": "file.ModTime",
+                      "newPage": false,
+                      "searchKey": "embed.file.ModTime",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) ModTime() time.Time"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) ModTime() time.Time\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.IsDir",
+                    "documentation": {
+                      "identifier": "file.IsDir",
+                      "newPage": false,
+                      "searchKey": "embed.file.IsDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) IsDir() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) IsDir() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Sys",
+                    "documentation": {
+                      "identifier": "file.Sys",
+                      "newPage": false,
+                      "searchKey": "embed.file.Sys",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Sys() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Sys() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Type",
+                    "documentation": {
+                      "identifier": "file.Type",
+                      "newPage": false,
+                      "searchKey": "embed.file.Type",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Type() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Type() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Info",
+                    "documentation": {
+                      "identifier": "file.Info",
+                      "newPage": false,
+                      "searchKey": "embed.file.Info",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Info() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Info() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#file.Mode",
+                    "documentation": {
+                      "identifier": "file.Mode",
+                      "newPage": false,
+                      "searchKey": "embed.file.Mode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *file) Mode() fs.FileMode"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *file) Mode() fs.FileMode\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#openFile",
+              "documentation": {
+                "identifier": "openFile",
+                "newPage": false,
+                "searchKey": "embed.openFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openFile struct {\n\tf      *file // the file itself\n\toffset int64 // current read offset\n}\n```\n\nAn openFile is a regular file open for reading. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Close",
+                    "documentation": {
+                      "identifier": "openFile.Close",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Stat",
+                    "documentation": {
+                      "identifier": "openFile.Stat",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Stat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Stat() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Read",
+                    "documentation": {
+                      "identifier": "openFile.Read",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openFile.Seek",
+                    "documentation": {
+                      "identifier": "openFile.Seek",
+                      "newPage": false,
+                      "searchKey": "embed.openFile.Seek",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *openFile) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *openFile) Seek(offset int64, whence int) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#openDir",
+              "documentation": {
+                "identifier": "openDir",
+                "newPage": false,
+                "searchKey": "embed.openDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openDir struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openDir struct {\n\tf      *file  // the directory file itself\n\tfiles  []file // the directory contents\n\toffset int    // the read offset, an index into the files slice\n}\n```\n\nAn openDir is a directory open for reading. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/embed#openDir.Close",
+                    "documentation": {
+                      "identifier": "openDir.Close",
+                      "newPage": false,
+                      "searchKey": "embed.openDir.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *openDir) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *openDir) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openDir.Stat",
+                    "documentation": {
+                      "identifier": "openDir.Stat",
+                      "newPage": false,
+                      "searchKey": "embed.openDir.Stat",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *openDir) Stat() (fs.FileInfo, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *openDir) Stat() (fs.FileInfo, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openDir.Read",
+                    "documentation": {
+                      "identifier": "openDir.Read",
+                      "newPage": false,
+                      "searchKey": "embed.openDir.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *openDir) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *openDir) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/embed#openDir.ReadDir",
+                    "documentation": {
+                      "identifier": "openDir.ReadDir",
+                      "newPage": false,
+                      "searchKey": "embed.openDir.ReadDir",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *openDir) ReadDir(count int) ([]fs.DirEntry, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/embed#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/embed#split",
+              "documentation": {
+                "identifier": "split",
+                "newPage": false,
+                "searchKey": "embed.split",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func split(name string) (dir, elem string, isDir bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc split(name string) (dir, elem string, isDir bool)\n```\n\nsplit splits the name into dir and elem as described in the comment in the FS struct above. isDir reports whether the final trailing slash was present, indicating that name is a directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#trimSlash",
+              "documentation": {
+                "identifier": "trimSlash",
+                "newPage": false,
+                "searchKey": "embed.trimSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trimSlash(name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trimSlash(name string) string\n```\n\ntrimSlash trims a trailing slash from name, if present, returning the possibly shortened name. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/embed#sortSearch",
+              "documentation": {
+                "identifier": "sortSearch",
+                "newPage": false,
+                "searchKey": "embed.sortSearch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sortSearch(n int, f func(int) bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sortSearch(n int, f func(int) bool) int\n```\n\nsortSearch is like sort.Search, avoiding an import. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2155 @@
+{
+  "pathID": "/net/http/fcgi",
+  "documentation": {
+    "identifier": "fcgi",
+    "newPage": true,
+    "searchKey": "net/http/fcgi",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package fcgi"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package fcgi implements the FastCGI protocol. \n\nSee [https://fast-cgi.github.io/](https://fast-cgi.github.io/) for an unofficial mirror of the original documentation. \n\nCurrently only the responder role is supported. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/http/fcgi#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeBeginRequest",
+              "documentation": {
+                "identifier": "typeBeginRequest",
+                "newPage": false,
+                "searchKey": "fcgi.typeBeginRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeBeginRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeBeginRequest recType = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeAbortRequest",
+              "documentation": {
+                "identifier": "typeAbortRequest",
+                "newPage": false,
+                "searchKey": "fcgi.typeAbortRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeAbortRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeAbortRequest recType = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeEndRequest",
+              "documentation": {
+                "identifier": "typeEndRequest",
+                "newPage": false,
+                "searchKey": "fcgi.typeEndRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeEndRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeEndRequest recType = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeParams",
+              "documentation": {
+                "identifier": "typeParams",
+                "newPage": false,
+                "searchKey": "fcgi.typeParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeParams"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeParams recType = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeStdin",
+              "documentation": {
+                "identifier": "typeStdin",
+                "newPage": false,
+                "searchKey": "fcgi.typeStdin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeStdin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeStdin recType = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeStdout",
+              "documentation": {
+                "identifier": "typeStdout",
+                "newPage": false,
+                "searchKey": "fcgi.typeStdout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeStdout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeStdout recType = 6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeStderr",
+              "documentation": {
+                "identifier": "typeStderr",
+                "newPage": false,
+                "searchKey": "fcgi.typeStderr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeStderr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeStderr recType = 7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeData",
+              "documentation": {
+                "identifier": "typeData",
+                "newPage": false,
+                "searchKey": "fcgi.typeData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeData recType = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeGetValues",
+              "documentation": {
+                "identifier": "typeGetValues",
+                "newPage": false,
+                "searchKey": "fcgi.typeGetValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeGetValues"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeGetValues recType = 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeGetValuesResult",
+              "documentation": {
+                "identifier": "typeGetValuesResult",
+                "newPage": false,
+                "searchKey": "fcgi.typeGetValuesResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeGetValuesResult"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeGetValuesResult recType = 10\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#typeUnknownType",
+              "documentation": {
+                "identifier": "typeUnknownType",
+                "newPage": false,
+                "searchKey": "fcgi.typeUnknownType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const typeUnknownType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst typeUnknownType recType = 11\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#flagKeepConn",
+              "documentation": {
+                "identifier": "flagKeepConn",
+                "newPage": false,
+                "searchKey": "fcgi.flagKeepConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const flagKeepConn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst flagKeepConn = 1\n```\n\nkeep the connection between web-server and responder open after request \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#maxWrite",
+              "documentation": {
+                "identifier": "maxWrite",
+                "newPage": false,
+                "searchKey": "fcgi.maxWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxWrite = 65535 // maximum record body\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#maxPad",
+              "documentation": {
+                "identifier": "maxPad",
+                "newPage": false,
+                "searchKey": "fcgi.maxPad",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxPad"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxPad = 255\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#roleResponder",
+              "documentation": {
+                "identifier": "roleResponder",
+                "newPage": false,
+                "searchKey": "fcgi.roleResponder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const roleResponder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst roleResponder = iota + 1 // only Responders are implemented.\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#roleAuthorizer",
+              "documentation": {
+                "identifier": "roleAuthorizer",
+                "newPage": false,
+                "searchKey": "fcgi.roleAuthorizer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const roleAuthorizer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst roleAuthorizer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#roleFilter",
+              "documentation": {
+                "identifier": "roleFilter",
+                "newPage": false,
+                "searchKey": "fcgi.roleFilter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const roleFilter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst roleFilter\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#statusRequestComplete",
+              "documentation": {
+                "identifier": "statusRequestComplete",
+                "newPage": false,
+                "searchKey": "fcgi.statusRequestComplete",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const statusRequestComplete"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst statusRequestComplete = iota\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#statusCantMultiplex",
+              "documentation": {
+                "identifier": "statusCantMultiplex",
+                "newPage": false,
+                "searchKey": "fcgi.statusCantMultiplex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const statusCantMultiplex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst statusCantMultiplex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#statusOverloaded",
+              "documentation": {
+                "identifier": "statusOverloaded",
+                "newPage": false,
+                "searchKey": "fcgi.statusOverloaded",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const statusOverloaded"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst statusOverloaded\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#statusUnknownRole",
+              "documentation": {
+                "identifier": "statusUnknownRole",
+                "newPage": false,
+                "searchKey": "fcgi.statusUnknownRole",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const statusUnknownRole"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst statusUnknownRole\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/fcgi#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#errCloseConn",
+              "documentation": {
+                "identifier": "errCloseConn",
+                "newPage": false,
+                "searchKey": "fcgi.errCloseConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errCloseConn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errCloseConn = errors.New(\"fcgi: connection should be closed\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#emptyBody",
+              "documentation": {
+                "identifier": "emptyBody",
+                "newPage": false,
+                "searchKey": "fcgi.emptyBody",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var emptyBody"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar emptyBody = io.NopCloser(strings.NewReader(\"\"))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#ErrRequestAborted",
+              "documentation": {
+                "identifier": "ErrRequestAborted",
+                "newPage": false,
+                "searchKey": "fcgi.ErrRequestAborted",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrRequestAborted"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrRequestAborted = errors.New(\"fcgi: request aborted by web server\")\n```\n\nErrRequestAborted is returned by Read when a handler attempts to read the body of a request that has been aborted by the web server. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#ErrConnClosed",
+              "documentation": {
+                "identifier": "ErrConnClosed",
+                "newPage": false,
+                "searchKey": "fcgi.ErrConnClosed",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrConnClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrConnClosed = errors.New(\"fcgi: connection to web server closed\")\n```\n\nErrConnClosed is returned by Read when a handler attempts to read the body of a request after the connection to the web server has been closed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#pad",
+              "documentation": {
+                "identifier": "pad",
+                "newPage": false,
+                "searchKey": "fcgi.pad",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pad"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pad [maxPad]byte\n```\n\nfor padding so we don't have to allocate all the time not synchronized because we don't care what the contents are \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#sizeTests",
+              "documentation": {
+                "identifier": "sizeTests",
+                "newPage": false,
+                "searchKey": "fcgi.sizeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sizeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sizeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#streamTests",
+              "documentation": {
+                "identifier": "streamTests",
+                "newPage": false,
+                "searchKey": "fcgi.streamTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var streamTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar streamTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#streamBeginTypeStdin",
+              "documentation": {
+                "identifier": "streamBeginTypeStdin",
+                "newPage": false,
+                "searchKey": "fcgi.streamBeginTypeStdin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var streamBeginTypeStdin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar streamBeginTypeStdin = ...\n```\n\na series of FastCGI records that start a request and begin sending the request body \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#cleanUpTests",
+              "documentation": {
+                "identifier": "cleanUpTests",
+                "newPage": false,
+                "searchKey": "fcgi.cleanUpTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cleanUpTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cleanUpTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#streamFullRequestStdin",
+              "documentation": {
+                "identifier": "streamFullRequestStdin",
+                "newPage": false,
+                "searchKey": "fcgi.streamFullRequestStdin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var streamFullRequestStdin"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar streamFullRequestStdin = ...\n```\n\na series of FastCGI records that start and end a request \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#envVarTests",
+              "documentation": {
+                "identifier": "envVarTests",
+                "newPage": false,
+                "searchKey": "fcgi.envVarTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var envVarTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar envVarTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/fcgi#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#request",
+              "documentation": {
+                "identifier": "request",
+                "newPage": false,
+                "searchKey": "fcgi.request",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type request struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype request struct {\n\tpw        *io.PipeWriter\n\treqId     uint16\n\tparams    map[string]string\n\tbuf       [1024]byte\n\trawParams []byte\n\tkeepConn  bool\n}\n```\n\nrequest holds the state for an in-progress request. As soon as it's complete, it's converted to an http.Request. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#newRequest",
+                    "documentation": {
+                      "identifier": "newRequest",
+                      "newPage": false,
+                      "searchKey": "fcgi.newRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newRequest(reqId uint16, flags uint8) *request"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newRequest(reqId uint16, flags uint8) *request\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#request.parseParams",
+                    "documentation": {
+                      "identifier": "request.parseParams",
+                      "newPage": false,
+                      "searchKey": "fcgi.request.parseParams",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *request) parseParams()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *request) parseParams()\n```\n\nparseParams reads an encoded []byte into Params. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#envVarsContextKey",
+              "documentation": {
+                "identifier": "envVarsContextKey",
+                "newPage": false,
+                "searchKey": "fcgi.envVarsContextKey",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type envVarsContextKey struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype envVarsContextKey struct{}\n```\n\nenvVarsContextKey uniquely identifies a mapping of CGI environment variables to their values in a request context \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#response",
+              "documentation": {
+                "identifier": "response",
+                "newPage": false,
+                "searchKey": "fcgi.response",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype response struct {\n\treq            *request\n\theader         http.Header\n\tcode           int\n\twroteHeader    bool\n\twroteCGIHeader bool\n\tw              *bufWriter\n}\n```\n\nresponse implements http.ResponseWriter. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#newResponse",
+                    "documentation": {
+                      "identifier": "newResponse",
+                      "newPage": false,
+                      "searchKey": "fcgi.newResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newResponse(c *child, req *request) *response"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newResponse(c *child, req *request) *response\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.Header",
+                    "documentation": {
+                      "identifier": "response.Header",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.Header",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Header() http.Header"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Header() http.Header\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.Write",
+                    "documentation": {
+                      "identifier": "response.Write",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.WriteHeader",
+                    "documentation": {
+                      "identifier": "response.WriteHeader",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.WriteHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) WriteHeader(code int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) WriteHeader(code int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.writeCGIHeader",
+                    "documentation": {
+                      "identifier": "response.writeCGIHeader",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.writeCGIHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) writeCGIHeader(p []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) writeCGIHeader(p []byte)\n```\n\nwriteCGIHeader finalizes the header sent to the client and writes it to the output. p is not written by writeHeader, but is the first chunk of the body that will be written. It is sniffed for a Content-Type if none is set explicitly. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.Flush",
+                    "documentation": {
+                      "identifier": "response.Flush",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.Flush",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Flush()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#response.Close",
+                    "documentation": {
+                      "identifier": "response.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.response.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *response) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *response) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#child",
+              "documentation": {
+                "identifier": "child",
+                "newPage": false,
+                "searchKey": "fcgi.child",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type child struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype child struct {\n\tconn    *conn\n\thandler http.Handler\n\n\trequests map[uint16]*request // keyed by request ID\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#newChild",
+                    "documentation": {
+                      "identifier": "newChild",
+                      "newPage": false,
+                      "searchKey": "fcgi.newChild",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newChild(rwc io.ReadWriteCloser, handler http.Handler) *child"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newChild(rwc io.ReadWriteCloser, handler http.Handler) *child\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#child.serve",
+                    "documentation": {
+                      "identifier": "child.serve",
+                      "newPage": false,
+                      "searchKey": "fcgi.child.serve",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *child) serve()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *child) serve()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#child.handleRecord",
+                    "documentation": {
+                      "identifier": "child.handleRecord",
+                      "newPage": false,
+                      "searchKey": "fcgi.child.handleRecord",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *child) handleRecord(rec *record) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *child) handleRecord(rec *record) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#child.serveRequest",
+                    "documentation": {
+                      "identifier": "child.serveRequest",
+                      "newPage": false,
+                      "searchKey": "fcgi.child.serveRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *child) serveRequest(req *request, body io.ReadCloser)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *child) serveRequest(req *request, body io.ReadCloser)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#child.cleanUp",
+                    "documentation": {
+                      "identifier": "child.cleanUp",
+                      "newPage": false,
+                      "searchKey": "fcgi.child.cleanUp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *child) cleanUp()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *child) cleanUp()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#recType",
+              "documentation": {
+                "identifier": "recType",
+                "newPage": false,
+                "searchKey": "fcgi.recType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type recType uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype recType uint8\n```\n\nrecType is a record type, as defined by [https://web.archive.org/web/20150420080736/http://www.fastcgi.com/drupal/node/6?q=node/22#S8](https://web.archive.org/web/20150420080736/http://www.fastcgi.com/drupal/node/6?q=node/22#S8) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#header",
+              "documentation": {
+                "identifier": "header",
+                "newPage": false,
+                "searchKey": "fcgi.header",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type header struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype header struct {\n\tVersion       uint8\n\tType          recType\n\tId            uint16\n\tContentLength uint16\n\tPaddingLength uint8\n\tReserved      uint8\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#header.init",
+                    "documentation": {
+                      "identifier": "header.init",
+                      "newPage": false,
+                      "searchKey": "fcgi.header.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *header) init(recType recType, reqId uint16, contentLength int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *header) init(recType recType, reqId uint16, contentLength int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#beginRequest",
+              "documentation": {
+                "identifier": "beginRequest",
+                "newPage": false,
+                "searchKey": "fcgi.beginRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type beginRequest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype beginRequest struct {\n\trole     uint16\n\tflags    uint8\n\treserved [5]uint8\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#beginRequest.read",
+                    "documentation": {
+                      "identifier": "beginRequest.read",
+                      "newPage": false,
+                      "searchKey": "fcgi.beginRequest.read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *beginRequest) read(content []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *beginRequest) read(content []byte) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#conn",
+              "documentation": {
+                "identifier": "conn",
+                "newPage": false,
+                "searchKey": "fcgi.conn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type conn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype conn struct {\n\tmutex sync.Mutex\n\trwc   io.ReadWriteCloser\n\n\t// to avoid allocations\n\tbuf bytes.Buffer\n\th   header\n}\n```\n\nconn sends records over rwc \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#newConn",
+                    "documentation": {
+                      "identifier": "newConn",
+                      "newPage": false,
+                      "searchKey": "fcgi.newConn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newConn(rwc io.ReadWriteCloser) *conn"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newConn(rwc io.ReadWriteCloser) *conn\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#conn.Close",
+                    "documentation": {
+                      "identifier": "conn.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.conn.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *conn) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *conn) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#conn.writeRecord",
+                    "documentation": {
+                      "identifier": "conn.writeRecord",
+                      "newPage": false,
+                      "searchKey": "fcgi.conn.writeRecord",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *conn) writeRecord(recType recType, reqId uint16, b []byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *conn) writeRecord(recType recType, reqId uint16, b []byte) error\n```\n\nwriteRecord writes and sends a single record. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#conn.writeEndRequest",
+                    "documentation": {
+                      "identifier": "conn.writeEndRequest",
+                      "newPage": false,
+                      "searchKey": "fcgi.conn.writeEndRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *conn) writeEndRequest(reqId uint16, appStatus int, protocolStatus uint8) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *conn) writeEndRequest(reqId uint16, appStatus int, protocolStatus uint8) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#conn.writePairs",
+                    "documentation": {
+                      "identifier": "conn.writePairs",
+                      "newPage": false,
+                      "searchKey": "fcgi.conn.writePairs",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *conn) writePairs(recType recType, reqId uint16, pairs map[string]string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *conn) writePairs(recType recType, reqId uint16, pairs map[string]string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#record",
+              "documentation": {
+                "identifier": "record",
+                "newPage": false,
+                "searchKey": "fcgi.record",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type record struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype record struct {\n\th   header\n\tbuf [maxWrite + maxPad]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#record.read",
+                    "documentation": {
+                      "identifier": "record.read",
+                      "newPage": false,
+                      "searchKey": "fcgi.record.read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rec *record) read(r io.Reader) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rec *record) read(r io.Reader) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#record.content",
+                    "documentation": {
+                      "identifier": "record.content",
+                      "newPage": false,
+                      "searchKey": "fcgi.record.content",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *record) content() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *record) content() []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#bufWriter",
+              "documentation": {
+                "identifier": "bufWriter",
+                "newPage": false,
+                "searchKey": "fcgi.bufWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bufWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bufWriter struct {\n\tcloser io.Closer\n\t*bufio.Writer\n}\n```\n\nbufWriter encapsulates bufio.Writer but also closes the underlying stream when Closed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#newWriter",
+                    "documentation": {
+                      "identifier": "newWriter",
+                      "newPage": false,
+                      "searchKey": "fcgi.newWriter",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newWriter(c *conn, recType recType, reqId uint16) *bufWriter"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newWriter(c *conn, recType recType, reqId uint16) *bufWriter\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#bufWriter.Close",
+                    "documentation": {
+                      "identifier": "bufWriter.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.bufWriter.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *bufWriter) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *bufWriter) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#streamWriter",
+              "documentation": {
+                "identifier": "streamWriter",
+                "newPage": false,
+                "searchKey": "fcgi.streamWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type streamWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype streamWriter struct {\n\tc       *conn\n\trecType recType\n\treqId   uint16\n}\n```\n\nstreamWriter abstracts out the separation of a stream into discrete records. It only writes maxWrite bytes at a time. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#streamWriter.Write",
+                    "documentation": {
+                      "identifier": "streamWriter.Write",
+                      "newPage": false,
+                      "searchKey": "fcgi.streamWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *streamWriter) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *streamWriter) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#streamWriter.Close",
+                    "documentation": {
+                      "identifier": "streamWriter.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.streamWriter.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *streamWriter) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *streamWriter) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#nilCloser",
+              "documentation": {
+                "identifier": "nilCloser",
+                "newPage": false,
+                "searchKey": "fcgi.nilCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nilCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nilCloser struct {\n\tio.ReadWriter\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#nilCloser.Close",
+                    "documentation": {
+                      "identifier": "nilCloser.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.nilCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *nilCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *nilCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#writeOnlyConn",
+              "documentation": {
+                "identifier": "writeOnlyConn",
+                "newPage": false,
+                "searchKey": "fcgi.writeOnlyConn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeOnlyConn struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeOnlyConn struct {\n\tbuf []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#writeOnlyConn.Write",
+                    "documentation": {
+                      "identifier": "writeOnlyConn.Write",
+                      "newPage": false,
+                      "searchKey": "fcgi.writeOnlyConn.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *writeOnlyConn) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *writeOnlyConn) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#writeOnlyConn.Read",
+                    "documentation": {
+                      "identifier": "writeOnlyConn.Read",
+                      "newPage": false,
+                      "searchKey": "fcgi.writeOnlyConn.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *writeOnlyConn) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *writeOnlyConn) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#writeOnlyConn.Close",
+                    "documentation": {
+                      "identifier": "writeOnlyConn.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.writeOnlyConn.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *writeOnlyConn) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *writeOnlyConn) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#nopWriteCloser",
+              "documentation": {
+                "identifier": "nopWriteCloser",
+                "newPage": false,
+                "searchKey": "fcgi.nopWriteCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type nopWriteCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype nopWriteCloser struct {\n\tio.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#nopWriteCloser.Write",
+                    "documentation": {
+                      "identifier": "nopWriteCloser.Write",
+                      "newPage": false,
+                      "searchKey": "fcgi.nopWriteCloser.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nopWriteCloser) Write(buf []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nopWriteCloser) Write(buf []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#nopWriteCloser.Close",
+                    "documentation": {
+                      "identifier": "nopWriteCloser.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.nopWriteCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (nopWriteCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (nopWriteCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#rwNopCloser",
+              "documentation": {
+                "identifier": "rwNopCloser",
+                "newPage": false,
+                "searchKey": "fcgi.rwNopCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type rwNopCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype rwNopCloser struct {\n\tio.Reader\n\tio.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#rwNopCloser.Close",
+                    "documentation": {
+                      "identifier": "rwNopCloser.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.rwNopCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rwNopCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rwNopCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#signallingNopCloser",
+              "documentation": {
+                "identifier": "signallingNopCloser",
+                "newPage": false,
+                "searchKey": "fcgi.signallingNopCloser",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type signallingNopCloser struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype signallingNopCloser struct {\n\tio.Reader\n\tclosed chan bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#signallingNopCloser.Write",
+                    "documentation": {
+                      "identifier": "signallingNopCloser.Write",
+                      "newPage": false,
+                      "searchKey": "fcgi.signallingNopCloser.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (*signallingNopCloser) Write(buf []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (*signallingNopCloser) Write(buf []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/fcgi#signallingNopCloser.Close",
+                    "documentation": {
+                      "identifier": "signallingNopCloser.Close",
+                      "newPage": false,
+                      "searchKey": "fcgi.signallingNopCloser.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rc *signallingNopCloser) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rc *signallingNopCloser) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/fcgi#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#filterOutUsedEnvVars",
+              "documentation": {
+                "identifier": "filterOutUsedEnvVars",
+                "newPage": false,
+                "searchKey": "fcgi.filterOutUsedEnvVars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func filterOutUsedEnvVars(envVars map[string]string) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc filterOutUsedEnvVars(envVars map[string]string) map[string]string\n```\n\nfilterOutUsedEnvVars returns a new map of env vars without the variables in the given envVars map that are read for creating each http.Request \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#Serve",
+              "documentation": {
+                "identifier": "Serve",
+                "newPage": false,
+                "searchKey": "fcgi.Serve",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Serve(l net.Listener, handler http.Handler) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Serve(l net.Listener, handler http.Handler) error\n```\n\nServe accepts incoming FastCGI connections on the listener l, creating a new goroutine for each. The goroutine reads requests and then calls handler to reply to them. If l is nil, Serve accepts connections from os.Stdin. If handler is nil, http.DefaultServeMux is used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#ProcessEnv",
+              "documentation": {
+                "identifier": "ProcessEnv",
+                "newPage": false,
+                "searchKey": "fcgi.ProcessEnv",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ProcessEnv(r *http.Request) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ProcessEnv(r *http.Request) map[string]string\n```\n\nProcessEnv returns FastCGI environment variables associated with the request r for which no effort was made to be included in the request itself - the data is hidden in the request's context. As an example, if REMOTE_USER is set for a request, it will not be found anywhere in r, but it will be included in ProcessEnv's response (via r's context). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#addFastCGIEnvToContext",
+              "documentation": {
+                "identifier": "addFastCGIEnvToContext",
+                "newPage": false,
+                "searchKey": "fcgi.addFastCGIEnvToContext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func addFastCGIEnvToContext(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc addFastCGIEnvToContext(s string) bool\n```\n\naddFastCGIEnvToContext reports whether to include the FastCGI environment variable s in the http.Request.Context, accessible via ProcessEnv. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#readSize",
+              "documentation": {
+                "identifier": "readSize",
+                "newPage": false,
+                "searchKey": "fcgi.readSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readSize(s []byte) (uint32, int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readSize(s []byte) (uint32, int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#readString",
+              "documentation": {
+                "identifier": "readString",
+                "newPage": false,
+                "searchKey": "fcgi.readString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readString(s []byte, size uint32) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readString(s []byte, size uint32) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#encodeSize",
+              "documentation": {
+                "identifier": "encodeSize",
+                "newPage": false,
+                "searchKey": "fcgi.encodeSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func encodeSize(b []byte, size uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc encodeSize(b []byte, size uint32) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestSize",
+              "documentation": {
+                "identifier": "TestSize",
+                "newPage": false,
+                "searchKey": "fcgi.TestSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestStreams",
+              "documentation": {
+                "identifier": "TestStreams",
+                "newPage": false,
+                "searchKey": "fcgi.TestStreams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStreams(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStreams(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestGetValues",
+              "documentation": {
+                "identifier": "TestGetValues",
+                "newPage": false,
+                "searchKey": "fcgi.TestGetValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#nameValuePair11",
+              "documentation": {
+                "identifier": "nameValuePair11",
+                "newPage": false,
+                "searchKey": "fcgi.nameValuePair11",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nameValuePair11(nameData, valueData string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nameValuePair11(nameData, valueData string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#makeRecord",
+              "documentation": {
+                "identifier": "makeRecord",
+                "newPage": false,
+                "searchKey": "fcgi.makeRecord",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeRecord(recordType recType,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeRecord(\n\trecordType recType,\n\trequestId uint16,\n\tcontentData []byte,\n) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestChildServeCleansUp",
+              "documentation": {
+                "identifier": "TestChildServeCleansUp",
+                "newPage": false,
+                "searchKey": "fcgi.TestChildServeCleansUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChildServeCleansUp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChildServeCleansUp(t *testing.T)\n```\n\nTest that child.serve closes the bodies of aborted requests and closes the bodies of all requests before returning. Causes deadlock if either condition isn't met. See issue 6934. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestMalformedParams",
+              "documentation": {
+                "identifier": "TestMalformedParams",
+                "newPage": false,
+                "searchKey": "fcgi.TestMalformedParams",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMalformedParams(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMalformedParams(t *testing.T)\n```\n\nVerifies it doesn't crash. \tIssue 11824. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestChildServeReadsEnvVars",
+              "documentation": {
+                "identifier": "TestChildServeReadsEnvVars",
+                "newPage": false,
+                "searchKey": "fcgi.TestChildServeReadsEnvVars",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChildServeReadsEnvVars(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChildServeReadsEnvVars(t *testing.T)\n```\n\nTest that environment variables set for a request can be read by a handler. Ensures that variables not set will not be exposed to a handler. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestResponseWriterSniffsContentType",
+              "documentation": {
+                "identifier": "TestResponseWriterSniffsContentType",
+                "newPage": false,
+                "searchKey": "fcgi.TestResponseWriterSniffsContentType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestResponseWriterSniffsContentType(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestResponseWriterSniffsContentType(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/fcgi#TestSlowRequest",
+              "documentation": {
+                "identifier": "TestSlowRequest",
+                "newPage": false,
+                "searchKey": "fcgi.TestSlowRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSlowRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSlowRequest(t *testing.T)\n```\n\nTest whether server properly closes connection when processing slow requests \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

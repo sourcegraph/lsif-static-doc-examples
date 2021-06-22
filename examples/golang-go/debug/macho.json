@@ -1,0 +1,4176 @@
+{
+  "pathID": "/debug/macho",
+  "documentation": {
+    "identifier": "macho",
+    "newPage": true,
+    "searchKey": "debug/macho",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package macho"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package macho implements access to Mach-O object files. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/debug/macho#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/macho#fatArchHeaderSize",
+              "documentation": {
+                "identifier": "fatArchHeaderSize",
+                "newPage": false,
+                "searchKey": "macho.fatArchHeaderSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fatArchHeaderSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fatArchHeaderSize = 5 * 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#fileHeaderSize32",
+              "documentation": {
+                "identifier": "fileHeaderSize32",
+                "newPage": false,
+                "searchKey": "macho.fileHeaderSize32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fileHeaderSize32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fileHeaderSize32 = 7 * 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#fileHeaderSize64",
+              "documentation": {
+                "identifier": "fileHeaderSize64",
+                "newPage": false,
+                "searchKey": "macho.fileHeaderSize64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fileHeaderSize64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fileHeaderSize64 = 8 * 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Magic32",
+              "documentation": {
+                "identifier": "Magic32",
+                "newPage": false,
+                "searchKey": "macho.Magic32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Magic32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Magic32 uint32 = 0xfeedface\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Magic64",
+              "documentation": {
+                "identifier": "Magic64",
+                "newPage": false,
+                "searchKey": "macho.Magic64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Magic64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Magic64 uint32 = 0xfeedfacf\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#MagicFat",
+              "documentation": {
+                "identifier": "MagicFat",
+                "newPage": false,
+                "searchKey": "macho.MagicFat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MagicFat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MagicFat uint32 = 0xcafebabe\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TypeObj",
+              "documentation": {
+                "identifier": "TypeObj",
+                "newPage": false,
+                "searchKey": "macho.TypeObj",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeObj"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeObj Type = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TypeExec",
+              "documentation": {
+                "identifier": "TypeExec",
+                "newPage": false,
+                "searchKey": "macho.TypeExec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeExec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeExec Type = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TypeDylib",
+              "documentation": {
+                "identifier": "TypeDylib",
+                "newPage": false,
+                "searchKey": "macho.TypeDylib",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeDylib"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeDylib Type = 6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TypeBundle",
+              "documentation": {
+                "identifier": "TypeBundle",
+                "newPage": false,
+                "searchKey": "macho.TypeBundle",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const TypeBundle"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst TypeBundle Type = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#cpuArch64",
+              "documentation": {
+                "identifier": "cpuArch64",
+                "newPage": false,
+                "searchKey": "macho.cpuArch64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const cpuArch64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst cpuArch64 = 0x01000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Cpu386",
+              "documentation": {
+                "identifier": "Cpu386",
+                "newPage": false,
+                "searchKey": "macho.Cpu386",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Cpu386"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Cpu386 Cpu = 7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#CpuAmd64",
+              "documentation": {
+                "identifier": "CpuAmd64",
+                "newPage": false,
+                "searchKey": "macho.CpuAmd64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CpuAmd64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CpuAmd64 Cpu = Cpu386 | cpuArch64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#CpuArm",
+              "documentation": {
+                "identifier": "CpuArm",
+                "newPage": false,
+                "searchKey": "macho.CpuArm",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CpuArm"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CpuArm Cpu = 12\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#CpuArm64",
+              "documentation": {
+                "identifier": "CpuArm64",
+                "newPage": false,
+                "searchKey": "macho.CpuArm64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CpuArm64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CpuArm64 Cpu = CpuArm | cpuArch64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#CpuPpc",
+              "documentation": {
+                "identifier": "CpuPpc",
+                "newPage": false,
+                "searchKey": "macho.CpuPpc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CpuPpc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CpuPpc Cpu = 18\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#CpuPpc64",
+              "documentation": {
+                "identifier": "CpuPpc64",
+                "newPage": false,
+                "searchKey": "macho.CpuPpc64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const CpuPpc64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst CpuPpc64 Cpu = CpuPpc | cpuArch64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdSegment",
+              "documentation": {
+                "identifier": "LoadCmdSegment",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdSegment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdSegment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdSegment LoadCmd = 0x1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdSymtab",
+              "documentation": {
+                "identifier": "LoadCmdSymtab",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdSymtab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdSymtab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdSymtab LoadCmd = 0x2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdThread",
+              "documentation": {
+                "identifier": "LoadCmdThread",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdThread",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdThread"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdThread LoadCmd = 0x4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdUnixThread",
+              "documentation": {
+                "identifier": "LoadCmdUnixThread",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdUnixThread",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdUnixThread"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdUnixThread LoadCmd = 0x5 // thread+stack\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdDysymtab",
+              "documentation": {
+                "identifier": "LoadCmdDysymtab",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdDysymtab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdDysymtab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdDysymtab LoadCmd = 0xb\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdDylib",
+              "documentation": {
+                "identifier": "LoadCmdDylib",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdDylib",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdDylib"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdDylib LoadCmd = 0xc // load dylib command\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdDylinker",
+              "documentation": {
+                "identifier": "LoadCmdDylinker",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdDylinker",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdDylinker"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdDylinker LoadCmd = 0xf // id dylinker command (not load dylinker command)\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdSegment64",
+              "documentation": {
+                "identifier": "LoadCmdSegment64",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdSegment64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdSegment64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdSegment64 LoadCmd = 0x19\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmdRpath",
+              "documentation": {
+                "identifier": "LoadCmdRpath",
+                "newPage": false,
+                "searchKey": "macho.LoadCmdRpath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const LoadCmdRpath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst LoadCmdRpath LoadCmd = 0x8000001c\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagNoUndefs",
+              "documentation": {
+                "identifier": "FlagNoUndefs",
+                "newPage": false,
+                "searchKey": "macho.FlagNoUndefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagNoUndefs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagNoUndefs uint32 = 0x1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagIncrLink",
+              "documentation": {
+                "identifier": "FlagIncrLink",
+                "newPage": false,
+                "searchKey": "macho.FlagIncrLink",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagIncrLink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagIncrLink uint32 = 0x2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagDyldLink",
+              "documentation": {
+                "identifier": "FlagDyldLink",
+                "newPage": false,
+                "searchKey": "macho.FlagDyldLink",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagDyldLink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagDyldLink uint32 = 0x4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagBindAtLoad",
+              "documentation": {
+                "identifier": "FlagBindAtLoad",
+                "newPage": false,
+                "searchKey": "macho.FlagBindAtLoad",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagBindAtLoad"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagBindAtLoad uint32 = 0x8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagPrebound",
+              "documentation": {
+                "identifier": "FlagPrebound",
+                "newPage": false,
+                "searchKey": "macho.FlagPrebound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagPrebound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagPrebound uint32 = 0x10\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagSplitSegs",
+              "documentation": {
+                "identifier": "FlagSplitSegs",
+                "newPage": false,
+                "searchKey": "macho.FlagSplitSegs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagSplitSegs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagSplitSegs uint32 = 0x20\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagLazyInit",
+              "documentation": {
+                "identifier": "FlagLazyInit",
+                "newPage": false,
+                "searchKey": "macho.FlagLazyInit",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagLazyInit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagLazyInit uint32 = 0x40\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagTwoLevel",
+              "documentation": {
+                "identifier": "FlagTwoLevel",
+                "newPage": false,
+                "searchKey": "macho.FlagTwoLevel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagTwoLevel"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagTwoLevel uint32 = 0x80\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagForceFlat",
+              "documentation": {
+                "identifier": "FlagForceFlat",
+                "newPage": false,
+                "searchKey": "macho.FlagForceFlat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagForceFlat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagForceFlat uint32 = 0x100\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagNoMultiDefs",
+              "documentation": {
+                "identifier": "FlagNoMultiDefs",
+                "newPage": false,
+                "searchKey": "macho.FlagNoMultiDefs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagNoMultiDefs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagNoMultiDefs uint32 = 0x200\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagNoFixPrebinding",
+              "documentation": {
+                "identifier": "FlagNoFixPrebinding",
+                "newPage": false,
+                "searchKey": "macho.FlagNoFixPrebinding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagNoFixPrebinding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagNoFixPrebinding uint32 = 0x400\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagPrebindable",
+              "documentation": {
+                "identifier": "FlagPrebindable",
+                "newPage": false,
+                "searchKey": "macho.FlagPrebindable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagPrebindable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagPrebindable uint32 = 0x800\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagAllModsBound",
+              "documentation": {
+                "identifier": "FlagAllModsBound",
+                "newPage": false,
+                "searchKey": "macho.FlagAllModsBound",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagAllModsBound"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagAllModsBound uint32 = 0x1000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagSubsectionsViaSymbols",
+              "documentation": {
+                "identifier": "FlagSubsectionsViaSymbols",
+                "newPage": false,
+                "searchKey": "macho.FlagSubsectionsViaSymbols",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagSubsectionsViaSymbols"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagSubsectionsViaSymbols uint32 = 0x2000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagCanonical",
+              "documentation": {
+                "identifier": "FlagCanonical",
+                "newPage": false,
+                "searchKey": "macho.FlagCanonical",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagCanonical"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagCanonical uint32 = 0x4000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagWeakDefines",
+              "documentation": {
+                "identifier": "FlagWeakDefines",
+                "newPage": false,
+                "searchKey": "macho.FlagWeakDefines",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagWeakDefines"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagWeakDefines uint32 = 0x8000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagBindsToWeak",
+              "documentation": {
+                "identifier": "FlagBindsToWeak",
+                "newPage": false,
+                "searchKey": "macho.FlagBindsToWeak",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagBindsToWeak"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagBindsToWeak uint32 = 0x10000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagAllowStackExecution",
+              "documentation": {
+                "identifier": "FlagAllowStackExecution",
+                "newPage": false,
+                "searchKey": "macho.FlagAllowStackExecution",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagAllowStackExecution"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagAllowStackExecution uint32 = 0x20000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagRootSafe",
+              "documentation": {
+                "identifier": "FlagRootSafe",
+                "newPage": false,
+                "searchKey": "macho.FlagRootSafe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagRootSafe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagRootSafe uint32 = 0x40000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagSetuidSafe",
+              "documentation": {
+                "identifier": "FlagSetuidSafe",
+                "newPage": false,
+                "searchKey": "macho.FlagSetuidSafe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagSetuidSafe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagSetuidSafe uint32 = 0x80000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagNoReexportedDylibs",
+              "documentation": {
+                "identifier": "FlagNoReexportedDylibs",
+                "newPage": false,
+                "searchKey": "macho.FlagNoReexportedDylibs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagNoReexportedDylibs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagNoReexportedDylibs uint32 = 0x100000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagPIE",
+              "documentation": {
+                "identifier": "FlagPIE",
+                "newPage": false,
+                "searchKey": "macho.FlagPIE",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagPIE"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagPIE uint32 = 0x200000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagDeadStrippableDylib",
+              "documentation": {
+                "identifier": "FlagDeadStrippableDylib",
+                "newPage": false,
+                "searchKey": "macho.FlagDeadStrippableDylib",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagDeadStrippableDylib"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagDeadStrippableDylib uint32 = 0x400000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagHasTLVDescriptors",
+              "documentation": {
+                "identifier": "FlagHasTLVDescriptors",
+                "newPage": false,
+                "searchKey": "macho.FlagHasTLVDescriptors",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagHasTLVDescriptors"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagHasTLVDescriptors uint32 = 0x800000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagNoHeapExecution",
+              "documentation": {
+                "identifier": "FlagNoHeapExecution",
+                "newPage": false,
+                "searchKey": "macho.FlagNoHeapExecution",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagNoHeapExecution"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagNoHeapExecution uint32 = 0x1000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FlagAppExtensionSafe",
+              "documentation": {
+                "identifier": "FlagAppExtensionSafe",
+                "newPage": false,
+                "searchKey": "macho.FlagAppExtensionSafe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FlagAppExtensionSafe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FlagAppExtensionSafe uint32 = 0x2000000\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_VANILLA",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_VANILLA",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_VANILLA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_VANILLA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_VANILLA RelocTypeGeneric = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_PAIR",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_PAIR",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_PAIR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_PAIR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_PAIR RelocTypeGeneric = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_SECTDIFF",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_SECTDIFF",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_SECTDIFF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_SECTDIFF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_SECTDIFF RelocTypeGeneric = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_PB_LA_PTR",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_PB_LA_PTR",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_PB_LA_PTR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_PB_LA_PTR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_PB_LA_PTR RelocTypeGeneric = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_LOCAL_SECTDIFF",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_LOCAL_SECTDIFF",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_LOCAL_SECTDIFF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_LOCAL_SECTDIFF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_LOCAL_SECTDIFF RelocTypeGeneric = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#GENERIC_RELOC_TLV",
+              "documentation": {
+                "identifier": "GENERIC_RELOC_TLV",
+                "newPage": false,
+                "searchKey": "macho.GENERIC_RELOC_TLV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GENERIC_RELOC_TLV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GENERIC_RELOC_TLV RelocTypeGeneric = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_UNSIGNED",
+              "documentation": {
+                "identifier": "X86_64_RELOC_UNSIGNED",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_UNSIGNED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_UNSIGNED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_UNSIGNED RelocTypeX86_64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_SIGNED",
+              "documentation": {
+                "identifier": "X86_64_RELOC_SIGNED",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_SIGNED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_SIGNED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_SIGNED RelocTypeX86_64 = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_BRANCH",
+              "documentation": {
+                "identifier": "X86_64_RELOC_BRANCH",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_BRANCH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_BRANCH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_BRANCH RelocTypeX86_64 = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_GOT_LOAD",
+              "documentation": {
+                "identifier": "X86_64_RELOC_GOT_LOAD",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_GOT_LOAD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_GOT_LOAD"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_GOT_LOAD RelocTypeX86_64 = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_GOT",
+              "documentation": {
+                "identifier": "X86_64_RELOC_GOT",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_GOT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_GOT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_GOT RelocTypeX86_64 = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_SUBTRACTOR",
+              "documentation": {
+                "identifier": "X86_64_RELOC_SUBTRACTOR",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_SUBTRACTOR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_SUBTRACTOR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_SUBTRACTOR RelocTypeX86_64 = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_SIGNED_1",
+              "documentation": {
+                "identifier": "X86_64_RELOC_SIGNED_1",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_SIGNED_1",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_SIGNED_1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_SIGNED_1 RelocTypeX86_64 = 6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_SIGNED_2",
+              "documentation": {
+                "identifier": "X86_64_RELOC_SIGNED_2",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_SIGNED_2",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_SIGNED_2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_SIGNED_2 RelocTypeX86_64 = 7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_SIGNED_4",
+              "documentation": {
+                "identifier": "X86_64_RELOC_SIGNED_4",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_SIGNED_4",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_SIGNED_4"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_SIGNED_4 RelocTypeX86_64 = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#X86_64_RELOC_TLV",
+              "documentation": {
+                "identifier": "X86_64_RELOC_TLV",
+                "newPage": false,
+                "searchKey": "macho.X86_64_RELOC_TLV",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const X86_64_RELOC_TLV"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst X86_64_RELOC_TLV RelocTypeX86_64 = 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_VANILLA",
+              "documentation": {
+                "identifier": "ARM_RELOC_VANILLA",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_VANILLA",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_VANILLA"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_VANILLA RelocTypeARM = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_PAIR",
+              "documentation": {
+                "identifier": "ARM_RELOC_PAIR",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_PAIR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_PAIR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_PAIR RelocTypeARM = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_SECTDIFF",
+              "documentation": {
+                "identifier": "ARM_RELOC_SECTDIFF",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_SECTDIFF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_SECTDIFF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_SECTDIFF RelocTypeARM = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_LOCAL_SECTDIFF",
+              "documentation": {
+                "identifier": "ARM_RELOC_LOCAL_SECTDIFF",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_LOCAL_SECTDIFF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_LOCAL_SECTDIFF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_LOCAL_SECTDIFF RelocTypeARM = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_PB_LA_PTR",
+              "documentation": {
+                "identifier": "ARM_RELOC_PB_LA_PTR",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_PB_LA_PTR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_PB_LA_PTR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_PB_LA_PTR RelocTypeARM = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_BR24",
+              "documentation": {
+                "identifier": "ARM_RELOC_BR24",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_BR24",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_BR24"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_BR24 RelocTypeARM = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_THUMB_RELOC_BR22",
+              "documentation": {
+                "identifier": "ARM_THUMB_RELOC_BR22",
+                "newPage": false,
+                "searchKey": "macho.ARM_THUMB_RELOC_BR22",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_THUMB_RELOC_BR22"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_THUMB_RELOC_BR22 RelocTypeARM = 6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_THUMB_32BIT_BRANCH",
+              "documentation": {
+                "identifier": "ARM_THUMB_32BIT_BRANCH",
+                "newPage": false,
+                "searchKey": "macho.ARM_THUMB_32BIT_BRANCH",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_THUMB_32BIT_BRANCH"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_THUMB_32BIT_BRANCH RelocTypeARM = 7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_HALF",
+              "documentation": {
+                "identifier": "ARM_RELOC_HALF",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_HALF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_HALF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_HALF RelocTypeARM = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM_RELOC_HALF_SECTDIFF",
+              "documentation": {
+                "identifier": "ARM_RELOC_HALF_SECTDIFF",
+                "newPage": false,
+                "searchKey": "macho.ARM_RELOC_HALF_SECTDIFF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM_RELOC_HALF_SECTDIFF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM_RELOC_HALF_SECTDIFF RelocTypeARM = 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_UNSIGNED",
+              "documentation": {
+                "identifier": "ARM64_RELOC_UNSIGNED",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_UNSIGNED",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_UNSIGNED"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_UNSIGNED RelocTypeARM64 = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_SUBTRACTOR",
+              "documentation": {
+                "identifier": "ARM64_RELOC_SUBTRACTOR",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_SUBTRACTOR",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_SUBTRACTOR"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_SUBTRACTOR RelocTypeARM64 = 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_BRANCH26",
+              "documentation": {
+                "identifier": "ARM64_RELOC_BRANCH26",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_BRANCH26",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_BRANCH26"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_BRANCH26 RelocTypeARM64 = 2\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_PAGE21",
+              "documentation": {
+                "identifier": "ARM64_RELOC_PAGE21",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_PAGE21",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_PAGE21"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_PAGE21 RelocTypeARM64 = 3\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_PAGEOFF12",
+              "documentation": {
+                "identifier": "ARM64_RELOC_PAGEOFF12",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_PAGEOFF12",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_PAGEOFF12"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_PAGEOFF12 RelocTypeARM64 = 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_GOT_LOAD_PAGE21",
+              "documentation": {
+                "identifier": "ARM64_RELOC_GOT_LOAD_PAGE21",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_GOT_LOAD_PAGE21",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_GOT_LOAD_PAGE21"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_GOT_LOAD_PAGE21 RelocTypeARM64 = 5\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_GOT_LOAD_PAGEOFF12",
+              "documentation": {
+                "identifier": "ARM64_RELOC_GOT_LOAD_PAGEOFF12",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_GOT_LOAD_PAGEOFF12",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_GOT_LOAD_PAGEOFF12"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_GOT_LOAD_PAGEOFF12 RelocTypeARM64 = 6\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_POINTER_TO_GOT",
+              "documentation": {
+                "identifier": "ARM64_RELOC_POINTER_TO_GOT",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_POINTER_TO_GOT",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_POINTER_TO_GOT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_POINTER_TO_GOT RelocTypeARM64 = 7\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_TLVP_LOAD_PAGE21",
+              "documentation": {
+                "identifier": "ARM64_RELOC_TLVP_LOAD_PAGE21",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_TLVP_LOAD_PAGE21",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_TLVP_LOAD_PAGE21"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_TLVP_LOAD_PAGE21 RelocTypeARM64 = 8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_TLVP_LOAD_PAGEOFF12",
+              "documentation": {
+                "identifier": "ARM64_RELOC_TLVP_LOAD_PAGEOFF12",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_TLVP_LOAD_PAGEOFF12",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_TLVP_LOAD_PAGEOFF12"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_TLVP_LOAD_PAGEOFF12 RelocTypeARM64 = 9\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#ARM64_RELOC_ADDEND",
+              "documentation": {
+                "identifier": "ARM64_RELOC_ADDEND",
+                "newPage": false,
+                "searchKey": "macho.ARM64_RELOC_ADDEND",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ARM64_RELOC_ADDEND"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ARM64_RELOC_ADDEND RelocTypeARM64 = 10\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeGeneric_name",
+              "documentation": {
+                "identifier": "_RelocTypeGeneric_name",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeGeneric_name",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _RelocTypeGeneric_name"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _RelocTypeGeneric_name = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeX86_64_name",
+              "documentation": {
+                "identifier": "_RelocTypeX86_64_name",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeX86_64_name",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _RelocTypeX86_64_name"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _RelocTypeX86_64_name = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeARM_name",
+              "documentation": {
+                "identifier": "_RelocTypeARM_name",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeARM_name",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _RelocTypeARM_name"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _RelocTypeARM_name = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeARM64_name",
+              "documentation": {
+                "identifier": "_RelocTypeARM64_name",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeARM64_name",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const _RelocTypeARM64_name"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst _RelocTypeARM64_name = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/macho#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/macho#ErrNotFat",
+              "documentation": {
+                "identifier": "ErrNotFat",
+                "newPage": false,
+                "searchKey": "macho.ErrNotFat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotFat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotFat = &FormatError{0, \"not a fat Mach-O file\", nil}\n```\n\nErrNotFat is returned from NewFatFile or OpenFat when the file is not a universal binary but may be a thin binary, based on its magic number. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#typeStrings",
+              "documentation": {
+                "identifier": "typeStrings",
+                "newPage": false,
+                "searchKey": "macho.typeStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var typeStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar typeStrings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#cpuStrings",
+              "documentation": {
+                "identifier": "cpuStrings",
+                "newPage": false,
+                "searchKey": "macho.cpuStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cpuStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cpuStrings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#cmdStrings",
+              "documentation": {
+                "identifier": "cmdStrings",
+                "newPage": false,
+                "searchKey": "macho.cmdStrings",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var cmdStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar cmdStrings = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeGeneric_index",
+              "documentation": {
+                "identifier": "_RelocTypeGeneric_index",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeGeneric_index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _RelocTypeGeneric_index"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _RelocTypeGeneric_index = [...]uint8{0, 21, 39, 61, 84, 112, 129}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeX86_64_index",
+              "documentation": {
+                "identifier": "_RelocTypeX86_64_index",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeX86_64_index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _RelocTypeX86_64_index"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _RelocTypeX86_64_index = [...]uint8{0, 21, 40, 59, 80, 96, 119, 140, 161, 182, 198}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeARM_index",
+              "documentation": {
+                "identifier": "_RelocTypeARM_index",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeARM_index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _RelocTypeARM_index"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _RelocTypeARM_index = [...]uint8{0, 17, 31, 49, 73, 92, 106, 126, 148, 162, 185}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#_RelocTypeARM64_index",
+              "documentation": {
+                "identifier": "_RelocTypeARM64_index",
+                "newPage": false,
+                "searchKey": "macho._RelocTypeARM64_index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var _RelocTypeARM64_index"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar _RelocTypeARM64_index = [...]uint16{0, 20, 42, 62, 80, 101, 128, 158, 184, 212, 243, 261}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#fileTests",
+              "documentation": {
+                "identifier": "fileTests",
+                "newPage": false,
+                "searchKey": "macho.fileTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var fileTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar fileTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/macho#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/macho#FatFile",
+              "documentation": {
+                "identifier": "FatFile",
+                "newPage": false,
+                "searchKey": "macho.FatFile",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FatFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FatFile struct {\n\tMagic  uint32\n\tArches []FatArch\n\tcloser io.Closer\n}\n```\n\nA FatFile is a Mach-O universal binary that contains at least one architecture. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#NewFatFile",
+                    "documentation": {
+                      "identifier": "NewFatFile",
+                      "newPage": false,
+                      "searchKey": "macho.NewFatFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFatFile(r io.ReaderAt) (*FatFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFatFile(r io.ReaderAt) (*FatFile, error)\n```\n\nNewFatFile creates a new FatFile for accessing all the Mach-O images in a universal binary. The Mach-O binary is expected to start at position 0 in the ReaderAt. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#OpenFat",
+                    "documentation": {
+                      "identifier": "OpenFat",
+                      "newPage": false,
+                      "searchKey": "macho.OpenFat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func OpenFat(name string) (*FatFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc OpenFat(name string) (*FatFile, error)\n```\n\nOpenFat opens the named file using os.Open and prepares it for use as a Mach-O universal binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#openFatObscured",
+                    "documentation": {
+                      "identifier": "openFatObscured",
+                      "newPage": false,
+                      "searchKey": "macho.openFatObscured",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func openFatObscured(name string) (*FatFile, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc openFatObscured(name string) (*FatFile, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#FatFile.Close",
+                    "documentation": {
+                      "identifier": "FatFile.Close",
+                      "newPage": false,
+                      "searchKey": "macho.FatFile.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (ff *FatFile) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (ff *FatFile) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FatArchHeader",
+              "documentation": {
+                "identifier": "FatArchHeader",
+                "newPage": false,
+                "searchKey": "macho.FatArchHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FatArchHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FatArchHeader struct {\n\tCpu    Cpu\n\tSubCpu uint32\n\tOffset uint32\n\tSize   uint32\n\tAlign  uint32\n}\n```\n\nA FatArchHeader represents a fat header for a specific image architecture. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FatArch",
+              "documentation": {
+                "identifier": "FatArch",
+                "newPage": false,
+                "searchKey": "macho.FatArch",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FatArch struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FatArch struct {\n\tFatArchHeader\n\t*File\n}\n```\n\nA FatArch is a Mach-O File inside a FatFile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#File",
+              "documentation": {
+                "identifier": "File",
+                "newPage": false,
+                "searchKey": "macho.File",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type File struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype File struct {\n\tFileHeader\n\tByteOrder binary.ByteOrder\n\tLoads     []Load\n\tSections  []*Section\n\n\tSymtab   *Symtab\n\tDysymtab *Dysymtab\n\n\tcloser io.Closer\n}\n```\n\nA File represents an open Mach-O file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Open",
+                    "documentation": {
+                      "identifier": "Open",
+                      "newPage": false,
+                      "searchKey": "macho.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Open(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Open(name string) (*File, error)\n```\n\nOpen opens the named file using os.Open and prepares it for use as a Mach-O binary. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#NewFile",
+                    "documentation": {
+                      "identifier": "NewFile",
+                      "newPage": false,
+                      "searchKey": "macho.NewFile",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewFile(r io.ReaderAt) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewFile(r io.ReaderAt) (*File, error)\n```\n\nNewFile creates a new File for accessing a Mach-O binary in an underlying reader. The Mach-O binary is expected to start at position 0 in the ReaderAt. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#openObscured",
+                    "documentation": {
+                      "identifier": "openObscured",
+                      "newPage": false,
+                      "searchKey": "macho.openObscured",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func openObscured(name string) (*File, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc openObscured(name string) (*File, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.Close",
+                    "documentation": {
+                      "identifier": "File.Close",
+                      "newPage": false,
+                      "searchKey": "macho.File.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Close() error\n```\n\nClose closes the File. If the File was created using NewFile directly instead of Open, Close has no effect. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.parseSymtab",
+                    "documentation": {
+                      "identifier": "File.parseSymtab",
+                      "newPage": false,
+                      "searchKey": "macho.File.parseSymtab",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) parseSymtab(symdat, strtab, cmddat []byte, hdr *SymtabCmd, offset int64) (*Symtab, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) parseSymtab(symdat, strtab, cmddat []byte, hdr *SymtabCmd, offset int64) (*Symtab, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.pushSection",
+                    "documentation": {
+                      "identifier": "File.pushSection",
+                      "newPage": false,
+                      "searchKey": "macho.File.pushSection",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) pushSection(sh *Section, r io.ReaderAt) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) pushSection(sh *Section, r io.ReaderAt) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.Segment",
+                    "documentation": {
+                      "identifier": "File.Segment",
+                      "newPage": false,
+                      "searchKey": "macho.File.Segment",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Segment(name string) *Segment"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Segment(name string) *Segment\n```\n\nSegment returns the first Segment with the given name, or nil if no such segment exists. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.Section",
+                    "documentation": {
+                      "identifier": "File.Section",
+                      "newPage": false,
+                      "searchKey": "macho.File.Section",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) Section(name string) *Section"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) Section(name string) *Section\n```\n\nSection returns the first section with the given name, or nil if no such section exists. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.DWARF",
+                    "documentation": {
+                      "identifier": "File.DWARF",
+                      "newPage": false,
+                      "searchKey": "macho.File.DWARF",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) DWARF() (*dwarf.Data, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) DWARF() (*dwarf.Data, error)\n```\n\nDWARF returns the DWARF debug information for the Mach-O file. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.ImportedSymbols",
+                    "documentation": {
+                      "identifier": "File.ImportedSymbols",
+                      "newPage": false,
+                      "searchKey": "macho.File.ImportedSymbols",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedSymbols() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedSymbols() ([]string, error)\n```\n\nImportedSymbols returns the names of all symbols referred to by the binary f that are expected to be satisfied by other libraries at dynamic load time. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#File.ImportedLibraries",
+                    "documentation": {
+                      "identifier": "File.ImportedLibraries",
+                      "newPage": false,
+                      "searchKey": "macho.File.ImportedLibraries",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *File) ImportedLibraries() ([]string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *File) ImportedLibraries() ([]string, error)\n```\n\nImportedLibraries returns the paths of all libraries referred to by the binary f that are expected to be linked with the binary at dynamic link time. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Load",
+              "documentation": {
+                "identifier": "Load",
+                "newPage": false,
+                "searchKey": "macho.Load",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Load interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Load interface {\n\tRaw() []byte\n}\n```\n\nA Load represents any Mach-O load command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadBytes",
+              "documentation": {
+                "identifier": "LoadBytes",
+                "newPage": false,
+                "searchKey": "macho.LoadBytes",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoadBytes []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoadBytes []byte\n```\n\nA LoadBytes is the uninterpreted bytes of a Mach-O load command. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#LoadBytes.Raw",
+                    "documentation": {
+                      "identifier": "LoadBytes.Raw",
+                      "newPage": false,
+                      "searchKey": "macho.LoadBytes.Raw",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b LoadBytes) Raw() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b LoadBytes) Raw() []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#SegmentHeader",
+              "documentation": {
+                "identifier": "SegmentHeader",
+                "newPage": false,
+                "searchKey": "macho.SegmentHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SegmentHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SegmentHeader struct {\n\tCmd     LoadCmd\n\tLen     uint32\n\tName    string\n\tAddr    uint64\n\tMemsz   uint64\n\tOffset  uint64\n\tFilesz  uint64\n\tMaxprot uint32\n\tProt    uint32\n\tNsect   uint32\n\tFlag    uint32\n}\n```\n\nA SegmentHeader is the header for a Mach-O 32-bit or 64-bit load segment command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Segment",
+              "documentation": {
+                "identifier": "Segment",
+                "newPage": false,
+                "searchKey": "macho.Segment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Segment struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Segment struct {\n\tLoadBytes\n\tSegmentHeader\n\n\t// Embed ReaderAt for ReadAt method.\n\t// Do not embed SectionReader directly\n\t// to avoid having Read and Seek.\n\t// If a client wants Read and Seek it must use\n\t// Open() to avoid fighting over the seek offset\n\t// with other clients.\n\tio.ReaderAt\n\tsr *io.SectionReader\n}\n```\n\nA Segment represents a Mach-O 32-bit or 64-bit load segment command. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Segment.Data",
+                    "documentation": {
+                      "identifier": "Segment.Data",
+                      "newPage": false,
+                      "searchKey": "macho.Segment.Data",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Segment) Data() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Segment) Data() ([]byte, error)\n```\n\nData reads and returns the contents of the segment. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Segment.Open",
+                    "documentation": {
+                      "identifier": "Segment.Open",
+                      "newPage": false,
+                      "searchKey": "macho.Segment.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Segment) Open() io.ReadSeeker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Segment) Open() io.ReadSeeker\n```\n\nOpen returns a new ReadSeeker reading the segment. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#SectionHeader",
+              "documentation": {
+                "identifier": "SectionHeader",
+                "newPage": false,
+                "searchKey": "macho.SectionHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SectionHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SectionHeader struct {\n\tName   string\n\tSeg    string\n\tAddr   uint64\n\tSize   uint64\n\tOffset uint32\n\tAlign  uint32\n\tReloff uint32\n\tNreloc uint32\n\tFlags  uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Reloc",
+              "documentation": {
+                "identifier": "Reloc",
+                "newPage": false,
+                "searchKey": "macho.Reloc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reloc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reloc struct {\n\tAddr  uint32\n\tValue uint32\n\t// when Scattered == false && Extern == true, Value is the symbol number.\n\t// when Scattered == false && Extern == false, Value is the section number.\n\t// when Scattered == true, Value is the value that this reloc refers to.\n\tType      uint8\n\tLen       uint8 // 0=byte, 1=word, 2=long, 3=quad\n\tPcrel     bool\n\tExtern    bool // valid if Scattered == false\n\tScattered bool\n}\n```\n\nA Reloc represents a Mach-O relocation. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Section",
+              "documentation": {
+                "identifier": "Section",
+                "newPage": false,
+                "searchKey": "macho.Section",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Section struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Section struct {\n\tSectionHeader\n\tRelocs []Reloc\n\n\t// Embed ReaderAt for ReadAt method.\n\t// Do not embed SectionReader directly\n\t// to avoid having Read and Seek.\n\t// If a client wants Read and Seek it must use\n\t// Open() to avoid fighting over the seek offset\n\t// with other clients.\n\tio.ReaderAt\n\tsr *io.SectionReader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Section.Data",
+                    "documentation": {
+                      "identifier": "Section.Data",
+                      "newPage": false,
+                      "searchKey": "macho.Section.Data",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Section) Data() ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Section) Data() ([]byte, error)\n```\n\nData reads and returns the contents of the Mach-O section. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Section.Open",
+                    "documentation": {
+                      "identifier": "Section.Open",
+                      "newPage": false,
+                      "searchKey": "macho.Section.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Section) Open() io.ReadSeeker"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Section) Open() io.ReadSeeker\n```\n\nOpen returns a new ReadSeeker reading the Mach-O section. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Dylib",
+              "documentation": {
+                "identifier": "Dylib",
+                "newPage": false,
+                "searchKey": "macho.Dylib",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Dylib struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Dylib struct {\n\tLoadBytes\n\tName           string\n\tTime           uint32\n\tCurrentVersion uint32\n\tCompatVersion  uint32\n}\n```\n\nA Dylib represents a Mach-O load dynamic library command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Symtab",
+              "documentation": {
+                "identifier": "Symtab",
+                "newPage": false,
+                "searchKey": "macho.Symtab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symtab struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symtab struct {\n\tLoadBytes\n\tSymtabCmd\n\tSyms []Symbol\n}\n```\n\nA Symtab represents a Mach-O symbol table command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Dysymtab",
+              "documentation": {
+                "identifier": "Dysymtab",
+                "newPage": false,
+                "searchKey": "macho.Dysymtab",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Dysymtab struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Dysymtab struct {\n\tLoadBytes\n\tDysymtabCmd\n\tIndirectSyms []uint32 // indices into Symtab.Syms\n}\n```\n\nA Dysymtab represents a Mach-O dynamic symbol table command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Rpath",
+              "documentation": {
+                "identifier": "Rpath",
+                "newPage": false,
+                "searchKey": "macho.Rpath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Rpath struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Rpath struct {\n\tLoadBytes\n\tPath string\n}\n```\n\nA Rpath represents a Mach-O rpath command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "macho.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol struct {\n\tName  string\n\tType  uint8\n\tSect  uint8\n\tDesc  uint16\n\tValue uint64\n}\n```\n\nA Symbol is a Mach-O 32-bit or 64-bit symbol table entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FormatError",
+              "documentation": {
+                "identifier": "FormatError",
+                "newPage": false,
+                "searchKey": "macho.FormatError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FormatError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FormatError struct {\n\toff int64\n\tmsg string\n\tval interface{}\n}\n```\n\nFormatError is returned by some operations if the data does not have the correct format for an object file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#FormatError.Error",
+                    "documentation": {
+                      "identifier": "FormatError.Error",
+                      "newPage": false,
+                      "searchKey": "macho.FormatError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *FormatError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *FormatError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#relocInfo",
+              "documentation": {
+                "identifier": "relocInfo",
+                "newPage": false,
+                "searchKey": "macho.relocInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type relocInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype relocInfo struct {\n\tAddr   uint32\n\tSymnum uint32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#FileHeader",
+              "documentation": {
+                "identifier": "FileHeader",
+                "newPage": false,
+                "searchKey": "macho.FileHeader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FileHeader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FileHeader struct {\n\tMagic  uint32\n\tCpu    Cpu\n\tSubCpu uint32\n\tType   Type\n\tNcmd   uint32\n\tCmdsz  uint32\n\tFlags  uint32\n}\n```\n\nA FileHeader represents a Mach-O file header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Type",
+              "documentation": {
+                "identifier": "Type",
+                "newPage": false,
+                "searchKey": "macho.Type",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Type uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Type uint32\n```\n\nA Type is the Mach-O file type, e.g. an object file, executable, or dynamic library. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Type.String",
+                    "documentation": {
+                      "identifier": "Type.String",
+                      "newPage": false,
+                      "searchKey": "macho.Type.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t Type) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t Type) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Type.GoString",
+                    "documentation": {
+                      "identifier": "Type.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.Type.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t Type) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t Type) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Cpu",
+              "documentation": {
+                "identifier": "Cpu",
+                "newPage": false,
+                "searchKey": "macho.Cpu",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Cpu uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Cpu uint32\n```\n\nA Cpu is a Mach-O cpu type. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Cpu.String",
+                    "documentation": {
+                      "identifier": "Cpu.String",
+                      "newPage": false,
+                      "searchKey": "macho.Cpu.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i Cpu) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i Cpu) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#Cpu.GoString",
+                    "documentation": {
+                      "identifier": "Cpu.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.Cpu.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i Cpu) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i Cpu) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#LoadCmd",
+              "documentation": {
+                "identifier": "LoadCmd",
+                "newPage": false,
+                "searchKey": "macho.LoadCmd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type LoadCmd uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype LoadCmd uint32\n```\n\nA LoadCmd is a Mach-O load command. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#LoadCmd.String",
+                    "documentation": {
+                      "identifier": "LoadCmd.String",
+                      "newPage": false,
+                      "searchKey": "macho.LoadCmd.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i LoadCmd) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i LoadCmd) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#LoadCmd.GoString",
+                    "documentation": {
+                      "identifier": "LoadCmd.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.LoadCmd.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i LoadCmd) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i LoadCmd) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Segment32",
+              "documentation": {
+                "identifier": "Segment32",
+                "newPage": false,
+                "searchKey": "macho.Segment32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Segment32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Segment32 struct {\n\tCmd     LoadCmd\n\tLen     uint32\n\tName    [16]byte\n\tAddr    uint32\n\tMemsz   uint32\n\tOffset  uint32\n\tFilesz  uint32\n\tMaxprot uint32\n\tProt    uint32\n\tNsect   uint32\n\tFlag    uint32\n}\n```\n\nA Segment32 is a 32-bit Mach-O segment load command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Segment64",
+              "documentation": {
+                "identifier": "Segment64",
+                "newPage": false,
+                "searchKey": "macho.Segment64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Segment64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Segment64 struct {\n\tCmd     LoadCmd\n\tLen     uint32\n\tName    [16]byte\n\tAddr    uint64\n\tMemsz   uint64\n\tOffset  uint64\n\tFilesz  uint64\n\tMaxprot uint32\n\tProt    uint32\n\tNsect   uint32\n\tFlag    uint32\n}\n```\n\nA Segment64 is a 64-bit Mach-O segment load command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#SymtabCmd",
+              "documentation": {
+                "identifier": "SymtabCmd",
+                "newPage": false,
+                "searchKey": "macho.SymtabCmd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SymtabCmd struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SymtabCmd struct {\n\tCmd     LoadCmd\n\tLen     uint32\n\tSymoff  uint32\n\tNsyms   uint32\n\tStroff  uint32\n\tStrsize uint32\n}\n```\n\nA SymtabCmd is a Mach-O symbol table command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#DysymtabCmd",
+              "documentation": {
+                "identifier": "DysymtabCmd",
+                "newPage": false,
+                "searchKey": "macho.DysymtabCmd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DysymtabCmd struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DysymtabCmd struct {\n\tCmd            LoadCmd\n\tLen            uint32\n\tIlocalsym      uint32\n\tNlocalsym      uint32\n\tIextdefsym     uint32\n\tNextdefsym     uint32\n\tIundefsym      uint32\n\tNundefsym      uint32\n\tTocoffset      uint32\n\tNtoc           uint32\n\tModtaboff      uint32\n\tNmodtab        uint32\n\tExtrefsymoff   uint32\n\tNextrefsyms    uint32\n\tIndirectsymoff uint32\n\tNindirectsyms  uint32\n\tExtreloff      uint32\n\tNextrel        uint32\n\tLocreloff      uint32\n\tNlocrel        uint32\n}\n```\n\nA DysymtabCmd is a Mach-O dynamic symbol table command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#DylibCmd",
+              "documentation": {
+                "identifier": "DylibCmd",
+                "newPage": false,
+                "searchKey": "macho.DylibCmd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DylibCmd struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DylibCmd struct {\n\tCmd            LoadCmd\n\tLen            uint32\n\tName           uint32\n\tTime           uint32\n\tCurrentVersion uint32\n\tCompatVersion  uint32\n}\n```\n\nA DylibCmd is a Mach-O load dynamic library command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RpathCmd",
+              "documentation": {
+                "identifier": "RpathCmd",
+                "newPage": false,
+                "searchKey": "macho.RpathCmd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RpathCmd struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RpathCmd struct {\n\tCmd  LoadCmd\n\tLen  uint32\n\tPath uint32\n}\n```\n\nA RpathCmd is a Mach-O rpath command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Thread",
+              "documentation": {
+                "identifier": "Thread",
+                "newPage": false,
+                "searchKey": "macho.Thread",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Thread struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Thread struct {\n\tCmd  LoadCmd\n\tLen  uint32\n\tType uint32\n\tData []uint32\n}\n```\n\nA Thread is a Mach-O thread state command. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Section32",
+              "documentation": {
+                "identifier": "Section32",
+                "newPage": false,
+                "searchKey": "macho.Section32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Section32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Section32 struct {\n\tName     [16]byte\n\tSeg      [16]byte\n\tAddr     uint32\n\tSize     uint32\n\tOffset   uint32\n\tAlign    uint32\n\tReloff   uint32\n\tNreloc   uint32\n\tFlags    uint32\n\tReserve1 uint32\n\tReserve2 uint32\n}\n```\n\nA Section32 is a 32-bit Mach-O section header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Section64",
+              "documentation": {
+                "identifier": "Section64",
+                "newPage": false,
+                "searchKey": "macho.Section64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Section64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Section64 struct {\n\tName     [16]byte\n\tSeg      [16]byte\n\tAddr     uint64\n\tSize     uint64\n\tOffset   uint32\n\tAlign    uint32\n\tReloff   uint32\n\tNreloc   uint32\n\tFlags    uint32\n\tReserve1 uint32\n\tReserve2 uint32\n\tReserve3 uint32\n}\n```\n\nA Section64 is a 64-bit Mach-O section header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Nlist32",
+              "documentation": {
+                "identifier": "Nlist32",
+                "newPage": false,
+                "searchKey": "macho.Nlist32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Nlist32 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Nlist32 struct {\n\tName  uint32\n\tType  uint8\n\tSect  uint8\n\tDesc  uint16\n\tValue uint32\n}\n```\n\nAn Nlist32 is a Mach-O 32-bit symbol table entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Nlist64",
+              "documentation": {
+                "identifier": "Nlist64",
+                "newPage": false,
+                "searchKey": "macho.Nlist64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Nlist64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Nlist64 struct {\n\tName  uint32\n\tType  uint8\n\tSect  uint8\n\tDesc  uint16\n\tValue uint64\n}\n```\n\nAn Nlist64 is a Mach-O 64-bit symbol table entry. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#Regs386",
+              "documentation": {
+                "identifier": "Regs386",
+                "newPage": false,
+                "searchKey": "macho.Regs386",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Regs386 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Regs386 struct {\n\tAX    uint32\n\tBX    uint32\n\tCX    uint32\n\tDX    uint32\n\tDI    uint32\n\tSI    uint32\n\tBP    uint32\n\tSP    uint32\n\tSS    uint32\n\tFLAGS uint32\n\tIP    uint32\n\tCS    uint32\n\tDS    uint32\n\tES    uint32\n\tFS    uint32\n\tGS    uint32\n}\n```\n\nRegs386 is the Mach-O 386 register structure. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RegsAMD64",
+              "documentation": {
+                "identifier": "RegsAMD64",
+                "newPage": false,
+                "searchKey": "macho.RegsAMD64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RegsAMD64 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RegsAMD64 struct {\n\tAX    uint64\n\tBX    uint64\n\tCX    uint64\n\tDX    uint64\n\tDI    uint64\n\tSI    uint64\n\tBP    uint64\n\tSP    uint64\n\tR8    uint64\n\tR9    uint64\n\tR10   uint64\n\tR11   uint64\n\tR12   uint64\n\tR13   uint64\n\tR14   uint64\n\tR15   uint64\n\tIP    uint64\n\tFLAGS uint64\n\tCS    uint64\n\tFS    uint64\n\tGS    uint64\n}\n```\n\nRegsAMD64 is the Mach-O AMD64 register structure. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#intName",
+              "documentation": {
+                "identifier": "intName",
+                "newPage": false,
+                "searchKey": "macho.intName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type intName struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype intName struct {\n\ti uint32\n\ts string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RelocTypeGeneric",
+              "documentation": {
+                "identifier": "RelocTypeGeneric",
+                "newPage": false,
+                "searchKey": "macho.RelocTypeGeneric",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RelocTypeGeneric int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RelocTypeGeneric int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeGeneric.GoString",
+                    "documentation": {
+                      "identifier": "RelocTypeGeneric.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeGeneric.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RelocTypeGeneric) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RelocTypeGeneric) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeGeneric.String",
+                    "documentation": {
+                      "identifier": "RelocTypeGeneric.String",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeGeneric.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i RelocTypeGeneric) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i RelocTypeGeneric) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RelocTypeX86_64",
+              "documentation": {
+                "identifier": "RelocTypeX86_64",
+                "newPage": false,
+                "searchKey": "macho.RelocTypeX86_64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RelocTypeX86_64 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RelocTypeX86_64 int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeX86_64.GoString",
+                    "documentation": {
+                      "identifier": "RelocTypeX86_64.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeX86_64.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RelocTypeX86_64) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RelocTypeX86_64) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeX86_64.String",
+                    "documentation": {
+                      "identifier": "RelocTypeX86_64.String",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeX86_64.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i RelocTypeX86_64) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i RelocTypeX86_64) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RelocTypeARM",
+              "documentation": {
+                "identifier": "RelocTypeARM",
+                "newPage": false,
+                "searchKey": "macho.RelocTypeARM",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RelocTypeARM int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RelocTypeARM int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeARM.GoString",
+                    "documentation": {
+                      "identifier": "RelocTypeARM.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeARM.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RelocTypeARM) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RelocTypeARM) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeARM.String",
+                    "documentation": {
+                      "identifier": "RelocTypeARM.String",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeARM.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i RelocTypeARM) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i RelocTypeARM) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#RelocTypeARM64",
+              "documentation": {
+                "identifier": "RelocTypeARM64",
+                "newPage": false,
+                "searchKey": "macho.RelocTypeARM64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RelocTypeARM64 int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RelocTypeARM64 int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeARM64.GoString",
+                    "documentation": {
+                      "identifier": "RelocTypeARM64.GoString",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeARM64.GoString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r RelocTypeARM64) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r RelocTypeARM64) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/debug/macho#RelocTypeARM64.String",
+                    "documentation": {
+                      "identifier": "RelocTypeARM64.String",
+                      "newPage": false,
+                      "searchKey": "macho.RelocTypeARM64.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (i RelocTypeARM64) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (i RelocTypeARM64) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#fileTest",
+              "documentation": {
+                "identifier": "fileTest",
+                "newPage": false,
+                "searchKey": "macho.fileTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fileTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fileTest struct {\n\tfile        string\n\thdr         FileHeader\n\tloads       []interface{}\n\tsections    []*SectionHeader\n\trelocations map[string][]Reloc\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/debug/macho#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/debug/macho#cstring",
+              "documentation": {
+                "identifier": "cstring",
+                "newPage": false,
+                "searchKey": "macho.cstring",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cstring(b []byte) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cstring(b []byte) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#stringName",
+              "documentation": {
+                "identifier": "stringName",
+                "newPage": false,
+                "searchKey": "macho.stringName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stringName(i uint32, names []intName, goSyntax bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stringName(i uint32, names []intName, goSyntax bool) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#readerAtFromObscured",
+              "documentation": {
+                "identifier": "readerAtFromObscured",
+                "newPage": false,
+                "searchKey": "macho.readerAtFromObscured",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readerAtFromObscured(name string) (io.ReaderAt, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readerAtFromObscured(name string) (io.ReaderAt, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestOpen",
+              "documentation": {
+                "identifier": "TestOpen",
+                "newPage": false,
+                "searchKey": "macho.TestOpen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestOpenFailure",
+              "documentation": {
+                "identifier": "TestOpenFailure",
+                "newPage": false,
+                "searchKey": "macho.TestOpenFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestOpenFat",
+              "documentation": {
+                "identifier": "TestOpenFat",
+                "newPage": false,
+                "searchKey": "macho.TestOpenFat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestOpenFatFailure",
+              "documentation": {
+                "identifier": "TestOpenFatFailure",
+                "newPage": false,
+                "searchKey": "macho.TestOpenFatFailure",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFatFailure(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFatFailure(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestRelocTypeString",
+              "documentation": {
+                "identifier": "TestRelocTypeString",
+                "newPage": false,
+                "searchKey": "macho.TestRelocTypeString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRelocTypeString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRelocTypeString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/debug/macho#TestTypeString",
+              "documentation": {
+                "identifier": "TestTypeString",
+                "newPage": false,
+                "searchKey": "macho.TestTypeString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTypeString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTypeString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,1976 @@
+{
+  "pathID": "/text/scanner",
+  "documentation": {
+    "identifier": "scanner",
+    "newPage": true,
+    "searchKey": "text/scanner",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package scanner"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package scanner provides a scanner and tokenizer for UTF-8-encoded text. It takes an io.Reader providing the source, which then can be tokenized through repeated calls to the Scan function. For compatibility with existing tools, the NUL character is not allowed. If the first character in the source is a UTF-8 encoded byte order mark (BOM), it is discarded. \n\nBy default, a Scanner skips white space and Go comments and recognizes all literals as defined by the Go language specification. It may be customized to recognize only a subset of those literals and to recognize different identifier and white space characters. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/text/scanner#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanIdents",
+              "documentation": {
+                "identifier": "ScanIdents",
+                "newPage": false,
+                "searchKey": "scanner.ScanIdents",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanIdents"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanIdents = 1 << -Ident\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanInts",
+              "documentation": {
+                "identifier": "ScanInts",
+                "newPage": false,
+                "searchKey": "scanner.ScanInts",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanInts"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanInts = 1 << -Int\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanFloats",
+              "documentation": {
+                "identifier": "ScanFloats",
+                "newPage": false,
+                "searchKey": "scanner.ScanFloats",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanFloats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanFloats = 1 << -Float // includes Ints and hexadecimal floats\n\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanChars",
+              "documentation": {
+                "identifier": "ScanChars",
+                "newPage": false,
+                "searchKey": "scanner.ScanChars",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanChars"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanChars = 1 << -Char\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanStrings",
+              "documentation": {
+                "identifier": "ScanStrings",
+                "newPage": false,
+                "searchKey": "scanner.ScanStrings",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanStrings = 1 << -String\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanRawStrings",
+              "documentation": {
+                "identifier": "ScanRawStrings",
+                "newPage": false,
+                "searchKey": "scanner.ScanRawStrings",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanRawStrings"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanRawStrings = 1 << -RawString\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#ScanComments",
+              "documentation": {
+                "identifier": "ScanComments",
+                "newPage": false,
+                "searchKey": "scanner.ScanComments",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const ScanComments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst ScanComments = 1 << -Comment\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#SkipComments",
+              "documentation": {
+                "identifier": "SkipComments",
+                "newPage": false,
+                "searchKey": "scanner.SkipComments",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const SkipComments"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst SkipComments = 1 << -skipComment // if set with ScanComments, comments become white space\n\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#GoTokens",
+              "documentation": {
+                "identifier": "GoTokens",
+                "newPage": false,
+                "searchKey": "scanner.GoTokens",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoTokens"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoTokens = ...\n```\n\nPredefined mode bits to control recognition of tokens. For instance, to configure a Scanner such that it only recognizes (Go) identifiers, integers, and skips comments, set the Scanner's Mode field to: \n\n```\nScanIdents | ScanInts | SkipComments\n\n```\nWith the exceptions of comments, which are skipped if SkipComments is set, unrecognized tokens are not ignored. Instead, the scanner simply returns the respective individual characters (or possibly sub-tokens). For instance, if the mode is ScanIdents (not ScanStrings), the string \"foo\" is scanned as the token sequence '\"' Ident '\"'. \n\nUse GoTokens to configure the Scanner such that it accepts all Go literal tokens including Go identifiers. Comments will be skipped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#EOF",
+              "documentation": {
+                "identifier": "EOF",
+                "newPage": false,
+                "searchKey": "scanner.EOF",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const EOF"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst EOF = -(iota + 1)\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Ident",
+              "documentation": {
+                "identifier": "Ident",
+                "newPage": false,
+                "searchKey": "scanner.Ident",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Ident"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Ident\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Int",
+              "documentation": {
+                "identifier": "Int",
+                "newPage": false,
+                "searchKey": "scanner.Int",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Int\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Float",
+              "documentation": {
+                "identifier": "Float",
+                "newPage": false,
+                "searchKey": "scanner.Float",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Float"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Float\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Char",
+              "documentation": {
+                "identifier": "Char",
+                "newPage": false,
+                "searchKey": "scanner.Char",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Char"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Char\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "scanner.String",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const String"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst String\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#RawString",
+              "documentation": {
+                "identifier": "RawString",
+                "newPage": false,
+                "searchKey": "scanner.RawString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RawString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RawString\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Comment",
+              "documentation": {
+                "identifier": "Comment",
+                "newPage": false,
+                "searchKey": "scanner.Comment",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Comment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Comment\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#skipComment",
+              "documentation": {
+                "identifier": "skipComment",
+                "newPage": false,
+                "searchKey": "scanner.skipComment",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const skipComment"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst skipComment\n```\n\nThe result of Scan is one of these tokens or a Unicode character. \n\ninternal use only \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#GoWhitespace",
+              "documentation": {
+                "identifier": "GoWhitespace",
+                "newPage": false,
+                "searchKey": "scanner.GoWhitespace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const GoWhitespace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst GoWhitespace = 1<<'\\t' | 1<<'\\n' | 1<<'\\r' | 1<<' '\n```\n\nGoWhitespace is the default value for the Scanner's Whitespace field. Its value selects Go's white space characters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#bufLen",
+              "documentation": {
+                "identifier": "bufLen",
+                "newPage": false,
+                "searchKey": "scanner.bufLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const bufLen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst bufLen = 1024 // at least utf8.UTFMax\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/text/scanner#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/scanner#tokenString",
+              "documentation": {
+                "identifier": "tokenString",
+                "newPage": false,
+                "searchKey": "scanner.tokenString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tokenString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tokenString = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#segmentList",
+              "documentation": {
+                "identifier": "segmentList",
+                "newPage": false,
+                "searchKey": "scanner.segmentList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var segmentList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar segmentList = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#f100",
+              "documentation": {
+                "identifier": "f100",
+                "newPage": false,
+                "searchKey": "scanner.f100",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var f100"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar f100 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#tokenList",
+              "documentation": {
+                "identifier": "tokenList",
+                "newPage": false,
+                "searchKey": "scanner.tokenList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tokenList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tokenList = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/text/scanner#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/scanner#Position",
+              "documentation": {
+                "identifier": "Position",
+                "newPage": false,
+                "searchKey": "scanner.Position",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Position struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Position struct {\n\tFilename string // filename, if any\n\tOffset   int    // byte offset, starting at 0\n\tLine     int    // line number, starting at 1\n\tColumn   int    // column number, starting at 1 (character count per line)\n}\n```\n\nA source position is represented by a Position value. A position is valid if Line > 0. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Position.IsValid",
+                    "documentation": {
+                      "identifier": "Position.IsValid",
+                      "newPage": false,
+                      "searchKey": "scanner.Position.IsValid",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pos *Position) IsValid() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pos *Position) IsValid() bool\n```\n\nIsValid reports whether the position is valid. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Position.String",
+                    "documentation": {
+                      "identifier": "Position.String",
+                      "newPage": false,
+                      "searchKey": "scanner.Position.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pos Position) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pos Position) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#Scanner",
+              "documentation": {
+                "identifier": "Scanner",
+                "newPage": false,
+                "searchKey": "scanner.Scanner",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Scanner struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Scanner struct {\n\t// Input\n\tsrc io.Reader\n\n\t// Source buffer\n\tsrcBuf [bufLen + 1]byte // +1 for sentinel for common case of s.next()\n\tsrcPos int              // reading position (srcBuf index)\n\tsrcEnd int              // source end (srcBuf index)\n\n\t// Source position\n\tsrcBufOffset int // byte offset of srcBuf[0] in source\n\tline         int // line count\n\tcolumn       int // character count\n\tlastLineLen  int // length of last line in characters (for correct column reporting)\n\tlastCharLen  int // length of last character in bytes\n\n\t// Token text buffer\n\t// Typically, token text is stored completely in srcBuf, but in general\n\t// the token text's head may be buffered in tokBuf while the token text's\n\t// tail is stored in srcBuf.\n\ttokBuf bytes.Buffer // token text head that is not in srcBuf anymore\n\ttokPos int          // token text tail position (srcBuf index); valid if >= 0\n\ttokEnd int          // token text tail end (srcBuf index)\n\n\t// One character look-ahead\n\tch rune // character before current srcPos\n\n\t// Error is called for each error encountered. If no Error\n\t// function is set, the error is reported to os.Stderr.\n\tError func(s *Scanner, msg string)\n\n\t// ErrorCount is incremented by one for each error encountered.\n\tErrorCount int\n\n\t// The Mode field controls which tokens are recognized. For instance,\n\t// to recognize Ints, set the ScanInts bit in Mode. The field may be\n\t// changed at any time.\n\tMode uint\n\n\t// The Whitespace field controls which characters are recognized\n\t// as white space. To recognize a character ch <= ' ' as white space,\n\t// set the ch'th bit in Whitespace (the Scanner's behavior is undefined\n\t// for values ch > ' '). The field may be changed at any time.\n\tWhitespace uint64\n\n\t// IsIdentRune is a predicate controlling the characters accepted\n\t// as the ith rune in an identifier. The set of valid characters\n\t// must not intersect with the set of white space characters.\n\t// If no IsIdentRune function is set, regular Go identifiers are\n\t// accepted instead. The field may be changed at any time.\n\tIsIdentRune func(ch rune, i int) bool\n\n\t// Start position of most recently scanned token; set by Scan.\n\t// Calling Init or Next invalidates the position (Line == 0).\n\t// The Filename field is always left untouched by the Scanner.\n\t// If an error is reported (via Error) and Position is invalid,\n\t// the scanner is not inside a token. Call Pos to obtain an error\n\t// position in that case, or to obtain the position immediately\n\t// after the most recently scanned token.\n\tPosition\n}\n```\n\nA Scanner implements reading of Unicode characters and tokens from an io.Reader. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.Init",
+                    "documentation": {
+                      "identifier": "Scanner.Init",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Init(src io.Reader) *Scanner"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Init(src io.Reader) *Scanner\n```\n\nInit initializes a Scanner with a new source and returns s. Error is set to nil, ErrorCount is set to 0, Mode is set to GoTokens, and Whitespace is set to GoWhitespace. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.next",
+                    "documentation": {
+                      "identifier": "Scanner.next",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.next",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) next() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) next() rune\n```\n\nnext reads and returns the next Unicode character. It is designed such that only a minimal amount of work needs to be done in the common ASCII case (one test to check for both ASCII and end-of-buffer, and one test to check for newlines). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.Next",
+                    "documentation": {
+                      "identifier": "Scanner.Next",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Next",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Next() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Next() rune\n```\n\nNext reads and returns the next Unicode character. It returns EOF at the end of the source. It reports a read error by calling s.Error, if not nil; otherwise it prints an error message to os.Stderr. Next does not update the Scanner's Position field; use Pos() to get the current position. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.Peek",
+                    "documentation": {
+                      "identifier": "Scanner.Peek",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Peek",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Peek() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Peek() rune\n```\n\nPeek returns the next Unicode character in the source without advancing the scanner. It returns EOF if the scanner's position is at the last character of the source. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.error",
+                    "documentation": {
+                      "identifier": "Scanner.error",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) error(msg string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) error(msg string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.errorf",
+                    "documentation": {
+                      "identifier": "Scanner.errorf",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.errorf",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) errorf(format string, args ...interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) errorf(format string, args ...interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.isIdentRune",
+                    "documentation": {
+                      "identifier": "Scanner.isIdentRune",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.isIdentRune",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) isIdentRune(ch rune, i int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) isIdentRune(ch rune, i int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanIdentifier",
+                    "documentation": {
+                      "identifier": "Scanner.scanIdentifier",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanIdentifier",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanIdentifier() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanIdentifier() rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.digits",
+                    "documentation": {
+                      "identifier": "Scanner.digits",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.digits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) digits(ch0 rune, base int, invalid *rune) (ch rune, digsep int)\n```\n\ndigits accepts the sequence { digit | '_' } starting with ch0. If base <= 10, digits accepts any decimal digit but records the first invalid digit >= base in *invalid if *invalid == 0. digits returns the first rune that is not part of the sequence anymore, and a bitset describing whether the sequence contained digits (bit 0 is set), or separators '_' (bit 1 is set). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanNumber",
+                    "documentation": {
+                      "identifier": "Scanner.scanNumber",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanNumber",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanNumber(ch rune, seenDot bool) (rune, rune)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanDigits",
+                    "documentation": {
+                      "identifier": "Scanner.scanDigits",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanDigits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanDigits(ch rune, base, n int) rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanDigits(ch rune, base, n int) rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanEscape",
+                    "documentation": {
+                      "identifier": "Scanner.scanEscape",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanEscape",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanEscape(quote rune) rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanEscape(quote rune) rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanString",
+                    "documentation": {
+                      "identifier": "Scanner.scanString",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanString(quote rune) (n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanString(quote rune) (n int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanRawString",
+                    "documentation": {
+                      "identifier": "Scanner.scanRawString",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanRawString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanRawString()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanRawString()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanChar",
+                    "documentation": {
+                      "identifier": "Scanner.scanChar",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanChar",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanChar()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanChar()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.scanComment",
+                    "documentation": {
+                      "identifier": "Scanner.scanComment",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.scanComment",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) scanComment(ch rune) rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) scanComment(ch rune) rune\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.Scan",
+                    "documentation": {
+                      "identifier": "Scanner.Scan",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Scan",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Scan() rune"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Scan() rune\n```\n\nScan reads the next token or Unicode character from source and returns it. It only recognizes tokens t for which the respective Mode bit (1<<-t) is set. It returns EOF at the end of the source. It reports scanner errors (read and token errors) by calling s.Error, if not nil; otherwise it prints an error message to os.Stderr. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.Pos",
+                    "documentation": {
+                      "identifier": "Scanner.Pos",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.Pos",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) Pos() (pos Position)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) Pos() (pos Position)\n```\n\nPos returns the position of the character immediately after the character or token returned by the last call to Next or Scan. Use the Scanner's Position field for the start position of the most recently scanned token. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/text/scanner#Scanner.TokenText",
+                    "documentation": {
+                      "identifier": "Scanner.TokenText",
+                      "newPage": false,
+                      "searchKey": "scanner.Scanner.TokenText",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Scanner) TokenText() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Scanner) TokenText() string\n```\n\nTokenText returns the string corresponding to the most recently scanned token. Valid after calling Scan and in calls of Scanner.Error. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#StringReader",
+              "documentation": {
+                "identifier": "StringReader",
+                "newPage": false,
+                "searchKey": "scanner.StringReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringReader struct {\n\tdata []string\n\tstep int\n}\n```\n\nA StringReader delivers its data one string segment at a time via Read. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/text/scanner#StringReader.Read",
+                    "documentation": {
+                      "identifier": "StringReader.Read",
+                      "newPage": false,
+                      "searchKey": "scanner.StringReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *StringReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *StringReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#token",
+              "documentation": {
+                "identifier": "token",
+                "newPage": false,
+                "searchKey": "scanner.token",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type token struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype token struct {\n\ttok  rune\n\ttext string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#errReader",
+              "documentation": {
+                "identifier": "errReader",
+                "newPage": false,
+                "searchKey": "scanner.errReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errReader struct{}\n```\n\nAn errReader returns (0, err) where err is not io.EOF. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/text/scanner#errReader.Read",
+                    "documentation": {
+                      "identifier": "errReader.Read",
+                      "newPage": false,
+                      "searchKey": "scanner.errReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (errReader) Read(b []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (errReader) Read(b []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#countReader",
+              "documentation": {
+                "identifier": "countReader",
+                "newPage": false,
+                "searchKey": "scanner.countReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type countReader int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype countReader int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/text/scanner#countReader.Read",
+                    "documentation": {
+                      "identifier": "countReader.Read",
+                      "newPage": false,
+                      "searchKey": "scanner.countReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *countReader) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *countReader) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/text/scanner#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/scanner#TokenString",
+              "documentation": {
+                "identifier": "TokenString",
+                "newPage": false,
+                "searchKey": "scanner.TokenString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TokenString(tok rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TokenString(tok rune) string\n```\n\nTokenString returns a printable string for a token or Unicode character. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#lower",
+              "documentation": {
+                "identifier": "lower",
+                "newPage": false,
+                "searchKey": "scanner.lower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lower(ch rune) rune"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lower(ch rune) rune\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#isDecimal",
+              "documentation": {
+                "identifier": "isDecimal",
+                "newPage": false,
+                "searchKey": "scanner.isDecimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isDecimal(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isDecimal(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#isHex",
+              "documentation": {
+                "identifier": "isHex",
+                "newPage": false,
+                "searchKey": "scanner.isHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isHex(ch rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isHex(ch rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#litname",
+              "documentation": {
+                "identifier": "litname",
+                "newPage": false,
+                "searchKey": "scanner.litname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func litname(prefix rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc litname(prefix rune) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#invalidSep",
+              "documentation": {
+                "identifier": "invalidSep",
+                "newPage": false,
+                "searchKey": "scanner.invalidSep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func invalidSep(x string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc invalidSep(x string) int\n```\n\ninvalidSep returns the index of the first invalid separator in x, or -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#digitVal",
+              "documentation": {
+                "identifier": "digitVal",
+                "newPage": false,
+                "searchKey": "scanner.digitVal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func digitVal(ch rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc digitVal(ch rune) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#readRuneSegments",
+              "documentation": {
+                "identifier": "readRuneSegments",
+                "newPage": false,
+                "searchKey": "scanner.readRuneSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readRuneSegments(t *testing.T, segments []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readRuneSegments(t *testing.T, segments []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestNext",
+              "documentation": {
+                "identifier": "TestNext",
+                "newPage": false,
+                "searchKey": "scanner.TestNext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#makeSource",
+              "documentation": {
+                "identifier": "makeSource",
+                "newPage": false,
+                "searchKey": "scanner.makeSource",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeSource(pattern string) *bytes.Buffer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeSource(pattern string) *bytes.Buffer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#checkTok",
+              "documentation": {
+                "identifier": "checkTok",
+                "newPage": false,
+                "searchKey": "scanner.checkTok",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkTok(t *testing.T, s *Scanner, line int, got, want rune, text string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#checkTokErr",
+              "documentation": {
+                "identifier": "checkTokErr",
+                "newPage": false,
+                "searchKey": "scanner.checkTokErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkTokErr(t *testing.T, s *Scanner, line int, want rune, text string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#countNewlines",
+              "documentation": {
+                "identifier": "countNewlines",
+                "newPage": false,
+                "searchKey": "scanner.countNewlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countNewlines(s string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countNewlines(s string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#testScan",
+              "documentation": {
+                "identifier": "testScan",
+                "newPage": false,
+                "searchKey": "scanner.testScan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testScan(t *testing.T, mode uint)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testScan(t *testing.T, mode uint)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScan",
+              "documentation": {
+                "identifier": "TestScan",
+                "newPage": false,
+                "searchKey": "scanner.TestScan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScan(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScan(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestInvalidExponent",
+              "documentation": {
+                "identifier": "TestInvalidExponent",
+                "newPage": false,
+                "searchKey": "scanner.TestInvalidExponent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidExponent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidExponent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestPosition",
+              "documentation": {
+                "identifier": "TestPosition",
+                "newPage": false,
+                "searchKey": "scanner.TestPosition",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPosition(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPosition(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanZeroMode",
+              "documentation": {
+                "identifier": "TestScanZeroMode",
+                "newPage": false,
+                "searchKey": "scanner.TestScanZeroMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanZeroMode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanZeroMode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#testScanSelectedMode",
+              "documentation": {
+                "identifier": "testScanSelectedMode",
+                "newPage": false,
+                "searchKey": "scanner.testScanSelectedMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testScanSelectedMode(t *testing.T, mode uint, class rune)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testScanSelectedMode(t *testing.T, mode uint, class rune)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanSelectedMask",
+              "documentation": {
+                "identifier": "TestScanSelectedMask",
+                "newPage": false,
+                "searchKey": "scanner.TestScanSelectedMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanSelectedMask(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanSelectedMask(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanCustomIdent",
+              "documentation": {
+                "identifier": "TestScanCustomIdent",
+                "newPage": false,
+                "searchKey": "scanner.TestScanCustomIdent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanCustomIdent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanCustomIdent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanNext",
+              "documentation": {
+                "identifier": "TestScanNext",
+                "newPage": false,
+                "searchKey": "scanner.TestScanNext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanNext(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanNext(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanWhitespace",
+              "documentation": {
+                "identifier": "TestScanWhitespace",
+                "newPage": false,
+                "searchKey": "scanner.TestScanWhitespace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanWhitespace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanWhitespace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#testError",
+              "documentation": {
+                "identifier": "testError",
+                "newPage": false,
+                "searchKey": "scanner.testError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testError(t *testing.T, src, pos, msg string, tok rune)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testError(t *testing.T, src, pos, msg string, tok rune)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestError",
+              "documentation": {
+                "identifier": "TestError",
+                "newPage": false,
+                "searchKey": "scanner.TestError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestIOError",
+              "documentation": {
+                "identifier": "TestIOError",
+                "newPage": false,
+                "searchKey": "scanner.TestIOError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIOError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIOError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#checkPos",
+              "documentation": {
+                "identifier": "checkPos",
+                "newPage": false,
+                "searchKey": "scanner.checkPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkPos(t *testing.T, got, want Position)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkPos(t *testing.T, got, want Position)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#checkNextPos",
+              "documentation": {
+                "identifier": "checkNextPos",
+                "newPage": false,
+                "searchKey": "scanner.checkNextPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkNextPos(t *testing.T, s *Scanner, offset, line, column int, char rune)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#checkScanPos",
+              "documentation": {
+                "identifier": "checkScanPos",
+                "newPage": false,
+                "searchKey": "scanner.checkScanPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkScanPos(t *testing.T, s *Scanner, offset, line, column int, char rune)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestPos",
+              "documentation": {
+                "identifier": "TestPos",
+                "newPage": false,
+                "searchKey": "scanner.TestPos",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPos(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPos(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestNextEOFHandling",
+              "documentation": {
+                "identifier": "TestNextEOFHandling",
+                "newPage": false,
+                "searchKey": "scanner.TestNextEOFHandling",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNextEOFHandling(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNextEOFHandling(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestScanEOFHandling",
+              "documentation": {
+                "identifier": "TestScanEOFHandling",
+                "newPage": false,
+                "searchKey": "scanner.TestScanEOFHandling",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanEOFHandling(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanEOFHandling(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestIssue29723",
+              "documentation": {
+                "identifier": "TestIssue29723",
+                "newPage": false,
+                "searchKey": "scanner.TestIssue29723",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue29723(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue29723(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestNumbers",
+              "documentation": {
+                "identifier": "TestNumbers",
+                "newPage": false,
+                "searchKey": "scanner.TestNumbers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNumbers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNumbers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#TestIssue30320",
+              "documentation": {
+                "identifier": "TestIssue30320",
+                "newPage": false,
+                "searchKey": "scanner.TestIssue30320",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue30320(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue30320(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/scanner#extractInts",
+              "documentation": {
+                "identifier": "extractInts",
+                "newPage": false,
+                "searchKey": "scanner.extractInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractInts(t string, mode uint) (res string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractInts(t string, mode uint) (res string)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

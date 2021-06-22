@@ -1,0 +1,160 @@
+{
+  "pathID": "/runtime/metrics_test",
+  "documentation": {
+    "identifier": "metrics_test",
+    "newPage": true,
+    "searchKey": "runtime/metrics_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package metrics_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/runtime/metrics_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#TestDescriptionNameFormat",
+              "documentation": {
+                "identifier": "TestDescriptionNameFormat",
+                "newPage": false,
+                "searchKey": "metrics_test.TestDescriptionNameFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDescriptionNameFormat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDescriptionNameFormat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#extractMetricDocs",
+              "documentation": {
+                "identifier": "extractMetricDocs",
+                "newPage": false,
+                "searchKey": "metrics_test.extractMetricDocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func extractMetricDocs(t *testing.T) map[string]string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc extractMetricDocs(t *testing.T) map[string]string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#TestDescriptionDocs",
+              "documentation": {
+                "identifier": "TestDescriptionDocs",
+                "newPage": false,
+                "searchKey": "metrics_test.TestDescriptionDocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDescriptionDocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDescriptionDocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#ExampleRead_readingOneMetric",
+              "documentation": {
+                "identifier": "ExampleRead_readingOneMetric",
+                "newPage": false,
+                "searchKey": "metrics_test.ExampleRead_readingOneMetric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead_readingOneMetric()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead_readingOneMetric()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#ExampleRead_readingAllMetrics",
+              "documentation": {
+                "identifier": "ExampleRead_readingAllMetrics",
+                "newPage": false,
+                "searchKey": "metrics_test.ExampleRead_readingAllMetrics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRead_readingAllMetrics()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRead_readingAllMetrics()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/metrics_test#medianBucket",
+              "documentation": {
+                "identifier": "medianBucket",
+                "newPage": false,
+                "searchKey": "metrics_test.medianBucket",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func medianBucket(h *metrics.Float64Histogram) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc medianBucket(h *metrics.Float64Histogram) float64\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

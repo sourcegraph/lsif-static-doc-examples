@@ -1,0 +1,181 @@
+{
+  "pathID": "/net/smtp_test",
+  "documentation": {
+    "identifier": "smtp_test",
+    "newPage": true,
+    "searchKey": "net/smtp_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package smtp_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/smtp_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/smtp_test#from",
+              "documentation": {
+                "identifier": "from",
+                "newPage": false,
+                "searchKey": "smtp_test.from",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var from"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar from = \"gopher@example.net\"\n```\n\nvariables to make ExamplePlainAuth compile, without adding unnecessary noise there. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/smtp_test#msg",
+              "documentation": {
+                "identifier": "msg",
+                "newPage": false,
+                "searchKey": "smtp_test.msg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var msg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar msg = []byte(\"dummy message\")\n```\n\nvariables to make ExamplePlainAuth compile, without adding unnecessary noise there. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/smtp_test#recipients",
+              "documentation": {
+                "identifier": "recipients",
+                "newPage": false,
+                "searchKey": "smtp_test.recipients",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var recipients"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar recipients = []string{\"foo@example.com\"}\n```\n\nvariables to make ExamplePlainAuth compile, without adding unnecessary noise there. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/smtp_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/smtp_test#Example",
+              "documentation": {
+                "identifier": "Example",
+                "newPage": false,
+                "searchKey": "smtp_test.Example",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/smtp_test#ExamplePlainAuth",
+              "documentation": {
+                "identifier": "ExamplePlainAuth",
+                "newPage": false,
+                "searchKey": "smtp_test.ExamplePlainAuth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExamplePlainAuth()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExamplePlainAuth()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/smtp_test#ExampleSendMail",
+              "documentation": {
+                "identifier": "ExampleSendMail",
+                "newPage": false,
+                "searchKey": "smtp_test.ExampleSendMail",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSendMail()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSendMail()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

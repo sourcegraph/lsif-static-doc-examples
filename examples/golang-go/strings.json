@@ -1,0 +1,2709 @@
+{
+  "pathID": "/strings",
+  "documentation": {
+    "identifier": "strings",
+    "newPage": true,
+    "searchKey": "strings",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package strings"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package strings implements simple functions to manipulate UTF-8 encoded strings. \n\nFor information about UTF-8 strings in Go, see [https://blog.golang.org/strings](https://blog.golang.org/strings). \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/strings#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings#countCutOff",
+              "documentation": {
+                "identifier": "countCutOff",
+                "newPage": false,
+                "searchKey": "strings.countCutOff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const countCutOff"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst countCutOff = 8\n```\n\ncountCutOff controls the ratio of a string length to a number of replacements at which (*byteStringReplacer).Replace switches algorithms. For strings with higher ration of length to replacements than that value, we call Count, for each replacement from toReplace. For strings, with a lower ratio we use simple loop, because of Count overhead. countCutOff is an empirically determined overhead multiplier. TODO(tocarip) revisit once we have register-based abi/mid-stack inlining. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings#asciiSpace",
+              "documentation": {
+                "identifier": "asciiSpace",
+                "newPage": false,
+                "searchKey": "strings.asciiSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var asciiSpace"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar asciiSpace = [256]uint8{'\\t': 1, '\\n': 1, '\\v': 1, '\\f': 1, '\\r': 1, ' ': 1}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings#Builder",
+              "documentation": {
+                "identifier": "Builder",
+                "newPage": false,
+                "searchKey": "strings.Builder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Builder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Builder struct {\n\taddr *Builder // of receiver, to detect copies by value\n\tbuf  []byte\n}\n```\n\nA Builder is used to efficiently build a string using Write methods. It minimizes memory copying. The zero value is ready to use. Do not copy a non-zero Builder. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.copyCheck",
+                    "documentation": {
+                      "identifier": "Builder.copyCheck",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.copyCheck",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) copyCheck()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) copyCheck()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.String",
+                    "documentation": {
+                      "identifier": "Builder.String",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.String",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) String() string\n```\n\nString returns the accumulated string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.Len",
+                    "documentation": {
+                      "identifier": "Builder.Len",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) Len() int\n```\n\nLen returns the number of accumulated bytes; b.Len() == len(b.String()). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.Cap",
+                    "documentation": {
+                      "identifier": "Builder.Cap",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.Cap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) Cap() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) Cap() int\n```\n\nCap returns the capacity of the builder's underlying byte slice. It is the total space allocated for the string being built and includes any bytes already written. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.Reset",
+                    "documentation": {
+                      "identifier": "Builder.Reset",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) Reset()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) Reset()\n```\n\nReset resets the Builder to be empty. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.grow",
+                    "documentation": {
+                      "identifier": "Builder.grow",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.grow",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) grow(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) grow(n int)\n```\n\ngrow copies the buffer to a new, larger buffer so that there are at least n bytes of capacity beyond len(b.buf). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.Grow",
+                    "documentation": {
+                      "identifier": "Builder.Grow",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.Grow",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) Grow(n int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) Grow(n int)\n```\n\nGrow grows b's capacity, if necessary, to guarantee space for another n bytes. After Grow(n), at least n bytes can be written to b without another allocation. If n is negative, Grow panics. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.Write",
+                    "documentation": {
+                      "identifier": "Builder.Write",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) Write(p []byte) (int, error)\n```\n\nWrite appends the contents of p to b's buffer. Write always returns len(p), nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.WriteByte",
+                    "documentation": {
+                      "identifier": "Builder.WriteByte",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.WriteByte",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) WriteByte(c byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) WriteByte(c byte) error\n```\n\nWriteByte appends the byte c to b's buffer. The returned error is always nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.WriteRune",
+                    "documentation": {
+                      "identifier": "Builder.WriteRune",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.WriteRune",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) WriteRune(r rune) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) WriteRune(r rune) (int, error)\n```\n\nWriteRune appends the UTF-8 encoding of Unicode code point r to b's buffer. It returns the length of r and a nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Builder.WriteString",
+                    "documentation": {
+                      "identifier": "Builder.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.Builder.WriteString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Builder) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Builder) WriteString(s string) (int, error)\n```\n\nWriteString appends the contents of s to b's buffer. It returns the length of s and a nil error. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Reader",
+              "documentation": {
+                "identifier": "Reader",
+                "newPage": false,
+                "searchKey": "strings.Reader",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reader struct {\n\ts        string\n\ti        int64 // current reading index\n\tprevRune int   // index of previous rune; or < 0\n}\n```\n\nA Reader implements the io.Reader, io.ReaderAt, io.ByteReader, io.ByteScanner, io.RuneReader, io.RuneScanner, io.Seeker, and io.WriterTo interfaces by reading from a string. The zero value for Reader operates like a Reader of an empty string. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#NewReader",
+                    "documentation": {
+                      "identifier": "NewReader",
+                      "newPage": false,
+                      "searchKey": "strings.NewReader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewReader(s string) *Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewReader(s string) *Reader\n```\n\nNewReader returns a new Reader reading from s. It is similar to bytes.NewBufferString but more efficient and read-only. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.Len",
+                    "documentation": {
+                      "identifier": "Reader.Len",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Len() int\n```\n\nLen returns the number of bytes of the unread portion of the string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.Size",
+                    "documentation": {
+                      "identifier": "Reader.Size",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.Size",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Size() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Size() int64\n```\n\nSize returns the original length of the underlying string. Size is the number of bytes available for reading via ReadAt. The returned value is always the same and is not affected by calls to any other method. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.Read",
+                    "documentation": {
+                      "identifier": "Reader.Read",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Read(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Read(b []byte) (n int, err error)\n```\n\nRead implements the io.Reader interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.ReadAt",
+                    "documentation": {
+                      "identifier": "Reader.ReadAt",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.ReadAt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadAt(b []byte, off int64) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadAt(b []byte, off int64) (n int, err error)\n```\n\nReadAt implements the io.ReaderAt interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.ReadByte",
+                    "documentation": {
+                      "identifier": "Reader.ReadByte",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.ReadByte",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadByte() (byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadByte() (byte, error)\n```\n\nReadByte implements the io.ByteReader interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.UnreadByte",
+                    "documentation": {
+                      "identifier": "Reader.UnreadByte",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.UnreadByte",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) UnreadByte() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) UnreadByte() error\n```\n\nUnreadByte implements the io.ByteScanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.ReadRune",
+                    "documentation": {
+                      "identifier": "Reader.ReadRune",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.ReadRune",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) ReadRune() (ch rune, size int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) ReadRune() (ch rune, size int, err error)\n```\n\nReadRune implements the io.RuneReader interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.UnreadRune",
+                    "documentation": {
+                      "identifier": "Reader.UnreadRune",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.UnreadRune",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) UnreadRune() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) UnreadRune() error\n```\n\nUnreadRune implements the io.RuneScanner interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.Seek",
+                    "documentation": {
+                      "identifier": "Reader.Seek",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.Seek",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Seek(offset int64, whence int) (int64, error)\n```\n\nSeek implements the io.Seeker interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.WriteTo",
+                    "documentation": {
+                      "identifier": "Reader.WriteTo",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.WriteTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) WriteTo(w io.Writer) (n int64, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) WriteTo(w io.Writer) (n int64, err error)\n```\n\nWriteTo implements the io.WriterTo interface. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Reader.Reset",
+                    "documentation": {
+                      "identifier": "Reader.Reset",
+                      "newPage": false,
+                      "searchKey": "strings.Reader.Reset",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Reader) Reset(s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Reader) Reset(s string)\n```\n\nReset resets the Reader to be reading from s. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Replacer",
+              "documentation": {
+                "identifier": "Replacer",
+                "newPage": false,
+                "searchKey": "strings.Replacer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Replacer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Replacer struct {\n\tonce   sync.Once // guards buildOnce method\n\tr      replacer\n\toldnew []string\n}\n```\n\nReplacer replaces a list of strings with replacements. It is safe for concurrent use by multiple goroutines. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#NewReplacer",
+                    "documentation": {
+                      "identifier": "NewReplacer",
+                      "newPage": false,
+                      "searchKey": "strings.NewReplacer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewReplacer(oldnew ...string) *Replacer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewReplacer(oldnew ...string) *Replacer\n```\n\nNewReplacer returns a new Replacer from a list of old, new string pairs. Replacements are performed in the order they appear in the target string, without overlapping matches. The old string comparisons are done in argument order. \n\nNewReplacer panics if given an odd number of arguments. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.buildOnce",
+                    "documentation": {
+                      "identifier": "Replacer.buildOnce",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.buildOnce",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Replacer) buildOnce()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Replacer) buildOnce()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.build",
+                    "documentation": {
+                      "identifier": "Replacer.build",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.build",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *Replacer) build() replacer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *Replacer) build() replacer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.Replace",
+                    "documentation": {
+                      "identifier": "Replacer.Replace",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.Replace",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Replacer) Replace(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Replacer) Replace(s string) string\n```\n\nReplace returns a copy of s with all replacements performed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.WriteString",
+                    "documentation": {
+                      "identifier": "Replacer.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.WriteString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Replacer) WriteString(w io.Writer, s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Replacer) WriteString(w io.Writer, s string) (n int, err error)\n```\n\nWriteString writes s to w with all replacements performed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.Replacer",
+                    "documentation": {
+                      "identifier": "Replacer.Replacer",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.Replacer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Replacer) Replacer() interface{}"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Replacer) Replacer() interface{}\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#Replacer.PrintTrie",
+                    "documentation": {
+                      "identifier": "Replacer.PrintTrie",
+                      "newPage": false,
+                      "searchKey": "strings.Replacer.PrintTrie",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Replacer) PrintTrie() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Replacer) PrintTrie() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#replacer",
+              "documentation": {
+                "identifier": "replacer",
+                "newPage": false,
+                "searchKey": "strings.replacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type replacer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype replacer interface {\n\tReplace(s string) string\n\tWriteString(w io.Writer, s string) (n int, err error)\n}\n```\n\nreplacer is the interface that a replacement algorithm needs to implement. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#trieNode",
+              "documentation": {
+                "identifier": "trieNode",
+                "newPage": false,
+                "searchKey": "strings.trieNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type trieNode struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype trieNode struct {\n\t// value is the value of the trie node's key/value pair. It is empty if\n\t// this node is not a complete key.\n\tvalue string\n\t// priority is the priority (higher is more important) of the trie node's\n\t// key/value pair; keys are not necessarily matched shortest- or longest-\n\t// first. Priority is positive if this node is a complete key, and zero\n\t// otherwise. In the example above, positive/zero priorities are marked\n\t// with a trailing \"+\" or \"-\".\n\tpriority int\n\n\t// prefix is the difference in keys between this trie node and the next.\n\t// In the example above, node n4 has prefix \"cbc\" and n4's next node is n5.\n\t// Node n5 has no children and so has zero prefix, next and table fields.\n\tprefix string\n\tnext   *trieNode\n\n\t// table is a lookup table indexed by the next byte in the key, after\n\t// remapping that byte through genericReplacer.mapping to create a dense\n\t// index. In the example above, the keys only use 'a', 'b', 'c', 'x' and\n\t// 'y', which remap to 0, 1, 2, 3 and 4. All other bytes remap to 5, and\n\t// genericReplacer.tableSize will be 5. Node n0's table will be\n\t// []*trieNode{ 0:n1, 1:n4, 3:n6 }, where the 0, 1 and 3 are the remapped\n\t// 'a', 'b' and 'x'.\n\ttable []*trieNode\n}\n```\n\ntrieNode is a node in a lookup trie for prioritized key/value pairs. Keys and values may be empty. For example, the trie containing keys \"ax\", \"ay\", \"bcbc\", \"x\" and \"xy\" could have eight nodes: \n\n```\nn0  -\nn1  a-\nn2  .x+\nn3  .y+\nn4  b-\nn5  .cbc+\nn6  x+\nn7  .y+\n\n```\nn0 is the root node, and its children are n1, n4 and n6; n1's children are n2 and n3; n4's child is n5; n6's child is n7. Nodes n0, n1 and n4 (marked with a trailing \"-\") are partial keys, and nodes n2, n3, n5, n6 and n7 (marked with a trailing \"+\") are complete keys. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#trieNode.add",
+                    "documentation": {
+                      "identifier": "trieNode.add",
+                      "newPage": false,
+                      "searchKey": "strings.trieNode.add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *trieNode) add(key, val string, priority int, r *genericReplacer)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *trieNode) add(key, val string, priority int, r *genericReplacer)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#genericReplacer",
+              "documentation": {
+                "identifier": "genericReplacer",
+                "newPage": false,
+                "searchKey": "strings.genericReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type genericReplacer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype genericReplacer struct {\n\troot trieNode\n\t// tableSize is the size of a trie node's lookup table. It is the number\n\t// of unique key bytes.\n\ttableSize int\n\t// mapping maps from key bytes to a dense index for trieNode.table.\n\tmapping [256]byte\n}\n```\n\ngenericReplacer is the fully generic algorithm. It's used as a fallback when nothing faster can be used. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#makeGenericReplacer",
+                    "documentation": {
+                      "identifier": "makeGenericReplacer",
+                      "newPage": false,
+                      "searchKey": "strings.makeGenericReplacer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeGenericReplacer(oldnew []string) *genericReplacer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeGenericReplacer(oldnew []string) *genericReplacer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#genericReplacer.lookup",
+                    "documentation": {
+                      "identifier": "genericReplacer.lookup",
+                      "newPage": false,
+                      "searchKey": "strings.genericReplacer.lookup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *genericReplacer) lookup(s string, ignoreRoot bool) (val string, keylen int, found bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *genericReplacer) lookup(s string, ignoreRoot bool) (val string, keylen int, found bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#genericReplacer.Replace",
+                    "documentation": {
+                      "identifier": "genericReplacer.Replace",
+                      "newPage": false,
+                      "searchKey": "strings.genericReplacer.Replace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *genericReplacer) Replace(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *genericReplacer) Replace(s string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#genericReplacer.WriteString",
+                    "documentation": {
+                      "identifier": "genericReplacer.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.genericReplacer.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *genericReplacer) WriteString(w io.Writer, s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *genericReplacer) WriteString(w io.Writer, s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#genericReplacer.printNode",
+                    "documentation": {
+                      "identifier": "genericReplacer.printNode",
+                      "newPage": false,
+                      "searchKey": "strings.genericReplacer.printNode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *genericReplacer) printNode(t *trieNode, depth int) (s string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *genericReplacer) printNode(t *trieNode, depth int) (s string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#appendSliceWriter",
+              "documentation": {
+                "identifier": "appendSliceWriter",
+                "newPage": false,
+                "searchKey": "strings.appendSliceWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type appendSliceWriter []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype appendSliceWriter []byte\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#appendSliceWriter.Write",
+                    "documentation": {
+                      "identifier": "appendSliceWriter.Write",
+                      "newPage": false,
+                      "searchKey": "strings.appendSliceWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *appendSliceWriter) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *appendSliceWriter) Write(p []byte) (int, error)\n```\n\nWrite writes to the buffer to satisfy io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#appendSliceWriter.WriteString",
+                    "documentation": {
+                      "identifier": "appendSliceWriter.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.appendSliceWriter.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *appendSliceWriter) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *appendSliceWriter) WriteString(s string) (int, error)\n```\n\nWriteString writes to the buffer without string->[]byte->string allocations. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#stringWriter",
+              "documentation": {
+                "identifier": "stringWriter",
+                "newPage": false,
+                "searchKey": "strings.stringWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringWriter struct {\n\tw io.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#stringWriter.WriteString",
+                    "documentation": {
+                      "identifier": "stringWriter.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.stringWriter.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w stringWriter) WriteString(s string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w stringWriter) WriteString(s string) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#singleStringReplacer",
+              "documentation": {
+                "identifier": "singleStringReplacer",
+                "newPage": false,
+                "searchKey": "strings.singleStringReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type singleStringReplacer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype singleStringReplacer struct {\n\tfinder *stringFinder\n\t// value is the new string that replaces that pattern when it's found.\n\tvalue string\n}\n```\n\nsingleStringReplacer is the implementation that's used when there is only one string to replace (and that string has more than one byte). \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#makeSingleStringReplacer",
+                    "documentation": {
+                      "identifier": "makeSingleStringReplacer",
+                      "newPage": false,
+                      "searchKey": "strings.makeSingleStringReplacer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeSingleStringReplacer(pattern string, value string) *singleStringReplacer"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeSingleStringReplacer(pattern string, value string) *singleStringReplacer\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#singleStringReplacer.Replace",
+                    "documentation": {
+                      "identifier": "singleStringReplacer.Replace",
+                      "newPage": false,
+                      "searchKey": "strings.singleStringReplacer.Replace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *singleStringReplacer) Replace(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *singleStringReplacer) Replace(s string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#singleStringReplacer.WriteString",
+                    "documentation": {
+                      "identifier": "singleStringReplacer.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.singleStringReplacer.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *singleStringReplacer) WriteString(w io.Writer, s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *singleStringReplacer) WriteString(w io.Writer, s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#byteReplacer",
+              "documentation": {
+                "identifier": "byteReplacer",
+                "newPage": false,
+                "searchKey": "strings.byteReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type byteReplacer [256]byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype byteReplacer [256]byte\n```\n\nbyteReplacer is the implementation that's used when all the \"old\" and \"new\" values are single ASCII bytes. The array contains replacement bytes indexed by old byte. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#byteReplacer.Replace",
+                    "documentation": {
+                      "identifier": "byteReplacer.Replace",
+                      "newPage": false,
+                      "searchKey": "strings.byteReplacer.Replace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *byteReplacer) Replace(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *byteReplacer) Replace(s string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#byteReplacer.WriteString",
+                    "documentation": {
+                      "identifier": "byteReplacer.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.byteReplacer.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *byteReplacer) WriteString(w io.Writer, s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *byteReplacer) WriteString(w io.Writer, s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#byteStringReplacer",
+              "documentation": {
+                "identifier": "byteStringReplacer",
+                "newPage": false,
+                "searchKey": "strings.byteStringReplacer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type byteStringReplacer struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype byteStringReplacer struct {\n\t// replacements contains replacement byte slices indexed by old byte.\n\t// A nil []byte means that the old byte should not be replaced.\n\treplacements [256][]byte\n\t// toReplace keeps a list of bytes to replace. Depending on length of toReplace\n\t// and length of target string it may be faster to use Count, or a plain loop.\n\t// We store single byte as a string, because Count takes a string.\n\ttoReplace []string\n}\n```\n\nbyteStringReplacer is the implementation that's used when all the \"old\" values are single ASCII bytes but the \"new\" values vary in size. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#byteStringReplacer.Replace",
+                    "documentation": {
+                      "identifier": "byteStringReplacer.Replace",
+                      "newPage": false,
+                      "searchKey": "strings.byteStringReplacer.Replace",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *byteStringReplacer) Replace(s string) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *byteStringReplacer) Replace(s string) string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#byteStringReplacer.WriteString",
+                    "documentation": {
+                      "identifier": "byteStringReplacer.WriteString",
+                      "newPage": false,
+                      "searchKey": "strings.byteStringReplacer.WriteString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *byteStringReplacer) WriteString(w io.Writer, s string) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *byteStringReplacer) WriteString(w io.Writer, s string) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#stringFinder",
+              "documentation": {
+                "identifier": "stringFinder",
+                "newPage": false,
+                "searchKey": "strings.stringFinder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringFinder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringFinder struct {\n\t// pattern is the string that we are searching for in the text.\n\tpattern string\n\n\t// badCharSkip[b] contains the distance between the last byte of pattern\n\t// and the rightmost occurrence of b in pattern. If b is not in pattern,\n\t// badCharSkip[b] is len(pattern).\n\t//\n\t// Whenever a mismatch is found with byte b in the text, we can safely\n\t// shift the matching frame at least badCharSkip[b] until the next time\n\t// the matching char could be in alignment.\n\tbadCharSkip [256]int\n\n\t// goodSuffixSkip[i] defines how far we can shift the matching frame given\n\t// that the suffix pattern[i+1:] matches, but the byte pattern[i] does\n\t// not. There are two cases to consider:\n\t//\n\t// 1. The matched suffix occurs elsewhere in pattern (with a different\n\t// byte preceding it that we might possibly match). In this case, we can\n\t// shift the matching frame to align with the next suffix chunk. For\n\t// example, the pattern \"mississi\" has the suffix \"issi\" next occurring\n\t// (in right-to-left order) at index 1, so goodSuffixSkip[3] ==\n\t// shift+len(suffix) == 3+4 == 7.\n\t//\n\t// 2. If the matched suffix does not occur elsewhere in pattern, then the\n\t// matching frame may share part of its prefix with the end of the\n\t// matching suffix. In this case, goodSuffixSkip[i] will contain how far\n\t// to shift the frame to align this portion of the prefix to the\n\t// suffix. For example, in the pattern \"abcxxxabc\", when the first\n\t// mismatch from the back is found to be in position 3, the matching\n\t// suffix \"xxabc\" is not found elsewhere in the pattern. However, its\n\t// rightmost \"abc\" (at position 6) is a prefix of the whole pattern, so\n\t// goodSuffixSkip[3] == shift+len(suffix) == 6+5 == 11.\n\tgoodSuffixSkip []int\n}\n```\n\nstringFinder efficiently finds strings in a source text. It's implemented using the Boyer-Moore string search algorithm: [https://en.wikipedia.org/wiki/Boyer-Moore_string_search_algorithm](https://en.wikipedia.org/wiki/Boyer-Moore_string_search_algorithm) [https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf](https://www.cs.utexas.edu/~moore/publications/fstrpos.pdf) (note: this aged document uses 1-based indexing) \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#makeStringFinder",
+                    "documentation": {
+                      "identifier": "makeStringFinder",
+                      "newPage": false,
+                      "searchKey": "strings.makeStringFinder",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeStringFinder(pattern string) *stringFinder"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeStringFinder(pattern string) *stringFinder\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#stringFinder.next",
+                    "documentation": {
+                      "identifier": "stringFinder.next",
+                      "newPage": false,
+                      "searchKey": "strings.stringFinder.next",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (f *stringFinder) next(text string) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (f *stringFinder) next(text string) int\n```\n\nnext returns the index in text of the first occurrence of the pattern. If the pattern is not found, it returns -1. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#asciiSet",
+              "documentation": {
+                "identifier": "asciiSet",
+                "newPage": false,
+                "searchKey": "strings.asciiSet",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type asciiSet [8]uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype asciiSet [8]uint32\n```\n\nasciiSet is a 32-byte value, where each bit represents the presence of a given ASCII character in the set. The 128-bits of the lower 16 bytes, starting with the least-significant bit of the lowest word to the most-significant bit of the highest word, map to the full range of all 128 ASCII characters. The 128-bits of the upper 16 bytes will be zeroed, ensuring that any non-ASCII character will be reported as not in the set. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strings#makeASCIISet",
+                    "documentation": {
+                      "identifier": "makeASCIISet",
+                      "newPage": false,
+                      "searchKey": "strings.makeASCIISet",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func makeASCIISet(chars string) (as asciiSet, ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc makeASCIISet(chars string) (as asciiSet, ok bool)\n```\n\nmakeASCIISet creates a set of ASCII characters and reports whether all characters in chars are ASCII. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strings#asciiSet.contains",
+                    "documentation": {
+                      "identifier": "asciiSet.contains",
+                      "newPage": false,
+                      "searchKey": "strings.asciiSet.contains",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (as *asciiSet) contains(c byte) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (as *asciiSet) contains(c byte) bool\n```\n\ncontains reports whether c is inside the set. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strings#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strings#noescape",
+              "documentation": {
+                "identifier": "noescape",
+                "newPage": false,
+                "searchKey": "strings.noescape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func noescape(p unsafe.Pointer) unsafe.Pointer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc noescape(p unsafe.Pointer) unsafe.Pointer\n```\n\nnoescape hides a pointer from escape analysis.  noescape is the identity function but escape analysis doesn't think the output depends on the input. noescape is inlined and currently compiles down to zero instructions. USE CAREFULLY! This was copied from the runtime; see issues 23382 and 7921. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Compare",
+              "documentation": {
+                "identifier": "Compare",
+                "newPage": false,
+                "searchKey": "strings.Compare",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Compare(a, b string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Compare(a, b string) int\n```\n\nCompare returns an integer comparing two strings lexicographically. The result will be 0 if a==b, -1 if a < b, and +1 if a > b. \n\nCompare is included only for symmetry with package bytes. It is usually clearer and always faster to use the built-in string comparison operators ==, <, >, and so on. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#getStringWriter",
+              "documentation": {
+                "identifier": "getStringWriter",
+                "newPage": false,
+                "searchKey": "strings.getStringWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func getStringWriter(w io.Writer) io.StringWriter"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc getStringWriter(w io.Writer) io.StringWriter\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#longestCommonSuffix",
+              "documentation": {
+                "identifier": "longestCommonSuffix",
+                "newPage": false,
+                "searchKey": "strings.longestCommonSuffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func longestCommonSuffix(a, b string) (i int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc longestCommonSuffix(a, b string) (i int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#max",
+              "documentation": {
+                "identifier": "max",
+                "newPage": false,
+                "searchKey": "strings.max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func max(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc max(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#explode",
+              "documentation": {
+                "identifier": "explode",
+                "newPage": false,
+                "searchKey": "strings.explode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func explode(s string, n int) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc explode(s string, n int) []string\n```\n\nexplode splits s into a slice of UTF-8 strings, one string per Unicode character up to a maximum of n (n < 0 means no limit). Invalid UTF-8 sequences become correct encodings of U+FFFD. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Count",
+              "documentation": {
+                "identifier": "Count",
+                "newPage": false,
+                "searchKey": "strings.Count",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Count(s, substr string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Count(s, substr string) int\n```\n\nCount counts the number of non-overlapping instances of substr in s. If substr is an empty string, Count returns 1 + the number of Unicode code points in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Contains",
+              "documentation": {
+                "identifier": "Contains",
+                "newPage": false,
+                "searchKey": "strings.Contains",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Contains(s, substr string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Contains(s, substr string) bool\n```\n\nContains reports whether substr is within s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ContainsAny",
+              "documentation": {
+                "identifier": "ContainsAny",
+                "newPage": false,
+                "searchKey": "strings.ContainsAny",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ContainsAny(s, chars string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ContainsAny(s, chars string) bool\n```\n\nContainsAny reports whether any Unicode code points in chars are within s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ContainsRune",
+              "documentation": {
+                "identifier": "ContainsRune",
+                "newPage": false,
+                "searchKey": "strings.ContainsRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ContainsRune(s string, r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ContainsRune(s string, r rune) bool\n```\n\nContainsRune reports whether the Unicode code point r is within s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#LastIndex",
+              "documentation": {
+                "identifier": "LastIndex",
+                "newPage": false,
+                "searchKey": "strings.LastIndex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LastIndex(s, substr string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LastIndex(s, substr string) int\n```\n\nLastIndex returns the index of the last instance of substr in s, or -1 if substr is not present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#IndexByte",
+              "documentation": {
+                "identifier": "IndexByte",
+                "newPage": false,
+                "searchKey": "strings.IndexByte",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexByte(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexByte(s string, c byte) int\n```\n\nIndexByte returns the index of the first instance of c in s, or -1 if c is not present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#IndexRune",
+              "documentation": {
+                "identifier": "IndexRune",
+                "newPage": false,
+                "searchKey": "strings.IndexRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexRune(s string, r rune) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexRune(s string, r rune) int\n```\n\nIndexRune returns the index of the first instance of the Unicode code point r, or -1 if rune is not present in s. If r is utf8.RuneError, it returns the first instance of any invalid UTF-8 byte sequence. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#IndexAny",
+              "documentation": {
+                "identifier": "IndexAny",
+                "newPage": false,
+                "searchKey": "strings.IndexAny",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexAny(s, chars string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexAny(s, chars string) int\n```\n\nIndexAny returns the index of the first instance of any Unicode code point from chars in s, or -1 if no Unicode code point from chars is present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#LastIndexAny",
+              "documentation": {
+                "identifier": "LastIndexAny",
+                "newPage": false,
+                "searchKey": "strings.LastIndexAny",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LastIndexAny(s, chars string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LastIndexAny(s, chars string) int\n```\n\nLastIndexAny returns the index of the last instance of any Unicode code point from chars in s, or -1 if no Unicode code point from chars is present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#LastIndexByte",
+              "documentation": {
+                "identifier": "LastIndexByte",
+                "newPage": false,
+                "searchKey": "strings.LastIndexByte",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LastIndexByte(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LastIndexByte(s string, c byte) int\n```\n\nLastIndexByte returns the index of the last instance of c in s, or -1 if c is not present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#genSplit",
+              "documentation": {
+                "identifier": "genSplit",
+                "newPage": false,
+                "searchKey": "strings.genSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func genSplit(s, sep string, sepSave, n int) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc genSplit(s, sep string, sepSave, n int) []string\n```\n\nGeneric split: splits after each instance of sep, including sepSave bytes of sep in the subarrays. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#SplitN",
+              "documentation": {
+                "identifier": "SplitN",
+                "newPage": false,
+                "searchKey": "strings.SplitN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitN(s, sep string, n int) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitN(s, sep string, n int) []string\n```\n\nSplitN slices s into substrings separated by sep and returns a slice of the substrings between those separators. \n\nThe count determines the number of substrings to return: \n\n```\nn > 0: at most n substrings; the last substring will be the unsplit remainder.\nn == 0: the result is nil (zero substrings)\nn < 0: all substrings\n\n```\nEdge cases for s and sep (for example, empty strings) are handled as described in the documentation for Split. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#SplitAfterN",
+              "documentation": {
+                "identifier": "SplitAfterN",
+                "newPage": false,
+                "searchKey": "strings.SplitAfterN",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitAfterN(s, sep string, n int) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitAfterN(s, sep string, n int) []string\n```\n\nSplitAfterN slices s into substrings after each instance of sep and returns a slice of those substrings. \n\nThe count determines the number of substrings to return: \n\n```\nn > 0: at most n substrings; the last substring will be the unsplit remainder.\nn == 0: the result is nil (zero substrings)\nn < 0: all substrings\n\n```\nEdge cases for s and sep (for example, empty strings) are handled as described in the documentation for SplitAfter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Split",
+              "documentation": {
+                "identifier": "Split",
+                "newPage": false,
+                "searchKey": "strings.Split",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Split(s, sep string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Split(s, sep string) []string\n```\n\nSplit slices s into all substrings separated by sep and returns a slice of the substrings between those separators. \n\nIf s does not contain sep and sep is not empty, Split returns a slice of length 1 whose only element is s. \n\nIf sep is empty, Split splits after each UTF-8 sequence. If both s and sep are empty, Split returns an empty slice. \n\nIt is equivalent to SplitN with a count of -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#SplitAfter",
+              "documentation": {
+                "identifier": "SplitAfter",
+                "newPage": false,
+                "searchKey": "strings.SplitAfter",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SplitAfter(s, sep string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SplitAfter(s, sep string) []string\n```\n\nSplitAfter slices s into all substrings after each instance of sep and returns a slice of those substrings. \n\nIf s does not contain sep and sep is not empty, SplitAfter returns a slice of length 1 whose only element is s. \n\nIf sep is empty, SplitAfter splits after each UTF-8 sequence. If both s and sep are empty, SplitAfter returns an empty slice. \n\nIt is equivalent to SplitAfterN with a count of -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Fields",
+              "documentation": {
+                "identifier": "Fields",
+                "newPage": false,
+                "searchKey": "strings.Fields",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fields(s string) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fields(s string) []string\n```\n\nFields splits the string s around each instance of one or more consecutive white space characters, as defined by unicode.IsSpace, returning a slice of substrings of s or an empty slice if s contains only white space. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#FieldsFunc",
+              "documentation": {
+                "identifier": "FieldsFunc",
+                "newPage": false,
+                "searchKey": "strings.FieldsFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FieldsFunc(s string, f func(rune) bool) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FieldsFunc(s string, f func(rune) bool) []string\n```\n\nFieldsFunc splits the string s at each run of Unicode code points c satisfying f(c) and returns an array of slices of s. If all code points in s satisfy f(c) or the string is empty, an empty slice is returned. \n\nFieldsFunc makes no guarantees about the order in which it calls f(c) and assumes that f always returns the same value for a given c. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Join",
+              "documentation": {
+                "identifier": "Join",
+                "newPage": false,
+                "searchKey": "strings.Join",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Join(elems []string, sep string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Join(elems []string, sep string) string\n```\n\nJoin concatenates the elements of its first argument to create a single string. The separator string sep is placed between elements in the resulting string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#HasPrefix",
+              "documentation": {
+                "identifier": "HasPrefix",
+                "newPage": false,
+                "searchKey": "strings.HasPrefix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasPrefix(s, prefix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasPrefix(s, prefix string) bool\n```\n\nHasPrefix tests whether the string s begins with prefix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#HasSuffix",
+              "documentation": {
+                "identifier": "HasSuffix",
+                "newPage": false,
+                "searchKey": "strings.HasSuffix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HasSuffix(s, suffix string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HasSuffix(s, suffix string) bool\n```\n\nHasSuffix tests whether the string s ends with suffix. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Map",
+              "documentation": {
+                "identifier": "Map",
+                "newPage": false,
+                "searchKey": "strings.Map",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Map(mapping func(rune) rune, s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Map(mapping func(rune) rune, s string) string\n```\n\nMap returns a copy of the string s with all its characters modified according to the mapping function. If mapping returns a negative value, the character is dropped from the string with no replacement. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Repeat",
+              "documentation": {
+                "identifier": "Repeat",
+                "newPage": false,
+                "searchKey": "strings.Repeat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Repeat(s string, count int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Repeat(s string, count int) string\n```\n\nRepeat returns a new string consisting of count copies of the string s. \n\nIt panics if count is negative or if the result of (len(s) * count) overflows. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToUpper",
+              "documentation": {
+                "identifier": "ToUpper",
+                "newPage": false,
+                "searchKey": "strings.ToUpper",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToUpper(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToUpper(s string) string\n```\n\nToUpper returns s with all Unicode letters mapped to their upper case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToLower",
+              "documentation": {
+                "identifier": "ToLower",
+                "newPage": false,
+                "searchKey": "strings.ToLower",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToLower(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToLower(s string) string\n```\n\nToLower returns s with all Unicode letters mapped to their lower case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToTitle",
+              "documentation": {
+                "identifier": "ToTitle",
+                "newPage": false,
+                "searchKey": "strings.ToTitle",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToTitle(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToTitle(s string) string\n```\n\nToTitle returns a copy of the string s with all Unicode letters mapped to their Unicode title case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToUpperSpecial",
+              "documentation": {
+                "identifier": "ToUpperSpecial",
+                "newPage": false,
+                "searchKey": "strings.ToUpperSpecial",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToUpperSpecial(c unicode.SpecialCase, s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToUpperSpecial(c unicode.SpecialCase, s string) string\n```\n\nToUpperSpecial returns a copy of the string s with all Unicode letters mapped to their upper case using the case mapping specified by c. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToLowerSpecial",
+              "documentation": {
+                "identifier": "ToLowerSpecial",
+                "newPage": false,
+                "searchKey": "strings.ToLowerSpecial",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToLowerSpecial(c unicode.SpecialCase, s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToLowerSpecial(c unicode.SpecialCase, s string) string\n```\n\nToLowerSpecial returns a copy of the string s with all Unicode letters mapped to their lower case using the case mapping specified by c. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToTitleSpecial",
+              "documentation": {
+                "identifier": "ToTitleSpecial",
+                "newPage": false,
+                "searchKey": "strings.ToTitleSpecial",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToTitleSpecial(c unicode.SpecialCase, s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToTitleSpecial(c unicode.SpecialCase, s string) string\n```\n\nToTitleSpecial returns a copy of the string s with all Unicode letters mapped to their Unicode title case, giving priority to the special casing rules. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ToValidUTF8",
+              "documentation": {
+                "identifier": "ToValidUTF8",
+                "newPage": false,
+                "searchKey": "strings.ToValidUTF8",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToValidUTF8(s, replacement string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToValidUTF8(s, replacement string) string\n```\n\nToValidUTF8 returns a copy of the string s with each run of invalid UTF-8 byte sequences replaced by the replacement string, which may be empty. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#isSeparator",
+              "documentation": {
+                "identifier": "isSeparator",
+                "newPage": false,
+                "searchKey": "strings.isSeparator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isSeparator(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isSeparator(r rune) bool\n```\n\nisSeparator reports whether the rune could mark a word boundary. TODO: update when package unicode captures more of the properties. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Title",
+              "documentation": {
+                "identifier": "Title",
+                "newPage": false,
+                "searchKey": "strings.Title",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Title(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Title(s string) string\n```\n\nTitle returns a copy of the string s with all Unicode letters that begin words mapped to their Unicode title case. \n\nBUG(rsc): The rule Title uses for word boundaries does not handle Unicode punctuation properly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimLeftFunc",
+              "documentation": {
+                "identifier": "TrimLeftFunc",
+                "newPage": false,
+                "searchKey": "strings.TrimLeftFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimLeftFunc(s string, f func(rune) bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimLeftFunc(s string, f func(rune) bool) string\n```\n\nTrimLeftFunc returns a slice of the string s with all leading Unicode code points c satisfying f(c) removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimRightFunc",
+              "documentation": {
+                "identifier": "TrimRightFunc",
+                "newPage": false,
+                "searchKey": "strings.TrimRightFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimRightFunc(s string, f func(rune) bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimRightFunc(s string, f func(rune) bool) string\n```\n\nTrimRightFunc returns a slice of the string s with all trailing Unicode code points c satisfying f(c) removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimFunc",
+              "documentation": {
+                "identifier": "TrimFunc",
+                "newPage": false,
+                "searchKey": "strings.TrimFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimFunc(s string, f func(rune) bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimFunc(s string, f func(rune) bool) string\n```\n\nTrimFunc returns a slice of the string s with all leading and trailing Unicode code points c satisfying f(c) removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#IndexFunc",
+              "documentation": {
+                "identifier": "IndexFunc",
+                "newPage": false,
+                "searchKey": "strings.IndexFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IndexFunc(s string, f func(rune) bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IndexFunc(s string, f func(rune) bool) int\n```\n\nIndexFunc returns the index into s of the first Unicode code point satisfying f(c), or -1 if none do. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#LastIndexFunc",
+              "documentation": {
+                "identifier": "LastIndexFunc",
+                "newPage": false,
+                "searchKey": "strings.LastIndexFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LastIndexFunc(s string, f func(rune) bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LastIndexFunc(s string, f func(rune) bool) int\n```\n\nLastIndexFunc returns the index into s of the last Unicode code point satisfying f(c), or -1 if none do. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#indexFunc",
+              "documentation": {
+                "identifier": "indexFunc",
+                "newPage": false,
+                "searchKey": "strings.indexFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func indexFunc(s string, f func(rune) bool, truth bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc indexFunc(s string, f func(rune) bool, truth bool) int\n```\n\nindexFunc is the same as IndexFunc except that if truth==false, the sense of the predicate function is inverted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#lastIndexFunc",
+              "documentation": {
+                "identifier": "lastIndexFunc",
+                "newPage": false,
+                "searchKey": "strings.lastIndexFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lastIndexFunc(s string, f func(rune) bool, truth bool) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lastIndexFunc(s string, f func(rune) bool, truth bool) int\n```\n\nlastIndexFunc is the same as LastIndexFunc except that if truth==false, the sense of the predicate function is inverted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#makeCutsetFunc",
+              "documentation": {
+                "identifier": "makeCutsetFunc",
+                "newPage": false,
+                "searchKey": "strings.makeCutsetFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeCutsetFunc(cutset string) func(rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeCutsetFunc(cutset string) func(rune) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Trim",
+              "documentation": {
+                "identifier": "Trim",
+                "newPage": false,
+                "searchKey": "strings.Trim",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Trim(s, cutset string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Trim(s, cutset string) string\n```\n\nTrim returns a slice of the string s with all leading and trailing Unicode code points contained in cutset removed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimLeft",
+              "documentation": {
+                "identifier": "TrimLeft",
+                "newPage": false,
+                "searchKey": "strings.TrimLeft",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimLeft(s, cutset string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimLeft(s, cutset string) string\n```\n\nTrimLeft returns a slice of the string s with all leading Unicode code points contained in cutset removed. \n\nTo remove a prefix, use TrimPrefix instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimRight",
+              "documentation": {
+                "identifier": "TrimRight",
+                "newPage": false,
+                "searchKey": "strings.TrimRight",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimRight(s, cutset string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimRight(s, cutset string) string\n```\n\nTrimRight returns a slice of the string s, with all trailing Unicode code points contained in cutset removed. \n\nTo remove a suffix, use TrimSuffix instead. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimSpace",
+              "documentation": {
+                "identifier": "TrimSpace",
+                "newPage": false,
+                "searchKey": "strings.TrimSpace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimSpace(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimSpace(s string) string\n```\n\nTrimSpace returns a slice of the string s, with all leading and trailing white space removed, as defined by Unicode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimPrefix",
+              "documentation": {
+                "identifier": "TrimPrefix",
+                "newPage": false,
+                "searchKey": "strings.TrimPrefix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimPrefix(s, prefix string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimPrefix(s, prefix string) string\n```\n\nTrimPrefix returns s without the provided leading prefix string. If s doesn't start with prefix, s is returned unchanged. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#TrimSuffix",
+              "documentation": {
+                "identifier": "TrimSuffix",
+                "newPage": false,
+                "searchKey": "strings.TrimSuffix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TrimSuffix(s, suffix string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TrimSuffix(s, suffix string) string\n```\n\nTrimSuffix returns s without the provided trailing suffix string. If s doesn't end with suffix, s is returned unchanged. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Replace",
+              "documentation": {
+                "identifier": "Replace",
+                "newPage": false,
+                "searchKey": "strings.Replace",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Replace(s, old, new string, n int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Replace(s, old, new string, n int) string\n```\n\nReplace returns a copy of the string s with the first n non-overlapping instances of old replaced by new. If old is empty, it matches at the beginning of the string and after each UTF-8 sequence, yielding up to k+1 replacements for a k-rune string. If n < 0, there is no limit on the number of replacements. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#ReplaceAll",
+              "documentation": {
+                "identifier": "ReplaceAll",
+                "newPage": false,
+                "searchKey": "strings.ReplaceAll",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReplaceAll(s, old, new string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReplaceAll(s, old, new string) string\n```\n\nReplaceAll returns a copy of the string s with all non-overlapping instances of old replaced by new. If old is empty, it matches at the beginning of the string and after each UTF-8 sequence, yielding up to k+1 replacements for a k-rune string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#EqualFold",
+              "documentation": {
+                "identifier": "EqualFold",
+                "newPage": false,
+                "searchKey": "strings.EqualFold",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EqualFold(s, t string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EqualFold(s, t string) bool\n```\n\nEqualFold reports whether s and t, interpreted as UTF-8 strings, are equal under Unicode case-folding, which is a more general form of case-insensitivity. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#Index",
+              "documentation": {
+                "identifier": "Index",
+                "newPage": false,
+                "searchKey": "strings.Index",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Index(s, substr string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Index(s, substr string) int\n```\n\nIndex returns the index of the first instance of substr in s, or -1 if substr is not present in s. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#StringFind",
+              "documentation": {
+                "identifier": "StringFind",
+                "newPage": false,
+                "searchKey": "strings.StringFind",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StringFind(pattern, text string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StringFind(pattern, text string) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strings#DumpTables",
+              "documentation": {
+                "identifier": "DumpTables",
+                "newPage": false,
+                "searchKey": "strings.DumpTables",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DumpTables(pattern string) ([]int, []int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DumpTables(pattern string) ([]int, []int)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

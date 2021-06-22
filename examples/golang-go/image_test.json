@@ -1,0 +1,303 @@
+{
+  "pathID": "/image_test",
+  "documentation": {
+    "identifier": "image_test",
+    "newPage": true,
+    "searchKey": "image_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package image_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "This example demonstrates decoding a JPEG image and examining its pixels. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/image_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image_test#data",
+              "documentation": {
+                "identifier": "data",
+                "newPage": false,
+                "searchKey": "image_test.data",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const data"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst data = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image_test#imageTests",
+              "documentation": {
+                "identifier": "imageTests",
+                "newPage": false,
+                "searchKey": "image_test.imageTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var imageTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar imageTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image_test#imageTest",
+              "documentation": {
+                "identifier": "imageTest",
+                "newPage": false,
+                "searchKey": "image_test.imageTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type imageTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype imageTest struct {\n\tgoldenFilename string\n\tfilename       string\n\ttolerance      int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image_test#Example_decodeConfig",
+              "documentation": {
+                "identifier": "Example_decodeConfig",
+                "newPage": false,
+                "searchKey": "image_test.Example_decodeConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_decodeConfig()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_decodeConfig()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#Example",
+              "documentation": {
+                "identifier": "Example",
+                "newPage": false,
+                "searchKey": "image_test.Example",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#decode",
+              "documentation": {
+                "identifier": "decode",
+                "newPage": false,
+                "searchKey": "image_test.decode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decode(filename string) (image.Image, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decode(filename string) (image.Image, string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#decodeConfig",
+              "documentation": {
+                "identifier": "decodeConfig",
+                "newPage": false,
+                "searchKey": "image_test.decodeConfig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decodeConfig(filename string) (image.Config, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decodeConfig(filename string) (image.Config, string, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#delta",
+              "documentation": {
+                "identifier": "delta",
+                "newPage": false,
+                "searchKey": "image_test.delta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func delta(u0, u1 uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc delta(u0, u1 uint32) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#withinTolerance",
+              "documentation": {
+                "identifier": "withinTolerance",
+                "newPage": false,
+                "searchKey": "image_test.withinTolerance",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func withinTolerance(c0, c1 color.Color, tolerance int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc withinTolerance(c0, c1 color.Color, tolerance int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image_test#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "image_test.TestDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

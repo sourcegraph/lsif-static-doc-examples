@@ -1,0 +1,3565 @@
+{
+  "pathID": "/bufio_test",
+  "documentation": {
+    "identifier": "bufio_test",
+    "newPage": true,
+    "searchKey": "bufio_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package bufio_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/bufio_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/bufio_test#minReadBufferSize",
+              "documentation": {
+                "identifier": "minReadBufferSize",
+                "newPage": false,
+                "searchKey": "bufio_test.minReadBufferSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const minReadBufferSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst minReadBufferSize = 16\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#smallMaxTokenSize",
+              "documentation": {
+                "identifier": "smallMaxTokenSize",
+                "newPage": false,
+                "searchKey": "bufio_test.smallMaxTokenSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const smallMaxTokenSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst smallMaxTokenSize = 256 // Much smaller for more efficient testing.\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/bufio_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/bufio_test#readMakers",
+              "documentation": {
+                "identifier": "readMakers",
+                "newPage": false,
+                "searchKey": "bufio_test.readMakers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readMakers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readMakers = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#bufreaders",
+              "documentation": {
+                "identifier": "bufreaders",
+                "newPage": false,
+                "searchKey": "bufio_test.bufreaders",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bufreaders"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bufreaders = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#bufsizes",
+              "documentation": {
+                "identifier": "bufsizes",
+                "newPage": false,
+                "searchKey": "bufio_test.bufsizes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bufsizes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bufsizes = []int{\n\t0, minReadBufferSize, 23, 32, 46, 64, 93, 128, 1024, 4096,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#segmentList",
+              "documentation": {
+                "identifier": "segmentList",
+                "newPage": false,
+                "searchKey": "bufio_test.segmentList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var segmentList"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar segmentList = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorWriterTests",
+              "documentation": {
+                "identifier": "errorWriterTests",
+                "newPage": false,
+                "searchKey": "bufio_test.errorWriterTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errorWriterTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errorWriterTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testOutput",
+              "documentation": {
+                "identifier": "testOutput",
+                "newPage": false,
+                "searchKey": "bufio_test.testOutput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testOutput"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testOutput = []byte(\"0123456789abcdefghijklmnopqrstuvwxy\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testInput",
+              "documentation": {
+                "identifier": "testInput",
+                "newPage": false,
+                "searchKey": "bufio_test.testInput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testInput"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testInput = []byte(\"012\\n345\\n678\\n9ab\\ncde\\nfgh\\nijk\\nlmn\\nopq\\nrst\\nuvw\\nxy\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testInputrn",
+              "documentation": {
+                "identifier": "testInputrn",
+                "newPage": false,
+                "searchKey": "bufio_test.testInputrn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testInputrn"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testInputrn = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#readLineNewlinesTests",
+              "documentation": {
+                "identifier": "readLineNewlinesTests",
+                "newPage": false,
+                "searchKey": "bufio_test.readLineNewlinesTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readLineNewlinesTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readLineNewlinesTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorWriterToTests",
+              "documentation": {
+                "identifier": "errorWriterToTests",
+                "newPage": false,
+                "searchKey": "bufio_test.errorWriterToTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errorWriterToTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errorWriterToTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorReaderFromTests",
+              "documentation": {
+                "identifier": "errorReaderFromTests",
+                "newPage": false,
+                "searchKey": "bufio_test.errorReaderFromTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errorReaderFromTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errorReaderFromTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errFake",
+              "documentation": {
+                "identifier": "errFake",
+                "newPage": false,
+                "searchKey": "bufio_test.errFake",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errFake"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errFake = errors.New(\"fake error\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#scanTests",
+              "documentation": {
+                "identifier": "scanTests",
+                "newPage": false,
+                "searchKey": "bufio_test.scanTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var scanTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar scanTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#wordScanTests",
+              "documentation": {
+                "identifier": "wordScanTests",
+                "newPage": false,
+                "searchKey": "bufio_test.wordScanTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var wordScanTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar wordScanTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testError",
+              "documentation": {
+                "identifier": "testError",
+                "newPage": false,
+                "searchKey": "bufio_test.testError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testError = errors.New(\"testError\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/bufio_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/bufio_test#rot13Reader",
+              "documentation": {
+                "identifier": "rot13Reader",
+                "newPage": false,
+                "searchKey": "bufio_test.rot13Reader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type rot13Reader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype rot13Reader struct {\n\tr io.Reader\n}\n```\n\nReads from a reader and rot13s the result. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#newRot13Reader",
+                    "documentation": {
+                      "identifier": "newRot13Reader",
+                      "newPage": false,
+                      "searchKey": "bufio_test.newRot13Reader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func newRot13Reader(r io.Reader) *rot13Reader"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc newRot13Reader(r io.Reader) *rot13Reader\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio_test#rot13Reader.Read",
+                    "documentation": {
+                      "identifier": "rot13Reader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.rot13Reader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r13 *rot13Reader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r13 *rot13Reader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#readMaker",
+              "documentation": {
+                "identifier": "readMaker",
+                "newPage": false,
+                "searchKey": "bufio_test.readMaker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readMaker struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readMaker struct {\n\tname string\n\tfn   func(io.Reader) io.Reader\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#bufReader",
+              "documentation": {
+                "identifier": "bufReader",
+                "newPage": false,
+                "searchKey": "bufio_test.bufReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bufReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bufReader struct {\n\tname string\n\tfn   func(*Reader) string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#zeroReader",
+              "documentation": {
+                "identifier": "zeroReader",
+                "newPage": false,
+                "searchKey": "bufio_test.zeroReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type zeroReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype zeroReader struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#zeroReader.Read",
+                    "documentation": {
+                      "identifier": "zeroReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.zeroReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (zeroReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (zeroReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#StringReader",
+              "documentation": {
+                "identifier": "StringReader",
+                "newPage": false,
+                "searchKey": "bufio_test.StringReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type StringReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype StringReader struct {\n\tdata []string\n\tstep int\n}\n```\n\nA StringReader delivers its data one string segment at a time via Read. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#StringReader.Read",
+                    "documentation": {
+                      "identifier": "StringReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.StringReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *StringReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *StringReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorWriterTest",
+              "documentation": {
+                "identifier": "errorWriterTest",
+                "newPage": false,
+                "searchKey": "bufio_test.errorWriterTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorWriterTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorWriterTest struct {\n\tn, m   int\n\terr    error\n\texpect error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorWriterTest.Write",
+                    "documentation": {
+                      "identifier": "errorWriterTest.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorWriterTest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w errorWriterTest) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w errorWriterTest) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#dataAndEOFReader",
+              "documentation": {
+                "identifier": "dataAndEOFReader",
+                "newPage": false,
+                "searchKey": "bufio_test.dataAndEOFReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type dataAndEOFReader string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype dataAndEOFReader string\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#dataAndEOFReader.Read",
+                    "documentation": {
+                      "identifier": "dataAndEOFReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.dataAndEOFReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r dataAndEOFReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r dataAndEOFReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testReader",
+              "documentation": {
+                "identifier": "testReader",
+                "newPage": false,
+                "searchKey": "bufio_test.testReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testReader struct {\n\tdata   []byte\n\tstride int\n}\n```\n\nTestReader wraps a []byte and returns reads of a specific length. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#testReader.Read",
+                    "documentation": {
+                      "identifier": "testReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.testReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *testReader) Read(buf []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *testReader) Read(buf []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#readLineResult",
+              "documentation": {
+                "identifier": "readLineResult",
+                "newPage": false,
+                "searchKey": "bufio_test.readLineResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type readLineResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype readLineResult struct {\n\tline     []byte\n\tisPrefix bool\n\terr      error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorWriterToTest",
+              "documentation": {
+                "identifier": "errorWriterToTest",
+                "newPage": false,
+                "searchKey": "bufio_test.errorWriterToTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorWriterToTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorWriterToTest struct {\n\trn, wn     int\n\trerr, werr error\n\texpected   error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorWriterToTest.Read",
+                    "documentation": {
+                      "identifier": "errorWriterToTest.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorWriterToTest.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r errorWriterToTest) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r errorWriterToTest) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorWriterToTest.Write",
+                    "documentation": {
+                      "identifier": "errorWriterToTest.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorWriterToTest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w errorWriterToTest) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w errorWriterToTest) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorReaderFromTest",
+              "documentation": {
+                "identifier": "errorReaderFromTest",
+                "newPage": false,
+                "searchKey": "bufio_test.errorReaderFromTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorReaderFromTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorReaderFromTest struct {\n\trn, wn     int\n\trerr, werr error\n\texpected   error\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorReaderFromTest.Read",
+                    "documentation": {
+                      "identifier": "errorReaderFromTest.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorReaderFromTest.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r errorReaderFromTest) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r errorReaderFromTest) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorReaderFromTest.Write",
+                    "documentation": {
+                      "identifier": "errorReaderFromTest.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorReaderFromTest.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w errorReaderFromTest) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w errorReaderFromTest) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#writeCountingDiscard",
+              "documentation": {
+                "identifier": "writeCountingDiscard",
+                "newPage": false,
+                "searchKey": "bufio_test.writeCountingDiscard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeCountingDiscard int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeCountingDiscard int\n```\n\nA writeCountingDiscard is like io.Discard and counts the number of times Write is called on it. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#writeCountingDiscard.Write",
+                    "documentation": {
+                      "identifier": "writeCountingDiscard.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.writeCountingDiscard.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *writeCountingDiscard) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *writeCountingDiscard) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#negativeReader",
+              "documentation": {
+                "identifier": "negativeReader",
+                "newPage": false,
+                "searchKey": "bufio_test.negativeReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type negativeReader int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype negativeReader int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#negativeReader.Read",
+                    "documentation": {
+                      "identifier": "negativeReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.negativeReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *negativeReader) Read([]byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *negativeReader) Read([]byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#errorThenGoodReader",
+              "documentation": {
+                "identifier": "errorThenGoodReader",
+                "newPage": false,
+                "searchKey": "bufio_test.errorThenGoodReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errorThenGoodReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errorThenGoodReader struct {\n\tdidErr bool\n\tnread  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#errorThenGoodReader.Read",
+                    "documentation": {
+                      "identifier": "errorThenGoodReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.errorThenGoodReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *errorThenGoodReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *errorThenGoodReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#emptyThenNonEmptyReader",
+              "documentation": {
+                "identifier": "emptyThenNonEmptyReader",
+                "newPage": false,
+                "searchKey": "bufio_test.emptyThenNonEmptyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type emptyThenNonEmptyReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype emptyThenNonEmptyReader struct {\n\tr io.Reader\n\tn int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#emptyThenNonEmptyReader.Read",
+                    "documentation": {
+                      "identifier": "emptyThenNonEmptyReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.emptyThenNonEmptyReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *emptyThenNonEmptyReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *emptyThenNonEmptyReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#onlyReader",
+              "documentation": {
+                "identifier": "onlyReader",
+                "newPage": false,
+                "searchKey": "bufio_test.onlyReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type onlyReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype onlyReader struct {\n\tio.Reader\n}\n```\n\nAn onlyReader only implements io.Reader, no matter what other methods the underlying implementation may have. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#onlyWriter",
+              "documentation": {
+                "identifier": "onlyWriter",
+                "newPage": false,
+                "searchKey": "bufio_test.onlyWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type onlyWriter struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype onlyWriter struct {\n\tio.Writer\n}\n```\n\nAn onlyWriter only implements io.Writer, no matter what other methods the underlying implementation may have. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#scriptedReader",
+              "documentation": {
+                "identifier": "scriptedReader",
+                "newPage": false,
+                "searchKey": "bufio_test.scriptedReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type scriptedReader []func(p []byte) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype scriptedReader []func(p []byte) (n int, err error)\n```\n\nA scriptedReader is an io.Reader that executes its steps sequentially. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#scriptedReader.Read",
+                    "documentation": {
+                      "identifier": "scriptedReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.scriptedReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sr *scriptedReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sr *scriptedReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#eofReader",
+              "documentation": {
+                "identifier": "eofReader",
+                "newPage": false,
+                "searchKey": "bufio_test.eofReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type eofReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype eofReader struct {\n\tbuf []byte\n}\n```\n\neofReader returns the number of bytes read and io.EOF for the read that consumes the last of the content. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#eofReader.Read",
+                    "documentation": {
+                      "identifier": "eofReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.eofReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *eofReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *eofReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#writerWithReadFromError",
+              "documentation": {
+                "identifier": "writerWithReadFromError",
+                "newPage": false,
+                "searchKey": "bufio_test.writerWithReadFromError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writerWithReadFromError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writerWithReadFromError struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#writerWithReadFromError.ReadFrom",
+                    "documentation": {
+                      "identifier": "writerWithReadFromError.ReadFrom",
+                      "newPage": false,
+                      "searchKey": "bufio_test.writerWithReadFromError.ReadFrom",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w writerWithReadFromError) ReadFrom(r io.Reader) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w writerWithReadFromError) ReadFrom(r io.Reader) (int64, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/bufio_test#writerWithReadFromError.Write",
+                    "documentation": {
+                      "identifier": "writerWithReadFromError.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.writerWithReadFromError.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w writerWithReadFromError) Write(b []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w writerWithReadFromError) Write(b []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#writeErrorOnlyWriter",
+              "documentation": {
+                "identifier": "writeErrorOnlyWriter",
+                "newPage": false,
+                "searchKey": "bufio_test.writeErrorOnlyWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeErrorOnlyWriter struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeErrorOnlyWriter struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#writeErrorOnlyWriter.Write",
+                    "documentation": {
+                      "identifier": "writeErrorOnlyWriter.Write",
+                      "newPage": false,
+                      "searchKey": "bufio_test.writeErrorOnlyWriter.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w writeErrorOnlyWriter) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w writeErrorOnlyWriter) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#slowReader",
+              "documentation": {
+                "identifier": "slowReader",
+                "newPage": false,
+                "searchKey": "bufio_test.slowReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type slowReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype slowReader struct {\n\tmax int\n\tbuf io.Reader\n}\n```\n\nslowReader is a reader that returns only a few bytes at a time, to test the incremental reads in Scanner.Scan. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#slowReader.Read",
+                    "documentation": {
+                      "identifier": "slowReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.slowReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (sr *slowReader) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (sr *slowReader) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#alwaysError",
+              "documentation": {
+                "identifier": "alwaysError",
+                "newPage": false,
+                "searchKey": "bufio_test.alwaysError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type alwaysError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype alwaysError struct{}\n```\n\nTest for issue 5268. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#alwaysError.Read",
+                    "documentation": {
+                      "identifier": "alwaysError.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.alwaysError.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (alwaysError) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (alwaysError) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#endlessZeros",
+              "documentation": {
+                "identifier": "endlessZeros",
+                "newPage": false,
+                "searchKey": "bufio_test.endlessZeros",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type endlessZeros struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype endlessZeros struct{}\n```\n\nTest that Scan finishes if we have endless empty reads. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#endlessZeros.Read",
+                    "documentation": {
+                      "identifier": "endlessZeros.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.endlessZeros.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (endlessZeros) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (endlessZeros) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#countdown",
+              "documentation": {
+                "identifier": "countdown",
+                "newPage": false,
+                "searchKey": "bufio_test.countdown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type countdown int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype countdown int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#countdown.split",
+                    "documentation": {
+                      "identifier": "countdown.split",
+                      "newPage": false,
+                      "searchKey": "bufio_test.countdown.split",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *countdown) split(data []byte, atEOF bool) (advance int, token []byte, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *countdown) split(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#negativeEOFReader",
+              "documentation": {
+                "identifier": "negativeEOFReader",
+                "newPage": false,
+                "searchKey": "bufio_test.negativeEOFReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type negativeEOFReader int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype negativeEOFReader int\n```\n\nnegativeEOFReader returns an invalid -1 at the end, as though it were wrapping the read system call. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#negativeEOFReader.Read",
+                    "documentation": {
+                      "identifier": "negativeEOFReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.negativeEOFReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *negativeEOFReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *negativeEOFReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#largeReader",
+              "documentation": {
+                "identifier": "largeReader",
+                "newPage": false,
+                "searchKey": "bufio_test.largeReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type largeReader struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype largeReader struct{}\n```\n\nlargeReader returns an invalid count that is larger than the number of bytes requested. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/bufio_test#largeReader.Read",
+                    "documentation": {
+                      "identifier": "largeReader.Read",
+                      "newPage": false,
+                      "searchKey": "bufio_test.largeReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (largeReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (largeReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/bufio_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/bufio_test#readBytes",
+              "documentation": {
+                "identifier": "readBytes",
+                "newPage": false,
+                "searchKey": "bufio_test.readBytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readBytes(buf *Reader) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readBytes(buf *Reader) string\n```\n\nCall ReadByte to accumulate the text of a file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderSimple",
+              "documentation": {
+                "identifier": "TestReaderSimple",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderSimple",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderSimple(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderSimple(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#readLines",
+              "documentation": {
+                "identifier": "readLines",
+                "newPage": false,
+                "searchKey": "bufio_test.readLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readLines(b *Reader) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readLines(b *Reader) string\n```\n\nCall ReadString (which ends up calling everything else) to accumulate the text of a file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#reads",
+              "documentation": {
+                "identifier": "reads",
+                "newPage": false,
+                "searchKey": "bufio_test.reads",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func reads(buf *Reader, m int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc reads(buf *Reader, m int) string\n```\n\nCall Read to accumulate the text of a file \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReader",
+              "documentation": {
+                "identifier": "TestReader",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestZeroReader",
+              "documentation": {
+                "identifier": "TestZeroReader",
+                "newPage": false,
+                "searchKey": "bufio_test.TestZeroReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#readRuneSegments",
+              "documentation": {
+                "identifier": "readRuneSegments",
+                "newPage": false,
+                "searchKey": "bufio_test.readRuneSegments",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readRuneSegments(t *testing.T, segments []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readRuneSegments(t *testing.T, segments []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadRune",
+              "documentation": {
+                "identifier": "TestReadRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadRune",
+              "documentation": {
+                "identifier": "TestUnreadRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNoUnreadRuneAfterPeek",
+              "documentation": {
+                "identifier": "TestNoUnreadRuneAfterPeek",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNoUnreadRuneAfterPeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoUnreadRuneAfterPeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoUnreadRuneAfterPeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNoUnreadByteAfterPeek",
+              "documentation": {
+                "identifier": "TestNoUnreadByteAfterPeek",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNoUnreadByteAfterPeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoUnreadByteAfterPeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoUnreadByteAfterPeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadByte",
+              "documentation": {
+                "identifier": "TestUnreadByte",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadByteMultiple",
+              "documentation": {
+                "identifier": "TestUnreadByteMultiple",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadByteMultiple",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadByteMultiple(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadByteMultiple(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadByteOthers",
+              "documentation": {
+                "identifier": "TestUnreadByteOthers",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadByteOthers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadByteOthers(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadByteOthers(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadRuneError",
+              "documentation": {
+                "identifier": "TestUnreadRuneError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadRuneError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadRuneError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadRuneError(t *testing.T)\n```\n\nTest that UnreadRune fails if the preceding operation was not a ReadRune. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestUnreadRuneAtEOF",
+              "documentation": {
+                "identifier": "TestUnreadRuneAtEOF",
+                "newPage": false,
+                "searchKey": "bufio_test.TestUnreadRuneAtEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnreadRuneAtEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnreadRuneAtEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadWriteRune",
+              "documentation": {
+                "identifier": "TestReadWriteRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadWriteRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadWriteRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadWriteRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriteInvalidRune",
+              "documentation": {
+                "identifier": "TestWriteInvalidRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriteInvalidRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteInvalidRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteInvalidRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadStringAllocs",
+              "documentation": {
+                "identifier": "TestReadStringAllocs",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadStringAllocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadStringAllocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadStringAllocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriter",
+              "documentation": {
+                "identifier": "TestWriter",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriteErrors",
+              "documentation": {
+                "identifier": "TestWriteErrors",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriteErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNewReaderSizeIdempotent",
+              "documentation": {
+                "identifier": "TestNewReaderSizeIdempotent",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNewReaderSizeIdempotent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewReaderSizeIdempotent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewReaderSizeIdempotent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNewWriterSizeIdempotent",
+              "documentation": {
+                "identifier": "TestNewWriterSizeIdempotent",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNewWriterSizeIdempotent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewWriterSizeIdempotent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewWriterSizeIdempotent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriteString",
+              "documentation": {
+                "identifier": "TestWriteString",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriteString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestBufferFull",
+              "documentation": {
+                "identifier": "TestBufferFull",
+                "newPage": false,
+                "searchKey": "bufio_test.TestBufferFull",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBufferFull(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBufferFull(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestPeek",
+              "documentation": {
+                "identifier": "TestPeek",
+                "newPage": false,
+                "searchKey": "bufio_test.TestPeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestPeekThenUnreadRune",
+              "documentation": {
+                "identifier": "TestPeekThenUnreadRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestPeekThenUnreadRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPeekThenUnreadRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPeekThenUnreadRune(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testReadLine",
+              "documentation": {
+                "identifier": "testReadLine",
+                "newPage": false,
+                "searchKey": "bufio_test.testReadLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadLine(t *testing.T, input []byte)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadLine(t *testing.T, input []byte)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadLine",
+              "documentation": {
+                "identifier": "TestReadLine",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLine(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestLineTooLong",
+              "documentation": {
+                "identifier": "TestLineTooLong",
+                "newPage": false,
+                "searchKey": "bufio_test.TestLineTooLong",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLineTooLong(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLineTooLong(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadAfterLines",
+              "documentation": {
+                "identifier": "TestReadAfterLines",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadAfterLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAfterLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAfterLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadEmptyBuffer",
+              "documentation": {
+                "identifier": "TestReadEmptyBuffer",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadEmptyBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadEmptyBuffer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadEmptyBuffer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestLinesAfterRead",
+              "documentation": {
+                "identifier": "TestLinesAfterRead",
+                "newPage": false,
+                "searchKey": "bufio_test.TestLinesAfterRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLinesAfterRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLinesAfterRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadLineNonNilLineOrError",
+              "documentation": {
+                "identifier": "TestReadLineNonNilLineOrError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadLineNonNilLineOrError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLineNonNilLineOrError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLineNonNilLineOrError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadLineNewlines",
+              "documentation": {
+                "identifier": "TestReadLineNewlines",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadLineNewlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadLineNewlines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadLineNewlines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testReadLineNewlines",
+              "documentation": {
+                "identifier": "testReadLineNewlines",
+                "newPage": false,
+                "searchKey": "bufio_test.testReadLineNewlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadLineNewlines(t *testing.T, input string, expect []readLineResult)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadLineNewlines(t *testing.T, input string, expect []readLineResult)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#createTestInput",
+              "documentation": {
+                "identifier": "createTestInput",
+                "newPage": false,
+                "searchKey": "bufio_test.createTestInput",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createTestInput(n int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createTestInput(n int) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderWriteTo",
+              "documentation": {
+                "identifier": "TestReaderWriteTo",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderWriteTo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderWriteTo(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderWriteTo(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderWriteToErrors",
+              "documentation": {
+                "identifier": "TestReaderWriteToErrors",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderWriteToErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderWriteToErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderWriteToErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFrom",
+              "documentation": {
+                "identifier": "TestWriterReadFrom",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFrom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFrom(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFrom(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromErrors",
+              "documentation": {
+                "identifier": "TestWriterReadFromErrors",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromCounts",
+              "documentation": {
+                "identifier": "TestWriterReadFromCounts",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromCounts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromCounts(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromCounts(t *testing.T)\n```\n\nTestWriterReadFromCounts tests that using io.Copy to copy into a bufio.Writer does not prematurely flush the buffer. For example, when buffering writes to a network socket, excessive network writes should be avoided. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNegativeRead",
+              "documentation": {
+                "identifier": "TestNegativeRead",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNegativeRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderClearError",
+              "documentation": {
+                "identifier": "TestReaderClearError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderClearError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderClearError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderClearError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromWhileFull",
+              "documentation": {
+                "identifier": "TestWriterReadFromWhileFull",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromWhileFull",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromWhileFull(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromWhileFull(t *testing.T)\n```\n\nTest for golang.org/issue/5947 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromUntilEOF",
+              "documentation": {
+                "identifier": "TestWriterReadFromUntilEOF",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromUntilEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromUntilEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromUntilEOF(t *testing.T)\n```\n\nTest for golang.org/issue/7611 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromErrNoProgress",
+              "documentation": {
+                "identifier": "TestWriterReadFromErrNoProgress",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromErrNoProgress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromErrNoProgress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromErrNoProgress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReadZero",
+              "documentation": {
+                "identifier": "TestReadZero",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReadZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderReset",
+              "documentation": {
+                "identifier": "TestReaderReset",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReset",
+              "documentation": {
+                "identifier": "TestWriterReset",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderDiscard",
+              "documentation": {
+                "identifier": "TestReaderDiscard",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderDiscard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderDiscard(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderDiscard(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestReaderSize",
+              "documentation": {
+                "identifier": "TestReaderSize",
+                "newPage": false,
+                "searchKey": "bufio_test.TestReaderSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterSize",
+              "documentation": {
+                "identifier": "TestWriterSize",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterSize(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#newScriptedReader",
+              "documentation": {
+                "identifier": "newScriptedReader",
+                "newPage": false,
+                "searchKey": "bufio_test.newScriptedReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newScriptedReader(steps ...func(p []byte) (n int, err error)) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newScriptedReader(steps ...func(p []byte) (n int, err error)) io.Reader\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestPartialReadEOF",
+              "documentation": {
+                "identifier": "TestPartialReadEOF",
+                "newPage": false,
+                "searchKey": "bufio_test.TestPartialReadEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPartialReadEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPartialReadEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromMustSetUnderlyingError",
+              "documentation": {
+                "identifier": "TestWriterReadFromMustSetUnderlyingError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromMustSetUnderlyingError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromMustSetUnderlyingError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromMustSetUnderlyingError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWriterReadFromMustReturnUnderlyingError",
+              "documentation": {
+                "identifier": "TestWriterReadFromMustReturnUnderlyingError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWriterReadFromMustReturnUnderlyingError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriterReadFromMustReturnUnderlyingError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriterReadFromMustReturnUnderlyingError(t *testing.T)\n```\n\nEnsure that previous Write errors are immediately returned on any ReadFrom. See golang.org/issue/35194. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderCopyOptimal",
+              "documentation": {
+                "identifier": "BenchmarkReaderCopyOptimal",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderCopyOptimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderCopyOptimal(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderCopyOptimal(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderCopyUnoptimal",
+              "documentation": {
+                "identifier": "BenchmarkReaderCopyUnoptimal",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderCopyUnoptimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderCopyUnoptimal(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderCopyUnoptimal(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderCopyNoWriteTo",
+              "documentation": {
+                "identifier": "BenchmarkReaderCopyNoWriteTo",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderCopyNoWriteTo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderCopyNoWriteTo(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderCopyNoWriteTo(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderWriteToOptimal",
+              "documentation": {
+                "identifier": "BenchmarkReaderWriteToOptimal",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderWriteToOptimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderWriteToOptimal(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderWriteToOptimal(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderReadString",
+              "documentation": {
+                "identifier": "BenchmarkReaderReadString",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderReadString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderReadString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderReadString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkWriterCopyOptimal",
+              "documentation": {
+                "identifier": "BenchmarkWriterCopyOptimal",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkWriterCopyOptimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriterCopyOptimal(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriterCopyOptimal(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkWriterCopyUnoptimal",
+              "documentation": {
+                "identifier": "BenchmarkWriterCopyUnoptimal",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkWriterCopyUnoptimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriterCopyUnoptimal(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriterCopyUnoptimal(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkWriterCopyNoReadFrom",
+              "documentation": {
+                "identifier": "BenchmarkWriterCopyNoReadFrom",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkWriterCopyNoReadFrom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriterCopyNoReadFrom(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriterCopyNoReadFrom(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkReaderEmpty",
+              "documentation": {
+                "identifier": "BenchmarkReaderEmpty",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkReaderEmpty",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaderEmpty(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaderEmpty(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkWriterEmpty",
+              "documentation": {
+                "identifier": "BenchmarkWriterEmpty",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkWriterEmpty",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriterEmpty(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriterEmpty(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#BenchmarkWriterFlush",
+              "documentation": {
+                "identifier": "BenchmarkWriterFlush",
+                "newPage": false,
+                "searchKey": "bufio_test.BenchmarkWriterFlush",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriterFlush(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriterFlush(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleWriter",
+              "documentation": {
+                "identifier": "ExampleWriter",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWriter()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWriter()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleScanner_lines",
+              "documentation": {
+                "identifier": "ExampleScanner_lines",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleScanner_lines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleScanner_lines()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleScanner_lines()\n```\n\nThe simplest use of a Scanner, to read standard input as a set of lines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleScanner_Bytes",
+              "documentation": {
+                "identifier": "ExampleScanner_Bytes",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleScanner_Bytes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleScanner_Bytes()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleScanner_Bytes()\n```\n\nReturn the most recent call to Scan as a []byte. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleScanner_words",
+              "documentation": {
+                "identifier": "ExampleScanner_words",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleScanner_words",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleScanner_words()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleScanner_words()\n```\n\nUse a Scanner to implement a simple word-count utility by scanning the input as a sequence of space-delimited tokens. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleScanner_custom",
+              "documentation": {
+                "identifier": "ExampleScanner_custom",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleScanner_custom",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleScanner_custom()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleScanner_custom()\n```\n\nUse a Scanner with a custom split function (built by wrapping ScanWords) to validate 32-bit decimal input. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#ExampleScanner_emptyFinalToken",
+              "documentation": {
+                "identifier": "ExampleScanner_emptyFinalToken",
+                "newPage": false,
+                "searchKey": "bufio_test.ExampleScanner_emptyFinalToken",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleScanner_emptyFinalToken()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleScanner_emptyFinalToken()\n```\n\nUse a Scanner with a custom split function to parse a comma-separated list with an empty final value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestSpace",
+              "documentation": {
+                "identifier": "TestSpace",
+                "newPage": false,
+                "searchKey": "bufio_test.TestSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSpace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSpace(t *testing.T)\n```\n\nTest white space table matches the Unicode definition. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanByte",
+              "documentation": {
+                "identifier": "TestScanByte",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanByte",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanByte(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanByte(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanRune",
+              "documentation": {
+                "identifier": "TestScanRune",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanRune(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanRune(t *testing.T)\n```\n\nTest that the rune splitter returns same sequence of runes (not bytes) as for range string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanWords",
+              "documentation": {
+                "identifier": "TestScanWords",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanWords",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanWords(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanWords(t *testing.T)\n```\n\nTest that the word splitter returns the same data as strings.Fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#genLine",
+              "documentation": {
+                "identifier": "genLine",
+                "newPage": false,
+                "searchKey": "bufio_test.genLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func genLine(buf *bytes.Buffer, lineNum, n int, addNewline bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc genLine(buf *bytes.Buffer, lineNum, n int, addNewline bool)\n```\n\ngenLine writes to buf a predictable but non-trivial line of text of length n, including the terminal newline and an occasional carriage return. If addNewline is false, the \\r and \\n are not emitted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLongLines",
+              "documentation": {
+                "identifier": "TestScanLongLines",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLongLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLongLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLongLines(t *testing.T)\n```\n\nTest the line splitter, including some carriage returns but no long lines. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLineTooLong",
+              "documentation": {
+                "identifier": "TestScanLineTooLong",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLineTooLong",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLineTooLong(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLineTooLong(t *testing.T)\n```\n\nTest that the line splitter errors out on a long line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testNoNewline",
+              "documentation": {
+                "identifier": "testNoNewline",
+                "newPage": false,
+                "searchKey": "bufio_test.testNoNewline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNoNewline(text string, lines []string, t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNoNewline(text string, lines []string, t *testing.T)\n```\n\nTest that the line splitter handles a final line without a newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLineNoNewline",
+              "documentation": {
+                "identifier": "TestScanLineNoNewline",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLineNoNewline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLineNoNewline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLineNoNewline(t *testing.T)\n```\n\nTest that the line splitter handles a final line without a newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLineReturnButNoNewline",
+              "documentation": {
+                "identifier": "TestScanLineReturnButNoNewline",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLineReturnButNoNewline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLineReturnButNoNewline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLineReturnButNoNewline(t *testing.T)\n```\n\nTest that the line splitter handles a final line with a carriage return but no newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLineEmptyFinalLine",
+              "documentation": {
+                "identifier": "TestScanLineEmptyFinalLine",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLineEmptyFinalLine",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLineEmptyFinalLine(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLineEmptyFinalLine(t *testing.T)\n```\n\nTest that the line splitter handles a final empty line. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanLineEmptyFinalLineWithCR",
+              "documentation": {
+                "identifier": "TestScanLineEmptyFinalLineWithCR",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanLineEmptyFinalLineWithCR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanLineEmptyFinalLineWithCR(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanLineEmptyFinalLineWithCR(t *testing.T)\n```\n\nTest that the line splitter handles a final empty line with a carriage return but no newline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestSplitError",
+              "documentation": {
+                "identifier": "TestSplitError",
+                "newPage": false,
+                "searchKey": "bufio_test.TestSplitError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitError(t *testing.T)\n```\n\nTest the correct error is returned when the split function errors out. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestErrAtEOF",
+              "documentation": {
+                "identifier": "TestErrAtEOF",
+                "newPage": false,
+                "searchKey": "bufio_test.TestErrAtEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrAtEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrAtEOF(t *testing.T)\n```\n\nTest that an EOF is overridden by a user-generated scan error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNonEOFWithEmptyRead",
+              "documentation": {
+                "identifier": "TestNonEOFWithEmptyRead",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNonEOFWithEmptyRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonEOFWithEmptyRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonEOFWithEmptyRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestBadReader",
+              "documentation": {
+                "identifier": "TestBadReader",
+                "newPage": false,
+                "searchKey": "bufio_test.TestBadReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBadReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBadReader(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestScanWordsExcessiveWhiteSpace",
+              "documentation": {
+                "identifier": "TestScanWordsExcessiveWhiteSpace",
+                "newPage": false,
+                "searchKey": "bufio_test.TestScanWordsExcessiveWhiteSpace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestScanWordsExcessiveWhiteSpace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestScanWordsExcessiveWhiteSpace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#commaSplit",
+              "documentation": {
+                "identifier": "commaSplit",
+                "newPage": false,
+                "searchKey": "bufio_test.commaSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commaSplit(data []byte, atEOF bool) (advance int, token []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commaSplit(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#testEmptyTokens",
+              "documentation": {
+                "identifier": "testEmptyTokens",
+                "newPage": false,
+                "searchKey": "bufio_test.testEmptyTokens",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEmptyTokens(t *testing.T, text string, values []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEmptyTokens(t *testing.T, text string, values []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestEmptyTokens",
+              "documentation": {
+                "identifier": "TestEmptyTokens",
+                "newPage": false,
+                "searchKey": "bufio_test.TestEmptyTokens",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyTokens(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyTokens(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestWithNoEmptyTokens",
+              "documentation": {
+                "identifier": "TestWithNoEmptyTokens",
+                "newPage": false,
+                "searchKey": "bufio_test.TestWithNoEmptyTokens",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithNoEmptyTokens(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithNoEmptyTokens(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#loopAtEOFSplit",
+              "documentation": {
+                "identifier": "loopAtEOFSplit",
+                "newPage": false,
+                "searchKey": "bufio_test.loopAtEOFSplit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loopAtEOFSplit(data []byte, atEOF bool) (advance int, token []byte, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loopAtEOFSplit(data []byte, atEOF bool) (advance int, token []byte, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestDontLoopForever",
+              "documentation": {
+                "identifier": "TestDontLoopForever",
+                "newPage": false,
+                "searchKey": "bufio_test.TestDontLoopForever",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDontLoopForever(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDontLoopForever(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestBlankLines",
+              "documentation": {
+                "identifier": "TestBlankLines",
+                "newPage": false,
+                "searchKey": "bufio_test.TestBlankLines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlankLines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlankLines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestEmptyLinesOK",
+              "documentation": {
+                "identifier": "TestEmptyLinesOK",
+                "newPage": false,
+                "searchKey": "bufio_test.TestEmptyLinesOK",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmptyLinesOK(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmptyLinesOK(t *testing.T)\n```\n\nCheck that the looping-at-EOF check doesn't trigger for merely empty tokens. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestHugeBuffer",
+              "documentation": {
+                "identifier": "TestHugeBuffer",
+                "newPage": false,
+                "searchKey": "bufio_test.TestHugeBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHugeBuffer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHugeBuffer(t *testing.T)\n```\n\nMake sure we can read a huge token if a big enough buffer is provided. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestNegativeEOFReader",
+              "documentation": {
+                "identifier": "TestNegativeEOFReader",
+                "newPage": false,
+                "searchKey": "bufio_test.TestNegativeEOFReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNegativeEOFReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNegativeEOFReader(t *testing.T)\n```\n\nTest that the scanner doesn't panic and returns ErrBadReadCount on a reader that returns a negative count of bytes read (issue 38053). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/bufio_test#TestLargeReader",
+              "documentation": {
+                "identifier": "TestLargeReader",
+                "newPage": false,
+                "searchKey": "bufio_test.TestLargeReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeReader(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeReader(t *testing.T)\n```\n\nTest that the scanner doesn't panic and returns ErrBadReadCount on a reader that returns an impossibly large count of bytes read (issue 38053). \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

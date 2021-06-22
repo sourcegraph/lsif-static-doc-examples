@@ -1,0 +1,2935 @@
+{
+  "pathID": "/internal/poll",
+  "documentation": {
+    "identifier": "poll",
+    "newPage": true,
+    "searchKey": "internal/poll",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package poll"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package poll supports non-blocking I/O on file descriptors with polling. This supports I/O operations that block only a goroutine, not a thread. This is used by the net and os packages. It uses a poller built into the runtime, with support from the runtime scheduler. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/poll#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexClosed",
+              "documentation": {
+                "identifier": "mutexClosed",
+                "newPage": false,
+                "searchKey": "poll.mutexClosed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexClosed"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexClosed = 1 << 0\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexRLock",
+              "documentation": {
+                "identifier": "mutexRLock",
+                "newPage": false,
+                "searchKey": "poll.mutexRLock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexRLock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexRLock = 1 << 1\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexWLock",
+              "documentation": {
+                "identifier": "mutexWLock",
+                "newPage": false,
+                "searchKey": "poll.mutexWLock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexWLock"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexWLock = 1 << 2\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexRef",
+              "documentation": {
+                "identifier": "mutexRef",
+                "newPage": false,
+                "searchKey": "poll.mutexRef",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexRef"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexRef = 1 << 3\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexRefMask",
+              "documentation": {
+                "identifier": "mutexRefMask",
+                "newPage": false,
+                "searchKey": "poll.mutexRefMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexRefMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexRefMask = (1<<20 - 1) << 3\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexRWait",
+              "documentation": {
+                "identifier": "mutexRWait",
+                "newPage": false,
+                "searchKey": "poll.mutexRWait",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexRWait"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexRWait = 1 << 23\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexRMask",
+              "documentation": {
+                "identifier": "mutexRMask",
+                "newPage": false,
+                "searchKey": "poll.mutexRMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexRMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexRMask = (1<<20 - 1) << 23\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexWWait",
+              "documentation": {
+                "identifier": "mutexWWait",
+                "newPage": false,
+                "searchKey": "poll.mutexWWait",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexWWait"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexWWait = 1 << 43\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#mutexWMask",
+              "documentation": {
+                "identifier": "mutexWMask",
+                "newPage": false,
+                "searchKey": "poll.mutexWMask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const mutexWMask"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst mutexWMask = (1<<20 - 1) << 43\n```\n\nfdMutex.state is organized as follows: 1 bit - whether FD is closed, if set all subsequent lock operations will fail. 1 bit - lock for read operations. 1 bit - lock for write operations. 20 bits - total number of references (read+write+misc). 20 bits - number of outstanding read waiters. 20 bits - number of outstanding write waiters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#overflowMsg",
+              "documentation": {
+                "identifier": "overflowMsg",
+                "newPage": false,
+                "searchKey": "poll.overflowMsg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const overflowMsg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst overflowMsg = \"too many concurrent operations on a single file or socket (max 1048575)\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#pollNoError",
+              "documentation": {
+                "identifier": "pollNoError",
+                "newPage": false,
+                "searchKey": "poll.pollNoError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pollNoError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pollNoError = 0\n```\n\nError values returned by runtime_pollReset and runtime_pollWait. These must match the values in runtime/netpoll.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#pollErrClosing",
+              "documentation": {
+                "identifier": "pollErrClosing",
+                "newPage": false,
+                "searchKey": "poll.pollErrClosing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pollErrClosing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pollErrClosing = 1\n```\n\nError values returned by runtime_pollReset and runtime_pollWait. These must match the values in runtime/netpoll.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#pollErrTimeout",
+              "documentation": {
+                "identifier": "pollErrTimeout",
+                "newPage": false,
+                "searchKey": "poll.pollErrTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pollErrTimeout"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pollErrTimeout = 2\n```\n\nError values returned by runtime_pollReset and runtime_pollWait. These must match the values in runtime/netpoll.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#pollErrNotPollable",
+              "documentation": {
+                "identifier": "pollErrNotPollable",
+                "newPage": false,
+                "searchKey": "poll.pollErrNotPollable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const pollErrNotPollable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst pollErrNotPollable = 3\n```\n\nError values returned by runtime_pollReset and runtime_pollWait. These must match the values in runtime/netpoll.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#maxRW",
+              "documentation": {
+                "identifier": "maxRW",
+                "newPage": false,
+                "searchKey": "poll.maxRW",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxRW"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxRW = 1 << 30\n```\n\nDarwin and FreeBSD can't read or write 2GB+ files at a time, even on 64-bit systems. The same is true of socket implementations on many systems. See golang.org/issue/7812 and golang.org/issue/16266. Use 1GB instead of, say, 2GB-1, to keep subsequent reads aligned. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/poll#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/poll#errEAGAIN",
+              "documentation": {
+                "identifier": "errEAGAIN",
+                "newPage": false,
+                "searchKey": "poll.errEAGAIN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errEAGAIN"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errEAGAIN error = syscall.EAGAIN\n```\n\nDo the interface allocations only once for common Errno values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#errEINVAL",
+              "documentation": {
+                "identifier": "errEINVAL",
+                "newPage": false,
+                "searchKey": "poll.errEINVAL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errEINVAL"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errEINVAL error = syscall.EINVAL\n```\n\nDo the interface allocations only once for common Errno values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#errENOENT",
+              "documentation": {
+                "identifier": "errENOENT",
+                "newPage": false,
+                "searchKey": "poll.errENOENT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var errENOENT"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar errENOENT error = syscall.ENOENT\n```\n\nDo the interface allocations only once for common Errno values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ErrNetClosing",
+              "documentation": {
+                "identifier": "ErrNetClosing",
+                "newPage": false,
+                "searchKey": "poll.ErrNetClosing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNetClosing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNetClosing = errNetClosing{}\n```\n\nErrNetClosing is returned when a network descriptor is used after it has been closed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ErrFileClosing",
+              "documentation": {
+                "identifier": "ErrFileClosing",
+                "newPage": false,
+                "searchKey": "poll.ErrFileClosing",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrFileClosing"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrFileClosing = errors.New(\"use of closed file\")\n```\n\nErrFileClosing is returned when a file descriptor is used after it has been closed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ErrNoDeadline",
+              "documentation": {
+                "identifier": "ErrNoDeadline",
+                "newPage": false,
+                "searchKey": "poll.ErrNoDeadline",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNoDeadline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNoDeadline = errors.New(\"file type does not support deadline\")\n```\n\nErrNoDeadline is returned when a request is made to set a deadline on a file type that does not use the poller. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ErrDeadlineExceeded",
+              "documentation": {
+                "identifier": "ErrDeadlineExceeded",
+                "newPage": false,
+                "searchKey": "poll.ErrDeadlineExceeded",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrDeadlineExceeded"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrDeadlineExceeded error = &DeadlineExceededError{}\n```\n\nErrDeadlineExceeded is returned for an expired deadline. This is exported by the os package as os.ErrDeadlineExceeded. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ErrNotPollable",
+              "documentation": {
+                "identifier": "ErrNotPollable",
+                "newPage": false,
+                "searchKey": "poll.ErrNotPollable",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrNotPollable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrNotPollable = errors.New(\"not pollable\")\n```\n\nErrNotPollable is returned when the file or socket is not suitable for event notification. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#TestHookDidWritev",
+              "documentation": {
+                "identifier": "TestHookDidWritev",
+                "newPage": false,
+                "searchKey": "poll.TestHookDidWritev",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var TestHookDidWritev"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar TestHookDidWritev = func(wrote int) {}\n```\n\nTestHookDidWritev is a hook for testing writev. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#serverInit",
+              "documentation": {
+                "identifier": "serverInit",
+                "newPage": false,
+                "searchKey": "poll.serverInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serverInit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serverInit sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#tryDupCloexec",
+              "documentation": {
+                "identifier": "tryDupCloexec",
+                "newPage": false,
+                "searchKey": "poll.tryDupCloexec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tryDupCloexec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tryDupCloexec = int32(1)\n```\n\ntryDupCloexec indicates whether F_DUPFD_CLOEXEC should be used. If the kernel doesn't support it, this is set to 0. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#CloseFunc",
+              "documentation": {
+                "identifier": "CloseFunc",
+                "newPage": false,
+                "searchKey": "poll.CloseFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CloseFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CloseFunc func(int) error = syscall.Close\n```\n\nCloseFunc is used to hook the close call. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#AcceptFunc",
+              "documentation": {
+                "identifier": "AcceptFunc",
+                "newPage": false,
+                "searchKey": "poll.AcceptFunc",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var AcceptFunc"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar AcceptFunc func(int) (int, syscall.Sockaddr, error) = syscall.Accept\n```\n\nAcceptFunc is used to hook the accept call. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#Consume",
+              "documentation": {
+                "identifier": "Consume",
+                "newPage": false,
+                "searchKey": "poll.Consume",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Consume"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Consume = consume\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/poll#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/poll#errNetClosing",
+              "documentation": {
+                "identifier": "errNetClosing",
+                "newPage": false,
+                "searchKey": "poll.errNetClosing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type errNetClosing struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype errNetClosing struct{}\n```\n\nerrNetClosing is the type of the variable ErrNetClosing. This is used to implement the net.Error interface. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#errNetClosing.Error",
+                    "documentation": {
+                      "identifier": "errNetClosing.Error",
+                      "newPage": false,
+                      "searchKey": "poll.errNetClosing.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNetClosing) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNetClosing) Error() string\n```\n\nError returns the error message for ErrNetClosing. Keep this string consistent because of issue #4373: since historically programs have not been able to detect this error, they look for the string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#errNetClosing.Timeout",
+                    "documentation": {
+                      "identifier": "errNetClosing.Timeout",
+                      "newPage": false,
+                      "searchKey": "poll.errNetClosing.Timeout",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNetClosing) Timeout() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNetClosing) Timeout() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#errNetClosing.Temporary",
+                    "documentation": {
+                      "identifier": "errNetClosing.Temporary",
+                      "newPage": false,
+                      "searchKey": "poll.errNetClosing.Temporary",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e errNetClosing) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e errNetClosing) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#DeadlineExceededError",
+              "documentation": {
+                "identifier": "DeadlineExceededError",
+                "newPage": false,
+                "searchKey": "poll.DeadlineExceededError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type DeadlineExceededError struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype DeadlineExceededError struct{}\n```\n\nDeadlineExceededError is returned for an expired deadline. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#DeadlineExceededError.Error",
+                    "documentation": {
+                      "identifier": "DeadlineExceededError.Error",
+                      "newPage": false,
+                      "searchKey": "poll.DeadlineExceededError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *DeadlineExceededError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *DeadlineExceededError) Error() string\n```\n\nImplement the net.Error interface. The string is \"i/o timeout\" because that is what was returned by earlier Go versions. Changing it may break programs that match on error strings. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#DeadlineExceededError.Timeout",
+                    "documentation": {
+                      "identifier": "DeadlineExceededError.Timeout",
+                      "newPage": false,
+                      "searchKey": "poll.DeadlineExceededError.Timeout",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *DeadlineExceededError) Timeout() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *DeadlineExceededError) Timeout() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#DeadlineExceededError.Temporary",
+                    "documentation": {
+                      "identifier": "DeadlineExceededError.Temporary",
+                      "newPage": false,
+                      "searchKey": "poll.DeadlineExceededError.Temporary",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *DeadlineExceededError) Temporary() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *DeadlineExceededError) Temporary() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#fdMutex",
+              "documentation": {
+                "identifier": "fdMutex",
+                "newPage": false,
+                "searchKey": "poll.fdMutex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type fdMutex struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype fdMutex struct {\n\tstate uint64\n\trsema uint32\n\twsema uint32\n}\n```\n\nfdMutex is a specialized synchronization primitive that manages lifetime of an fd and serializes access to Read, Write and Close methods on FD. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#fdMutex.incref",
+                    "documentation": {
+                      "identifier": "fdMutex.incref",
+                      "newPage": false,
+                      "searchKey": "poll.fdMutex.incref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *fdMutex) incref() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *fdMutex) incref() bool\n```\n\nincref adds a reference to mu. It reports whether mu is available for reading or writing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#fdMutex.increfAndClose",
+                    "documentation": {
+                      "identifier": "fdMutex.increfAndClose",
+                      "newPage": false,
+                      "searchKey": "poll.fdMutex.increfAndClose",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *fdMutex) increfAndClose() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *fdMutex) increfAndClose() bool\n```\n\nincrefAndClose sets the state of mu to closed. It returns false if the file was already closed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#fdMutex.decref",
+                    "documentation": {
+                      "identifier": "fdMutex.decref",
+                      "newPage": false,
+                      "searchKey": "poll.fdMutex.decref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *fdMutex) decref() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *fdMutex) decref() bool\n```\n\ndecref removes a reference from mu. It reports whether there is no remaining reference. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#fdMutex.rwlock",
+                    "documentation": {
+                      "identifier": "fdMutex.rwlock",
+                      "newPage": false,
+                      "searchKey": "poll.fdMutex.rwlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *fdMutex) rwlock(read bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *fdMutex) rwlock(read bool) bool\n```\n\nlock adds a reference to mu and locks mu. It reports whether mu is available for reading or writing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#fdMutex.rwunlock",
+                    "documentation": {
+                      "identifier": "fdMutex.rwunlock",
+                      "newPage": false,
+                      "searchKey": "poll.fdMutex.rwunlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *fdMutex) rwunlock(read bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *fdMutex) rwunlock(read bool) bool\n```\n\nunlock removes a reference from mu and unlocks mu. It reports whether there is no remaining reference. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#pollDesc",
+              "documentation": {
+                "identifier": "pollDesc",
+                "newPage": false,
+                "searchKey": "poll.pollDesc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type pollDesc struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype pollDesc struct {\n\truntimeCtx uintptr\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.init",
+                    "documentation": {
+                      "identifier": "pollDesc.init",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.init",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) init(fd *FD) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) init(fd *FD) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.close",
+                    "documentation": {
+                      "identifier": "pollDesc.close",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) close()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.evict",
+                    "documentation": {
+                      "identifier": "pollDesc.evict",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.evict",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) evict()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) evict()\n```\n\nEvict evicts fd from the pending list, unblocking any I/O running on fd. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.prepare",
+                    "documentation": {
+                      "identifier": "pollDesc.prepare",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.prepare",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) prepare(mode int, isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) prepare(mode int, isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.prepareRead",
+                    "documentation": {
+                      "identifier": "pollDesc.prepareRead",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.prepareRead",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) prepareRead(isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) prepareRead(isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.prepareWrite",
+                    "documentation": {
+                      "identifier": "pollDesc.prepareWrite",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.prepareWrite",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) prepareWrite(isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) prepareWrite(isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.wait",
+                    "documentation": {
+                      "identifier": "pollDesc.wait",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.wait",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) wait(mode int, isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) wait(mode int, isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.waitRead",
+                    "documentation": {
+                      "identifier": "pollDesc.waitRead",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.waitRead",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) waitRead(isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) waitRead(isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.waitWrite",
+                    "documentation": {
+                      "identifier": "pollDesc.waitWrite",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.waitWrite",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) waitWrite(isFile bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) waitWrite(isFile bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.waitCanceled",
+                    "documentation": {
+                      "identifier": "pollDesc.waitCanceled",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.waitCanceled",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) waitCanceled(mode int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) waitCanceled(mode int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#pollDesc.pollable",
+                    "documentation": {
+                      "identifier": "pollDesc.pollable",
+                      "newPage": false,
+                      "searchKey": "poll.pollDesc.pollable",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (pd *pollDesc) pollable() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (pd *pollDesc) pollable() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#FD",
+              "documentation": {
+                "identifier": "FD",
+                "newPage": false,
+                "searchKey": "poll.FD",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FD struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FD struct {\n\t// Lock sysfd and serialize access to Read and Write methods.\n\tfdmu fdMutex\n\n\t// System file descriptor. Immutable until Close.\n\tSysfd int\n\n\t// I/O poller.\n\tpd pollDesc\n\n\t// Writev cache.\n\tiovecs *[]syscall.Iovec\n\n\t// Semaphore signaled when file is closed.\n\tcsema uint32\n\n\t// Non-zero if this file has been set to blocking mode.\n\tisBlocking uint32\n\n\t// Whether this is a streaming descriptor, as opposed to a\n\t// packet-based descriptor like a UDP socket. Immutable.\n\tIsStream bool\n\n\t// Whether a zero byte read indicates EOF. This is false for a\n\t// message based socket connection.\n\tZeroReadIsEOF bool\n\n\t// Whether this is a file rather than a network socket.\n\tisFile bool\n}\n```\n\nFD is a file descriptor. The net and os packages use this type as a field of a larger type representing a network connection or OS file. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Fsync",
+                    "documentation": {
+                      "identifier": "FD.Fsync",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Fsync",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Fsync() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Fsync() error\n```\n\nFsync invokes SYS_FCNTL with SYS_FULLFSYNC because on OS X, SYS_FSYNC doesn't fully flush contents to disk. See Issue #26650 as well as the man page for fsync on OS X. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.incref",
+                    "documentation": {
+                      "identifier": "FD.incref",
+                      "newPage": false,
+                      "searchKey": "poll.FD.incref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) incref() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) incref() error\n```\n\nincref adds a reference to fd. It returns an error when fd cannot be used. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.decref",
+                    "documentation": {
+                      "identifier": "FD.decref",
+                      "newPage": false,
+                      "searchKey": "poll.FD.decref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) decref() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) decref() error\n```\n\ndecref removes a reference from fd. It also closes fd when the state of fd is set to closed and there is no remaining reference. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.readLock",
+                    "documentation": {
+                      "identifier": "FD.readLock",
+                      "newPage": false,
+                      "searchKey": "poll.FD.readLock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) readLock() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) readLock() error\n```\n\nreadLock adds a reference to fd and locks fd for reading. It returns an error when fd cannot be used for reading. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.readUnlock",
+                    "documentation": {
+                      "identifier": "FD.readUnlock",
+                      "newPage": false,
+                      "searchKey": "poll.FD.readUnlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) readUnlock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) readUnlock()\n```\n\nreadUnlock removes a reference from fd and unlocks fd for reading. It also closes fd when the state of fd is set to closed and there is no remaining reference. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.writeLock",
+                    "documentation": {
+                      "identifier": "FD.writeLock",
+                      "newPage": false,
+                      "searchKey": "poll.FD.writeLock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) writeLock() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) writeLock() error\n```\n\nwriteLock adds a reference to fd and locks fd for writing. It returns an error when fd cannot be used for writing. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.writeUnlock",
+                    "documentation": {
+                      "identifier": "FD.writeUnlock",
+                      "newPage": false,
+                      "searchKey": "poll.FD.writeUnlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) writeUnlock()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) writeUnlock()\n```\n\nwriteUnlock removes a reference from fd and unlocks fd for writing. It also closes fd when the state of fd is set to closed and there is no remaining reference. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.OpenDir",
+                    "documentation": {
+                      "identifier": "FD.OpenDir",
+                      "newPage": false,
+                      "searchKey": "poll.FD.OpenDir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) OpenDir() (uintptr, string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) OpenDir() (uintptr, string, error)\n```\n\nOpenDir returns a pointer to a DIR structure suitable for ReadDir. In case of an error, the name of the failed syscall is returned along with a syscall.Errno. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetDeadline",
+                    "documentation": {
+                      "identifier": "FD.SetDeadline",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetDeadline",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetDeadline(t time.Time) error\n```\n\nSetDeadline sets the read and write deadlines associated with fd. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetReadDeadline",
+                    "documentation": {
+                      "identifier": "FD.SetReadDeadline",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetReadDeadline",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetReadDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetReadDeadline(t time.Time) error\n```\n\nSetReadDeadline sets the read deadline associated with fd. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetWriteDeadline",
+                    "documentation": {
+                      "identifier": "FD.SetWriteDeadline",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetWriteDeadline",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetWriteDeadline(t time.Time) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetWriteDeadline(t time.Time) error\n```\n\nSetWriteDeadline sets the write deadline associated with fd. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.eofError",
+                    "documentation": {
+                      "identifier": "FD.eofError",
+                      "newPage": false,
+                      "searchKey": "poll.FD.eofError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) eofError(n int, err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) eofError(n int, err error) error\n```\n\neofError returns io.EOF when fd is available for reading end of file. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Shutdown",
+                    "documentation": {
+                      "identifier": "FD.Shutdown",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Shutdown",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Shutdown(how int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Shutdown(how int) error\n```\n\nShutdown wraps syscall.Shutdown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Fchown",
+                    "documentation": {
+                      "identifier": "FD.Fchown",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Fchown",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Fchown(uid, gid int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Fchown(uid, gid int) error\n```\n\nFchown wraps syscall.Fchown. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Ftruncate",
+                    "documentation": {
+                      "identifier": "FD.Ftruncate",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Ftruncate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Ftruncate(size int64) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Ftruncate(size int64) error\n```\n\nFtruncate wraps syscall.Ftruncate. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.RawControl",
+                    "documentation": {
+                      "identifier": "FD.RawControl",
+                      "newPage": false,
+                      "searchKey": "poll.FD.RawControl",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) RawControl(f func(uintptr)) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) RawControl(f func(uintptr)) error\n```\n\nRawControl invokes the user-defined function f for a non-IO operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Init",
+                    "documentation": {
+                      "identifier": "FD.Init",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Init",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Init(net string, pollable bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Init(net string, pollable bool) error\n```\n\nInit initializes the FD. The Sysfd field should already be set. This can be called multiple times on a single FD. The net argument is a network name from the net package (e.g., \"tcp\"), or \"file\". Set pollable to true if fd should be managed by runtime netpoll. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.destroy",
+                    "documentation": {
+                      "identifier": "FD.destroy",
+                      "newPage": false,
+                      "searchKey": "poll.FD.destroy",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) destroy() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) destroy() error\n```\n\nDestroy closes the file descriptor. This is called when there are no remaining references. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Close",
+                    "documentation": {
+                      "identifier": "FD.Close",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Close() error\n```\n\nClose closes the FD. The underlying file descriptor is closed by the destroy method when there are no remaining references. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetBlocking",
+                    "documentation": {
+                      "identifier": "FD.SetBlocking",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetBlocking",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetBlocking() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetBlocking() error\n```\n\nSetBlocking puts the file into blocking mode. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Read",
+                    "documentation": {
+                      "identifier": "FD.Read",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Read",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Read(p []byte) (int, error)\n```\n\nRead implements io.Reader. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Pread",
+                    "documentation": {
+                      "identifier": "FD.Pread",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Pread",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Pread(p []byte, off int64) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Pread(p []byte, off int64) (int, error)\n```\n\nPread wraps the pread system call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.ReadFrom",
+                    "documentation": {
+                      "identifier": "FD.ReadFrom",
+                      "newPage": false,
+                      "searchKey": "poll.FD.ReadFrom",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) ReadFrom(p []byte) (int, syscall.Sockaddr, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) ReadFrom(p []byte) (int, syscall.Sockaddr, error)\n```\n\nReadFrom wraps the recvfrom network call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.ReadMsg",
+                    "documentation": {
+                      "identifier": "FD.ReadMsg",
+                      "newPage": false,
+                      "searchKey": "poll.FD.ReadMsg",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) ReadMsg(p []byte, oob []byte, flags int) (int, int, int, syscall.Sockaddr, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) ReadMsg(p []byte, oob []byte, flags int) (int, int, int, syscall.Sockaddr, error)\n```\n\nReadMsg wraps the recvmsg network call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Write",
+                    "documentation": {
+                      "identifier": "FD.Write",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Write(p []byte) (int, error)\n```\n\nWrite implements io.Writer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Pwrite",
+                    "documentation": {
+                      "identifier": "FD.Pwrite",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Pwrite",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Pwrite(p []byte, off int64) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Pwrite(p []byte, off int64) (int, error)\n```\n\nPwrite wraps the pwrite system call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.WriteTo",
+                    "documentation": {
+                      "identifier": "FD.WriteTo",
+                      "newPage": false,
+                      "searchKey": "poll.FD.WriteTo",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) WriteTo(p []byte, sa syscall.Sockaddr) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) WriteTo(p []byte, sa syscall.Sockaddr) (int, error)\n```\n\nWriteTo wraps the sendto network call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.WriteMsg",
+                    "documentation": {
+                      "identifier": "FD.WriteMsg",
+                      "newPage": false,
+                      "searchKey": "poll.FD.WriteMsg",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) WriteMsg(p []byte, oob []byte, sa syscall.Sockaddr) (int, int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) WriteMsg(p []byte, oob []byte, sa syscall.Sockaddr) (int, int, error)\n```\n\nWriteMsg wraps the sendmsg network call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Accept",
+                    "documentation": {
+                      "identifier": "FD.Accept",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Accept",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Accept() (int, syscall.Sockaddr, string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Accept() (int, syscall.Sockaddr, string, error)\n```\n\nAccept wraps the accept network call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Seek",
+                    "documentation": {
+                      "identifier": "FD.Seek",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Seek",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Seek(offset int64, whence int) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Seek(offset int64, whence int) (int64, error)\n```\n\nSeek wraps syscall.Seek. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.ReadDirent",
+                    "documentation": {
+                      "identifier": "FD.ReadDirent",
+                      "newPage": false,
+                      "searchKey": "poll.FD.ReadDirent",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) ReadDirent(buf []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) ReadDirent(buf []byte) (int, error)\n```\n\nReadDirent wraps syscall.ReadDirent. We treat this like an ordinary system call rather than a call that tries to fill the buffer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Fchmod",
+                    "documentation": {
+                      "identifier": "FD.Fchmod",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Fchmod",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Fchmod(mode uint32) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Fchmod(mode uint32) error\n```\n\nFchmod wraps syscall.Fchmod. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Fchdir",
+                    "documentation": {
+                      "identifier": "FD.Fchdir",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Fchdir",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Fchdir() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Fchdir() error\n```\n\nFchdir wraps syscall.Fchdir. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Fstat",
+                    "documentation": {
+                      "identifier": "FD.Fstat",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Fstat",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Fstat(s *syscall.Stat_t) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Fstat(s *syscall.Stat_t) error\n```\n\nFstat wraps syscall.Fstat \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Dup",
+                    "documentation": {
+                      "identifier": "FD.Dup",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Dup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Dup() (int, string, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Dup() (int, string, error)\n```\n\nDup duplicates the file descriptor. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.WaitWrite",
+                    "documentation": {
+                      "identifier": "FD.WaitWrite",
+                      "newPage": false,
+                      "searchKey": "poll.FD.WaitWrite",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) WaitWrite() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) WaitWrite() error\n```\n\nWaitWrite waits until data can be read from fd. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.WriteOnce",
+                    "documentation": {
+                      "identifier": "FD.WriteOnce",
+                      "newPage": false,
+                      "searchKey": "poll.FD.WriteOnce",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) WriteOnce(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) WriteOnce(p []byte) (int, error)\n```\n\nWriteOnce is for testing only. It makes a single write call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.RawRead",
+                    "documentation": {
+                      "identifier": "FD.RawRead",
+                      "newPage": false,
+                      "searchKey": "poll.FD.RawRead",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) RawRead(f func(uintptr) bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) RawRead(f func(uintptr) bool) error\n```\n\nRawRead invokes the user-defined function f for a read operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.RawWrite",
+                    "documentation": {
+                      "identifier": "FD.RawWrite",
+                      "newPage": false,
+                      "searchKey": "poll.FD.RawWrite",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) RawWrite(f func(uintptr) bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) RawWrite(f func(uintptr) bool) error\n```\n\nRawWrite invokes the user-defined function f for a write operation. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptInt",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptInt",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptInt",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptInt(level, name, arg int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptInt(level, name, arg int) error\n```\n\nSetsockoptInt wraps the setsockopt network call with an int argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptInet4Addr",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptInet4Addr",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptInet4Addr",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptInet4Addr(level, name int, arg [4]byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptInet4Addr(level, name int, arg [4]byte) error\n```\n\nSetsockoptInet4Addr wraps the setsockopt network call with an IPv4 address. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptLinger",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptLinger",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptLinger",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptLinger(level, name int, l *syscall.Linger) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptLinger(level, name int, l *syscall.Linger) error\n```\n\nSetsockoptLinger wraps the setsockopt network call with a Linger argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptByte",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptByte",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptByte",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptByte(level, name int, arg byte) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptByte(level, name int, arg byte) error\n```\n\nSetsockoptByte wraps the setsockopt network call with a byte argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptIPMreq",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptIPMreq",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptIPMreq",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptIPMreq(level, name int, mreq *syscall.IPMreq) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptIPMreq(level, name int, mreq *syscall.IPMreq) error\n```\n\nSetsockoptIPMreq wraps the setsockopt network call with an IPMreq argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.SetsockoptIPv6Mreq",
+                    "documentation": {
+                      "identifier": "FD.SetsockoptIPv6Mreq",
+                      "newPage": false,
+                      "searchKey": "poll.FD.SetsockoptIPv6Mreq",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) SetsockoptIPv6Mreq(level, name int, mreq *syscall.IPv6Mreq) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) SetsockoptIPv6Mreq(level, name int, mreq *syscall.IPv6Mreq) error\n```\n\nSetsockoptIPv6Mreq wraps the setsockopt network call with an IPv6Mreq argument. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.Writev",
+                    "documentation": {
+                      "identifier": "FD.Writev",
+                      "newPage": false,
+                      "searchKey": "poll.FD.Writev",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) Writev(v *[][]byte) (int64, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) Writev(v *[][]byte) (int64, error)\n```\n\nWritev wraps the writev system call. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FD.EOFError",
+                    "documentation": {
+                      "identifier": "FD.EOFError",
+                      "newPage": false,
+                      "searchKey": "poll.FD.EOFError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (fd *FD) EOFError(n int, err error) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (fd *FD) EOFError(n int, err error) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#FDMutex",
+              "documentation": {
+                "identifier": "FDMutex",
+                "newPage": false,
+                "searchKey": "poll.FDMutex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FDMutex struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FDMutex struct {\n\tfdMutex\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FDMutex.Incref",
+                    "documentation": {
+                      "identifier": "FDMutex.Incref",
+                      "newPage": false,
+                      "searchKey": "poll.FDMutex.Incref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *FDMutex) Incref() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *FDMutex) Incref() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FDMutex.IncrefAndClose",
+                    "documentation": {
+                      "identifier": "FDMutex.IncrefAndClose",
+                      "newPage": false,
+                      "searchKey": "poll.FDMutex.IncrefAndClose",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *FDMutex) IncrefAndClose() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *FDMutex) IncrefAndClose() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FDMutex.Decref",
+                    "documentation": {
+                      "identifier": "FDMutex.Decref",
+                      "newPage": false,
+                      "searchKey": "poll.FDMutex.Decref",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *FDMutex) Decref() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *FDMutex) Decref() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FDMutex.RWLock",
+                    "documentation": {
+                      "identifier": "FDMutex.RWLock",
+                      "newPage": false,
+                      "searchKey": "poll.FDMutex.RWLock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *FDMutex) RWLock(read bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *FDMutex) RWLock(read bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/poll#FDMutex.RWUnlock",
+                    "documentation": {
+                      "identifier": "FDMutex.RWUnlock",
+                      "newPage": false,
+                      "searchKey": "poll.FDMutex.RWUnlock",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (mu *FDMutex) RWUnlock(read bool) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (mu *FDMutex) RWUnlock(read bool) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/poll#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/poll#errnoErr",
+              "documentation": {
+                "identifier": "errnoErr",
+                "newPage": false,
+                "searchKey": "poll.errnoErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errnoErr(e syscall.Errno) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errnoErr(e syscall.Errno) error\n```\n\nerrnoErr returns common boxed Errno values, to prevent allocations at runtime. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#fcntl",
+              "documentation": {
+                "identifier": "fcntl",
+                "newPage": false,
+                "searchKey": "poll.fcntl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fcntl(fd int, cmd int, arg int) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fcntl(fd int, cmd int, arg int) (int, error)\n```\n\nImplemented in the syscall package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#errClosing",
+              "documentation": {
+                "identifier": "errClosing",
+                "newPage": false,
+                "searchKey": "poll.errClosing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func errClosing(isFile bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc errClosing(isFile bool) error\n```\n\nReturn the appropriate closing error based on isFile. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#consume",
+              "documentation": {
+                "identifier": "consume",
+                "newPage": false,
+                "searchKey": "poll.consume",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func consume(v *[][]byte, n int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc consume(v *[][]byte, n int64)\n```\n\nconsume removes data from a slice of byte slices, for writev. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_Semacquire",
+              "documentation": {
+                "identifier": "runtime_Semacquire",
+                "newPage": false,
+                "searchKey": "poll.runtime_Semacquire",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_Semacquire(sema *uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_Semacquire(sema *uint32)\n```\n\nImplemented in runtime package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_Semrelease",
+              "documentation": {
+                "identifier": "runtime_Semrelease",
+                "newPage": false,
+                "searchKey": "poll.runtime_Semrelease",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_Semrelease(sema *uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_Semrelease(sema *uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#fdopendir",
+              "documentation": {
+                "identifier": "fdopendir",
+                "newPage": false,
+                "searchKey": "poll.fdopendir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fdopendir(fd int) (dir uintptr, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fdopendir(fd int) (dir uintptr, err error)\n```\n\nImplemented in syscall/syscall_darwin.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtimeNano",
+              "documentation": {
+                "identifier": "runtimeNano",
+                "newPage": false,
+                "searchKey": "poll.runtimeNano",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtimeNano() int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtimeNano() int64\n```\n\nruntimeNano returns the current value of the runtime clock in nanoseconds. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollServerInit",
+              "documentation": {
+                "identifier": "runtime_pollServerInit",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollServerInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollServerInit()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollServerInit()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollOpen",
+              "documentation": {
+                "identifier": "runtime_pollOpen",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollOpen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollOpen(fd uintptr) (uintptr, int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollOpen(fd uintptr) (uintptr, int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollClose",
+              "documentation": {
+                "identifier": "runtime_pollClose",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollClose(ctx uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollClose(ctx uintptr)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollWait",
+              "documentation": {
+                "identifier": "runtime_pollWait",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollWait",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollWait(ctx uintptr, mode int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollWait(ctx uintptr, mode int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollWaitCanceled",
+              "documentation": {
+                "identifier": "runtime_pollWaitCanceled",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollWaitCanceled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollWaitCanceled(ctx uintptr, mode int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollWaitCanceled(ctx uintptr, mode int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollReset",
+              "documentation": {
+                "identifier": "runtime_pollReset",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollReset(ctx uintptr, mode int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollReset(ctx uintptr, mode int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollSetDeadline",
+              "documentation": {
+                "identifier": "runtime_pollSetDeadline",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollSetDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollSetDeadline(ctx uintptr, d int64, mode int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollSetDeadline(ctx uintptr, d int64, mode int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_pollUnblock",
+              "documentation": {
+                "identifier": "runtime_pollUnblock",
+                "newPage": false,
+                "searchKey": "poll.runtime_pollUnblock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_pollUnblock(ctx uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_pollUnblock(ctx uintptr)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#runtime_isPollServerDescriptor",
+              "documentation": {
+                "identifier": "runtime_isPollServerDescriptor",
+                "newPage": false,
+                "searchKey": "poll.runtime_isPollServerDescriptor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runtime_isPollServerDescriptor(fd uintptr) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runtime_isPollServerDescriptor(fd uintptr) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#convertErr",
+              "documentation": {
+                "identifier": "convertErr",
+                "newPage": false,
+                "searchKey": "poll.convertErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convertErr(res int, isFile bool) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convertErr(res int, isFile bool) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#setDeadlineImpl",
+              "documentation": {
+                "identifier": "setDeadlineImpl",
+                "newPage": false,
+                "searchKey": "poll.setDeadlineImpl",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func setDeadlineImpl(fd *FD, t time.Time, mode int) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc setDeadlineImpl(fd *FD, t time.Time, mode int) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#IsPollDescriptor",
+              "documentation": {
+                "identifier": "IsPollDescriptor",
+                "newPage": false,
+                "searchKey": "poll.IsPollDescriptor",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPollDescriptor(fd uintptr) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPollDescriptor(fd uintptr) bool\n```\n\nIsPollDescriptor reports whether fd is the descriptor being used by the poller. This is only used for testing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ignoringEINTR",
+              "documentation": {
+                "identifier": "ignoringEINTR",
+                "newPage": false,
+                "searchKey": "poll.ignoringEINTR",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ignoringEINTR(fn func() error) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ignoringEINTR(fn func() error) error\n```\n\nignoringEINTR makes a function call and repeats it if it returns an EINTR error. This appears to be required even though we install all signal handlers with SA_RESTART: see #22838, #38033, #38836, #40846. Also #20400 and #36644 are issues in which a signal handler is installed without setting SA_RESTART. None of these are the common case, but there are enough of them that it seems that we can't avoid an EINTR loop. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#DupCloseOnExec",
+              "documentation": {
+                "identifier": "DupCloseOnExec",
+                "newPage": false,
+                "searchKey": "poll.DupCloseOnExec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DupCloseOnExec(fd int) (int, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DupCloseOnExec(fd int) (int, string, error)\n```\n\nDupCloseOnExec dups fd and marks it close-on-exec. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#dupCloseOnExecOld",
+              "documentation": {
+                "identifier": "dupCloseOnExecOld",
+                "newPage": false,
+                "searchKey": "poll.dupCloseOnExecOld",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dupCloseOnExecOld(fd int) (int, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dupCloseOnExecOld(fd int) (int, string, error)\n```\n\ndupCloseOnExecOld is the traditional way to dup an fd and set its O_CLOEXEC bit, using two system calls. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#ignoringEINTRIO",
+              "documentation": {
+                "identifier": "ignoringEINTRIO",
+                "newPage": false,
+                "searchKey": "poll.ignoringEINTRIO",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ignoringEINTRIO(fn func(fd int, p []byte) (int, error), fd int, p []byte) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ignoringEINTRIO(fn func(fd int, p []byte) (int, error), fd int, p []byte) (int, error)\n```\n\nignoringEINTRIO is like ignoringEINTR, but just for IO calls. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#writev",
+              "documentation": {
+                "identifier": "writev",
+                "newPage": false,
+                "searchKey": "poll.writev",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writev(fd int, iovecs []syscall.Iovec) (uintptr, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writev(fd int, iovecs []syscall.Iovec) (uintptr, error)\n```\n\nImplemented in syscall/syscall_darwin.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#newIovecWithBase",
+              "documentation": {
+                "identifier": "newIovecWithBase",
+                "newPage": false,
+                "searchKey": "poll.newIovecWithBase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newIovecWithBase(base *byte) syscall.Iovec"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newIovecWithBase(base *byte) syscall.Iovec\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/poll#accept",
+              "documentation": {
+                "identifier": "accept",
+                "newPage": false,
+                "searchKey": "poll.accept",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func accept(s int) (int, syscall.Sockaddr, string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc accept(s int) (int, syscall.Sockaddr, string, error)\n```\n\nWrapper around the accept system call that marks the returned file descriptor as nonblocking and close-on-exec. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

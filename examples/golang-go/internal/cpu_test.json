@@ -1,0 +1,260 @@
+{
+  "pathID": "/internal/cpu_test",
+  "documentation": {
+    "identifier": "cpu_test",
+    "newPage": true,
+    "searchKey": "internal/cpu_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package cpu_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/cpu_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestMinimalFeatures",
+              "documentation": {
+                "identifier": "TestMinimalFeatures",
+                "newPage": false,
+                "searchKey": "cpu_test.TestMinimalFeatures",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMinimalFeatures(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMinimalFeatures(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#MustHaveDebugOptionsSupport",
+              "documentation": {
+                "identifier": "MustHaveDebugOptionsSupport",
+                "newPage": false,
+                "searchKey": "cpu_test.MustHaveDebugOptionsSupport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustHaveDebugOptionsSupport(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustHaveDebugOptionsSupport(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#MustSupportFeatureDectection",
+              "documentation": {
+                "identifier": "MustSupportFeatureDectection",
+                "newPage": false,
+                "searchKey": "cpu_test.MustSupportFeatureDectection",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MustSupportFeatureDectection(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MustSupportFeatureDectection(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#runDebugOptionsTest",
+              "documentation": {
+                "identifier": "runDebugOptionsTest",
+                "newPage": false,
+                "searchKey": "cpu_test.runDebugOptionsTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runDebugOptionsTest(t *testing.T, test string, options string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runDebugOptionsTest(t *testing.T, test string, options string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestDisableAllCapabilities",
+              "documentation": {
+                "identifier": "TestDisableAllCapabilities",
+                "newPage": false,
+                "searchKey": "cpu_test.TestDisableAllCapabilities",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDisableAllCapabilities(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDisableAllCapabilities(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestAllCapabilitiesDisabled",
+              "documentation": {
+                "identifier": "TestAllCapabilitiesDisabled",
+                "newPage": false,
+                "searchKey": "cpu_test.TestAllCapabilitiesDisabled",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAllCapabilitiesDisabled(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAllCapabilitiesDisabled(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestX86ifAVX2hasAVX",
+              "documentation": {
+                "identifier": "TestX86ifAVX2hasAVX",
+                "newPage": false,
+                "searchKey": "cpu_test.TestX86ifAVX2hasAVX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestX86ifAVX2hasAVX(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestX86ifAVX2hasAVX(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestDisableSSE2",
+              "documentation": {
+                "identifier": "TestDisableSSE2",
+                "newPage": false,
+                "searchKey": "cpu_test.TestDisableSSE2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDisableSSE2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDisableSSE2(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestSSE2DebugOption",
+              "documentation": {
+                "identifier": "TestSSE2DebugOption",
+                "newPage": false,
+                "searchKey": "cpu_test.TestSSE2DebugOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSSE2DebugOption(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSSE2DebugOption(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestDisableSSE3",
+              "documentation": {
+                "identifier": "TestDisableSSE3",
+                "newPage": false,
+                "searchKey": "cpu_test.TestDisableSSE3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDisableSSE3(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDisableSSE3(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/cpu_test#TestSSE3DebugOption",
+              "documentation": {
+                "identifier": "TestSSE3DebugOption",
+                "newPage": false,
+                "searchKey": "cpu_test.TestSSE3DebugOption",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSSE3DebugOption(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSSE3DebugOption(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

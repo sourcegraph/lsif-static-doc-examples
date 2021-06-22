@@ -1,0 +1,88 @@
+{
+  "pathID": "/image/color/palette",
+  "documentation": {
+    "identifier": "palette",
+    "newPage": true,
+    "searchKey": "image/color/palette",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package palette"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package palette provides standard color palettes. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/image/color/palette#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image/color/palette#Plan9",
+              "documentation": {
+                "identifier": "Plan9",
+                "newPage": false,
+                "searchKey": "palette.Plan9",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var Plan9"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar Plan9 = ...\n```\n\nPlan9 is a 256-color palette that partitions the 24-bit RGB space into 4×4×4 subdivision, with 4 shades in each subcube. Compared to the WebSafe, the idea is to reduce the color resolution by dicing the color cube into fewer cells, and to use the extra space to increase the intensity resolution. This results in 16 gray shades (4 gray subcubes with 4 samples in each), 13 shades of each primary and secondary color (3 subcubes with 4 samples plus black) and a reasonable selection of colors covering the rest of the color cube. The advantage is better representation of continuous tones. \n\nThis palette was used in the Plan 9 Operating System, described at [https://9p.io/magic/man2html/6/color](https://9p.io/magic/man2html/6/color) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/color/palette#WebSafe",
+              "documentation": {
+                "identifier": "WebSafe",
+                "newPage": false,
+                "searchKey": "palette.WebSafe",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var WebSafe"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar WebSafe = ...\n```\n\nWebSafe is a 216-color palette that was popularized by early versions of Netscape Navigator. It is also known as the Netscape Color Cube. \n\nSee [https://en.wikipedia.org/wiki/Web_colors#Web-safe_colors](https://en.wikipedia.org/wiki/Web_colors#Web-safe_colors) for details. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

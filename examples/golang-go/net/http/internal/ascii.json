@@ -1,0 +1,188 @@
+{
+  "pathID": "/net/http/internal/ascii",
+  "documentation": {
+    "identifier": "ascii",
+    "newPage": true,
+    "searchKey": "net/http/internal/ascii",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package ascii"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/http/internal/ascii#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#EqualFold",
+              "documentation": {
+                "identifier": "EqualFold",
+                "newPage": false,
+                "searchKey": "ascii.EqualFold",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EqualFold(s, t string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EqualFold(s, t string) bool\n```\n\nEqualFold is strings.EqualFold, ASCII only. It reports whether s and t are equal, ASCII-case-insensitively. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#lower",
+              "documentation": {
+                "identifier": "lower",
+                "newPage": false,
+                "searchKey": "ascii.lower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lower(b byte) byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lower(b byte) byte\n```\n\nlower returns the ASCII lowercase version of b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#IsPrint",
+              "documentation": {
+                "identifier": "IsPrint",
+                "newPage": false,
+                "searchKey": "ascii.IsPrint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPrint(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPrint(s string) bool\n```\n\nIsPrint returns whether s is ASCII and printable according to [https://tools.ietf.org/html/rfc20#section-4.2](https://tools.ietf.org/html/rfc20#section-4.2). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#Is",
+              "documentation": {
+                "identifier": "Is",
+                "newPage": false,
+                "searchKey": "ascii.Is",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Is(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Is(s string) bool\n```\n\nIs returns whether s is ASCII. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#ToLower",
+              "documentation": {
+                "identifier": "ToLower",
+                "newPage": false,
+                "searchKey": "ascii.ToLower",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ToLower(s string) (lower string, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ToLower(s string) (lower string, ok bool)\n```\n\nToLower returns the lowercase version of s if s is ASCII and printable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#TestEqualFold",
+              "documentation": {
+                "identifier": "TestEqualFold",
+                "newPage": false,
+                "searchKey": "ascii.TestEqualFold",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEqualFold(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEqualFold(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/internal/ascii#TestIsPrint",
+              "documentation": {
+                "identifier": "TestIsPrint",
+                "newPage": false,
+                "searchKey": "ascii.TestIsPrint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsPrint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsPrint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

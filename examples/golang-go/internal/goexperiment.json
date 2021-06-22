@@ -1,0 +1,479 @@
+{
+  "pathID": "/internal/goexperiment",
+  "documentation": {
+    "identifier": "goexperiment",
+    "newPage": true,
+    "searchKey": "internal/goexperiment",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package goexperiment"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package goexperiment implements support for toolchain experiments. \n\nToolchain experiments are controlled by the GOEXPERIMENT environment variable. GOEXPERIMENT is a comma-separated list of experiment names. GOEXPERIMENT can be set at make.bash time, which sets the default experiments for binaries built with the tool chain; or it can be set at build time. GOEXPERIMENT can also be set to \"none\", which disables any experiments that were enabled at make.bash time. \n\nExperiments are exposed to the build in the following ways: \n\n- Build tag goexperiment.x is set if experiment x (lower case) is enabled. \n\n- For each experiment x (in camel case), this package contains a boolean constant x and an integer constant xInt. \n\n- In runtime assembly, the macro GOEXPERIMENT_x is defined if experiment x (lower case) is enabled. \n\nIn the toolchain, the set of experiments enabled for the current build should be accessed via objabi.Experiment. \n\nThe set of experiments is included in the output of runtime.Version() and \"go version <binary>\" if it differs from the default experiments. \n\nFor the set of experiments supported by the current toolchain, see \"go doc goexperiment.Flags\". \n\nNote that this package defines the set of experiments (in Flags) and records the experiments that were enabled when the package was compiled (as boolean and integer constants). \n\nNote especially that this package does not itself change behavior at run time based on the GOEXPERIMENT variable. The code used in builds to interpret the GOEXPERIMENT variable is in the separate package internal/buildcfg. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/goexperiment#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#FieldTrack",
+              "documentation": {
+                "identifier": "FieldTrack",
+                "newPage": false,
+                "searchKey": "goexperiment.FieldTrack",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FieldTrack"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FieldTrack = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#FieldTrackInt",
+              "documentation": {
+                "identifier": "FieldTrackInt",
+                "newPage": false,
+                "searchKey": "goexperiment.FieldTrackInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const FieldTrackInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst FieldTrackInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#PreemptibleLoops",
+              "documentation": {
+                "identifier": "PreemptibleLoops",
+                "newPage": false,
+                "searchKey": "goexperiment.PreemptibleLoops",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PreemptibleLoops"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PreemptibleLoops = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#PreemptibleLoopsInt",
+              "documentation": {
+                "identifier": "PreemptibleLoopsInt",
+                "newPage": false,
+                "searchKey": "goexperiment.PreemptibleLoopsInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const PreemptibleLoopsInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst PreemptibleLoopsInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#Regabi",
+              "documentation": {
+                "identifier": "Regabi",
+                "newPage": false,
+                "searchKey": "goexperiment.Regabi",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Regabi"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Regabi = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiInt",
+              "documentation": {
+                "identifier": "RegabiInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiArgs",
+              "documentation": {
+                "identifier": "RegabiArgs",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiArgs",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiArgs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiArgs = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiArgsInt",
+              "documentation": {
+                "identifier": "RegabiArgsInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiArgsInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiArgsInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiArgsInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiDefer",
+              "documentation": {
+                "identifier": "RegabiDefer",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiDefer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiDefer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiDefer = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiDeferInt",
+              "documentation": {
+                "identifier": "RegabiDeferInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiDeferInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiDeferInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiDeferInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiG",
+              "documentation": {
+                "identifier": "RegabiG",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiG",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiG"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiG = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiGInt",
+              "documentation": {
+                "identifier": "RegabiGInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiGInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiGInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiGInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiReflect",
+              "documentation": {
+                "identifier": "RegabiReflect",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiReflect",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiReflect"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiReflect = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiReflectInt",
+              "documentation": {
+                "identifier": "RegabiReflectInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiReflectInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiReflectInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiReflectInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiWrappers",
+              "documentation": {
+                "identifier": "RegabiWrappers",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiWrappers",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiWrappers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiWrappers = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#RegabiWrappersInt",
+              "documentation": {
+                "identifier": "RegabiWrappersInt",
+                "newPage": false,
+                "searchKey": "goexperiment.RegabiWrappersInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const RegabiWrappersInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst RegabiWrappersInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#StaticLockRanking",
+              "documentation": {
+                "identifier": "StaticLockRanking",
+                "newPage": false,
+                "searchKey": "goexperiment.StaticLockRanking",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const StaticLockRanking"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst StaticLockRanking = false\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#StaticLockRankingInt",
+              "documentation": {
+                "identifier": "StaticLockRankingInt",
+                "newPage": false,
+                "searchKey": "goexperiment.StaticLockRankingInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const StaticLockRankingInt"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst StaticLockRankingInt = 0\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/goexperiment#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/goexperiment#Flags",
+              "documentation": {
+                "identifier": "Flags",
+                "newPage": false,
+                "searchKey": "goexperiment.Flags",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Flags struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Flags struct {\n\tFieldTrack        bool\n\tPreemptibleLoops  bool\n\tStaticLockRanking bool\n\n\t// RegabiWrappers enables ABI wrappers for calling between\n\t// ABI0 and ABIInternal functions. Without this, the ABIs are\n\t// assumed to be identical so cross-ABI calls are direct.\n\tRegabiWrappers bool\n\t// RegabiG enables dedicated G and zero registers in\n\t// ABIInternal.\n\t//\n\t// Requires wrappers because it makes the ABIs incompatible.\n\tRegabiG bool\n\t// RegabiReflect enables the register-passing paths in\n\t// reflection calls. This is also gated by intArgRegs in\n\t// reflect and runtime (which are disabled by default) so it\n\t// can be used in targeted tests.\n\tRegabiReflect bool\n\t// RegabiDefer enables desugaring defer and go calls\n\t// into argument-less closures.\n\tRegabiDefer bool\n\t// RegabiArgs enables register arguments/results in all\n\t// compiled Go functions.\n\t//\n\t// Requires wrappers (to do ABI translation), g (because\n\t// runtime assembly that's been ported to ABIInternal uses the\n\t// G register), reflect (so reflection calls use registers),\n\t// and defer (because the runtime doesn't support passing\n\t// register arguments to defer/go).\n\tRegabiArgs bool\n}\n```\n\nFlags is the set of experiments that can be enabled or disabled in the current toolchain. \n\nWhen specified in the GOEXPERIMENT environment variable or as build tags, experiments use the strings.ToLower of their field name. \n\nFor the baseline experimental configuration, see objabi.experimentBaseline. \n\nIf you change this struct definition, run \"go generate\". \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,540 @@
+{
+  "pathID": "/container/heap",
+  "documentation": {
+    "identifier": "heap",
+    "newPage": true,
+    "searchKey": "container/heap",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package heap"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package heap provides heap operations for any type that implements heap.Interface. A heap is a tree with the property that each node is the minimum-valued node in its subtree. \n\nThe minimum element in the tree is the root, at index 0. \n\nA heap is a common way to implement a priority queue. To build a priority queue, implement the Heap interface with the (negative) priority as the ordering for the Less method, so Push adds items while Pop removes the highest-priority item from the queue. The Examples include such an implementation; the file example_pq_test.go has the complete source. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/container/heap#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/container/heap#Interface",
+              "documentation": {
+                "identifier": "Interface",
+                "newPage": false,
+                "searchKey": "heap.Interface",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Interface interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Interface interface {\n\tsort.Interface\n\tPush(x interface{}) // add x as element Len()\n\tPop() interface{}   // remove and return element Len() - 1.\n}\n```\n\nThe Interface type describes the requirements for a type using the routines in this package. Any type that implements it may be used as a min-heap with the following invariants (established after Init has been called or if the data is empty or sorted): \n\n```\n!h.Less(j, i) for 0 <= i < h.Len() and 2*i+1 <= j <= 2*i+2 and j < h.Len()\n\n```\nNote that Push and Pop in this interface are for package heap's implementation to call. To add and remove things from the heap, use heap.Push and heap.Pop. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#myHeap",
+              "documentation": {
+                "identifier": "myHeap",
+                "newPage": false,
+                "searchKey": "heap.myHeap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myHeap []int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myHeap []int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.Less",
+                    "documentation": {
+                      "identifier": "myHeap.Less",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *myHeap) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *myHeap) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.Swap",
+                    "documentation": {
+                      "identifier": "myHeap.Swap",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *myHeap) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *myHeap) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.Len",
+                    "documentation": {
+                      "identifier": "myHeap.Len",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *myHeap) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *myHeap) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.Pop",
+                    "documentation": {
+                      "identifier": "myHeap.Pop",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.Pop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *myHeap) Pop() (v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *myHeap) Pop() (v interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.Push",
+                    "documentation": {
+                      "identifier": "myHeap.Push",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.Push",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *myHeap) Push(v interface{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *myHeap) Push(v interface{})\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/container/heap#myHeap.verify",
+                    "documentation": {
+                      "identifier": "myHeap.verify",
+                      "newPage": false,
+                      "searchKey": "heap.myHeap.verify",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h myHeap) verify(t *testing.T, i int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h myHeap) verify(t *testing.T, i int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/container/heap#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/container/heap#Init",
+              "documentation": {
+                "identifier": "Init",
+                "newPage": false,
+                "searchKey": "heap.Init",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Init(h Interface)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Init(h Interface)\n```\n\nInit establishes the heap invariants required by the other routines in this package. Init is idempotent with respect to the heap invariants and may be called whenever the heap invariants may have been invalidated. The complexity is O(n) where n = h.Len(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#Push",
+              "documentation": {
+                "identifier": "Push",
+                "newPage": false,
+                "searchKey": "heap.Push",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Push(h Interface, x interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Push(h Interface, x interface{})\n```\n\nPush pushes the element x onto the heap. The complexity is O(log n) where n = h.Len(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#Pop",
+              "documentation": {
+                "identifier": "Pop",
+                "newPage": false,
+                "searchKey": "heap.Pop",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Pop(h Interface) interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Pop(h Interface) interface{}\n```\n\nPop removes and returns the minimum element (according to Less) from the heap. The complexity is O(log n) where n = h.Len(). Pop is equivalent to Remove(h, 0). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#Remove",
+              "documentation": {
+                "identifier": "Remove",
+                "newPage": false,
+                "searchKey": "heap.Remove",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Remove(h Interface, i int) interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Remove(h Interface, i int) interface{}\n```\n\nRemove removes and returns the element at index i from the heap. The complexity is O(log n) where n = h.Len(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#Fix",
+              "documentation": {
+                "identifier": "Fix",
+                "newPage": false,
+                "searchKey": "heap.Fix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Fix(h Interface, i int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Fix(h Interface, i int)\n```\n\nFix re-establishes the heap ordering after the element at index i has changed its value. Changing the value of the element at index i and then calling Fix is equivalent to, but less expensive than, calling Remove(h, i) followed by a Push of the new value. The complexity is O(log n) where n = h.Len(). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#up",
+              "documentation": {
+                "identifier": "up",
+                "newPage": false,
+                "searchKey": "heap.up",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func up(h Interface, j int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc up(h Interface, j int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#down",
+              "documentation": {
+                "identifier": "down",
+                "newPage": false,
+                "searchKey": "heap.down",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func down(h Interface, i0, n int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc down(h Interface, i0, n int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestInit0",
+              "documentation": {
+                "identifier": "TestInit0",
+                "newPage": false,
+                "searchKey": "heap.TestInit0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInit0(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInit0(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestInit1",
+              "documentation": {
+                "identifier": "TestInit1",
+                "newPage": false,
+                "searchKey": "heap.TestInit1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInit1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInit1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#Test",
+              "documentation": {
+                "identifier": "Test",
+                "newPage": false,
+                "searchKey": "heap.Test",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestRemove0",
+              "documentation": {
+                "identifier": "TestRemove0",
+                "newPage": false,
+                "searchKey": "heap.TestRemove0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemove0(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemove0(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestRemove1",
+              "documentation": {
+                "identifier": "TestRemove1",
+                "newPage": false,
+                "searchKey": "heap.TestRemove1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemove1(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemove1(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestRemove2",
+              "documentation": {
+                "identifier": "TestRemove2",
+                "newPage": false,
+                "searchKey": "heap.TestRemove2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemove2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemove2(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#BenchmarkDup",
+              "documentation": {
+                "identifier": "BenchmarkDup",
+                "newPage": false,
+                "searchKey": "heap.BenchmarkDup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDup(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDup(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/container/heap#TestFix",
+              "documentation": {
+                "identifier": "TestFix",
+                "newPage": false,
+                "searchKey": "heap.TestFix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFix(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFix(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

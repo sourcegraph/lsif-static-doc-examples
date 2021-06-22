@@ -1,0 +1,1196 @@
+{
+  "pathID": "/net/http/httptest",
+  "documentation": {
+    "identifier": "httptest",
+    "newPage": true,
+    "searchKey": "net/http/httptest",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package httptest"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package httptest provides utilities for HTTP testing. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/http/httptest#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/httptest#DefaultRemoteAddr",
+              "documentation": {
+                "identifier": "DefaultRemoteAddr",
+                "newPage": false,
+                "searchKey": "httptest.DefaultRemoteAddr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultRemoteAddr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultRemoteAddr = \"1.2.3.4\"\n```\n\nDefaultRemoteAddr is the default remote address to return in RemoteAddr if an explicit DefaultRemoteAddr isn't set on ResponseRecorder. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/httptest#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/httptest#serveFlag",
+              "documentation": {
+                "identifier": "serveFlag",
+                "newPage": false,
+                "searchKey": "httptest.serveFlag",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serveFlag"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serveFlag string\n```\n\nWhen debugging a particular http server-based test, this flag lets you run \n\n```\ngo test -run=BrokenTest -httptest.serve=127.0.0.1:8000\n\n```\nto start the broken server so you can interact with it manually. We only register this flag if it looks like the caller knows about it and is trying to use it as we don't want to pollute flags and this isn't really part of our API. Don't depend on this. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#newServers",
+              "documentation": {
+                "identifier": "newServers",
+                "newPage": false,
+                "searchKey": "httptest.newServers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newServers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newServers = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/httptest#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/httptest#ResponseRecorder",
+              "documentation": {
+                "identifier": "ResponseRecorder",
+                "newPage": false,
+                "searchKey": "httptest.ResponseRecorder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ResponseRecorder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ResponseRecorder struct {\n\t// Code is the HTTP response code set by WriteHeader.\n\t//\n\t// Note that if a Handler never calls WriteHeader or Write,\n\t// this might end up being 0, rather than the implicit\n\t// http.StatusOK. To get the implicit value, use the Result\n\t// method.\n\tCode int\n\n\t// HeaderMap contains the headers explicitly set by the Handler.\n\t// It is an internal detail.\n\t//\n\t// Deprecated: HeaderMap exists for historical compatibility\n\t// and should not be used. To access the headers returned by a handler,\n\t// use the Response.Header map as returned by the Result method.\n\tHeaderMap http.Header\n\n\t// Body is the buffer to which the Handler's Write calls are sent.\n\t// If nil, the Writes are silently discarded.\n\tBody *bytes.Buffer\n\n\t// Flushed is whether the Handler called Flush.\n\tFlushed bool\n\n\tresult      *http.Response // cache of Result's return value\n\tsnapHeader  http.Header    // snapshot of HeaderMap at first Write\n\twroteHeader bool\n}\n```\n\nResponseRecorder is an implementation of http.ResponseWriter that records its mutations for later inspection in tests. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#NewRecorder",
+                    "documentation": {
+                      "identifier": "NewRecorder",
+                      "newPage": false,
+                      "searchKey": "httptest.NewRecorder",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewRecorder() *ResponseRecorder"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewRecorder() *ResponseRecorder\n```\n\nNewRecorder returns an initialized ResponseRecorder. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.Header",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.Header",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.Header",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) Header() http.Header"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) Header() http.Header\n```\n\nHeader implements http.ResponseWriter. It returns the response headers to mutate within a handler. To test the headers that were written after a handler completes, use the Result method and see the returned Response value's Header. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.writeHeader",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.writeHeader",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.writeHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) writeHeader(b []byte, str string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) writeHeader(b []byte, str string)\n```\n\nwriteHeader writes a header if it was not written yet and detects Content-Type if needed. \n\nbytes or str are the beginning of the response body. We pass both to avoid unnecessarily generate garbage in rw.WriteString which was created for performance reasons. Non-nil bytes win. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.Write",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.Write",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.Write",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) Write(buf []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) Write(buf []byte) (int, error)\n```\n\nWrite implements http.ResponseWriter. The data in buf is written to rw.Body, if not nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.WriteString",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.WriteString",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.WriteString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) WriteString(str string) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) WriteString(str string) (int, error)\n```\n\nWriteString implements io.StringWriter. The data in str is written to rw.Body, if not nil. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.WriteHeader",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.WriteHeader",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.WriteHeader",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) WriteHeader(code int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) WriteHeader(code int)\n```\n\nWriteHeader implements http.ResponseWriter. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.Flush",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.Flush",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.Flush",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) Flush()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) Flush()\n```\n\nFlush implements http.Flusher. To test whether Flush was called, see rw.Flushed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#ResponseRecorder.Result",
+                    "documentation": {
+                      "identifier": "ResponseRecorder.Result",
+                      "newPage": false,
+                      "searchKey": "httptest.ResponseRecorder.Result",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (rw *ResponseRecorder) Result() *http.Response"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (rw *ResponseRecorder) Result() *http.Response\n```\n\nResult returns the response generated by the handler. \n\nThe returned Response will have at least its StatusCode, Header, Body, and optionally Trailer populated. More fields may be populated in the future, so callers should not DeepEqual the result in tests. \n\nThe Response.Header is a snapshot of the headers at the time of the first write call, or at the time of this call, if the handler never did a write. \n\nThe Response.Body is guaranteed to be non-nil and Body.Read call is guaranteed to not return any error other than io.EOF. \n\nResult must only be called after the handler has finished running. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#Server",
+              "documentation": {
+                "identifier": "Server",
+                "newPage": false,
+                "searchKey": "httptest.Server",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Server struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Server struct {\n\tURL      string // base URL of form http://ipaddr:port with no trailing slash\n\tListener net.Listener\n\n\t// EnableHTTP2 controls whether HTTP/2 is enabled\n\t// on the server. It must be set between calling\n\t// NewUnstartedServer and calling Server.StartTLS.\n\tEnableHTTP2 bool\n\n\t// TLS is the optional TLS configuration, populated with a new config\n\t// after TLS is started. If set on an unstarted server before StartTLS\n\t// is called, existing fields are copied into the new config.\n\tTLS *tls.Config\n\n\t// Config may be changed after calling NewUnstartedServer and\n\t// before Start or StartTLS.\n\tConfig *http.Server\n\n\t// certificate is a parsed version of the TLS config certificate, if present.\n\tcertificate *x509.Certificate\n\n\t// wg counts the number of outstanding HTTP requests on this server.\n\t// Close blocks until all requests are finished.\n\twg sync.WaitGroup\n\n\tmu     sync.Mutex // guards closed and conns\n\tclosed bool\n\tconns  map[net.Conn]http.ConnState // except terminal states\n\n\t// client is configured for use with the server.\n\t// Its transport is automatically closed when Close is called.\n\tclient *http.Client\n}\n```\n\nA Server is an HTTP server listening on a system-chosen port on the local loopback interface, for use in end-to-end HTTP tests. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#NewServer",
+                    "documentation": {
+                      "identifier": "NewServer",
+                      "newPage": false,
+                      "searchKey": "httptest.NewServer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewServer(handler http.Handler) *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewServer(handler http.Handler) *Server\n```\n\nNewServer starts and returns a new Server. The caller should call Close when finished, to shut it down. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#NewUnstartedServer",
+                    "documentation": {
+                      "identifier": "NewUnstartedServer",
+                      "newPage": false,
+                      "searchKey": "httptest.NewUnstartedServer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewUnstartedServer(handler http.Handler) *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewUnstartedServer(handler http.Handler) *Server\n```\n\nNewUnstartedServer returns a new Server but doesn't start it. \n\nAfter changing its configuration, the caller should call Start or StartTLS. \n\nThe caller should call Close when finished, to shut it down. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#NewTLSServer",
+                    "documentation": {
+                      "identifier": "NewTLSServer",
+                      "newPage": false,
+                      "searchKey": "httptest.NewTLSServer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewTLSServer(handler http.Handler) *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewTLSServer(handler http.Handler) *Server\n```\n\nNewTLSServer starts and returns a new Server using TLS. The caller should call Close when finished, to shut it down. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.Start",
+                    "documentation": {
+                      "identifier": "Server.Start",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.Start",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Start()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Start()\n```\n\nStart starts a server from NewUnstartedServer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.StartTLS",
+                    "documentation": {
+                      "identifier": "Server.StartTLS",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.StartTLS",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) StartTLS()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) StartTLS()\n```\n\nStartTLS starts TLS on a server from NewUnstartedServer. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.Close",
+                    "documentation": {
+                      "identifier": "Server.Close",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Close()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Close()\n```\n\nClose shuts down the server and blocks until all outstanding requests on this server have completed. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.logCloseHangDebugInfo",
+                    "documentation": {
+                      "identifier": "Server.logCloseHangDebugInfo",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.logCloseHangDebugInfo",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) logCloseHangDebugInfo()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) logCloseHangDebugInfo()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.CloseClientConnections",
+                    "documentation": {
+                      "identifier": "Server.CloseClientConnections",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.CloseClientConnections",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) CloseClientConnections()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) CloseClientConnections()\n```\n\nCloseClientConnections closes any open HTTP connections to the test Server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.Certificate",
+                    "documentation": {
+                      "identifier": "Server.Certificate",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.Certificate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Certificate() *x509.Certificate"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Certificate() *x509.Certificate\n```\n\nCertificate returns the certificate used by the server, or nil if the server doesn't use TLS. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.Client",
+                    "documentation": {
+                      "identifier": "Server.Client",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.Client",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) Client() *http.Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) Client() *http.Client\n```\n\nClient returns an HTTP client configured for making requests to the server. It is configured to trust the server's TLS test certificate and will close its idle connections on Server.Close. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.goServe",
+                    "documentation": {
+                      "identifier": "Server.goServe",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.goServe",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) goServe()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) goServe()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.wrap",
+                    "documentation": {
+                      "identifier": "Server.wrap",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.wrap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) wrap()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) wrap()\n```\n\nwrap installs the connection state-tracking hook to know which connections are idle. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.closeConn",
+                    "documentation": {
+                      "identifier": "Server.closeConn",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.closeConn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) closeConn(c net.Conn)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) closeConn(c net.Conn)\n```\n\ncloseConn closes c. s.mu must be held. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.closeConnChan",
+                    "documentation": {
+                      "identifier": "Server.closeConnChan",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.closeConnChan",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) closeConnChan(c net.Conn, done chan<- struct{})"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) closeConnChan(c net.Conn, done chan<- struct{})\n```\n\ncloseConnChan is like closeConn, but takes an optional channel to receive a value when the goroutine closing c is done. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#Server.forgetConn",
+                    "documentation": {
+                      "identifier": "Server.forgetConn",
+                      "newPage": false,
+                      "searchKey": "httptest.Server.forgetConn",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *Server) forgetConn(c net.Conn)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *Server) forgetConn(c net.Conn)\n```\n\nforgetConn removes c from the set of tracked conns and decrements it from the waitgroup, unless it was previously removed. s.mu must be held. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#closeIdleTransport",
+              "documentation": {
+                "identifier": "closeIdleTransport",
+                "newPage": false,
+                "searchKey": "httptest.closeIdleTransport",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type closeIdleTransport interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype closeIdleTransport interface {\n\tCloseIdleConnections()\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#newServerFunc",
+              "documentation": {
+                "identifier": "newServerFunc",
+                "newPage": false,
+                "searchKey": "httptest.newServerFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type newServerFunc func(net/http.Handler) *std/net/http/httptest.Server"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype newServerFunc func(http.Handler) *Server\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#onlyCloseListener",
+              "documentation": {
+                "identifier": "onlyCloseListener",
+                "newPage": false,
+                "searchKey": "httptest.onlyCloseListener",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type onlyCloseListener struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype onlyCloseListener struct {\n\tnet.Listener\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/http/httptest#onlyCloseListener.Close",
+                    "documentation": {
+                      "identifier": "onlyCloseListener.Close",
+                      "newPage": false,
+                      "searchKey": "httptest.onlyCloseListener.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (onlyCloseListener) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (onlyCloseListener) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/http/httptest#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/http/httptest#NewRequest",
+              "documentation": {
+                "identifier": "NewRequest",
+                "newPage": false,
+                "searchKey": "httptest.NewRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewRequest(method, target string, body io.Reader) *http.Request"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewRequest(method, target string, body io.Reader) *http.Request\n```\n\nNewRequest returns a new incoming server Request, suitable for passing to an http.Handler for testing. \n\nThe target is the RFC 7230 \"request-target\": it may be either a path or an absolute URL. If target is an absolute URL, the host name from the URL is used. Otherwise, \"example.com\" is used. \n\nThe TLS field is set to a non-nil dummy value if target has scheme \"https\". \n\nThe Request.Proto is always HTTP/1.1. \n\nAn empty method means \"GET\". \n\nThe provided body may be nil. If the body is of type *bytes.Reader, *strings.Reader, or *bytes.Buffer, the Request.ContentLength is set. \n\nNewRequest panics on error for ease of use in testing, where a panic is acceptable. \n\nTo generate a client HTTP request instead of a server request, see the NewRequest function in the net/http package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#checkWriteHeaderCode",
+              "documentation": {
+                "identifier": "checkWriteHeaderCode",
+                "newPage": false,
+                "searchKey": "httptest.checkWriteHeaderCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkWriteHeaderCode(code int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkWriteHeaderCode(code int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#parseContentLength",
+              "documentation": {
+                "identifier": "parseContentLength",
+                "newPage": false,
+                "searchKey": "httptest.parseContentLength",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseContentLength(cl string) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseContentLength(cl string) int64\n```\n\nparseContentLength trims whitespace from s and returns -1 if no value is set, or the value if it's >= 0. \n\nThis a modified version of same function found in net/http/transfer.go. This one just ignores an invalid header. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#newLocalListener",
+              "documentation": {
+                "identifier": "newLocalListener",
+                "newPage": false,
+                "searchKey": "httptest.newLocalListener",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newLocalListener() net.Listener"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newLocalListener() net.Listener\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "httptest.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#strSliceContainsPrefix",
+              "documentation": {
+                "identifier": "strSliceContainsPrefix",
+                "newPage": false,
+                "searchKey": "httptest.strSliceContainsPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func strSliceContainsPrefix(v []string, pre string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc strSliceContainsPrefix(v []string, pre string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestNewRequest",
+              "documentation": {
+                "identifier": "TestNewRequest",
+                "newPage": false,
+                "searchKey": "httptest.TestNewRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestRecorder",
+              "documentation": {
+                "identifier": "TestRecorder",
+                "newPage": false,
+                "searchKey": "httptest.TestRecorder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecorder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecorder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestParseContentLength",
+              "documentation": {
+                "identifier": "TestParseContentLength",
+                "newPage": false,
+                "searchKey": "httptest.TestParseContentLength",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseContentLength(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseContentLength(t *testing.T)\n```\n\nissue 39017 - disallow Content-Length values such as \"+3\" \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestRecorderPanicsOnNonXXXStatusCode",
+              "documentation": {
+                "identifier": "TestRecorderPanicsOnNonXXXStatusCode",
+                "newPage": false,
+                "searchKey": "httptest.TestRecorderPanicsOnNonXXXStatusCode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRecorderPanicsOnNonXXXStatusCode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRecorderPanicsOnNonXXXStatusCode(t *testing.T)\n```\n\nEnsure that httptest.Recorder panics when given a non-3 digit (XXX) status HTTP code. See [https://golang.org/issues/45353](https://golang.org/issues/45353) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestServer",
+              "documentation": {
+                "identifier": "TestServer",
+                "newPage": false,
+                "searchKey": "httptest.TestServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testServer",
+              "documentation": {
+                "identifier": "testServer",
+                "newPage": false,
+                "searchKey": "httptest.testServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServer(t *testing.T, newServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServer(t *testing.T, newServer newServerFunc)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testGetAfterClose",
+              "documentation": {
+                "identifier": "testGetAfterClose",
+                "newPage": false,
+                "searchKey": "httptest.testGetAfterClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testGetAfterClose(t *testing.T, newServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testGetAfterClose(t *testing.T, newServer newServerFunc)\n```\n\nIssue 12781 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testServerCloseBlocking",
+              "documentation": {
+                "identifier": "testServerCloseBlocking",
+                "newPage": false,
+                "searchKey": "httptest.testServerCloseBlocking",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServerCloseBlocking(t *testing.T, newServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServerCloseBlocking(t *testing.T, newServer newServerFunc)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testServerCloseClientConnections",
+              "documentation": {
+                "identifier": "testServerCloseClientConnections",
+                "newPage": false,
+                "searchKey": "httptest.testServerCloseClientConnections",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServerCloseClientConnections(t *testing.T, newServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServerCloseClientConnections(t *testing.T, newServer newServerFunc)\n```\n\nIssue 14290 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testServerClient",
+              "documentation": {
+                "identifier": "testServerClient",
+                "newPage": false,
+                "searchKey": "httptest.testServerClient",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServerClient(t *testing.T, newTLSServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServerClient(t *testing.T, newTLSServer newServerFunc)\n```\n\nTests that the Server.Client method works and returns an http.Client that can hit NewTLSServer without cert warnings. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testServerClientTransportType",
+              "documentation": {
+                "identifier": "testServerClientTransportType",
+                "newPage": false,
+                "searchKey": "httptest.testServerClientTransportType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServerClientTransportType(t *testing.T, newServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServerClientTransportType(t *testing.T, newServer newServerFunc)\n```\n\nTests that the Server.Client.Transport interface is implemented by a *http.Transport. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#testTLSServerClientTransportType",
+              "documentation": {
+                "identifier": "testTLSServerClientTransportType",
+                "newPage": false,
+                "searchKey": "httptest.testTLSServerClientTransportType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testTLSServerClientTransportType(t *testing.T, newTLSServer newServerFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testTLSServerClientTransportType(t *testing.T, newTLSServer newServerFunc)\n```\n\nTests that the TLS Server.Client.Transport interface is implemented by a *http.Transport. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestServerZeroValueClose",
+              "documentation": {
+                "identifier": "TestServerZeroValueClose",
+                "newPage": false,
+                "searchKey": "httptest.TestServerZeroValueClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServerZeroValueClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServerZeroValueClose(t *testing.T)\n```\n\nIssue 19729: panic in Server.Close for values created directly without a constructor (so the unexported client field is nil). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/http/httptest#TestTLSServerWithHTTP2",
+              "documentation": {
+                "identifier": "TestTLSServerWithHTTP2",
+                "newPage": false,
+                "searchKey": "httptest.TestTLSServerWithHTTP2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTLSServerWithHTTP2(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTLSServerWithHTTP2(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

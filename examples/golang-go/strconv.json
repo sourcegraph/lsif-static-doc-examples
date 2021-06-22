@@ -1,0 +1,3215 @@
+{
+  "pathID": "/strconv",
+  "documentation": {
+    "identifier": "strconv",
+    "newPage": true,
+    "searchKey": "strconv",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package strconv"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package strconv implements conversions to and from string representations of basic data types. \n\n### hdr-Numeric_ConversionsNumeric Conversions\nThe most common numeric conversions are Atoi (string to int) and Itoa (int to string). \n\n```\ni, err := strconv.Atoi(\"-42\")\ns := strconv.Itoa(-42)\n\n```\nThese assume decimal and the Go int type. \n\nParseBool, ParseFloat, ParseInt, and ParseUint convert strings to values: \n\n```\nb, err := strconv.ParseBool(\"true\")\nf, err := strconv.ParseFloat(\"3.1415\", 64)\ni, err := strconv.ParseInt(\"-42\", 10, 64)\nu, err := strconv.ParseUint(\"42\", 10, 64)\n\n```\nThe parse functions return the widest type (float64, int64, and uint64), but if the size argument specifies a narrower width the result can be converted to that narrower type without data loss: \n\n```\ns := \"2147483647\" // biggest int32\ni64, err := strconv.ParseInt(s, 10, 32)\n...\ni := int32(i64)\n\n```\nFormatBool, FormatFloat, FormatInt, and FormatUint convert values to strings: \n\n```\ns := strconv.FormatBool(true)\ns := strconv.FormatFloat(3.1415, 'E', -1, 64)\ns := strconv.FormatInt(-42, 16)\ns := strconv.FormatUint(42, 16)\n\n```\nAppendBool, AppendFloat, AppendInt, and AppendUint are similar but append the formatted value to a destination slice. \n\n### hdr-String_ConversionsString Conversions\nQuote and QuoteToASCII convert strings to quoted Go string literals. The latter guarantees that the result is an ASCII string, by escaping any non-ASCII Unicode with \\u: \n\n```\nq := strconv.Quote(\"Hello, 世界\")\nq := strconv.QuoteToASCII(\"Hello, 世界\")\n\n```\nQuoteRune and QuoteRuneToASCII are similar but accept runes and return quoted Go rune literals. \n\nUnquote and UnquoteChar unquote Go string and rune literals. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/strconv#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strconv#fnParseComplex",
+              "documentation": {
+                "identifier": "fnParseComplex",
+                "newPage": false,
+                "searchKey": "strconv.fnParseComplex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fnParseComplex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fnParseComplex = \"ParseComplex\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fnParseFloat",
+              "documentation": {
+                "identifier": "fnParseFloat",
+                "newPage": false,
+                "searchKey": "strconv.fnParseFloat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fnParseFloat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fnParseFloat = \"ParseFloat\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#intSize",
+              "documentation": {
+                "identifier": "intSize",
+                "newPage": false,
+                "searchKey": "strconv.intSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const intSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst intSize = 32 << (^uint(0) >> 63)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#IntSize",
+              "documentation": {
+                "identifier": "IntSize",
+                "newPage": false,
+                "searchKey": "strconv.IntSize",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const IntSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst IntSize = intSize\n```\n\nIntSize is the size in bits of an int or uint value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#maxUint64",
+              "documentation": {
+                "identifier": "maxUint64",
+                "newPage": false,
+                "searchKey": "strconv.maxUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxUint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxUint64 = 1<<64 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#uintSize",
+              "documentation": {
+                "identifier": "uintSize",
+                "newPage": false,
+                "searchKey": "strconv.uintSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const uintSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst uintSize = 32 << (^uint(0) >> 63)\n```\n\nMaximum shift that we can do in one pass without overflow. A uint has 32 or 64 bits, and we have to be able to accommodate 9<<k. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#maxShift",
+              "documentation": {
+                "identifier": "maxShift",
+                "newPage": false,
+                "searchKey": "strconv.maxShift",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxShift"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxShift = uintSize - 4\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#detailedPowersOfTenMinExp10",
+              "documentation": {
+                "identifier": "detailedPowersOfTenMinExp10",
+                "newPage": false,
+                "searchKey": "strconv.detailedPowersOfTenMinExp10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const detailedPowersOfTenMinExp10"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst detailedPowersOfTenMinExp10 = -348\n```\n\ndetailedPowersOfTen{Min,Max}Exp10 is the power of 10 represented by the first and last rows of detailedPowersOfTen. Both bounds are inclusive. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#detailedPowersOfTenMaxExp10",
+              "documentation": {
+                "identifier": "detailedPowersOfTenMaxExp10",
+                "newPage": false,
+                "searchKey": "strconv.detailedPowersOfTenMaxExp10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const detailedPowersOfTenMaxExp10"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst detailedPowersOfTenMaxExp10 = +347\n```\n\ndetailedPowersOfTen{Min,Max}Exp10 is the power of 10 represented by the first and last rows of detailedPowersOfTen. Both bounds are inclusive. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fastSmalls",
+              "documentation": {
+                "identifier": "fastSmalls",
+                "newPage": false,
+                "searchKey": "strconv.fastSmalls",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const fastSmalls"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst fastSmalls = true // enable fast path for small integers\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#nSmalls",
+              "documentation": {
+                "identifier": "nSmalls",
+                "newPage": false,
+                "searchKey": "strconv.nSmalls",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const nSmalls"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst nSmalls = 100\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#smallsString",
+              "documentation": {
+                "identifier": "smallsString",
+                "newPage": false,
+                "searchKey": "strconv.smallsString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const smallsString"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst smallsString = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#host32bit",
+              "documentation": {
+                "identifier": "host32bit",
+                "newPage": false,
+                "searchKey": "strconv.host32bit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const host32bit"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst host32bit = ^uint(0)>>32 == 0\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#digits",
+              "documentation": {
+                "identifier": "digits",
+                "newPage": false,
+                "searchKey": "strconv.digits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const digits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst digits = \"0123456789abcdefghijklmnopqrstuvwxyz\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#lowerhex",
+              "documentation": {
+                "identifier": "lowerhex",
+                "newPage": false,
+                "searchKey": "strconv.lowerhex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const lowerhex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst lowerhex = \"0123456789abcdef\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#upperhex",
+              "documentation": {
+                "identifier": "upperhex",
+                "newPage": false,
+                "searchKey": "strconv.upperhex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const upperhex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst upperhex = \"0123456789ABCDEF\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strconv#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strconv#optimize",
+              "documentation": {
+                "identifier": "optimize",
+                "newPage": false,
+                "searchKey": "strconv.optimize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var optimize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar optimize = true // set to false to force slow-path conversions for testing\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#powtab",
+              "documentation": {
+                "identifier": "powtab",
+                "newPage": false,
+                "searchKey": "strconv.powtab",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var powtab"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar powtab = []int{1, 3, 6, 9, 13, 16, 19, 23, 26}\n```\n\ndecimal power of ten to binary power of two. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#float64pow10",
+              "documentation": {
+                "identifier": "float64pow10",
+                "newPage": false,
+                "searchKey": "strconv.float64pow10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var float64pow10"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar float64pow10 = ...\n```\n\nExact powers of 10. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#float32pow10",
+              "documentation": {
+                "identifier": "float32pow10",
+                "newPage": false,
+                "searchKey": "strconv.float32pow10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var float32pow10"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar float32pow10 = []float32{1e0, 1e1, 1e2, 1e3, 1e4, 1e5, 1e6, 1e7, 1e8, 1e9, 1e10}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ErrRange",
+              "documentation": {
+                "identifier": "ErrRange",
+                "newPage": false,
+                "searchKey": "strconv.ErrRange",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrRange"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrRange = errors.New(\"value out of range\")\n```\n\nErrRange indicates that a value is out of range for the target type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ErrSyntax",
+              "documentation": {
+                "identifier": "ErrSyntax",
+                "newPage": false,
+                "searchKey": "strconv.ErrSyntax",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrSyntax"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrSyntax = errors.New(\"invalid syntax\")\n```\n\nErrSyntax indicates that a value does not have the right syntax for the target type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#leftcheats",
+              "documentation": {
+                "identifier": "leftcheats",
+                "newPage": false,
+                "searchKey": "strconv.leftcheats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var leftcheats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar leftcheats = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#detailedPowersOfTen",
+              "documentation": {
+                "identifier": "detailedPowersOfTen",
+                "newPage": false,
+                "searchKey": "strconv.detailedPowersOfTen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var detailedPowersOfTen"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar detailedPowersOfTen = ...\n```\n\ndetailedPowersOfTen contains 128-bit mantissa approximations (rounded down) to the powers of 10. For example: \n\n```\n- 1e43 ≈ (0xE596B7B0_C643C719                   * (2 ** 79))\n- 1e43 = (0xE596B7B0_C643C719_6D9CCD05_D0000000 * (2 ** 15))\n\n```\nThe mantissas are explicitly listed. The exponents are implied by a linear expression with slope 217706.0/65536.0 ≈ log(10)/log(2). \n\nThe table was generated by [https://github.com/google/wuffs/blob/ba3818cb6b473a2ed0b38ecfc07dbbd3a97e8ae7/script/print-mpb-powers-of-10.go](https://github.com/google/wuffs/blob/ba3818cb6b473a2ed0b38ecfc07dbbd3a97e8ae7/script/print-mpb-powers-of-10.go) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#float32info",
+              "documentation": {
+                "identifier": "float32info",
+                "newPage": false,
+                "searchKey": "strconv.float32info",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var float32info"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar float32info = floatInfo{23, 8, -127}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#float64info",
+              "documentation": {
+                "identifier": "float64info",
+                "newPage": false,
+                "searchKey": "strconv.float64info",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var float64info"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar float64info = floatInfo{52, 11, -1023}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#uint64pow10",
+              "documentation": {
+                "identifier": "uint64pow10",
+                "newPage": false,
+                "searchKey": "strconv.uint64pow10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var uint64pow10"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar uint64pow10 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isPrint16",
+              "documentation": {
+                "identifier": "isPrint16",
+                "newPage": false,
+                "searchKey": "strconv.isPrint16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isPrint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isPrint16 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isNotPrint16",
+              "documentation": {
+                "identifier": "isNotPrint16",
+                "newPage": false,
+                "searchKey": "strconv.isNotPrint16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isNotPrint16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isNotPrint16 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isPrint32",
+              "documentation": {
+                "identifier": "isPrint32",
+                "newPage": false,
+                "searchKey": "strconv.isPrint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isPrint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isPrint32 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isNotPrint32",
+              "documentation": {
+                "identifier": "isNotPrint32",
+                "newPage": false,
+                "searchKey": "strconv.isNotPrint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isNotPrint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isNotPrint32 = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isGraphic",
+              "documentation": {
+                "identifier": "isGraphic",
+                "newPage": false,
+                "searchKey": "strconv.isGraphic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isGraphic"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isGraphic = ...\n```\n\nisGraphic lists the graphic runes not matched by IsPrint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#BitSizeError",
+              "documentation": {
+                "identifier": "BitSizeError",
+                "newPage": false,
+                "searchKey": "strconv.BitSizeError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var BitSizeError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar BitSizeError = bitSizeError\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#BaseError",
+              "documentation": {
+                "identifier": "BaseError",
+                "newPage": false,
+                "searchKey": "strconv.BaseError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var BaseError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar BaseError = baseError\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strconv#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strconv#NumError",
+              "documentation": {
+                "identifier": "NumError",
+                "newPage": false,
+                "searchKey": "strconv.NumError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NumError struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NumError struct {\n\tFunc string // the failing function (ParseBool, ParseInt, ParseUint, ParseFloat, ParseComplex)\n\tNum  string // the input\n\tErr  error  // the reason the conversion failed (e.g. ErrRange, ErrSyntax, etc.)\n}\n```\n\nA NumError records a failed conversion. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strconv#syntaxError",
+                    "documentation": {
+                      "identifier": "syntaxError",
+                      "newPage": false,
+                      "searchKey": "strconv.syntaxError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func syntaxError(fn, str string) *NumError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc syntaxError(fn, str string) *NumError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#rangeError",
+                    "documentation": {
+                      "identifier": "rangeError",
+                      "newPage": false,
+                      "searchKey": "strconv.rangeError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func rangeError(fn, str string) *NumError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc rangeError(fn, str string) *NumError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#baseError",
+                    "documentation": {
+                      "identifier": "baseError",
+                      "newPage": false,
+                      "searchKey": "strconv.baseError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func baseError(fn, str string, base int) *NumError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc baseError(fn, str string, base int) *NumError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#bitSizeError",
+                    "documentation": {
+                      "identifier": "bitSizeError",
+                      "newPage": false,
+                      "searchKey": "strconv.bitSizeError",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func bitSizeError(fn, str string, bitSize int) *NumError"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc bitSizeError(fn, str string, bitSize int) *NumError\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#NumError.Error",
+                    "documentation": {
+                      "identifier": "NumError.Error",
+                      "newPage": false,
+                      "searchKey": "strconv.NumError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *NumError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *NumError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#NumError.Unwrap",
+                    "documentation": {
+                      "identifier": "NumError.Unwrap",
+                      "newPage": false,
+                      "searchKey": "strconv.NumError.Unwrap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *NumError) Unwrap() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *NumError) Unwrap() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#decimal",
+              "documentation": {
+                "identifier": "decimal",
+                "newPage": false,
+                "searchKey": "strconv.decimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decimal struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decimal struct {\n\td     [800]byte // digits, big-endian representation\n\tnd    int       // number of digits used\n\tdp    int       // decimal point\n\tneg   bool      // negative flag\n\ttrunc bool      // discarded nonzero digits beyond d[:nd]\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/strconv#NewDecimal",
+                    "documentation": {
+                      "identifier": "NewDecimal",
+                      "newPage": false,
+                      "searchKey": "strconv.NewDecimal",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewDecimal(i uint64) *decimal"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewDecimal(i uint64) *decimal\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.set",
+                    "documentation": {
+                      "identifier": "decimal.set",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.set",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *decimal) set(s string) (ok bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *decimal) set(s string) (ok bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.floatBits",
+                    "documentation": {
+                      "identifier": "decimal.floatBits",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.floatBits",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decimal) floatBits(flt *floatInfo) (b uint64, overflow bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decimal) floatBits(flt *floatInfo) (b uint64, overflow bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.String",
+                    "documentation": {
+                      "identifier": "decimal.String",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.Assign",
+                    "documentation": {
+                      "identifier": "decimal.Assign",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.Assign",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) Assign(v uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) Assign(v uint64)\n```\n\nAssign v to a. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.Shift",
+                    "documentation": {
+                      "identifier": "decimal.Shift",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.Shift",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) Shift(k int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) Shift(k int)\n```\n\nBinary shift left (k > 0) or right (k < 0). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.Round",
+                    "documentation": {
+                      "identifier": "decimal.Round",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.Round",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) Round(nd int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) Round(nd int)\n```\n\nRound a to nd digits (or fewer). If nd is zero, it means we're rounding just to the left of the digits, as in 0.09 -> 0.1. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.RoundDown",
+                    "documentation": {
+                      "identifier": "decimal.RoundDown",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.RoundDown",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) RoundDown(nd int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) RoundDown(nd int)\n```\n\nRound a down to nd digits (or fewer). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.RoundUp",
+                    "documentation": {
+                      "identifier": "decimal.RoundUp",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.RoundUp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) RoundUp(nd int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) RoundUp(nd int)\n```\n\nRound a up to nd digits (or fewer). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/strconv#decimal.RoundedInteger",
+                    "documentation": {
+                      "identifier": "decimal.RoundedInteger",
+                      "newPage": false,
+                      "searchKey": "strconv.decimal.RoundedInteger",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (a *decimal) RoundedInteger() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (a *decimal) RoundedInteger() uint64\n```\n\nExtract integer part, rounded appropriately. No guarantees about overflow. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#leftCheat",
+              "documentation": {
+                "identifier": "leftCheat",
+                "newPage": false,
+                "searchKey": "strconv.leftCheat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type leftCheat struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype leftCheat struct {\n\tdelta  int    // number of new digits\n\tcutoff string // minus one digit if original < a.\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#floatInfo",
+              "documentation": {
+                "identifier": "floatInfo",
+                "newPage": false,
+                "searchKey": "strconv.floatInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type floatInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype floatInfo struct {\n\tmantbits uint\n\texpbits  uint\n\tbias     int\n}\n```\n\nTODO: move elsewhere? \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#decimalSlice",
+              "documentation": {
+                "identifier": "decimalSlice",
+                "newPage": false,
+                "searchKey": "strconv.decimalSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decimalSlice struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decimalSlice struct {\n\td      []byte\n\tnd, dp int\n\tneg    bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/strconv#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/strconv#ParseBool",
+              "documentation": {
+                "identifier": "ParseBool",
+                "newPage": false,
+                "searchKey": "strconv.ParseBool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseBool(str string) (bool, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseBool(str string) (bool, error)\n```\n\nParseBool returns the boolean value represented by the string. It accepts 1, t, T, TRUE, true, True, 0, f, F, FALSE, false, False. Any other value returns an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#FormatBool",
+              "documentation": {
+                "identifier": "FormatBool",
+                "newPage": false,
+                "searchKey": "strconv.FormatBool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatBool(b bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatBool(b bool) string\n```\n\nFormatBool returns \"true\" or \"false\" according to the value of b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendBool",
+              "documentation": {
+                "identifier": "AppendBool",
+                "newPage": false,
+                "searchKey": "strconv.AppendBool",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendBool(dst []byte, b bool) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendBool(dst []byte, b bool) []byte\n```\n\nAppendBool appends \"true\" or \"false\", according to the value of b, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#convErr",
+              "documentation": {
+                "identifier": "convErr",
+                "newPage": false,
+                "searchKey": "strconv.convErr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func convErr(err error, s string) (syntax, range_ error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc convErr(err error, s string) (syntax, range_ error)\n```\n\nconvErr splits an error returned by parseFloatPrefix into a syntax or range error for ParseComplex. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ParseComplex",
+              "documentation": {
+                "identifier": "ParseComplex",
+                "newPage": false,
+                "searchKey": "strconv.ParseComplex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseComplex(s string, bitSize int) (complex128, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseComplex(s string, bitSize int) (complex128, error)\n```\n\nParseComplex converts the string s to a complex number with the precision specified by bitSize: 64 for complex64, or 128 for complex128. When bitSize=64, the result still has type complex128, but it will be convertible to complex64 without changing its value. \n\nThe number represented by s must be of the form N, Ni, or N±Ni, where N stands for a floating-point number as recognized by ParseFloat, and i is the imaginary component. If the second N is unsigned, a + sign is required between the two components as indicated by the ±. If the second N is NaN, only a + sign is accepted. The form may be parenthesized and cannot contain any spaces. The resulting complex number consists of the two components converted by ParseFloat. \n\nThe errors that ParseComplex returns have concrete type *NumError and include err.Num = s. \n\nIf s is not syntactically well-formed, ParseComplex returns err.Err = ErrSyntax. \n\nIf s is syntactically well-formed but either component is more than 1/2 ULP away from the largest floating point number of the given component's size, ParseComplex returns err.Err = ErrRange and c = ±Inf for the respective component. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#commonPrefixLenIgnoreCase",
+              "documentation": {
+                "identifier": "commonPrefixLenIgnoreCase",
+                "newPage": false,
+                "searchKey": "strconv.commonPrefixLenIgnoreCase",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func commonPrefixLenIgnoreCase(s, prefix string) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc commonPrefixLenIgnoreCase(s, prefix string) int\n```\n\ncommonPrefixLenIgnoreCase returns the length of the common prefix of s and prefix, with the character case of s ignored. The prefix argument must be all lower-case. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#special",
+              "documentation": {
+                "identifier": "special",
+                "newPage": false,
+                "searchKey": "strconv.special",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func special(s string) (f float64, n int, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc special(s string) (f float64, n int, ok bool)\n```\n\nspecial returns the floating-point value for the special, possibly signed floating-point representations inf, infinity, and NaN. The result is ok if a prefix of s contains one of these representations and n is the length of that prefix. The character case is ignored. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#readFloat",
+              "documentation": {
+                "identifier": "readFloat",
+                "newPage": false,
+                "searchKey": "strconv.readFloat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readFloat(s string) (mantissa uint64, exp int, neg, trunc, hex bool, i int, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readFloat(s string) (mantissa uint64, exp int, neg, trunc, hex bool, i int, ok bool)\n```\n\nreadFloat reads a decimal or hexadecimal mantissa and exponent from a float string representation in s; the number may be followed by other characters. readFloat reports the number of bytes consumed (i), and whether the number is valid (ok). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#atof64exact",
+              "documentation": {
+                "identifier": "atof64exact",
+                "newPage": false,
+                "searchKey": "strconv.atof64exact",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atof64exact(mantissa uint64, exp int, neg bool) (f float64, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atof64exact(mantissa uint64, exp int, neg bool) (f float64, ok bool)\n```\n\nIf possible to convert decimal representation to 64-bit float f exactly, entirely in floating-point math, do so, avoiding the expense of decimalToFloatBits. Three common cases: \n\n```\nvalue is exact integer\nvalue is exact integer * exact power of ten\nvalue is exact integer / exact power of ten\n\n```\nThese all produce potentially inexact but correctly rounded answers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#atof32exact",
+              "documentation": {
+                "identifier": "atof32exact",
+                "newPage": false,
+                "searchKey": "strconv.atof32exact",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atof32exact(mantissa uint64, exp int, neg bool) (f float32, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atof32exact(mantissa uint64, exp int, neg bool) (f float32, ok bool)\n```\n\nIf possible to compute mantissa*10^exp to 32-bit float f exactly, entirely in floating-point math, do so, avoiding the machinery above. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#atofHex",
+              "documentation": {
+                "identifier": "atofHex",
+                "newPage": false,
+                "searchKey": "strconv.atofHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atofHex(s string, flt *floatInfo, mantissa uint64, exp int, neg, trunc bool) (float64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atofHex(s string, flt *floatInfo, mantissa uint64, exp int, neg, trunc bool) (float64, error)\n```\n\natofHex converts the hex floating-point string s to a rounded float32 or float64 value (depending on flt==&float32info or flt==&float64info) and returns it as a float64. The string s has already been parsed into a mantissa, exponent, and sign (neg==true for negative). If trunc is true, trailing non-zero bits have been omitted from the mantissa. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#atof32",
+              "documentation": {
+                "identifier": "atof32",
+                "newPage": false,
+                "searchKey": "strconv.atof32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atof32(s string) (f float32, n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atof32(s string) (f float32, n int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#atof64",
+              "documentation": {
+                "identifier": "atof64",
+                "newPage": false,
+                "searchKey": "strconv.atof64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atof64(s string) (f float64, n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atof64(s string) (f float64, n int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ParseFloat",
+              "documentation": {
+                "identifier": "ParseFloat",
+                "newPage": false,
+                "searchKey": "strconv.ParseFloat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseFloat(s string, bitSize int) (float64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseFloat(s string, bitSize int) (float64, error)\n```\n\nParseFloat converts the string s to a floating-point number with the precision specified by bitSize: 32 for float32, or 64 for float64. When bitSize=32, the result still has type float64, but it will be convertible to float32 without changing its value. \n\nParseFloat accepts decimal and hexadecimal floating-point number syntax. If s is well-formed and near a valid floating-point number, ParseFloat returns the nearest floating-point number rounded using IEEE754 unbiased rounding. (Parsing a hexadecimal floating-point value only rounds when there are more bits in the hexadecimal representation than will fit in the mantissa.) \n\nThe errors that ParseFloat returns have concrete type *NumError and include err.Num = s. \n\nIf s is not syntactically well-formed, ParseFloat returns err.Err = ErrSyntax. \n\nIf s is syntactically well-formed but is more than 1/2 ULP away from the largest floating point number of the given size, ParseFloat returns f = ±Inf, err.Err = ErrRange. \n\nParseFloat recognizes the strings \"NaN\", and the (possibly signed) strings \"Inf\" and \"Infinity\" as their respective special floating point values. It ignores case when matching. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#parseFloatPrefix",
+              "documentation": {
+                "identifier": "parseFloatPrefix",
+                "newPage": false,
+                "searchKey": "strconv.parseFloatPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func parseFloatPrefix(s string, bitSize int) (float64, int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc parseFloatPrefix(s string, bitSize int) (float64, int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#lower",
+              "documentation": {
+                "identifier": "lower",
+                "newPage": false,
+                "searchKey": "strconv.lower",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lower(c byte) byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lower(c byte) byte\n```\n\nlower(c) is a lower-case letter if and only if c is either that lower-case letter or the equivalent upper-case letter. Instead of writing c == 'x' || c == 'X' one can write lower(c) == 'x'. Note that lower of non-letters can produce other non-letters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ParseUint",
+              "documentation": {
+                "identifier": "ParseUint",
+                "newPage": false,
+                "searchKey": "strconv.ParseUint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseUint(s string, base int, bitSize int) (uint64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseUint(s string, base int, bitSize int) (uint64, error)\n```\n\nParseUint is like ParseInt but for unsigned numbers. \n\nA sign prefix is not permitted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ParseInt",
+              "documentation": {
+                "identifier": "ParseInt",
+                "newPage": false,
+                "searchKey": "strconv.ParseInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseInt(s string, base int, bitSize int) (i int64, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseInt(s string, base int, bitSize int) (i int64, err error)\n```\n\nParseInt interprets a string s in the given base (0, 2 to 36) and bit size (0 to 64) and returns the corresponding value i. \n\nThe string may begin with a leading sign: \"+\" or \"-\". \n\nIf the base argument is 0, the true base is implied by the string's prefix following the sign (if present): 2 for \"0b\", 8 for \"0\" or \"0o\", 16 for \"0x\", and 10 otherwise. Also, for argument base 0 only, underscore characters are permitted as defined by the Go syntax for integer literals. \n\nThe bitSize argument specifies the integer type that the result must fit into. Bit sizes 0, 8, 16, 32, and 64 correspond to int, int8, int16, int32, and int64. If bitSize is below 0 or above 64, an error is returned. \n\nThe errors that ParseInt returns have concrete type *NumError and include err.Num = s. If s is empty or contains invalid digits, err.Err = ErrSyntax and the returned value is 0; if the value corresponding to s cannot be represented by a signed integer of the given size, err.Err = ErrRange and the returned value is the maximum magnitude integer of the appropriate bitSize and sign. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#Atoi",
+              "documentation": {
+                "identifier": "Atoi",
+                "newPage": false,
+                "searchKey": "strconv.Atoi",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Atoi(s string) (int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Atoi(s string) (int, error)\n```\n\nAtoi is equivalent to ParseInt(s, 10, 0), converted to type int. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#underscoreOK",
+              "documentation": {
+                "identifier": "underscoreOK",
+                "newPage": false,
+                "searchKey": "strconv.underscoreOK",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func underscoreOK(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc underscoreOK(s string) bool\n```\n\nunderscoreOK reports whether the underscores in s are allowed. Checking them in this one function lets all the parsers skip over them simply. Underscore must appear only between digits or between a base prefix and a digit. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#index",
+              "documentation": {
+                "identifier": "index",
+                "newPage": false,
+                "searchKey": "strconv.index",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func index(s string, c byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc index(s string, c byte) int\n```\n\nindex returns the index of the first instance of c in s, or -1 if missing. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#FormatComplex",
+              "documentation": {
+                "identifier": "FormatComplex",
+                "newPage": false,
+                "searchKey": "strconv.FormatComplex",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatComplex(c complex128, fmt byte, prec, bitSize int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatComplex(c complex128, fmt byte, prec, bitSize int) string\n```\n\nFormatComplex converts the complex number c to a string of the form (a+bi) where a and b are the real and imaginary parts, formatted according to the format fmt and precision prec. \n\nThe format fmt and precision prec have the same meaning as in FormatFloat. It rounds the result assuming that the original was obtained from a complex value of bitSize bits, which must be 64 for complex64 and 128 for complex128. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#digitZero",
+              "documentation": {
+                "identifier": "digitZero",
+                "newPage": false,
+                "searchKey": "strconv.digitZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func digitZero(dst []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc digitZero(dst []byte) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#trim",
+              "documentation": {
+                "identifier": "trim",
+                "newPage": false,
+                "searchKey": "strconv.trim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func trim(a *decimal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc trim(a *decimal)\n```\n\ntrim trailing zeros from number. (They are meaningless; the decimal point is tracked independent of the number of digits.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#rightShift",
+              "documentation": {
+                "identifier": "rightShift",
+                "newPage": false,
+                "searchKey": "strconv.rightShift",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func rightShift(a *decimal, k uint)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc rightShift(a *decimal, k uint)\n```\n\nBinary shift right (/ 2) by k bits.  k <= maxShift to avoid overflow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#prefixIsLessThan",
+              "documentation": {
+                "identifier": "prefixIsLessThan",
+                "newPage": false,
+                "searchKey": "strconv.prefixIsLessThan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func prefixIsLessThan(b []byte, s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc prefixIsLessThan(b []byte, s string) bool\n```\n\nIs the leading prefix of b lexicographically less than s? \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#leftShift",
+              "documentation": {
+                "identifier": "leftShift",
+                "newPage": false,
+                "searchKey": "strconv.leftShift",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func leftShift(a *decimal, k uint)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc leftShift(a *decimal, k uint)\n```\n\nBinary shift left (* 2) by k bits.  k <= maxShift to avoid overflow. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#shouldRoundUp",
+              "documentation": {
+                "identifier": "shouldRoundUp",
+                "newPage": false,
+                "searchKey": "strconv.shouldRoundUp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shouldRoundUp(a *decimal, nd int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shouldRoundUp(a *decimal, nd int) bool\n```\n\nIf we chop a at nd digits, should we round up? \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#eiselLemire64",
+              "documentation": {
+                "identifier": "eiselLemire64",
+                "newPage": false,
+                "searchKey": "strconv.eiselLemire64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eiselLemire64(man uint64, exp10 int, neg bool) (f float64, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eiselLemire64(man uint64, exp10 int, neg bool) (f float64, ok bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#eiselLemire32",
+              "documentation": {
+                "identifier": "eiselLemire32",
+                "newPage": false,
+                "searchKey": "strconv.eiselLemire32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eiselLemire32(man uint64, exp10 int, neg bool) (f float32, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eiselLemire32(man uint64, exp10 int, neg bool) (f float32, ok bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#FormatFloat",
+              "documentation": {
+                "identifier": "FormatFloat",
+                "newPage": false,
+                "searchKey": "strconv.FormatFloat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatFloat(f float64, fmt byte, prec, bitSize int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatFloat(f float64, fmt byte, prec, bitSize int) string\n```\n\nFormatFloat converts the floating-point number f to a string, according to the format fmt and precision prec. It rounds the result assuming that the original was obtained from a floating-point value of bitSize bits (32 for float32, 64 for float64). \n\nThe format fmt is one of 'b' (-ddddp±ddd, a binary exponent), 'e' (-d.dddde±dd, a decimal exponent), 'E' (-d.ddddE±dd, a decimal exponent), 'f' (-ddd.dddd, no exponent), 'g' ('e' for large exponents, 'f' otherwise), 'G' ('E' for large exponents, 'f' otherwise), 'x' (-0xd.ddddp±ddd, a hexadecimal fraction and binary exponent), or 'X' (-0Xd.ddddP±ddd, a hexadecimal fraction and binary exponent). \n\nThe precision prec controls the number of digits (excluding the exponent) printed by the 'e', 'E', 'f', 'g', 'G', 'x', and 'X' formats. For 'e', 'E', 'f', 'x', and 'X', it is the number of digits after the decimal point. For 'g' and 'G' it is the maximum number of significant digits (trailing zeros are removed). The special precision -1 uses the smallest number of digits necessary such that ParseFloat will return f exactly. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendFloat",
+              "documentation": {
+                "identifier": "AppendFloat",
+                "newPage": false,
+                "searchKey": "strconv.AppendFloat",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendFloat(dst []byte, f float64, fmt byte, prec, bitSize int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendFloat(dst []byte, f float64, fmt byte, prec, bitSize int) []byte\n```\n\nAppendFloat appends the string form of the floating-point number f, as generated by FormatFloat, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#genericFtoa",
+              "documentation": {
+                "identifier": "genericFtoa",
+                "newPage": false,
+                "searchKey": "strconv.genericFtoa",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func genericFtoa(dst []byte, val float64, fmt byte, prec, bitSize int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc genericFtoa(dst []byte, val float64, fmt byte, prec, bitSize int) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#bigFtoa",
+              "documentation": {
+                "identifier": "bigFtoa",
+                "newPage": false,
+                "searchKey": "strconv.bigFtoa",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bigFtoa(dst []byte, prec int, fmt byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bigFtoa(dst []byte, prec int, fmt byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte\n```\n\nbigFtoa uses multiprecision computations to format a float. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#formatDigits",
+              "documentation": {
+                "identifier": "formatDigits",
+                "newPage": false,
+                "searchKey": "strconv.formatDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatDigits(dst []byte, shortest bool, neg bool, digs decimalSlice, prec int, fmt byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatDigits(dst []byte, shortest bool, neg bool, digs decimalSlice, prec int, fmt byte) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#roundShortest",
+              "documentation": {
+                "identifier": "roundShortest",
+                "newPage": false,
+                "searchKey": "strconv.roundShortest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func roundShortest(d *decimal, mant uint64, exp int, flt *floatInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc roundShortest(d *decimal, mant uint64, exp int, flt *floatInfo)\n```\n\nroundShortest rounds d (= mant * 2^exp) to the shortest number of digits that will let the original floating point value be precisely reconstructed. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fmtE",
+              "documentation": {
+                "identifier": "fmtE",
+                "newPage": false,
+                "searchKey": "strconv.fmtE",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fmtE(dst []byte, neg bool, d decimalSlice, prec int, fmt byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fmtE(dst []byte, neg bool, d decimalSlice, prec int, fmt byte) []byte\n```\n\n%e: -d.ddddde±dd \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fmtF",
+              "documentation": {
+                "identifier": "fmtF",
+                "newPage": false,
+                "searchKey": "strconv.fmtF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fmtF(dst []byte, neg bool, d decimalSlice, prec int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fmtF(dst []byte, neg bool, d decimalSlice, prec int) []byte\n```\n\n%f: -ddddddd.ddddd \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fmtB",
+              "documentation": {
+                "identifier": "fmtB",
+                "newPage": false,
+                "searchKey": "strconv.fmtB",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fmtB(dst []byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fmtB(dst []byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte\n```\n\n%b: -ddddddddp±ddd \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#fmtX",
+              "documentation": {
+                "identifier": "fmtX",
+                "newPage": false,
+                "searchKey": "strconv.fmtX",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fmtX(dst []byte, prec int, fmt byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fmtX(dst []byte, prec int, fmt byte, neg bool, mant uint64, exp int, flt *floatInfo) []byte\n```\n\n%x: -0x1.yyyyyyyyp±ddd or -0x0p+0. (y is hex digit, d is decimal digit) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#min",
+              "documentation": {
+                "identifier": "min",
+                "newPage": false,
+                "searchKey": "strconv.min",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func min(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc min(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#max",
+              "documentation": {
+                "identifier": "max",
+                "newPage": false,
+                "searchKey": "strconv.max",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func max(a, b int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc max(a, b int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ryuFtoaFixed32",
+              "documentation": {
+                "identifier": "ryuFtoaFixed32",
+                "newPage": false,
+                "searchKey": "strconv.ryuFtoaFixed32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ryuFtoaFixed32(d *decimalSlice, mant uint32, exp int, prec int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ryuFtoaFixed32(d *decimalSlice, mant uint32, exp int, prec int)\n```\n\nryuFtoaFixed32 formats mant*(2^exp) with prec decimal digits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ryuFtoaFixed64",
+              "documentation": {
+                "identifier": "ryuFtoaFixed64",
+                "newPage": false,
+                "searchKey": "strconv.ryuFtoaFixed64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ryuFtoaFixed64(d *decimalSlice, mant uint64, exp int, prec int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ryuFtoaFixed64(d *decimalSlice, mant uint64, exp int, prec int)\n```\n\nryuFtoaFixed64 formats mant*(2^exp) with prec decimal digits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#formatDecimal",
+              "documentation": {
+                "identifier": "formatDecimal",
+                "newPage": false,
+                "searchKey": "strconv.formatDecimal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatDecimal(d *decimalSlice, m uint64, trunc bool, roundUp bool, prec int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatDecimal(d *decimalSlice, m uint64, trunc bool, roundUp bool, prec int)\n```\n\nformatDecimal fills d with at most prec decimal digits of mantissa m. The boolean trunc indicates whether m is truncated compared to the original number being formatted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ryuFtoaShortest",
+              "documentation": {
+                "identifier": "ryuFtoaShortest",
+                "newPage": false,
+                "searchKey": "strconv.ryuFtoaShortest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ryuFtoaShortest(d *decimalSlice, mant uint64, exp int, flt *floatInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ryuFtoaShortest(d *decimalSlice, mant uint64, exp int, flt *floatInfo)\n```\n\nryuFtoaShortest formats mant*2^exp with prec decimal digits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#mulByLog2Log10",
+              "documentation": {
+                "identifier": "mulByLog2Log10",
+                "newPage": false,
+                "searchKey": "strconv.mulByLog2Log10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mulByLog2Log10(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mulByLog2Log10(x int) int\n```\n\nmulByLog2Log10 returns math.Floor(x * log(2)/log(10)) for an integer x in the range -1600 <= x && x <= +1600. \n\nThe range restriction lets us work in faster integer arithmetic instead of slower floating point arithmetic. Correctness is verified by unit tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#mulByLog10Log2",
+              "documentation": {
+                "identifier": "mulByLog10Log2",
+                "newPage": false,
+                "searchKey": "strconv.mulByLog10Log2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mulByLog10Log2(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mulByLog10Log2(x int) int\n```\n\nmulByLog10Log2 returns math.Floor(x * log(10)/log(2)) for an integer x in the range -500 <= x && x <= +500. \n\nThe range restriction lets us work in faster integer arithmetic instead of slower floating point arithmetic. Correctness is verified by unit tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#computeBounds",
+              "documentation": {
+                "identifier": "computeBounds",
+                "newPage": false,
+                "searchKey": "strconv.computeBounds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func computeBounds(mant uint64, exp int, flt *floatInfo) (lower, central, upper uint64, e2 int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc computeBounds(mant uint64, exp int, flt *floatInfo) (lower, central, upper uint64, e2 int)\n```\n\ncomputeBounds returns a floating-point vector (l, c, u)×2^e2 where the mantissas are 55-bit (or 26-bit) integers, describing the interval represented by the input float64 or float32. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ryuDigits",
+              "documentation": {
+                "identifier": "ryuDigits",
+                "newPage": false,
+                "searchKey": "strconv.ryuDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ryuDigits(d *decimalSlice, lower, central, upper uint64,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ryuDigits(d *decimalSlice, lower, central, upper uint64,\n\tc0, cup bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ryuDigits32",
+              "documentation": {
+                "identifier": "ryuDigits32",
+                "newPage": false,
+                "searchKey": "strconv.ryuDigits32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ryuDigits32(d *decimalSlice, lower, central, upper uint32,..."
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ryuDigits32(d *decimalSlice, lower, central, upper uint32,\n\tc0, cup bool, endindex int)\n```\n\nryuDigits32 emits decimal digits for a number less than 1e9. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#mult64bitPow10",
+              "documentation": {
+                "identifier": "mult64bitPow10",
+                "newPage": false,
+                "searchKey": "strconv.mult64bitPow10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mult64bitPow10(m uint32, e2, q int) (resM uint32, resE int, exact bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mult64bitPow10(m uint32, e2, q int) (resM uint32, resE int, exact bool)\n```\n\nmult64bitPow10 takes a floating-point input with a 25-bit mantissa and multiplies it with 10^q. The resulting mantissa is m*P >> 57 where P is a 64-bit element of the detailedPowersOfTen tables. It is typically 31 or 32-bit wide. The returned boolean is true if all trimmed bits were zero. \n\nThat is: \n\n```\nm*2^e2 * round(10^q) = resM * 2^resE + ε\nexact = ε == 0\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#mult128bitPow10",
+              "documentation": {
+                "identifier": "mult128bitPow10",
+                "newPage": false,
+                "searchKey": "strconv.mult128bitPow10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mult128bitPow10(m uint64, e2, q int) (resM uint64, resE int, exact bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mult128bitPow10(m uint64, e2, q int) (resM uint64, resE int, exact bool)\n```\n\nmult128bitPow10 takes a floating-point input with a 55-bit mantissa and multiplies it with 10^q. The resulting mantissa is m*P >> 119 where P is a 128-bit element of the detailedPowersOfTen tables. It is typically 63 or 64-bit wide. The returned boolean is true is all trimmed bits were zero. \n\nThat is: \n\n```\nm*2^e2 * round(10^q) = resM * 2^resE + ε\nexact = ε == 0\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#divisibleByPower5",
+              "documentation": {
+                "identifier": "divisibleByPower5",
+                "newPage": false,
+                "searchKey": "strconv.divisibleByPower5",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func divisibleByPower5(m uint64, k int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc divisibleByPower5(m uint64, k int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#divmod1e9",
+              "documentation": {
+                "identifier": "divmod1e9",
+                "newPage": false,
+                "searchKey": "strconv.divmod1e9",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func divmod1e9(x uint64) (uint32, uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc divmod1e9(x uint64) (uint32, uint32)\n```\n\ndivmod1e9 computes quotient and remainder of division by 1e9, avoiding runtime uint64 division on 32-bit platforms. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#FormatUint",
+              "documentation": {
+                "identifier": "FormatUint",
+                "newPage": false,
+                "searchKey": "strconv.FormatUint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatUint(i uint64, base int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatUint(i uint64, base int) string\n```\n\nFormatUint returns the string representation of i in the given base, for 2 <= base <= 36. The result uses the lower-case letters 'a' to 'z' for digit values >= 10. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#FormatInt",
+              "documentation": {
+                "identifier": "FormatInt",
+                "newPage": false,
+                "searchKey": "strconv.FormatInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func FormatInt(i int64, base int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc FormatInt(i int64, base int) string\n```\n\nFormatInt returns the string representation of i in the given base, for 2 <= base <= 36. The result uses the lower-case letters 'a' to 'z' for digit values >= 10. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#Itoa",
+              "documentation": {
+                "identifier": "Itoa",
+                "newPage": false,
+                "searchKey": "strconv.Itoa",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Itoa(i int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Itoa(i int) string\n```\n\nItoa is equivalent to FormatInt(int64(i), 10). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendInt",
+              "documentation": {
+                "identifier": "AppendInt",
+                "newPage": false,
+                "searchKey": "strconv.AppendInt",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendInt(dst []byte, i int64, base int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendInt(dst []byte, i int64, base int) []byte\n```\n\nAppendInt appends the string form of the integer i, as generated by FormatInt, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendUint",
+              "documentation": {
+                "identifier": "AppendUint",
+                "newPage": false,
+                "searchKey": "strconv.AppendUint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendUint(dst []byte, i uint64, base int) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendUint(dst []byte, i uint64, base int) []byte\n```\n\nAppendUint appends the string form of the unsigned integer i, as generated by FormatUint, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#small",
+              "documentation": {
+                "identifier": "small",
+                "newPage": false,
+                "searchKey": "strconv.small",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func small(i int) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc small(i int) string\n```\n\nsmall returns the string for an i with 0 <= i < nSmalls. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#formatBits",
+              "documentation": {
+                "identifier": "formatBits",
+                "newPage": false,
+                "searchKey": "strconv.formatBits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func formatBits(dst []byte, u uint64, base int, neg, append_ bool) (d []byte, s string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc formatBits(dst []byte, u uint64, base int, neg, append_ bool) (d []byte, s string)\n```\n\nformatBits computes the string representation of u in the given base. If neg is set, u is treated as negative int64 value. If append_ is set, the string is appended to dst and the resulting byte slice is returned as the first result value; otherwise the string is returned as the second result value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isPowerOfTwo",
+              "documentation": {
+                "identifier": "isPowerOfTwo",
+                "newPage": false,
+                "searchKey": "strconv.isPowerOfTwo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isPowerOfTwo(x int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isPowerOfTwo(x int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#contains",
+              "documentation": {
+                "identifier": "contains",
+                "newPage": false,
+                "searchKey": "strconv.contains",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func contains(s string, c byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc contains(s string, c byte) bool\n```\n\ncontains reports whether the string contains the byte c. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#quoteWith",
+              "documentation": {
+                "identifier": "quoteWith",
+                "newPage": false,
+                "searchKey": "strconv.quoteWith",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quoteWith(s string, quote byte, ASCIIonly, graphicOnly bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quoteWith(s string, quote byte, ASCIIonly, graphicOnly bool) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#quoteRuneWith",
+              "documentation": {
+                "identifier": "quoteRuneWith",
+                "newPage": false,
+                "searchKey": "strconv.quoteRuneWith",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quoteRuneWith(r rune, quote byte, ASCIIonly, graphicOnly bool) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quoteRuneWith(r rune, quote byte, ASCIIonly, graphicOnly bool) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#appendQuotedWith",
+              "documentation": {
+                "identifier": "appendQuotedWith",
+                "newPage": false,
+                "searchKey": "strconv.appendQuotedWith",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendQuotedWith(buf []byte, s string, quote byte, ASCIIonly, graphicOnly bool) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendQuotedWith(buf []byte, s string, quote byte, ASCIIonly, graphicOnly bool) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#appendQuotedRuneWith",
+              "documentation": {
+                "identifier": "appendQuotedRuneWith",
+                "newPage": false,
+                "searchKey": "strconv.appendQuotedRuneWith",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendQuotedRuneWith(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly bool) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendQuotedRuneWith(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly bool) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#appendEscapedRune",
+              "documentation": {
+                "identifier": "appendEscapedRune",
+                "newPage": false,
+                "searchKey": "strconv.appendEscapedRune",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func appendEscapedRune(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly bool) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc appendEscapedRune(buf []byte, r rune, quote byte, ASCIIonly, graphicOnly bool) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#Quote",
+              "documentation": {
+                "identifier": "Quote",
+                "newPage": false,
+                "searchKey": "strconv.Quote",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Quote(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Quote(s string) string\n```\n\nQuote returns a double-quoted Go string literal representing s. The returned string uses Go escape sequences (\\t, \\n, \\xFF, \\u0100) for control characters and non-printable characters as defined by IsPrint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuote",
+              "documentation": {
+                "identifier": "AppendQuote",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuote",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuote(dst []byte, s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuote(dst []byte, s string) []byte\n```\n\nAppendQuote appends a double-quoted Go string literal representing s, as generated by Quote, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuoteToASCII",
+              "documentation": {
+                "identifier": "QuoteToASCII",
+                "newPage": false,
+                "searchKey": "strconv.QuoteToASCII",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuoteToASCII(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuoteToASCII(s string) string\n```\n\nQuoteToASCII returns a double-quoted Go string literal representing s. The returned string uses Go escape sequences (\\t, \\n, \\xFF, \\u0100) for non-ASCII characters and non-printable characters as defined by IsPrint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuoteToASCII",
+              "documentation": {
+                "identifier": "AppendQuoteToASCII",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuoteToASCII",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuoteToASCII(dst []byte, s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuoteToASCII(dst []byte, s string) []byte\n```\n\nAppendQuoteToASCII appends a double-quoted Go string literal representing s, as generated by QuoteToASCII, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuoteToGraphic",
+              "documentation": {
+                "identifier": "QuoteToGraphic",
+                "newPage": false,
+                "searchKey": "strconv.QuoteToGraphic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuoteToGraphic(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuoteToGraphic(s string) string\n```\n\nQuoteToGraphic returns a double-quoted Go string literal representing s. The returned string leaves Unicode graphic characters, as defined by IsGraphic, unchanged and uses Go escape sequences (\\t, \\n, \\xFF, \\u0100) for non-graphic characters. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuoteToGraphic",
+              "documentation": {
+                "identifier": "AppendQuoteToGraphic",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuoteToGraphic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuoteToGraphic(dst []byte, s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuoteToGraphic(dst []byte, s string) []byte\n```\n\nAppendQuoteToGraphic appends a double-quoted Go string literal representing s, as generated by QuoteToGraphic, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuoteRune",
+              "documentation": {
+                "identifier": "QuoteRune",
+                "newPage": false,
+                "searchKey": "strconv.QuoteRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuoteRune(r rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuoteRune(r rune) string\n```\n\nQuoteRune returns a single-quoted Go character literal representing the rune. The returned string uses Go escape sequences (\\t, \\n, \\xFF, \\u0100) for control characters and non-printable characters as defined by IsPrint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuoteRune",
+              "documentation": {
+                "identifier": "AppendQuoteRune",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuoteRune",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuoteRune(dst []byte, r rune) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuoteRune(dst []byte, r rune) []byte\n```\n\nAppendQuoteRune appends a single-quoted Go character literal representing the rune, as generated by QuoteRune, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuoteRuneToASCII",
+              "documentation": {
+                "identifier": "QuoteRuneToASCII",
+                "newPage": false,
+                "searchKey": "strconv.QuoteRuneToASCII",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuoteRuneToASCII(r rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuoteRuneToASCII(r rune) string\n```\n\nQuoteRuneToASCII returns a single-quoted Go character literal representing the rune. The returned string uses Go escape sequences (\\t, \\n, \\xFF, \\u0100) for non-ASCII characters and non-printable characters as defined by IsPrint. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuoteRuneToASCII",
+              "documentation": {
+                "identifier": "AppendQuoteRuneToASCII",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuoteRuneToASCII",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuoteRuneToASCII(dst []byte, r rune) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuoteRuneToASCII(dst []byte, r rune) []byte\n```\n\nAppendQuoteRuneToASCII appends a single-quoted Go character literal representing the rune, as generated by QuoteRuneToASCII, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuoteRuneToGraphic",
+              "documentation": {
+                "identifier": "QuoteRuneToGraphic",
+                "newPage": false,
+                "searchKey": "strconv.QuoteRuneToGraphic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuoteRuneToGraphic(r rune) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuoteRuneToGraphic(r rune) string\n```\n\nQuoteRuneToGraphic returns a single-quoted Go character literal representing the rune. If the rune is not a Unicode graphic character, as defined by IsGraphic, the returned string will use a Go escape sequence (\\t, \\n, \\xFF, \\u0100). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#AppendQuoteRuneToGraphic",
+              "documentation": {
+                "identifier": "AppendQuoteRuneToGraphic",
+                "newPage": false,
+                "searchKey": "strconv.AppendQuoteRuneToGraphic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AppendQuoteRuneToGraphic(dst []byte, r rune) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AppendQuoteRuneToGraphic(dst []byte, r rune) []byte\n```\n\nAppendQuoteRuneToGraphic appends a single-quoted Go character literal representing the rune, as generated by QuoteRuneToGraphic, to dst and returns the extended buffer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#CanBackquote",
+              "documentation": {
+                "identifier": "CanBackquote",
+                "newPage": false,
+                "searchKey": "strconv.CanBackquote",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CanBackquote(s string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CanBackquote(s string) bool\n```\n\nCanBackquote reports whether the string s can be represented unchanged as a single-line backquoted string without control characters other than tab. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#unhex",
+              "documentation": {
+                "identifier": "unhex",
+                "newPage": false,
+                "searchKey": "strconv.unhex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unhex(b byte) (v rune, ok bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unhex(b byte) (v rune, ok bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#UnquoteChar",
+              "documentation": {
+                "identifier": "UnquoteChar",
+                "newPage": false,
+                "searchKey": "strconv.UnquoteChar",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UnquoteChar(s string, quote byte) (value rune, multibyte bool, tail string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UnquoteChar(s string, quote byte) (value rune, multibyte bool, tail string, err error)\n```\n\nUnquoteChar decodes the first character or byte in the escaped string or character literal represented by the string s. It returns four values: \n\n```\n1) value, the decoded Unicode code point or byte value;\n2) multibyte, a boolean indicating whether the decoded character requires a multibyte UTF-8 representation;\n3) tail, the remainder of the string after the character; and\n4) an error that will be nil if the character is syntactically valid.\n\n```\nThe second argument, quote, specifies the type of literal being parsed and therefore which escaped quote character is permitted. If set to a single quote, it permits the sequence \\' and disallows unescaped '. If set to a double quote, it permits \\\" and disallows unescaped \". If set to zero, it does not permit either escape and allows both quote characters to appear unescaped. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#QuotedPrefix",
+              "documentation": {
+                "identifier": "QuotedPrefix",
+                "newPage": false,
+                "searchKey": "strconv.QuotedPrefix",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func QuotedPrefix(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc QuotedPrefix(s string) (string, error)\n```\n\nQuotedPrefix returns the quoted string (as understood by Unquote) at the prefix of s. If s does not start with a valid quoted string, QuotedPrefix returns an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#Unquote",
+              "documentation": {
+                "identifier": "Unquote",
+                "newPage": false,
+                "searchKey": "strconv.Unquote",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Unquote(s string) (string, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Unquote(s string) (string, error)\n```\n\nUnquote interprets s as a single-quoted, double-quoted, or backquoted Go string literal, returning the string value that s quotes.  (If s is single-quoted, it would be a Go character literal; Unquote returns the corresponding one-character string.) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#unquote",
+              "documentation": {
+                "identifier": "unquote",
+                "newPage": false,
+                "searchKey": "strconv.unquote",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unquote(in string, unescape bool) (out, rem string, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unquote(in string, unescape bool) (out, rem string, err error)\n```\n\nunquote parses a quoted string at the start of the input, returning the parsed prefix, the remaining suffix, and any parse errors. If unescape is true, the parsed prefix is unescaped, otherwise the input prefix is provided verbatim. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#bsearch16",
+              "documentation": {
+                "identifier": "bsearch16",
+                "newPage": false,
+                "searchKey": "strconv.bsearch16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bsearch16(a []uint16, x uint16) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bsearch16(a []uint16, x uint16) int\n```\n\nbsearch16 returns the smallest i such that a[i] >= x. If there is no such i, bsearch16 returns len(a). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#bsearch32",
+              "documentation": {
+                "identifier": "bsearch32",
+                "newPage": false,
+                "searchKey": "strconv.bsearch32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bsearch32(a []uint32, x uint32) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bsearch32(a []uint32, x uint32) int\n```\n\nbsearch32 returns the smallest i such that a[i] >= x. If there is no such i, bsearch32 returns len(a). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#IsPrint",
+              "documentation": {
+                "identifier": "IsPrint",
+                "newPage": false,
+                "searchKey": "strconv.IsPrint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsPrint(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsPrint(r rune) bool\n```\n\nIsPrint reports whether the rune is defined as printable by Go, with the same definition as unicode.IsPrint: letters, numbers, punctuation, symbols and ASCII space. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#IsGraphic",
+              "documentation": {
+                "identifier": "IsGraphic",
+                "newPage": false,
+                "searchKey": "strconv.IsGraphic",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func IsGraphic(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc IsGraphic(r rune) bool\n```\n\nIsGraphic reports whether the rune is defined as a Graphic by Unicode. Such characters include letters, marks, numbers, punctuation, symbols, and spaces, from categories L, M, N, P, S, and Zs. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#isInGraphicList",
+              "documentation": {
+                "identifier": "isInGraphicList",
+                "newPage": false,
+                "searchKey": "strconv.isInGraphicList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isInGraphicList(r rune) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isInGraphicList(r rune) bool\n```\n\nisInGraphicList reports whether the rune is in the isGraphic list. This separation from IsGraphic allows quoteWith to avoid two calls to IsPrint. Should be called only if IsPrint fails. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#SetOptimize",
+              "documentation": {
+                "identifier": "SetOptimize",
+                "newPage": false,
+                "searchKey": "strconv.SetOptimize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func SetOptimize(b bool) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc SetOptimize(b bool) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#ParseFloatPrefix",
+              "documentation": {
+                "identifier": "ParseFloatPrefix",
+                "newPage": false,
+                "searchKey": "strconv.ParseFloatPrefix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ParseFloatPrefix(s string, bitSize int) (float64, int, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ParseFloatPrefix(s string, bitSize int) (float64, int, error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#MulByLog2Log10",
+              "documentation": {
+                "identifier": "MulByLog2Log10",
+                "newPage": false,
+                "searchKey": "strconv.MulByLog2Log10",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MulByLog2Log10(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MulByLog2Log10(x int) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/strconv#MulByLog10Log2",
+              "documentation": {
+                "identifier": "MulByLog10Log2",
+                "newPage": false,
+                "searchKey": "strconv.MulByLog10Log2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func MulByLog10Log2(x int) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc MulByLog10Log2(x int) int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

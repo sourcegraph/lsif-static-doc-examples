@@ -1,0 +1,1430 @@
+{
+  "pathID": "/os/signal",
+  "documentation": {
+    "identifier": "signal",
+    "newPage": true,
+    "searchKey": "os/signal",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package signal"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package signal implements access to incoming signals. \n\nSignals are primarily used on Unix-like systems. For the use of this package on Windows and Plan 9, see below. \n\n### hdr-Types_of_signalsTypes of signals\nThe signals SIGKILL and SIGSTOP may not be caught by a program, and therefore cannot be affected by this package. \n\nSynchronous signals are signals triggered by errors in program execution: SIGBUS, SIGFPE, and SIGSEGV. These are only considered synchronous when caused by program execution, not when sent using os.Process.Kill or the kill program or some similar mechanism. In general, except as discussed below, Go programs will convert a synchronous signal into a run-time panic. \n\nThe remaining signals are asynchronous signals. They are not triggered by program errors, but are instead sent from the kernel or from some other program. \n\nOf the asynchronous signals, the SIGHUP signal is sent when a program loses its controlling terminal. The SIGINT signal is sent when the user at the controlling terminal presses the interrupt character, which by default is ^C (Control-C). The SIGQUIT signal is sent when the user at the controlling terminal presses the quit character, which by default is ^\\ (Control-Backslash). In general you can cause a program to simply exit by pressing ^C, and you can cause it to exit with a stack dump by pressing ^\\. \n\n### hdr-Default_behavior_of_signals_in_Go_programsDefault behavior of signals in Go programs\nBy default, a synchronous signal is converted into a run-time panic. A SIGHUP, SIGINT, or SIGTERM signal causes the program to exit. A SIGQUIT, SIGILL, SIGTRAP, SIGABRT, SIGSTKFLT, SIGEMT, or SIGSYS signal causes the program to exit with a stack dump. A SIGTSTP, SIGTTIN, or SIGTTOU signal gets the system default behavior (these signals are used by the shell for job control). The SIGPROF signal is handled directly by the Go runtime to implement runtime.CPUProfile. Other signals will be caught but no action will be taken. \n\nIf the Go program is started with either SIGHUP or SIGINT ignored (signal handler set to SIG_IGN), they will remain ignored. \n\nIf the Go program is started with a non-empty signal mask, that will generally be honored. However, some signals are explicitly unblocked: the synchronous signals, SIGILL, SIGTRAP, SIGSTKFLT, SIGCHLD, SIGPROF, and, on Linux, signals 32 (SIGCANCEL) and 33 (SIGSETXID) (SIGCANCEL and SIGSETXID are used internally by glibc). Subprocesses started by os.Exec, or by the os/exec package, will inherit the modified signal mask. \n\n### hdr-Changing_the_behavior_of_signals_in_Go_programsChanging the behavior of signals in Go programs\nThe functions in this package allow a program to change the way Go programs handle signals. \n\nNotify disables the default behavior for a given set of asynchronous signals and instead delivers them over one or more registered channels. Specifically, it applies to the signals SIGHUP, SIGINT, SIGQUIT, SIGABRT, and SIGTERM. It also applies to the job control signals SIGTSTP, SIGTTIN, and SIGTTOU, in which case the system default behavior does not occur. It also applies to some signals that otherwise cause no action: SIGUSR1, SIGUSR2, SIGPIPE, SIGALRM, SIGCHLD, SIGCONT, SIGURG, SIGXCPU, SIGXFSZ, SIGVTALRM, SIGWINCH, SIGIO, SIGPWR, SIGSYS, SIGINFO, SIGTHR, SIGWAITING, SIGLWP, SIGFREEZE, SIGTHAW, SIGLOST, SIGXRES, SIGJVM1, SIGJVM2, and any real time signals used on the system. Note that not all of these signals are available on all systems. \n\nIf the program was started with SIGHUP or SIGINT ignored, and Notify is called for either signal, a signal handler will be installed for that signal and it will no longer be ignored. If, later, Reset or Ignore is called for that signal, or Stop is called on all channels passed to Notify for that signal, the signal will once again be ignored. Reset will restore the system default behavior for the signal, while Ignore will cause the system to ignore the signal entirely. \n\nIf the program is started with a non-empty signal mask, some signals will be explicitly unblocked as described above. If Notify is called for a blocked signal, it will be unblocked. If, later, Reset is called for that signal, or Stop is called on all channels passed to Notify for that signal, the signal will once again be blocked. \n\n### hdr-SIGPIPESIGPIPE\nWhen a Go program writes to a broken pipe, the kernel will raise a SIGPIPE signal. \n\nIf the program has not called Notify to receive SIGPIPE signals, then the behavior depends on the file descriptor number. A write to a broken pipe on file descriptors 1 or 2 (standard output or standard error) will cause the program to exit with a SIGPIPE signal. A write to a broken pipe on some other file descriptor will take no action on the SIGPIPE signal, and the write will fail with an EPIPE error. \n\nIf the program has called Notify to receive SIGPIPE signals, the file descriptor number does not matter. The SIGPIPE signal will be delivered to the Notify channel, and the write will fail with an EPIPE error. \n\nThis means that, by default, command line programs will behave like typical Unix command line programs, while other programs will not crash with SIGPIPE when writing to a closed network connection. \n\n### hdr-Go_programs_that_use_cgo_or_SWIGGo programs that use cgo or SWIG\nIn a Go program that includes non-Go code, typically C/C++ code accessed using cgo or SWIG, Go's startup code normally runs first. It configures the signal handlers as expected by the Go runtime, before the non-Go startup code runs. If the non-Go startup code wishes to install its own signal handlers, it must take certain steps to keep Go working well. This section documents those steps and the overall effect changes to signal handler settings by the non-Go code can have on Go programs. In rare cases, the non-Go code may run before the Go code, in which case the next section also applies. \n\nIf the non-Go code called by the Go program does not change any signal handlers or masks, then the behavior is the same as for a pure Go program. \n\nIf the non-Go code installs any signal handlers, it must use the SA_ONSTACK flag with sigaction. Failing to do so is likely to cause the program to crash if the signal is received. Go programs routinely run with a limited stack, and therefore set up an alternate signal stack. \n\nIf the non-Go code installs a signal handler for any of the synchronous signals (SIGBUS, SIGFPE, SIGSEGV), then it should record the existing Go signal handler. If those signals occur while executing Go code, it should invoke the Go signal handler (whether the signal occurs while executing Go code can be determined by looking at the PC passed to the signal handler). Otherwise some Go run-time panics will not occur as expected. \n\nIf the non-Go code installs a signal handler for any of the asynchronous signals, it may invoke the Go signal handler or not as it chooses. Naturally, if it does not invoke the Go signal handler, the Go behavior described above will not occur. This can be an issue with the SIGPROF signal in particular. \n\nThe non-Go code should not change the signal mask on any threads created by the Go runtime. If the non-Go code starts new threads of its own, it may set the signal mask as it pleases. \n\nIf the non-Go code starts a new thread, changes the signal mask, and then invokes a Go function in that thread, the Go runtime will automatically unblock certain signals: the synchronous signals, SIGILL, SIGTRAP, SIGSTKFLT, SIGCHLD, SIGPROF, SIGCANCEL, and SIGSETXID. When the Go function returns, the non-Go signal mask will be restored. \n\nIf the Go signal handler is invoked on a non-Go thread not running Go code, the handler generally forwards the signal to the non-Go code, as follows. If the signal is SIGPROF, the Go handler does nothing. Otherwise, the Go handler removes itself, unblocks the signal, and raises it again, to invoke any non-Go handler or default system handler. If the program does not exit, the Go handler then reinstalls itself and continues execution of the program. \n\n### hdr-Non_Go_programs_that_call_Go_codeNon-Go programs that call Go code\nWhen Go code is built with options like -buildmode=c-shared, it will be run as part of an existing non-Go program. The non-Go code may have already installed signal handlers when the Go code starts (that may also happen in unusual cases when using cgo or SWIG; in that case, the discussion here applies).  For -buildmode=c-archive the Go runtime will initialize signals at global constructor time.  For -buildmode=c-shared the Go runtime will initialize signals when the shared library is loaded. \n\nIf the Go runtime sees an existing signal handler for the SIGCANCEL or SIGSETXID signals (which are used only on Linux), it will turn on the SA_ONSTACK flag and otherwise keep the signal handler. \n\nFor the synchronous signals and SIGPIPE, the Go runtime will install a signal handler. It will save any existing signal handler. If a synchronous signal arrives while executing non-Go code, the Go runtime will invoke the existing signal handler instead of the Go signal handler. \n\nGo code built with -buildmode=c-archive or -buildmode=c-shared will not install any other signal handlers by default. If there is an existing signal handler, the Go runtime will turn on the SA_ONSTACK flag and otherwise keep the signal handler. If Notify is called for an asynchronous signal, a Go signal handler will be installed for that signal. If, later, Reset is called for that signal, the original handling for that signal will be reinstalled, restoring the non-Go signal handler if any. \n\nGo code built without -buildmode=c-archive or -buildmode=c-shared will install a signal handler for the asynchronous signals listed above, and save any existing signal handler. If a signal is delivered to a non-Go thread, it will act as described above, except that if there is an existing non-Go signal handler, that handler will be installed before raising the signal. \n\n### hdr-WindowsWindows\nOn Windows a ^C (Control-C) or ^BREAK (Control-Break) normally cause the program to exit. If Notify is called for os.Interrupt, ^C or ^BREAK will cause os.Interrupt to be sent on the channel, and the program will not exit. If Reset is called, or Stop is called on all channels passed to Notify, then the default behavior will be restored. \n\nAdditionally, if Notify is called, and Windows sends CTRL_CLOSE_EVENT, CTRL_LOGOFF_EVENT or CTRL_SHUTDOWN_EVENT to the process, Notify will return syscall.SIGTERM. Unlike Control-C and Control-Break, Notify does not change process behavior when either CTRL_CLOSE_EVENT, CTRL_LOGOFF_EVENT or CTRL_SHUTDOWN_EVENT is received - the process will still get terminated unless it exits. But receiving syscall.SIGTERM will give the process an opportunity to clean up before termination. \n\n### hdr-Plan_9Plan 9\nOn Plan 9, signals have type syscall.Note, which is a string. Calling Notify with a syscall.Note will cause that value to be sent on the channel when that string is posted as a note. \n\n"
+  },
+  "children": [
+    {
+      "pathID": "/os/signal/internal"
+    },
+    {
+      "node": {
+        "pathID": "/os/signal#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal#numSig",
+              "documentation": {
+                "identifier": "numSig",
+                "newPage": false,
+                "searchKey": "signal.numSig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const numSig"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst numSig = 65 // max across all systems\n\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os/signal#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal#handlers",
+              "documentation": {
+                "identifier": "handlers",
+                "newPage": false,
+                "searchKey": "signal.handlers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var handlers"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar handlers struct {\n\tsync.Mutex\n\t// Map a channel to the signals that should be sent to it.\n\tm map[chan<- os.Signal]*handler\n\t// Map a signal to the number of channels receiving it.\n\tref [numSig]int64\n\t// Map channels to signals while the channel is being stopped.\n\t// Not a map because entries live here only very briefly.\n\t// We need a separate container because we need m to correspond to ref\n\t// at all times, and we also need to keep track of the *handler\n\t// value for a channel being stopped. See the Stop function.\n\tstopping []stopping\n} = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#watchSignalLoopOnce",
+              "documentation": {
+                "identifier": "watchSignalLoopOnce",
+                "newPage": false,
+                "searchKey": "signal.watchSignalLoopOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var watchSignalLoopOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar watchSignalLoopOnce sync.Once\n```\n\nwatchSignalLoopOnce guards calling the conditionally initialized watchSignalLoop. If watchSignalLoop is non-nil, it will be run in a goroutine lazily once Notify is invoked. See Issue 21576. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#watchSignalLoop",
+              "documentation": {
+                "identifier": "watchSignalLoop",
+                "newPage": false,
+                "searchKey": "signal.watchSignalLoop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var watchSignalLoop"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar watchSignalLoop func()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#settleTime",
+              "documentation": {
+                "identifier": "settleTime",
+                "newPage": false,
+                "searchKey": "signal.settleTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var settleTime"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar settleTime = 100 * time.Millisecond\n```\n\nsettleTime is an upper bound on how long we expect signals to take to be delivered. Lower values make the test faster, but also flakier — especially on heavily loaded systems. \n\nThe current value is set based on flakes observed in the Go builders. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#checkSighupIgnored",
+              "documentation": {
+                "identifier": "checkSighupIgnored",
+                "newPage": false,
+                "searchKey": "signal.checkSighupIgnored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var checkSighupIgnored"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar checkSighupIgnored = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#sendUncaughtSighup",
+              "documentation": {
+                "identifier": "sendUncaughtSighup",
+                "newPage": false,
+                "searchKey": "signal.sendUncaughtSighup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sendUncaughtSighup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sendUncaughtSighup = flag.Int(\"send_uncaught_sighup\", 0, \"send uncaught SIGHUP during TestStop\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#dieFromSighup",
+              "documentation": {
+                "identifier": "dieFromSighup",
+                "newPage": false,
+                "searchKey": "signal.dieFromSighup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dieFromSighup"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dieFromSighup = flag.Bool(\"die_from_sighup\", false, \"wait to die from uncaught SIGHUP\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#checkNotifyContext",
+              "documentation": {
+                "identifier": "checkNotifyContext",
+                "newPage": false,
+                "searchKey": "signal.checkNotifyContext",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var checkNotifyContext"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar checkNotifyContext = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#ctxNotifyTimes",
+              "documentation": {
+                "identifier": "ctxNotifyTimes",
+                "newPage": false,
+                "searchKey": "signal.ctxNotifyTimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ctxNotifyTimes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ctxNotifyTimes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os/signal#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal#stopping",
+              "documentation": {
+                "identifier": "stopping",
+                "newPage": false,
+                "searchKey": "signal.stopping",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stopping struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stopping struct {\n\tc chan<- os.Signal\n\th *handler\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#handler",
+              "documentation": {
+                "identifier": "handler",
+                "newPage": false,
+                "searchKey": "signal.handler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type handler struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype handler struct {\n\tmask [(numSig + 31) / 32]uint32\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/signal#handler.want",
+                    "documentation": {
+                      "identifier": "handler.want",
+                      "newPage": false,
+                      "searchKey": "signal.handler.want",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) want(sig int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) want(sig int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/signal#handler.set",
+                    "documentation": {
+                      "identifier": "handler.set",
+                      "newPage": false,
+                      "searchKey": "signal.handler.set",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) set(sig int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) set(sig int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/signal#handler.clear",
+                    "documentation": {
+                      "identifier": "handler.clear",
+                      "newPage": false,
+                      "searchKey": "signal.handler.clear",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (h *handler) clear(sig int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (h *handler) clear(sig int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signalCtx",
+              "documentation": {
+                "identifier": "signalCtx",
+                "newPage": false,
+                "searchKey": "signal.signalCtx",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type signalCtx struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype signalCtx struct {\n\tcontext.Context\n\n\tcancel  context.CancelFunc\n\tsignals []os.Signal\n\tch      chan os.Signal\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os/signal#signalCtx.stop",
+                    "documentation": {
+                      "identifier": "signalCtx.stop",
+                      "newPage": false,
+                      "searchKey": "signal.signalCtx.stop",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *signalCtx) stop()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *signalCtx) stop()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/os/signal#signalCtx.String",
+                    "documentation": {
+                      "identifier": "signalCtx.String",
+                      "newPage": false,
+                      "searchKey": "signal.signalCtx.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *signalCtx) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *signalCtx) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#stringer",
+              "documentation": {
+                "identifier": "stringer",
+                "newPage": false,
+                "searchKey": "signal.stringer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type stringer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype stringer interface {\n\tString() string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os/signal#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os/signal#cancel",
+              "documentation": {
+                "identifier": "cancel",
+                "newPage": false,
+                "searchKey": "signal.cancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func cancel(sigs []os.Signal, action func(int))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc cancel(sigs []os.Signal, action func(int))\n```\n\nStop relaying the signals, sigs, to any channels previously registered to receive them and either reset the signal handlers to their original values (action=disableSignal) or ignore the signals (action=ignoreSignal). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#Ignore",
+              "documentation": {
+                "identifier": "Ignore",
+                "newPage": false,
+                "searchKey": "signal.Ignore",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ignore(sig ...os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ignore(sig ...os.Signal)\n```\n\nIgnore causes the provided signals to be ignored. If they are received by the program, nothing will happen. Ignore undoes the effect of any prior calls to Notify for the provided signals. If no signals are provided, all incoming signals will be ignored. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#Ignored",
+              "documentation": {
+                "identifier": "Ignored",
+                "newPage": false,
+                "searchKey": "signal.Ignored",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Ignored(sig os.Signal) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Ignored(sig os.Signal) bool\n```\n\nIgnored reports whether sig is currently ignored. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#Notify",
+              "documentation": {
+                "identifier": "Notify",
+                "newPage": false,
+                "searchKey": "signal.Notify",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Notify(c chan<- os.Signal, sig ...os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Notify(c chan<- os.Signal, sig ...os.Signal)\n```\n\nNotify causes package signal to relay incoming signals to c. If no signals are provided, all incoming signals will be relayed to c. Otherwise, just the provided signals will. \n\nPackage signal will not block sending to c: the caller must ensure that c has sufficient buffer space to keep up with the expected signal rate. For a channel used for notification of just one signal value, a buffer of size 1 is sufficient. \n\nIt is allowed to call Notify multiple times with the same channel: each call expands the set of signals sent to that channel. The only way to remove signals from the set is to call Stop. \n\nIt is allowed to call Notify multiple times with different channels and the same signals: each channel receives copies of incoming signals independently. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#Reset",
+              "documentation": {
+                "identifier": "Reset",
+                "newPage": false,
+                "searchKey": "signal.Reset",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Reset(sig ...os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Reset(sig ...os.Signal)\n```\n\nReset undoes the effect of any prior calls to Notify for the provided signals. If no signals are provided, all signal handlers will be reset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#Stop",
+              "documentation": {
+                "identifier": "Stop",
+                "newPage": false,
+                "searchKey": "signal.Stop",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Stop(c chan<- os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Stop(c chan<- os.Signal)\n```\n\nStop causes package signal to stop relaying incoming signals to c. It undoes the effect of all prior calls to Notify using c. When Stop returns, it is guaranteed that c will receive no more signals. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signalWaitUntilIdle",
+              "documentation": {
+                "identifier": "signalWaitUntilIdle",
+                "newPage": false,
+                "searchKey": "signal.signalWaitUntilIdle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signalWaitUntilIdle()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signalWaitUntilIdle()\n```\n\nWait until there are no more signals waiting to be delivered. Defined by the runtime package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#process",
+              "documentation": {
+                "identifier": "process",
+                "newPage": false,
+                "searchKey": "signal.process",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func process(sig os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc process(sig os.Signal)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#NotifyContext",
+              "documentation": {
+                "identifier": "NotifyContext",
+                "newPage": false,
+                "searchKey": "signal.NotifyContext",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NotifyContext(parent context.Context, signals ...os.Signal) (ctx context.Context, stop context.CancelFunc)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NotifyContext(parent context.Context, signals ...os.Signal) (ctx context.Context, stop context.CancelFunc)\n```\n\nNotifyContext returns a copy of the parent context that is marked done (its Done channel is closed) when one of the listed signals arrives, when the returned stop function is called, or when the parent context's Done channel is closed, whichever happens first. \n\nThe stop function unregisters the signal behavior, which, like signal.Reset, may restore the default behavior for a given signal. For example, the default behavior of a Go program receiving os.Interrupt is to exit. Calling NotifyContext(parent, os.Interrupt) will change the behavior to cancel the returned context. Future interrupts received will not trigger the default (exit) behavior until the returned stop function is called. \n\nThe stop function releases resources associated with it, so code should call stop as soon as the operations running in this Context complete and signals no longer need to be diverted to the context. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signal_disable",
+              "documentation": {
+                "identifier": "signal_disable",
+                "newPage": false,
+                "searchKey": "signal.signal_disable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signal_disable(uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signal_disable(uint32)\n```\n\nDefined by the runtime package. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signal_enable",
+              "documentation": {
+                "identifier": "signal_enable",
+                "newPage": false,
+                "searchKey": "signal.signal_enable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signal_enable(uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signal_enable(uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signal_ignore",
+              "documentation": {
+                "identifier": "signal_ignore",
+                "newPage": false,
+                "searchKey": "signal.signal_ignore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signal_ignore(uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signal_ignore(uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signal_ignored",
+              "documentation": {
+                "identifier": "signal_ignored",
+                "newPage": false,
+                "searchKey": "signal.signal_ignored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signal_ignored(uint32) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signal_ignored(uint32) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signal_recv",
+              "documentation": {
+                "identifier": "signal_recv",
+                "newPage": false,
+                "searchKey": "signal.signal_recv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signal_recv() uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signal_recv() uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#loop",
+              "documentation": {
+                "identifier": "loop",
+                "newPage": false,
+                "searchKey": "signal.loop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func loop()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc loop()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "signal.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signum",
+              "documentation": {
+                "identifier": "signum",
+                "newPage": false,
+                "searchKey": "signal.signum",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signum(sig os.Signal) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signum(sig os.Signal) int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#enableSignal",
+              "documentation": {
+                "identifier": "enableSignal",
+                "newPage": false,
+                "searchKey": "signal.enableSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func enableSignal(sig int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc enableSignal(sig int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#disableSignal",
+              "documentation": {
+                "identifier": "disableSignal",
+                "newPage": false,
+                "searchKey": "signal.disableSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func disableSignal(sig int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc disableSignal(sig int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#ignoreSignal",
+              "documentation": {
+                "identifier": "ignoreSignal",
+                "newPage": false,
+                "searchKey": "signal.ignoreSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ignoreSignal(sig int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ignoreSignal(sig int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#signalIgnored",
+              "documentation": {
+                "identifier": "signalIgnored",
+                "newPage": false,
+                "searchKey": "signal.signalIgnored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func signalIgnored(sig int) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc signalIgnored(sig int) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "signal.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#waitSig",
+              "documentation": {
+                "identifier": "waitSig",
+                "newPage": false,
+                "searchKey": "signal.waitSig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitSig(t *testing.T, c <-chan os.Signal, sig os.Signal)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#waitSigAll",
+              "documentation": {
+                "identifier": "waitSigAll",
+                "newPage": false,
+                "searchKey": "signal.waitSigAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitSigAll(t *testing.T, c <-chan os.Signal, sig os.Signal)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#waitSig1",
+              "documentation": {
+                "identifier": "waitSig1",
+                "newPage": false,
+                "searchKey": "signal.waitSig1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc waitSig1(t *testing.T, c <-chan os.Signal, sig os.Signal, all bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#quiesce",
+              "documentation": {
+                "identifier": "quiesce",
+                "newPage": false,
+                "searchKey": "signal.quiesce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func quiesce()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc quiesce()\n```\n\nquiesce waits until we can be reasonably confident that all pending signals have been delivered by the OS. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestSignal",
+              "documentation": {
+                "identifier": "TestSignal",
+                "newPage": false,
+                "searchKey": "signal.TestSignal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignal(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignal(t *testing.T)\n```\n\nTest that basic signal handling works. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestStress",
+              "documentation": {
+                "identifier": "TestStress",
+                "newPage": false,
+                "searchKey": "signal.TestStress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#testCancel",
+              "documentation": {
+                "identifier": "testCancel",
+                "newPage": false,
+                "searchKey": "signal.testCancel",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testCancel(t *testing.T, ignore bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testCancel(t *testing.T, ignore bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestReset",
+              "documentation": {
+                "identifier": "TestReset",
+                "newPage": false,
+                "searchKey": "signal.TestReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReset(t *testing.T)\n```\n\nTest that Reset cancels registration for listed signals on all channels. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestIgnore",
+              "documentation": {
+                "identifier": "TestIgnore",
+                "newPage": false,
+                "searchKey": "signal.TestIgnore",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIgnore(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIgnore(t *testing.T)\n```\n\nTest that Ignore cancels registration for listed signals on all channels. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestIgnored",
+              "documentation": {
+                "identifier": "TestIgnored",
+                "newPage": false,
+                "searchKey": "signal.TestIgnored",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIgnored(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIgnored(t *testing.T)\n```\n\nTest that Ignored correctly detects changes to the ignored status of a signal. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestDetectNohup",
+              "documentation": {
+                "identifier": "TestDetectNohup",
+                "newPage": false,
+                "searchKey": "signal.TestDetectNohup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDetectNohup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDetectNohup(t *testing.T)\n```\n\nTest that Ignored(SIGHUP) correctly detects whether it is being run under nohup. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestStop",
+              "documentation": {
+                "identifier": "TestStop",
+                "newPage": false,
+                "searchKey": "signal.TestStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStop(t *testing.T)\n```\n\nTest that Stop cancels the channel's registrations. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNohup",
+              "documentation": {
+                "identifier": "TestNohup",
+                "newPage": false,
+                "searchKey": "signal.TestNohup",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNohup(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNohup(t *testing.T)\n```\n\nTest that when run under nohup, an uncaught SIGHUP does not kill the program. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestSIGCONT",
+              "documentation": {
+                "identifier": "TestSIGCONT",
+                "newPage": false,
+                "searchKey": "signal.TestSIGCONT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSIGCONT(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSIGCONT(t *testing.T)\n```\n\nTest that SIGCONT works (issue 8953). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestAtomicStop",
+              "documentation": {
+                "identifier": "TestAtomicStop",
+                "newPage": false,
+                "searchKey": "signal.TestAtomicStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAtomicStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAtomicStop(t *testing.T)\n```\n\nTest race between stopping and receiving a signal (issue 14571). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#atomicStopTestProgram",
+              "documentation": {
+                "identifier": "atomicStopTestProgram",
+                "newPage": false,
+                "searchKey": "signal.atomicStopTestProgram",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func atomicStopTestProgram(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc atomicStopTestProgram(t *testing.T)\n```\n\natomicStopTestProgram is run in a subprocess by TestAtomicStop. It tries to trigger a signal delivery race. This function should either catch a signal or die from it. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestTime",
+              "documentation": {
+                "identifier": "TestTime",
+                "newPage": false,
+                "searchKey": "signal.TestTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextNotifications",
+              "documentation": {
+                "identifier": "TestNotifyContextNotifications",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextNotifications",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextNotifications(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextNotifications(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextStop",
+              "documentation": {
+                "identifier": "TestNotifyContextStop",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextStop(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextCancelParent",
+              "documentation": {
+                "identifier": "TestNotifyContextCancelParent",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextCancelParent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextCancelParent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextCancelParent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextPrematureCancelParent",
+              "documentation": {
+                "identifier": "TestNotifyContextPrematureCancelParent",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextPrematureCancelParent",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextPrematureCancelParent(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextPrematureCancelParent(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextSimultaneousStop",
+              "documentation": {
+                "identifier": "TestNotifyContextSimultaneousStop",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextSimultaneousStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextSimultaneousStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextSimultaneousStop(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestNotifyContextStringer",
+              "documentation": {
+                "identifier": "TestNotifyContextStringer",
+                "newPage": false,
+                "searchKey": "signal.TestNotifyContextStringer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotifyContextStringer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotifyContextStringer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os/signal#TestSignalTrace",
+              "documentation": {
+                "identifier": "TestSignalTrace",
+                "newPage": false,
+                "searchKey": "signal.TestSignalTrace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSignalTrace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSignalTrace(t *testing.T)\n```\n\n#44193 test signal handling while stopping and starting the world. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

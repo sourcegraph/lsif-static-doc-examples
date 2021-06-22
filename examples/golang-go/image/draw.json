@@ -1,0 +1,1678 @@
+{
+  "pathID": "/image/draw",
+  "documentation": {
+    "identifier": "draw",
+    "newPage": true,
+    "searchKey": "image/draw",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package draw"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package draw provides image composition functions. \n\nSee \"The Go image/draw package\" for an introduction to this package: [https://golang.org/doc/articles/image_draw.html](https://golang.org/doc/articles/image_draw.html) \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/image/draw#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image/draw#m",
+              "documentation": {
+                "identifier": "m",
+                "newPage": false,
+                "searchKey": "draw.m",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const m"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst m = 1<<16 - 1\n```\n\nm is the maximum color value returned by image.Color.RGBA. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Over",
+              "documentation": {
+                "identifier": "Over",
+                "newPage": false,
+                "searchKey": "draw.Over",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Over"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Over Op = iota\n```\n\nOver specifies `(src in mask) over dst'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Src",
+              "documentation": {
+                "identifier": "Src",
+                "newPage": false,
+                "searchKey": "draw.Src",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const Src"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst Src\n```\n\nSrc specifies `src in mask'. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#dstw",
+              "documentation": {
+                "identifier": "dstw",
+                "newPage": false,
+                "searchKey": "draw.dstw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dstw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dstw, dsth = 640, 480\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#dsth",
+              "documentation": {
+                "identifier": "dsth",
+                "newPage": false,
+                "searchKey": "draw.dsth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const dsth"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst dstw, dsth = 640, 480\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#srcw",
+              "documentation": {
+                "identifier": "srcw",
+                "newPage": false,
+                "searchKey": "draw.srcw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const srcw"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst srcw, srch = 400, 300\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#srch",
+              "documentation": {
+                "identifier": "srch",
+                "newPage": false,
+                "searchKey": "draw.srch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const srch"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst srcw, srch = 400, 300\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image/draw#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image/draw#FloydSteinberg",
+              "documentation": {
+                "identifier": "FloydSteinberg",
+                "newPage": false,
+                "searchKey": "draw.FloydSteinberg",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var FloydSteinberg"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar FloydSteinberg Drawer = floydSteinberg{}\n```\n\nFloydSteinberg is a Drawer that is the Src Op with Floyd-Steinberg error diffusion. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#palette",
+              "documentation": {
+                "identifier": "palette",
+                "newPage": false,
+                "searchKey": "draw.palette",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var palette"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar palette = color.Palette{\n\tcolor.Black,\n\tcolor.White,\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#clipTests",
+              "documentation": {
+                "identifier": "clipTests",
+                "newPage": false,
+                "searchKey": "draw.clipTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var clipTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar clipTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawTests",
+              "documentation": {
+                "identifier": "drawTests",
+                "newPage": false,
+                "searchKey": "draw.drawTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var drawTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar drawTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image/draw#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image/draw#Image",
+              "documentation": {
+                "identifier": "Image",
+                "newPage": false,
+                "searchKey": "draw.Image",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Image interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Image interface {\n\timage.Image\n\tSet(x, y int, c color.Color)\n}\n```\n\nImage is an image.Image with a Set method to change a single pixel. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/draw#hgradRed",
+                    "documentation": {
+                      "identifier": "hgradRed",
+                      "newPage": false,
+                      "searchKey": "draw.hgradRed",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func hgradRed(alpha int) Image"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc hgradRed(alpha int) Image\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/image/draw#gradYellow",
+                    "documentation": {
+                      "identifier": "gradYellow",
+                      "newPage": false,
+                      "searchKey": "draw.gradYellow",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func gradYellow(alpha int) Image"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc gradYellow(alpha int) Image\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#RGBA64Image",
+              "documentation": {
+                "identifier": "RGBA64Image",
+                "newPage": false,
+                "searchKey": "draw.RGBA64Image",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type RGBA64Image interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype RGBA64Image interface {\n\timage.RGBA64Image\n\tSet(x, y int, c color.Color)\n\tSetRGBA64(x, y int, c color.RGBA64)\n}\n```\n\nRGBA64Image extends both the Image and image.RGBA64Image interfaces with a SetRGBA64 method to change a single pixel. SetRGBA64 is equivalent to calling Set, but it can avoid allocations from converting concrete color types to the color.Color interface type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Quantizer",
+              "documentation": {
+                "identifier": "Quantizer",
+                "newPage": false,
+                "searchKey": "draw.Quantizer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Quantizer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Quantizer interface {\n\t// Quantize appends up to cap(p) - len(p) colors to p and returns the\n\t// updated palette suitable for converting m to a paletted image.\n\tQuantize(p color.Palette, m image.Image) color.Palette\n}\n```\n\nQuantizer produces a palette for an image. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Op",
+              "documentation": {
+                "identifier": "Op",
+                "newPage": false,
+                "searchKey": "draw.Op",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Op int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Op int\n```\n\nOp is a Porter-Duff compositing operator. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/draw#Op.Draw",
+                    "documentation": {
+                      "identifier": "Op.Draw",
+                      "newPage": false,
+                      "searchKey": "draw.Op.Draw",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (op Op) Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (op Op) Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point)\n```\n\nDraw implements the Drawer interface by calling the Draw function with this Op. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Drawer",
+              "documentation": {
+                "identifier": "Drawer",
+                "newPage": false,
+                "searchKey": "draw.Drawer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Drawer interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Drawer interface {\n\t// Draw aligns r.Min in dst with sp in src and then replaces the\n\t// rectangle r in dst with the result of drawing src on dst.\n\tDraw(dst Image, r image.Rectangle, src image.Image, sp image.Point)\n}\n```\n\nDrawer contains the Draw method. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#floydSteinberg",
+              "documentation": {
+                "identifier": "floydSteinberg",
+                "newPage": false,
+                "searchKey": "draw.floydSteinberg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type floydSteinberg struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype floydSteinberg struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/image/draw#floydSteinberg.Draw",
+                    "documentation": {
+                      "identifier": "floydSteinberg.Draw",
+                      "newPage": false,
+                      "searchKey": "draw.floydSteinberg.Draw",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (floydSteinberg) Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (floydSteinberg) Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#clipTest",
+              "documentation": {
+                "identifier": "clipTest",
+                "newPage": false,
+                "searchKey": "draw.clipTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type clipTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype clipTest struct {\n\tdesc          string\n\tr, dr, sr, mr image.Rectangle\n\tsp, mp        image.Point\n\tnilMask       bool\n\tr0            image.Rectangle\n\tsp0, mp0      image.Point\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawTest",
+              "documentation": {
+                "identifier": "drawTest",
+                "newPage": false,
+                "searchKey": "draw.drawTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type drawTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype drawTest struct {\n\tdesc     string\n\tsrc      image.Image\n\tmask     image.Image\n\top       Op\n\texpected color.Color\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#embeddedPaletted",
+              "documentation": {
+                "identifier": "embeddedPaletted",
+                "newPage": false,
+                "searchKey": "draw.embeddedPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type embeddedPaletted struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype embeddedPaletted struct {\n\t*image.Paletted\n}\n```\n\nembeddedPaletted is an Image that behaves like an *image.Paletted but whose type is not *image.Paletted. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/image/draw#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/image/draw#clip",
+              "documentation": {
+                "identifier": "clip",
+                "newPage": false,
+                "searchKey": "draw.clip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clip(dst Image, r *image.Rectangle, src image.Image, sp *image.Point, mask image.Image, mp *image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clip(dst Image, r *image.Rectangle, src image.Image, sp *image.Point, mask image.Image, mp *image.Point)\n```\n\nclip clips r against each image's bounds (after translating into the destination image's coordinate space) and shifts the points sp and mp by the same amount as the change in r.Min. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#processBackward",
+              "documentation": {
+                "identifier": "processBackward",
+                "newPage": false,
+                "searchKey": "draw.processBackward",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func processBackward(dst image.Image, r image.Rectangle, src image.Image, sp image.Point) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc processBackward(dst image.Image, r image.Rectangle, src image.Image, sp image.Point) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#Draw",
+              "documentation": {
+                "identifier": "Draw",
+                "newPage": false,
+                "searchKey": "draw.Draw",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point, op Op)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Draw(dst Image, r image.Rectangle, src image.Image, sp image.Point, op Op)\n```\n\nDraw calls DrawMask with a nil mask. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#DrawMask",
+              "documentation": {
+                "identifier": "DrawMask",
+                "newPage": false,
+                "searchKey": "draw.DrawMask",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func DrawMask(dst Image, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc DrawMask(dst Image, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op)\n```\n\nDrawMask aligns r.Min in dst with sp in src and mp in mask and then replaces the rectangle r in dst with the result of a Porter-Duff composition. A nil mask is treated as opaque. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawFillOver",
+              "documentation": {
+                "identifier": "drawFillOver",
+                "newPage": false,
+                "searchKey": "draw.drawFillOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawFillOver(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawFillOver(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawFillSrc",
+              "documentation": {
+                "identifier": "drawFillSrc",
+                "newPage": false,
+                "searchKey": "draw.drawFillSrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawFillSrc(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawFillSrc(dst *image.RGBA, r image.Rectangle, sr, sg, sb, sa uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawCopyOver",
+              "documentation": {
+                "identifier": "drawCopyOver",
+                "newPage": false,
+                "searchKey": "draw.drawCopyOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawCopyOver(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawCopyOver(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawCopySrc",
+              "documentation": {
+                "identifier": "drawCopySrc",
+                "newPage": false,
+                "searchKey": "draw.drawCopySrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawCopySrc(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawCopySrc(dst *image.RGBA, r image.Rectangle, src *image.RGBA, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawNRGBAOver",
+              "documentation": {
+                "identifier": "drawNRGBAOver",
+                "newPage": false,
+                "searchKey": "draw.drawNRGBAOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawNRGBAOver(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawNRGBAOver(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawNRGBASrc",
+              "documentation": {
+                "identifier": "drawNRGBASrc",
+                "newPage": false,
+                "searchKey": "draw.drawNRGBASrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawNRGBASrc(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawNRGBASrc(dst *image.RGBA, r image.Rectangle, src *image.NRGBA, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawGray",
+              "documentation": {
+                "identifier": "drawGray",
+                "newPage": false,
+                "searchKey": "draw.drawGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawGray(dst *image.RGBA, r image.Rectangle, src *image.Gray, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawGray(dst *image.RGBA, r image.Rectangle, src *image.Gray, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawCMYK",
+              "documentation": {
+                "identifier": "drawCMYK",
+                "newPage": false,
+                "searchKey": "draw.drawCMYK",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawCMYK(dst *image.RGBA, r image.Rectangle, src *image.CMYK, sp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawCMYK(dst *image.RGBA, r image.Rectangle, src *image.CMYK, sp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawGlyphOver",
+              "documentation": {
+                "identifier": "drawGlyphOver",
+                "newPage": false,
+                "searchKey": "draw.drawGlyphOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawGlyphOver(dst *image.RGBA, r image.Rectangle, src *image.Uniform, mask *image.Alpha, mp image.Point)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawGlyphOver(dst *image.RGBA, r image.Rectangle, src *image.Uniform, mask *image.Alpha, mp image.Point)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawRGBA",
+              "documentation": {
+                "identifier": "drawRGBA",
+                "newPage": false,
+                "searchKey": "draw.drawRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawRGBA(dst *image.RGBA, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawRGBA(dst *image.RGBA, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#clamp",
+              "documentation": {
+                "identifier": "clamp",
+                "newPage": false,
+                "searchKey": "draw.clamp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func clamp(i int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc clamp(i int32) int32\n```\n\nclamp clamps i to the interval [0, 0xffff]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#sqDiff",
+              "documentation": {
+                "identifier": "sqDiff",
+                "newPage": false,
+                "searchKey": "draw.sqDiff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sqDiff(x, y int32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sqDiff(x, y int32) uint32\n```\n\nsqDiff returns the squared-difference of x and y, shifted by 2 so that adding four of those won't overflow a uint32. \n\nx and y are both assumed to be in the range [0, 0xffff]. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#drawPaletted",
+              "documentation": {
+                "identifier": "drawPaletted",
+                "newPage": false,
+                "searchKey": "draw.drawPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func drawPaletted(dst Image, r image.Rectangle, src image.Image, sp image.Point, floydSteinberg bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc drawPaletted(dst Image, r image.Rectangle, src image.Image, sp image.Point, floydSteinberg bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#bench",
+              "documentation": {
+                "identifier": "bench",
+                "newPage": false,
+                "searchKey": "draw.bench",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func bench(b *testing.B, dcm, scm, mcm color.Model, op Op)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc bench(b *testing.B, dcm, scm, mcm color.Model, op Op)\n```\n\nbench benchmarks drawing src and mask images onto a dst image with the given op and the color models to create those images from. The created images' pixels are initialized to non-zero values. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkFillOver",
+              "documentation": {
+                "identifier": "BenchmarkFillOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkFillOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFillOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFillOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkFillSrc",
+              "documentation": {
+                "identifier": "BenchmarkFillSrc",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkFillSrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFillSrc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFillSrc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkCopyOver",
+              "documentation": {
+                "identifier": "BenchmarkCopyOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkCopyOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCopyOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCopyOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkCopySrc",
+              "documentation": {
+                "identifier": "BenchmarkCopySrc",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkCopySrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCopySrc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCopySrc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkNRGBAOver",
+              "documentation": {
+                "identifier": "BenchmarkNRGBAOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkNRGBAOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNRGBAOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNRGBAOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkNRGBASrc",
+              "documentation": {
+                "identifier": "BenchmarkNRGBASrc",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkNRGBASrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNRGBASrc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNRGBASrc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkYCbCr",
+              "documentation": {
+                "identifier": "BenchmarkYCbCr",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkYCbCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkYCbCr(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkYCbCr(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGray",
+              "documentation": {
+                "identifier": "BenchmarkGray",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGray(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGray(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkCMYK",
+              "documentation": {
+                "identifier": "BenchmarkCMYK",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkCMYK",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkCMYK(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkCMYK(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGlyphOver",
+              "documentation": {
+                "identifier": "BenchmarkGlyphOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGlyphOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGlyphOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGlyphOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkRGBA",
+              "documentation": {
+                "identifier": "BenchmarkRGBA",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkPalettedFill",
+              "documentation": {
+                "identifier": "BenchmarkPalettedFill",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkPalettedFill",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPalettedFill(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPalettedFill(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkPalettedRGBA",
+              "documentation": {
+                "identifier": "BenchmarkPalettedRGBA",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkPalettedRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPalettedRGBA(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPalettedRGBA(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGenericOver",
+              "documentation": {
+                "identifier": "BenchmarkGenericOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGenericOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGenericMaskOver",
+              "documentation": {
+                "identifier": "BenchmarkGenericMaskOver",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGenericMaskOver",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericMaskOver(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericMaskOver(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGenericSrc",
+              "documentation": {
+                "identifier": "BenchmarkGenericSrc",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGenericSrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericSrc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericSrc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#BenchmarkGenericMaskSrc",
+              "documentation": {
+                "identifier": "BenchmarkGenericMaskSrc",
+                "newPage": false,
+                "searchKey": "draw.BenchmarkGenericMaskSrc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkGenericMaskSrc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkGenericMaskSrc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestClip",
+              "documentation": {
+                "identifier": "TestClip",
+                "newPage": false,
+                "searchKey": "draw.TestClip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#eq",
+              "documentation": {
+                "identifier": "eq",
+                "newPage": false,
+                "searchKey": "draw.eq",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func eq(c0, c1 color.Color) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc eq(c0, c1 color.Color) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#fillBlue",
+              "documentation": {
+                "identifier": "fillBlue",
+                "newPage": false,
+                "searchKey": "draw.fillBlue",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fillBlue(alpha int) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fillBlue(alpha int) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#fillAlpha",
+              "documentation": {
+                "identifier": "fillAlpha",
+                "newPage": false,
+                "searchKey": "draw.fillAlpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func fillAlpha(alpha int) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc fillAlpha(alpha int) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradGreen",
+              "documentation": {
+                "identifier": "vgradGreen",
+                "newPage": false,
+                "searchKey": "draw.vgradGreen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradGreen(alpha int) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradGreen(alpha int) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradAlpha",
+              "documentation": {
+                "identifier": "vgradAlpha",
+                "newPage": false,
+                "searchKey": "draw.vgradAlpha",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradAlpha(alpha int) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradAlpha(alpha int) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradGreenNRGBA",
+              "documentation": {
+                "identifier": "vgradGreenNRGBA",
+                "newPage": false,
+                "searchKey": "draw.vgradGreenNRGBA",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradGreenNRGBA(alpha int) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradGreenNRGBA(alpha int) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradCr",
+              "documentation": {
+                "identifier": "vgradCr",
+                "newPage": false,
+                "searchKey": "draw.vgradCr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradCr() image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradCr() image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradGray",
+              "documentation": {
+                "identifier": "vgradGray",
+                "newPage": false,
+                "searchKey": "draw.vgradGray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradGray() image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradGray() image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#vgradMagenta",
+              "documentation": {
+                "identifier": "vgradMagenta",
+                "newPage": false,
+                "searchKey": "draw.vgradMagenta",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func vgradMagenta() image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc vgradMagenta() image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#makeGolden",
+              "documentation": {
+                "identifier": "makeGolden",
+                "newPage": false,
+                "searchKey": "draw.makeGolden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func makeGolden(dst image.Image, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op) image.Image"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc makeGolden(dst image.Image, r image.Rectangle, src image.Image, sp image.Point, mask image.Image, mp image.Point, op Op) image.Image\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestDraw",
+              "documentation": {
+                "identifier": "TestDraw",
+                "newPage": false,
+                "searchKey": "draw.TestDraw",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDraw(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDraw(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestDrawOverlap",
+              "documentation": {
+                "identifier": "TestDrawOverlap",
+                "newPage": false,
+                "searchKey": "draw.TestDrawOverlap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDrawOverlap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDrawOverlap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestNonZeroSrcPt",
+              "documentation": {
+                "identifier": "TestNonZeroSrcPt",
+                "newPage": false,
+                "searchKey": "draw.TestNonZeroSrcPt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonZeroSrcPt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonZeroSrcPt(t *testing.T)\n```\n\nTestNonZeroSrcPt checks drawing with a non-zero src point parameter. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestFill",
+              "documentation": {
+                "identifier": "TestFill",
+                "newPage": false,
+                "searchKey": "draw.TestFill",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFill(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFill(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestFloydSteinbergCheckerboard",
+              "documentation": {
+                "identifier": "TestFloydSteinbergCheckerboard",
+                "newPage": false,
+                "searchKey": "draw.TestFloydSteinbergCheckerboard",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFloydSteinbergCheckerboard(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFloydSteinbergCheckerboard(t *testing.T)\n```\n\nTestFloydSteinbergCheckerboard tests that the result of Floyd-Steinberg error diffusion of a uniform 50% gray source image with a black-and-white palette is a checkerboard pattern. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestPaletted",
+              "documentation": {
+                "identifier": "TestPaletted",
+                "newPage": false,
+                "searchKey": "draw.TestPaletted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPaletted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPaletted(t *testing.T)\n```\n\nTestPaletted tests that the drawPaletted function behaves the same regardless of whether dst is an *image.Paletted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/image/draw#TestSqDiff",
+              "documentation": {
+                "identifier": "TestSqDiff",
+                "newPage": false,
+                "searchKey": "draw.TestSqDiff",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSqDiff(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSqDiff(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

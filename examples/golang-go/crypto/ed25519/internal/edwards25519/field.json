@@ -1,0 +1,1585 @@
+{
+  "pathID": "/crypto/ed25519/internal/edwards25519/field",
+  "documentation": {
+    "identifier": "field",
+    "newPage": true,
+    "searchKey": "crypto/ed25519/internal/edwards25519/field",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package field"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package field implements fast arithmetic modulo 2^255-19. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/ed25519/internal/edwards25519/field#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#maskLow51Bits",
+              "documentation": {
+                "identifier": "maskLow51Bits",
+                "newPage": false,
+                "searchKey": "field.maskLow51Bits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maskLow51Bits"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maskLow51Bits uint64 = (1 << 51) - 1\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/ed25519/internal/edwards25519/field#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feZero",
+              "documentation": {
+                "identifier": "feZero",
+                "newPage": false,
+                "searchKey": "field.feZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var feZero"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar feZero = &Element{0, 0, 0, 0, 0}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feOne",
+              "documentation": {
+                "identifier": "feOne",
+                "newPage": false,
+                "searchKey": "field.feOne",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var feOne"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar feOne = &Element{1, 0, 0, 0, 0}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#sqrtM1",
+              "documentation": {
+                "identifier": "sqrtM1",
+                "newPage": false,
+                "searchKey": "field.sqrtM1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sqrtM1"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sqrtM1 = ...\n```\n\nsqrtM1 is 2^((p-1)/4), which squared is equal to -1 by Euler's Criterion. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#quickCheckConfig1024",
+              "documentation": {
+                "identifier": "quickCheckConfig1024",
+                "newPage": false,
+                "searchKey": "field.quickCheckConfig1024",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var quickCheckConfig1024"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar quickCheckConfig1024 = &quick.Config{MaxCountScale: 1 << 10}\n```\n\nquickCheckConfig1024 will make each quickcheck test run (1024 * -quickchecks) times. The default value of -quickchecks is 100. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#weirdLimbs51",
+              "documentation": {
+                "identifier": "weirdLimbs51",
+                "newPage": false,
+                "searchKey": "field.weirdLimbs51",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var weirdLimbs51"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar weirdLimbs51 = ...\n```\n\nweirdLimbs can be combined to generate a range of edge-case field elements. 0 and -1 are intentionally more weighted, as they combine well. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#weirdLimbs52",
+              "documentation": {
+                "identifier": "weirdLimbs52",
+                "newPage": false,
+                "searchKey": "field.weirdLimbs52",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var weirdLimbs52"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar weirdLimbs52 = ...\n```\n\nweirdLimbs can be combined to generate a range of edge-case field elements. 0 and -1 are intentionally more weighted, as they combine well. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/ed25519/internal/edwards25519/field#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#Element",
+              "documentation": {
+                "identifier": "Element",
+                "newPage": false,
+                "searchKey": "field.Element",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Element struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Element struct {\n\t// An element t represents the integer\n\t//     t.l0 + t.l1*2^51 + t.l2*2^102 + t.l3*2^153 + t.l4*2^204\n\t//\n\t// Between operations, all limbs are expected to be lower than 2^52.\n\tl0 uint64\n\tl1 uint64\n\tl2 uint64\n\tl3 uint64\n\tl4 uint64\n}\n```\n\nElement represents an element of the field GF(2^255-19). Note that this is not a cryptographically secure group, and should only be used to interact with edwards25519.Point coordinates. \n\nThis type works similarly to math/big.Int, and all arguments and receivers are allowed to alias. \n\nThe zero value is a valid zero element. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#generateFieldElement",
+                    "documentation": {
+                      "identifier": "generateFieldElement",
+                      "newPage": false,
+                      "searchKey": "field.generateFieldElement",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func generateFieldElement(rand *mathrand.Rand) Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc generateFieldElement(rand *mathrand.Rand) Element\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#generateWeirdFieldElement",
+                    "documentation": {
+                      "identifier": "generateWeirdFieldElement",
+                      "newPage": false,
+                      "searchKey": "field.generateWeirdFieldElement",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func generateWeirdFieldElement(rand *mathrand.Rand) Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc generateWeirdFieldElement(rand *mathrand.Rand) Element\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Zero",
+                    "documentation": {
+                      "identifier": "Element.Zero",
+                      "newPage": false,
+                      "searchKey": "field.Element.Zero",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Zero() *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Zero() *Element\n```\n\nZero sets v = 0, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.One",
+                    "documentation": {
+                      "identifier": "Element.One",
+                      "newPage": false,
+                      "searchKey": "field.Element.One",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) One() *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) One() *Element\n```\n\nOne sets v = 1, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.reduce",
+                    "documentation": {
+                      "identifier": "Element.reduce",
+                      "newPage": false,
+                      "searchKey": "field.Element.reduce",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) reduce() *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) reduce() *Element\n```\n\nreduce reduces v modulo 2^255 - 19 and returns it. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Add",
+                    "documentation": {
+                      "identifier": "Element.Add",
+                      "newPage": false,
+                      "searchKey": "field.Element.Add",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Add(a, b *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Add(a, b *Element) *Element\n```\n\nAdd sets v = a + b, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Subtract",
+                    "documentation": {
+                      "identifier": "Element.Subtract",
+                      "newPage": false,
+                      "searchKey": "field.Element.Subtract",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Subtract(a, b *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Subtract(a, b *Element) *Element\n```\n\nSubtract sets v = a - b, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Negate",
+                    "documentation": {
+                      "identifier": "Element.Negate",
+                      "newPage": false,
+                      "searchKey": "field.Element.Negate",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Negate(a *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Negate(a *Element) *Element\n```\n\nNegate sets v = -a, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Invert",
+                    "documentation": {
+                      "identifier": "Element.Invert",
+                      "newPage": false,
+                      "searchKey": "field.Element.Invert",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Invert(z *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Invert(z *Element) *Element\n```\n\nInvert sets v = 1/z mod p, and returns v. \n\nIf z == 0, Invert returns v = 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Set",
+                    "documentation": {
+                      "identifier": "Element.Set",
+                      "newPage": false,
+                      "searchKey": "field.Element.Set",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Set(a *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Set(a *Element) *Element\n```\n\nSet sets v = a, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.SetBytes",
+                    "documentation": {
+                      "identifier": "Element.SetBytes",
+                      "newPage": false,
+                      "searchKey": "field.Element.SetBytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) SetBytes(x []byte) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) SetBytes(x []byte) *Element\n```\n\nSetBytes sets v to x, which must be a 32-byte little-endian encoding. \n\nConsistent with RFC 7748, the most significant bit (the high bit of the last byte) is ignored, and non-canonical values (2^255-19 through 2^255-1) are accepted. Note that this is laxer than specified by RFC 8032. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Bytes",
+                    "documentation": {
+                      "identifier": "Element.Bytes",
+                      "newPage": false,
+                      "searchKey": "field.Element.Bytes",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Bytes() []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Bytes() []byte\n```\n\nBytes returns the canonical 32-byte little-endian encoding of v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.bytes",
+                    "documentation": {
+                      "identifier": "Element.bytes",
+                      "newPage": false,
+                      "searchKey": "field.Element.bytes",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) bytes(out *[32]byte) []byte"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) bytes(out *[32]byte) []byte\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Equal",
+                    "documentation": {
+                      "identifier": "Element.Equal",
+                      "newPage": false,
+                      "searchKey": "field.Element.Equal",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Equal(u *Element) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Equal(u *Element) int\n```\n\nEqual returns 1 if v and u are equal, and 0 otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Select",
+                    "documentation": {
+                      "identifier": "Element.Select",
+                      "newPage": false,
+                      "searchKey": "field.Element.Select",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Select(a, b *Element, cond int) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Select(a, b *Element, cond int) *Element\n```\n\nSelect sets v to a if cond == 1, and to b if cond == 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Swap",
+                    "documentation": {
+                      "identifier": "Element.Swap",
+                      "newPage": false,
+                      "searchKey": "field.Element.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Swap(u *Element, cond int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Swap(u *Element, cond int)\n```\n\nSwap swaps v and u if cond == 1 or leaves them unchanged if cond == 0, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.IsNegative",
+                    "documentation": {
+                      "identifier": "Element.IsNegative",
+                      "newPage": false,
+                      "searchKey": "field.Element.IsNegative",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) IsNegative() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) IsNegative() int\n```\n\nIsNegative returns 1 if v is negative, and 0 otherwise. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Absolute",
+                    "documentation": {
+                      "identifier": "Element.Absolute",
+                      "newPage": false,
+                      "searchKey": "field.Element.Absolute",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Absolute(u *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Absolute(u *Element) *Element\n```\n\nAbsolute sets v to |u|, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Multiply",
+                    "documentation": {
+                      "identifier": "Element.Multiply",
+                      "newPage": false,
+                      "searchKey": "field.Element.Multiply",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Multiply(x, y *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Multiply(x, y *Element) *Element\n```\n\nMultiply sets v = x * y, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Square",
+                    "documentation": {
+                      "identifier": "Element.Square",
+                      "newPage": false,
+                      "searchKey": "field.Element.Square",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Square(x *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Square(x *Element) *Element\n```\n\nSquare sets v = x * x, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Mult32",
+                    "documentation": {
+                      "identifier": "Element.Mult32",
+                      "newPage": false,
+                      "searchKey": "field.Element.Mult32",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Mult32(x *Element, y uint32) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Mult32(x *Element, y uint32) *Element\n```\n\nMult32 sets v = x * y, and returns v. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Pow22523",
+                    "documentation": {
+                      "identifier": "Element.Pow22523",
+                      "newPage": false,
+                      "searchKey": "field.Element.Pow22523",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) Pow22523(x *Element) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) Pow22523(x *Element) *Element\n```\n\nPow22523 set v = x^((p-5)/8), and returns v. (p-5)/8 is 2^252-3. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.SqrtRatio",
+                    "documentation": {
+                      "identifier": "Element.SqrtRatio",
+                      "newPage": false,
+                      "searchKey": "field.Element.SqrtRatio",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Element) SqrtRatio(u, v *Element) (rr *Element, wasSquare int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Element) SqrtRatio(u, v *Element) (rr *Element, wasSquare int)\n```\n\nSqrtRatio sets r to the non-negative square root of the ratio of u and v. \n\nIf u/v is square, SqrtRatio returns r and 1. If u/v is not square, SqrtRatio sets r according to Section 4.3 of draft-irtf-cfrg-ristretto255-decaf448-00, and returns r and 0. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.carryPropagate",
+                    "documentation": {
+                      "identifier": "Element.carryPropagate",
+                      "newPage": false,
+                      "searchKey": "field.Element.carryPropagate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) carryPropagate() *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) carryPropagate() *Element\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.carryPropagateGeneric",
+                    "documentation": {
+                      "identifier": "Element.carryPropagateGeneric",
+                      "newPage": false,
+                      "searchKey": "field.Element.carryPropagateGeneric",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) carryPropagateGeneric() *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) carryPropagateGeneric() *Element\n```\n\ncarryPropagate brings the limbs below 52 bits by applying the reduction identity (a * 2²⁵⁵ + b = a * 19 + b) to the l4 carry. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.String",
+                    "documentation": {
+                      "identifier": "Element.String",
+                      "newPage": false,
+                      "searchKey": "field.Element.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v Element) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v Element) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.Generate",
+                    "documentation": {
+                      "identifier": "Element.Generate",
+                      "newPage": false,
+                      "searchKey": "field.Element.Generate",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (Element) Generate(rand *mathrand.Rand, size int) reflect.Value"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (Element) Generate(rand *mathrand.Rand, size int) reflect.Value\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.fromBig",
+                    "documentation": {
+                      "identifier": "Element.fromBig",
+                      "newPage": false,
+                      "searchKey": "field.Element.fromBig",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) fromBig(n *big.Int) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) fromBig(n *big.Int) *Element\n```\n\nfromBig sets v = n, and returns v. The bit length of n must not exceed 256. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.fromDecimal",
+                    "documentation": {
+                      "identifier": "Element.fromDecimal",
+                      "newPage": false,
+                      "searchKey": "field.Element.fromDecimal",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) fromDecimal(s string) *Element"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) fromDecimal(s string) *Element\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#Element.toBig",
+                    "documentation": {
+                      "identifier": "Element.toBig",
+                      "newPage": false,
+                      "searchKey": "field.Element.toBig",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (v *Element) toBig() *big.Int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (v *Element) toBig() *big.Int\n```\n\ntoBig returns v as a big.Int. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#uint128",
+              "documentation": {
+                "identifier": "uint128",
+                "newPage": false,
+                "searchKey": "field.uint128",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type uint128 struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype uint128 struct {\n\tlo, hi uint64\n}\n```\n\nuint128 holds a 128-bit number as two 64-bit limbs, for use with the bits.Mul64 and bits.Add64 intrinsics. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#mul64",
+                    "documentation": {
+                      "identifier": "mul64",
+                      "newPage": false,
+                      "searchKey": "field.mul64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func mul64(a, b uint64) uint128"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc mul64(a, b uint64) uint128\n```\n\nmul64 returns a * b. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/crypto/ed25519/internal/edwards25519/field#addMul64",
+                    "documentation": {
+                      "identifier": "addMul64",
+                      "newPage": false,
+                      "searchKey": "field.addMul64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func addMul64(v uint128, a, b uint64) uint128"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc addMul64(v uint128, a, b uint64) uint128\n```\n\naddMul64 returns v + a * b. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/crypto/ed25519/internal/edwards25519/field#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#mask64Bits",
+              "documentation": {
+                "identifier": "mask64Bits",
+                "newPage": false,
+                "searchKey": "field.mask64Bits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mask64Bits(cond int) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mask64Bits(cond int) uint64\n```\n\nmask64Bits returns 0xffffffff if cond is 1, and 0 otherwise. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#mul51",
+              "documentation": {
+                "identifier": "mul51",
+                "newPage": false,
+                "searchKey": "field.mul51",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mul51(a uint64, b uint32) (lo uint64, hi uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mul51(a uint64, b uint32) (lo uint64, hi uint64)\n```\n\nmul51 returns lo + hi * 2⁵¹ = a * b. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feMul",
+              "documentation": {
+                "identifier": "feMul",
+                "newPage": false,
+                "searchKey": "field.feMul",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func feMul(out *Element, a *Element, b *Element)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc feMul(out *Element, a *Element, b *Element)\n```\n\nfeMul sets out = a * b. It works like feMulGeneric. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feSquare",
+              "documentation": {
+                "identifier": "feSquare",
+                "newPage": false,
+                "searchKey": "field.feSquare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func feSquare(out *Element, a *Element)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc feSquare(out *Element, a *Element)\n```\n\nfeSquare sets out = a * a. It works like feSquareGeneric. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#shiftRightBy51",
+              "documentation": {
+                "identifier": "shiftRightBy51",
+                "newPage": false,
+                "searchKey": "field.shiftRightBy51",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func shiftRightBy51(a uint128) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc shiftRightBy51(a uint128) uint64\n```\n\nshiftRightBy51 returns a >> 51. a is assumed to be at most 115 bits. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feMulGeneric",
+              "documentation": {
+                "identifier": "feMulGeneric",
+                "newPage": false,
+                "searchKey": "field.feMulGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func feMulGeneric(v, a, b *Element)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc feMulGeneric(v, a, b *Element)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#feSquareGeneric",
+              "documentation": {
+                "identifier": "feSquareGeneric",
+                "newPage": false,
+                "searchKey": "field.feSquareGeneric",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func feSquareGeneric(v, a *Element)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc feSquareGeneric(v, a *Element)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#checkAliasingOneArg",
+              "documentation": {
+                "identifier": "checkAliasingOneArg",
+                "newPage": false,
+                "searchKey": "field.checkAliasingOneArg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkAliasingOneArg(f func(v, x *Element) *Element) func(v, x Element) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkAliasingOneArg(f func(v, x *Element) *Element) func(v, x Element) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#checkAliasingTwoArgs",
+              "documentation": {
+                "identifier": "checkAliasingTwoArgs",
+                "newPage": false,
+                "searchKey": "field.checkAliasingTwoArgs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkAliasingTwoArgs(f func(v, x, y *Element) *Element) func(v, x, y Element) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkAliasingTwoArgs(f func(v, x, y *Element) *Element) func(v, x, y Element) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestAliasing",
+              "documentation": {
+                "identifier": "TestAliasing",
+                "newPage": false,
+                "searchKey": "field.TestAliasing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAliasing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAliasing(t *testing.T)\n```\n\nTestAliasing checks that receivers and arguments can alias each other without leading to incorrect results. That is, it ensures that it's safe to write \n\n```\nv.Invert(v)\n\n```\nor \n\n```\nv.Add(v, v)\n\n```\nwithout any of the inputs getting clobbered by the output being written. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#BenchmarkAdd",
+              "documentation": {
+                "identifier": "BenchmarkAdd",
+                "newPage": false,
+                "searchKey": "field.BenchmarkAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAdd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAdd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#BenchmarkMultiply",
+              "documentation": {
+                "identifier": "BenchmarkMultiply",
+                "newPage": false,
+                "searchKey": "field.BenchmarkMultiply",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMultiply(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMultiply(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#BenchmarkMult32",
+              "documentation": {
+                "identifier": "BenchmarkMult32",
+                "newPage": false,
+                "searchKey": "field.BenchmarkMult32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMult32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMult32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#isInBounds",
+              "documentation": {
+                "identifier": "isInBounds",
+                "newPage": false,
+                "searchKey": "field.isInBounds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isInBounds(x *Element) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isInBounds(x *Element) bool\n```\n\nisInBounds returns whether the element is within the expected bit size bounds after a light reduction. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestMultiplyDistributesOverAdd",
+              "documentation": {
+                "identifier": "TestMultiplyDistributesOverAdd",
+                "newPage": false,
+                "searchKey": "field.TestMultiplyDistributesOverAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMultiplyDistributesOverAdd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMultiplyDistributesOverAdd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestMul64to128",
+              "documentation": {
+                "identifier": "TestMul64to128",
+                "newPage": false,
+                "searchKey": "field.TestMul64to128",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMul64to128(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMul64to128(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestSetBytesRoundTrip",
+              "documentation": {
+                "identifier": "TestSetBytesRoundTrip",
+                "newPage": false,
+                "searchKey": "field.TestSetBytesRoundTrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetBytesRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetBytesRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#swapEndianness",
+              "documentation": {
+                "identifier": "swapEndianness",
+                "newPage": false,
+                "searchKey": "field.swapEndianness",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func swapEndianness(buf []byte) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc swapEndianness(buf []byte) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestBytesBigEquivalence",
+              "documentation": {
+                "identifier": "TestBytesBigEquivalence",
+                "newPage": false,
+                "searchKey": "field.TestBytesBigEquivalence",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBytesBigEquivalence(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBytesBigEquivalence(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestDecimalConstants",
+              "documentation": {
+                "identifier": "TestDecimalConstants",
+                "newPage": false,
+                "searchKey": "field.TestDecimalConstants",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecimalConstants(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecimalConstants(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestSetBytesRoundTripEdgeCases",
+              "documentation": {
+                "identifier": "TestSetBytesRoundTripEdgeCases",
+                "newPage": false,
+                "searchKey": "field.TestSetBytesRoundTripEdgeCases",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetBytesRoundTripEdgeCases(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetBytesRoundTripEdgeCases(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestConsistency",
+              "documentation": {
+                "identifier": "TestConsistency",
+                "newPage": false,
+                "searchKey": "field.TestConsistency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsistency(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsistency(t *testing.T)\n```\n\nTests self-consistency between Multiply and Square. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestEqual",
+              "documentation": {
+                "identifier": "TestEqual",
+                "newPage": false,
+                "searchKey": "field.TestEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEqual(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEqual(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestInvert",
+              "documentation": {
+                "identifier": "TestInvert",
+                "newPage": false,
+                "searchKey": "field.TestInvert",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvert(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvert(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestSelectSwap",
+              "documentation": {
+                "identifier": "TestSelectSwap",
+                "newPage": false,
+                "searchKey": "field.TestSelectSwap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSelectSwap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSelectSwap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestMult32",
+              "documentation": {
+                "identifier": "TestMult32",
+                "newPage": false,
+                "searchKey": "field.TestMult32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMult32(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMult32(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestSqrtRatio",
+              "documentation": {
+                "identifier": "TestSqrtRatio",
+                "newPage": false,
+                "searchKey": "field.TestSqrtRatio",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSqrtRatio(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSqrtRatio(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestCarryPropagate",
+              "documentation": {
+                "identifier": "TestCarryPropagate",
+                "newPage": false,
+                "searchKey": "field.TestCarryPropagate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCarryPropagate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCarryPropagate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestFeSquare",
+              "documentation": {
+                "identifier": "TestFeSquare",
+                "newPage": false,
+                "searchKey": "field.TestFeSquare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFeSquare(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFeSquare(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#TestFeMul",
+              "documentation": {
+                "identifier": "TestFeMul",
+                "newPage": false,
+                "searchKey": "field.TestFeMul",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFeMul(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFeMul(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/ed25519/internal/edwards25519/field#decodeHex",
+              "documentation": {
+                "identifier": "decodeHex",
+                "newPage": false,
+                "searchKey": "field.decodeHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func decodeHex(s string) []byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc decodeHex(s string) []byte\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

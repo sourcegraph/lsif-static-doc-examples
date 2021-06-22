@@ -1,0 +1,42 @@
+{
+  "pathID": "/debug",
+  "documentation": {
+    "identifier": "debug",
+    "newPage": true,
+    "searchKey": "",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": ""
+  },
+  "detail": {
+    "kind": "plaintext",
+    "value": ""
+  },
+  "children": [
+    {
+      "pathID": "/debug/dwarf"
+    },
+    {
+      "pathID": "/debug/dwarf_test"
+    },
+    {
+      "pathID": "/debug/elf"
+    },
+    {
+      "pathID": "/debug/gosym"
+    },
+    {
+      "pathID": "/debug/macho"
+    },
+    {
+      "pathID": "/debug/pe"
+    },
+    {
+      "pathID": "/debug/plan9obj"
+    }
+  ]
+}

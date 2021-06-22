@@ -1,0 +1,643 @@
+{
+  "pathID": "/html",
+  "documentation": {
+    "identifier": "html",
+    "newPage": true,
+    "searchKey": "html",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package html"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package html provides functions for escaping and unescaping HTML text. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/html#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/html#longestEntityWithoutSemicolon",
+              "documentation": {
+                "identifier": "longestEntityWithoutSemicolon",
+                "newPage": false,
+                "searchKey": "html.longestEntityWithoutSemicolon",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const longestEntityWithoutSemicolon"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst longestEntityWithoutSemicolon = 6\n```\n\nAll entities that do not end with ';' are 6 or fewer bytes long. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/html#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/html#entity",
+              "documentation": {
+                "identifier": "entity",
+                "newPage": false,
+                "searchKey": "html.entity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var entity"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar entity map[string]rune\n```\n\nentity is a map from HTML entity names to their values. The semicolon matters: [https://html.spec.whatwg.org/multipage/named-characters.html](https://html.spec.whatwg.org/multipage/named-characters.html) lists both \"amp\" and \"amp;\" as two separate entries. \n\nNote that the HTML5 list is larger than the HTML4 list at [http://www.w3.org/TR/html4/sgml/entities.html](http://www.w3.org/TR/html4/sgml/entities.html) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#entity2",
+              "documentation": {
+                "identifier": "entity2",
+                "newPage": false,
+                "searchKey": "html.entity2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var entity2"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar entity2 map[string][2]rune\n```\n\nHTML entities that are two unicode codepoints. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#populateMapsOnce",
+              "documentation": {
+                "identifier": "populateMapsOnce",
+                "newPage": false,
+                "searchKey": "html.populateMapsOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var populateMapsOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar populateMapsOnce sync.Once\n```\n\npopulateMapsOnce guards calling populateMaps. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#replacementTable",
+              "documentation": {
+                "identifier": "replacementTable",
+                "newPage": false,
+                "searchKey": "html.replacementTable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var replacementTable"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar replacementTable = ...\n```\n\nThese replacements permit compatibility with old numeric entities that assumed Windows-1252 encoding. [https://html.spec.whatwg.org/multipage/parsing.html#numeric-character-reference-end-state](https://html.spec.whatwg.org/multipage/parsing.html#numeric-character-reference-end-state) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#htmlEscaper",
+              "documentation": {
+                "identifier": "htmlEscaper",
+                "newPage": false,
+                "searchKey": "html.htmlEscaper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var htmlEscaper"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar htmlEscaper = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#unescapeTests",
+              "documentation": {
+                "identifier": "unescapeTests",
+                "newPage": false,
+                "searchKey": "html.unescapeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var unescapeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar unescapeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#benchEscapeData",
+              "documentation": {
+                "identifier": "benchEscapeData",
+                "newPage": false,
+                "searchKey": "html.benchEscapeData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchEscapeData"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchEscapeData = strings.Repeat(\"AAAAA < BBBBB > CCCCC & DDDDD ' EEEEE \\\" \", 100)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#benchEscapeNone",
+              "documentation": {
+                "identifier": "benchEscapeNone",
+                "newPage": false,
+                "searchKey": "html.benchEscapeNone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchEscapeNone"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchEscapeNone = strings.Repeat(\"AAAAA x BBBBB x CCCCC x DDDDD x EEEEE x \", 100)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#benchUnescapeSparse",
+              "documentation": {
+                "identifier": "benchUnescapeSparse",
+                "newPage": false,
+                "searchKey": "html.benchUnescapeSparse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchUnescapeSparse"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchUnescapeSparse = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#benchUnescapeDense",
+              "documentation": {
+                "identifier": "benchUnescapeDense",
+                "newPage": false,
+                "searchKey": "html.benchUnescapeDense",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var benchUnescapeDense"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar benchUnescapeDense = strings.Repeat(\"&amp;&lt; &amp; &lt;\", 100)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/html#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/html#unescapeTest",
+              "documentation": {
+                "identifier": "unescapeTest",
+                "newPage": false,
+                "searchKey": "html.unescapeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type unescapeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype unescapeTest struct {\n\t// A short description of the test case.\n\tdesc string\n\t// The HTML text.\n\thtml string\n\t// The unescaped text.\n\tunescaped string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/html#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/html#populateMaps",
+              "documentation": {
+                "identifier": "populateMaps",
+                "newPage": false,
+                "searchKey": "html.populateMaps",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func populateMaps()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc populateMaps()\n```\n\npopulateMaps populates entity and entity2. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#unescapeEntity",
+              "documentation": {
+                "identifier": "unescapeEntity",
+                "newPage": false,
+                "searchKey": "html.unescapeEntity",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func unescapeEntity(b []byte, dst, src int) (dst1, src1 int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc unescapeEntity(b []byte, dst, src int) (dst1, src1 int)\n```\n\nunescapeEntity reads an entity like \"&lt;\" from b[src:] and writes the corresponding \"<\" to b[dst:], returning the incremented dst and src cursors. Precondition: b[src] == '&' && dst <= src. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#EscapeString",
+              "documentation": {
+                "identifier": "EscapeString",
+                "newPage": false,
+                "searchKey": "html.EscapeString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func EscapeString(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc EscapeString(s string) string\n```\n\nEscapeString escapes special characters like \"<\" to become \"&lt;\". It escapes only five such characters: <, >, &, ' and \". UnescapeString(EscapeString(s)) == s always holds, but the converse isn't always true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#UnescapeString",
+              "documentation": {
+                "identifier": "UnescapeString",
+                "newPage": false,
+                "searchKey": "html.UnescapeString",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func UnescapeString(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc UnescapeString(s string) string\n```\n\nUnescapeString unescapes entities like \"&lt;\" to become \"<\". It unescapes a larger range of entities than EscapeString escapes. For example, \"&aacute;\" unescapes to \"á\", as does \"&#225;\" and \"&#xE1;\". UnescapeString(EscapeString(s)) == s always holds, but the converse isn't always true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "html.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#TestEntityLength",
+              "documentation": {
+                "identifier": "TestEntityLength",
+                "newPage": false,
+                "searchKey": "html.TestEntityLength",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEntityLength(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEntityLength(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#TestUnescape",
+              "documentation": {
+                "identifier": "TestUnescape",
+                "newPage": false,
+                "searchKey": "html.TestUnescape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnescape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnescape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#TestUnescapeEscape",
+              "documentation": {
+                "identifier": "TestUnescapeEscape",
+                "newPage": false,
+                "searchKey": "html.TestUnescapeEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnescapeEscape(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnescapeEscape(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkEscape",
+              "documentation": {
+                "identifier": "BenchmarkEscape",
+                "newPage": false,
+                "searchKey": "html.BenchmarkEscape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEscape(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEscape(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkEscapeNone",
+              "documentation": {
+                "identifier": "BenchmarkEscapeNone",
+                "newPage": false,
+                "searchKey": "html.BenchmarkEscapeNone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEscapeNone(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEscapeNone(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkUnescape",
+              "documentation": {
+                "identifier": "BenchmarkUnescape",
+                "newPage": false,
+                "searchKey": "html.BenchmarkUnescape",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkUnescape(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkUnescape(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkUnescapeNone",
+              "documentation": {
+                "identifier": "BenchmarkUnescapeNone",
+                "newPage": false,
+                "searchKey": "html.BenchmarkUnescapeNone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkUnescapeNone(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkUnescapeNone(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkUnescapeSparse",
+              "documentation": {
+                "identifier": "BenchmarkUnescapeSparse",
+                "newPage": false,
+                "searchKey": "html.BenchmarkUnescapeSparse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkUnescapeSparse(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkUnescapeSparse(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/html#BenchmarkUnescapeDense",
+              "documentation": {
+                "identifier": "BenchmarkUnescapeDense",
+                "newPage": false,
+                "searchKey": "html.BenchmarkUnescapeDense",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkUnescapeDense(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkUnescapeDense(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/html/template"
+    },
+    {
+      "pathID": "/html/template_test"
+    }
+  ]
+}

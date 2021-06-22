@@ -1,0 +1,3653 @@
+{
+  "pathID": "/net/rpc",
+  "documentation": {
+    "identifier": "rpc",
+    "newPage": true,
+    "searchKey": "net/rpc",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package rpc"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package rpc provides access to the exported methods of an object across a network or other I/O connection.  A server registers an object, making it visible as a service with the name of the type of the object.  After registration, exported methods of the object will be accessible remotely.  A server may register multiple objects (services) of different types but it is an error to register multiple objects of the same type. \n\nOnly methods that satisfy these criteria will be made available for remote access; other methods will be ignored: \n\n```\n- the method's type is exported.\n- the method is exported.\n- the method has two arguments, both exported (or builtin) types.\n- the method's second argument is a pointer.\n- the method has return type error.\n\n```\nIn effect, the method must look schematically like \n\n```\nfunc (t *T) MethodName(argType T1, replyType *T2) error\n\n```\nwhere T1 and T2 can be marshaled by encoding/gob. These requirements apply even if a different codec is used. (In the future, these requirements may soften for custom codecs.) \n\nThe method's first argument represents the arguments provided by the caller; the second argument represents the result parameters to be returned to the caller. The method's return value, if non-nil, is passed back as a string that the client sees as if created by errors.New.  If an error is returned, the reply parameter will not be sent back to the client. \n\nThe server may handle requests on a single connection by calling ServeConn.  More typically it will create a network listener and call Accept or, for an HTTP listener, HandleHTTP and http.Serve. \n\nA client wishing to use the service establishes a connection and then invokes NewClient on the connection.  The convenience function Dial (DialHTTP) performs both steps for a raw network connection (an HTTP connection).  The resulting Client object has two methods, Call and Go, that specify the service and method to call, a pointer containing the arguments, and a pointer to receive the result parameters. \n\nThe Call method waits for the remote call to complete while the Go method launches the call asynchronously and signals completion using the Call structure's Done channel. \n\nUnless an explicit codec is set up, package encoding/gob is used to transport the data. \n\nHere is a simple example.  A server wishes to export an object of type Arith: \n\n```\npackage server\n\nimport \"errors\"\n\ntype Args struct {\n\tA, B int\n}\n\ntype Quotient struct {\n\tQuo, Rem int\n}\n\ntype Arith int\n\nfunc (t *Arith) Multiply(args *Args, reply *int) error {\n\t*reply = args.A * args.B\n\treturn nil\n}\n\nfunc (t *Arith) Divide(args *Args, quo *Quotient) error {\n\tif args.B == 0 {\n\t\treturn errors.New(\"divide by zero\")\n\t}\n\tquo.Quo = args.A / args.B\n\tquo.Rem = args.A % args.B\n\treturn nil\n}\n\n```\nThe server calls (for HTTP service): \n\n```\narith := new(Arith)\nrpc.Register(arith)\nrpc.HandleHTTP()\nl, e := net.Listen(\"tcp\", \":1234\")\nif e != nil {\n\tlog.Fatal(\"listen error:\", e)\n}\ngo http.Serve(l, nil)\n\n```\nAt this point, clients can see a service \"Arith\" with methods \"Arith.Multiply\" and \"Arith.Divide\".  To invoke one, a client first dials the server: \n\n```\nclient, err := rpc.DialHTTP(\"tcp\", serverAddress + \":1234\")\nif err != nil {\n\tlog.Fatal(\"dialing:\", err)\n}\n\n```\nThen it can make a remote call: \n\n```\n// Synchronous call\nargs := &server.Args{7,8}\nvar reply int\nerr = client.Call(\"Arith.Multiply\", args, &reply)\nif err != nil {\n\tlog.Fatal(\"arith error:\", err)\n}\nfmt.Printf(\"Arith: %d*%d=%d\", args.A, args.B, reply)\n\n```\nor \n\n```\n// Asynchronous call\nquotient := new(Quotient)\ndivCall := client.Go(\"Arith.Divide\", args, quotient, nil)\nreplyCall := <-divCall.Done\t// will be equal to divCall\n// check errors, print, etc.\n\n```\nA server implementation will often provide a simple, type-safe wrapper for the client. \n\nThe net/rpc package is frozen and is not accepting new features. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/rpc#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/rpc#debugText",
+              "documentation": {
+                "identifier": "debugText",
+                "newPage": false,
+                "searchKey": "rpc.debugText",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const debugText"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst debugText = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#DefaultRPCPath",
+              "documentation": {
+                "identifier": "DefaultRPCPath",
+                "newPage": false,
+                "searchKey": "rpc.DefaultRPCPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultRPCPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultRPCPath = \"/_goRPC_\"\n```\n\nDefaults used by HandleHTTP \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#DefaultDebugPath",
+              "documentation": {
+                "identifier": "DefaultDebugPath",
+                "newPage": false,
+                "searchKey": "rpc.DefaultDebugPath",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const DefaultDebugPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst DefaultDebugPath = \"/debug/rpc\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#newHttpPath",
+              "documentation": {
+                "identifier": "newHttpPath",
+                "newPage": false,
+                "searchKey": "rpc.newHttpPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const newHttpPath"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst newHttpPath = \"/foo\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/rpc#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/rpc#ErrShutdown",
+              "documentation": {
+                "identifier": "ErrShutdown",
+                "newPage": false,
+                "searchKey": "rpc.ErrShutdown",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var ErrShutdown"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar ErrShutdown = errors.New(\"connection is shut down\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#debug",
+              "documentation": {
+                "identifier": "debug",
+                "newPage": false,
+                "searchKey": "rpc.debug",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var debug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar debug = template.Must(template.New(\"RPC debug\").Parse(debugText))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#debugLog",
+              "documentation": {
+                "identifier": "debugLog",
+                "newPage": false,
+                "searchKey": "rpc.debugLog",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var debugLog"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar debugLog = false\n```\n\nIf set, print log statements for internal and I/O errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#typeOfError",
+              "documentation": {
+                "identifier": "typeOfError",
+                "newPage": false,
+                "searchKey": "rpc.typeOfError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var typeOfError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar typeOfError = reflect.TypeOf((*error)(nil)).Elem()\n```\n\nPrecompute the reflect type for error. Can't use error directly because Typeof takes an empty interface value. This is annoying. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#DefaultServer",
+              "documentation": {
+                "identifier": "DefaultServer",
+                "newPage": false,
+                "searchKey": "rpc.DefaultServer",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var DefaultServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar DefaultServer = NewServer()\n```\n\nDefaultServer is the default instance of *Server. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#invalidRequest",
+              "documentation": {
+                "identifier": "invalidRequest",
+                "newPage": false,
+                "searchKey": "rpc.invalidRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var invalidRequest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar invalidRequest = struct{}{}\n```\n\nA value sent as a placeholder for the server's response value when the server receives an invalid request. It is never decoded by the client since the Response contains an error when it is used. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#connected",
+              "documentation": {
+                "identifier": "connected",
+                "newPage": false,
+                "searchKey": "rpc.connected",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var connected"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar connected = \"200 Connected to Go RPC\"\n```\n\nCan connect to RPC service using HTTP CONNECT to rpcPath. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#newServer",
+              "documentation": {
+                "identifier": "newServer",
+                "newPage": false,
+                "searchKey": "rpc.newServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newServer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar newServer *Server\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#serverAddr",
+              "documentation": {
+                "identifier": "serverAddr",
+                "newPage": false,
+                "searchKey": "rpc.serverAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var serverAddr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serverAddr, newServerAddr string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#newServerAddr",
+              "documentation": {
+                "identifier": "newServerAddr",
+                "newPage": false,
+                "searchKey": "rpc.newServerAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newServerAddr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar serverAddr, newServerAddr string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#httpServerAddr",
+              "documentation": {
+                "identifier": "httpServerAddr",
+                "newPage": false,
+                "searchKey": "rpc.httpServerAddr",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var httpServerAddr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar httpServerAddr string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#once",
+              "documentation": {
+                "identifier": "once",
+                "newPage": false,
+                "searchKey": "rpc.once",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var once"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once, newOnce, httpOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#newOnce",
+              "documentation": {
+                "identifier": "newOnce",
+                "newPage": false,
+                "searchKey": "rpc.newOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var newOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once, newOnce, httpOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#httpOnce",
+              "documentation": {
+                "identifier": "httpOnce",
+                "newPage": false,
+                "searchKey": "rpc.httpOnce",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var httpOnce"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar once, newOnce, httpOnce sync.Once\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/rpc#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/rpc#ServerError",
+              "documentation": {
+                "identifier": "ServerError",
+                "newPage": false,
+                "searchKey": "rpc.ServerError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ServerError string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ServerError string\n```\n\nServerError represents an error that has been returned from the remote side of the RPC connection. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#ServerError.Error",
+                    "documentation": {
+                      "identifier": "ServerError.Error",
+                      "newPage": false,
+                      "searchKey": "rpc.ServerError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e ServerError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e ServerError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Call",
+              "documentation": {
+                "identifier": "Call",
+                "newPage": false,
+                "searchKey": "rpc.Call",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Call struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Call struct {\n\tServiceMethod string      // The name of the service and method to call.\n\tArgs          interface{} // The argument to the function (*struct).\n\tReply         interface{} // The reply from the function (*struct).\n\tError         error       // After completion, the error status.\n\tDone          chan *Call  // Receives *Call when Go is complete.\n}\n```\n\nCall represents an active RPC. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Call.done",
+                    "documentation": {
+                      "identifier": "Call.done",
+                      "newPage": false,
+                      "searchKey": "rpc.Call.done",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (call *Call) done()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (call *Call) done()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Client",
+              "documentation": {
+                "identifier": "Client",
+                "newPage": false,
+                "searchKey": "rpc.Client",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Client struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Client struct {\n\tcodec ClientCodec\n\n\treqMutex sync.Mutex // protects following\n\trequest  Request\n\n\tmutex    sync.Mutex // protects following\n\tseq      uint64\n\tpending  map[uint64]*Call\n\tclosing  bool // user has called Close\n\tshutdown bool // server has told us to stop\n}\n```\n\nClient represents an RPC Client. There may be multiple outstanding Calls associated with a single Client, and a Client may be used by multiple goroutines simultaneously. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#NewClient",
+                    "documentation": {
+                      "identifier": "NewClient",
+                      "newPage": false,
+                      "searchKey": "rpc.NewClient",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClient(conn io.ReadWriteCloser) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClient(conn io.ReadWriteCloser) *Client\n```\n\nNewClient returns a new Client to handle requests to the set of services at the other end of the connection. It adds a buffer to the write side of the connection so the header and payload are sent as a unit. \n\nThe read and write halves of the connection are serialized independently, so no interlocking is required. However each half may be accessed concurrently so the implementation of conn should protect against concurrent reads or concurrent writes. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#NewClientWithCodec",
+                    "documentation": {
+                      "identifier": "NewClientWithCodec",
+                      "newPage": false,
+                      "searchKey": "rpc.NewClientWithCodec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewClientWithCodec(codec ClientCodec) *Client"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewClientWithCodec(codec ClientCodec) *Client\n```\n\nNewClientWithCodec is like NewClient but uses the specified codec to encode requests and decode responses. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#DialHTTP",
+                    "documentation": {
+                      "identifier": "DialHTTP",
+                      "newPage": false,
+                      "searchKey": "rpc.DialHTTP",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DialHTTP(network, address string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DialHTTP(network, address string) (*Client, error)\n```\n\nDialHTTP connects to an HTTP RPC server at the specified network address listening on the default HTTP RPC path. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#DialHTTPPath",
+                    "documentation": {
+                      "identifier": "DialHTTPPath",
+                      "newPage": false,
+                      "searchKey": "rpc.DialHTTPPath",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func DialHTTPPath(network, address, path string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc DialHTTPPath(network, address, path string) (*Client, error)\n```\n\nDialHTTPPath connects to an HTTP RPC server at the specified network address and path. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Dial",
+                    "documentation": {
+                      "identifier": "Dial",
+                      "newPage": false,
+                      "searchKey": "rpc.Dial",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Dial(network, address string) (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Dial(network, address string) (*Client, error)\n```\n\nDial connects to an RPC server at the specified network address. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#dialDirect",
+                    "documentation": {
+                      "identifier": "dialDirect",
+                      "newPage": false,
+                      "searchKey": "rpc.dialDirect",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func dialDirect() (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc dialDirect() (*Client, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#dialHTTP",
+                    "documentation": {
+                      "identifier": "dialHTTP",
+                      "newPage": false,
+                      "searchKey": "rpc.dialHTTP",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func dialHTTP() (*Client, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc dialHTTP() (*Client, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Client.send",
+                    "documentation": {
+                      "identifier": "Client.send",
+                      "newPage": false,
+                      "searchKey": "rpc.Client.send",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (client *Client) send(call *Call)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (client *Client) send(call *Call)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Client.input",
+                    "documentation": {
+                      "identifier": "Client.input",
+                      "newPage": false,
+                      "searchKey": "rpc.Client.input",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (client *Client) input()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (client *Client) input()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Client.Close",
+                    "documentation": {
+                      "identifier": "Client.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.Client.Close",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (client *Client) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (client *Client) Close() error\n```\n\nClose calls the underlying codec's Close method. If the connection is already shutting down, ErrShutdown is returned. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Client.Go",
+                    "documentation": {
+                      "identifier": "Client.Go",
+                      "newPage": false,
+                      "searchKey": "rpc.Client.Go",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (client *Client) Go(serviceMethod string, args interface{}, reply interface{}, done chan *Call) *Call"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (client *Client) Go(serviceMethod string, args interface{}, reply interface{}, done chan *Call) *Call\n```\n\nGo invokes the function asynchronously. It returns the Call structure representing the invocation. The done channel will signal when the call is complete by returning the same Call object. If done is nil, Go will allocate a new channel. If non-nil, done must be buffered or Go will deliberately crash. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Client.Call",
+                    "documentation": {
+                      "identifier": "Client.Call",
+                      "newPage": false,
+                      "searchKey": "rpc.Client.Call",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (client *Client) Call(serviceMethod string, args interface{}, reply interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (client *Client) Call(serviceMethod string, args interface{}, reply interface{}) error\n```\n\nCall invokes the named function, waits for it to complete, and returns its error status. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ClientCodec",
+              "documentation": {
+                "identifier": "ClientCodec",
+                "newPage": false,
+                "searchKey": "rpc.ClientCodec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ClientCodec interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ClientCodec interface {\n\tWriteRequest(*Request, interface{}) error\n\tReadResponseHeader(*Response) error\n\tReadResponseBody(interface{}) error\n\n\tClose() error\n}\n```\n\nA ClientCodec implements writing of RPC requests and reading of RPC responses for the client side of an RPC session. The client calls WriteRequest to write a request to the connection and calls ReadResponseHeader and ReadResponseBody in pairs to read responses. The client calls Close when finished with the connection. ReadResponseBody may be called with a nil argument to force the body of the response to be read and then discarded. See NewClient's comment for information about concurrent access. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#gobClientCodec",
+              "documentation": {
+                "identifier": "gobClientCodec",
+                "newPage": false,
+                "searchKey": "rpc.gobClientCodec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gobClientCodec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gobClientCodec struct {\n\trwc    io.ReadWriteCloser\n\tdec    *gob.Decoder\n\tenc    *gob.Encoder\n\tencBuf *bufio.Writer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobClientCodec.WriteRequest",
+                    "documentation": {
+                      "identifier": "gobClientCodec.WriteRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.gobClientCodec.WriteRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobClientCodec) WriteRequest(r *Request, body interface{}) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobClientCodec) WriteRequest(r *Request, body interface{}) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobClientCodec.ReadResponseHeader",
+                    "documentation": {
+                      "identifier": "gobClientCodec.ReadResponseHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.gobClientCodec.ReadResponseHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobClientCodec) ReadResponseHeader(r *Response) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobClientCodec) ReadResponseHeader(r *Response) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobClientCodec.ReadResponseBody",
+                    "documentation": {
+                      "identifier": "gobClientCodec.ReadResponseBody",
+                      "newPage": false,
+                      "searchKey": "rpc.gobClientCodec.ReadResponseBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobClientCodec) ReadResponseBody(body interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobClientCodec) ReadResponseBody(body interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobClientCodec.Close",
+                    "documentation": {
+                      "identifier": "gobClientCodec.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.gobClientCodec.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobClientCodec) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobClientCodec) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#debugMethod",
+              "documentation": {
+                "identifier": "debugMethod",
+                "newPage": false,
+                "searchKey": "rpc.debugMethod",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type debugMethod struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype debugMethod struct {\n\tType *methodType\n\tName string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#methodArray",
+              "documentation": {
+                "identifier": "methodArray",
+                "newPage": false,
+                "searchKey": "rpc.methodArray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type methodArray []rpc.debugMethod"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype methodArray []debugMethod\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#methodArray.Len",
+                    "documentation": {
+                      "identifier": "methodArray.Len",
+                      "newPage": false,
+                      "searchKey": "rpc.methodArray.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m methodArray) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m methodArray) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#methodArray.Less",
+                    "documentation": {
+                      "identifier": "methodArray.Less",
+                      "newPage": false,
+                      "searchKey": "rpc.methodArray.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m methodArray) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m methodArray) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#methodArray.Swap",
+                    "documentation": {
+                      "identifier": "methodArray.Swap",
+                      "newPage": false,
+                      "searchKey": "rpc.methodArray.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m methodArray) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m methodArray) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#debugService",
+              "documentation": {
+                "identifier": "debugService",
+                "newPage": false,
+                "searchKey": "rpc.debugService",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type debugService struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype debugService struct {\n\tService *service\n\tName    string\n\tMethod  methodArray\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#serviceArray",
+              "documentation": {
+                "identifier": "serviceArray",
+                "newPage": false,
+                "searchKey": "rpc.serviceArray",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type serviceArray []rpc.debugService"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype serviceArray []debugService\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#serviceArray.Len",
+                    "documentation": {
+                      "identifier": "serviceArray.Len",
+                      "newPage": false,
+                      "searchKey": "rpc.serviceArray.Len",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s serviceArray) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s serviceArray) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#serviceArray.Less",
+                    "documentation": {
+                      "identifier": "serviceArray.Less",
+                      "newPage": false,
+                      "searchKey": "rpc.serviceArray.Less",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s serviceArray) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s serviceArray) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#serviceArray.Swap",
+                    "documentation": {
+                      "identifier": "serviceArray.Swap",
+                      "newPage": false,
+                      "searchKey": "rpc.serviceArray.Swap",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s serviceArray) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s serviceArray) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#debugHTTP",
+              "documentation": {
+                "identifier": "debugHTTP",
+                "newPage": false,
+                "searchKey": "rpc.debugHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type debugHTTP struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype debugHTTP struct {\n\t*Server\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#debugHTTP.ServeHTTP",
+                    "documentation": {
+                      "identifier": "debugHTTP.ServeHTTP",
+                      "newPage": false,
+                      "searchKey": "rpc.debugHTTP.ServeHTTP",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server debugHTTP) ServeHTTP(w http.ResponseWriter, req *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server debugHTTP) ServeHTTP(w http.ResponseWriter, req *http.Request)\n```\n\nRuns at /debug/rpc \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#methodType",
+              "documentation": {
+                "identifier": "methodType",
+                "newPage": false,
+                "searchKey": "rpc.methodType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type methodType struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype methodType struct {\n\tsync.Mutex // protects counters\n\tmethod     reflect.Method\n\tArgType    reflect.Type\n\tReplyType  reflect.Type\n\tnumCalls   uint\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#methodType.NumCalls",
+                    "documentation": {
+                      "identifier": "methodType.NumCalls",
+                      "newPage": false,
+                      "searchKey": "rpc.methodType.NumCalls",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (m *methodType) NumCalls() (n uint)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (m *methodType) NumCalls() (n uint)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#service",
+              "documentation": {
+                "identifier": "service",
+                "newPage": false,
+                "searchKey": "rpc.service",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type service struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype service struct {\n\tname   string                 // name of service\n\trcvr   reflect.Value          // receiver of methods for the service\n\ttyp    reflect.Type           // type of the receiver\n\tmethod map[string]*methodType // registered methods\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#service.call",
+                    "documentation": {
+                      "identifier": "service.call",
+                      "newPage": false,
+                      "searchKey": "rpc.service.call",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *service) call(server *Server, sending *sync.Mutex, wg *sync.WaitGroup, mtype *methodType, req *Request, argv, replyv reflect.Value, codec ServerCodec)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *service) call(server *Server, sending *sync.Mutex, wg *sync.WaitGroup, mtype *methodType, req *Request, argv, replyv reflect.Value, codec ServerCodec)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Request",
+              "documentation": {
+                "identifier": "Request",
+                "newPage": false,
+                "searchKey": "rpc.Request",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Request struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Request struct {\n\tServiceMethod string   // format: \"Service.Method\"\n\tSeq           uint64   // sequence number chosen by client\n\tnext          *Request // for free list in Server\n}\n```\n\nRequest is a header written before every RPC call. It is used internally but documented here as an aid to debugging, such as when analyzing network traffic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Response",
+              "documentation": {
+                "identifier": "Response",
+                "newPage": false,
+                "searchKey": "rpc.Response",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Response struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Response struct {\n\tServiceMethod string    // echoes that of the Request\n\tSeq           uint64    // echoes that of the request\n\tError         string    // error, if any.\n\tnext          *Response // for free list in Server\n}\n```\n\nResponse is a header written before every RPC return. It is used internally but documented here as an aid to debugging, such as when analyzing network traffic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Server",
+              "documentation": {
+                "identifier": "Server",
+                "newPage": false,
+                "searchKey": "rpc.Server",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Server struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Server struct {\n\tserviceMap sync.Map   // map[string]*service\n\treqLock    sync.Mutex // protects freeReq\n\tfreeReq    *Request\n\trespLock   sync.Mutex // protects freeResp\n\tfreeResp   *Response\n}\n```\n\nServer represents an RPC Server. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#NewServer",
+                    "documentation": {
+                      "identifier": "NewServer",
+                      "newPage": false,
+                      "searchKey": "rpc.NewServer",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewServer() *Server"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewServer() *Server\n```\n\nNewServer returns a new Server. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.Register",
+                    "documentation": {
+                      "identifier": "Server.Register",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.Register",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) Register(rcvr interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) Register(rcvr interface{}) error\n```\n\nRegister publishes in the server the set of methods of the receiver value that satisfy the following conditions: \n\n```\n- exported method of exported type\n- two arguments, both of exported type\n- the second argument is a pointer\n- one return value, of type error\n\n```\nIt returns an error if the receiver is not an exported type or has no suitable methods. It also logs the error using package log. The client accesses each method using a string of the form \"Type.Method\", where Type is the receiver's concrete type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.RegisterName",
+                    "documentation": {
+                      "identifier": "Server.RegisterName",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.RegisterName",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) RegisterName(name string, rcvr interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) RegisterName(name string, rcvr interface{}) error\n```\n\nRegisterName is like Register but uses the provided name for the type instead of the receiver's concrete type. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.register",
+                    "documentation": {
+                      "identifier": "Server.register",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.register",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) register(rcvr interface{}, name string, useName bool) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) register(rcvr interface{}, name string, useName bool) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.sendResponse",
+                    "documentation": {
+                      "identifier": "Server.sendResponse",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.sendResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) sendResponse(sending *sync.Mutex, req *Request, reply interface{}, codec ServerCodec, errmsg string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) sendResponse(sending *sync.Mutex, req *Request, reply interface{}, codec ServerCodec, errmsg string)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.ServeConn",
+                    "documentation": {
+                      "identifier": "Server.ServeConn",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.ServeConn",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) ServeConn(conn io.ReadWriteCloser)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) ServeConn(conn io.ReadWriteCloser)\n```\n\nServeConn runs the server on a single connection. ServeConn blocks, serving the connection until the client hangs up. The caller typically invokes ServeConn in a go statement. ServeConn uses the gob wire format (see package gob) on the connection. To use an alternate codec, use ServeCodec. See NewClient's comment for information about concurrent access. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.ServeCodec",
+                    "documentation": {
+                      "identifier": "Server.ServeCodec",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.ServeCodec",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) ServeCodec(codec ServerCodec)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) ServeCodec(codec ServerCodec)\n```\n\nServeCodec is like ServeConn but uses the specified codec to decode requests and encode responses. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.ServeRequest",
+                    "documentation": {
+                      "identifier": "Server.ServeRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.ServeRequest",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) ServeRequest(codec ServerCodec) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) ServeRequest(codec ServerCodec) error\n```\n\nServeRequest is like ServeCodec but synchronously serves a single request. It does not close the codec upon completion. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.getRequest",
+                    "documentation": {
+                      "identifier": "Server.getRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.getRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) getRequest() *Request"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) getRequest() *Request\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.freeRequest",
+                    "documentation": {
+                      "identifier": "Server.freeRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.freeRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) freeRequest(req *Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) freeRequest(req *Request)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.getResponse",
+                    "documentation": {
+                      "identifier": "Server.getResponse",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.getResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) getResponse() *Response"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) getResponse() *Response\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.freeResponse",
+                    "documentation": {
+                      "identifier": "Server.freeResponse",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.freeResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) freeResponse(resp *Response)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) freeResponse(resp *Response)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.readRequest",
+                    "documentation": {
+                      "identifier": "Server.readRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.readRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) readRequest(codec ServerCodec) (service *service, mtype *methodType, req *Request, argv, replyv reflect.Value, keepReading bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) readRequest(codec ServerCodec) (service *service, mtype *methodType, req *Request, argv, replyv reflect.Value, keepReading bool, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.readRequestHeader",
+                    "documentation": {
+                      "identifier": "Server.readRequestHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.readRequestHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) readRequestHeader(codec ServerCodec) (svc *service, mtype *methodType, req *Request, keepReading bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) readRequestHeader(codec ServerCodec) (svc *service, mtype *methodType, req *Request, keepReading bool, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.Accept",
+                    "documentation": {
+                      "identifier": "Server.Accept",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.Accept",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) Accept(lis net.Listener)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) Accept(lis net.Listener)\n```\n\nAccept accepts connections on the listener and serves requests for each incoming connection. Accept blocks until the listener returns a non-nil error. The caller typically invokes Accept in a go statement. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.ServeHTTP",
+                    "documentation": {
+                      "identifier": "Server.ServeHTTP",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.ServeHTTP",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) ServeHTTP(w http.ResponseWriter, req *http.Request)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) ServeHTTP(w http.ResponseWriter, req *http.Request)\n```\n\nServeHTTP implements an http.Handler that answers RPC requests. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Server.HandleHTTP",
+                    "documentation": {
+                      "identifier": "Server.HandleHTTP",
+                      "newPage": false,
+                      "searchKey": "rpc.Server.HandleHTTP",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (server *Server) HandleHTTP(rpcPath, debugPath string)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (server *Server) HandleHTTP(rpcPath, debugPath string)\n```\n\nHandleHTTP registers an HTTP handler for RPC messages on rpcPath, and a debugging handler on debugPath. It is still necessary to invoke http.Serve(), typically in a go statement. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#gobServerCodec",
+              "documentation": {
+                "identifier": "gobServerCodec",
+                "newPage": false,
+                "searchKey": "rpc.gobServerCodec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type gobServerCodec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype gobServerCodec struct {\n\trwc    io.ReadWriteCloser\n\tdec    *gob.Decoder\n\tenc    *gob.Encoder\n\tencBuf *bufio.Writer\n\tclosed bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobServerCodec.ReadRequestHeader",
+                    "documentation": {
+                      "identifier": "gobServerCodec.ReadRequestHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.gobServerCodec.ReadRequestHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobServerCodec) ReadRequestHeader(r *Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobServerCodec) ReadRequestHeader(r *Request) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobServerCodec.ReadRequestBody",
+                    "documentation": {
+                      "identifier": "gobServerCodec.ReadRequestBody",
+                      "newPage": false,
+                      "searchKey": "rpc.gobServerCodec.ReadRequestBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobServerCodec) ReadRequestBody(body interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobServerCodec) ReadRequestBody(body interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobServerCodec.WriteResponse",
+                    "documentation": {
+                      "identifier": "gobServerCodec.WriteResponse",
+                      "newPage": false,
+                      "searchKey": "rpc.gobServerCodec.WriteResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobServerCodec) WriteResponse(r *Response, body interface{}) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobServerCodec) WriteResponse(r *Response, body interface{}) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#gobServerCodec.Close",
+                    "documentation": {
+                      "identifier": "gobServerCodec.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.gobServerCodec.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *gobServerCodec) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *gobServerCodec) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ServerCodec",
+              "documentation": {
+                "identifier": "ServerCodec",
+                "newPage": false,
+                "searchKey": "rpc.ServerCodec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ServerCodec interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ServerCodec interface {\n\tReadRequestHeader(*Request) error\n\tReadRequestBody(interface{}) error\n\tWriteResponse(*Response, interface{}) error\n\n\t// Close can be called multiple times and must be idempotent.\n\tClose() error\n}\n```\n\nA ServerCodec implements reading of RPC requests and writing of RPC responses for the server side of an RPC session. The server calls ReadRequestHeader and ReadRequestBody in pairs to read requests from the connection, and it calls WriteResponse to write a response back. The server calls Close when finished with the connection. ReadRequestBody may be called with a nil argument to force the body of the request to be read and discarded. See NewClient's comment for information about concurrent access. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#shutdownCodec",
+              "documentation": {
+                "identifier": "shutdownCodec",
+                "newPage": false,
+                "searchKey": "rpc.shutdownCodec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type shutdownCodec struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype shutdownCodec struct {\n\tresponded chan int\n\tclosed    bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#shutdownCodec.WriteRequest",
+                    "documentation": {
+                      "identifier": "shutdownCodec.WriteRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.shutdownCodec.WriteRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *shutdownCodec) WriteRequest(*Request, interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *shutdownCodec) WriteRequest(*Request, interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#shutdownCodec.ReadResponseBody",
+                    "documentation": {
+                      "identifier": "shutdownCodec.ReadResponseBody",
+                      "newPage": false,
+                      "searchKey": "rpc.shutdownCodec.ReadResponseBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *shutdownCodec) ReadResponseBody(interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *shutdownCodec) ReadResponseBody(interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#shutdownCodec.ReadResponseHeader",
+                    "documentation": {
+                      "identifier": "shutdownCodec.ReadResponseHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.shutdownCodec.ReadResponseHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *shutdownCodec) ReadResponseHeader(*Response) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *shutdownCodec) ReadResponseHeader(*Response) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#shutdownCodec.Close",
+                    "documentation": {
+                      "identifier": "shutdownCodec.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.shutdownCodec.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (c *shutdownCodec) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (c *shutdownCodec) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#R",
+              "documentation": {
+                "identifier": "R",
+                "newPage": false,
+                "searchKey": "rpc.R",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type R struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype R struct {\n\tmsg []byte // Not exported, so R does not work with gob.\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#S",
+              "documentation": {
+                "identifier": "S",
+                "newPage": false,
+                "searchKey": "rpc.S",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type S struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype S struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#S.Recv",
+                    "documentation": {
+                      "identifier": "S.Recv",
+                      "newPage": false,
+                      "searchKey": "rpc.S.Recv",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (s *S) Recv(nul *struct{}, reply *R) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (s *S) Recv(nul *struct{}, reply *R) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Args",
+              "documentation": {
+                "identifier": "Args",
+                "newPage": false,
+                "searchKey": "rpc.Args",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Args struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Args struct {\n\tA, B int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Reply",
+              "documentation": {
+                "identifier": "Reply",
+                "newPage": false,
+                "searchKey": "rpc.Reply",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Reply struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Reply struct {\n\tC int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Arith",
+              "documentation": {
+                "identifier": "Arith",
+                "newPage": false,
+                "searchKey": "rpc.Arith",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Arith int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Arith int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.Add",
+                    "documentation": {
+                      "identifier": "Arith.Add",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.Add",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) Add(args Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) Add(args Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.Mul",
+                    "documentation": {
+                      "identifier": "Arith.Mul",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.Mul",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) Mul(args *Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) Mul(args *Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.Div",
+                    "documentation": {
+                      "identifier": "Arith.Div",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.Div",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) Div(args Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) Div(args Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.String",
+                    "documentation": {
+                      "identifier": "Arith.String",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) String(args *Args, reply *string) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) String(args *Args, reply *string) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.Scan",
+                    "documentation": {
+                      "identifier": "Arith.Scan",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.Scan",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) Scan(args string, reply *Reply) (err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) Scan(args string, reply *Reply) (err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.Error",
+                    "documentation": {
+                      "identifier": "Arith.Error",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.Error",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) Error(args *Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) Error(args *Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#Arith.SleepMilli",
+                    "documentation": {
+                      "identifier": "Arith.SleepMilli",
+                      "newPage": false,
+                      "searchKey": "rpc.Arith.SleepMilli",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *Arith) SleepMilli(args *Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *Arith) SleepMilli(args *Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#hidden",
+              "documentation": {
+                "identifier": "hidden",
+                "newPage": false,
+                "searchKey": "rpc.hidden",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type hidden int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype hidden int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#hidden.Exported",
+                    "documentation": {
+                      "identifier": "hidden.Exported",
+                      "newPage": false,
+                      "searchKey": "rpc.hidden.Exported",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *hidden) Exported(args Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *hidden) Exported(args Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Embed",
+              "documentation": {
+                "identifier": "Embed",
+                "newPage": false,
+                "searchKey": "rpc.Embed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Embed struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Embed struct {\n\thidden\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#BuiltinTypes",
+              "documentation": {
+                "identifier": "BuiltinTypes",
+                "newPage": false,
+                "searchKey": "rpc.BuiltinTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BuiltinTypes struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BuiltinTypes struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#BuiltinTypes.Map",
+                    "documentation": {
+                      "identifier": "BuiltinTypes.Map",
+                      "newPage": false,
+                      "searchKey": "rpc.BuiltinTypes.Map",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (BuiltinTypes) Map(args *Args, reply *map[int]int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (BuiltinTypes) Map(args *Args, reply *map[int]int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#BuiltinTypes.Slice",
+                    "documentation": {
+                      "identifier": "BuiltinTypes.Slice",
+                      "newPage": false,
+                      "searchKey": "rpc.BuiltinTypes.Slice",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (BuiltinTypes) Slice(args *Args, reply *[]int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (BuiltinTypes) Slice(args *Args, reply *[]int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#BuiltinTypes.Array",
+                    "documentation": {
+                      "identifier": "BuiltinTypes.Array",
+                      "newPage": false,
+                      "searchKey": "rpc.BuiltinTypes.Array",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (BuiltinTypes) Array(args *Args, reply *[2]int) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (BuiltinTypes) Array(args *Args, reply *[2]int) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#CodecEmulator",
+              "documentation": {
+                "identifier": "CodecEmulator",
+                "newPage": false,
+                "searchKey": "rpc.CodecEmulator",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CodecEmulator struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CodecEmulator struct {\n\tserver        *Server\n\tserviceMethod string\n\targs          *Args\n\treply         *Reply\n\terr           error\n}\n```\n\nCodecEmulator provides a client-like api and a ServerCodec interface. Can be used to test ServeRequest. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#CodecEmulator.Call",
+                    "documentation": {
+                      "identifier": "CodecEmulator.Call",
+                      "newPage": false,
+                      "searchKey": "rpc.CodecEmulator.Call",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (codec *CodecEmulator) Call(serviceMethod string, args *Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (codec *CodecEmulator) Call(serviceMethod string, args *Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#CodecEmulator.ReadRequestHeader",
+                    "documentation": {
+                      "identifier": "CodecEmulator.ReadRequestHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.CodecEmulator.ReadRequestHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (codec *CodecEmulator) ReadRequestHeader(req *Request) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (codec *CodecEmulator) ReadRequestHeader(req *Request) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#CodecEmulator.ReadRequestBody",
+                    "documentation": {
+                      "identifier": "CodecEmulator.ReadRequestBody",
+                      "newPage": false,
+                      "searchKey": "rpc.CodecEmulator.ReadRequestBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (codec *CodecEmulator) ReadRequestBody(argv interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (codec *CodecEmulator) ReadRequestBody(argv interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#CodecEmulator.WriteResponse",
+                    "documentation": {
+                      "identifier": "CodecEmulator.WriteResponse",
+                      "newPage": false,
+                      "searchKey": "rpc.CodecEmulator.WriteResponse",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (codec *CodecEmulator) WriteResponse(resp *Response, reply interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (codec *CodecEmulator) WriteResponse(resp *Response, reply interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#CodecEmulator.Close",
+                    "documentation": {
+                      "identifier": "CodecEmulator.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.CodecEmulator.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (codec *CodecEmulator) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (codec *CodecEmulator) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ReplyNotPointer",
+              "documentation": {
+                "identifier": "ReplyNotPointer",
+                "newPage": false,
+                "searchKey": "rpc.ReplyNotPointer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReplyNotPointer int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReplyNotPointer int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#ReplyNotPointer.ReplyNotPointer",
+                    "documentation": {
+                      "identifier": "ReplyNotPointer.ReplyNotPointer",
+                      "newPage": false,
+                      "searchKey": "rpc.ReplyNotPointer.ReplyNotPointer",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *ReplyNotPointer) ReplyNotPointer(args *Args, reply Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *ReplyNotPointer) ReplyNotPointer(args *Args, reply Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ArgNotPublic",
+              "documentation": {
+                "identifier": "ArgNotPublic",
+                "newPage": false,
+                "searchKey": "rpc.ArgNotPublic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ArgNotPublic int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ArgNotPublic int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#ArgNotPublic.ArgNotPublic",
+                    "documentation": {
+                      "identifier": "ArgNotPublic.ArgNotPublic",
+                      "newPage": false,
+                      "searchKey": "rpc.ArgNotPublic.ArgNotPublic",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *ArgNotPublic) ArgNotPublic(args *local, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *ArgNotPublic) ArgNotPublic(args *local, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ReplyNotPublic",
+              "documentation": {
+                "identifier": "ReplyNotPublic",
+                "newPage": false,
+                "searchKey": "rpc.ReplyNotPublic",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ReplyNotPublic int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ReplyNotPublic int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#ReplyNotPublic.ReplyNotPublic",
+                    "documentation": {
+                      "identifier": "ReplyNotPublic.ReplyNotPublic",
+                      "newPage": false,
+                      "searchKey": "rpc.ReplyNotPublic.ReplyNotPublic",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *ReplyNotPublic) ReplyNotPublic(args *Args, reply *local) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *ReplyNotPublic) ReplyNotPublic(args *Args, reply *local) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#NeedsPtrType",
+              "documentation": {
+                "identifier": "NeedsPtrType",
+                "newPage": false,
+                "searchKey": "rpc.NeedsPtrType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type NeedsPtrType int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype NeedsPtrType int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#NeedsPtrType.NeedsPtrType",
+                    "documentation": {
+                      "identifier": "NeedsPtrType.NeedsPtrType",
+                      "newPage": false,
+                      "searchKey": "rpc.NeedsPtrType.NeedsPtrType",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (t *NeedsPtrType) NeedsPtrType(args *Args, reply *Reply) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (t *NeedsPtrType) NeedsPtrType(args *Args, reply *Reply) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#local",
+              "documentation": {
+                "identifier": "local",
+                "newPage": false,
+                "searchKey": "rpc.local",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type local struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype local struct{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#WriteFailCodec",
+              "documentation": {
+                "identifier": "WriteFailCodec",
+                "newPage": false,
+                "searchKey": "rpc.WriteFailCodec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type WriteFailCodec int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype WriteFailCodec int\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#WriteFailCodec.WriteRequest",
+                    "documentation": {
+                      "identifier": "WriteFailCodec.WriteRequest",
+                      "newPage": false,
+                      "searchKey": "rpc.WriteFailCodec.WriteRequest",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (WriteFailCodec) WriteRequest(*Request, interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (WriteFailCodec) WriteRequest(*Request, interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#WriteFailCodec.ReadResponseHeader",
+                    "documentation": {
+                      "identifier": "WriteFailCodec.ReadResponseHeader",
+                      "newPage": false,
+                      "searchKey": "rpc.WriteFailCodec.ReadResponseHeader",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (WriteFailCodec) ReadResponseHeader(*Response) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (WriteFailCodec) ReadResponseHeader(*Response) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#WriteFailCodec.ReadResponseBody",
+                    "documentation": {
+                      "identifier": "WriteFailCodec.ReadResponseBody",
+                      "newPage": false,
+                      "searchKey": "rpc.WriteFailCodec.ReadResponseBody",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (WriteFailCodec) ReadResponseBody(interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (WriteFailCodec) ReadResponseBody(interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#WriteFailCodec.Close",
+                    "documentation": {
+                      "identifier": "WriteFailCodec.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.WriteFailCodec.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (WriteFailCodec) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (WriteFailCodec) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#writeCrasher",
+              "documentation": {
+                "identifier": "writeCrasher",
+                "newPage": false,
+                "searchKey": "rpc.writeCrasher",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type writeCrasher struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype writeCrasher struct {\n\tdone chan bool\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/net/rpc#writeCrasher.Close",
+                    "documentation": {
+                      "identifier": "writeCrasher.Close",
+                      "newPage": false,
+                      "searchKey": "rpc.writeCrasher.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (writeCrasher) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (writeCrasher) Close() error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#writeCrasher.Read",
+                    "documentation": {
+                      "identifier": "writeCrasher.Read",
+                      "newPage": false,
+                      "searchKey": "rpc.writeCrasher.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (w *writeCrasher) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (w *writeCrasher) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/net/rpc#writeCrasher.Write",
+                    "documentation": {
+                      "identifier": "writeCrasher.Write",
+                      "newPage": false,
+                      "searchKey": "rpc.writeCrasher.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (writeCrasher) Write(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (writeCrasher) Write(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/net/rpc#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/rpc#isExportedOrBuiltinType",
+              "documentation": {
+                "identifier": "isExportedOrBuiltinType",
+                "newPage": false,
+                "searchKey": "rpc.isExportedOrBuiltinType",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isExportedOrBuiltinType(t reflect.Type) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isExportedOrBuiltinType(t reflect.Type) bool\n```\n\nIs this type exported or a builtin? \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#suitableMethods",
+              "documentation": {
+                "identifier": "suitableMethods",
+                "newPage": false,
+                "searchKey": "rpc.suitableMethods",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func suitableMethods(typ reflect.Type, reportErr bool) map[string]*methodType"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc suitableMethods(typ reflect.Type, reportErr bool) map[string]*methodType\n```\n\nsuitableMethods returns suitable Rpc methods of typ, it will report error using log if reportErr is true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Register",
+              "documentation": {
+                "identifier": "Register",
+                "newPage": false,
+                "searchKey": "rpc.Register",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Register(rcvr interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Register(rcvr interface{}) error\n```\n\nRegister publishes the receiver's methods in the DefaultServer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#RegisterName",
+              "documentation": {
+                "identifier": "RegisterName",
+                "newPage": false,
+                "searchKey": "rpc.RegisterName",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func RegisterName(name string, rcvr interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc RegisterName(name string, rcvr interface{}) error\n```\n\nRegisterName is like Register but uses the provided name for the type instead of the receiver's concrete type. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ServeConn",
+              "documentation": {
+                "identifier": "ServeConn",
+                "newPage": false,
+                "searchKey": "rpc.ServeConn",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ServeConn(conn io.ReadWriteCloser)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ServeConn(conn io.ReadWriteCloser)\n```\n\nServeConn runs the DefaultServer on a single connection. ServeConn blocks, serving the connection until the client hangs up. The caller typically invokes ServeConn in a go statement. ServeConn uses the gob wire format (see package gob) on the connection. To use an alternate codec, use ServeCodec. See NewClient's comment for information about concurrent access. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ServeCodec",
+              "documentation": {
+                "identifier": "ServeCodec",
+                "newPage": false,
+                "searchKey": "rpc.ServeCodec",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ServeCodec(codec ServerCodec)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ServeCodec(codec ServerCodec)\n```\n\nServeCodec is like ServeConn but uses the specified codec to decode requests and encode responses. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#ServeRequest",
+              "documentation": {
+                "identifier": "ServeRequest",
+                "newPage": false,
+                "searchKey": "rpc.ServeRequest",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ServeRequest(codec ServerCodec) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ServeRequest(codec ServerCodec) error\n```\n\nServeRequest is like ServeCodec but synchronously serves a single request. It does not close the codec upon completion. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#Accept",
+              "documentation": {
+                "identifier": "Accept",
+                "newPage": false,
+                "searchKey": "rpc.Accept",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Accept(lis net.Listener)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Accept(lis net.Listener)\n```\n\nAccept accepts connections on the listener and serves requests to DefaultServer for each incoming connection. Accept blocks; the caller typically invokes it in a go statement. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#HandleHTTP",
+              "documentation": {
+                "identifier": "HandleHTTP",
+                "newPage": false,
+                "searchKey": "rpc.HandleHTTP",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func HandleHTTP()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc HandleHTTP()\n```\n\nHandleHTTP registers an HTTP handler for RPC messages to DefaultServer on DefaultRPCPath and a debugging handler on DefaultDebugPath. It is still necessary to invoke http.Serve(), typically in a go statement. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestCloseCodec",
+              "documentation": {
+                "identifier": "TestCloseCodec",
+                "newPage": false,
+                "searchKey": "rpc.TestCloseCodec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCloseCodec(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCloseCodec(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestGobError",
+              "documentation": {
+                "identifier": "TestGobError",
+                "newPage": false,
+                "searchKey": "rpc.TestGobError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGobError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGobError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#listenTCP",
+              "documentation": {
+                "identifier": "listenTCP",
+                "newPage": false,
+                "searchKey": "rpc.listenTCP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func listenTCP() (net.Listener, string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc listenTCP() (net.Listener, string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#startServer",
+              "documentation": {
+                "identifier": "startServer",
+                "newPage": false,
+                "searchKey": "rpc.startServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startServer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startServer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#startNewServer",
+              "documentation": {
+                "identifier": "startNewServer",
+                "newPage": false,
+                "searchKey": "rpc.startNewServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startNewServer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startNewServer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#startHttpServer",
+              "documentation": {
+                "identifier": "startHttpServer",
+                "newPage": false,
+                "searchKey": "rpc.startHttpServer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func startHttpServer()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc startHttpServer()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestRPC",
+              "documentation": {
+                "identifier": "TestRPC",
+                "newPage": false,
+                "searchKey": "rpc.TestRPC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRPC(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRPC(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#testRPC",
+              "documentation": {
+                "identifier": "testRPC",
+                "newPage": false,
+                "searchKey": "rpc.testRPC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testRPC(t *testing.T, addr string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testRPC(t *testing.T, addr string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#testNewServerRPC",
+              "documentation": {
+                "identifier": "testNewServerRPC",
+                "newPage": false,
+                "searchKey": "rpc.testNewServerRPC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testNewServerRPC(t *testing.T, addr string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testNewServerRPC(t *testing.T, addr string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestHTTP",
+              "documentation": {
+                "identifier": "TestHTTP",
+                "newPage": false,
+                "searchKey": "rpc.TestHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHTTP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHTTP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#testHTTPRPC",
+              "documentation": {
+                "identifier": "testHTTPRPC",
+                "newPage": false,
+                "searchKey": "rpc.testHTTPRPC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testHTTPRPC(t *testing.T, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testHTTPRPC(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestBuiltinTypes",
+              "documentation": {
+                "identifier": "TestBuiltinTypes",
+                "newPage": false,
+                "searchKey": "rpc.TestBuiltinTypes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBuiltinTypes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBuiltinTypes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestServeRequest",
+              "documentation": {
+                "identifier": "TestServeRequest",
+                "newPage": false,
+                "searchKey": "rpc.TestServeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestServeRequest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestServeRequest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#testServeRequest",
+              "documentation": {
+                "identifier": "testServeRequest",
+                "newPage": false,
+                "searchKey": "rpc.testServeRequest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testServeRequest(t *testing.T, server *Server)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testServeRequest(t *testing.T, server *Server)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestRegistrationError",
+              "documentation": {
+                "identifier": "TestRegistrationError",
+                "newPage": false,
+                "searchKey": "rpc.TestRegistrationError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRegistrationError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRegistrationError(t *testing.T)\n```\n\nCheck that registration handles lots of bad methods and a type with no suitable methods. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestSendDeadlock",
+              "documentation": {
+                "identifier": "TestSendDeadlock",
+                "newPage": false,
+                "searchKey": "rpc.TestSendDeadlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSendDeadlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSendDeadlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#testSendDeadlock",
+              "documentation": {
+                "identifier": "testSendDeadlock",
+                "newPage": false,
+                "searchKey": "rpc.testSendDeadlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSendDeadlock(client *Client)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSendDeadlock(client *Client)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#countMallocs",
+              "documentation": {
+                "identifier": "countMallocs",
+                "newPage": false,
+                "searchKey": "rpc.countMallocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func countMallocs(dial func() (*Client, error), t *testing.T) float64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc countMallocs(dial func() (*Client, error), t *testing.T) float64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestCountMallocs",
+              "documentation": {
+                "identifier": "TestCountMallocs",
+                "newPage": false,
+                "searchKey": "rpc.TestCountMallocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountMallocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountMallocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestCountMallocsOverHTTP",
+              "documentation": {
+                "identifier": "TestCountMallocsOverHTTP",
+                "newPage": false,
+                "searchKey": "rpc.TestCountMallocsOverHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountMallocsOverHTTP(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountMallocsOverHTTP(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestClientWriteError",
+              "documentation": {
+                "identifier": "TestClientWriteError",
+                "newPage": false,
+                "searchKey": "rpc.TestClientWriteError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClientWriteError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClientWriteError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestTCPClose",
+              "documentation": {
+                "identifier": "TestTCPClose",
+                "newPage": false,
+                "searchKey": "rpc.TestTCPClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTCPClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTCPClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestErrorAfterClientClose",
+              "documentation": {
+                "identifier": "TestErrorAfterClientClose",
+                "newPage": false,
+                "searchKey": "rpc.TestErrorAfterClientClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrorAfterClientClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrorAfterClientClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestAcceptExitAfterListenerClose",
+              "documentation": {
+                "identifier": "TestAcceptExitAfterListenerClose",
+                "newPage": false,
+                "searchKey": "rpc.TestAcceptExitAfterListenerClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAcceptExitAfterListenerClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAcceptExitAfterListenerClose(t *testing.T)\n```\n\nTests the fix to issue 11221. Without the fix, this loops forever or crashes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#TestShutdown",
+              "documentation": {
+                "identifier": "TestShutdown",
+                "newPage": false,
+                "searchKey": "rpc.TestShutdown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestShutdown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestShutdown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#benchmarkEndToEnd",
+              "documentation": {
+                "identifier": "benchmarkEndToEnd",
+                "newPage": false,
+                "searchKey": "rpc.benchmarkEndToEnd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkEndToEnd(dial func() (*Client, error), b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkEndToEnd(dial func() (*Client, error), b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#benchmarkEndToEndAsync",
+              "documentation": {
+                "identifier": "benchmarkEndToEndAsync",
+                "newPage": false,
+                "searchKey": "rpc.benchmarkEndToEndAsync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkEndToEndAsync(dial func() (*Client, error), b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkEndToEndAsync(dial func() (*Client, error), b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#BenchmarkEndToEnd",
+              "documentation": {
+                "identifier": "BenchmarkEndToEnd",
+                "newPage": false,
+                "searchKey": "rpc.BenchmarkEndToEnd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEndToEnd(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEndToEnd(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#BenchmarkEndToEndHTTP",
+              "documentation": {
+                "identifier": "BenchmarkEndToEndHTTP",
+                "newPage": false,
+                "searchKey": "rpc.BenchmarkEndToEndHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEndToEndHTTP(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEndToEndHTTP(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#BenchmarkEndToEndAsync",
+              "documentation": {
+                "identifier": "BenchmarkEndToEndAsync",
+                "newPage": false,
+                "searchKey": "rpc.BenchmarkEndToEndAsync",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEndToEndAsync(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEndToEndAsync(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/rpc#BenchmarkEndToEndAsyncHTTP",
+              "documentation": {
+                "identifier": "BenchmarkEndToEndAsyncHTTP",
+                "newPage": false,
+                "searchKey": "rpc.BenchmarkEndToEndAsyncHTTP",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEndToEndAsyncHTTP(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEndToEndAsyncHTTP(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "pathID": "/net/rpc/jsonrpc"
+    }
+  ]
+}

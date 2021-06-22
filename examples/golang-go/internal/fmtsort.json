@@ -1,0 +1,272 @@
+{
+  "pathID": "/internal/fmtsort",
+  "documentation": {
+    "identifier": "fmtsort",
+    "newPage": true,
+    "searchKey": "internal/fmtsort",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package fmtsort"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package fmtsort provides a general stable ordering mechanism for maps, on behalf of the fmt and text/template packages. It is not guaranteed to be efficient and works only for types that are valid map keys. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/fmtsort#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#SortedMap",
+              "documentation": {
+                "identifier": "SortedMap",
+                "newPage": false,
+                "searchKey": "fmtsort.SortedMap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SortedMap struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SortedMap struct {\n\tKey   []reflect.Value\n\tValue []reflect.Value\n}\n```\n\nSortedMap represents a map's keys and values. The keys and values are aligned in index order: Value[i] is the value in the map corresponding to Key[i]. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/fmtsort#Sort",
+                    "documentation": {
+                      "identifier": "Sort",
+                      "newPage": false,
+                      "searchKey": "fmtsort.Sort",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Sort(mapValue reflect.Value) *SortedMap"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Sort(mapValue reflect.Value) *SortedMap\n```\n\nSort accepts a map and returns a SortedMap that has the same keys and values but in a stable sorted order according to the keys, modulo issues raised by unorderable key values such as NaNs. \n\nThe ordering rules are more general than with Go's < operator: \n\n```\n- when applicable, nil compares low\n- ints, floats, and strings order by <\n- NaN compares less than non-NaN floats\n- bool compares false before true\n- complex compares real, then imag\n- pointers compare by machine address\n- channel values compare by machine address\n- structs compare each field in turn\n- arrays compare each element in turn.\n  Otherwise identical arrays compare by length.\n- interface values compare first by reflect.Type describing the concrete type\n  and then by concrete value as described in the previous rules.\n\n```\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/fmtsort#SortedMap.Len",
+                    "documentation": {
+                      "identifier": "SortedMap.Len",
+                      "newPage": false,
+                      "searchKey": "fmtsort.SortedMap.Len",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *SortedMap) Len() int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *SortedMap) Len() int\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/fmtsort#SortedMap.Less",
+                    "documentation": {
+                      "identifier": "SortedMap.Less",
+                      "newPage": false,
+                      "searchKey": "fmtsort.SortedMap.Less",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *SortedMap) Less(i, j int) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *SortedMap) Less(i, j int) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/fmtsort#SortedMap.Swap",
+                    "documentation": {
+                      "identifier": "SortedMap.Swap",
+                      "newPage": false,
+                      "searchKey": "fmtsort.SortedMap.Swap",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (o *SortedMap) Swap(i, j int)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (o *SortedMap) Swap(i, j int)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/fmtsort#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#compare",
+              "documentation": {
+                "identifier": "compare",
+                "newPage": false,
+                "searchKey": "fmtsort.compare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func compare(aVal, bVal reflect.Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc compare(aVal, bVal reflect.Value) int\n```\n\ncompare compares two values of the same type. It returns -1, 0, 1 according to whether a > b (1), a == b (0), or a < b (-1). If the types differ, it returns -1. See the comment on Sort for the comparison rules. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#nilCompare",
+              "documentation": {
+                "identifier": "nilCompare",
+                "newPage": false,
+                "searchKey": "fmtsort.nilCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func nilCompare(aVal, bVal reflect.Value) (int, bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc nilCompare(aVal, bVal reflect.Value) (int, bool)\n```\n\nnilCompare checks whether either value is nil. If not, the boolean is false. If either value is nil, the boolean is true and the integer is the comparison value. The comparison is defined to be 0 if both are nil, otherwise the one nil value compares low. Both arguments must represent a chan, func, interface, map, pointer, or slice. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#floatCompare",
+              "documentation": {
+                "identifier": "floatCompare",
+                "newPage": false,
+                "searchKey": "fmtsort.floatCompare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func floatCompare(a, b float64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc floatCompare(a, b float64) int\n```\n\nfloatCompare compares two floating-point values. NaNs compare low. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#isNaN",
+              "documentation": {
+                "identifier": "isNaN",
+                "newPage": false,
+                "searchKey": "fmtsort.isNaN",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isNaN(a float64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isNaN(a float64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/fmtsort#Compare",
+              "documentation": {
+                "identifier": "Compare",
+                "newPage": false,
+                "searchKey": "fmtsort.Compare",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Compare(a, b reflect.Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Compare(a, b reflect.Value) int\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "pathID": "/math/big_test",
+  "documentation": {
+    "identifier": "big_test",
+    "newPage": true,
+    "searchKey": "math/big_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package big_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/math/big_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/math/big_test#recur",
+              "documentation": {
+                "identifier": "recur",
+                "newPage": false,
+                "searchKey": "big_test.recur",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func recur(n, lim int64) *big.Rat"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc recur(n, lim int64) *big.Rat\n```\n\nUse the classic continued fraction for e \n\n```\ne = [1; 0, 1, 1, 2, 1, 1, ... 2n, 1, 1, ...]\n\n```\ni.e., for the nth term, use \n\n```\n   1          if   n mod 3 != 1\n(n-1)/3 * 2   if   n mod 3 == 1\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#Example_eConvergents",
+              "documentation": {
+                "identifier": "Example_eConvergents",
+                "newPage": false,
+                "searchKey": "big_test.Example_eConvergents",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_eConvergents()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_eConvergents()\n```\n\nThis example demonstrates how to use big.Rat to compute the first 15 terms in the sequence of rational convergents for the constant e (base of natural logarithm). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleRat_SetString",
+              "documentation": {
+                "identifier": "ExampleRat_SetString",
+                "newPage": false,
+                "searchKey": "big_test.ExampleRat_SetString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRat_SetString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRat_SetString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleInt_SetString",
+              "documentation": {
+                "identifier": "ExampleInt_SetString",
+                "newPage": false,
+                "searchKey": "big_test.ExampleInt_SetString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleInt_SetString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleInt_SetString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleFloat_SetString",
+              "documentation": {
+                "identifier": "ExampleFloat_SetString",
+                "newPage": false,
+                "searchKey": "big_test.ExampleFloat_SetString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat_SetString()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat_SetString()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleRat_Scan",
+              "documentation": {
+                "identifier": "ExampleRat_Scan",
+                "newPage": false,
+                "searchKey": "big_test.ExampleRat_Scan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRat_Scan()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRat_Scan()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleInt_Scan",
+              "documentation": {
+                "identifier": "ExampleInt_Scan",
+                "newPage": false,
+                "searchKey": "big_test.ExampleInt_Scan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleInt_Scan()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleInt_Scan()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleFloat_Scan",
+              "documentation": {
+                "identifier": "ExampleFloat_Scan",
+                "newPage": false,
+                "searchKey": "big_test.ExampleFloat_Scan",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat_Scan()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat_Scan()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#Example_fibonacci",
+              "documentation": {
+                "identifier": "Example_fibonacci",
+                "newPage": false,
+                "searchKey": "big_test.Example_fibonacci",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_fibonacci()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_fibonacci()\n```\n\nThis example demonstrates how to use big.Int to compute the smallest Fibonacci number with 100 decimal digits and to test whether it is prime. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#Example_sqrt2",
+              "documentation": {
+                "identifier": "Example_sqrt2",
+                "newPage": false,
+                "searchKey": "big_test.Example_sqrt2",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Example_sqrt2()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Example_sqrt2()\n```\n\nThis example shows how to use big.Float to compute the square root of 2 with a precision of 200 bits, and how to print the result as a decimal number. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleFloat_Add",
+              "documentation": {
+                "identifier": "ExampleFloat_Add",
+                "newPage": false,
+                "searchKey": "big_test.ExampleFloat_Add",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat_Add()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat_Add()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleFloat_shift",
+              "documentation": {
+                "identifier": "ExampleFloat_shift",
+                "newPage": false,
+                "searchKey": "big_test.ExampleFloat_shift",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat_shift()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat_shift()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleFloat_Cmp",
+              "documentation": {
+                "identifier": "ExampleFloat_Cmp",
+                "newPage": false,
+                "searchKey": "big_test.ExampleFloat_Cmp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFloat_Cmp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFloat_Cmp()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/math/big_test#ExampleRoundingMode",
+              "documentation": {
+                "identifier": "ExampleRoundingMode",
+                "newPage": false,
+                "searchKey": "big_test.ExampleRoundingMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleRoundingMode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleRoundingMode()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

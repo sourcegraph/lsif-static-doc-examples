@@ -1,0 +1,188 @@
+{
+  "pathID": "/internal/lazytemplate",
+  "documentation": {
+    "identifier": "lazytemplate",
+    "newPage": true,
+    "searchKey": "internal/lazytemplate",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package lazytemplate"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package lazytemplate is a thin wrapper over text/template, allowing the use of global template variables without forcing them to be parsed at init. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/lazytemplate#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/lazytemplate#inTest",
+              "documentation": {
+                "identifier": "inTest",
+                "newPage": false,
+                "searchKey": "lazytemplate.inTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var inTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar inTest = len(os.Args) > 0 && strings.HasSuffix(strings.TrimSuffix(os.Args[0], \".exe\"), \".test\")\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/lazytemplate#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/lazytemplate#Template",
+              "documentation": {
+                "identifier": "Template",
+                "newPage": false,
+                "searchKey": "lazytemplate.Template",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Template struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Template struct {\n\tname, text string\n\n\tonce sync.Once\n\ttmpl *template.Template\n}\n```\n\nTemplate is a wrapper around text/template.Template, where the underlying template will be parsed the first time it is needed. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/lazytemplate#New",
+                    "documentation": {
+                      "identifier": "New",
+                      "newPage": false,
+                      "searchKey": "lazytemplate.New",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func New(name, text string) *Template"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc New(name, text string) *Template\n```\n\nNew creates a new lazy template, delaying the parsing work until it is first needed. If the code is being run as part of tests, the template parsing will happen immediately. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/lazytemplate#Template.tp",
+                    "documentation": {
+                      "identifier": "Template.tp",
+                      "newPage": false,
+                      "searchKey": "lazytemplate.Template.tp",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Template) tp() *template.Template"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Template) tp() *template.Template\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/lazytemplate#Template.build",
+                    "documentation": {
+                      "identifier": "Template.build",
+                      "newPage": false,
+                      "searchKey": "lazytemplate.Template.build",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Template) build()"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Template) build()\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/internal/lazytemplate#Template.Execute",
+                    "documentation": {
+                      "identifier": "Template.Execute",
+                      "newPage": false,
+                      "searchKey": "lazytemplate.Template.Execute",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *Template) Execute(w io.Writer, data interface{}) error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *Template) Execute(w io.Writer, data interface{}) error\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

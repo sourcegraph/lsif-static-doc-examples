@@ -1,0 +1,100 @@
+{
+  "pathID": "/net/mail_test",
+  "documentation": {
+    "identifier": "mail_test",
+    "newPage": true,
+    "searchKey": "net/mail_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package mail_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/net/mail_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/net/mail_test#ExampleParseAddressList",
+              "documentation": {
+                "identifier": "ExampleParseAddressList",
+                "newPage": false,
+                "searchKey": "mail_test.ExampleParseAddressList",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleParseAddressList()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleParseAddressList()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail_test#ExampleParseAddress",
+              "documentation": {
+                "identifier": "ExampleParseAddress",
+                "newPage": false,
+                "searchKey": "mail_test.ExampleParseAddress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleParseAddress()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleParseAddress()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/net/mail_test#ExampleReadMessage",
+              "documentation": {
+                "identifier": "ExampleReadMessage",
+                "newPage": false,
+                "searchKey": "mail_test.ExampleReadMessage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadMessage()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadMessage()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

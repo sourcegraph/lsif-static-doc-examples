@@ -1,0 +1,5185 @@
+{
+  "pathID": "/os_test",
+  "documentation": {
+    "identifier": "os_test",
+    "newPage": true,
+    "searchKey": "os_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package os_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/os_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os_test#executable_EnvVar",
+              "documentation": {
+                "identifier": "executable_EnvVar",
+                "newPage": false,
+                "searchKey": "os_test.executable_EnvVar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const executable_EnvVar"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst executable_EnvVar = \"OSTEST_OUTPUT_EXECPATH\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testExecutableDeletion",
+              "documentation": {
+                "identifier": "testExecutableDeletion",
+                "newPage": false,
+                "searchKey": "os_test.testExecutableDeletion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const testExecutableDeletion"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst testExecutableDeletion = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os_test#expandTests",
+              "documentation": {
+                "identifier": "expandTests",
+                "newPage": false,
+                "searchKey": "os_test.expandTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var expandTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar expandTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#global",
+              "documentation": {
+                "identifier": "global",
+                "newPage": false,
+                "searchKey": "os_test.global",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var global"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar global interface{}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#setenvEinvalTests",
+              "documentation": {
+                "identifier": "setenvEinvalTests",
+                "newPage": false,
+                "searchKey": "os_test.setenvEinvalTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var setenvEinvalTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar setenvEinvalTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#shellSpecialVarTests",
+              "documentation": {
+                "identifier": "shellSpecialVarTests",
+                "newPage": false,
+                "searchKey": "os_test.shellSpecialVarTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var shellSpecialVarTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar shellSpecialVarTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#isExistTests",
+              "documentation": {
+                "identifier": "isExistTests",
+                "newPage": false,
+                "searchKey": "os_test.isExistTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isExistTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isExistTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#isPermissionTests",
+              "documentation": {
+                "identifier": "isPermissionTests",
+                "newPage": false,
+                "searchKey": "os_test.isPermissionTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isPermissionTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isPermissionTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#dot",
+              "documentation": {
+                "identifier": "dot",
+                "newPage": false,
+                "searchKey": "os_test.dot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dot"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dot = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#sysdir",
+              "documentation": {
+                "identifier": "sysdir",
+                "newPage": false,
+                "searchKey": "os_test.sysdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sysdir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sysdir = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#sfdir",
+              "documentation": {
+                "identifier": "sfdir",
+                "newPage": false,
+                "searchKey": "os_test.sfdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sfdir"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sfdir = sysdir.name\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#sfname",
+              "documentation": {
+                "identifier": "sfname",
+                "newPage": false,
+                "searchKey": "os_test.sfname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sfname"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sfname = sysdir.files[0]\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#openErrorTests",
+              "documentation": {
+                "identifier": "openErrorTests",
+                "newPage": false,
+                "searchKey": "os_test.openErrorTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var openErrorTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar openErrorTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testLargeWrite",
+              "documentation": {
+                "identifier": "testLargeWrite",
+                "newPage": false,
+                "searchKey": "os_test.testLargeWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var testLargeWrite"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar testLargeWrite = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#nilFileMethodTests",
+              "documentation": {
+                "identifier": "nilFileMethodTests",
+                "newPage": false,
+                "searchKey": "os_test.nilFileMethodTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nilFileMethodTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nilFileMethodTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#isReadonlyError",
+              "documentation": {
+                "identifier": "isReadonlyError",
+                "newPage": false,
+                "searchKey": "os_test.isReadonlyError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isReadonlyError"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isReadonlyError = func(error) bool { return false }\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#noDeadline",
+              "documentation": {
+                "identifier": "noDeadline",
+                "newPage": false,
+                "searchKey": "os_test.noDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var noDeadline"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar noDeadline time.Time\n```\n\nnoDeadline is a zero time.Time value, which cancels a deadline. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#readTimeoutTests",
+              "documentation": {
+                "identifier": "readTimeoutTests",
+                "newPage": false,
+                "searchKey": "os_test.readTimeoutTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var readTimeoutTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar readTimeoutTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#writeTimeoutTests",
+              "documentation": {
+                "identifier": "writeTimeoutTests",
+                "newPage": false,
+                "searchKey": "os_test.writeTimeoutTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var writeTimeoutTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar writeTimeoutTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os_test#isExistTest",
+              "documentation": {
+                "identifier": "isExistTest",
+                "newPage": false,
+                "searchKey": "os_test.isExistTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type isExistTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype isExistTest struct {\n\terr   error\n\tis    bool\n\tisnot bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#isPermissionTest",
+              "documentation": {
+                "identifier": "isPermissionTest",
+                "newPage": false,
+                "searchKey": "os_test.isPermissionTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type isPermissionTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype isPermissionTest struct {\n\terr  error\n\twant bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#myErrorIs",
+              "documentation": {
+                "identifier": "myErrorIs",
+                "newPage": false,
+                "searchKey": "os_test.myErrorIs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type myErrorIs struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype myErrorIs struct{ error }\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os_test#myErrorIs.Is",
+                    "documentation": {
+                      "identifier": "myErrorIs.Is",
+                      "newPage": false,
+                      "searchKey": "os_test.myErrorIs.Is",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e myErrorIs) Is(target error) bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e myErrorIs) Is(target error) bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#sysDir",
+              "documentation": {
+                "identifier": "sysDir",
+                "newPage": false,
+                "searchKey": "os_test.sysDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type sysDir struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype sysDir struct {\n\tname  string\n\tfiles []string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#openErrorTest",
+              "documentation": {
+                "identifier": "openErrorTest",
+                "newPage": false,
+                "searchKey": "os_test.openErrorTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type openErrorTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype openErrorTest struct {\n\tpath  string\n\tmode  int\n\terror error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#syscallDescriptor",
+              "documentation": {
+                "identifier": "syscallDescriptor",
+                "newPage": false,
+                "searchKey": "os_test.syscallDescriptor",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type syscallDescriptor int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype syscallDescriptor = int\n```\n\nFor TestRawConnReadWrite. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#neverEnding",
+              "documentation": {
+                "identifier": "neverEnding",
+                "newPage": false,
+                "searchKey": "os_test.neverEnding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type neverEnding byte"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype neverEnding byte\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/os_test#neverEnding.Read",
+                    "documentation": {
+                      "identifier": "neverEnding.Read",
+                      "newPage": false,
+                      "searchKey": "os_test.neverEnding.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b neverEnding) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b neverEnding) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/os_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/os_test#testGetenv",
+              "documentation": {
+                "identifier": "testGetenv",
+                "newPage": false,
+                "searchKey": "os_test.testGetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testGetenv(s string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testGetenv(s string) string\n```\n\ntestGetenv gives us a controlled set of variables for testing Expand. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestExpand",
+              "documentation": {
+                "identifier": "TestExpand",
+                "newPage": false,
+                "searchKey": "os_test.TestExpand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpand(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkExpand",
+              "documentation": {
+                "identifier": "BenchmarkExpand",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkExpand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkExpand(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkExpand(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestConsistentEnviron",
+              "documentation": {
+                "identifier": "TestConsistentEnviron",
+                "newPage": false,
+                "searchKey": "os_test.TestConsistentEnviron",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConsistentEnviron(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConsistentEnviron(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestUnsetenv",
+              "documentation": {
+                "identifier": "TestUnsetenv",
+                "newPage": false,
+                "searchKey": "os_test.TestUnsetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnsetenv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnsetenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestClearenv",
+              "documentation": {
+                "identifier": "TestClearenv",
+                "newPage": false,
+                "searchKey": "os_test.TestClearenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClearenv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClearenv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLookupEnv",
+              "documentation": {
+                "identifier": "TestLookupEnv",
+                "newPage": false,
+                "searchKey": "os_test.TestLookupEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLookupEnv(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLookupEnv(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSetenvUnixEinval",
+              "documentation": {
+                "identifier": "TestSetenvUnixEinval",
+                "newPage": false,
+                "searchKey": "os_test.TestSetenvUnixEinval",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSetenvUnixEinval(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSetenvUnixEinval(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestExpandEnvShellSpecialVar",
+              "documentation": {
+                "identifier": "TestExpandEnvShellSpecialVar",
+                "newPage": false,
+                "searchKey": "os_test.TestExpandEnvShellSpecialVar",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExpandEnvShellSpecialVar(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExpandEnvShellSpecialVar(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestErrIsExist",
+              "documentation": {
+                "identifier": "TestErrIsExist",
+                "newPage": false,
+                "searchKey": "os_test.TestErrIsExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrIsExist(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrIsExist(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testErrNotExist",
+              "documentation": {
+                "identifier": "testErrNotExist",
+                "newPage": false,
+                "searchKey": "os_test.testErrNotExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testErrNotExist(t *testing.T, name string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testErrNotExist(t *testing.T, name string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestErrIsNotExist",
+              "documentation": {
+                "identifier": "TestErrIsNotExist",
+                "newPage": false,
+                "searchKey": "os_test.TestErrIsNotExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrIsNotExist(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrIsNotExist(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#checkErrorPredicate",
+              "documentation": {
+                "identifier": "checkErrorPredicate",
+                "newPage": false,
+                "searchKey": "os_test.checkErrorPredicate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkErrorPredicate(predName string, pred func(error) bool, err, target error) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkErrorPredicate(predName string, pred func(error) bool, err, target error) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestIsExist",
+              "documentation": {
+                "identifier": "TestIsExist",
+                "newPage": false,
+                "searchKey": "os_test.TestIsExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsExist(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsExist(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestIsPermission",
+              "documentation": {
+                "identifier": "TestIsPermission",
+                "newPage": false,
+                "searchKey": "os_test.TestIsPermission",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIsPermission(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIsPermission(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestErrPathNUL",
+              "documentation": {
+                "identifier": "TestErrPathNUL",
+                "newPage": false,
+                "searchKey": "os_test.TestErrPathNUL",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrPathNUL(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrPathNUL(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestPathErrorUnwrap",
+              "documentation": {
+                "identifier": "TestPathErrorUnwrap",
+                "newPage": false,
+                "searchKey": "os_test.TestPathErrorUnwrap",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPathErrorUnwrap(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPathErrorUnwrap(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestErrorIsMethods",
+              "documentation": {
+                "identifier": "TestErrorIsMethods",
+                "newPage": false,
+                "searchKey": "os_test.TestErrorIsMethods",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrorIsMethods(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrorIsMethods(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "os_test.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleOpenFile",
+              "documentation": {
+                "identifier": "ExampleOpenFile",
+                "newPage": false,
+                "searchKey": "os_test.ExampleOpenFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleOpenFile()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleOpenFile()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleOpenFile_append",
+              "documentation": {
+                "identifier": "ExampleOpenFile_append",
+                "newPage": false,
+                "searchKey": "os_test.ExampleOpenFile_append",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleOpenFile_append()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleOpenFile_append()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleChmod",
+              "documentation": {
+                "identifier": "ExampleChmod",
+                "newPage": false,
+                "searchKey": "os_test.ExampleChmod",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleChmod()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleChmod()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleChtimes",
+              "documentation": {
+                "identifier": "ExampleChtimes",
+                "newPage": false,
+                "searchKey": "os_test.ExampleChtimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleChtimes()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleChtimes()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleFileMode",
+              "documentation": {
+                "identifier": "ExampleFileMode",
+                "newPage": false,
+                "searchKey": "os_test.ExampleFileMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFileMode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFileMode()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleIsNotExist",
+              "documentation": {
+                "identifier": "ExampleIsNotExist",
+                "newPage": false,
+                "searchKey": "os_test.ExampleIsNotExist",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleIsNotExist()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleIsNotExist()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleExpand",
+              "documentation": {
+                "identifier": "ExampleExpand",
+                "newPage": false,
+                "searchKey": "os_test.ExampleExpand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleExpand()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleExpand()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleExpandEnv",
+              "documentation": {
+                "identifier": "ExampleExpandEnv",
+                "newPage": false,
+                "searchKey": "os_test.ExampleExpandEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleExpandEnv()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleExpandEnv()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleLookupEnv",
+              "documentation": {
+                "identifier": "ExampleLookupEnv",
+                "newPage": false,
+                "searchKey": "os_test.ExampleLookupEnv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLookupEnv()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLookupEnv()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleGetenv",
+              "documentation": {
+                "identifier": "ExampleGetenv",
+                "newPage": false,
+                "searchKey": "os_test.ExampleGetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleGetenv()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleGetenv()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleUnsetenv",
+              "documentation": {
+                "identifier": "ExampleUnsetenv",
+                "newPage": false,
+                "searchKey": "os_test.ExampleUnsetenv",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleUnsetenv()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleUnsetenv()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleReadDir",
+              "documentation": {
+                "identifier": "ExampleReadDir",
+                "newPage": false,
+                "searchKey": "os_test.ExampleReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadDir()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadDir()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleMkdirTemp",
+              "documentation": {
+                "identifier": "ExampleMkdirTemp",
+                "newPage": false,
+                "searchKey": "os_test.ExampleMkdirTemp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMkdirTemp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMkdirTemp()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleMkdirTemp_suffix",
+              "documentation": {
+                "identifier": "ExampleMkdirTemp_suffix",
+                "newPage": false,
+                "searchKey": "os_test.ExampleMkdirTemp_suffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMkdirTemp_suffix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMkdirTemp_suffix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleCreateTemp",
+              "documentation": {
+                "identifier": "ExampleCreateTemp",
+                "newPage": false,
+                "searchKey": "os_test.ExampleCreateTemp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleCreateTemp()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleCreateTemp()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleCreateTemp_suffix",
+              "documentation": {
+                "identifier": "ExampleCreateTemp_suffix",
+                "newPage": false,
+                "searchKey": "os_test.ExampleCreateTemp_suffix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleCreateTemp_suffix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleCreateTemp_suffix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleReadFile",
+              "documentation": {
+                "identifier": "ExampleReadFile",
+                "newPage": false,
+                "searchKey": "os_test.ExampleReadFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleReadFile()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleReadFile()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#ExampleWriteFile",
+              "documentation": {
+                "identifier": "ExampleWriteFile",
+                "newPage": false,
+                "searchKey": "os_test.ExampleWriteFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleWriteFile()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleWriteFile()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestErrProcessDone",
+              "documentation": {
+                "identifier": "TestErrProcessDone",
+                "newPage": false,
+                "searchKey": "os_test.TestErrProcessDone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestErrProcessDone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestErrProcessDone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestExecutable",
+              "documentation": {
+                "identifier": "TestExecutable",
+                "newPage": false,
+                "searchKey": "os_test.TestExecutable",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecutable(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecutable(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#sameFile",
+              "documentation": {
+                "identifier": "sameFile",
+                "newPage": false,
+                "searchKey": "os_test.sameFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sameFile(fn1, fn2 string) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sameFile(fn1, fn2 string) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "os_test.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestExecutableDeleted",
+              "documentation": {
+                "identifier": "TestExecutableDeleted",
+                "newPage": false,
+                "searchKey": "os_test.TestExecutableDeleted",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestExecutableDeleted(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestExecutableDeleted(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFifoEOF",
+              "documentation": {
+                "identifier": "TestFifoEOF",
+                "newPage": false,
+                "searchKey": "os_test.TestFifoEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFifoEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFifoEOF(t *testing.T)\n```\n\nIssue 24164. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#size",
+              "documentation": {
+                "identifier": "size",
+                "newPage": false,
+                "searchKey": "os_test.size",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func size(name string, t *testing.T) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc size(name string, t *testing.T) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "os_test.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(name1, name2 string) (r bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(name1, name2 string) (r bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#localTmp",
+              "documentation": {
+                "identifier": "localTmp",
+                "newPage": false,
+                "searchKey": "os_test.localTmp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func localTmp() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc localTmp() string\n```\n\nlocalTmp returns a local temporary directory not on NFS. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#newFile",
+              "documentation": {
+                "identifier": "newFile",
+                "newPage": false,
+                "searchKey": "os_test.newFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newFile(testName string, t *testing.T) (f *File)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newFile(testName string, t *testing.T) (f *File)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#newDir",
+              "documentation": {
+                "identifier": "newDir",
+                "newPage": false,
+                "searchKey": "os_test.newDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newDir(testName string, t *testing.T) (name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newDir(testName string, t *testing.T) (name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStat",
+              "documentation": {
+                "identifier": "TestStat",
+                "newPage": false,
+                "searchKey": "os_test.TestStat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStatError",
+              "documentation": {
+                "identifier": "TestStatError",
+                "newPage": false,
+                "searchKey": "os_test.TestStatError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStatError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStatError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFstat",
+              "documentation": {
+                "identifier": "TestFstat",
+                "newPage": false,
+                "searchKey": "os_test.TestFstat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFstat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFstat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLstat",
+              "documentation": {
+                "identifier": "TestLstat",
+                "newPage": false,
+                "searchKey": "os_test.TestLstat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLstat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLstat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRead0",
+              "documentation": {
+                "identifier": "TestRead0",
+                "newPage": false,
+                "searchKey": "os_test.TestRead0",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRead0(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRead0(t *testing.T)\n```\n\nRead with length 0 should not return EOF. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadClosed",
+              "documentation": {
+                "identifier": "TestReadClosed",
+                "newPage": false,
+                "searchKey": "os_test.TestReadClosed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadClosed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadClosed(t *testing.T)\n```\n\nReading a closed file should return ErrClosed error \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testReaddirnames",
+              "documentation": {
+                "identifier": "testReaddirnames",
+                "newPage": false,
+                "searchKey": "os_test.testReaddirnames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReaddirnames(dir string, contents []string, t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReaddirnames(dir string, contents []string, t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testReaddir",
+              "documentation": {
+                "identifier": "testReaddir",
+                "newPage": false,
+                "searchKey": "os_test.testReaddir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReaddir(dir string, contents []string, t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReaddir(dir string, contents []string, t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testReadDir",
+              "documentation": {
+                "identifier": "testReadDir",
+                "newPage": false,
+                "searchKey": "os_test.testReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadDir(dir string, contents []string, t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadDir(dir string, contents []string, t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileReaddirnames",
+              "documentation": {
+                "identifier": "TestFileReaddirnames",
+                "newPage": false,
+                "searchKey": "os_test.TestFileReaddirnames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileReaddirnames(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileReaddirnames(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileReaddir",
+              "documentation": {
+                "identifier": "TestFileReaddir",
+                "newPage": false,
+                "searchKey": "os_test.TestFileReaddir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileReaddir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileReaddir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileReadDir",
+              "documentation": {
+                "identifier": "TestFileReadDir",
+                "newPage": false,
+                "searchKey": "os_test.TestFileReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileReadDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileReadDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#benchmarkReaddirname",
+              "documentation": {
+                "identifier": "benchmarkReaddirname",
+                "newPage": false,
+                "searchKey": "os_test.benchmarkReaddirname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkReaddirname(path string, b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkReaddirname(path string, b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#benchmarkReaddir",
+              "documentation": {
+                "identifier": "benchmarkReaddir",
+                "newPage": false,
+                "searchKey": "os_test.benchmarkReaddir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkReaddir(path string, b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkReaddir(path string, b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#benchmarkReadDir",
+              "documentation": {
+                "identifier": "benchmarkReadDir",
+                "newPage": false,
+                "searchKey": "os_test.benchmarkReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkReadDir(path string, b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkReadDir(path string, b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkReaddirname",
+              "documentation": {
+                "identifier": "BenchmarkReaddirname",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkReaddirname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaddirname(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaddirname(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkReaddir",
+              "documentation": {
+                "identifier": "BenchmarkReaddir",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkReaddir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReaddir(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReaddir(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkReadDir",
+              "documentation": {
+                "identifier": "BenchmarkReadDir",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadDir(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadDir(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#benchmarkStat",
+              "documentation": {
+                "identifier": "benchmarkStat",
+                "newPage": false,
+                "searchKey": "os_test.benchmarkStat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkStat(b *testing.B, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkStat(b *testing.B, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#benchmarkLstat",
+              "documentation": {
+                "identifier": "benchmarkLstat",
+                "newPage": false,
+                "searchKey": "os_test.benchmarkLstat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmarkLstat(b *testing.B, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmarkLstat(b *testing.B, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkStatDot",
+              "documentation": {
+                "identifier": "BenchmarkStatDot",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkStatDot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStatDot(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStatDot(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkStatFile",
+              "documentation": {
+                "identifier": "BenchmarkStatFile",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkStatFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStatFile(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStatFile(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkStatDir",
+              "documentation": {
+                "identifier": "BenchmarkStatDir",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkStatDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStatDir(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStatDir(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkLstatDot",
+              "documentation": {
+                "identifier": "BenchmarkLstatDot",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkLstatDot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLstatDot(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLstatDot(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkLstatFile",
+              "documentation": {
+                "identifier": "BenchmarkLstatFile",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkLstatFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLstatFile(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLstatFile(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#BenchmarkLstatDir",
+              "documentation": {
+                "identifier": "BenchmarkLstatDir",
+                "newPage": false,
+                "searchKey": "os_test.BenchmarkLstatDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLstatDir(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLstatDir(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#smallReaddirnames",
+              "documentation": {
+                "identifier": "smallReaddirnames",
+                "newPage": false,
+                "searchKey": "os_test.smallReaddirnames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func smallReaddirnames(file *File, length int, t *testing.T) []string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc smallReaddirnames(file *File, length int, t *testing.T) []string\n```\n\nRead the directory one entry at a time. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirnamesOneAtATime",
+              "documentation": {
+                "identifier": "TestReaddirnamesOneAtATime",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirnamesOneAtATime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirnamesOneAtATime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirnamesOneAtATime(t *testing.T)\n```\n\nCheck that reading a directory one entry at a time gives the same result as reading it all at once. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirNValues",
+              "documentation": {
+                "identifier": "TestReaddirNValues",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirNValues",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirNValues(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirNValues(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#touch",
+              "documentation": {
+                "identifier": "touch",
+                "newPage": false,
+                "searchKey": "os_test.touch",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func touch(t *testing.T, name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc touch(t *testing.T, name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirStatFailures",
+              "documentation": {
+                "identifier": "TestReaddirStatFailures",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirStatFailures",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirStatFailures(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirStatFailures(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirOfFile",
+              "documentation": {
+                "identifier": "TestReaddirOfFile",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirOfFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirOfFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirOfFile(t *testing.T)\n```\n\nReaddir on a regular file should fail. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestHardLink",
+              "documentation": {
+                "identifier": "TestHardLink",
+                "newPage": false,
+                "searchKey": "os_test.TestHardLink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHardLink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHardLink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#chtmpdir",
+              "documentation": {
+                "identifier": "chtmpdir",
+                "newPage": false,
+                "searchKey": "os_test.chtmpdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func chtmpdir(t *testing.T) func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc chtmpdir(t *testing.T) func()\n```\n\nchtmpdir changes the working directory to a new temporary directory and provides a cleanup function. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSymlink",
+              "documentation": {
+                "identifier": "TestSymlink",
+                "newPage": false,
+                "searchKey": "os_test.TestSymlink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSymlink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSymlink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLongSymlink",
+              "documentation": {
+                "identifier": "TestLongSymlink",
+                "newPage": false,
+                "searchKey": "os_test.TestLongSymlink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLongSymlink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLongSymlink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRename",
+              "documentation": {
+                "identifier": "TestRename",
+                "newPage": false,
+                "searchKey": "os_test.TestRename",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRename(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRename(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRenameOverwriteDest",
+              "documentation": {
+                "identifier": "TestRenameOverwriteDest",
+                "newPage": false,
+                "searchKey": "os_test.TestRenameOverwriteDest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRenameOverwriteDest(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRenameOverwriteDest(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRenameFailed",
+              "documentation": {
+                "identifier": "TestRenameFailed",
+                "newPage": false,
+                "searchKey": "os_test.TestRenameFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRenameFailed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRenameFailed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRenameNotExisting",
+              "documentation": {
+                "identifier": "TestRenameNotExisting",
+                "newPage": false,
+                "searchKey": "os_test.TestRenameNotExisting",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRenameNotExisting(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRenameNotExisting(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRenameToDirFailed",
+              "documentation": {
+                "identifier": "TestRenameToDirFailed",
+                "newPage": false,
+                "searchKey": "os_test.TestRenameToDirFailed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRenameToDirFailed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRenameToDirFailed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRenameCaseDifference",
+              "documentation": {
+                "identifier": "TestRenameCaseDifference",
+                "newPage": false,
+                "searchKey": "os_test.TestRenameCaseDifference",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRenameCaseDifference(pt *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRenameCaseDifference(pt *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#exec",
+              "documentation": {
+                "identifier": "exec",
+                "newPage": false,
+                "searchKey": "os_test.exec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func exec(t *testing.T, dir, cmd string, args []string, expect string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc exec(t *testing.T, dir, cmd string, args []string, expect string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStartProcess",
+              "documentation": {
+                "identifier": "TestStartProcess",
+                "newPage": false,
+                "searchKey": "os_test.TestStartProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStartProcess(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStartProcess(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#checkMode",
+              "documentation": {
+                "identifier": "checkMode",
+                "newPage": false,
+                "searchKey": "os_test.checkMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkMode(t *testing.T, path string, mode FileMode)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkMode(t *testing.T, path string, mode FileMode)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestChmod",
+              "documentation": {
+                "identifier": "TestChmod",
+                "newPage": false,
+                "searchKey": "os_test.TestChmod",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChmod(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChmod(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#checkSize",
+              "documentation": {
+                "identifier": "checkSize",
+                "newPage": false,
+                "searchKey": "os_test.checkSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkSize(t *testing.T, f *File, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkSize(t *testing.T, f *File, size int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFTruncate",
+              "documentation": {
+                "identifier": "TestFTruncate",
+                "newPage": false,
+                "searchKey": "os_test.TestFTruncate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFTruncate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFTruncate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestTruncate",
+              "documentation": {
+                "identifier": "TestTruncate",
+                "newPage": false,
+                "searchKey": "os_test.TestTruncate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTruncate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTruncate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestChtimes",
+              "documentation": {
+                "identifier": "TestChtimes",
+                "newPage": false,
+                "searchKey": "os_test.TestChtimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChtimes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChtimes(t *testing.T)\n```\n\nUse TempDir (via newFile) to make sure we're on a local file system, so that timings are not distorted by latency and caching. On NFS, timings can be off due to caching of meta-data on NFS servers (Issue 848). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestChtimesDir",
+              "documentation": {
+                "identifier": "TestChtimesDir",
+                "newPage": false,
+                "searchKey": "os_test.TestChtimesDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChtimesDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChtimesDir(t *testing.T)\n```\n\nUse TempDir (via newDir) to make sure we're on a local file system, so that timings are not distorted by latency and caching. On NFS, timings can be off due to caching of meta-data on NFS servers (Issue 848). \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testChtimes",
+              "documentation": {
+                "identifier": "testChtimes",
+                "newPage": false,
+                "searchKey": "os_test.testChtimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testChtimes(t *testing.T, name string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testChtimes(t *testing.T, name string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileChdir",
+              "documentation": {
+                "identifier": "TestFileChdir",
+                "newPage": false,
+                "searchKey": "os_test.TestFileChdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileChdir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileChdir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestChdirAndGetwd",
+              "documentation": {
+                "identifier": "TestChdirAndGetwd",
+                "newPage": false,
+                "searchKey": "os_test.TestChdirAndGetwd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChdirAndGetwd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChdirAndGetwd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestProgWideChdir",
+              "documentation": {
+                "identifier": "TestProgWideChdir",
+                "newPage": false,
+                "searchKey": "os_test.TestProgWideChdir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestProgWideChdir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestProgWideChdir(t *testing.T)\n```\n\nTest that Chdir+Getwd is program-wide. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSeek",
+              "documentation": {
+                "identifier": "TestSeek",
+                "newPage": false,
+                "searchKey": "os_test.TestSeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSeekError",
+              "documentation": {
+                "identifier": "TestSeekError",
+                "newPage": false,
+                "searchKey": "os_test.TestSeekError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSeekError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSeekError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestOpenError",
+              "documentation": {
+                "identifier": "TestOpenError",
+                "newPage": false,
+                "searchKey": "os_test.TestOpenError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestOpenNoName",
+              "documentation": {
+                "identifier": "TestOpenNoName",
+                "newPage": false,
+                "searchKey": "os_test.TestOpenNoName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenNoName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenNoName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#runBinHostname",
+              "documentation": {
+                "identifier": "runBinHostname",
+                "newPage": false,
+                "searchKey": "os_test.runBinHostname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func runBinHostname(t *testing.T) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc runBinHostname(t *testing.T) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testWindowsHostname",
+              "documentation": {
+                "identifier": "testWindowsHostname",
+                "newPage": false,
+                "searchKey": "os_test.testWindowsHostname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testWindowsHostname(t *testing.T, hostname string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testWindowsHostname(t *testing.T, hostname string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestHostname",
+              "documentation": {
+                "identifier": "TestHostname",
+                "newPage": false,
+                "searchKey": "os_test.TestHostname",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHostname(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHostname(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadAt",
+              "documentation": {
+                "identifier": "TestReadAt",
+                "newPage": false,
+                "searchKey": "os_test.TestReadAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadAtOffset",
+              "documentation": {
+                "identifier": "TestReadAtOffset",
+                "newPage": false,
+                "searchKey": "os_test.TestReadAtOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtOffset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtOffset(t *testing.T)\n```\n\nVerify that ReadAt doesn't affect seek offset. In the Plan 9 kernel, there used to be a bug in the implementation of the pread syscall, where the channel offset was erroneously updated after calling pread on a file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadAtNegativeOffset",
+              "documentation": {
+                "identifier": "TestReadAtNegativeOffset",
+                "newPage": false,
+                "searchKey": "os_test.TestReadAtNegativeOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtNegativeOffset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtNegativeOffset(t *testing.T)\n```\n\nVerify that ReadAt doesn't allow negative offset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteAt",
+              "documentation": {
+                "identifier": "TestWriteAt",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteAt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteAt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteAt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteAtNegativeOffset",
+              "documentation": {
+                "identifier": "TestWriteAtNegativeOffset",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteAtNegativeOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteAtNegativeOffset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteAtNegativeOffset(t *testing.T)\n```\n\nVerify that WriteAt doesn't allow negative offset. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteAtInAppendMode",
+              "documentation": {
+                "identifier": "TestWriteAtInAppendMode",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteAtInAppendMode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteAtInAppendMode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteAtInAppendMode(t *testing.T)\n```\n\nVerify that WriteAt doesn't work in append mode. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#writeFile",
+              "documentation": {
+                "identifier": "writeFile",
+                "newPage": false,
+                "searchKey": "os_test.writeFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func writeFile(t *testing.T, fname string, flag int, text string) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc writeFile(t *testing.T, fname string, flag int, text string) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestAppend",
+              "documentation": {
+                "identifier": "TestAppend",
+                "newPage": false,
+                "searchKey": "os_test.TestAppend",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAppend(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAppend(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStatDirWithTrailingSlash",
+              "documentation": {
+                "identifier": "TestStatDirWithTrailingSlash",
+                "newPage": false,
+                "searchKey": "os_test.TestStatDirWithTrailingSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStatDirWithTrailingSlash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStatDirWithTrailingSlash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestNilProcessStateString",
+              "documentation": {
+                "identifier": "TestNilProcessStateString",
+                "newPage": false,
+                "searchKey": "os_test.TestNilProcessStateString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilProcessStateString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilProcessStateString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSameFile",
+              "documentation": {
+                "identifier": "TestSameFile",
+                "newPage": false,
+                "searchKey": "os_test.TestSameFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSameFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSameFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testDevNullFileInfo",
+              "documentation": {
+                "identifier": "testDevNullFileInfo",
+                "newPage": false,
+                "searchKey": "os_test.testDevNullFileInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDevNullFileInfo(t *testing.T, statname, devNullName string, fi FileInfo, ignoreCase bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDevNullFileInfo(t *testing.T, statname, devNullName string, fi FileInfo, ignoreCase bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testDevNullFile",
+              "documentation": {
+                "identifier": "testDevNullFile",
+                "newPage": false,
+                "searchKey": "os_test.testDevNullFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDevNullFile(t *testing.T, devNullName string, ignoreCase bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDevNullFile(t *testing.T, devNullName string, ignoreCase bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDevNullFile",
+              "documentation": {
+                "identifier": "TestDevNullFile",
+                "newPage": false,
+                "searchKey": "os_test.TestDevNullFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDevNullFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDevNullFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLargeWriteToConsole",
+              "documentation": {
+                "identifier": "TestLargeWriteToConsole",
+                "newPage": false,
+                "searchKey": "os_test.TestLargeWriteToConsole",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLargeWriteToConsole(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLargeWriteToConsole(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStatDirModeExec",
+              "documentation": {
+                "identifier": "TestStatDirModeExec",
+                "newPage": false,
+                "searchKey": "os_test.TestStatDirModeExec",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStatDirModeExec(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStatDirModeExec(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStatStdin",
+              "documentation": {
+                "identifier": "TestStatStdin",
+                "newPage": false,
+                "searchKey": "os_test.TestStatStdin",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStatStdin(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStatStdin(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStatRelativeSymlink",
+              "documentation": {
+                "identifier": "TestStatRelativeSymlink",
+                "newPage": false,
+                "searchKey": "os_test.TestStatRelativeSymlink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStatRelativeSymlink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStatRelativeSymlink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadAtEOF",
+              "documentation": {
+                "identifier": "TestReadAtEOF",
+                "newPage": false,
+                "searchKey": "os_test.TestReadAtEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadAtEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadAtEOF(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLongPath",
+              "documentation": {
+                "identifier": "TestLongPath",
+                "newPage": false,
+                "searchKey": "os_test.TestLongPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLongPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLongPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testKillProcess",
+              "documentation": {
+                "identifier": "testKillProcess",
+                "newPage": false,
+                "searchKey": "os_test.testKillProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testKillProcess(t *testing.T, processKiller func(p *Process))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testKillProcess(t *testing.T, processKiller func(p *Process))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSleep",
+              "documentation": {
+                "identifier": "TestSleep",
+                "newPage": false,
+                "searchKey": "os_test.TestSleep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSleep(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSleep(t *testing.T)\n```\n\nTestSleep emulates \"sleep 1\". It is a helper for testKillProcess, so we don't have to rely on an external \"sleep\" command being available. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestKillStartProcess",
+              "documentation": {
+                "identifier": "TestKillStartProcess",
+                "newPage": false,
+                "searchKey": "os_test.TestKillStartProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKillStartProcess(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKillStartProcess(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestGetppid",
+              "documentation": {
+                "identifier": "TestGetppid",
+                "newPage": false,
+                "searchKey": "os_test.TestGetppid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGetppid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGetppid(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestKillFindProcess",
+              "documentation": {
+                "identifier": "TestKillFindProcess",
+                "newPage": false,
+                "searchKey": "os_test.TestKillFindProcess",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestKillFindProcess(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestKillFindProcess(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestNilFileMethods",
+              "documentation": {
+                "identifier": "TestNilFileMethods",
+                "newPage": false,
+                "searchKey": "os_test.TestNilFileMethods",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNilFileMethods(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNilFileMethods(t *testing.T)\n```\n\nTest that all File methods give ErrInvalid if the receiver is nil. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#mkdirTree",
+              "documentation": {
+                "identifier": "mkdirTree",
+                "newPage": false,
+                "searchKey": "os_test.mkdirTree",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func mkdirTree(t *testing.T, root string, level, max int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc mkdirTree(t *testing.T, root string, level, max int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllRace",
+              "documentation": {
+                "identifier": "TestRemoveAllRace",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllRace(t *testing.T)\n```\n\nTest that simultaneous RemoveAll do not report an error. As long as it gets removed, we should be happy. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestPipeThreads",
+              "documentation": {
+                "identifier": "TestPipeThreads",
+                "newPage": false,
+                "searchKey": "os_test.TestPipeThreads",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeThreads(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeThreads(t *testing.T)\n```\n\nTest that reading from a pipe doesn't use up a thread. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testDoubleCloseError",
+              "documentation": {
+                "identifier": "testDoubleCloseError",
+                "newPage": false,
+                "searchKey": "os_test.testDoubleCloseError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDoubleCloseError(t *testing.T, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDoubleCloseError(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDoubleCloseError",
+              "documentation": {
+                "identifier": "TestDoubleCloseError",
+                "newPage": false,
+                "searchKey": "os_test.TestDoubleCloseError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDoubleCloseError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDoubleCloseError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestUserHomeDir",
+              "documentation": {
+                "identifier": "TestUserHomeDir",
+                "newPage": false,
+                "searchKey": "os_test.TestUserHomeDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUserHomeDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUserHomeDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDirSeek",
+              "documentation": {
+                "identifier": "TestDirSeek",
+                "newPage": false,
+                "searchKey": "os_test.TestDirSeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirSeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirSeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirSmallSeek",
+              "documentation": {
+                "identifier": "TestReaddirSmallSeek",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirSmallSeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirSmallSeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirSmallSeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#isDeadlineExceeded",
+              "documentation": {
+                "identifier": "isDeadlineExceeded",
+                "newPage": false,
+                "searchKey": "os_test.isDeadlineExceeded",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func isDeadlineExceeded(err error) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc isDeadlineExceeded(err error) bool\n```\n\nisDeadlineExceeded reports whether err is or wraps os.ErrDeadlineExceeded. We also check that the error has a Timeout method that returns true. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestOpenFileKeepsPermissions",
+              "documentation": {
+                "identifier": "TestOpenFileKeepsPermissions",
+                "newPage": false,
+                "searchKey": "os_test.TestOpenFileKeepsPermissions",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOpenFileKeepsPermissions(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOpenFileKeepsPermissions(t *testing.T)\n```\n\nTest that opening a file does not change its permissions.  Issue 38225. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDirFS",
+              "documentation": {
+                "identifier": "TestDirFS",
+                "newPage": false,
+                "searchKey": "os_test.TestDirFS",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirFS(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirFS(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDirFSPathsValid",
+              "documentation": {
+                "identifier": "TestDirFSPathsValid",
+                "newPage": false,
+                "searchKey": "os_test.TestDirFSPathsValid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirFSPathsValid(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirFSPathsValid(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadFileProc",
+              "documentation": {
+                "identifier": "TestReadFileProc",
+                "newPage": false,
+                "searchKey": "os_test.TestReadFileProc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadFileProc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadFileProc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteStringAlloc",
+              "documentation": {
+                "identifier": "TestWriteStringAlloc",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteStringAlloc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteStringAlloc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteStringAlloc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "os_test.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#checkUidGid",
+              "documentation": {
+                "identifier": "checkUidGid",
+                "newPage": false,
+                "searchKey": "os_test.checkUidGid",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkUidGid(t *testing.T, path string, uid, gid int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkUidGid(t *testing.T, path string, uid, gid int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestChown",
+              "documentation": {
+                "identifier": "TestChown",
+                "newPage": false,
+                "searchKey": "os_test.TestChown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestChown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestChown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileChown",
+              "documentation": {
+                "identifier": "TestFileChown",
+                "newPage": false,
+                "searchKey": "os_test.TestFileChown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileChown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileChown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestLchown",
+              "documentation": {
+                "identifier": "TestLchown",
+                "newPage": false,
+                "searchKey": "os_test.TestLchown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLchown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLchown(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReaddirRemoveRace",
+              "documentation": {
+                "identifier": "TestReaddirRemoveRace",
+                "newPage": false,
+                "searchKey": "os_test.TestReaddirRemoveRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaddirRemoveRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaddirRemoveRace(t *testing.T)\n```\n\nIssue 16919: Readdir must return a non-empty slice or an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirStickyUmask",
+              "documentation": {
+                "identifier": "TestMkdirStickyUmask",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirStickyUmask",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirStickyUmask(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirStickyUmask(t *testing.T)\n```\n\nIssue 23120: respect umask when doing Mkdir with the sticky bit \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#newFileTest",
+              "documentation": {
+                "identifier": "newFileTest",
+                "newPage": false,
+                "searchKey": "os_test.newFileTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func newFileTest(t *testing.T, blocking bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc newFileTest(t *testing.T, blocking bool)\n```\n\nSee also issues: 22939, 24331 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestNewFileBlock",
+              "documentation": {
+                "identifier": "TestNewFileBlock",
+                "newPage": false,
+                "searchKey": "os_test.TestNewFileBlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewFileBlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewFileBlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestNewFileNonBlock",
+              "documentation": {
+                "identifier": "TestNewFileNonBlock",
+                "newPage": false,
+                "searchKey": "os_test.TestNewFileNonBlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewFileNonBlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewFileNonBlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSplitPath",
+              "documentation": {
+                "identifier": "TestSplitPath",
+                "newPage": false,
+                "searchKey": "os_test.TestSplitPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSplitPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSplitPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirAll",
+              "documentation": {
+                "identifier": "TestMkdirAll",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirAllWithSymlink",
+              "documentation": {
+                "identifier": "TestMkdirAllWithSymlink",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirAllWithSymlink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirAllWithSymlink(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirAllWithSymlink(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirAllAtSlash",
+              "documentation": {
+                "identifier": "TestMkdirAllAtSlash",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirAllAtSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirAllAtSlash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirAllAtSlash(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestEPIPE",
+              "documentation": {
+                "identifier": "TestEPIPE",
+                "newPage": false,
+                "searchKey": "os_test.TestEPIPE",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEPIPE(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEPIPE(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStdPipe",
+              "documentation": {
+                "identifier": "TestStdPipe",
+                "newPage": false,
+                "searchKey": "os_test.TestStdPipe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStdPipe(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStdPipe(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestStdPipeHelper",
+              "documentation": {
+                "identifier": "TestStdPipeHelper",
+                "newPage": false,
+                "searchKey": "os_test.TestStdPipeHelper",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStdPipeHelper(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStdPipeHelper(t *testing.T)\n```\n\nThis is a helper for TestStdPipe. It's not a test in itself. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testClosedPipeRace",
+              "documentation": {
+                "identifier": "testClosedPipeRace",
+                "newPage": false,
+                "searchKey": "os_test.testClosedPipeRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testClosedPipeRace(t *testing.T, read bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testClosedPipeRace(t *testing.T, read bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestClosedPipeRaceRead",
+              "documentation": {
+                "identifier": "TestClosedPipeRaceRead",
+                "newPage": false,
+                "searchKey": "os_test.TestClosedPipeRaceRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClosedPipeRaceRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClosedPipeRaceRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestClosedPipeRaceWrite",
+              "documentation": {
+                "identifier": "TestClosedPipeRaceWrite",
+                "newPage": false,
+                "searchKey": "os_test.TestClosedPipeRaceWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestClosedPipeRaceWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestClosedPipeRaceWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadNonblockingFd",
+              "documentation": {
+                "identifier": "TestReadNonblockingFd",
+                "newPage": false,
+                "searchKey": "os_test.TestReadNonblockingFd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadNonblockingFd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadNonblockingFd(t *testing.T)\n```\n\nIssue 20915: Reading on nonblocking fd should not return \"waiting for unsupported file type.\" Currently it returns EAGAIN; it is possible that in the future it will simply wait for data. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestCloseWithBlockingReadByNewFile",
+              "documentation": {
+                "identifier": "TestCloseWithBlockingReadByNewFile",
+                "newPage": false,
+                "searchKey": "os_test.TestCloseWithBlockingReadByNewFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCloseWithBlockingReadByNewFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCloseWithBlockingReadByNewFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestCloseWithBlockingReadByFd",
+              "documentation": {
+                "identifier": "TestCloseWithBlockingReadByFd",
+                "newPage": false,
+                "searchKey": "os_test.TestCloseWithBlockingReadByFd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCloseWithBlockingReadByFd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCloseWithBlockingReadByFd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testCloseWithBlockingRead",
+              "documentation": {
+                "identifier": "testCloseWithBlockingRead",
+                "newPage": false,
+                "searchKey": "os_test.testCloseWithBlockingRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testCloseWithBlockingRead(t *testing.T, r, w *os.File)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testCloseWithBlockingRead(t *testing.T, r, w *os.File)\n```\n\nTest that we don't let a blocking read prevent a close. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestPipeEOF",
+              "documentation": {
+                "identifier": "TestPipeEOF",
+                "newPage": false,
+                "searchKey": "os_test.TestPipeEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestPipeEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestPipeEOF(t *testing.T)\n```\n\nIssue 24164, for pipes. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFdRace",
+              "documentation": {
+                "identifier": "TestFdRace",
+                "newPage": false,
+                "searchKey": "os_test.TestFdRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFdRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFdRace(t *testing.T)\n```\n\nIssue 24481. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFdReadRace",
+              "documentation": {
+                "identifier": "TestFdReadRace",
+                "newPage": false,
+                "searchKey": "os_test.TestFdReadRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFdReadRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFdReadRace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRawConnReadWrite",
+              "documentation": {
+                "identifier": "TestRawConnReadWrite",
+                "newPage": false,
+                "searchKey": "os_test.TestRawConnReadWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRawConnReadWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRawConnReadWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#checkNamedSize",
+              "documentation": {
+                "identifier": "checkNamedSize",
+                "newPage": false,
+                "searchKey": "os_test.checkNamedSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkNamedSize(t *testing.T, path string, size int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkNamedSize(t *testing.T, path string, size int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadFile",
+              "documentation": {
+                "identifier": "TestReadFile",
+                "newPage": false,
+                "searchKey": "os_test.TestReadFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteFile",
+              "documentation": {
+                "identifier": "TestWriteFile",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadOnlyWriteFile",
+              "documentation": {
+                "identifier": "TestReadOnlyWriteFile",
+                "newPage": false,
+                "searchKey": "os_test.TestReadOnlyWriteFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadOnlyWriteFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadOnlyWriteFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadDir",
+              "documentation": {
+                "identifier": "TestReadDir",
+                "newPage": false,
+                "searchKey": "os_test.TestReadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAll",
+              "documentation": {
+                "identifier": "TestRemoveAll",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllLarge",
+              "documentation": {
+                "identifier": "TestRemoveAllLarge",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllLarge",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllLarge(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllLarge(t *testing.T)\n```\n\nTest RemoveAll on a large directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllLongPath",
+              "documentation": {
+                "identifier": "TestRemoveAllLongPath",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllLongPath",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllLongPath(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllLongPath(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllDot",
+              "documentation": {
+                "identifier": "TestRemoveAllDot",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllDot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllDot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllDot(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllDotDot",
+              "documentation": {
+                "identifier": "TestRemoveAllDotDot",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllDotDot",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllDotDot(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllDotDot(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveReadOnlyDir",
+              "documentation": {
+                "identifier": "TestRemoveReadOnlyDir",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveReadOnlyDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveReadOnlyDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveReadOnlyDir(t *testing.T)\n```\n\nIssue #29178. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllButReadOnlyAndPathError",
+              "documentation": {
+                "identifier": "TestRemoveAllButReadOnlyAndPathError",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllButReadOnlyAndPathError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllButReadOnlyAndPathError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllButReadOnlyAndPathError(t *testing.T)\n```\n\nIssue #29983. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveUnreadableDir",
+              "documentation": {
+                "identifier": "TestRemoveUnreadableDir",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveUnreadableDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveUnreadableDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveUnreadableDir(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRemoveAllWithMoreErrorThanReqSize",
+              "documentation": {
+                "identifier": "TestRemoveAllWithMoreErrorThanReqSize",
+                "newPage": false,
+                "searchKey": "os_test.TestRemoveAllWithMoreErrorThanReqSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRemoveAllWithMoreErrorThanReqSize(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRemoveAllWithMoreErrorThanReqSize(t *testing.T)\n```\n\nIssue 29921 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testStatAndLstat",
+              "documentation": {
+                "identifier": "testStatAndLstat",
+                "newPage": false,
+                "searchKey": "os_test.testStatAndLstat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStatAndLstat(t *testing.T, path string, isLink bool, statCheck, lstatCheck func(*testing.T, string, fs.FileInfo))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStatAndLstat(t *testing.T, path string, isLink bool, statCheck, lstatCheck func(*testing.T, string, fs.FileInfo))\n```\n\ntestStatAndLstat verifies that all os.Stat, os.Lstat os.File.Stat and os.Readdir work. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testIsDir",
+              "documentation": {
+                "identifier": "testIsDir",
+                "newPage": false,
+                "searchKey": "os_test.testIsDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testIsDir(t *testing.T, path string, fi fs.FileInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testIsDir(t *testing.T, path string, fi fs.FileInfo)\n```\n\ntestIsDir verifies that fi refers to directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testIsSymlink",
+              "documentation": {
+                "identifier": "testIsSymlink",
+                "newPage": false,
+                "searchKey": "os_test.testIsSymlink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testIsSymlink(t *testing.T, path string, fi fs.FileInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testIsSymlink(t *testing.T, path string, fi fs.FileInfo)\n```\n\ntestIsSymlink verifies that fi refers to symlink. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testIsFile",
+              "documentation": {
+                "identifier": "testIsFile",
+                "newPage": false,
+                "searchKey": "os_test.testIsFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testIsFile(t *testing.T, path string, fi fs.FileInfo)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testIsFile(t *testing.T, path string, fi fs.FileInfo)\n```\n\ntestIsFile verifies that fi refers to file. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testDirStats",
+              "documentation": {
+                "identifier": "testDirStats",
+                "newPage": false,
+                "searchKey": "os_test.testDirStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testDirStats(t *testing.T, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testDirStats(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testFileStats",
+              "documentation": {
+                "identifier": "testFileStats",
+                "newPage": false,
+                "searchKey": "os_test.testFileStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testFileStats(t *testing.T, path string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testFileStats(t *testing.T, path string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testSymlinkStats",
+              "documentation": {
+                "identifier": "testSymlinkStats",
+                "newPage": false,
+                "searchKey": "os_test.testSymlinkStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSymlinkStats(t *testing.T, path string, isdir bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSymlinkStats(t *testing.T, path string, isdir bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testSymlinkSameFile",
+              "documentation": {
+                "identifier": "testSymlinkSameFile",
+                "newPage": false,
+                "searchKey": "os_test.testSymlinkSameFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testSymlinkSameFile(t *testing.T, path, link string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testSymlinkSameFile(t *testing.T, path, link string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestDirAndSymlinkStats",
+              "documentation": {
+                "identifier": "TestDirAndSymlinkStats",
+                "newPage": false,
+                "searchKey": "os_test.TestDirAndSymlinkStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDirAndSymlinkStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDirAndSymlinkStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestFileAndSymlinkStats",
+              "documentation": {
+                "identifier": "TestFileAndSymlinkStats",
+                "newPage": false,
+                "searchKey": "os_test.TestFileAndSymlinkStats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFileAndSymlinkStats(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFileAndSymlinkStats(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestSymlinkWithTrailingSlash",
+              "documentation": {
+                "identifier": "TestSymlinkWithTrailingSlash",
+                "newPage": false,
+                "searchKey": "os_test.TestSymlinkWithTrailingSlash",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSymlinkWithTrailingSlash(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSymlinkWithTrailingSlash(t *testing.T)\n```\n\nsee issue 27225 for details \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestCreateTemp",
+              "documentation": {
+                "identifier": "TestCreateTemp",
+                "newPage": false,
+                "searchKey": "os_test.TestCreateTemp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateTemp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateTemp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestCreateTempPattern",
+              "documentation": {
+                "identifier": "TestCreateTempPattern",
+                "newPage": false,
+                "searchKey": "os_test.TestCreateTempPattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateTempPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateTempPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestCreateTempBadPattern",
+              "documentation": {
+                "identifier": "TestCreateTempBadPattern",
+                "newPage": false,
+                "searchKey": "os_test.TestCreateTempBadPattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCreateTempBadPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCreateTempBadPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirTemp",
+              "documentation": {
+                "identifier": "TestMkdirTemp",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirTemp",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirTemp(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirTemp(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirTempBadDir",
+              "documentation": {
+                "identifier": "TestMkdirTempBadDir",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirTempBadDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirTempBadDir(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirTempBadDir(t *testing.T)\n```\n\ntest that we return a nice error message if the dir argument to TempDir doesn't exist (or that it's empty and TempDir doesn't exist) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestMkdirTempBadPattern",
+              "documentation": {
+                "identifier": "TestMkdirTempBadPattern",
+                "newPage": false,
+                "searchKey": "os_test.TestMkdirTempBadPattern",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMkdirTempBadPattern(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMkdirTempBadPattern(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestNonpollableDeadline",
+              "documentation": {
+                "identifier": "TestNonpollableDeadline",
+                "newPage": false,
+                "searchKey": "os_test.TestNonpollableDeadline",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonpollableDeadline(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonpollableDeadline(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadTimeout",
+              "documentation": {
+                "identifier": "TestReadTimeout",
+                "newPage": false,
+                "searchKey": "os_test.TestReadTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadTimeout(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadTimeout(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadTimeoutMustNotReturn",
+              "documentation": {
+                "identifier": "TestReadTimeoutMustNotReturn",
+                "newPage": false,
+                "searchKey": "os_test.TestReadTimeoutMustNotReturn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadTimeoutMustNotReturn(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadTimeoutMustNotReturn(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteTimeout",
+              "documentation": {
+                "identifier": "TestWriteTimeout",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteTimeout",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteTimeout(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteTimeout(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteTimeoutMustNotReturn",
+              "documentation": {
+                "identifier": "TestWriteTimeoutMustNotReturn",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteTimeoutMustNotReturn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteTimeoutMustNotReturn(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteTimeoutMustNotReturn(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#timeoutReader",
+              "documentation": {
+                "identifier": "timeoutReader",
+                "newPage": false,
+                "searchKey": "os_test.timeoutReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func timeoutReader(r *os.File, d, min, max time.Duration, ch chan<- error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc timeoutReader(r *os.File, d, min, max time.Duration, ch chan<- error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadTimeoutFluctuation",
+              "documentation": {
+                "identifier": "TestReadTimeoutFluctuation",
+                "newPage": false,
+                "searchKey": "os_test.TestReadTimeoutFluctuation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadTimeoutFluctuation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadTimeoutFluctuation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#timeoutWriter",
+              "documentation": {
+                "identifier": "timeoutWriter",
+                "newPage": false,
+                "searchKey": "os_test.timeoutWriter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func timeoutWriter(w *os.File, d, min, max time.Duration, ch chan<- error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc timeoutWriter(w *os.File, d, min, max time.Duration, ch chan<- error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestWriteTimeoutFluctuation",
+              "documentation": {
+                "identifier": "TestWriteTimeoutFluctuation",
+                "newPage": false,
+                "searchKey": "os_test.TestWriteTimeoutFluctuation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteTimeoutFluctuation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteTimeoutFluctuation(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestVariousDeadlines",
+              "documentation": {
+                "identifier": "TestVariousDeadlines",
+                "newPage": false,
+                "searchKey": "os_test.TestVariousDeadlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariousDeadlines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariousDeadlines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestVariousDeadlines1Proc",
+              "documentation": {
+                "identifier": "TestVariousDeadlines1Proc",
+                "newPage": false,
+                "searchKey": "os_test.TestVariousDeadlines1Proc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariousDeadlines1Proc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariousDeadlines1Proc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestVariousDeadlines4Proc",
+              "documentation": {
+                "identifier": "TestVariousDeadlines4Proc",
+                "newPage": false,
+                "searchKey": "os_test.TestVariousDeadlines4Proc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVariousDeadlines4Proc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVariousDeadlines4Proc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#testVariousDeadlines",
+              "documentation": {
+                "identifier": "testVariousDeadlines",
+                "newPage": false,
+                "searchKey": "os_test.testVariousDeadlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testVariousDeadlines(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testVariousDeadlines(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestReadWriteDeadlineRace",
+              "documentation": {
+                "identifier": "TestReadWriteDeadlineRace",
+                "newPage": false,
+                "searchKey": "os_test.TestReadWriteDeadlineRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadWriteDeadlineRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadWriteDeadlineRace(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRacyRead",
+              "documentation": {
+                "identifier": "TestRacyRead",
+                "newPage": false,
+                "searchKey": "os_test.TestRacyRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRacyRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRacyRead(t *testing.T)\n```\n\nTestRacyRead tests that it is safe to mutate the input Read buffer immediately after cancellation has occurred. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestRacyWrite",
+              "documentation": {
+                "identifier": "TestRacyWrite",
+                "newPage": false,
+                "searchKey": "os_test.TestRacyWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRacyWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRacyWrite(t *testing.T)\n```\n\nTestRacyWrite tests that it is safe to mutate the input Write buffer immediately after cancellation has occurred. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/os_test#TestTTYClose",
+              "documentation": {
+                "identifier": "TestTTYClose",
+                "newPage": false,
+                "searchKey": "os_test.TestTTYClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTTYClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTTYClose(t *testing.T)\n```\n\nClosing a TTY while reading from it should not hang.  Issue 23943. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "pathID": "/reflect/internal/example1",
+  "documentation": {
+    "identifier": "example1",
+    "newPage": true,
+    "searchKey": "reflect/internal/example1",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package example1"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/reflect/internal/example1#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/reflect/internal/example1#MyStruct",
+              "documentation": {
+                "identifier": "MyStruct",
+                "newPage": false,
+                "searchKey": "example1.MyStruct",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type MyStruct struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype MyStruct struct {\n\tMyStructs []MyStruct\n\tMyStruct  *MyStruct\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

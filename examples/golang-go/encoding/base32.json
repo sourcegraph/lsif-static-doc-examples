@@ -1,0 +1,1393 @@
+{
+  "pathID": "/encoding/base32",
+  "documentation": {
+    "identifier": "base32",
+    "newPage": true,
+    "searchKey": "encoding/base32",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package base32"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package base32 implements base32 encoding as specified by RFC 4648. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/encoding/base32#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/base32#StdPadding",
+              "documentation": {
+                "identifier": "StdPadding",
+                "newPage": false,
+                "searchKey": "base32.StdPadding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const StdPadding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst StdPadding rune = '=' // Standard padding character\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#NoPadding",
+              "documentation": {
+                "identifier": "NoPadding",
+                "newPage": false,
+                "searchKey": "base32.NoPadding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const NoPadding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst NoPadding rune = -1 // No padding\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#encodeStd",
+              "documentation": {
+                "identifier": "encodeStd",
+                "newPage": false,
+                "searchKey": "base32.encodeStd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const encodeStd"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst encodeStd = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ234567\"\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#encodeHex",
+              "documentation": {
+                "identifier": "encodeHex",
+                "newPage": false,
+                "searchKey": "base32.encodeHex",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const encodeHex"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst encodeHex = \"0123456789ABCDEFGHIJKLMNOPQRSTUV\"\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/base32#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/base32#StdEncoding",
+              "documentation": {
+                "identifier": "StdEncoding",
+                "newPage": false,
+                "searchKey": "base32.StdEncoding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var StdEncoding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar StdEncoding = NewEncoding(encodeStd)\n```\n\nStdEncoding is the standard base32 encoding, as defined in RFC 4648. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#HexEncoding",
+              "documentation": {
+                "identifier": "HexEncoding",
+                "newPage": false,
+                "searchKey": "base32.HexEncoding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var HexEncoding"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar HexEncoding = NewEncoding(encodeHex)\n```\n\nHexEncoding is the `Extended Hex Alphabet' defined in RFC 4648. It is typically used in DNS. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#pairs",
+              "documentation": {
+                "identifier": "pairs",
+                "newPage": false,
+                "searchKey": "base32.pairs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pairs"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pairs = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#bigtest",
+              "documentation": {
+                "identifier": "bigtest",
+                "newPage": false,
+                "searchKey": "base32.bigtest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var bigtest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar bigtest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/base32#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/base32#Encoding",
+              "documentation": {
+                "identifier": "Encoding",
+                "newPage": false,
+                "searchKey": "base32.Encoding",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Encoding struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Encoding struct {\n\tencode    [32]byte\n\tdecodeMap [256]byte\n\tpadChar   rune\n}\n```\n\nAn Encoding is a radix 32 encoding/decoding scheme, defined by a 32-character alphabet. The most common is the \"base32\" encoding introduced for SASL GSSAPI and standardized in RFC 4648. The alternate \"base32hex\" encoding is used in DNSSEC. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#NewEncoding",
+                    "documentation": {
+                      "identifier": "NewEncoding",
+                      "newPage": false,
+                      "searchKey": "base32.NewEncoding",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func NewEncoding(encoder string) *Encoding"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc NewEncoding(encoder string) *Encoding\n```\n\nNewEncoding returns a new Encoding defined by the given alphabet, which must be a 32-byte string. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.WithPadding",
+                    "documentation": {
+                      "identifier": "Encoding.WithPadding",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.WithPadding",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc Encoding) WithPadding(padding rune) *Encoding"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc Encoding) WithPadding(padding rune) *Encoding\n```\n\nWithPadding creates a new encoding identical to enc except with a specified padding character, or NoPadding to disable padding. The padding character must not be '\\r' or '\\n', must not be contained in the encoding's alphabet and must be a rune equal or below '\\xff'. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.Encode",
+                    "documentation": {
+                      "identifier": "Encoding.Encode",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.Encode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) Encode(dst, src []byte)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) Encode(dst, src []byte)\n```\n\nEncode encodes src using the encoding enc, writing EncodedLen(len(src)) bytes to dst. \n\nThe encoding pads the output to a multiple of 8 bytes, so Encode is not appropriate for use on individual blocks of a large data stream. Use NewEncoder() instead. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.EncodeToString",
+                    "documentation": {
+                      "identifier": "Encoding.EncodeToString",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.EncodeToString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) EncodeToString(src []byte) string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) EncodeToString(src []byte) string\n```\n\nEncodeToString returns the base32 encoding of src. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.EncodedLen",
+                    "documentation": {
+                      "identifier": "Encoding.EncodedLen",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.EncodedLen",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) EncodedLen(n int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) EncodedLen(n int) int\n```\n\nEncodedLen returns the length in bytes of the base32 encoding of an input buffer of length n. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.decode",
+                    "documentation": {
+                      "identifier": "Encoding.decode",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.decode",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) decode(dst, src []byte) (n int, end bool, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) decode(dst, src []byte) (n int, end bool, err error)\n```\n\ndecode is like Decode but returns an additional 'end' value, which indicates if end-of-message padding was encountered and thus any additional data is an error. This method assumes that src has been stripped of all supported whitespace ('\\r' and '\\n'). \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.Decode",
+                    "documentation": {
+                      "identifier": "Encoding.Decode",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.Decode",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) Decode(dst, src []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) Decode(dst, src []byte) (n int, err error)\n```\n\nDecode decodes src using the encoding enc. It writes at most DecodedLen(len(src)) bytes to dst and returns the number of bytes written. If src contains invalid base32 data, it will return the number of bytes successfully written and CorruptInputError. New line characters (\\r and \\n) are ignored. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.DecodeString",
+                    "documentation": {
+                      "identifier": "Encoding.DecodeString",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.DecodeString",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) DecodeString(s string) ([]byte, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) DecodeString(s string) ([]byte, error)\n```\n\nDecodeString returns the bytes represented by the base32 string s. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#Encoding.DecodedLen",
+                    "documentation": {
+                      "identifier": "Encoding.DecodedLen",
+                      "newPage": false,
+                      "searchKey": "base32.Encoding.DecodedLen",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (enc *Encoding) DecodedLen(n int) int"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (enc *Encoding) DecodedLen(n int) int\n```\n\nDecodedLen returns the maximum length in bytes of the decoded data corresponding to n bytes of base32-encoded data. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "base32.encoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder struct {\n\terr  error\n\tenc  *Encoding\n\tw    io.Writer\n\tbuf  [5]byte    // buffered data waiting to be encoded\n\tnbuf int        // number of bytes in buf\n\tout  [1024]byte // output buffer\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#encoder.Write",
+                    "documentation": {
+                      "identifier": "encoder.Write",
+                      "newPage": false,
+                      "searchKey": "base32.encoder.Write",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Write(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Write(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#encoder.Close",
+                    "documentation": {
+                      "identifier": "encoder.Close",
+                      "newPage": false,
+                      "searchKey": "base32.encoder.Close",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) Close() error"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) Close() error\n```\n\nClose flushes any pending output from the encoder. It is an error to call Write after calling Close. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#CorruptInputError",
+              "documentation": {
+                "identifier": "CorruptInputError",
+                "newPage": false,
+                "searchKey": "base32.CorruptInputError",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type CorruptInputError int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype CorruptInputError int64\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#CorruptInputError.Error",
+                    "documentation": {
+                      "identifier": "CorruptInputError.Error",
+                      "newPage": false,
+                      "searchKey": "base32.CorruptInputError.Error",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e CorruptInputError) Error() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e CorruptInputError) Error() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#decoder",
+              "documentation": {
+                "identifier": "decoder",
+                "newPage": false,
+                "searchKey": "base32.decoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decoder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decoder struct {\n\terr    error\n\tenc    *Encoding\n\tr      io.Reader\n\tend    bool       // saw end of message\n\tbuf    [1024]byte // leftover input\n\tnbuf   int\n\tout    []byte // leftover decoded output\n\toutbuf [1024 / 8 * 5]byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#decoder.Read",
+                    "documentation": {
+                      "identifier": "decoder.Read",
+                      "newPage": false,
+                      "searchKey": "base32.decoder.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) Read(p []byte) (n int, err error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) Read(p []byte) (n int, err error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#newlineFilteringReader",
+              "documentation": {
+                "identifier": "newlineFilteringReader",
+                "newPage": false,
+                "searchKey": "base32.newlineFilteringReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type newlineFilteringReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype newlineFilteringReader struct {\n\twrapped io.Reader\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#newlineFilteringReader.Read",
+                    "documentation": {
+                      "identifier": "newlineFilteringReader.Read",
+                      "newPage": false,
+                      "searchKey": "base32.newlineFilteringReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (r *newlineFilteringReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (r *newlineFilteringReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#testpair",
+              "documentation": {
+                "identifier": "testpair",
+                "newPage": false,
+                "searchKey": "base32.testpair",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type testpair struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype testpair struct {\n\tdecoded, encoded string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#badReader",
+              "documentation": {
+                "identifier": "badReader",
+                "newPage": false,
+                "searchKey": "base32.badReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type badReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype badReader struct {\n\tdata   []byte\n\terrs   []error\n\tcalled int\n\tlimit  int\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/base32#badReader.Read",
+                    "documentation": {
+                      "identifier": "badReader.Read",
+                      "newPage": false,
+                      "searchKey": "base32.badReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (b *badReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (b *badReader) Read(p []byte) (int, error)\n```\n\nPopulates p with data, returns a count of the bytes written and an error.  The error returned is taken from badReader.errs, with each invocation of Read returning the next error in this slice, or io.EOF, if all errors from the slice have already been returned.  The number of bytes returned is determined by the size of the input buffer the test passes to decoder.Read and will be a multiple of 8, unless badReader.limit is non zero. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/base32#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/base32#NewEncoder",
+              "documentation": {
+                "identifier": "NewEncoder",
+                "newPage": false,
+                "searchKey": "base32.NewEncoder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewEncoder(enc *Encoding, w io.Writer) io.WriteCloser"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewEncoder(enc *Encoding, w io.Writer) io.WriteCloser\n```\n\nNewEncoder returns a new base32 stream encoder. Data written to the returned writer will be encoded using enc and then written to w. Base32 encodings operate in 5-byte blocks; when finished writing, the caller must Close the returned encoder to flush any partially written blocks. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#readEncodedData",
+              "documentation": {
+                "identifier": "readEncodedData",
+                "newPage": false,
+                "searchKey": "base32.readEncodedData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func readEncodedData(r io.Reader, buf []byte, min int, expectsPadding bool) (n int, err error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc readEncodedData(r io.Reader, buf []byte, min int, expectsPadding bool) (n int, err error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#stripNewlines",
+              "documentation": {
+                "identifier": "stripNewlines",
+                "newPage": false,
+                "searchKey": "base32.stripNewlines",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func stripNewlines(dst, src []byte) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc stripNewlines(dst, src []byte) int\n```\n\nstripNewlines removes newline characters and returns the number of non-newline characters copied to dst. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#NewDecoder",
+              "documentation": {
+                "identifier": "NewDecoder",
+                "newPage": false,
+                "searchKey": "base32.NewDecoder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func NewDecoder(enc *Encoding, r io.Reader) io.Reader"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc NewDecoder(enc *Encoding, r io.Reader) io.Reader\n```\n\nNewDecoder constructs a new base32 stream decoder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#testEqual",
+              "documentation": {
+                "identifier": "testEqual",
+                "newPage": false,
+                "searchKey": "base32.testEqual",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testEqual(t *testing.T, msg string, args ...interface{}) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testEqual(t *testing.T, msg string, args ...interface{}) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestEncode",
+              "documentation": {
+                "identifier": "TestEncode",
+                "newPage": false,
+                "searchKey": "base32.TestEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestEncoder",
+              "documentation": {
+                "identifier": "TestEncoder",
+                "newPage": false,
+                "searchKey": "base32.TestEncoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestEncoderBuffering",
+              "documentation": {
+                "identifier": "TestEncoderBuffering",
+                "newPage": false,
+                "searchKey": "base32.TestEncoderBuffering",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncoderBuffering(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncoderBuffering(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecode",
+              "documentation": {
+                "identifier": "TestDecode",
+                "newPage": false,
+                "searchKey": "base32.TestDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecode(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecode(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecoder",
+              "documentation": {
+                "identifier": "TestDecoder",
+                "newPage": false,
+                "searchKey": "base32.TestDecoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoder(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoder(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestIssue20044",
+              "documentation": {
+                "identifier": "TestIssue20044",
+                "newPage": false,
+                "searchKey": "base32.TestIssue20044",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue20044(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue20044(t *testing.T)\n```\n\nTestIssue20044 tests that decoder.Read behaves correctly when the caller supplied reader returns an error. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecoderError",
+              "documentation": {
+                "identifier": "TestDecoderError",
+                "newPage": false,
+                "searchKey": "base32.TestDecoderError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoderError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoderError(t *testing.T)\n```\n\nTestDecoderError verifies decode errors are propagated when there are no read errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestReaderEOF",
+              "documentation": {
+                "identifier": "TestReaderEOF",
+                "newPage": false,
+                "searchKey": "base32.TestReaderEOF",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReaderEOF(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReaderEOF(t *testing.T)\n```\n\nTestReaderEOF ensures decoder.Read behaves correctly when input data is exhausted. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecoderBuffering",
+              "documentation": {
+                "identifier": "TestDecoderBuffering",
+                "newPage": false,
+                "searchKey": "base32.TestDecoderBuffering",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoderBuffering(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoderBuffering(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecodeCorrupt",
+              "documentation": {
+                "identifier": "TestDecodeCorrupt",
+                "newPage": false,
+                "searchKey": "base32.TestDecodeCorrupt",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeCorrupt(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeCorrupt(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestBig",
+              "documentation": {
+                "identifier": "TestBig",
+                "newPage": false,
+                "searchKey": "base32.TestBig",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBig(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBig(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#testStringEncoding",
+              "documentation": {
+                "identifier": "testStringEncoding",
+                "newPage": false,
+                "searchKey": "base32.testStringEncoding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testStringEncoding(t *testing.T, expected string, examples []string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testStringEncoding(t *testing.T, expected string, examples []string)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestNewLineCharacters",
+              "documentation": {
+                "identifier": "TestNewLineCharacters",
+                "newPage": false,
+                "searchKey": "base32.TestNewLineCharacters",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewLineCharacters(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewLineCharacters(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecoderIssue4779",
+              "documentation": {
+                "identifier": "TestDecoderIssue4779",
+                "newPage": false,
+                "searchKey": "base32.TestDecoderIssue4779",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecoderIssue4779(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecoderIssue4779(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#BenchmarkEncode",
+              "documentation": {
+                "identifier": "BenchmarkEncode",
+                "newPage": false,
+                "searchKey": "base32.BenchmarkEncode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncode(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncode(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#BenchmarkEncodeToString",
+              "documentation": {
+                "identifier": "BenchmarkEncodeToString",
+                "newPage": false,
+                "searchKey": "base32.BenchmarkEncodeToString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkEncodeToString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkEncodeToString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#BenchmarkDecode",
+              "documentation": {
+                "identifier": "BenchmarkDecode",
+                "newPage": false,
+                "searchKey": "base32.BenchmarkDecode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecode(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecode(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#BenchmarkDecodeString",
+              "documentation": {
+                "identifier": "BenchmarkDecodeString",
+                "newPage": false,
+                "searchKey": "base32.BenchmarkDecodeString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDecodeString(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDecodeString(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestWithCustomPadding",
+              "documentation": {
+                "identifier": "TestWithCustomPadding",
+                "newPage": false,
+                "searchKey": "base32.TestWithCustomPadding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithCustomPadding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithCustomPadding(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestWithoutPadding",
+              "documentation": {
+                "identifier": "TestWithoutPadding",
+                "newPage": false,
+                "searchKey": "base32.TestWithoutPadding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithoutPadding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithoutPadding(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecodeWithPadding",
+              "documentation": {
+                "identifier": "TestDecodeWithPadding",
+                "newPage": false,
+                "searchKey": "base32.TestDecodeWithPadding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeWithPadding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeWithPadding(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecodeWithWrongPadding",
+              "documentation": {
+                "identifier": "TestDecodeWithWrongPadding",
+                "newPage": false,
+                "searchKey": "base32.TestDecodeWithWrongPadding",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeWithWrongPadding(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeWithWrongPadding(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestBufferedDecodingSameError",
+              "documentation": {
+                "identifier": "TestBufferedDecodingSameError",
+                "newPage": false,
+                "searchKey": "base32.TestBufferedDecodingSameError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBufferedDecodingSameError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBufferedDecodingSameError(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestEncodedDecodedLen",
+              "documentation": {
+                "identifier": "TestEncodedDecodedLen",
+                "newPage": false,
+                "searchKey": "base32.TestEncodedDecodedLen",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEncodedDecodedLen(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEncodedDecodedLen(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestWithoutPaddingClose",
+              "documentation": {
+                "identifier": "TestWithoutPaddingClose",
+                "newPage": false,
+                "searchKey": "base32.TestWithoutPaddingClose",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWithoutPaddingClose(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWithoutPaddingClose(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecodeReadAll",
+              "documentation": {
+                "identifier": "TestDecodeReadAll",
+                "newPage": false,
+                "searchKey": "base32.TestDecodeReadAll",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeReadAll(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeReadAll(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/base32#TestDecodeSmallBuffer",
+              "documentation": {
+                "identifier": "TestDecodeSmallBuffer",
+                "newPage": false,
+                "searchKey": "base32.TestDecodeSmallBuffer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDecodeSmallBuffer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDecodeSmallBuffer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

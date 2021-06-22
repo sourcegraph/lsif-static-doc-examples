@@ -1,0 +1,300 @@
+{
+  "pathID": "/plugin",
+  "documentation": {
+    "identifier": "plugin",
+    "newPage": true,
+    "searchKey": "plugin",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package plugin"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package plugin implements loading and symbol resolution of Go plugins. \n\nA plugin is a Go main package with exported functions and variables that has been built with: \n\n```\ngo build -buildmode=plugin\n\n```\nWhen a plugin is first opened, the init functions of all packages not already part of the program are called. The main function is not run. A plugin is only initialized once, and cannot be closed. \n\nCurrently plugins are only supported on Linux, FreeBSD, and macOS. Please report any issues. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/plugin#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/plugin#pluginsMu",
+              "documentation": {
+                "identifier": "pluginsMu",
+                "newPage": false,
+                "searchKey": "plugin.pluginsMu",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var pluginsMu"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar pluginsMu sync.Mutex\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/plugin#plugins",
+              "documentation": {
+                "identifier": "plugins",
+                "newPage": false,
+                "searchKey": "plugin.plugins",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var plugins"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar plugins map[string]*Plugin\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/plugin#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/plugin#Plugin",
+              "documentation": {
+                "identifier": "Plugin",
+                "newPage": false,
+                "searchKey": "plugin.Plugin",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Plugin struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Plugin struct {\n\tpluginpath string\n\terr        string        // set if plugin failed to load\n\tloaded     chan struct{} // closed when loaded\n\tsyms       map[string]interface{}\n}\n```\n\nPlugin is a loaded Go plugin. \n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/plugin#Open",
+                    "documentation": {
+                      "identifier": "Open",
+                      "newPage": false,
+                      "searchKey": "plugin.Open",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func Open(path string) (*Plugin, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc Open(path string) (*Plugin, error)\n```\n\nOpen opens a Go plugin. If a path has already been opened, then the existing *Plugin is returned. It is safe for concurrent use by multiple goroutines. \n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/plugin#open",
+                    "documentation": {
+                      "identifier": "open",
+                      "newPage": false,
+                      "searchKey": "plugin.open",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func open(name string) (*Plugin, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc open(name string) (*Plugin, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/plugin#Plugin.Lookup",
+                    "documentation": {
+                      "identifier": "Plugin.Lookup",
+                      "newPage": false,
+                      "searchKey": "plugin.Plugin.Lookup",
+                      "tags": [
+                        "exported"
+                      ]
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (p *Plugin) Lookup(symName string) (Symbol, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (p *Plugin) Lookup(symName string) (Symbol, error)\n```\n\nLookup searches for a symbol named symName in plugin p. A symbol is any exported variable or function. It reports an error if the symbol is not found. It is safe for concurrent use by multiple goroutines. \n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/plugin#Symbol",
+              "documentation": {
+                "identifier": "Symbol",
+                "newPage": false,
+                "searchKey": "plugin.Symbol",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Symbol interface{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Symbol interface{}\n```\n\nA Symbol is a pointer to a variable or function. \n\nFor example, a plugin defined as \n\n```\npackage main\n\nimport \"fmt\"\n\nvar V int\n\nfunc F() { fmt.Printf(\"Hello, number %d\\n\", V) }\n\n```\nmay be loaded with the Open function and then the exported package symbols V and F can be accessed \n\n```\np, err := plugin.Open(\"plugin_name.so\")\nif err != nil {\n\tpanic(err)\n}\nv, err := p.Lookup(\"V\")\nif err != nil {\n\tpanic(err)\n}\nf, err := p.Lookup(\"F\")\nif err != nil {\n\tpanic(err)\n}\n*v.(*int) = 7\nf.(func())() // prints \"Hello, number 7\"\n\n```\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/plugin#lookup",
+                    "documentation": {
+                      "identifier": "lookup",
+                      "newPage": false,
+                      "searchKey": "plugin.lookup",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func lookup(p *Plugin, symName string) (Symbol, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc lookup(p *Plugin, symName string) (Symbol, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/plugin#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/plugin#lastmoduleinit",
+              "documentation": {
+                "identifier": "lastmoduleinit",
+                "newPage": false,
+                "searchKey": "plugin.lastmoduleinit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc lastmoduleinit() (pluginpath string, syms map[string]interface{}, errstr string)\n```\n\nlastmoduleinit is defined in package runtime \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/plugin#doInit",
+              "documentation": {
+                "identifier": "doInit",
+                "newPage": false,
+                "searchKey": "plugin.doInit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doInit(t unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doInit(t unsafe.Pointer)\n```\n\ndoInit is defined in package runtime \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

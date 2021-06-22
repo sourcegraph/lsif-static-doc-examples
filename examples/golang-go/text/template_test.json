@@ -1,0 +1,241 @@
+{
+  "pathID": "/text/template_test",
+  "documentation": {
+    "identifier": "template_test",
+    "newPage": true,
+    "searchKey": "text/template_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package template_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/text/template_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/template_test#templateFile",
+              "documentation": {
+                "identifier": "templateFile",
+                "newPage": false,
+                "searchKey": "template_test.templateFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type templateFile struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype templateFile struct {\n\tname     string\n\tcontents string\n}\n```\n\ntemplateFile defines the contents of a template to be stored in a file, for testing. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/text/template_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate",
+              "documentation": {
+                "identifier": "ExampleTemplate",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate_block",
+              "documentation": {
+                "identifier": "ExampleTemplate_block",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_block",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_block()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_block()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#createTestDir",
+              "documentation": {
+                "identifier": "createTestDir",
+                "newPage": false,
+                "searchKey": "template_test.createTestDir",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func createTestDir(files []templateFile) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc createTestDir(files []templateFile) string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate_glob",
+              "documentation": {
+                "identifier": "ExampleTemplate_glob",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_glob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_glob()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_glob()\n```\n\nHere we demonstrate loading a set of templates from a directory. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate_helpers",
+              "documentation": {
+                "identifier": "ExampleTemplate_helpers",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_helpers",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_helpers()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_helpers()\n```\n\nThis example demonstrates one way to share some templates and use them in different contexts. In this variant we add multiple driver templates by hand to an existing bundle of templates. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate_share",
+              "documentation": {
+                "identifier": "ExampleTemplate_share",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_share",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_share()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_share()\n```\n\nThis example demonstrates how to use one group of driver templates with distinct sets of helper templates. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#ExampleTemplate_func",
+              "documentation": {
+                "identifier": "ExampleTemplate_func",
+                "newPage": false,
+                "searchKey": "template_test.ExampleTemplate_func",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTemplate_func()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTemplate_func()\n```\n\nThis example demonstrates a custom function to process template text. It installs the strings.Title function and uses it to Make Title Text Look Good In Our Template's Output. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/text/template_test#TestLinkerGC",
+              "documentation": {
+                "identifier": "TestLinkerGC",
+                "newPage": false,
+                "searchKey": "template_test.TestLinkerGC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLinkerGC(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLinkerGC(t *testing.T)\n```\n\nIssue 36021: verify that text/template doesn't prevent the linker from removing unused methods. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

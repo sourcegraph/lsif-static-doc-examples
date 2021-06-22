@@ -1,0 +1,5303 @@
+{
+  "pathID": "/time_test",
+  "documentation": {
+    "identifier": "time_test",
+    "newPage": true,
+    "searchKey": "time_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package time_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/time_test#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/time_test#windowsInaccuracy",
+              "documentation": {
+                "identifier": "windowsInaccuracy",
+                "newPage": false,
+                "searchKey": "time_test.windowsInaccuracy",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const windowsInaccuracy"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst windowsInaccuracy = 17 * Millisecond\n```\n\nGo runtime uses different Windows timers for time.Now and sleeping. These can tick at different frequencies and can arrive out of sync. The effect can be seen, for example, as time.Sleep(100ms) is actually shorter then 100ms when measured as difference between time.Now before and after time.Sleep call. This was observed on Windows XP SP3 (windows/386). windowsInaccuracy is to ignore such errors. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#unixToZero",
+              "documentation": {
+                "identifier": "unixToZero",
+                "newPage": false,
+                "searchKey": "time_test.unixToZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const unixToZero"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst unixToZero = -978307200 + 63113904000\n```\n\nThe time routines provide no way to get absolute time (seconds since zero), but we need it to compute the right answer for bizarre roundings like \"to the nearest 3 ns\". Compute as t - year1 = (t - 1970) + (1970 - 2001) + (2001 - 1). t - 1970 is returned by Unix and Nanosecond. 1970 - 2001 is -(31*365+8)*86400 = -978307200 seconds. 2001 - 1 is 2000*365.2425*86400 = 63113904000 seconds. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#minDuration",
+              "documentation": {
+                "identifier": "minDuration",
+                "newPage": false,
+                "searchKey": "time_test.minDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const minDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst minDuration Duration = -1 << 63\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#maxDuration",
+              "documentation": {
+                "identifier": "maxDuration",
+                "newPage": false,
+                "searchKey": "time_test.maxDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const maxDuration"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst maxDuration Duration = 1<<63 - 1\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/time_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/time_test#c",
+              "documentation": {
+                "identifier": "c",
+                "newPage": false,
+                "searchKey": "time_test.c",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var c"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar c chan int\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#nextStdChunkTests",
+              "documentation": {
+                "identifier": "nextStdChunkTests",
+                "newPage": false,
+                "searchKey": "time_test.nextStdChunkTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nextStdChunkTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nextStdChunkTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#rfc3339Formats",
+              "documentation": {
+                "identifier": "rfc3339Formats",
+                "newPage": false,
+                "searchKey": "time_test.rfc3339Formats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rfc3339Formats"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rfc3339Formats = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#formatTests",
+              "documentation": {
+                "identifier": "formatTests",
+                "newPage": false,
+                "searchKey": "time_test.formatTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var formatTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar formatTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#goStringTests",
+              "documentation": {
+                "identifier": "goStringTests",
+                "newPage": false,
+                "searchKey": "time_test.goStringTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var goStringTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar goStringTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parseTests",
+              "documentation": {
+                "identifier": "parseTests",
+                "newPage": false,
+                "searchKey": "time_test.parseTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#dayOutOfRangeTests",
+              "documentation": {
+                "identifier": "dayOutOfRangeTests",
+                "newPage": false,
+                "searchKey": "time_test.dayOutOfRangeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dayOutOfRangeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dayOutOfRangeTests = ...\n```\n\nAll parsed with ANSIC. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#rubyTests",
+              "documentation": {
+                "identifier": "rubyTests",
+                "newPage": false,
+                "searchKey": "time_test.rubyTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var rubyTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar rubyTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parseTimeZoneTests",
+              "documentation": {
+                "identifier": "parseTimeZoneTests",
+                "newPage": false,
+                "searchKey": "time_test.parseTimeZoneTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseTimeZoneTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseTimeZoneTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parseErrorTests",
+              "documentation": {
+                "identifier": "parseErrorTests",
+                "newPage": false,
+                "searchKey": "time_test.parseErrorTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseErrorTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseErrorTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#secondsTimeZoneOffsetTests",
+              "documentation": {
+                "identifier": "secondsTimeZoneOffsetTests",
+                "newPage": false,
+                "searchKey": "time_test.secondsTimeZoneOffsetTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var secondsTimeZoneOffsetTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar secondsTimeZoneOffsetTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#monthOutOfRangeTests",
+              "documentation": {
+                "identifier": "monthOutOfRangeTests",
+                "newPage": false,
+                "searchKey": "time_test.monthOutOfRangeTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var monthOutOfRangeTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar monthOutOfRangeTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#monotonicStringTests",
+              "documentation": {
+                "identifier": "monotonicStringTests",
+                "newPage": false,
+                "searchKey": "time_test.monotonicStringTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var monotonicStringTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar monotonicStringTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#slots",
+              "documentation": {
+                "identifier": "slots",
+                "newPage": false,
+                "searchKey": "time_test.slots",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slots"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slots = []int{5, 3, 6, 6, 6, 1, 1, 2, 7, 9, 4, 8, 0}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#utctests",
+              "documentation": {
+                "identifier": "utctests",
+                "newPage": false,
+                "searchKey": "time_test.utctests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var utctests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar utctests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#nanoutctests",
+              "documentation": {
+                "identifier": "nanoutctests",
+                "newPage": false,
+                "searchKey": "time_test.nanoutctests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nanoutctests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nanoutctests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#localtests",
+              "documentation": {
+                "identifier": "localtests",
+                "newPage": false,
+                "searchKey": "time_test.localtests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var localtests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar localtests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#nanolocaltests",
+              "documentation": {
+                "identifier": "nanolocaltests",
+                "newPage": false,
+                "searchKey": "time_test.nanolocaltests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nanolocaltests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nanolocaltests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#truncateRoundTests",
+              "documentation": {
+                "identifier": "truncateRoundTests",
+                "newPage": false,
+                "searchKey": "time_test.truncateRoundTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var truncateRoundTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar truncateRoundTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#isoWeekTests",
+              "documentation": {
+                "identifier": "isoWeekTests",
+                "newPage": false,
+                "searchKey": "time_test.isoWeekTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var isoWeekTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar isoWeekTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#yearDayTests",
+              "documentation": {
+                "identifier": "yearDayTests",
+                "newPage": false,
+                "searchKey": "time_test.yearDayTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var yearDayTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar yearDayTests = ...\n```\n\nTest YearDay in several different scenarios and corner cases \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#yearDayLocations",
+              "documentation": {
+                "identifier": "yearDayLocations",
+                "newPage": false,
+                "searchKey": "time_test.yearDayLocations",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var yearDayLocations"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar yearDayLocations = ...\n```\n\nCheck to see if YearDay is location sensitive \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#durationTests",
+              "documentation": {
+                "identifier": "durationTests",
+                "newPage": false,
+                "searchKey": "time_test.durationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var durationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar durationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#dateTests",
+              "documentation": {
+                "identifier": "dateTests",
+                "newPage": false,
+                "searchKey": "time_test.dateTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var dateTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar dateTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#addDateTests",
+              "documentation": {
+                "identifier": "addDateTests",
+                "newPage": false,
+                "searchKey": "time_test.addDateTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var addDateTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar addDateTests = ...\n```\n\nSeveral ways of getting from Fri Nov 18 7:56:35 PST 2011 to Thu Mar 19 7:56:35 PST 2016 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#daysInTests",
+              "documentation": {
+                "identifier": "daysInTests",
+                "newPage": false,
+                "searchKey": "time_test.daysInTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var daysInTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar daysInTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#gobTests",
+              "documentation": {
+                "identifier": "gobTests",
+                "newPage": false,
+                "searchKey": "time_test.gobTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var gobTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar gobTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#invalidEncodingTests",
+              "documentation": {
+                "identifier": "invalidEncodingTests",
+                "newPage": false,
+                "searchKey": "time_test.invalidEncodingTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var invalidEncodingTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar invalidEncodingTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#notEncodableTimes",
+              "documentation": {
+                "identifier": "notEncodableTimes",
+                "newPage": false,
+                "searchKey": "time_test.notEncodableTimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notEncodableTimes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notEncodableTimes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#jsonTests",
+              "documentation": {
+                "identifier": "jsonTests",
+                "newPage": false,
+                "searchKey": "time_test.jsonTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var jsonTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar jsonTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#notJSONEncodableTimes",
+              "documentation": {
+                "identifier": "notJSONEncodableTimes",
+                "newPage": false,
+                "searchKey": "time_test.notJSONEncodableTimes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var notJSONEncodableTimes"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar notJSONEncodableTimes = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parseDurationTests",
+              "documentation": {
+                "identifier": "parseDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.parseDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parseDurationErrorTests",
+              "documentation": {
+                "identifier": "parseDurationErrorTests",
+                "newPage": false,
+                "searchKey": "time_test.parseDurationErrorTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var parseDurationErrorTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar parseDurationErrorTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#t",
+              "documentation": {
+                "identifier": "t",
+                "newPage": false,
+                "searchKey": "time_test.t",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var t"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar t Time\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#u",
+              "documentation": {
+                "identifier": "u",
+                "newPage": false,
+                "searchKey": "time_test.u",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var u"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar u int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#mallocTest",
+              "documentation": {
+                "identifier": "mallocTest",
+                "newPage": false,
+                "searchKey": "time_test.mallocTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var mallocTest"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar mallocTest = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#subTests",
+              "documentation": {
+                "identifier": "subTests",
+                "newPage": false,
+                "searchKey": "time_test.subTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var subTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar subTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#nsDurationTests",
+              "documentation": {
+                "identifier": "nsDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.nsDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var nsDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar nsDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#usDurationTests",
+              "documentation": {
+                "identifier": "usDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.usDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var usDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar usDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#msDurationTests",
+              "documentation": {
+                "identifier": "msDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.msDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var msDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar msDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#secDurationTests",
+              "documentation": {
+                "identifier": "secDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.secDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var secDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar secDurationTests = []struct {\n\td    Duration\n\twant float64\n}{\n\t{Duration(300000000), 0.3},\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#minDurationTests",
+              "documentation": {
+                "identifier": "minDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.minDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var minDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar minDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#hourDurationTests",
+              "documentation": {
+                "identifier": "hourDurationTests",
+                "newPage": false,
+                "searchKey": "time_test.hourDurationTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var hourDurationTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar hourDurationTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#durationTruncateTests",
+              "documentation": {
+                "identifier": "durationTruncateTests",
+                "newPage": false,
+                "searchKey": "time_test.durationTruncateTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var durationTruncateTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar durationTruncateTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#durationRoundTests",
+              "documentation": {
+                "identifier": "durationRoundTests",
+                "newPage": false,
+                "searchKey": "time_test.durationRoundTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var durationRoundTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar durationRoundTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#defaultLocTests",
+              "documentation": {
+                "identifier": "defaultLocTests",
+                "newPage": false,
+                "searchKey": "time_test.defaultLocTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var defaultLocTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar defaultLocTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#zones",
+              "documentation": {
+                "identifier": "zones",
+                "newPage": false,
+                "searchKey": "time_test.zones",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var zones"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar zones = []string{\n\t\"Asia/Jerusalem\",\n\t\"America/Los_Angeles\",\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#slimTests",
+              "documentation": {
+                "identifier": "slimTests",
+                "newPage": false,
+                "searchKey": "time_test.slimTests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var slimTests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar slimTests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/time_test#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/time_test#TimeFormatTest",
+              "documentation": {
+                "identifier": "TimeFormatTest",
+                "newPage": false,
+                "searchKey": "time_test.TimeFormatTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TimeFormatTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TimeFormatTest struct {\n\ttime           Time\n\tformattedValue string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#FormatTest",
+              "documentation": {
+                "identifier": "FormatTest",
+                "newPage": false,
+                "searchKey": "time_test.FormatTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type FormatTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype FormatTest struct {\n\tname   string\n\tformat string\n\tresult string\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ParseTest",
+              "documentation": {
+                "identifier": "ParseTest",
+                "newPage": false,
+                "searchKey": "time_test.ParseTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParseTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParseTest struct {\n\tname       string\n\tformat     string\n\tvalue      string\n\thasTZ      bool // contains a time zone\n\thasWD      bool // contains a weekday\n\tyearSign   int  // sign of year, -1 indicates the year is not present in the format\n\tfracDigits int  // number of digits of fractional second\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ParseTimeZoneTest",
+              "documentation": {
+                "identifier": "ParseTimeZoneTest",
+                "newPage": false,
+                "searchKey": "time_test.ParseTimeZoneTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParseTimeZoneTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParseTimeZoneTest struct {\n\tvalue  string\n\tlength int\n\tok     bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ParseErrorTest",
+              "documentation": {
+                "identifier": "ParseErrorTest",
+                "newPage": false,
+                "searchKey": "time_test.ParseErrorTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ParseErrorTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ParseErrorTest struct {\n\tformat string\n\tvalue  string\n\texpect string // must appear within the error\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#SecondsTimeZoneOffsetTest",
+              "documentation": {
+                "identifier": "SecondsTimeZoneOffsetTest",
+                "newPage": false,
+                "searchKey": "time_test.SecondsTimeZoneOffsetTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type SecondsTimeZoneOffsetTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype SecondsTimeZoneOffsetTest struct {\n\tformat         string\n\tvalue          string\n\texpectedoffset int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#afterResult",
+              "documentation": {
+                "identifier": "afterResult",
+                "newPage": false,
+                "searchKey": "time_test.afterResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type afterResult struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype afterResult struct {\n\tslot int\n\tt    Time\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#parsedTime",
+              "documentation": {
+                "identifier": "parsedTime",
+                "newPage": false,
+                "searchKey": "time_test.parsedTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type parsedTime struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype parsedTime struct {\n\tYear                 int\n\tMonth                Month\n\tDay                  int\n\tHour, Minute, Second int // 15:04:05 is 15, 4, 5.\n\tNanosecond           int // Fractional second.\n\tWeekday              Weekday\n\tZoneOffset           int    // seconds east of UTC, e.g. -7*60*60 for -0700\n\tZone                 string // e.g., \"MST\"\n}\n```\n\nparsedTime is the struct representing a parsed time value. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TimeTest",
+              "documentation": {
+                "identifier": "TimeTest",
+                "newPage": false,
+                "searchKey": "time_test.TimeTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type TimeTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype TimeTest struct {\n\tseconds int64\n\tgolden  parsedTime\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ISOWeekTest",
+              "documentation": {
+                "identifier": "ISOWeekTest",
+                "newPage": false,
+                "searchKey": "time_test.ISOWeekTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ISOWeekTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ISOWeekTest struct {\n\tyear       int // year\n\tmonth, day int // month and day\n\tyex        int // expected year\n\twex        int // expected week\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#YearDayTest",
+              "documentation": {
+                "identifier": "YearDayTest",
+                "newPage": false,
+                "searchKey": "time_test.YearDayTest",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type YearDayTest struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype YearDayTest struct {\n\tyear, month, day int\n\tyday             int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/time_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/time_test#expensiveCall",
+              "documentation": {
+                "identifier": "expensiveCall",
+                "newPage": false,
+                "searchKey": "time_test.expensiveCall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func expensiveCall()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc expensiveCall()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration",
+              "documentation": {
+                "identifier": "ExampleDuration",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Round",
+              "documentation": {
+                "identifier": "ExampleDuration_Round",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Round",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Round()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Round()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_String",
+              "documentation": {
+                "identifier": "ExampleDuration_String",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_String",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_String()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_String()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Truncate",
+              "documentation": {
+                "identifier": "ExampleDuration_Truncate",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Truncate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Truncate()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Truncate()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleParseDuration",
+              "documentation": {
+                "identifier": "ExampleParseDuration",
+                "newPage": false,
+                "searchKey": "time_test.ExampleParseDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleParseDuration()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleParseDuration()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Hours",
+              "documentation": {
+                "identifier": "ExampleDuration_Hours",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Hours",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Hours()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Hours()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Microseconds",
+              "documentation": {
+                "identifier": "ExampleDuration_Microseconds",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Microseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Microseconds()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Microseconds()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Milliseconds",
+              "documentation": {
+                "identifier": "ExampleDuration_Milliseconds",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Milliseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Milliseconds()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Milliseconds()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Minutes",
+              "documentation": {
+                "identifier": "ExampleDuration_Minutes",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Minutes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Minutes()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Minutes()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Nanoseconds",
+              "documentation": {
+                "identifier": "ExampleDuration_Nanoseconds",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Nanoseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Nanoseconds()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Nanoseconds()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDuration_Seconds",
+              "documentation": {
+                "identifier": "ExampleDuration_Seconds",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDuration_Seconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDuration_Seconds()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDuration_Seconds()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#handle",
+              "documentation": {
+                "identifier": "handle",
+                "newPage": false,
+                "searchKey": "time_test.handle",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func handle(int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc handle(int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleAfter",
+              "documentation": {
+                "identifier": "ExampleAfter",
+                "newPage": false,
+                "searchKey": "time_test.ExampleAfter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleAfter()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleAfter()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleSleep",
+              "documentation": {
+                "identifier": "ExampleSleep",
+                "newPage": false,
+                "searchKey": "time_test.ExampleSleep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleSleep()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleSleep()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#statusUpdate",
+              "documentation": {
+                "identifier": "statusUpdate",
+                "newPage": false,
+                "searchKey": "time_test.statusUpdate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func statusUpdate() string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc statusUpdate() string\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTick",
+              "documentation": {
+                "identifier": "ExampleTick",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTick",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTick()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTick()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleMonth",
+              "documentation": {
+                "identifier": "ExampleMonth",
+                "newPage": false,
+                "searchKey": "time_test.ExampleMonth",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleMonth()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleMonth()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleDate",
+              "documentation": {
+                "identifier": "ExampleDate",
+                "newPage": false,
+                "searchKey": "time_test.ExampleDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleDate()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleDate()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleNewTicker",
+              "documentation": {
+                "identifier": "ExampleNewTicker",
+                "newPage": false,
+                "searchKey": "time_test.ExampleNewTicker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNewTicker()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNewTicker()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Format",
+              "documentation": {
+                "identifier": "ExampleTime_Format",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Format",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Format()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Format()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Format_pad",
+              "documentation": {
+                "identifier": "ExampleTime_Format_pad",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Format_pad",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Format_pad()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Format_pad()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleParse",
+              "documentation": {
+                "identifier": "ExampleParse",
+                "newPage": false,
+                "searchKey": "time_test.ExampleParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleParse()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleParse()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleParseInLocation",
+              "documentation": {
+                "identifier": "ExampleParseInLocation",
+                "newPage": false,
+                "searchKey": "time_test.ExampleParseInLocation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleParseInLocation()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleParseInLocation()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Unix",
+              "documentation": {
+                "identifier": "ExampleTime_Unix",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Unix",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Unix()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Unix()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Round",
+              "documentation": {
+                "identifier": "ExampleTime_Round",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Round",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Round()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Round()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Truncate",
+              "documentation": {
+                "identifier": "ExampleTime_Truncate",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Truncate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Truncate()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Truncate()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleLoadLocation",
+              "documentation": {
+                "identifier": "ExampleLoadLocation",
+                "newPage": false,
+                "searchKey": "time_test.ExampleLoadLocation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLoadLocation()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLoadLocation()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleLocation",
+              "documentation": {
+                "identifier": "ExampleLocation",
+                "newPage": false,
+                "searchKey": "time_test.ExampleLocation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleLocation()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleLocation()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Add",
+              "documentation": {
+                "identifier": "ExampleTime_Add",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Add",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Add()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Add()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_AddDate",
+              "documentation": {
+                "identifier": "ExampleTime_AddDate",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_AddDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_AddDate()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_AddDate()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_After",
+              "documentation": {
+                "identifier": "ExampleTime_After",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_After",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_After()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_After()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Before",
+              "documentation": {
+                "identifier": "ExampleTime_Before",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Before",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Before()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Before()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Date",
+              "documentation": {
+                "identifier": "ExampleTime_Date",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Date",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Date()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Date()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Day",
+              "documentation": {
+                "identifier": "ExampleTime_Day",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Day",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Day()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Day()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Equal",
+              "documentation": {
+                "identifier": "ExampleTime_Equal",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Equal()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Equal()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_String",
+              "documentation": {
+                "identifier": "ExampleTime_String",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_String",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_String()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_String()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_Sub",
+              "documentation": {
+                "identifier": "ExampleTime_Sub",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_Sub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_Sub()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_Sub()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleTime_AppendFormat",
+              "documentation": {
+                "identifier": "ExampleTime_AppendFormat",
+                "newPage": false,
+                "searchKey": "time_test.ExampleTime_AppendFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleTime_AppendFormat()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleTime_AppendFormat()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#ExampleFixedZone",
+              "documentation": {
+                "identifier": "ExampleFixedZone",
+                "newPage": false,
+                "searchKey": "time_test.ExampleFixedZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleFixedZone()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleFixedZone()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNextStdChunk",
+              "documentation": {
+                "identifier": "TestNextStdChunk",
+                "newPage": false,
+                "searchKey": "time_test.TestNextStdChunk",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNextStdChunk(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNextStdChunk(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestRFC3339Conversion",
+              "documentation": {
+                "identifier": "TestRFC3339Conversion",
+                "newPage": false,
+                "searchKey": "time_test.TestRFC3339Conversion",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRFC3339Conversion(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRFC3339Conversion(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFormat",
+              "documentation": {
+                "identifier": "TestFormat",
+                "newPage": false,
+                "searchKey": "time_test.TestFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormat(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormat(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestGoString",
+              "documentation": {
+                "identifier": "TestGoString",
+                "newPage": false,
+                "searchKey": "time_test.TestGoString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestGoString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestGoString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFormatSingleDigits",
+              "documentation": {
+                "identifier": "TestFormatSingleDigits",
+                "newPage": false,
+                "searchKey": "time_test.TestFormatSingleDigits",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatSingleDigits(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatSingleDigits(t *testing.T)\n```\n\nissue 12440. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFormatShortYear",
+              "documentation": {
+                "identifier": "TestFormatShortYear",
+                "newPage": false,
+                "searchKey": "time_test.TestFormatShortYear",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatShortYear(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatShortYear(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParse",
+              "documentation": {
+                "identifier": "TestParse",
+                "newPage": false,
+                "searchKey": "time_test.TestParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseDayOutOfRange",
+              "documentation": {
+                "identifier": "TestParseDayOutOfRange",
+                "newPage": false,
+                "searchKey": "time_test.TestParseDayOutOfRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseDayOutOfRange(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseDayOutOfRange(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseInLocation",
+              "documentation": {
+                "identifier": "TestParseInLocation",
+                "newPage": false,
+                "searchKey": "time_test.TestParseInLocation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseInLocation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseInLocation(t *testing.T)\n```\n\nTestParseInLocation checks that the Parse and ParseInLocation functions do not get confused by the fact that AST (Arabia Standard Time) and AST (Atlantic Standard Time) are different time zones, even though they have the same abbreviation. \n\nICANN has been slowly phasing out invented abbreviation in favor of numeric time zones (for example, the Asia/Baghdad time zone abbreviation got changed from AST to +03 in the 2017a tzdata release); but we still want to make sure that the time package does not get confused on systems with slightly older tzdata packages. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLoadLocationZipFile",
+              "documentation": {
+                "identifier": "TestLoadLocationZipFile",
+                "newPage": false,
+                "searchKey": "time_test.TestLoadLocationZipFile",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadLocationZipFile(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadLocationZipFile(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestRubyParse",
+              "documentation": {
+                "identifier": "TestRubyParse",
+                "newPage": false,
+                "searchKey": "time_test.TestRubyParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestRubyParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestRubyParse(t *testing.T)\n```\n\nProblematic time zone format needs special tests. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#checkTime",
+              "documentation": {
+                "identifier": "checkTime",
+                "newPage": false,
+                "searchKey": "time_test.checkTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkTime(time Time, test *ParseTest, t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkTime(time Time, test *ParseTest, t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFormatAndParse",
+              "documentation": {
+                "identifier": "TestFormatAndParse",
+                "newPage": false,
+                "searchKey": "time_test.TestFormatAndParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatAndParse(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatAndParse(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseTimeZone",
+              "documentation": {
+                "identifier": "TestParseTimeZone",
+                "newPage": false,
+                "searchKey": "time_test.TestParseTimeZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseTimeZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseTimeZone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseErrors",
+              "documentation": {
+                "identifier": "TestParseErrors",
+                "newPage": false,
+                "searchKey": "time_test.TestParseErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNoonIs12PM",
+              "documentation": {
+                "identifier": "TestNoonIs12PM",
+                "newPage": false,
+                "searchKey": "time_test.TestNoonIs12PM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNoonIs12PM(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNoonIs12PM(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMidnightIs12AM",
+              "documentation": {
+                "identifier": "TestMidnightIs12AM",
+                "newPage": false,
+                "searchKey": "time_test.TestMidnightIs12AM",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMidnightIs12AM(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMidnightIs12AM(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#Test12PMIsNoon",
+              "documentation": {
+                "identifier": "Test12PMIsNoon",
+                "newPage": false,
+                "searchKey": "time_test.Test12PMIsNoon",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test12PMIsNoon(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test12PMIsNoon(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#Test12AMIsMidnight",
+              "documentation": {
+                "identifier": "Test12AMIsMidnight",
+                "newPage": false,
+                "searchKey": "time_test.Test12AMIsMidnight",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Test12AMIsMidnight(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Test12AMIsMidnight(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMissingZone",
+              "documentation": {
+                "identifier": "TestMissingZone",
+                "newPage": false,
+                "searchKey": "time_test.TestMissingZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMissingZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMissingZone(t *testing.T)\n```\n\nCheck that a time without a Zone still produces a (numeric) time zone when formatted with MST as a requested zone. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMinutesInTimeZone",
+              "documentation": {
+                "identifier": "TestMinutesInTimeZone",
+                "newPage": false,
+                "searchKey": "time_test.TestMinutesInTimeZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMinutesInTimeZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMinutesInTimeZone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseSecondsInTimeZone",
+              "documentation": {
+                "identifier": "TestParseSecondsInTimeZone",
+                "newPage": false,
+                "searchKey": "time_test.TestParseSecondsInTimeZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseSecondsInTimeZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseSecondsInTimeZone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFormatSecondsInTimeZone",
+              "documentation": {
+                "identifier": "TestFormatSecondsInTimeZone",
+                "newPage": false,
+                "searchKey": "time_test.TestFormatSecondsInTimeZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFormatSecondsInTimeZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFormatSecondsInTimeZone(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestUnderscoreTwoThousand",
+              "documentation": {
+                "identifier": "TestUnderscoreTwoThousand",
+                "newPage": false,
+                "searchKey": "time_test.TestUnderscoreTwoThousand",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnderscoreTwoThousand(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnderscoreTwoThousand(t *testing.T)\n```\n\nIssue 11334. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestStd0xParseError",
+              "documentation": {
+                "identifier": "TestStd0xParseError",
+                "newPage": false,
+                "searchKey": "time_test.TestStd0xParseError",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestStd0xParseError(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestStd0xParseError(t *testing.T)\n```\n\nIssue 29918, 29916 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseMonthOutOfRange",
+              "documentation": {
+                "identifier": "TestParseMonthOutOfRange",
+                "newPage": false,
+                "searchKey": "time_test.TestParseMonthOutOfRange",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseMonthOutOfRange(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseMonthOutOfRange(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseYday",
+              "documentation": {
+                "identifier": "TestParseYday",
+                "newPage": false,
+                "searchKey": "time_test.TestParseYday",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseYday(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseYday(t *testing.T)\n```\n\nIssue 37387. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestQuote",
+              "documentation": {
+                "identifier": "TestQuote",
+                "newPage": false,
+                "searchKey": "time_test.TestQuote",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestQuote(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestQuote(t *testing.T)\n```\n\nIssue 45391. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestHasMonotonicClock",
+              "documentation": {
+                "identifier": "TestHasMonotonicClock",
+                "newPage": false,
+                "searchKey": "time_test.TestHasMonotonicClock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestHasMonotonicClock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestHasMonotonicClock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMonotonicAdd",
+              "documentation": {
+                "identifier": "TestMonotonicAdd",
+                "newPage": false,
+                "searchKey": "time_test.TestMonotonicAdd",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonotonicAdd(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonotonicAdd(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMonotonicSub",
+              "documentation": {
+                "identifier": "TestMonotonicSub",
+                "newPage": false,
+                "searchKey": "time_test.TestMonotonicSub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonotonicSub(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonotonicSub(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMonotonicOverflow",
+              "documentation": {
+                "identifier": "TestMonotonicOverflow",
+                "newPage": false,
+                "searchKey": "time_test.TestMonotonicOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonotonicOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonotonicOverflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMonotonicString",
+              "documentation": {
+                "identifier": "TestMonotonicString",
+                "newPage": false,
+                "searchKey": "time_test.TestMonotonicString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMonotonicString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMonotonicString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSleep",
+              "documentation": {
+                "identifier": "TestSleep",
+                "newPage": false,
+                "searchKey": "time_test.TestSleep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSleep(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSleep(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfterFunc",
+              "documentation": {
+                "identifier": "TestAfterFunc",
+                "newPage": false,
+                "searchKey": "time_test.TestAfterFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfterFunc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfterFunc(t *testing.T)\n```\n\nTest the basic function calling behavior. Correct queueing behavior is tested elsewhere, since After and AfterFunc share the same code. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfterStress",
+              "documentation": {
+                "identifier": "TestAfterStress",
+                "newPage": false,
+                "searchKey": "time_test.TestAfterStress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfterStress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfterStress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#benchmark",
+              "documentation": {
+                "identifier": "benchmark",
+                "newPage": false,
+                "searchKey": "time_test.benchmark",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func benchmark(b *testing.B, bench func(n int))"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc benchmark(b *testing.B, bench func(n int))\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkAfterFunc",
+              "documentation": {
+                "identifier": "BenchmarkAfterFunc",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkAfterFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAfterFunc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAfterFunc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkAfter",
+              "documentation": {
+                "identifier": "BenchmarkAfter",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkAfter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkAfter(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkAfter(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkStop",
+              "documentation": {
+                "identifier": "BenchmarkStop",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStop(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStop(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkSimultaneousAfterFunc",
+              "documentation": {
+                "identifier": "BenchmarkSimultaneousAfterFunc",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkSimultaneousAfterFunc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSimultaneousAfterFunc(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSimultaneousAfterFunc(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkStartStop",
+              "documentation": {
+                "identifier": "BenchmarkStartStop",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkStartStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStartStop(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStartStop(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkReset",
+              "documentation": {
+                "identifier": "BenchmarkReset",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReset(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReset(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkSleep",
+              "documentation": {
+                "identifier": "BenchmarkSleep",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkSleep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSleep(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSleep(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfter",
+              "documentation": {
+                "identifier": "TestAfter",
+                "newPage": false,
+                "searchKey": "time_test.TestAfter",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfter(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfter(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfterTick",
+              "documentation": {
+                "identifier": "TestAfterTick",
+                "newPage": false,
+                "searchKey": "time_test.TestAfterTick",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfterTick(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfterTick(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfterStop",
+              "documentation": {
+                "identifier": "TestAfterStop",
+                "newPage": false,
+                "searchKey": "time_test.TestAfterStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfterStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfterStop(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAfterQueuing",
+              "documentation": {
+                "identifier": "TestAfterQueuing",
+                "newPage": false,
+                "searchKey": "time_test.TestAfterQueuing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAfterQueuing(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAfterQueuing(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#await",
+              "documentation": {
+                "identifier": "await",
+                "newPage": false,
+                "searchKey": "time_test.await",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func await(slot int, result chan<- afterResult, ac <-chan Time)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc await(slot int, result chan<- afterResult, ac <-chan Time)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#testAfterQueuing",
+              "documentation": {
+                "identifier": "testAfterQueuing",
+                "newPage": false,
+                "searchKey": "time_test.testAfterQueuing",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testAfterQueuing(delta Duration) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testAfterQueuing(delta Duration) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTimerStopStress",
+              "documentation": {
+                "identifier": "TestTimerStopStress",
+                "newPage": false,
+                "searchKey": "time_test.TestTimerStopStress",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimerStopStress(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimerStopStress(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSleepZeroDeadlock",
+              "documentation": {
+                "identifier": "TestSleepZeroDeadlock",
+                "newPage": false,
+                "searchKey": "time_test.TestSleepZeroDeadlock",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSleepZeroDeadlock(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSleepZeroDeadlock(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#testReset",
+              "documentation": {
+                "identifier": "testReset",
+                "newPage": false,
+                "searchKey": "time_test.testReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReset(d Duration) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReset(d Duration) error\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestReset",
+              "documentation": {
+                "identifier": "TestReset",
+                "newPage": false,
+                "searchKey": "time_test.TestReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestOverflowSleep",
+              "documentation": {
+                "identifier": "TestOverflowSleep",
+                "newPage": false,
+                "searchKey": "time_test.TestOverflowSleep",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOverflowSleep(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOverflowSleep(t *testing.T)\n```\n\nTest that sleeping (via Sleep or Timer) for an interval so large it overflows does not result in a short sleep duration. Nor does it interfere with execution of other timers. If it does, timers in this or subsequent tests may not fire. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestIssue5745",
+              "documentation": {
+                "identifier": "TestIssue5745",
+                "newPage": false,
+                "searchKey": "time_test.TestIssue5745",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestIssue5745(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestIssue5745(t *testing.T)\n```\n\nTest that a panic while deleting a timer does not leave the timers mutex held, deadlocking a ticker.Stop in a defer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestOverflowPeriodRuntimeTimer",
+              "documentation": {
+                "identifier": "TestOverflowPeriodRuntimeTimer",
+                "newPage": false,
+                "searchKey": "time_test.TestOverflowPeriodRuntimeTimer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOverflowPeriodRuntimeTimer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOverflowPeriodRuntimeTimer(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#checkZeroPanicString",
+              "documentation": {
+                "identifier": "checkZeroPanicString",
+                "newPage": false,
+                "searchKey": "time_test.checkZeroPanicString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkZeroPanicString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkZeroPanicString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestZeroTimerResetPanics",
+              "documentation": {
+                "identifier": "TestZeroTimerResetPanics",
+                "newPage": false,
+                "searchKey": "time_test.TestZeroTimerResetPanics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroTimerResetPanics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroTimerResetPanics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestZeroTimerStopPanics",
+              "documentation": {
+                "identifier": "TestZeroTimerStopPanics",
+                "newPage": false,
+                "searchKey": "time_test.TestZeroTimerStopPanics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroTimerStopPanics(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroTimerStopPanics(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestZeroTimer",
+              "documentation": {
+                "identifier": "TestZeroTimer",
+                "newPage": false,
+                "searchKey": "time_test.TestZeroTimer",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroTimer(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroTimer(t *testing.T)\n```\n\nTest that zero duration timers aren't missed by the scheduler. Regression test for issue 44868. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkParallelTimerLatency",
+              "documentation": {
+                "identifier": "BenchmarkParallelTimerLatency",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkParallelTimerLatency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkParallelTimerLatency(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkParallelTimerLatency(b *testing.B)\n```\n\nBenchmark timer latency when the thread that creates the timer is busy with other work and the timers must be serviced by other threads. [https://golang.org/issue/38860](https://golang.org/issue/38860) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkStaggeredTickerLatency",
+              "documentation": {
+                "identifier": "BenchmarkStaggeredTickerLatency",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkStaggeredTickerLatency",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkStaggeredTickerLatency(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkStaggeredTickerLatency(b *testing.B)\n```\n\nBenchmark timer latency with staggered wakeup times and varying CPU bound workloads. [https://golang.org/issue/38860](https://golang.org/issue/38860) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#warmupScheduler",
+              "documentation": {
+                "identifier": "warmupScheduler",
+                "newPage": false,
+                "searchKey": "time_test.warmupScheduler",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func warmupScheduler(targetThreadCount int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc warmupScheduler(targetThreadCount int)\n```\n\nwarmupScheduler ensures the scheduler has at least targetThreadCount threads in its thread pool. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#doWork",
+              "documentation": {
+                "identifier": "doWork",
+                "newPage": false,
+                "searchKey": "time_test.doWork",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func doWork(dur Duration)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc doWork(dur Duration)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTicker",
+              "documentation": {
+                "identifier": "TestTicker",
+                "newPage": false,
+                "searchKey": "time_test.TestTicker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTicker(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTicker(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTickerStopWithDirectInitialization",
+              "documentation": {
+                "identifier": "TestTickerStopWithDirectInitialization",
+                "newPage": false,
+                "searchKey": "time_test.TestTickerStopWithDirectInitialization",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTickerStopWithDirectInitialization(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTickerStopWithDirectInitialization(t *testing.T)\n```\n\nIssue 21874 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTeardown",
+              "documentation": {
+                "identifier": "TestTeardown",
+                "newPage": false,
+                "searchKey": "time_test.TestTeardown",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTeardown(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTeardown(t *testing.T)\n```\n\nTest that a bug tearing down a ticker has been fixed. This routine should not deadlock. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTick",
+              "documentation": {
+                "identifier": "TestTick",
+                "newPage": false,
+                "searchKey": "time_test.TestTick",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTick(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTick(t *testing.T)\n```\n\nTest the Tick convenience wrapper. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNewTickerLtZeroDuration",
+              "documentation": {
+                "identifier": "TestNewTickerLtZeroDuration",
+                "newPage": false,
+                "searchKey": "time_test.TestNewTickerLtZeroDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNewTickerLtZeroDuration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNewTickerLtZeroDuration(t *testing.T)\n```\n\nTest that NewTicker panics when given a duration less than zero. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkTicker",
+              "documentation": {
+                "identifier": "BenchmarkTicker",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkTicker",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTicker(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTicker(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkTickerReset",
+              "documentation": {
+                "identifier": "BenchmarkTickerReset",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkTickerReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTickerReset(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTickerReset(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkTickerResetNaive",
+              "documentation": {
+                "identifier": "BenchmarkTickerResetNaive",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkTickerResetNaive",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkTickerResetNaive(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkTickerResetNaive(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestZoneData",
+              "documentation": {
+                "identifier": "TestZoneData",
+                "newPage": false,
+                "searchKey": "time_test.TestZoneData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZoneData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZoneData(t *testing.T)\n```\n\nWe should be in PST/PDT, but if the time zone files are missing we won't be. The purpose of this test is to at least explain why some of the subsequent tests fail. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#same",
+              "documentation": {
+                "identifier": "same",
+                "newPage": false,
+                "searchKey": "time_test.same",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func same(t Time, u *parsedTime) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc same(t Time, u *parsedTime) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSecondsToUTC",
+              "documentation": {
+                "identifier": "TestSecondsToUTC",
+                "newPage": false,
+                "searchKey": "time_test.TestSecondsToUTC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSecondsToUTC(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSecondsToUTC(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNanosecondsToUTC",
+              "documentation": {
+                "identifier": "TestNanosecondsToUTC",
+                "newPage": false,
+                "searchKey": "time_test.TestNanosecondsToUTC",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNanosecondsToUTC(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNanosecondsToUTC(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSecondsToLocalTime",
+              "documentation": {
+                "identifier": "TestSecondsToLocalTime",
+                "newPage": false,
+                "searchKey": "time_test.TestSecondsToLocalTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSecondsToLocalTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSecondsToLocalTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNanosecondsToLocalTime",
+              "documentation": {
+                "identifier": "TestNanosecondsToLocalTime",
+                "newPage": false,
+                "searchKey": "time_test.TestNanosecondsToLocalTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNanosecondsToLocalTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNanosecondsToLocalTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSecondsToUTCAndBack",
+              "documentation": {
+                "identifier": "TestSecondsToUTCAndBack",
+                "newPage": false,
+                "searchKey": "time_test.TestSecondsToUTCAndBack",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSecondsToUTCAndBack(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSecondsToUTCAndBack(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNanosecondsToUTCAndBack",
+              "documentation": {
+                "identifier": "TestNanosecondsToUTCAndBack",
+                "newPage": false,
+                "searchKey": "time_test.TestNanosecondsToUTCAndBack",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNanosecondsToUTCAndBack(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNanosecondsToUTCAndBack(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestUnixMilli",
+              "documentation": {
+                "identifier": "TestUnixMilli",
+                "newPage": false,
+                "searchKey": "time_test.TestUnixMilli",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnixMilli(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnixMilli(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestUnixMicro",
+              "documentation": {
+                "identifier": "TestUnixMicro",
+                "newPage": false,
+                "searchKey": "time_test.TestUnixMicro",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnixMicro(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnixMicro(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#abs",
+              "documentation": {
+                "identifier": "abs",
+                "newPage": false,
+                "searchKey": "time_test.abs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func abs(t Time) (sec, nsec int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc abs(t Time) (sec, nsec int64)\n```\n\nabs returns the absolute time stored in t, as seconds and nanoseconds. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#absString",
+              "documentation": {
+                "identifier": "absString",
+                "newPage": false,
+                "searchKey": "time_test.absString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func absString(t Time) string"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc absString(t Time) string\n```\n\nabsString returns abs as a decimal string. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTruncateRound",
+              "documentation": {
+                "identifier": "TestTruncateRound",
+                "newPage": false,
+                "searchKey": "time_test.TestTruncateRound",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTruncateRound(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTruncateRound(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestISOWeek",
+              "documentation": {
+                "identifier": "TestISOWeek",
+                "newPage": false,
+                "searchKey": "time_test.TestISOWeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestISOWeek(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestISOWeek(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestYearDay",
+              "documentation": {
+                "identifier": "TestYearDay",
+                "newPage": false,
+                "searchKey": "time_test.TestYearDay",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestYearDay(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestYearDay(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationString",
+              "documentation": {
+                "identifier": "TestDurationString",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationString(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDate",
+              "documentation": {
+                "identifier": "TestDate",
+                "newPage": false,
+                "searchKey": "time_test.TestDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAddDate",
+              "documentation": {
+                "identifier": "TestAddDate",
+                "newPage": false,
+                "searchKey": "time_test.TestAddDate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddDate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddDate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDaysIn",
+              "documentation": {
+                "identifier": "TestDaysIn",
+                "newPage": false,
+                "searchKey": "time_test.TestDaysIn",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDaysIn(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDaysIn(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestAddToExactSecond",
+              "documentation": {
+                "identifier": "TestAddToExactSecond",
+                "newPage": false,
+                "searchKey": "time_test.TestAddToExactSecond",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestAddToExactSecond(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestAddToExactSecond(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#equalTimeAndZone",
+              "documentation": {
+                "identifier": "equalTimeAndZone",
+                "newPage": false,
+                "searchKey": "time_test.equalTimeAndZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equalTimeAndZone(a, b Time) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equalTimeAndZone(a, b Time) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTimeGob",
+              "documentation": {
+                "identifier": "TestTimeGob",
+                "newPage": false,
+                "searchKey": "time_test.TestTimeGob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeGob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeGob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestInvalidTimeGob",
+              "documentation": {
+                "identifier": "TestInvalidTimeGob",
+                "newPage": false,
+                "searchKey": "time_test.TestInvalidTimeGob",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidTimeGob(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidTimeGob(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNotGobEncodableTime",
+              "documentation": {
+                "identifier": "TestNotGobEncodableTime",
+                "newPage": false,
+                "searchKey": "time_test.TestNotGobEncodableTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotGobEncodableTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotGobEncodableTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTimeJSON",
+              "documentation": {
+                "identifier": "TestTimeJSON",
+                "newPage": false,
+                "searchKey": "time_test.TestTimeJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeJSON(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeJSON(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestInvalidTimeJSON",
+              "documentation": {
+                "identifier": "TestInvalidTimeJSON",
+                "newPage": false,
+                "searchKey": "time_test.TestInvalidTimeJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestInvalidTimeJSON(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestInvalidTimeJSON(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestNotJSONEncodableTime",
+              "documentation": {
+                "identifier": "TestNotJSONEncodableTime",
+                "newPage": false,
+                "searchKey": "time_test.TestNotJSONEncodableTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNotJSONEncodableTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNotJSONEncodableTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseDuration",
+              "documentation": {
+                "identifier": "TestParseDuration",
+                "newPage": false,
+                "searchKey": "time_test.TestParseDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseDuration(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseDuration(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseDurationErrors",
+              "documentation": {
+                "identifier": "TestParseDurationErrors",
+                "newPage": false,
+                "searchKey": "time_test.TestParseDurationErrors",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseDurationErrors(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseDurationErrors(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestParseDurationRoundTrip",
+              "documentation": {
+                "identifier": "TestParseDurationRoundTrip",
+                "newPage": false,
+                "searchKey": "time_test.TestParseDurationRoundTrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestParseDurationRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestParseDurationRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLocationRace",
+              "documentation": {
+                "identifier": "TestLocationRace",
+                "newPage": false,
+                "searchKey": "time_test.TestLocationRace",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLocationRace(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLocationRace(t *testing.T)\n```\n\ngolang.org/issue/4622 \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestCountMallocs",
+              "documentation": {
+                "identifier": "TestCountMallocs",
+                "newPage": false,
+                "searchKey": "time_test.TestCountMallocs",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestCountMallocs(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestCountMallocs(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLoadFixed",
+              "documentation": {
+                "identifier": "TestLoadFixed",
+                "newPage": false,
+                "searchKey": "time_test.TestLoadFixed",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadFixed(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadFixed(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestSub",
+              "documentation": {
+                "identifier": "TestSub",
+                "newPage": false,
+                "searchKey": "time_test.TestSub",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSub(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSub(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationNanoseconds",
+              "documentation": {
+                "identifier": "TestDurationNanoseconds",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationNanoseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationNanoseconds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationNanoseconds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationMicroseconds",
+              "documentation": {
+                "identifier": "TestDurationMicroseconds",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationMicroseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationMicroseconds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationMicroseconds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationMilliseconds",
+              "documentation": {
+                "identifier": "TestDurationMilliseconds",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationMilliseconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationMilliseconds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationMilliseconds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationSeconds",
+              "documentation": {
+                "identifier": "TestDurationSeconds",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationSeconds",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationSeconds(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationSeconds(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationMinutes",
+              "documentation": {
+                "identifier": "TestDurationMinutes",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationMinutes",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationMinutes(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationMinutes(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationHours",
+              "documentation": {
+                "identifier": "TestDurationHours",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationHours",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationHours(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationHours(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationTruncate",
+              "documentation": {
+                "identifier": "TestDurationTruncate",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationTruncate",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationTruncate(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationTruncate(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDurationRound",
+              "documentation": {
+                "identifier": "TestDurationRound",
+                "newPage": false,
+                "searchKey": "time_test.TestDurationRound",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDurationRound(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDurationRound(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestDefaultLoc",
+              "documentation": {
+                "identifier": "TestDefaultLoc",
+                "newPage": false,
+                "searchKey": "time_test.TestDefaultLoc",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestDefaultLoc(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestDefaultLoc(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkNow",
+              "documentation": {
+                "identifier": "BenchmarkNow",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkNow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNow(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNow(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkNowUnixNano",
+              "documentation": {
+                "identifier": "BenchmarkNowUnixNano",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkNowUnixNano",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNowUnixNano(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNowUnixNano(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkNowUnixMilli",
+              "documentation": {
+                "identifier": "BenchmarkNowUnixMilli",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkNowUnixMilli",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNowUnixMilli(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNowUnixMilli(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkNowUnixMicro",
+              "documentation": {
+                "identifier": "BenchmarkNowUnixMicro",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkNowUnixMicro",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkNowUnixMicro(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkNowUnixMicro(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkFormat",
+              "documentation": {
+                "identifier": "BenchmarkFormat",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFormat(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFormat(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkFormatNow",
+              "documentation": {
+                "identifier": "BenchmarkFormatNow",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkFormatNow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFormatNow(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFormatNow(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkMarshalJSON",
+              "documentation": {
+                "identifier": "BenchmarkMarshalJSON",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkMarshalJSON",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMarshalJSON(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMarshalJSON(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkMarshalText",
+              "documentation": {
+                "identifier": "BenchmarkMarshalText",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkMarshalText",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkMarshalText(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkMarshalText(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkParse",
+              "documentation": {
+                "identifier": "BenchmarkParse",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkParse",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkParse(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkParse(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkParseDuration",
+              "documentation": {
+                "identifier": "BenchmarkParseDuration",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkParseDuration",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkParseDuration(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkParseDuration(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkHour",
+              "documentation": {
+                "identifier": "BenchmarkHour",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkHour",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkHour(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkHour(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkSecond",
+              "documentation": {
+                "identifier": "BenchmarkSecond",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkSecond",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkSecond(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkSecond(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkYear",
+              "documentation": {
+                "identifier": "BenchmarkYear",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkYear",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkYear(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkYear(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkDay",
+              "documentation": {
+                "identifier": "BenchmarkDay",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkDay",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkDay(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkDay(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#BenchmarkISOWeek",
+              "documentation": {
+                "identifier": "BenchmarkISOWeek",
+                "newPage": false,
+                "searchKey": "time_test.BenchmarkISOWeek",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkISOWeek(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkISOWeek(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMarshalBinaryZeroTime",
+              "documentation": {
+                "identifier": "TestMarshalBinaryZeroTime",
+                "newPage": false,
+                "searchKey": "time_test.TestMarshalBinaryZeroTime",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMarshalBinaryZeroTime(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMarshalBinaryZeroTime(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestZeroMonthString",
+              "documentation": {
+                "identifier": "TestZeroMonthString",
+                "newPage": false,
+                "searchKey": "time_test.TestZeroMonthString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestZeroMonthString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestZeroMonthString(t *testing.T)\n```\n\nIssue 17720: Zero value of time.Month fails to print \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestWeekdayString",
+              "documentation": {
+                "identifier": "TestWeekdayString",
+                "newPage": false,
+                "searchKey": "time_test.TestWeekdayString",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWeekdayString(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWeekdayString(t *testing.T)\n```\n\nIssue 24692: Out of range weekday panics \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestReadFileLimit",
+              "documentation": {
+                "identifier": "TestReadFileLimit",
+                "newPage": false,
+                "searchKey": "time_test.TestReadFileLimit",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadFileLimit(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadFileLimit(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestConcurrentTimerReset",
+              "documentation": {
+                "identifier": "TestConcurrentTimerReset",
+                "newPage": false,
+                "searchKey": "time_test.TestConcurrentTimerReset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConcurrentTimerReset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConcurrentTimerReset(t *testing.T)\n```\n\nIssue 25686: hard crash on concurrent timer access. Issue 37400: panic with \"racy use of timers\" This test deliberately invokes a race condition. We are testing that we don't crash with \"fatal error: panic holding locks\", and that we also don't panic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestConcurrentTimerResetStop",
+              "documentation": {
+                "identifier": "TestConcurrentTimerResetStop",
+                "newPage": false,
+                "searchKey": "time_test.TestConcurrentTimerResetStop",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConcurrentTimerResetStop(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConcurrentTimerResetStop(t *testing.T)\n```\n\nIssue 37400: panic with \"racy use of timers\". \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTimeIsDST",
+              "documentation": {
+                "identifier": "TestTimeIsDST",
+                "newPage": false,
+                "searchKey": "time_test.TestTimeIsDST",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeIsDST(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeIsDST(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTimeAddSecOverflow",
+              "documentation": {
+                "identifier": "TestTimeAddSecOverflow",
+                "newPage": false,
+                "searchKey": "time_test.TestTimeAddSecOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTimeAddSecOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTimeAddSecOverflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestEmbeddedTZData",
+              "documentation": {
+                "identifier": "TestEmbeddedTZData",
+                "newPage": false,
+                "searchKey": "time_test.TestEmbeddedTZData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEmbeddedTZData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEmbeddedTZData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#equal",
+              "documentation": {
+                "identifier": "equal",
+                "newPage": false,
+                "searchKey": "time_test.equal",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func equal(t *testing.T, f1, f2 reflect.Value) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc equal(t *testing.T, f1, f2 reflect.Value) bool\n```\n\nequal is a small version of reflect.DeepEqual that we use to compare the values of zoneinfo unexported fields. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#init",
+              "documentation": {
+                "identifier": "init",
+                "newPage": false,
+                "searchKey": "time_test.init",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func init()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc init()\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestEnvVarUsage",
+              "documentation": {
+                "identifier": "TestEnvVarUsage",
+                "newPage": false,
+                "searchKey": "time_test.TestEnvVarUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnvVarUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnvVarUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestBadLocationErrMsg",
+              "documentation": {
+                "identifier": "TestBadLocationErrMsg",
+                "newPage": false,
+                "searchKey": "time_test.TestBadLocationErrMsg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBadLocationErrMsg(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBadLocationErrMsg(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLoadLocationValidatesNames",
+              "documentation": {
+                "identifier": "TestLoadLocationValidatesNames",
+                "newPage": false,
+                "searchKey": "time_test.TestLoadLocationValidatesNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadLocationValidatesNames(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadLocationValidatesNames(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestVersion3",
+              "documentation": {
+                "identifier": "TestVersion3",
+                "newPage": false,
+                "searchKey": "time_test.TestVersion3",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVersion3(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVersion3(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestFirstZone",
+              "documentation": {
+                "identifier": "TestFirstZone",
+                "newPage": false,
+                "searchKey": "time_test.TestFirstZone",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestFirstZone(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestFirstZone(t *testing.T)\n```\n\nTest that we get the correct results for times before the first transition time. To do this we explicitly check early dates in a couple of specific timezones. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLocationNames",
+              "documentation": {
+                "identifier": "TestLocationNames",
+                "newPage": false,
+                "searchKey": "time_test.TestLocationNames",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLocationNames(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLocationNames(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLoadLocationFromTZData",
+              "documentation": {
+                "identifier": "TestLoadLocationFromTZData",
+                "newPage": false,
+                "searchKey": "time_test.TestLoadLocationFromTZData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadLocationFromTZData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadLocationFromTZData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestEarlyLocation",
+              "documentation": {
+                "identifier": "TestEarlyLocation",
+                "newPage": false,
+                "searchKey": "time_test.TestEarlyLocation",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEarlyLocation(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEarlyLocation(t *testing.T)\n```\n\nIssue 30099. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestMalformedTZData",
+              "documentation": {
+                "identifier": "TestMalformedTZData",
+                "newPage": false,
+                "searchKey": "time_test.TestMalformedTZData",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestMalformedTZData(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestMalformedTZData(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestLoadLocationFromTZDataSlim",
+              "documentation": {
+                "identifier": "TestLoadLocationFromTZDataSlim",
+                "newPage": false,
+                "searchKey": "time_test.TestLoadLocationFromTZDataSlim",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLoadLocationFromTZDataSlim(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLoadLocationFromTZDataSlim(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTzset",
+              "documentation": {
+                "identifier": "TestTzset",
+                "newPage": false,
+                "searchKey": "time_test.TestTzset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTzset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTzset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTzsetName",
+              "documentation": {
+                "identifier": "TestTzsetName",
+                "newPage": false,
+                "searchKey": "time_test.TestTzsetName",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTzsetName(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTzsetName(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTzsetOffset",
+              "documentation": {
+                "identifier": "TestTzsetOffset",
+                "newPage": false,
+                "searchKey": "time_test.TestTzsetOffset",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTzsetOffset(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTzsetOffset(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestTzsetRule",
+              "documentation": {
+                "identifier": "TestTzsetRule",
+                "newPage": false,
+                "searchKey": "time_test.TestTzsetRule",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestTzsetRule(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestTzsetRule(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/time_test#TestEnvTZUsage",
+              "documentation": {
+                "identifier": "TestEnvTZUsage",
+                "newPage": false,
+                "searchKey": "time_test.TestEnvTZUsage",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEnvTZUsage(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEnvTZUsage(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

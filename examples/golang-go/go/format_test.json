@@ -1,0 +1,181 @@
+{
+  "pathID": "/go/format_test",
+  "documentation": {
+    "identifier": "format_test",
+    "newPage": true,
+    "searchKey": "go/format_test",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package format_test"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/go/format_test#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/format_test#debug",
+              "documentation": {
+                "identifier": "debug",
+                "newPage": false,
+                "searchKey": "format_test.debug",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var debug"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar debug = flag.Bool(\"debug\", false, \"write .src files containing formatting input; for debugging\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format_test#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "format_test.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format_test#sink",
+              "documentation": {
+                "identifier": "sink",
+                "newPage": false,
+                "searchKey": "format_test.sink",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var sink"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar sink []byte\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/go/format_test#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/go/format_test#array1",
+              "documentation": {
+                "identifier": "array1",
+                "newPage": false,
+                "searchKey": "format_test.array1",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func array1(buf *bytes.Buffer, n int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc array1(buf *bytes.Buffer, n int)\n```\n\narray1 generates an array literal with n elements of the form: \n\nvar _ = [...]byte{ \n\n```\n// 0\n0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,\n0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f,\n0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17,\n0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f,\n0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27,\n// 40\n0x28, 0x29, 0x2a, 0x2b, 0x2c, 0x2d, 0x2e, 0x2f,\n0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37,\n...\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format_test#BenchmarkFormat",
+              "documentation": {
+                "identifier": "BenchmarkFormat",
+                "newPage": false,
+                "searchKey": "format_test.BenchmarkFormat",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkFormat(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkFormat(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/go/format_test#ExampleNode",
+              "documentation": {
+                "identifier": "ExampleNode",
+                "newPage": false,
+                "searchKey": "format_test.ExampleNode",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ExampleNode()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ExampleNode()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

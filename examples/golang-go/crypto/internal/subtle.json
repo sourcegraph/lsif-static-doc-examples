@@ -1,0 +1,84 @@
+{
+  "pathID": "/crypto/internal/subtle",
+  "documentation": {
+    "identifier": "subtle",
+    "newPage": true,
+    "searchKey": "crypto/internal/subtle",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package subtle"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package subtle implements functions that are often useful in cryptographic code but require careful thought to use correctly. \n\nThis is a mirror of golang.org/x/crypto/internal/subtle. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/crypto/internal/subtle#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/crypto/internal/subtle#AnyOverlap",
+              "documentation": {
+                "identifier": "AnyOverlap",
+                "newPage": false,
+                "searchKey": "subtle.AnyOverlap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func AnyOverlap(x, y []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc AnyOverlap(x, y []byte) bool\n```\n\nAnyOverlap reports whether x and y share memory at any (not necessarily corresponding) index. The memory beyond the slice length is ignored. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/crypto/internal/subtle#InexactOverlap",
+              "documentation": {
+                "identifier": "InexactOverlap",
+                "newPage": false,
+                "searchKey": "subtle.InexactOverlap",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func InexactOverlap(x, y []byte) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc InexactOverlap(x, y []byte) bool\n```\n\nInexactOverlap reports whether x and y share memory at any non-corresponding index. The memory beyond the slice length is ignored. Note that x and y can have different lengths and still not have any inexact overlap. \n\nInexactOverlap can be used to implement the requirements of the crypto/cipher AEAD, Block, BlockMode and Stream interfaces. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

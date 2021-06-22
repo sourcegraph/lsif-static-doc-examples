@@ -1,0 +1,84 @@
+{
+  "pathID": "/internal/unsafeheader",
+  "documentation": {
+    "identifier": "unsafeheader",
+    "newPage": true,
+    "searchKey": "internal/unsafeheader",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package unsafeheader"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package unsafeheader contains header declarations for the Go runtime's slice and string implementations. \n\nThis package allows packages that cannot import \"reflect\" to use types that are tested to be equivalent to reflect.SliceHeader and reflect.StringHeader. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/unsafeheader#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/unsafeheader#Slice",
+              "documentation": {
+                "identifier": "Slice",
+                "newPage": false,
+                "searchKey": "unsafeheader.Slice",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Slice struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Slice struct {\n\tData unsafe.Pointer\n\tLen  int\n\tCap  int\n}\n```\n\nSlice is the runtime representation of a slice. It cannot be used safely or portably and its representation may change in a later release. \n\nUnlike reflect.SliceHeader, its Data field is sufficient to guarantee the data it references will not be garbage collected. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/internal/unsafeheader#String",
+              "documentation": {
+                "identifier": "String",
+                "newPage": false,
+                "searchKey": "unsafeheader.String",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type String struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype String struct {\n\tData unsafe.Pointer\n\tLen  int\n}\n```\n\nString is the runtime representation of a string. It cannot be used safely or portably and its representation may change in a later release. \n\nUnlike reflect.StringHeader, its Data field is sufficient to guarantee the data it references will not be garbage collected. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2828 @@
+{
+  "pathID": "/encoding/binary",
+  "documentation": {
+    "identifier": "binary",
+    "newPage": true,
+    "searchKey": "encoding/binary",
+    "tags": [
+      "exported"
+    ]
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package binary"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package binary implements simple translation between numbers and byte sequences and encoding and decoding of varints. \n\nNumbers are translated by reading and writing fixed-size values. A fixed-size value is either a fixed-size arithmetic type (bool, int8, uint8, int16, float32, complex64, ...) or an array or struct containing only fixed-size values. \n\nThe varint functions encode and decode single integer values using a variable-length encoding; smaller values require fewer bytes. For a specification, see [https://developers.google.com/protocol-buffers/docs/encoding](https://developers.google.com/protocol-buffers/docs/encoding). \n\nThis package favors simplicity over efficiency. Clients that require high-performance serialization, especially for large data structures, should look at more advanced solutions such as the encoding/gob package or protocol buffers. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/encoding/binary#const",
+        "documentation": {
+          "identifier": "const",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Constants"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/binary#MaxVarintLen16",
+              "documentation": {
+                "identifier": "MaxVarintLen16",
+                "newPage": false,
+                "searchKey": "binary.MaxVarintLen16",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxVarintLen16"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxVarintLen16 = 3\n```\n\nMaxVarintLenN is the maximum length of a varint-encoded N-bit integer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#MaxVarintLen32",
+              "documentation": {
+                "identifier": "MaxVarintLen32",
+                "newPage": false,
+                "searchKey": "binary.MaxVarintLen32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxVarintLen32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxVarintLen32 = 5\n```\n\nMaxVarintLenN is the maximum length of a varint-encoded N-bit integer. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#MaxVarintLen64",
+              "documentation": {
+                "identifier": "MaxVarintLen64",
+                "newPage": false,
+                "searchKey": "binary.MaxVarintLen64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "const MaxVarintLen64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nconst MaxVarintLen64 = 10\n```\n\nMaxVarintLenN is the maximum length of a varint-encoded N-bit integer. \n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/binary#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/binary#LittleEndian",
+              "documentation": {
+                "identifier": "LittleEndian",
+                "newPage": false,
+                "searchKey": "binary.LittleEndian",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var LittleEndian"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar LittleEndian littleEndian\n```\n\nLittleEndian is the little-endian implementation of ByteOrder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BigEndian",
+              "documentation": {
+                "identifier": "BigEndian",
+                "newPage": false,
+                "searchKey": "binary.BigEndian",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var BigEndian"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar BigEndian bigEndian\n```\n\nBigEndian is the big-endian implementation of ByteOrder. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#structSize",
+              "documentation": {
+                "identifier": "structSize",
+                "newPage": false,
+                "searchKey": "binary.structSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var structSize"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar structSize sync.Map // map[reflect.Type]int\n\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#overflow",
+              "documentation": {
+                "identifier": "overflow",
+                "newPage": false,
+                "searchKey": "binary.overflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var overflow"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar overflow = errors.New(\"binary: varint overflows a 64-bit integer\")\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#s",
+              "documentation": {
+                "identifier": "s",
+                "newPage": false,
+                "searchKey": "binary.s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var s"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar s = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#big",
+              "documentation": {
+                "identifier": "big",
+                "newPage": false,
+                "searchKey": "binary.big",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var big"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar big = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#little",
+              "documentation": {
+                "identifier": "little",
+                "newPage": false,
+                "searchKey": "binary.little",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var little"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar little = ...\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#src",
+              "documentation": {
+                "identifier": "src",
+                "newPage": false,
+                "searchKey": "binary.src",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var src"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar src = []byte{1, 2, 3, 4, 5, 6, 7, 8}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#res",
+              "documentation": {
+                "identifier": "res",
+                "newPage": false,
+                "searchKey": "binary.res",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var res"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar res = []int32{0x01020304, 0x05060708}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#putbuf",
+              "documentation": {
+                "identifier": "putbuf",
+                "newPage": false,
+                "searchKey": "binary.putbuf",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var putbuf"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar putbuf = []byte{0, 0, 0, 0, 0, 0, 0, 0}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#intArrays",
+              "documentation": {
+                "identifier": "intArrays",
+                "newPage": false,
+                "searchKey": "binary.intArrays",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var intArrays"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar intArrays = ...\n```\n\nAddresses of arrays are easier to manipulate with reflection than are slices. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#tests",
+              "documentation": {
+                "identifier": "tests",
+                "newPage": false,
+                "searchKey": "binary.tests",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var tests"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar tests = ...\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/binary#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/binary#ByteOrder",
+              "documentation": {
+                "identifier": "ByteOrder",
+                "newPage": false,
+                "searchKey": "binary.ByteOrder",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type ByteOrder interface"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype ByteOrder interface {\n\tUint16([]byte) uint16\n\tUint32([]byte) uint32\n\tUint64([]byte) uint64\n\tPutUint16([]byte, uint16)\n\tPutUint32([]byte, uint32)\n\tPutUint64([]byte, uint64)\n\tString() string\n}\n```\n\nA ByteOrder specifies how to convert byte sequences into 16-, 32-, or 64-bit unsigned integers. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#littleEndian",
+              "documentation": {
+                "identifier": "littleEndian",
+                "newPage": false,
+                "searchKey": "binary.littleEndian",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type littleEndian struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype littleEndian struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.Uint16",
+                    "documentation": {
+                      "identifier": "littleEndian.Uint16",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.Uint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) Uint16(b []byte) uint16"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) Uint16(b []byte) uint16\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.PutUint16",
+                    "documentation": {
+                      "identifier": "littleEndian.PutUint16",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.PutUint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) PutUint16(b []byte, v uint16)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) PutUint16(b []byte, v uint16)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.Uint32",
+                    "documentation": {
+                      "identifier": "littleEndian.Uint32",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.Uint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) Uint32(b []byte) uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) Uint32(b []byte) uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.PutUint32",
+                    "documentation": {
+                      "identifier": "littleEndian.PutUint32",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.PutUint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) PutUint32(b []byte, v uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) PutUint32(b []byte, v uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.Uint64",
+                    "documentation": {
+                      "identifier": "littleEndian.Uint64",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.Uint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) Uint64(b []byte) uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) Uint64(b []byte) uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.PutUint64",
+                    "documentation": {
+                      "identifier": "littleEndian.PutUint64",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.PutUint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) PutUint64(b []byte, v uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) PutUint64(b []byte, v uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.String",
+                    "documentation": {
+                      "identifier": "littleEndian.String",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#littleEndian.GoString",
+                    "documentation": {
+                      "identifier": "littleEndian.GoString",
+                      "newPage": false,
+                      "searchKey": "binary.littleEndian.GoString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (littleEndian) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (littleEndian) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#bigEndian",
+              "documentation": {
+                "identifier": "bigEndian",
+                "newPage": false,
+                "searchKey": "binary.bigEndian",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type bigEndian struct{}"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype bigEndian struct{}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.Uint16",
+                    "documentation": {
+                      "identifier": "bigEndian.Uint16",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.Uint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) Uint16(b []byte) uint16"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) Uint16(b []byte) uint16\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.PutUint16",
+                    "documentation": {
+                      "identifier": "bigEndian.PutUint16",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.PutUint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) PutUint16(b []byte, v uint16)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) PutUint16(b []byte, v uint16)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.Uint32",
+                    "documentation": {
+                      "identifier": "bigEndian.Uint32",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.Uint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) Uint32(b []byte) uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) Uint32(b []byte) uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.PutUint32",
+                    "documentation": {
+                      "identifier": "bigEndian.PutUint32",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.PutUint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) PutUint32(b []byte, v uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) PutUint32(b []byte, v uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.Uint64",
+                    "documentation": {
+                      "identifier": "bigEndian.Uint64",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.Uint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) Uint64(b []byte) uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) Uint64(b []byte) uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.PutUint64",
+                    "documentation": {
+                      "identifier": "bigEndian.PutUint64",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.PutUint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) PutUint64(b []byte, v uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) PutUint64(b []byte, v uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.String",
+                    "documentation": {
+                      "identifier": "bigEndian.String",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.String",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) String() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) String() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#bigEndian.GoString",
+                    "documentation": {
+                      "identifier": "bigEndian.GoString",
+                      "newPage": false,
+                      "searchKey": "binary.bigEndian.GoString",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (bigEndian) GoString() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (bigEndian) GoString() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#coder",
+              "documentation": {
+                "identifier": "coder",
+                "newPage": false,
+                "searchKey": "binary.coder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type coder struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype coder struct {\n\torder  ByteOrder\n\tbuf    []byte\n\toffset int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#decoder",
+              "documentation": {
+                "identifier": "decoder",
+                "newPage": false,
+                "searchKey": "binary.decoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type decoder binary.coder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype decoder coder\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.bool",
+                    "documentation": {
+                      "identifier": "decoder.bool",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.bool",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) bool() bool"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) bool() bool\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.uint8",
+                    "documentation": {
+                      "identifier": "decoder.uint8",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.uint8",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) uint8() uint8"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) uint8() uint8\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.uint16",
+                    "documentation": {
+                      "identifier": "decoder.uint16",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.uint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) uint16() uint16"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) uint16() uint16\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.uint32",
+                    "documentation": {
+                      "identifier": "decoder.uint32",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.uint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) uint32() uint32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) uint32() uint32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.uint64",
+                    "documentation": {
+                      "identifier": "decoder.uint64",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.uint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) uint64() uint64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) uint64() uint64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.int8",
+                    "documentation": {
+                      "identifier": "decoder.int8",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.int8",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) int8() int8"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) int8() int8\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.int16",
+                    "documentation": {
+                      "identifier": "decoder.int16",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.int16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) int16() int16"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) int16() int16\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.int32",
+                    "documentation": {
+                      "identifier": "decoder.int32",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.int32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) int32() int32"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) int32() int32\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.int64",
+                    "documentation": {
+                      "identifier": "decoder.int64",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.int64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) int64() int64"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) int64() int64\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.value",
+                    "documentation": {
+                      "identifier": "decoder.value",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) value(v reflect.Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) value(v reflect.Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#decoder.skip",
+                    "documentation": {
+                      "identifier": "decoder.skip",
+                      "newPage": false,
+                      "searchKey": "binary.decoder.skip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (d *decoder) skip(v reflect.Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (d *decoder) skip(v reflect.Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#encoder",
+              "documentation": {
+                "identifier": "encoder",
+                "newPage": false,
+                "searchKey": "binary.encoder",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type encoder binary.coder"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype encoder coder\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.bool",
+                    "documentation": {
+                      "identifier": "encoder.bool",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.bool",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) bool(x bool)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) bool(x bool)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.uint8",
+                    "documentation": {
+                      "identifier": "encoder.uint8",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.uint8",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) uint8(x uint8)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) uint8(x uint8)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.uint16",
+                    "documentation": {
+                      "identifier": "encoder.uint16",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.uint16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) uint16(x uint16)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) uint16(x uint16)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.uint32",
+                    "documentation": {
+                      "identifier": "encoder.uint32",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.uint32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) uint32(x uint32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) uint32(x uint32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.uint64",
+                    "documentation": {
+                      "identifier": "encoder.uint64",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.uint64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) uint64(x uint64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) uint64(x uint64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.int8",
+                    "documentation": {
+                      "identifier": "encoder.int8",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.int8",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) int8(x int8)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) int8(x int8)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.int16",
+                    "documentation": {
+                      "identifier": "encoder.int16",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.int16",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) int16(x int16)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) int16(x int16)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.int32",
+                    "documentation": {
+                      "identifier": "encoder.int32",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.int32",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) int32(x int32)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) int32(x int32)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.int64",
+                    "documentation": {
+                      "identifier": "encoder.int64",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.int64",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) int64(x int64)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) int64(x int64)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.value",
+                    "documentation": {
+                      "identifier": "encoder.value",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.value",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) value(v reflect.Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) value(v reflect.Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                },
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#encoder.skip",
+                    "documentation": {
+                      "identifier": "encoder.skip",
+                      "newPage": false,
+                      "searchKey": "binary.encoder.skip",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (e *encoder) skip(v reflect.Value)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (e *encoder) skip(v reflect.Value)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Struct",
+              "documentation": {
+                "identifier": "Struct",
+                "newPage": false,
+                "searchKey": "binary.Struct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Struct struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Struct struct {\n\tInt8       int8\n\tInt16      int16\n\tInt32      int32\n\tInt64      int64\n\tUint8      uint8\n\tUint16     uint16\n\tUint32     uint32\n\tUint64     uint64\n\tFloat32    float32\n\tFloat64    float64\n\tComplex64  complex64\n\tComplex128 complex128\n\tArray      [4]uint8\n\tBool       bool\n\tBoolArray  [4]bool\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#T",
+              "documentation": {
+                "identifier": "T",
+                "newPage": false,
+                "searchKey": "binary.T",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type T struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype T struct {\n\tInt     int\n\tUint    uint\n\tUintptr uintptr\n\tArray   [4]int\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BlankFields",
+              "documentation": {
+                "identifier": "BlankFields",
+                "newPage": false,
+                "searchKey": "binary.BlankFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BlankFields struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BlankFields struct {\n\tA uint32\n\t_ int32\n\tB float64\n\t_ [4]int16\n\tC byte\n\t_ [7]byte\n\t_ struct {\n\t\tf [8]float32\n\t}\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BlankFieldsProbe",
+              "documentation": {
+                "identifier": "BlankFieldsProbe",
+                "newPage": false,
+                "searchKey": "binary.BlankFieldsProbe",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type BlankFieldsProbe struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype BlankFieldsProbe struct {\n\tA  uint32\n\tP0 int32\n\tB  float64\n\tP1 [4]int16\n\tC  byte\n\tP2 [7]byte\n\tP3 struct {\n\t\tF [8]float32\n\t}\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Unexported",
+              "documentation": {
+                "identifier": "Unexported",
+                "newPage": false,
+                "searchKey": "binary.Unexported",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type Unexported struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype Unexported struct {\n\ta int32\n}\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#byteSliceReader",
+              "documentation": {
+                "identifier": "byteSliceReader",
+                "newPage": false,
+                "searchKey": "binary.byteSliceReader",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type byteSliceReader struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype byteSliceReader struct {\n\tremain []byte\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/encoding/binary#byteSliceReader.Read",
+                    "documentation": {
+                      "identifier": "byteSliceReader.Read",
+                      "newPage": false,
+                      "searchKey": "binary.byteSliceReader.Read",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (br *byteSliceReader) Read(p []byte) (int, error)"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (br *byteSliceReader) Read(p []byte) (int, error)\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/encoding/binary#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": [
+            "exported"
+          ]
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/encoding/binary#Read",
+              "documentation": {
+                "identifier": "Read",
+                "newPage": false,
+                "searchKey": "binary.Read",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Read(r io.Reader, order ByteOrder, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Read(r io.Reader, order ByteOrder, data interface{}) error\n```\n\nRead reads structured binary data from r into data. Data must be a pointer to a fixed-size value or a slice of fixed-size values. Bytes read from r are decoded using the specified byte order and written to successive fields of the data. When decoding boolean values, a zero byte is decoded as false, and any other non-zero byte is decoded as true. When reading into structs, the field data for fields with blank (_) field names is skipped; i.e., blank field names may be used for padding. When reading into a struct, all non-blank fields must be exported or Read may panic. \n\nThe error is EOF only if no bytes were read. If an EOF happens after reading some but not all the bytes, Read returns ErrUnexpectedEOF. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Write",
+              "documentation": {
+                "identifier": "Write",
+                "newPage": false,
+                "searchKey": "binary.Write",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Write(w io.Writer, order ByteOrder, data interface{}) error"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Write(w io.Writer, order ByteOrder, data interface{}) error\n```\n\nWrite writes the binary representation of data into w. Data must be a fixed-size value or a slice of fixed-size values, or a pointer to such data. Boolean values encode as one byte: 1 for true, and 0 for false. Bytes written to w are encoded using the specified byte order and read from successive fields of the data. When writing structs, zero values are written for fields with blank (_) field names. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Size",
+              "documentation": {
+                "identifier": "Size",
+                "newPage": false,
+                "searchKey": "binary.Size",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Size(v interface{}) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Size(v interface{}) int\n```\n\nSize returns how many bytes Write would generate to encode the value v, which must be a fixed-size value or a slice of fixed-size values, or a pointer to such data. If v is neither of these, Size returns -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#dataSize",
+              "documentation": {
+                "identifier": "dataSize",
+                "newPage": false,
+                "searchKey": "binary.dataSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func dataSize(v reflect.Value) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc dataSize(v reflect.Value) int\n```\n\ndataSize returns the number of bytes the actual data represented by v occupies in memory. For compound structures, it sums the sizes of the elements. Thus, for instance, for a slice it returns the length of the slice times the element size and does not count the memory occupied by the header. If the type of v is not acceptable, dataSize returns -1. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#sizeof",
+              "documentation": {
+                "identifier": "sizeof",
+                "newPage": false,
+                "searchKey": "binary.sizeof",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func sizeof(t reflect.Type) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc sizeof(t reflect.Type) int\n```\n\nsizeof returns the size >= 0 of variables for the given type or -1 if the type is not acceptable. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#intDataSize",
+              "documentation": {
+                "identifier": "intDataSize",
+                "newPage": false,
+                "searchKey": "binary.intDataSize",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func intDataSize(data interface{}) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc intDataSize(data interface{}) int\n```\n\nintDataSize returns the size of the data required to represent the data when encoded. It returns zero if the type cannot be implemented by the fast path in Read or Write. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#PutUvarint",
+              "documentation": {
+                "identifier": "PutUvarint",
+                "newPage": false,
+                "searchKey": "binary.PutUvarint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PutUvarint(buf []byte, x uint64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PutUvarint(buf []byte, x uint64) int\n```\n\nPutUvarint encodes a uint64 into buf and returns the number of bytes written. If the buffer is too small, PutUvarint will panic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Uvarint",
+              "documentation": {
+                "identifier": "Uvarint",
+                "newPage": false,
+                "searchKey": "binary.Uvarint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Uvarint(buf []byte) (uint64, int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Uvarint(buf []byte) (uint64, int)\n```\n\nUvarint decodes a uint64 from buf and returns that value and the number of bytes read (> 0). If an error occurred, the value is 0 and the number of bytes n is <= 0 meaning: \n\n```\nn == 0: buf too small\nn  < 0: value larger than 64 bits (overflow)\n        and -n is the number of bytes read\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#PutVarint",
+              "documentation": {
+                "identifier": "PutVarint",
+                "newPage": false,
+                "searchKey": "binary.PutVarint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func PutVarint(buf []byte, x int64) int"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc PutVarint(buf []byte, x int64) int\n```\n\nPutVarint encodes an int64 into buf and returns the number of bytes written. If the buffer is too small, PutVarint will panic. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#Varint",
+              "documentation": {
+                "identifier": "Varint",
+                "newPage": false,
+                "searchKey": "binary.Varint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Varint(buf []byte) (int64, int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Varint(buf []byte) (int64, int)\n```\n\nVarint decodes an int64 from buf and returns that value and the number of bytes read (> 0). If an error occurred, the value is 0 and the number of bytes n is <= 0 with the following meaning: \n\n```\nn == 0: buf too small\nn  < 0: value larger than 64 bits (overflow)\n        and -n is the number of bytes read\n\n```\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#ReadUvarint",
+              "documentation": {
+                "identifier": "ReadUvarint",
+                "newPage": false,
+                "searchKey": "binary.ReadUvarint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadUvarint(r io.ByteReader) (uint64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadUvarint(r io.ByteReader) (uint64, error)\n```\n\nReadUvarint reads an encoded unsigned integer from r and returns it as a uint64. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#ReadVarint",
+              "documentation": {
+                "identifier": "ReadVarint",
+                "newPage": false,
+                "searchKey": "binary.ReadVarint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func ReadVarint(r io.ByteReader) (int64, error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc ReadVarint(r io.ByteReader) (int64, error)\n```\n\nReadVarint reads an encoded signed integer from r and returns it as an int64. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#checkResult",
+              "documentation": {
+                "identifier": "checkResult",
+                "newPage": false,
+                "searchKey": "binary.checkResult",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func checkResult(t *testing.T, dir string, order ByteOrder, err error, have, want interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc checkResult(t *testing.T, dir string, order ByteOrder, err error, have, want interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testRead",
+              "documentation": {
+                "identifier": "testRead",
+                "newPage": false,
+                "searchKey": "binary.testRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testRead(t *testing.T, order ByteOrder, b []byte, s1 interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testRead(t *testing.T, order ByteOrder, b []byte, s1 interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testWrite",
+              "documentation": {
+                "identifier": "testWrite",
+                "newPage": false,
+                "searchKey": "binary.testWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testWrite(t *testing.T, order ByteOrder, b []byte, s1 interface{})"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testWrite(t *testing.T, order ByteOrder, b []byte, s1 interface{})\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestLittleEndianRead",
+              "documentation": {
+                "identifier": "TestLittleEndianRead",
+                "newPage": false,
+                "searchKey": "binary.TestLittleEndianRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLittleEndianRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLittleEndianRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestLittleEndianWrite",
+              "documentation": {
+                "identifier": "TestLittleEndianWrite",
+                "newPage": false,
+                "searchKey": "binary.TestLittleEndianWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLittleEndianWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLittleEndianWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestLittleEndianPtrWrite",
+              "documentation": {
+                "identifier": "TestLittleEndianPtrWrite",
+                "newPage": false,
+                "searchKey": "binary.TestLittleEndianPtrWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestLittleEndianPtrWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestLittleEndianPtrWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBigEndianRead",
+              "documentation": {
+                "identifier": "TestBigEndianRead",
+                "newPage": false,
+                "searchKey": "binary.TestBigEndianRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigEndianRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigEndianRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBigEndianWrite",
+              "documentation": {
+                "identifier": "TestBigEndianWrite",
+                "newPage": false,
+                "searchKey": "binary.TestBigEndianWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigEndianWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigEndianWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBigEndianPtrWrite",
+              "documentation": {
+                "identifier": "TestBigEndianPtrWrite",
+                "newPage": false,
+                "searchKey": "binary.TestBigEndianPtrWrite",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBigEndianPtrWrite(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBigEndianPtrWrite(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadSlice",
+              "documentation": {
+                "identifier": "TestReadSlice",
+                "newPage": false,
+                "searchKey": "binary.TestReadSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestWriteSlice",
+              "documentation": {
+                "identifier": "TestWriteSlice",
+                "newPage": false,
+                "searchKey": "binary.TestWriteSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadBool",
+              "documentation": {
+                "identifier": "TestReadBool",
+                "newPage": false,
+                "searchKey": "binary.TestReadBool",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadBool(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadBool(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadBoolSlice",
+              "documentation": {
+                "identifier": "TestReadBoolSlice",
+                "newPage": false,
+                "searchKey": "binary.TestReadBoolSlice",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadBoolSlice(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadBoolSlice(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestSliceRoundTrip",
+              "documentation": {
+                "identifier": "TestSliceRoundTrip",
+                "newPage": false,
+                "searchKey": "binary.TestSliceRoundTrip",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSliceRoundTrip(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSliceRoundTrip(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestWriteT",
+              "documentation": {
+                "identifier": "TestWriteT",
+                "newPage": false,
+                "searchKey": "binary.TestWriteT",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestWriteT(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestWriteT(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBlankFields",
+              "documentation": {
+                "identifier": "TestBlankFields",
+                "newPage": false,
+                "searchKey": "binary.TestBlankFields",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBlankFields(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBlankFields(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestSizeStructCache",
+              "documentation": {
+                "identifier": "TestSizeStructCache",
+                "newPage": false,
+                "searchKey": "binary.TestSizeStructCache",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestSizeStructCache(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestSizeStructCache(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestUnexportedRead",
+              "documentation": {
+                "identifier": "TestUnexportedRead",
+                "newPage": false,
+                "searchKey": "binary.TestUnexportedRead",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUnexportedRead(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUnexportedRead(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadErrorMsg",
+              "documentation": {
+                "identifier": "TestReadErrorMsg",
+                "newPage": false,
+                "searchKey": "binary.TestReadErrorMsg",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadErrorMsg(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadErrorMsg(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadTruncated",
+              "documentation": {
+                "identifier": "TestReadTruncated",
+                "newPage": false,
+                "searchKey": "binary.TestReadTruncated",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadTruncated(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadTruncated(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testUint64SmallSliceLengthPanics",
+              "documentation": {
+                "identifier": "testUint64SmallSliceLengthPanics",
+                "newPage": false,
+                "searchKey": "binary.testUint64SmallSliceLengthPanics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testUint64SmallSliceLengthPanics() (panicked bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testUint64SmallSliceLengthPanics() (panicked bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testPutUint64SmallSliceLengthPanics",
+              "documentation": {
+                "identifier": "testPutUint64SmallSliceLengthPanics",
+                "newPage": false,
+                "searchKey": "binary.testPutUint64SmallSliceLengthPanics",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testPutUint64SmallSliceLengthPanics() (panicked bool)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testPutUint64SmallSliceLengthPanics() (panicked bool)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestEarlyBoundsChecks",
+              "documentation": {
+                "identifier": "TestEarlyBoundsChecks",
+                "newPage": false,
+                "searchKey": "binary.TestEarlyBoundsChecks",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestEarlyBoundsChecks(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestEarlyBoundsChecks(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestReadInvalidDestination",
+              "documentation": {
+                "identifier": "TestReadInvalidDestination",
+                "newPage": false,
+                "searchKey": "binary.TestReadInvalidDestination",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestReadInvalidDestination(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestReadInvalidDestination(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testReadInvalidDestination",
+              "documentation": {
+                "identifier": "testReadInvalidDestination",
+                "newPage": false,
+                "searchKey": "binary.testReadInvalidDestination",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testReadInvalidDestination(t *testing.T, order ByteOrder)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testReadInvalidDestination(t *testing.T, order ByteOrder)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadSlice1000Int32s",
+              "documentation": {
+                "identifier": "BenchmarkReadSlice1000Int32s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadSlice1000Int32s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadSlice1000Int32s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadSlice1000Int32s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadStruct",
+              "documentation": {
+                "identifier": "BenchmarkReadStruct",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadStruct(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadStruct(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteStruct",
+              "documentation": {
+                "identifier": "BenchmarkWriteStruct",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteStruct",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteStruct(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteStruct(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadInts",
+              "documentation": {
+                "identifier": "BenchmarkReadInts",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadInts(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadInts(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteInts",
+              "documentation": {
+                "identifier": "BenchmarkWriteInts",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteInts",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteInts(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteInts(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteSlice1000Int32s",
+              "documentation": {
+                "identifier": "BenchmarkWriteSlice1000Int32s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteSlice1000Int32s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteSlice1000Int32s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteSlice1000Int32s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkPutUint16",
+              "documentation": {
+                "identifier": "BenchmarkPutUint16",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkPutUint16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPutUint16(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPutUint16(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkPutUint32",
+              "documentation": {
+                "identifier": "BenchmarkPutUint32",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkPutUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPutUint32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPutUint32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkPutUint64",
+              "documentation": {
+                "identifier": "BenchmarkPutUint64",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkPutUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPutUint64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPutUint64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkLittleEndianPutUint16",
+              "documentation": {
+                "identifier": "BenchmarkLittleEndianPutUint16",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkLittleEndianPutUint16",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLittleEndianPutUint16(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLittleEndianPutUint16(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkLittleEndianPutUint32",
+              "documentation": {
+                "identifier": "BenchmarkLittleEndianPutUint32",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkLittleEndianPutUint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLittleEndianPutUint32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLittleEndianPutUint32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkLittleEndianPutUint64",
+              "documentation": {
+                "identifier": "BenchmarkLittleEndianPutUint64",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkLittleEndianPutUint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkLittleEndianPutUint64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkLittleEndianPutUint64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadFloats",
+              "documentation": {
+                "identifier": "BenchmarkReadFloats",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadFloats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadFloats(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadFloats(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteFloats",
+              "documentation": {
+                "identifier": "BenchmarkWriteFloats",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteFloats",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteFloats(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteFloats(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadSlice1000Float32s",
+              "documentation": {
+                "identifier": "BenchmarkReadSlice1000Float32s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadSlice1000Float32s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadSlice1000Float32s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadSlice1000Float32s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteSlice1000Float32s",
+              "documentation": {
+                "identifier": "BenchmarkWriteSlice1000Float32s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteSlice1000Float32s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteSlice1000Float32s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteSlice1000Float32s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkReadSlice1000Uint8s",
+              "documentation": {
+                "identifier": "BenchmarkReadSlice1000Uint8s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkReadSlice1000Uint8s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkReadSlice1000Uint8s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkReadSlice1000Uint8s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkWriteSlice1000Uint8s",
+              "documentation": {
+                "identifier": "BenchmarkWriteSlice1000Uint8s",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkWriteSlice1000Uint8s",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkWriteSlice1000Uint8s(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkWriteSlice1000Uint8s(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testConstant",
+              "documentation": {
+                "identifier": "testConstant",
+                "newPage": false,
+                "searchKey": "binary.testConstant",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testConstant(t *testing.T, w uint, max int)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testConstant(t *testing.T, w uint, max int)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestConstants",
+              "documentation": {
+                "identifier": "TestConstants",
+                "newPage": false,
+                "searchKey": "binary.TestConstants",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestConstants(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestConstants(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testVarint",
+              "documentation": {
+                "identifier": "testVarint",
+                "newPage": false,
+                "searchKey": "binary.testVarint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testVarint(t *testing.T, x int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testVarint(t *testing.T, x int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testUvarint",
+              "documentation": {
+                "identifier": "testUvarint",
+                "newPage": false,
+                "searchKey": "binary.testUvarint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testUvarint(t *testing.T, x uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testUvarint(t *testing.T, x uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestVarint",
+              "documentation": {
+                "identifier": "TestVarint",
+                "newPage": false,
+                "searchKey": "binary.TestVarint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestVarint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestVarint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestUvarint",
+              "documentation": {
+                "identifier": "TestUvarint",
+                "newPage": false,
+                "searchKey": "binary.TestUvarint",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestUvarint(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestUvarint(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBufferTooSmall",
+              "documentation": {
+                "identifier": "TestBufferTooSmall",
+                "newPage": false,
+                "searchKey": "binary.TestBufferTooSmall",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBufferTooSmall(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBufferTooSmall(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestBufferTooBigWithOverflow",
+              "documentation": {
+                "identifier": "TestBufferTooBigWithOverflow",
+                "newPage": false,
+                "searchKey": "binary.TestBufferTooBigWithOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestBufferTooBigWithOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestBufferTooBigWithOverflow(t *testing.T)\n```\n\nEnsure that we catch overflows of bytes going past MaxVarintLen64. See issue [https://golang.org/issues/41185](https://golang.org/issues/41185) \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#testOverflow",
+              "documentation": {
+                "identifier": "testOverflow",
+                "newPage": false,
+                "searchKey": "binary.testOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func testOverflow(t *testing.T, buf []byte, x0 uint64, n0 int, err0 error)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc testOverflow(t *testing.T, buf []byte, x0 uint64, n0 int, err0 error)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestOverflow",
+              "documentation": {
+                "identifier": "TestOverflow",
+                "newPage": false,
+                "searchKey": "binary.TestOverflow",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestOverflow(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestOverflow(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#TestNonCanonicalZero",
+              "documentation": {
+                "identifier": "TestNonCanonicalZero",
+                "newPage": false,
+                "searchKey": "binary.TestNonCanonicalZero",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func TestNonCanonicalZero(t *testing.T)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc TestNonCanonicalZero(t *testing.T)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkPutUvarint32",
+              "documentation": {
+                "identifier": "BenchmarkPutUvarint32",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkPutUvarint32",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPutUvarint32(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPutUvarint32(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/encoding/binary#BenchmarkPutUvarint64",
+              "documentation": {
+                "identifier": "BenchmarkPutUvarint64",
+                "newPage": false,
+                "searchKey": "binary.BenchmarkPutUvarint64",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func BenchmarkPutUvarint64(b *testing.B)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc BenchmarkPutUvarint64(b *testing.B)\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

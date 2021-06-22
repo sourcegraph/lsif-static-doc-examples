@@ -1,0 +1,124 @@
+{
+  "pathID": "/internal/sysinfo",
+  "documentation": {
+    "identifier": "sysinfo",
+    "newPage": true,
+    "searchKey": "internal/sysinfo",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package sysinfo"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": "Package sysinfo implements high level hardware information gathering that can be used for debugging or information purposes. \n\n"
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/internal/sysinfo#var",
+        "documentation": {
+          "identifier": "var",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Variables"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sysinfo#CPU",
+              "documentation": {
+                "identifier": "CPU",
+                "newPage": false,
+                "searchKey": "sysinfo.CPU",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "var CPU"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nvar CPU cpuInfo\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    },
+    {
+      "node": {
+        "pathID": "/internal/sysinfo#type",
+        "documentation": {
+          "identifier": "type",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Types"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/internal/sysinfo#cpuInfo",
+              "documentation": {
+                "identifier": "cpuInfo",
+                "newPage": false,
+                "searchKey": "sysinfo.cpuInfo",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "type cpuInfo struct"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\ntype cpuInfo struct {\n\tonce sync.Once\n\tname string\n}\n```\n\n"
+              },
+              "children": [
+                {
+                  "node": {
+                    "pathID": "/internal/sysinfo#cpuInfo.Name",
+                    "documentation": {
+                      "identifier": "cpuInfo.Name",
+                      "newPage": false,
+                      "searchKey": "sysinfo.cpuInfo.Name",
+                      "tags": null
+                    },
+                    "label": {
+                      "kind": "plaintext",
+                      "value": "func (cpu *cpuInfo) Name() string"
+                    },
+                    "detail": {
+                      "kind": "markdown",
+                      "value": "```Go\nfunc (cpu *cpuInfo) Name() string\n```\n\n"
+                    },
+                    "children": null
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

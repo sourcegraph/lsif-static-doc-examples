@@ -1,0 +1,984 @@
+{
+  "pathID": "/runtime/internal/atomic",
+  "documentation": {
+    "identifier": "atomic",
+    "newPage": true,
+    "searchKey": "runtime/internal/atomic",
+    "tags": []
+  },
+  "label": {
+    "kind": "plaintext",
+    "value": "Package atomic"
+  },
+  "detail": {
+    "kind": "markdown",
+    "value": ""
+  },
+  "children": [
+    {
+      "node": {
+        "pathID": "/runtime/internal/atomic#func",
+        "documentation": {
+          "identifier": "func",
+          "newPage": false,
+          "searchKey": "",
+          "tags": []
+        },
+        "label": {
+          "kind": "plaintext",
+          "value": "Functions"
+        },
+        "detail": {
+          "kind": "plaintext",
+          "value": ""
+        },
+        "children": [
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Load",
+              "documentation": {
+                "identifier": "Load",
+                "newPage": false,
+                "searchKey": "atomic.Load",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Load(ptr *uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Load(ptr *uint32) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Loadp",
+              "documentation": {
+                "identifier": "Loadp",
+                "newPage": false,
+                "searchKey": "atomic.Loadp",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Loadp(ptr unsafe.Pointer) unsafe.Pointer"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Loadp(ptr unsafe.Pointer) unsafe.Pointer\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Load64",
+              "documentation": {
+                "identifier": "Load64",
+                "newPage": false,
+                "searchKey": "atomic.Load64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Load64(ptr *uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Load64(ptr *uint64) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#LoadAcq",
+              "documentation": {
+                "identifier": "LoadAcq",
+                "newPage": false,
+                "searchKey": "atomic.LoadAcq",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadAcq(ptr *uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadAcq(ptr *uint32) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#LoadAcq64",
+              "documentation": {
+                "identifier": "LoadAcq64",
+                "newPage": false,
+                "searchKey": "atomic.LoadAcq64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadAcq64(ptr *uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadAcq64(ptr *uint64) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#LoadAcquintptr",
+              "documentation": {
+                "identifier": "LoadAcquintptr",
+                "newPage": false,
+                "searchKey": "atomic.LoadAcquintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func LoadAcquintptr(ptr *uintptr) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc LoadAcquintptr(ptr *uintptr) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xadd",
+              "documentation": {
+                "identifier": "Xadd",
+                "newPage": false,
+                "searchKey": "atomic.Xadd",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xadd(ptr *uint32, delta int32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xadd(ptr *uint32, delta int32) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xadd64",
+              "documentation": {
+                "identifier": "Xadd64",
+                "newPage": false,
+                "searchKey": "atomic.Xadd64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xadd64(ptr *uint64, delta int64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xadd64(ptr *uint64, delta int64) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xadduintptr",
+              "documentation": {
+                "identifier": "Xadduintptr",
+                "newPage": false,
+                "searchKey": "atomic.Xadduintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xadduintptr(ptr *uintptr, delta uintptr) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xadduintptr(ptr *uintptr, delta uintptr) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xchg",
+              "documentation": {
+                "identifier": "Xchg",
+                "newPage": false,
+                "searchKey": "atomic.Xchg",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xchg(ptr *uint32, new uint32) uint32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xchg(ptr *uint32, new uint32) uint32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xchg64",
+              "documentation": {
+                "identifier": "Xchg64",
+                "newPage": false,
+                "searchKey": "atomic.Xchg64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xchg64(ptr *uint64, new uint64) uint64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xchg64(ptr *uint64, new uint64) uint64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xchguintptr",
+              "documentation": {
+                "identifier": "Xchguintptr",
+                "newPage": false,
+                "searchKey": "atomic.Xchguintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xchguintptr(ptr *uintptr, new uintptr) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xchguintptr(ptr *uintptr, new uintptr) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Load8",
+              "documentation": {
+                "identifier": "Load8",
+                "newPage": false,
+                "searchKey": "atomic.Load8",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Load8(ptr *uint8) uint8"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Load8(ptr *uint8) uint8\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#And8",
+              "documentation": {
+                "identifier": "And8",
+                "newPage": false,
+                "searchKey": "atomic.And8",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func And8(ptr *uint8, val uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc And8(ptr *uint8, val uint8)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Or8",
+              "documentation": {
+                "identifier": "Or8",
+                "newPage": false,
+                "searchKey": "atomic.Or8",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Or8(ptr *uint8, val uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Or8(ptr *uint8, val uint8)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#And",
+              "documentation": {
+                "identifier": "And",
+                "newPage": false,
+                "searchKey": "atomic.And",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func And(ptr *uint32, val uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc And(ptr *uint32, val uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Or",
+              "documentation": {
+                "identifier": "Or",
+                "newPage": false,
+                "searchKey": "atomic.Or",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Or(ptr *uint32, val uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Or(ptr *uint32, val uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Cas64",
+              "documentation": {
+                "identifier": "Cas64",
+                "newPage": false,
+                "searchKey": "atomic.Cas64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Cas64(ptr *uint64, old, new uint64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Cas64(ptr *uint64, old, new uint64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#CasRel",
+              "documentation": {
+                "identifier": "CasRel",
+                "newPage": false,
+                "searchKey": "atomic.CasRel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func CasRel(ptr *uint32, old, new uint32) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc CasRel(ptr *uint32, old, new uint32) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Store",
+              "documentation": {
+                "identifier": "Store",
+                "newPage": false,
+                "searchKey": "atomic.Store",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Store(ptr *uint32, val uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Store(ptr *uint32, val uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Store8",
+              "documentation": {
+                "identifier": "Store8",
+                "newPage": false,
+                "searchKey": "atomic.Store8",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Store8(ptr *uint8, val uint8)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Store8(ptr *uint8, val uint8)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Store64",
+              "documentation": {
+                "identifier": "Store64",
+                "newPage": false,
+                "searchKey": "atomic.Store64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Store64(ptr *uint64, val uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Store64(ptr *uint64, val uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#StoreRel",
+              "documentation": {
+                "identifier": "StoreRel",
+                "newPage": false,
+                "searchKey": "atomic.StoreRel",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StoreRel(ptr *uint32, val uint32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StoreRel(ptr *uint32, val uint32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#StoreRel64",
+              "documentation": {
+                "identifier": "StoreRel64",
+                "newPage": false,
+                "searchKey": "atomic.StoreRel64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StoreRel64(ptr *uint64, val uint64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StoreRel64(ptr *uint64, val uint64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#StoreReluintptr",
+              "documentation": {
+                "identifier": "StoreReluintptr",
+                "newPage": false,
+                "searchKey": "atomic.StoreReluintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StoreReluintptr(ptr *uintptr, val uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StoreReluintptr(ptr *uintptr, val uintptr)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#StorepNoWB",
+              "documentation": {
+                "identifier": "StorepNoWB",
+                "newPage": false,
+                "searchKey": "atomic.StorepNoWB",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func StorepNoWB(ptr unsafe.Pointer, val unsafe.Pointer)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc StorepNoWB(ptr unsafe.Pointer, val unsafe.Pointer)\n```\n\nStorepNoWB performs *ptr = val atomically and without a write barrier. \n\nNO go:noescape annotation; see atomic_pointer.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Cas",
+              "documentation": {
+                "identifier": "Cas",
+                "newPage": false,
+                "searchKey": "atomic.Cas",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Cas(ptr *uint32, old, new uint32) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Cas(ptr *uint32, old, new uint32) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Casp1",
+              "documentation": {
+                "identifier": "Casp1",
+                "newPage": false,
+                "searchKey": "atomic.Casp1",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Casp1(ptr *unsafe.Pointer, old, new unsafe.Pointer) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Casp1(ptr *unsafe.Pointer, old, new unsafe.Pointer) bool\n```\n\nNO go:noescape annotation; see atomic_pointer.go. \n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Casint32",
+              "documentation": {
+                "identifier": "Casint32",
+                "newPage": false,
+                "searchKey": "atomic.Casint32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Casint32(ptr *int32, old, new int32) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Casint32(ptr *int32, old, new int32) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Casint64",
+              "documentation": {
+                "identifier": "Casint64",
+                "newPage": false,
+                "searchKey": "atomic.Casint64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Casint64(ptr *int64, old, new int64) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Casint64(ptr *int64, old, new int64) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Casuintptr",
+              "documentation": {
+                "identifier": "Casuintptr",
+                "newPage": false,
+                "searchKey": "atomic.Casuintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Casuintptr(ptr *uintptr, old, new uintptr) bool"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Casuintptr(ptr *uintptr, old, new uintptr) bool\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Storeint32",
+              "documentation": {
+                "identifier": "Storeint32",
+                "newPage": false,
+                "searchKey": "atomic.Storeint32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Storeint32(ptr *int32, new int32)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Storeint32(ptr *int32, new int32)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Storeint64",
+              "documentation": {
+                "identifier": "Storeint64",
+                "newPage": false,
+                "searchKey": "atomic.Storeint64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Storeint64(ptr *int64, new int64)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Storeint64(ptr *int64, new int64)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Storeuintptr",
+              "documentation": {
+                "identifier": "Storeuintptr",
+                "newPage": false,
+                "searchKey": "atomic.Storeuintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Storeuintptr(ptr *uintptr, new uintptr)"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Storeuintptr(ptr *uintptr, new uintptr)\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Loaduintptr",
+              "documentation": {
+                "identifier": "Loaduintptr",
+                "newPage": false,
+                "searchKey": "atomic.Loaduintptr",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Loaduintptr(ptr *uintptr) uintptr"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Loaduintptr(ptr *uintptr) uintptr\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Loaduint",
+              "documentation": {
+                "identifier": "Loaduint",
+                "newPage": false,
+                "searchKey": "atomic.Loaduint",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Loaduint(ptr *uint) uint"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Loaduint(ptr *uint) uint\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Loadint32",
+              "documentation": {
+                "identifier": "Loadint32",
+                "newPage": false,
+                "searchKey": "atomic.Loadint32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Loadint32(ptr *int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Loadint32(ptr *int32) int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Loadint64",
+              "documentation": {
+                "identifier": "Loadint64",
+                "newPage": false,
+                "searchKey": "atomic.Loadint64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Loadint64(ptr *int64) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Loadint64(ptr *int64) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xaddint32",
+              "documentation": {
+                "identifier": "Xaddint32",
+                "newPage": false,
+                "searchKey": "atomic.Xaddint32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xaddint32(ptr *int32, delta int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xaddint32(ptr *int32, delta int32) int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xaddint64",
+              "documentation": {
+                "identifier": "Xaddint64",
+                "newPage": false,
+                "searchKey": "atomic.Xaddint64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xaddint64(ptr *int64, delta int64) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xaddint64(ptr *int64, delta int64) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xchgint32",
+              "documentation": {
+                "identifier": "Xchgint32",
+                "newPage": false,
+                "searchKey": "atomic.Xchgint32",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xchgint32(ptr *int32, new int32) int32"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xchgint32(ptr *int32, new int32) int32\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#Xchgint64",
+              "documentation": {
+                "identifier": "Xchgint64",
+                "newPage": false,
+                "searchKey": "atomic.Xchgint64",
+                "tags": [
+                  "exported"
+                ]
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func Xchgint64(ptr *int64, new int64) int64"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc Xchgint64(ptr *int64, new int64) int64\n```\n\n"
+              },
+              "children": null
+            }
+          },
+          {
+            "node": {
+              "pathID": "/runtime/internal/atomic#panicUnaligned",
+              "documentation": {
+                "identifier": "panicUnaligned",
+                "newPage": false,
+                "searchKey": "atomic.panicUnaligned",
+                "tags": null
+              },
+              "label": {
+                "kind": "plaintext",
+                "value": "func panicUnaligned()"
+              },
+              "detail": {
+                "kind": "markdown",
+                "value": "```Go\nfunc panicUnaligned()\n```\n\n"
+              },
+              "children": null
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
